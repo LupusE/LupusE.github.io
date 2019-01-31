@@ -1,0 +1,36 @@
+---
+status: published
+published: true
+title: QnD - Moodle
+author:
+  display_name: Benjamin Moeller
+  login: lupuse
+  email: blog@lupuse.org
+author_login: lupuse
+author_email: blog@lupuse.org
+date: 2010-01-04 22:44:27 UTC
+categories:
+- Q'n'D
+tags:
+- cnf
+- qnd
+comments: []
+---
+<p>In der Berufsschule nutzen wir die top moderne eLearning Plattform <a href="http://www.moodle.org">Moodle</a>. Die so was von toll ist, dass sie gleich in ganz Neuseeland eingesetzt wird, wo die Schüler komplett von zuhause aus arbeiten (Quelle: Ein Lehrkörper unserer Schule).</p>
+<p>Es handelt sich um ein Stück GPL Software, das einzige Positive an dem System ist wohl auch die Lizenz, also habe ich es mir mal ansehen wollen.</p>
+<p>Das Programm ist als <a href="http://packages.ubuntu.com/moodle">Paket</a> im Ubuntu vorhanden, und ich bin faul</p>
+<p><strong>$ sudo aptitude install moodle</strong></p>
+<p>und ich bin begeistert, ein Debconf-Dialog. Einfach erklärt, und selbst der Befehl zum Prüfen des FQDN ist angegeben.<br />
+Aber WARUM muss ich das MySQL root Passwort 2x eingeben? Confirmation für was? Da sich es bei der Einrichtung von MySQL auch 2x eingegeben habe? Okay, ein Problem im Paket selbst, nevermind.</p>
+<p>Dann verweist der Dialog im letzten Schritt auf die URL <a href="http://localhost/moodle">http://localhost/moodle</a> eingegeben, und ab gehts.</p>
+<p>Im gewohnt sterilem Weiß präsentiert sich Moodle, und fragt natürlich ein paar Parameter ab. Zum Beispiel die Checkbox 'Unattended operation'.</p>
+<blockquote><p>For information about this version of Moodle, please see the online Release Notes</p></blockquote>
+<p>Und verweist auf die aktuelle Release Notes, nicht die der verwendeten Version. Was ist nun Unattended operation?</p>
+<p>Der erste Hit bei Google trifft eine Moodleseite -> leider bin ich nicht eingeloggt um nachzulesen. Oh.<br />
+Mit dem Button [Als Gast anmelden] kann man diese Frage lesen. Warum nicht gleich?</p>
+<p>Also es handelt sich um die Installation. Vollautomatisch oder nicht? ... Neee, ich will wissen was auf meinem Server läuft.<br />
+Die ersten gefühlten 2 Minuten klickt man 'continue' und staunt Bauklötze über die komplexen SQL Statements. Dann wird ein Admin angelegt. Der Benutzername darf nur lowercase sein. Aha. Dafür kann ich hier noch keine deutsche Sprache wählen, aber MUSS angeben in welcher Stadt und welchem Land ich wohne.</p>
+<p>Okay, ich habe zwar den FQDN angegeben, aber das er nur noch darauf springt muss ich dem noch austreiben. Es soll Menschen geben, die intern einen anderen Domainnamen verwenden als extern.</p>
+<p>Man kann Userlisten hochladen. Dort ist der CSV Delimiter und das Encoding anzugeben, aber keine weiteren Informationen zum Format.</p>
+<p>Ab hier fühlt es sich an wie ein geschmolzenes Gummibärchen. Vollgestopft, nicht intuitiv und nicht geleitet. Immerhin ist das Installieren der Sprachen komplett intern mittels Klick erledigt und läuft nicht über wilde Im/Export Orgien.</p>
+<p>Hier benötigt es sicher einige Einarbeitungszeit, bis ich meinen eigenen 'Test' anlegen kann, so wie wir die Klassenarbeiten schreiben. Das aber nicht mehr heute.</p>
