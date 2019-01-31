@@ -1,0 +1,43 @@
+<p>Vorwort:<br />
+Ich wollte im Grunde keine QnD (Quick'n'Dirty) Howtos im Blog, da ich .txt Files bevorzuge. Erreichbar ueber w3m, lynx, ... einfaches Kopieren und keine Datenbank, die sterben kann.<br />
+Heute werde ich mich ueber meine eigenen Ideale hinwegsetzen und suendigen!</p>
+<p>-----<br />
+Angepasster Kernel unter Debian? Dank einiger Werkzeuge gar nicht so schwer.</p>
+<p>Zuerst installiert man alle noetigen Pakete<br />
+# aptitude install gcc binutils bin86 make kernel-package tk8.2-dev libncurses5-dev wget bzip2 module-init-tools</p>
+<p>Nach dieser Vorbereitung zieht man sich den Kernel<br />
+# mkdir -p ~/sys/kernel/<br />
+# cd ~/sys/kernel/<br />
+# wget ftp://ftp.de.kernel.org/pub/linux/kernel/v<$version>/linux<$revision>.bz2<br />
+und entpackt ihn.<br />
+# cd /usr/src<br />
+# tar xjvf /home/<$user>/sys/linux<$revision>.bz2<br />
+jetzt legen wir einen Symlink an<br />
+# ln -s linux<$revision> linux<br />
+nun noch in die letzte Ebene wechseln<br />
+# cd linux<br />
+und das Konfigurationsmenu aufrufen<br />
+# make menuconfig</p>
+<p>Jetzt wird es Uneinheitlich, da die Kernelkonfiguration von der vorhandenen Hardware abhaengt. Es soll ja ein 'angepasster' Kernel werden :)<br />
+Im Grunde sage ich: Soviel als Modul wie möglich, was man beim Booten braucht (IDE/SATA, Filesystem, Framebuffer, ...) in den Kernel. Mit initrd befasse ich mich ein anderes mal.</p>
+<p>nun wird der Kernel entsprechend der Konfiguration kompiliert<br />
+# make-kpkg kernel_image --revision=zoe1.0<br />
+zu finden ist das fertige Paket eine Etage tiefer<br />
+# cd ..<br />
+noch installieren<br />
+# dpkg --install linux-image-2.6.20_zoe1.0_i386.deb<br />
+und Rebooten<br />
+# reboot</p>
+<p>zu betrachten ist das Ergebnis in der Konsole mit<br />
+# uname -a<br />
+Linux zoe 2.6.20 #1 PREEMPT Tue Jan 6 22:28:20 CET 2006 i686 GNU/Linux<br />
+Linux, Hostname, Version, #wie oft installiert, wann neu installiert, Architektur,  GNU/Linux</p>
+<p>Wenn man dann vergessen haben sollte ein Modul einzubauen, neue Hardware (z.b. usb-webcam) kauft, oder einfach nach Laune was neues probieren moechte, der wechselt wieder in das Verzeichnis des Kernels<br />
+# cd /usr/src/linux<br />
+aendert dort seine Konfiguration, diesesmal aber nur(!) Module entfernen und hinzufuegen und aktualisiert den Rechner<br />
+# make modules modules_install && depmod -a<br />
+# modprobe <$modul><br />
+das geht dann auch ohne Reboot.</p>
+<p>Mit ein wenig Routine automatisiert man das Wichtigste<br />
+# cd sys/kernel/; wget ftp://ftp.de.kernel.org/pub/linux/kernel/v2.6/linux*20*.bz2; cd /usr/src/; tar xjvf ~/sys/kernel/linux*20*.bz2; ln -s linux<$revision> linux; cd linux; make menuconfig<br />
+# make-kpkg kernel_image --revision=zoe1.0; dpkg --install ../linux-image-2.6.20_zoe1.0_i386.deb</p>
