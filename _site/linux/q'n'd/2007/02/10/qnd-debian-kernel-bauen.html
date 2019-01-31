@@ -1,3 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+     <title>QnD Debian: Kernel bauen</title>
+  </head>
+  <body>
+    <h1>QnD Debian: Kernel bauen</h1>
+<p>10 Feb 2007 - </p>
+
 <p>Vorwort:<br />
 Ich wollte im Grunde keine QnD (Quick'n'Dirty) Howtos im Blog, da ich .txt Files bevorzuge. Erreichbar ueber w3m, lynx, ... einfaches Kopieren und keine Datenbank, die sterben kann.<br />
 Heute werde ich mich ueber meine eigenen Ideale hinwegsetzen und suendigen!</p>
@@ -41,3 +51,7 @@ das geht dann auch ohne Reboot.</p>
 <p>Mit ein wenig Routine automatisiert man das Wichtigste<br />
 # cd sys/kernel/; wget ftp://ftp.de.kernel.org/pub/linux/kernel/v2.6/linux*20*.bz2; cd /usr/src/; tar xjvf ~/sys/kernel/linux*20*.bz2; ln -s linux<$revision> linux; cd linux; make menuconfig<br />
 # make-kpkg kernel_image --revision=zoe1.0; dpkg --install ../linux-image-2.6.20_zoe1.0_i386.deb</p>
+
+
+  </body>
+</html>
