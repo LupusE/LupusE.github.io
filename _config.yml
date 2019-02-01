@@ -78,7 +78,7 @@ social-network-links:
   github: LupusE
   twitter: LupusE42
 #  reddit: yourname
-  google-plus: +LupusE
+#  google-plus: +LupusE
   linkedin: benjamin-moeller-95455472
   xing: Benjamin_Moeller
   stackoverflow: "9601986/lupuse"
@@ -87,16 +87,16 @@ social-network-links:
 #  youtube: user/deanat78
 #  spotify: yourname
 #  telephone: +14159998888
-  steam: LupusE42
+  steam: lupuse42
 #  twitch: yourname
 #  yelp: yourname
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: false
-  facebook: false
+  twitter: true
+  facebook: true
   google: false
-  linkedin: false
+  linkedin: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
