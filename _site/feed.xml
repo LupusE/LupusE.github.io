@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LupusE Weblife</title>
+    <description>Ein Platz fuer geistige ejakulationen und bedeutungsschwangere Worte</description>
+    <link>https://git.lupuse.org</link>
+    <atom:link href="https://git.lupuse.org/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>QnD - s9y, MySQL und Ubuntu 12.10</title>
+        <description>
+          
+          Heute sich selbst referenzierend im s9y über seine Installation. Wie einige wissen ist s9y (Serendipity) ein Blog-System, welches ich gerne einsetze, weil es schlank und einfach ist. Beim Upgrade von Ubuntu lucid auf Ubuntu precise hatte ich nur bemerkt, das MySQL nicht mehr installiert ist. Die Datenbanken selbst waren nach...
+        </description>
+        <pubDate>Sun, 24 Feb 2013 01:47:16 +0100</pubDate>
+        <link>https://git.lupuse.org/2013-02-24-qnd-s9y-mysql-und-ubuntu-12-10/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2013-02-24-qnd-s9y-mysql-und-ubuntu-12-10/</guid>
+      </item>
+    
+      <item>
+        <title>Heute wird ein Windows XP repariert (ohne Linux)</title>
+        <description>
+          
+          Eines Tages ist es so weit, man startet seinen Windows XP Rechner und stellt fest, er startet nicht. Das bekannte schwarze Fenster mit weißer Schrift erscheint, mit der Option 'Im abgesicherten Modus starten' ... Ohne Erfolg. Auch nach wiederholtem versuchen aller Funktionen, es kommt einfach kein Windows. Im besten Fall...
+        </description>
+        <pubDate>Sat, 18 Jun 2011 10:55:01 +0200</pubDate>
+        <link>https://git.lupuse.org/2011-06-18-heute-wird-ein-windows-xp-repariert-ohne-linux/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2011-06-18-heute-wird-ein-windows-xp-repariert-ohne-linux/</guid>
+      </item>
+    
+      <item>
+        <title>Linux Grundlagen</title>
+        <description>
+          
+          Aus Bedarf habe ich einmal einen Block Unterrichtsstoff aus der Berufsschule genommen und in meinen Worten niedergeschrieben. Ich sollte eher an meiner Abschlusspruefung schreiben, ja ... Aber das geht nicht 24/7. Was sollte ich alternativ tun, wenn ich mit der Praesentation einfach nicht weiter komme und nicht schlafen kann? Es...
+        </description>
+        <pubDate>Wed, 09 Jun 2010 03:21:09 +0200</pubDate>
+        <link>https://git.lupuse.org/2010-06-09-linux-grundlagen/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2010-06-09-linux-grundlagen/</guid>
+      </item>
+    
+      <item>
+        <title>Upgrade unter Linux</title>
+        <description>
+          
+          Alle Jahre wieder kommt ein neues Release und alle Versionsjunkies wollen sofort das neuste tollste blingbling Feature haben. Also fragen sie wie man 'am besten updated'. Was bitte ist am besten? Man will nicht viel Arbeit reinstecken, man will keine Daten verlieren und es soll sein wie vorher aber besser....
+        </description>
+        <pubDate>Sun, 02 May 2010 15:23:13 +0200</pubDate>
+        <link>https://git.lupuse.org/2010-05-02-upgrade-unter-linux/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2010-05-02-upgrade-unter-linux/</guid>
+      </item>
+    
+      <item>
+        <title>Zu Ostern eine HexerEI</title>
+        <description>
+          
+          Kann eine Hexe einen Rechner hacksen? Hilft dagegen eine normale Firewall oder muss es ein Scheiterhaufen sein? Angenommen das es damals keine Hexen gab und viele Frauen und Männer unschuldig verbrannt wurden. Okay, dumm gelaufen, zum Glück sind wir heute aufgeklärt. Was ist aber wenn es sie damals gab. Was...
+        </description>
+        <pubDate>Mon, 05 Apr 2010 14:44:40 +0200</pubDate>
+        <link>https://git.lupuse.org/2010-04-05-zu-ostern-eine-hexerei/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2010-04-05-zu-ostern-eine-hexerei/</guid>
+      </item>
+    
+      <item>
+        <title>QnD - Moodle</title>
+        <description>
+          
+          In der Berufsschule nutzen wir die top moderne eLearning Plattform Moodle. Die so was von toll ist, dass sie gleich in ganz Neuseeland eingesetzt wird, wo die Schüler komplett von zuhause aus arbeiten (Quelle: Ein Lehrkörper unserer Schule). Es handelt sich um ein Stück GPL Software, das einzige Positive an...
+        </description>
+        <pubDate>Mon, 04 Jan 2010 23:44:27 +0100</pubDate>
+        <link>https://git.lupuse.org/2010-01-04-qnd-moodle/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2010-01-04-qnd-moodle/</guid>
+      </item>
+    
+      <item>
+        <title>Groupwares - Heute SOGo</title>
+        <description>
+          
+          Seit langem befasse ich mich schon mit dem Thema Groupware, und heute will ich von meinem Misserfolg SOGo schreiben. Die Screenshots auf der Projektseite (http://www.scalableogo.org/) machten was her. Das Konzept erschien mir sinnig, wenn auch mit deutlich eingeschränktem Funktionsumfang, aber mit scheinbar brauchbarer Handheld-Anbindung. Der Einfachheit halber habe ich mich...
+        </description>
+        <pubDate>Sun, 03 Jan 2010 15:09:32 +0100</pubDate>
+        <link>https://git.lupuse.org/2010-01-03-groupwares-heute-sogo/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2010-01-03-groupwares-heute-sogo/</guid>
+      </item>
+    
+      <item>
+        <title>QnD - Sony Ericsson und der Generationskonflikt</title>
+        <description>
+          
+          Vor Jahren brauchte ich ein neues Telefon, da mein Nokia 6100 kein Bluetooth konnte, ich aber unbedingt ein BT Headset haben wollte. Also entschied ich mich für das Sony Ericsson T630. Mit dieser Wahl war ich lange Zeit zufrieden (6 Monate), und kaufe mir aufgrund der positiven Erfahrungen gleich noch...
+        </description>
+        <pubDate>Fri, 24 Jul 2009 01:42:00 +0200</pubDate>
+        <link>https://git.lupuse.org/2009-07-24-qnd-sony-ericsson-und-der-generationskonflikt/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2009-07-24-qnd-sony-ericsson-und-der-generationskonflikt/</guid>
+      </item>
+    
+      <item>
+        <title>QnD - IPTables meets WM61 II</title>
+        <description>
+          
+          Und heute wollen wir ein Windows Mobile 6.1 ueber Linux ins Internet bringen. # echo 1 &gt; /proc/sys/net/ipv4/ip_forward # iptables --table nat --append POSTROUTING --out-interface ath0 -j MASQUERADE # iptables --append FORWARD --in-interface rndis0 -j ACCEPT Dem aufmerksamen Leser wird auffallen, dass diese Aktion nur medium Sinn macht. Denn ich...
+        </description>
+        <pubDate>Wed, 22 Jul 2009 07:09:21 +0200</pubDate>
+        <link>https://git.lupuse.org/2009-07-22-qnd-iptables-meets-wm61-ii/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2009-07-22-qnd-iptables-meets-wm61-ii/</guid>
+      </item>
+    
+      <item>
+        <title>Papiere ueber Papiere</title>
+        <description>
+          
+          Wie viele Mitmenschen schon mit Leiden erfahren mussten habe ich ein mittelschweres Problem beim Einkaufen. Sei es Klopapier, Backpapier oder eine Malunterlage, ich komme einfach in dieser Welt nicht klar. In welcher Hirnregion befindet sich eigentlich der Alltag? Backpapier. Als ich juengst feststellte in unserer WG Kuechenschublade ist das Backpapier...
+        </description>
+        <pubDate>Sun, 19 Jul 2009 02:10:14 +0200</pubDate>
+        <link>https://git.lupuse.org/2009-07-19-papiere-ueber-papiere/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2009-07-19-papiere-ueber-papiere/</guid>
+      </item>
+    
+      <item>
+        <title>QnD - Debian meets WM61</title>
+        <description>
+          
+          Lange ist es her, da habe ich einmal versuche mein Adressbuch des Handys mit dem des Linux zu verheiraten. Ich habe es aufgegeben. Das einfachste war SyncML ueber Bluetooth auf eGroupWare (XML-RPC)/LDAP als Server. Das ist nicht verhältnismaessig, fuer z.B. einen Laptop. Vor wenigen Tagen dann kam ein neuer Hoffnungsträger,...
+        </description>
+        <pubDate>Sun, 12 Jul 2009 02:34:58 +0200</pubDate>
+        <link>https://git.lupuse.org/2009-07-12-qnd-debian-meets-wm61/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2009-07-12-qnd-debian-meets-wm61/</guid>
+      </item>
+    
+      <item>
+        <title>Willkommen im 21. Jahrhundert</title>
+        <description>
+          
+          Willkommen im 21. Jahrhundert. -- oder -- Es gibt alles und nichts passt zusammen. Heute leben wir in einem modernen Zeitalter, in dem wir den Menschen zerlegen, analysieren, reparieren, nachbauen, klonen und am Ende noch die Ethik versuchen darauf anzupassen. Nicht nur die Wenigen, die lesen und schreiben können, kommen...
+        </description>
+        <pubDate>Tue, 30 Jun 2009 22:26:26 +0200</pubDate>
+        <link>https://git.lupuse.org/2009-06-30-willkommen-im-21-jahrhundert/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2009-06-30-willkommen-im-21-jahrhundert/</guid>
+      </item>
+    
+      <item>
+        <title>Low budget life</title>
+        <description>
+          
+          -oder- Was ist Reichtum? Ich lebe derzeit an der untersten Grenze des Geldes. Ich kann mir etwas zu essen leisten und alle zwei Wochen gehe ich einmal einen großen Caramel Macciato trinken. Dann ist der Monat auch schon am Ende, zumindest finanziell. Geht es mir dadurch essentiell schlecht? Nein! Eine...
+        </description>
+        <pubDate>Wed, 18 Mar 2009 21:57:07 +0100</pubDate>
+        <link>https://git.lupuse.org/2009-03-18-low-budget-life/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2009-03-18-low-budget-life/</guid>
+      </item>
+    
+      <item>
+        <title>Geburtstage - Geschenkewahn</title>
+        <description>
+          
+          Hey Folks, bald ist wieder Geburtstag. Und ich schenke eher selten zum Geburtstag, bevor ich 'Irgendwas' schenke. Denn was soll 'Irgendwas' im Schrank wertvollen Platz nehmen und verstauben? Aber wohl schenke ich gerne auch ohne offiziellen Anlass, wenn etwas passt. Aber was ist denn Sinnvoll oder eben nicht? Soweit ich...
+        </description>
+        <pubDate>Thu, 29 Jan 2009 20:02:14 +0100</pubDate>
+        <link>https://git.lupuse.org/2009-01-29-geburtstage-geschenkewahn/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2009-01-29-geburtstage-geschenkewahn/</guid>
+      </item>
+    
+      <item>
+        <title>Aufklaerung und das Web2.0</title>
+        <description>
+          
+          Wiedermal eine schlaflose Nacht, und bevor ich noch aus versehen produktiv werde habe ich mir gedacht ich nutze mal die Erinnerung um 0:00h meines tollen Telefons an einen Geburtstag und gruesse im MeinVZ. Dabei habe ich mir gleich ihre Gruppen angesehen und siehe da, etwas fuer den Weltfrieden: Fatale Fehler,...
+        </description>
+        <pubDate>Mon, 19 Jan 2009 02:16:42 +0100</pubDate>
+        <link>https://git.lupuse.org/2009-01-19-aufklaerung-und-das-web2-0/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2009-01-19-aufklaerung-und-das-web2-0/</guid>
+      </item>
+    
+      <item>
+        <title>Sternchenhimmel</title>
+        <description>
+          
+          Schaut man im richtigen Moment in die richtige Richtung, so erscheint es manchmal, als taeuschen einen die Sinne. Was ist die Realitaet und wollen wir an diesem Ort ueberhaupt sein? There are patterns everywhere in nature -- Maximillian Cohen (1998) Es faengt an in Kiel, auf einem 30. Gebtag, mit...
+        </description>
+        <pubDate>Tue, 09 Dec 2008 15:27:07 +0100</pubDate>
+        <link>https://git.lupuse.org/2008-12-09-sternchenhimmel/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2008-12-09-sternchenhimmel/</guid>
+      </item>
+    
+      <item>
+        <title>Zwei Seiten</title>
+        <description>
+          
+          Es heißt alles hat zwei Seiten. Stille, Entspannung - Einsamkeit Weite, Freiheit - Verloren Gemeinschaft, Geborgenheit - Kompromisse Sonne, Wärme - Sonnenbrand Winter, Schnee - Erfrieren Es kommt gar nicht auf die Anzahl an, sondern auf die Intensität. Zu viel von einem oder zu viel vom anderen ist schädlich. Aber...
+        </description>
+        <pubDate>Mon, 01 Dec 2008 20:52:01 +0100</pubDate>
+        <link>https://git.lupuse.org/2008-12-01-zwei-seiten/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2008-12-01-zwei-seiten/</guid>
+      </item>
+    
+      <item>
+        <title>Weihnachtsmarkt</title>
+        <description>
+          
+          Nun werde ich mal versuchen meine zweite Aktion in Hamburg zu planen. Das Erste war ein DVD Abend, der in erster Linie von Anna organisiert wurde. Ich habe nur die DVD gestellt. Vielen Dank! Es geht diesesmal auf den Weihnachtsmarkt, ich moechte mit ein paar Leuten Gluehwein trinken gehen. Zwanglos...
+        </description>
+        <pubDate>Sun, 30 Nov 2008 17:39:22 +0100</pubDate>
+        <link>https://git.lupuse.org/2008-11-30-weihnachtsmarkt/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2008-11-30-weihnachtsmarkt/</guid>
+      </item>
+    
+      <item>
+        <title>Abschied</title>
+        <description>
+          
+          Der Tot ist fuer viele eine unangenehme Sache. Doof, wenn jemand gestorben ist, aber noch viel schlimmer ist der absehbare Tot in der Zukunft. Sei es durch Alter oder durch Krankheiten, wie Krebs. Langsam scheidet der Mensch dahin, man sieht sein Leid, aber kann nichts tun. Man schaut zu und...
+        </description>
+        <pubDate>Sun, 30 Nov 2008 17:28:13 +0100</pubDate>
+        <link>https://git.lupuse.org/2008-11-30-abschied/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2008-11-30-abschied/</guid>
+      </item>
+    
+      <item>
+        <title>Urban Art</title>
+        <description>
+          
+          Wie viele wissen, was an mir nicht zu sehen ist, ich stehe total auf Urban Art. Graffiti, Installationen, Architektur, Musik, Lifestyle, Mode, ... Ich mag die Stadt, ich mag es zu sehen, wie die Menschen etwas schaffen, auch wenn sie vermeidlich nichts haben. Aber sie Leben, sie verwirklichen sich. Sandra:&quot;Ich...
+        </description>
+        <pubDate>Sun, 23 Nov 2008 04:35:00 +0100</pubDate>
+        <link>https://git.lupuse.org/2008-11-23-urban-art/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2008-11-23-urban-art/</guid>
+      </item>
+    
+  </channel>
+</rss>

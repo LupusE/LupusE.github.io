@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+
+  <title>QnD Pseudosicherheit und Netzwerkanalyse</title>
+
+  <meta name="author" content="Benjamin Moeller" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="LupusE Weblife - Ein Platz fuer geistige ejakulationen und bedeutungsschwangere Worte" href="/feed.xml" />
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="QnD Pseudosicherheit und Netzwerkanalyse" />
+  
+
+   
+  <meta property="og:description" content="Kuerzlich verfolgte ich eine Diskursion im IRC, in der diskutiert wurde 'Ein negativer Ping sagt genauso wenig aus, wie ein positiver'. Das ist (so, wie ich das sehe) nicht ganz richtig, denn ein Ping ist immer noch ein brauchbares Analysetool. [quote]lupus@zoe:~$ ping -c4 eva5.lupuse.net PING eva5.lupuse.net (192.168.0.1) 56(84) bytes of...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="https://git.lupuse.org/2007-04-07-qnd-pseudosicherheit-und-netzwerkanalyse/" />
+  <link rel="canonical" href="https://git.lupuse.org/2007-04-07-qnd-pseudosicherheit-und-netzwerkanalyse/" />
+  
+
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="QnD Pseudosicherheit und Netzwerkanalyse" />
+  
+
+  
+  <meta name="twitter:description" content="Kuerzlich verfolgte ich eine Diskursion im IRC, in der diskutiert wurde 'Ein negativer Ping sagt genauso wenig aus, wie ein positiver'. Das ist (so, wie ich das sehe) nicht ganz richtig, denn ein Ping ist immer noch ein brauchbares Analysetool. [quote]lupus@zoe:~$ ping -c4 eva5.lupuse.net PING eva5.lupuse.net (192.168.0.1) 56(84) bytes of...">
+  
+
+  
+
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="https://git.lupuse.org">LupusE Weblife</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Resources</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="http://www.markdowntutorial.com/">Learn markdown</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="https://pages.github.com/">GitHub Pages</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="http://lupuse.org">Author's home</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>QnD Pseudosicherheit und Netzwerkanalyse</h1>
+		  
+		  
+		  
+		  <span class="post-meta">Posted on April 7, 2007</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      
+
+      <article role="main" class="blog-post">
+        <p>Kuerzlich verfolgte ich eine Diskursion im IRC, in der diskutiert wurde 'Ein negativer Ping sagt genauso wenig aus, wie ein positiver'. Das ist (so, wie ich das sehe) nicht ganz richtig, denn ein Ping ist immer noch ein brauchbares Analysetool.</p>
+<p>[quote]lupus@zoe:~$ ping -c4 eva5.lupuse.net<br />
+PING eva5.lupuse.net (192.168.0.1) 56(84) bytes of data.<br />
+64 bytes from eva5.lupuse.net: icmp_seq=1 ttl=255 time=0.455 ms<br />
+64 bytes from eva5.lupuse.net: icmp_seq=2 ttl=255 time=0.392 ms<br />
+64 bytes from eva5.lupuse.net: icmp_seq=3 ttl=255 time=0.396 ms<br />
+64 bytes from eva5.lupuse.net: icmp_seq=4 ttl=255 time=0.393 ms</p>
+<p>--- eva5.lupuse.net ping statistics ---<br />
+4 packets transmitted, 4 received, 0% packet loss, time 2998ms<br />
+rtt min/avg/max/mdev = 0.392/0.409/0.455/0.026 ms[/quote]</p>
+<p>Hier sehen wir einen positiven Ping. Also ich pinge meinen Router, der gibt mir eine Antwort. Zusaetzlich sehe ich eine Statistik (Groesse des Paketes, Host, laufende Nummerierung, time-to-live, Zeit von Anfrage bis Antwort.</p>
+<p>[quote]lupus@zoe:~$ ping -c4 pontus.lupuse.net<br />
+PING pontus.lupuse.net (192.168.0.2) 56(84) bytes of data.<br />
+From zoe.lupuse.net icmp_seq=1 Destination Host Unreachable<br />
+From zoe.lupuse.net icmp_seq=2 Destination Host Unreachable<br />
+From zoe.lupuse.net icmp_seq=3 Destination Host Unreachable<br />
+From zoe.lupuse.net icmp_seq=4 Destination Host Unreachable</p>
+<p>--- pontus.lupuse.net ping statistics ---<br />
+4 packets transmitted, 0 received, +4 errors, 100% packet loss, time 3009ms<br />
+, pipe 3[/quote]</p>
+<p>Das Ganze in negativ, Wir sehen nur, VON wem die Anfrage gesendet wird, NICHT das Ziel.<br />
+Im Detail wird das ganze Protokoll besprochen unter<br />
+<a href="http://www.faqs.org/frcs/rfc792.html" >RFC 792 - Internet Control Message Protocol (ICMP)</a></p>
+<p>-- Was hat das ganze nun mit Netzwerkanalyse zu tun?<br />
+Recht einfach, denn immer mehr Personen ohne Ahnung versuchen ihr System im 'Stealthmode' (d.h. es werden ungueltige Anfragen nicht REJECTED (mit Fehler quittiert), sondern GEDROPT (ohne Rueckmeldung verworfen), und ICMP komplett ignoriert. So dass man die Moeglichkeit hat auf Services und Deamonen (ident, smtp, http, ...) zu nutzen, aber nicht zu schauen ob der Rechner generell ansprechbar ist.</p>
+<p>Man kommt in ein fremdes LAN, die Fehlermeldung ist 'Rechner xyz.lan.net ist nicht erreichbar', und als erstes startet man einen Ping, der natuerlich negativ ausfaellt, da der vorige 'gut befreundete Computerexperte' die IPTABLES entsprechend in Stealth geschaltet hat.<br />
+Nundenn, ab hier wird es philosophisch, denn der gut trainierte Turnschuhadmin rennt zum Rechner um festzustellen 'der Funktioniert und hat gutes Netz'. Der untrainierte Turnschuhadmin mit Erfahrung informiert sich ueber die Services, die laufen und versucht (Fall http Server) ein 'nmap -P0 -p80 xyz.lan.net', damit er vom Port80 ueber TCP/IP eine Reaktion des Rechners bekommt. Funktioniert unter Umstaenden sogar, wenn der Service selber nicht funktioniert, weil z.B: der Apache sich weggehaengt hat (-> siehe auch 'man nmap').</p>
+<p>--- to be continued --<br />
+Erstmal eine Apell: Kein unbedachten Stealthmode schalten! Ein Rechner stellt im Netz einen Service, und sollte dann auch erreichbar sein.<br />
+Sinnig ist es Pakete Zu DROPEN, wenn man z.B: eine <a href="http://de.wikipedia.org/wiki/Teergrube_(Informationstechnik)" >Teergrube</a> baut. Dazu aber ein anderes Mal mehr.</p>
+<p>Fragen, Anregungen und konstruktive Kritik sind hier willkommen!</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#qnd">qnd</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2007-04-04-beziehungskrisen/" data-toggle="tooltip" data-placement="top" title="Beziehungskrisen">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="/2007-04-09-wann-sind-nudeln-wissenschaftlich-betrachtet-al-dente/" data-toggle="tooltip" data-placement="top" title="Wann sind Nudeln wissenschaftlich betrachtet 'al dente'?">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          
+
+        </div>
+          
+
+        <div class="staticman-comments">
+          
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+            
+            
+            <li>
+            
+              <a href="/feed.xml" title="RSS">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="mailto:git@lupuse.org" title="Email me">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://www.facebook.com/LupusE" title="Facebook">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://github.com/LupusE" title="GitHub">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://twitter.com/LupusE42" title="Twitter">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://plus.google.com/+LupusE" title="Google+">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Google+</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://linkedin.com/in/benjamin-moeller-95455472" title="LinkedIn">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://www.xing.com/profile/Benjamin_Moeller" title="Xing">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Xing</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://stackoverflow.com/users/9601986/lupuse" title="StackOverflow">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">StackOverflow</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://steamcommunity.com/id/LupusE42" title="Steam">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-steam fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Steam</span>
+              </a>
+            </li>
+          
+        </ul>
+      <p class="copyright text-muted">
+      Benjamin Moeller
+      &nbsp;&bull;&nbsp;
+      2019
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="https://git.lupuse.org">git.lupuse.org</a>
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+  
+  </body>
+</html>

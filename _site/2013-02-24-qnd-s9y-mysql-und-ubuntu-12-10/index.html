@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+
+  <title>QnD - s9y, MySQL und Ubuntu 12.10</title>
+
+  <meta name="author" content="Benjamin Moeller" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="LupusE Weblife - Ein Platz fuer geistige ejakulationen und bedeutungsschwangere Worte" href="/feed.xml" />
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="QnD - s9y, MySQL und Ubuntu 12.10" />
+  
+
+   
+  <meta property="og:description" content="Heute sich selbst referenzierend im s9y über seine Installation. Wie einige wissen ist s9y (Serendipity) ein Blog-System, welches ich gerne einsetze, weil es schlank und einfach ist. Beim Upgrade von Ubuntu lucid auf Ubuntu precise hatte ich nur bemerkt, das MySQL nicht mehr installiert ist. Die Datenbanken selbst waren nach...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="https://git.lupuse.org/2013-02-24-qnd-s9y-mysql-und-ubuntu-12-10/" />
+  <link rel="canonical" href="https://git.lupuse.org/2013-02-24-qnd-s9y-mysql-und-ubuntu-12-10/" />
+  
+
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="QnD - s9y, MySQL und Ubuntu 12.10" />
+  
+
+  
+  <meta name="twitter:description" content="Heute sich selbst referenzierend im s9y über seine Installation. Wie einige wissen ist s9y (Serendipity) ein Blog-System, welches ich gerne einsetze, weil es schlank und einfach ist. Beim Upgrade von Ubuntu lucid auf Ubuntu precise hatte ich nur bemerkt, das MySQL nicht mehr installiert ist. Die Datenbanken selbst waren nach...">
+  
+
+  
+
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="https://git.lupuse.org">LupusE Weblife</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Resources</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="http://www.markdowntutorial.com/">Learn markdown</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="https://pages.github.com/">GitHub Pages</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="http://lupuse.org">Author's home</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>QnD - s9y, MySQL und Ubuntu 12.10</h1>
+		  
+		  
+		  
+		  <span class="post-meta">Posted on February 24, 2013</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      
+
+      <article role="main" class="blog-post">
+        <p>Heute sich selbst referenzierend im s9y über seine Installation.</p>
+<p>Wie einige wissen ist s9y (Serendipity) ein Blog-System, welches ich gerne einsetze, weil es schlank und einfach ist.</p>
+<p>Beim Upgrade von Ubuntu lucid auf Ubuntu precise hatte ich nur bemerkt, das MySQL nicht mehr installiert ist. Die Datenbanken selbst waren nach der wieder Installation alle noch vorhanden.</p>
+<p>Bei der Installation unter quantal bin ich auf ein ganz anderes Problem gestoßen.</p>
+<blockquote><p>$ sudo aptitude install serendipity</p></blockquote>
+<p>sieht zunächst gut aus. Beim automatischen Einrichten der Datenbank über debconf der Fehler:</p>
+<blockquote><p>#1214 - The used table type doesn't support FULLTEXT indexes</p></blockquote>
+<p>Die Meldung hatte ich schon mal, aber da habe ich bewusst auf einer Tabelle die InnoDB testen wollen.<br />
+Da MySQL als Standard MyISAM nutzt kann es daran gar nicht liegen. Oder?</p>
+<p>Analyse:</p>
+<p>Zunächst gehe ich sicher, das meine Annahme stimmt:</p>
+<blockquote><p>$ mysql -u root -p<br />
+mysql> SHOW ENGINES;<br />
+[...]<br />
+| Engine             | Support | Comment<br />
+[...]<br />
+| MyISAM             | YES     | MyISAM storage engine<br />
+[...]<br />
+| InnoDB             | DEFAULT | Supports transactions, row-level locking,...<br />
+[...]</p></blockquote>
+<p>Okay, stimmt nicht. Was habe ich hier falsch gemacht? Nichts! Ausser vielleicht Changelogs nicht aufmerksam gelesen.</p>
+<blockquote><p>Permitted Values (<= 5.5.4) Default	MyISAM<br />
+Permitted Values (>= 5.5.5) Default	InnoDB<br />
+Quelle: http://dev.mysql.com/doc/refman/5.5/en/server-options.html#option_mysqld_default-storage-engine</p></blockquote>
+<p>Seit precise wird MySQL 5.5 eingesetzt, davor war es noch 5.1.<br />
+Quelle: http://packages.ubuntu.com/mysql-server</p>
+<p>Alle Fragen geklärt. Jetzt heisst es aufräumen:</p>
+<p>Lösung:<br />
+Default setzen, in die (zuvor geleerte!) Datenbank wechseln, Dump erneut einlesen.</p>
+<blockquote><p>mysql> SET storage_engine=MYISAM;<br />
+mysql> USE serendipity;<br />
+mysql> \. /usr/share/doc/serendipity/sql-schema/mysql</p></blockquote>
+<p>Done.</p>
+<p>Der Import läuft durch es musste kein Script angepasst werden. Keep it simple.</p>
+<p>PS: Allen PhpMyAdmin Liebhaber sei gesagt: Macht es über die Konsole!<br />
+Das Frontend nimmt das SET an und gibt auch positives Feedback, aber wendet es nicht auf das nächste Query an. Viel Spaß beim selbst Testen.</p>
+<p>PPS: Bevor jemand auf die Idee kommt jede durch den ersten Lauf angelegte Tabelle einzeln zu dropen:</p>
+<blockquote><p>mysql> DROP DATABASE serendipity;<br />
+mysql> CREATE DATABASE serendipity;</p></blockquote>
+
+      </article>
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2011-06-18-heute-wird-ein-windows-xp-repariert-ohne-linux/" data-toggle="tooltip" data-placement="top" title="Heute wird ein Windows XP repariert (ohne Linux)">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          
+
+        </div>
+          
+
+        <div class="staticman-comments">
+          
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+            
+            
+            <li>
+            
+              <a href="/feed.xml" title="RSS">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="mailto:git@lupuse.org" title="Email me">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://www.facebook.com/LupusE" title="Facebook">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://github.com/LupusE" title="GitHub">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://twitter.com/LupusE42" title="Twitter">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://plus.google.com/+LupusE" title="Google+">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Google+</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://linkedin.com/in/benjamin-moeller-95455472" title="LinkedIn">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://www.xing.com/profile/Benjamin_Moeller" title="Xing">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Xing</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://stackoverflow.com/users/9601986/lupuse" title="StackOverflow">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">StackOverflow</span>
+              </a>
+            </li>
+          
+            
+            
+            <li>
+            
+              <a href="https://steamcommunity.com/id/LupusE42" title="Steam">
+            
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-steam fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Steam</span>
+              </a>
+            </li>
+          
+        </ul>
+      <p class="copyright text-muted">
+      Benjamin Moeller
+      &nbsp;&bull;&nbsp;
+      2019
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="https://git.lupuse.org">git.lupuse.org</a>
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+  
+  </body>
+</html>
