@@ -2,9 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LupusE Weblife</title>
-    <description>Ein Platz fuer geistige ejakulationen und bedeutungsschwangere Worte</description>
+    <description>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte</description>
     <link>https://git.lupuse.org</link>
     <atom:link href="https://git.lupuse.org/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>s9y to Jekyll</title>
+        <description>
+          
+          Seit 2007 habe ich s9y als Blogengine genutzt. Leider fehlt mir die Zeit zum Pflegen der Version. Auch wenn mein Webspace gemietet ist, und sich verantwortungsvoll um den httpd und den Datenbankserver gekümmert wird, so habe ich doch ein besseres Gefühl, wenn ich wieder statische http Seiten nutze. Ende 2018...
+        </description>
+        <pubDate>Thu, 03 Jan 2019 20:18:07 +0100</pubDate>
+        <link>https://git.lupuse.org/2019-01-03-s9y-to-jekyll/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-01-03-s9y-to-jekyll/</guid>
+      </item>
     
       <item>
         <title>QnD - s9y, MySQL und Ubuntu 12.10</title>
@@ -213,17 +224,6 @@
         <pubDate>Sun, 30 Nov 2008 17:28:13 +0100</pubDate>
         <link>https://git.lupuse.org/2008-11-30-abschied/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2008-11-30-abschied/</guid>
-      </item>
-    
-      <item>
-        <title>Urban Art</title>
-        <description>
-          
-          Wie viele wissen, was an mir nicht zu sehen ist, ich stehe total auf Urban Art. Graffiti, Installationen, Architektur, Musik, Lifestyle, Mode, ... Ich mag die Stadt, ich mag es zu sehen, wie die Menschen etwas schaffen, auch wenn sie vermeidlich nichts haben. Aber sie Leben, sie verwirklichen sich. Sandra:&quot;Ich...
-        </description>
-        <pubDate>Sun, 23 Nov 2008 04:35:00 +0100</pubDate>
-        <link>https://git.lupuse.org/2008-11-23-urban-art/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2008-11-23-urban-art/</guid>
       </item>
     
   </channel>
