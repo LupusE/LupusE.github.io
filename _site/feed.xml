@@ -18,7 +18,7 @@
       </item>
     
       <item>
-        <title>QnD - s9y, MySQL und Ubuntu 12.10</title>
+        <title>quick-and-dirty - s9y, MySQL und Ubuntu 12.10</title>
         <description>
           
           Heute sich selbst referenzierend im s9y über seine Installation. Wie einige wissen ist s9y (Serendipity) ein Blog-System, welches ich gerne einsetze, weil es schlank und einfach ist. Beim Upgrade von Ubuntu lucid auf Ubuntu precise hatte ich nur bemerkt, das MySQL nicht mehr installiert ist. Die Datenbanken selbst waren nach...
@@ -73,7 +73,7 @@
       </item>
     
       <item>
-        <title>QnD - Moodle</title>
+        <title>quick-and-dirty - Moodle</title>
         <description>
           
           In der Berufsschule nutzen wir die top moderne eLearning Plattform Moodle. Die so was von toll ist, dass sie gleich in ganz Neuseeland eingesetzt wird, wo die Schüler komplett von zuhause aus arbeiten (Quelle: Ein Lehrkörper unserer Schule). Es handelt sich um ein Stück GPL Software, das einzige Positive an...
@@ -95,7 +95,7 @@
       </item>
     
       <item>
-        <title>QnD - Sony Ericsson und der Generationskonflikt</title>
+        <title>quick-and-dirty - Sony Ericsson und der Generationskonflikt</title>
         <description>
           
           Vor Jahren brauchte ich ein neues Telefon, da mein Nokia 6100 kein Bluetooth konnte, ich aber unbedingt ein BT Headset haben wollte. Also entschied ich mich für das Sony Ericsson T630. Mit dieser Wahl war ich lange Zeit zufrieden (6 Monate), und kaufe mir aufgrund der positiven Erfahrungen gleich noch...
@@ -106,7 +106,7 @@
       </item>
     
       <item>
-        <title>QnD - IPTables meets WM61 II</title>
+        <title>quick-and-dirty - IPTables meets WM61 II</title>
         <description>
           
           Und heute wollen wir ein Windows Mobile 6.1 ueber Linux ins Internet bringen. # echo 1 &gt; /proc/sys/net/ipv4/ip_forward # iptables --table nat --append POSTROUTING --out-interface ath0 -j MASQUERADE # iptables --append FORWARD --in-interface rndis0 -j ACCEPT Dem aufmerksamen Leser wird auffallen, dass diese Aktion nur medium Sinn macht. Denn ich...
@@ -128,7 +128,7 @@
       </item>
     
       <item>
-        <title>QnD - Debian meets WM61</title>
+        <title>quick-and-dirty - Debian meets WM61</title>
         <description>
           
           Lange ist es her, da habe ich einmal versuche mein Adressbuch des Handys mit dem des Linux zu verheiraten. Ich habe es aufgegeben. Das einfachste war SyncML ueber Bluetooth auf eGroupWare (XML-RPC)/LDAP als Server. Das ist nicht verhältnismaessig, fuer z.B. einen Laptop. Vor wenigen Tagen dann kam ein neuer Hoffnungsträger,...
