@@ -5,9 +5,9 @@ subtitle: Lebenslauf
 ---
 
 # Lebenslauf von Benjamin Moeller
-> Geburtstag/-ort:	21.03.1982, Kiel
-> Nationalität:		deutsch/dänisch
-> E-Mail:		bm@lupuse.de
+> Geburtstag/-ort:	21.03.1982, Kiel<br />
+> Nationalität:		deutsch/dänisch<br />
+> E-Mail:		bm@lupuse.de<br />
 
 
 ## BERUFSERFAHRUNG
@@ -141,20 +141,20 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 
 ## AUSBILDUNG
 ---
-### **2008 – 2010** Ausbildung / Amplifon Deutschland GmbH, Hamburg
+#### **2008 – 2010** Ausbildung / Amplifon Deutschland GmbH, Hamburg
 * Abschluss: Fachinformatiker Systemintegration
 
-### **2003 – 2006** Ausbildung / Pavel Hörgeräte GmbH, Kiel
+#### **2003 – 2006** Ausbildung / Pavel Hörgeräte GmbH, Kiel
 * Abschluss: Geselle der Hörgeräteakustik
 
-### **2000 – 2001** Zivildienstleistender – Unterstützung der Gerontopsychatrischen Abteilung der 	Arbeiterwohlfahrt in Kiel
+#### **2000 – 2001** Zivildienstleistender – Unterstützung der Gerontopsychatrischen Abteilung der 	Arbeiterwohlfahrt in Kiel
 
-### **2000** Realschule des BZM in Kiel, Mittlere Reife mit Note 2
+#### **2000** Realschule des BZM in Kiel, Mittlere Reife mit Note 2
 
 
 ## SPRACH-KENNTNISSE
 ---
-> Deutsch: Muttersprache
+> Deutsch: Muttersprache<br />
 > Englisch: sicher, mehrjährige Arbeit im internationalen Team und gehaltene Schulungen
 
 ## IT-KENNTNISSE
