@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: minimal
 title: Benjamin Moeller
 subtitle: Lebenslauf
 ---
@@ -7,7 +7,7 @@ subtitle: Lebenslauf
 # Lebenslauf von Benjamin Moeller
 > Geburtstag/-ort:	21.03.1982, Kiel
 > Nationalität:		deutsch/dänisch
-> E-Mail:			bm@lupuse.de
+> E-Mail:		bm@lupuse.de
 
 
 ## BERUFSERFAHRUNG
