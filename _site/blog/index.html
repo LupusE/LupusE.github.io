@@ -302,7 +302,7 @@ Entgegen den Befürchtungen des allgemeinen Volkes kann auch APM (Advanced Power
 Dazu muss man wissen, dass ACPI zwar generell eine tolle Idee ist, aber die Implementierung sehr fragwürdig. Sich an Standards zu halten kostet Geld. Geld will man nicht bezahlen, so richtet sich die Industrie nach den Wünschen der Konsumenten, die dann über die Industrie fluchen.</p>
 <p>Im folgenden Schritt wählen wir 'Windows installieren', denn mit der eingeschränkten Reparaturkonsole (Recovery System) kann man etwa soviel machen, wie ein Bauer mit einer ausgestopften Kuh. Schön anzusehen (schwarz mit weißen Flecken) aber irgendwie nicht nutzbar. Als Letztes entscheiden wir uns für 'Erkanntes Windows reparieren'.</p>
 <p>Home sweet home.</p>
-<p>Der Rest geht automatisch. Die Routine beginnt relativ früh. Also einige Treiber und Systemgeschichten wollen nachinstalliert werden, Einstellungen wollen kontrolliert werden usw.</p>
+<p>Der Rest geht automatisch. Die Routine beginnt relativ früh. Also einige Treiber- und Systemgeschichten wollen nachinstalliert werden, Einstellungen wollen kontrolliert werden usw.</p>
 <p>	Got ya!</p>
 
   </li>
@@ -315,7 +315,7 @@ Dazu muss man wissen, dass ACPI zwar generell eine tolle Idee ist, aber die Impl
 <p>Die zusammenhangslos <strong>fett</strong> geschriebenen Worte in dem Text will ich noch erlaeuten. Die <strong><em>fett und kursiv</em></strong> geschriebenen Worte sollten auf etwas anderes in dem Text bezogen sein. Befehle sind in einer Monoschrift geschrieben.<br />
 Anmerkungen, (Themen)wünsche, Kritik und Blumen nehme ich natürlich gerne per eMail entgegen.</p>
 <p>Ich danke meinen Mitschülern, die mir positive Resonanz gegeben haben und auch die negativen Stimmen habe ich wohl vernommen. Letzteren sei gesagt: Ich werde mein Verhalten nicht grundsätzlich anpassen.<br />
-Die Klausur selbst, auf diese das Dokument vorbereiten sollte, viel etwas anders aus. Mit dem Wissen nur aus dem Untericht hätte ich nicht alle Fragen beantworten können. Im letzten Kapitel habe ich also ein paar Zeilen zu Blockdevices geschrieben.<em></em><em></em></p>
+Die Klausur selbst, auf diese das Dokument vorbereiten sollte, viel etwas anders aus. Mit dem Wissen nur aus dem Unterricht hätte ich nicht alle Fragen beantworten können. Im letzten Kapitel habe ich also ein paar Zeilen zu Blockdevices geschrieben.<em></em><em></em></p>
 
   </li>
   
@@ -344,9 +344,9 @@ none                  1,6G     0  1,6G   0% /lib/init/rw<br />
 lupus@zoe:~$ </p></blockquote>
 <p>Da ich ein RAID System habe ist /dev/sdb[n] und /dev/sdc[n] zusammengefasst zu /dev/md[n]. Hier liegt /media und /home. Beide sind vom update nicht betroffen. sicher aendert das ein oder andere Programm die Einstellungen unter ~/.blah, aber das vernachlässige ich. Im Notfall werden diese beim Schritt zurueck gelöscht und erneut angelegt.<br />
 Wichtig ist, das /home getrennt liegt, also beim Update oder einer neuen Installation nur eingebunden werden muss.</p>
-<p>Von Karmic auf Lucid habe ich mich dazu entschlossen mein kaputtes Debian entgültig zu löschen, das heisst ich installiere ein frisches Licid direkt auf /dev/sda3, und fasse /dev/sda1 gar nicht an. Damit habe ich 40GB ungenutzten Speicher auf der Platte, aber kann jederzeit ohne grossen Zeitvertzug zurück. Früher oder später kann ich dann auf /dev/sda1 wieder mit anderen Systemen spielen.<br />
-Um ein neues System schnell lauffähig zu bekommen reicht es mit einem 2. Benutzer oder Livesystem die Dateien von /home auf ein neu eingerichtetes /home2 zu legen. Zum Testen lagere ich es nichtmal aus.</p>
-<p>Bei meinem Aufbau könnte man zusätzlich /boot auf sda legen, om grub Systemunabhängig konfigurieren zu können. Auch die Auslagerung von /var hatte ich mal realisiert. Das macht aber nur für Forensik einen nennenswerten Sinn. Oder wenn das RAID einen Geschwindigkeitsvorteil bringen würde.<br />
+<p>Von Karmic auf Lucid habe ich mich dazu entschlossen mein kaputtes Debian entgültig zu löschen, das heisst ich installiere ein frisches Lucid direkt auf /dev/sda3, und fasse /dev/sda1 gar nicht an. Damit habe ich 40GB ungenutzten Speicher auf der Platte, aber kann jederzeit ohne großen Zeitverzug zurück. Früher oder später kann ich dann auf /dev/sda1 wieder mit anderen Systemen spielen.<br />
+Um ein neues System schnell lauffähig zu bekommen reicht es mit einem 2. Benutzer oder Livesystem die Dateien von /home auf ein neu eingerichtetes /home2 zu legen. Zum Testen lagere ich es nicht mal aus.</p>
+<p>Bei meinem Aufbau könnte man zusätzlich /boot auf sda legen, im grub Systemunabhängig konfigurieren zu können. Auch die Auslagerung von /var hatte ich mal realisiert. Das macht aber nur für Forensik einen nennenswerten Sinn. Oder wenn das RAID einen Geschwindigkeitsvorteil bringen würde.<br />
 Warum ich /war/www auf /home/wwwuser legen würde erlaeutere ich in einem anderen Artikel.</p>
 <p>Fazit:<br />
 1. lagert /home aus!<br />
@@ -459,7 +459,7 @@ gnokii --getphonebook SM 1 end --vcard > 090724_k600i_SM.dump</p></blockquote>
 <blockquote><p>mutt -f 090724_k600i_MESMS.mbox</p></blockquote>
 <p>[Edit]<br />
 Als Basis für die Einstellungen habe ich die /etc/gnokiirc nach ~/.gnokiirc kopiert. Hier kann man bequem daran rumspielen.<br />
-Weitesgehend ahbe ich die Werte auf Default belassen, die wichtigen Optionen in meinem Fall sind:</p>
+Weitestgehend habe ich die Werte auf Default belassen, die wichtigen Optionen in meinem Fall sind:</p>
 <blockquote><p>## ~/.gnokiirc<br />
 ## SE T630/K600i via DSS-25 Dockingstation<br />
 port = /dev/ttyUSB0<br />
@@ -487,7 +487,7 @@ gnokii --writephonebook -o -m ME < 090725_T630_ME.raw</p></blockquote>
 <p>[Edit]<br />
 Aufgrund des regen Feedbacks zu dem Thema ein kleines Update:</p>
 <p>Damit das Forwarding funktioniert muss  die synce-sync-engine laufen. Denn ohne ActiveSync ist dem Telefon nicht bekannt, dass die Daten über USB kommen.<br />
-Unter Ubuntu macht das HAL, unter Debian in nem Terminal einfach 'synce-sync-engine &' eingeben.</p>
+Unter Ubuntu macht das HAL, unter Debian in einem Terminal einfach 'synce-sync-engine &' eingeben.</p>
 
   </li>
   
@@ -501,8 +501,8 @@ Sei es Klopapier, Backpapier oder eine Malunterlage, ich komme einfach in dieser
 <p>Als ich juengst feststellte in unserer WG Kuechenschublade ist das Backpapier ausgegangen. Da fragte ich mich, warum man keine roten Markierungen auf den letzten 50cm bekommt. Nun habe ich eine Pizza, ein zu kurzes Backpapier und irgendwie hunger.</p>
 <p>An einem guten Tag gehe ich zu meinem Lieblingsrewe, in der stillen Hoffnung meine Lieblingskassiererin anzutreffen und versuche mich im Haushaltswarenregal. Ich habe eine riesige Auswahl an verschiedensten Backpapieren erwartet, aber nein, es gab nur eine Sorte. Wie einfach ... Also sollte es 8m, beidseitig Silikonbeschichtet, vorgeschnitten sein ... 2,60e.<br />
 ?!??!! Sorry, was? Fuer über 2e kann es meinetwegen einen Goldrand mit D&G Praegung haben. Nee, geht gar nicht! 8m haelt ja gerade mal ein Quartal. Und ich entsorge Backpapier, trotz meines übertriebenen Hygienedrangs in der Kueche, nicht bei jedem Backvorgang!<br />
-Getruebter Stimmung, weil ich mich nichtmal bei meiner Lieblingskassiererin ausheulen konnte, ging es also zum nahe gelegenen Aldi. Dort machte man mich freundlich darauf aufmerksam, das seit bestehen des Ladens noch nie Backpapier geführt wurde, weil ... keine Ahnung, hab nicht zugehoert. Ich wollte doch nur Backpapier, keinen lokalpatriotischen Geschichtsunterricht.<br />
-Naechster Halt der Feinkostedeka. Wohl die niedlichste Auspraegung eines Supermarkes, erinnert leicht an Tante Emma, Ah, Sambucca im Angebot 8,99e, das Wissen koennte nochmal brauchbar sein, heute. Aber kein Backpapier.<br />
+Getruebter Stimmung, weil ich mich nicht mal bei meiner Lieblingskassiererin ausheulen konnte, ging es also zum nahe gelegenen Aldi. Dort machte man mich freundlich darauf aufmerksam, das seit bestehen des Ladens noch nie Backpapier geführt wurde, weil ... keine Ahnung, hab nicht zugehoert. Ich wollte doch nur Backpapier, keinen lokalpatriotischen Geschichtsunterricht.<br />
+Naechster Halt der Feinkostedeka. Wohl die niedlichste Auspraegung eines Supermarktes, erinnert leicht an Tante Emma, Ah, Sambucca im Angebot 8,99e, das Wissen koennte nochmal brauchbar sein, heute. Aber kein Backpapier.<br />
 Letzte Hoffnung Plus. Notfalls gibt es da das beste Knuspermuesli. Also auch dort nur eine Sorte Backpapier. 20m, eine Rolle, stinkend Normal. Aber! Aber ich hatte nach diesem aufreibenden Tag meine persoenliche Marke bei 1e/Backpapier gesetzt. Herr Plus wollte 1,19e haben. Doof!<br />
 Wie brachte mir mein Chef in der Akustik bei? Entweder man lebt oder man ist konsequent.<br />
 Ich kann wieder froehlich backen. Okay, ich kann backen, denn der Frohsinn vergeht mir jedes mal aufs neue.</p>
@@ -511,16 +511,16 @@ In Kiel, da fand ich in einem Werbeblatt ein Angebot fuer die Kackpappe 'Happy E
 Sodenn stehe ich nun jedesmal vor dem Regal und wundere mich, dass das guenstigste Papier ausverkauft ist, wo mir doch jeder versichert man muss mind 2. Klasse nehmen, alles andere ist Schmiergelpapier.<br />
 Dann gibt es noch den Superlativ des Klopapiers, in Farbe. Den Ultralativ, mit Sodoku. Und den Hyperlativ, mit Geruch.<br />
 Aber nein, es gibt kein Klopapier mit einer Farbmarkierung auf den letzten 50cm ... Doof!<br />
-Ich danke Sandra fuer die klasse Idee "Kauf doch duftendes Kloppier, wenn es nicht mehr riecht, dann ist es alle!". Ich hatte sie davor versucht davon zu ueberzeugen, dass ich nicht sehe wieviel auf der Rolle ist, wenn ich frontal draufschaue.</p>
+Ich danke Sandra fuer die klasse Idee "Kauf doch duftendes Kloppier, wenn es nicht mehr riecht, dann ist es alle!". Ich hatte sie davor versucht davon zu ueberzeugen, dass ich nicht sehe wie viel auf der Rolle ist, wenn ich frontal drauf schaue.</p>
 <p>Ich hatte als Akustiker immer Angst vor der Anweisung das Klopapier zentral bestellen zu muessen. Wer bitte wertet dann die Statistik aus? Und was wird daraus abgeleitet? Bei zu hohem Klopapierverbrauch muss ja der Wasserverbrauch auch steigen, so dass eine Gehaltserhoehung nicht moeglich ist? Ich bitte doch um Datenschutz in den gekachelten Raeumlichkeiten!</p>
 <p>Zeitungspapier.<br />
 Nachdem meine Mitbewohnerin auszog bekam ich den Auftrag mal ueberzustreichen. 10l Farbe gekauft, ein paar Pinsel, Rollen und Abdeckfolie ... Der erste Anstrich, nach dem Trocknen haette man ein System hinter den Flecken erahnen koennen. Der zweite Anstrich machte schon mehr her, aber die Plastikfolie litt arg unter meinen unlustmotivierten Bewegungsabläufen.<br />
-Der dritte Anstrich war notwendig, aber die Folie entsorgt. Nichts wie in den nahe gelegenen Supermarkt und Zeitungen vergleichen. Mit abstand ist die Bloed echt die guenstigste Variante. 80ct, fuers Vaterland! Ich kann ja auch ganz viel kleckern! ... Nein nein, ich kaufte mir eine FAZ, las die interessantesten Artikel und legte die uninteressanten Seiten aus.<br />
+Der dritte Anstrich war notwendig, aber die Folie entsorgt. Nichts wie in den nahe gelegenen Supermarkt und Zeitungen vergleichen. Mit Abstand ist die Bloed echt die guenstigste Variante. 80ct, fuers Vaterland! Ich kann ja auch ganz viel kleckern! ... Nein nein, ich kaufte mir eine FAZ, las die interessantesten Artikel und legte die uninteressanten Seiten aus.<br />
 Ja, ich kann noch gut schlafen! Ich habe nichts getan, was ich bereuen wuerde.</p>
 <p>[add 24 Juli 2009]<br />
 Nach langen Unterhaltungen mit verschiedenen Personen sind 2 fundamental wichtige Erkenntnisse dazu gekommen.<br />
 1. Das 5 lagige Klopapier lässt sich bekloppt spülen. Zudem hat man die Welt nicht verstanden, es ist total oversized.<br />
-2. Frauen sind mit Klopapier zu beeindrucken. Es muss mindestens 3 lagig sein und ein Bildchen ist schön. Umweltschutz und blauer Engel hin oder her, wir leben in einer Zivilisation und auch auf Klo darf man sich den Luxus der Neuzeit gönnen.<br />
+2. Frauen sind mit Klopapier zu beeindrucken. Es muss mindestens 3-lagig sein und ein Bildchen ist schön. Umweltschutz und blauer Engel hin oder her, wir leben in einer Zivilisation und auch auf Klo darf man sich den Luxus der Neuzeit gönnen.<br />
 Ein Tipp besteht noch darin immer eine Packung feuchtes Klopapier stehen zu haben. Es kann auch eingetrocknet sein, aber die Absicht zaehlt. Man macht sich Gedanken über die angenehmste Hygiene.</p>
 
   </li>
@@ -564,7 +564,7 @@ XDA Orbit II "M-Amine 2.0 FINAL ROM"</p>
 -- oder --<br />
 Es gibt alles und nichts passt zusammen.</p>
 <p>Heute leben wir in einem modernen Zeitalter, in dem wir den Menschen zerlegen, analysieren, reparieren, nachbauen, klonen und am Ende noch die Ethik versuchen darauf anzupassen.<br />
-Nicht nur die Wenigen, die lesen und schreiben können, kommen in den Genuss der Bildung. Jeder Einzelne wird den ganzen Tag mit Informationen überflutet und darf damit klarkommen. Jedem steht frei diese Information zu nutzen, erneut abzurufen oder einfach zu blocken und hoffen andere arbeiten genug.</p>
+Nicht nur die Wenigen, die lesen und schreiben können, kommen in den Genuss der Bildung. Jeder Einzelne wird den ganzen Tag mit Informationen überflutet und darf damit klar kommen. Jedem steht frei diese Information zu nutzen, erneut abzurufen oder einfach zu blocken und hoffen andere arbeiten genug.</p>
 <p>Wort der Woche: 'medium' (als Adjektiv!)</p>
 <p>In der IT, auch unter Linux, ist es nicht anders. Jeder kocht sein Süppchen und am Ende kommt ein zäher Brei heraus. Das Problem wird dann auf 'die Anderen' geschoben und man tut erst mal nichts, weil das Bild im Kopf nicht mit der Funktion in der Realität übereinstimmt. Und die Community ist letztendlich eh doof.</p>
 <p>Realität?<br />
@@ -624,7 +624,7 @@ Aber wohl schenke ich gerne auch ohne offiziellen Anlass, wenn etwas passt.</p>
       
     <p>Wiedermal eine schlaflose Nacht, und bevor ich noch aus versehen produktiv werde habe ich mir gedacht ich nutze mal die Erinnerung um 0:00h meines tollen Telefons an einen Geburtstag und gruesse im MeinVZ. Dabei habe ich mir gleich ihre Gruppen angesehen und siehe da, etwas fuer den Weltfrieden:<br />
 <strong>Fatale Fehler, die Männer beim Sex machen...</strong></p>
-<p>Tja, beim einen oder andern Punkt der Gruppenbeschreibung kommt einen dann doch das Schmunzeln oder auch das blanke Entsetzen ... Aber im letzten Punkt wird ja alles aufgeklaert: man muss halt nur drueber reden.</p>
+<p>Tja, beim einen oder anderen Punkt der Gruppenbeschreibung kommt einen dann doch das Schmunzeln oder auch das blanke Entsetzen ... Aber im letzten Punkt wird ja alles aufgeklaert: man muss halt nur drueber reden.</p>
 <p>[-- snip --]<br />
 Jungs, es ist offiziell: ihr macht dieselben Fehler immer und immer wieder. Werdet ihr es jemals lernen?? Aber es ist ok, wir haben uns zusammen getan um euch über eure Schwächen zu informieren, so dass ihr verhindern könnt dass es wieder passiert- und ihr somit zum perfekten Liebhaber werdet!</p>
 <p>Mädels, seid so frei und schreibt alles dazu, was euch dazu einfällt- die Jungs brauchen alle Hilfe, die sie kriegen können.</p>
@@ -714,10 +714,10 @@ Und das Ende? Soweit bin ich noch nicht, ich will noch eine Weile leben. Ich mö
 	  <h2><a href="/2008-11-30-weihnachtsmarkt/">Weihnachtsmarkt</a> - 30 Nov 2008</h2>
       
     <p>Nun werde ich mal versuchen meine zweite Aktion in Hamburg zu planen. Das Erste war ein DVD Abend, der in erster Linie von Anna organisiert wurde. Ich habe nur die DVD gestellt. Vielen Dank!</p>
-<p>Es geht diesesmal auf den Weihnachtsmarkt, ich moechte mit ein paar Leuten Gluehwein trinken gehen. Zwanglos und locker. Bei den Preisen wir mehr als einer ja auch nicht drin sein, dann wird es schnell kalt.</p>
+<p>Es geht dieses mal auf den Weihnachtsmarkt, ich moechte mit ein paar Leuten Gluehwein trinken gehen. Zwanglos und locker. Bei den Preisen wir mehr als einer ja auch nicht drin sein, dann wird es schnell kalt.</p>
 <p>Plan: Gluehwein aufm Weihnachtsmarkt<br />
 Ort: Weihnachtsmarkt am Gaensemarkt, Hamburg<br />
-Zeit: Do 12. Dez ab18h<br />
+Zeit: Do 12. Dez ab 18h<br />
 Aftershow: --Faellt aus, wegen Arbeit am naechsten Tag--</p>
 
   </li>
@@ -1622,7 +1622,7 @@ Aktuell: http://www.mobuzztv.com/uk/shows/drm_the_dmca_and_your_dna/</p>
     <p>Vorwort:<br />
 Zu meiner ersten Tour moechte ich vorweg einmal allen Gastgebern, Begleitungen und netten Menschen danken! Besonders (in wertungsfreier Reihenfolge) sein genannt: Lena(!), Arne und Maya, Selly und Sascha, Johannes mit Alex und dem ganzen Rest, Johannes seine Mutter, Tom.<br />
 Die Vorbereitung:<br />
-Eines Tages, Anfang Dezember, ueberkam mich das Gefuehl ich brauche ganz schnell Urlaub, den habe ich auch eingereicht und nach einiger grober Verschiebung bekam ich 2 Wochen genehmigt. Das sollte Ende Januar stattfinden. Mehr und mehr kam dann das Gefuehl ich muss ein paar Leute wiedersehen, und ich muss Kiel nichtmehr sehen, also schnell einen Kontoauszug geholt 'das sollte reichen', und einige Telefonate getaetigt und Mails geschrieben.<br />
+Eines Tages, Anfang Dezember, ueberkam mich das Gefuehl ich brauche ganz schnell Urlaub, den habe ich auch eingereicht und nach einiger grober Verschiebung bekam ich 2 Wochen genehmigt. Das sollte Ende Januar stattfinden. Mehr und mehr kam dann das Gefuehl ich muss ein paar Leute wiedersehen, und ich muss Kiel nicht mehr sehen, also schnell einen Kontoauszug geholt 'das sollte reichen', und einige Telefonate getaetigt und Mails geschrieben.<br />
 Nach 1 Woche hatten sich die 13 angeworbenen Personen auf 2 Dezimiert. Ich musste Handeln und so verschob ich es auf das folgende Wochenende und so hatte die Handvoll an oben genannten Leuten zugestimmt.</p>
 <p>Ich wollte in Hamburg bleiben, da man von dort schnell und bequem ueberall hinkommt, aber das klappte nicht, so hatte ich dort nur schnell was abgegeben und bin am Mittag wieder nach Kiel und habe Fahrplaene in meiner Filiale ausgedruckt.</p>
 <p>Der Freitag:<br />
@@ -1631,24 +1631,24 @@ Soll: Kiel 7:12h - Karlsruhe 13:07h ICE73 -- 49e<br />
 Ist: Kiel 8:21h - HH RB, HH 9:24h - Mannheim 13:53h, Mannheim 14:36h - Karlsruhe 14:59h<br />
 Also Wartezeiten, 2h Verpaetung, und das alles ohne Aufpreis! Der Kommentar vom Menschen am Schalter in Kiel: 'Ja, das ist doch noch vertretbar'. Das brachte mir einen Caramel Macciato.<br />
 5min vor Mannheim geht mein iPod aus, so hatte ich noch Zeit mir eine Tuete Gummibaerchen und 2 doppelte Espresso zu kaufen. Der Tinnitus wurde ertraeglich und ich hatte einen Zucker/Coffeinschock.<br />
-In Karsruhe erfahre ich, das Lena noch arbeiten muss (so lohnte sich zumindest die Verspaetung), und ich habe die Zeit bei Arne und Maya verbracht. Schon krass, was man sich alles zu erzaehlen hat, wenn man sich ueber ein Jahr nicht sieht. Um 17h dann zu Lena und um 19h Essen im Emalie(?) mit Lena, Arne, Maja, Deli (?) und ihrem Freund. War ganz nett. Unter 10e fuer eine gute Portion und Milchkaffee plus Caphirinia.<br />
+In Karsruhe erfahre ich, das Lena noch arbeiten muss (so lohnte sich zumindest die Verspaetung), und ich habe die Zeit bei Arne und Maya verbracht. Schon krass, was man sich alles zu erzaehlen hat, wenn man sich ueber ein Jahr nicht sieht. Um 17h dann zu Lena und um 19h Essen im Emalie(?) mit Lena, Arne, Maja, Deli (?) und ihrem Freund. War ganz nett. Unter 10e fuer eine gute Portion und Milchkaffee plus Caipirinha.<br />
 Danach noch einige Zeit mit Arne und Maya ueber aktuelles gesprochen.</p>
 <p>Der Samstag:<br />
 Karlsruhe 5:59h - Friedrichshafen 9:01h -- 29e<br />
-Ein gutes Fruehstueck und dann ging es auch schon raus aus der Stadt. Am Marktplatz stehen ~30-40 Jugendliche, alle sammt mit nem Bier in der Hand und nicht unbedingt nach Bildungselite scheinend. da hatte ich am Vortag ein besseren Eindruck von der Stadt.<br />
-In Friedrichshafen gab es erstmal dein Kulturschock. Doenerbuden ohne Ende. Alles ganz nett, aber nicht ein Blumenladen. Ich haette ein Salatblatt als Ersatz kaufen koennen. Aber es gab ein super Fruehstueck. Standard Franzoesisch, zwei Crosiant mit Butter und Marmelade/Honig.<br />
+Ein gutes Fruehstueck und dann ging es auch schon raus aus der Stadt. Am Marktplatz stehen ~30-40 Jugendliche, alle samt mit einem Bier in der Hand und nicht unbedingt nach Bildungselite scheinend. da hatte ich am Vortag ein besseren Eindruck von der Stadt.<br />
+In Friedrichshafen gab es erstmal dein Kulturschock. Doenerbuden ohne Ende. Alles ganz nett, aber nicht ein Blumenladen. Ich haette ein Salatblatt als Ersatz kaufen koennen. Aber es gab ein super Fruehstueck. Standard Franzoesisch, zwei Croissant mit Butter und Marmelade/Honig.<br />
 Dann haben wir uns die Stadt angesehen, hier gab es fuer mich 'Pure Vernunft darf niemals siegen' von Tocotronic. Tolles Album! Alles in allem ein nettes vertraeumtes Staedchen mit einer super Aussicht ueber den Bodensee (versicherte mir Selly, wenn kein Nebel da ist).<br />
 Das Sushi ist nicht mit Luebeck zu vergleichen, aber schon ganz brauchbar. Normalpreis und zu grosse Rollen.</p>
 <p>Friedrichshafen 14:50h - Passau 20:37h -- 29e<br />
-Beim Zwischenhalt in Muenchen (17:34h -18:04h) hatte ich auch gleich einen Starbucks entdeckt, es gab einen Vanille Macciato, da ich sowas zuvor noch nicht gesehen habe. Das traegt nicht der Vergleichbarkeit bei, aber ich hoffe das war nicht mein letzter Starbucks im Leben! Die Erfahrung war eher Lau. Nicht schlecht, aber unter 'guten Cafe' verstehe ich was anderes. Man beachte die Zeiten, ich war seit 5:00h unterwegs und der Tag war nicht gerade Ereignisslos. Der iPod hat vor Gruendlkofen (18:55h) den Geist aufgegeben<br />
-In Passau gab es dann Zeit zum Duschen, nach einer kleinen Verschnaufpause ging es zum 'Kneipenfestivell'. Ich war unterwegs mit Leuten von BSM (bsmparty.de), eine der angesagtesten Partycommunitys. Wie man sich denken kann feiern sie auch ganz anders. Es gab schon das ein oder andere Bierchen, die Leute waren gut gelaunt, und naja, es war halt eine Party. Dann sind wir noch kurz ins Empire, dort gab es dann Black/HipHop in einem Floor und House im anderen. Ich war total fertig, aber ein paar Minuten tanzen (auf Trekkingstiefeln!) musste noch sein. Um 6:00h dann nach einer teuren Taxifahrt wieder in die Horizontale.<br />
+Beim Zwischenhalt in Muenchen (17:34h -18:04h) hatte ich auch gleich einen Starbucks entdeckt, es gab einen Vanille Macciato, da ich sowas zuvor noch nicht gesehen habe. Das traegt nicht der Vergleichbarkeit bei, aber ich hoffe das war nicht mein letzter Starbucks im Leben! Die Erfahrung war eher Lau. Nicht schlecht, aber unter 'guten Cafe' verstehe ich was anderes. Man beachte die Zeiten, ich war seit 5:00h unterwegs und der Tag war nicht gerade Ereignislos. Der iPod hat vor Gruendlkofen (18:55h) den Geist aufgegeben<br />
+In Passau gab es dann Zeit zum Duschen, nach einer kleinen Verschnaufpause ging es zum 'Kneipenfestival'. Ich war unterwegs mit Leuten von BSM (bsmparty.de), eine der angesagtesten Partycommunitys. Wie man sich denken kann feiern sie auch ganz anders. Es gab schon das ein oder andere Bierchen, die Leute waren gut gelaunt, und naja, es war halt eine Party. Dann sind wir noch kurz ins Empire, dort gab es dann Black/HipHop in einem Floor und House im anderen. Ich war total fertig, aber ein paar Minuten tanzen (auf Trekkingstiefeln!) musste noch sein. Um 6:00h dann nach einer teuren Taxifahrt wieder in die Horizontale.<br />
 Ich entschied noch spontan einen Tag laenger zu bleiben.</p>
 <p>Der Sonntag:<br />
-Laaaange in den Sonntag hineingeschlafen ging es dann zum Fruehstueck ins Duft. Der Milchkaffee ist kam mehr als eine Kaffeetasse aber geschmacklich Okay. Das Essen ist etwas anders (gebackene Champinions?) aber durchaus etwas, das man sich oefter geben kann.<br />
+Laaaange in den Sonntag hinein geschlafen ging es dann zum Fruehstueck ins Duft. Der Milchkaffee ist kam mehr als eine Kaffeetasse aber geschmacklich Okay. Das Essen ist etwas anders (gebackene Champions?) aber durchaus etwas, das man sich oefter geben kann.<br />
 Eine kurze Sightseeing Tour durch Passau hat mir gezeigt das die Fassaden nicht alle alt und ranzig aussehen muessen. Es ist schon ein interessanter Anblick, wenn Haus neben Haus mit gepflegter Fassade steht. Selbst beim kleinen Handwerker schaut man in einen Edel gestalteten Laden.</p>
 <p>Der Montag:<br />
 Passau 9:21h - Kiel 17:22h -- 119e<br />
-Kurzes Fruestueck bei Hannes, und ich verbrachte den ganzen Tag im Zug. Der iPod hat in Hamburg den Geist aufgegeben, ich hatte noch 2 Tafeln Schokolade und 3 Tassen Kaffee gab es im Boardrestaurant. Man denkt viel ueber sich und die Mitwelt nach.</p>
+Kurzes Fruestueck bei Hannes, und ich verbrachte den ganzen Tag im Zug. Der iPod hat in Hamburg den Geist aufgegeben, ich hatte noch 2 Tafeln Schokolade und 3 Tassen Kaffee gab es im Bordrestaurant. Man denkt viel ueber sich und die Mitwelt nach.</p>
 <p>Fazit:<br />
 a) ich brauche noch einen iPod Shuffle (als Ersatz, wenn der Akku im Nano ausgeht)<br />
 b) die Jugend ist global nicht so verkommen, wie behauptet wird. Sie ist in weiten Teilen gastfreundlich, spontan und zuvorkommend!<br />
@@ -1658,7 +1658,7 @@ d) ich bin im August wieder onTour!</p>
 Bahnfahrten: 6:38h, 3:02h, 5:47h, 8:01h<br />
 226 Euro (Bahn), 150e (Essen), 30e (Party), 10e (CD)</p>
 <p>Planung:<br />
-Im August geht es nochmal los, gerne mit mehr Zwischenstationen. Bewerbungen gerne per Mail, Telefon, Kommentar, Bieftaube, oder wie auch immer zu mir :)<br />
+Im August geht es nochmal los, gerne mit mehr Zwischenstationen. Bewerbungen gerne per Mail, Telefon, Kommentar, Brieftaube, oder wie auch immer zu mir :)<br />
 Natuerlich ist genauso bei mir jeder herzlich eingeladen, der auf Durchreise ist!</p>
 
   </li>
