@@ -8,10 +8,10 @@ subtitle: Lebenslauf
 Persönliche Daten:	geb. am 21.03.1982 in Kiel
 Nationalität:		deutsch/dänisch
 E-Mail:				bm@lupuse.de
----
+
 
 ## BERUFSERFAHRUNG
-
+---
 ### **03/2015 – heute** Leiter IT / Gaschler Hörgeräte (Inh. Sandra Frommer), Elmshorn
 
 * Als Inhabergeführtes Unternehmen für die Anpassung und den Verkauf von Hörlösungen. Die Firma bietet sehr gut ausgebildetes Personal und die beste Ausstattung für eine individuelle Bedarfsanalyse und Versorgung.
@@ -126,9 +126,10 @@ Einrichtung und Aufbau neuer Fachgeschäfte
 Nahezu homogene Ausstattung der IT an allen Standorten
 Aufbau eines zentralen Servers zur Koordination der Standorte
 ```
----
+
 
 ## AUSBILDUNG
+---
 ### **2008 – 2010** Ausbildung / Amplifon Deutschland GmbH, Hamburg
 * Abschluss: Fachinformatiker Systemintegration
 
@@ -138,13 +139,15 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 ### **2000 – 2001** Zivildienstleistender – Unterstützung der Gerontopsychatrischen Abteilung der 	Arbeiterwohlfahrt in Kiel
 
 ### **2000** Realschule des BZM in Kiel, Mittlere Reife mit Note 2
----
+
 
 ## SPRACH-KENNTNISSE
+---
 Deutsch: Muttersprache
 Englisch: sicher, mehrjährige Arbeit im internationalen Team und gehaltene Schulungen
 
 ## IT-KENNTNISSE
+---
 * Windows und Linux im Einsatz als Desktop und Server
 * Kenntnisse der gängigen Serverdienste für Linux und MS Exchange
 * Fundierte Kenntnisse über gängige Netzwerke und deren Protokolle
@@ -155,11 +158,13 @@ Englisch: sicher, mehrjährige Arbeit im internationalen Team und gehaltene Schu
 * Kenntnisse der Automationslösung ‚Automic‘, sowie Grundlagen anderer Lösungen
 
 ## WEITERBILDUNG
+---
 * AkuWin Office NG im Filialunternehmen (2005, Husum)
 * Microsoft Exchange Server 2010 Grundlagen und Administration (2012, Berlin)
 * Fujitsu Siemens CEME, CPME, CMME, CDME (2014, Friedrichshafen)
 
 ## FREIZEIT
+---
 Radfahren, Wandern, Reparaturen von elektrischen und mechanischen Geräten im Haushalt, allgemeine Arbeiten im und am Haus, Reisen mit dem Wohnmobil
 
 
