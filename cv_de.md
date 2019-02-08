@@ -5,9 +5,9 @@ subtitle: Lebenslauf
 ---
 
 # Lebenslauf von Benjamin Moeller
-Persönliche Daten:	geb. am 21.03.1982 in Kiel
+Geburtstag/-ort:	21.03.1982, Kiel
 Nationalität:		deutsch/dänisch
-E-Mail:				bm@lupuse.de
+E-Mail:			bm@lupuse.de
 
 
 ## BERUFSERFAHRUNG
@@ -18,7 +18,8 @@ E-Mail:				bm@lupuse.de
 * 33 Mitarbeiter an 9 Standorten in Elmshorn, Tornesch, Bad Segeberg, Neumünster, Wahlstedt und Hamburg
 
 #### Aufgaben
-```Das analysieren und optimieren der Gesamtstruktur
+```
+Das analysieren und optimieren der Gesamtstruktur
 Das Aufdecken und Beheben von Fehlern in der Vernetzung und Bedienung
 Beraten der Geschäftsleitung zu Entscheidungen die IT betreffend
 Umzug der Infrastruktur in die Cloud und Transformation in das papierloses Büro
@@ -31,7 +32,8 @@ Umzug der Infrastruktur in die Cloud und Transformation in das papierloses Büro
 * 25 Mitarbeiter mit dem Hauptsitz in Salzgitter und einen Standort in Bremen.
 
 #### Aufgaben
-```Berater für die Migration, Optimierung und Instandhaltung der Automation mit Automic
+```
+Berater für die Migration, Optimierung und Instandhaltung der Automation mit Automic
 Entwickler von Skripten und Lösungen zur Betriebsprozessautomation
 Direkter Kontakt mit dem Entwicklungsteam beim ungeplanten Abläufen beim Kunden.
 Interne Schulungen und 3rd Level Support bei Fragen rund um Datenbank und Linux.
@@ -44,7 +46,8 @@ Interne Schulungen und 3rd Level Support bei Fragen rund um Datenbank und Linux.
 * 25 Mitarbeiter. Im Süden von Hamburg haben wir unseren Hauptsitz von dem aus wir europaweit agieren.
 
 #### Aufgaben
-```Analyse der Kundenanforderungen
+```
+Analyse der Kundenanforderungen
 Optimierung der Prozesse im IT Service
 Pflege und Aufbau der internen Wissensdatenbank
 ```
@@ -56,7 +59,8 @@ Pflege und Aufbau der internen Wissensdatenbank
 * 500 Mitarbeiter Global mit Hauptsitz in Deutschland, Tettnang. Mit über 20 Jahren Erfahrung ist das Unternehmen ein Pionier auf dem Gebiet
 
 #### Aufgaben
-```Lösung von technischen Anfragen unserer Geschäftskunden und Partner
+```
+Lösung von technischen Anfragen unserer Geschäftskunden und Partner
 Reproduktion und Analyse von Kundenproblemen
 Voranalyse verdächtiger Dateien für die Avira Protection Labs
 Entfernung von Schadsoftware auf Kundensystemen und Netzen nach Analyse durch die Avira Protection Labs
@@ -67,7 +71,8 @@ Pflege und Aufbau der internen und der öffentlichen Wissensdatenbank
 ```
 
 #### Erfolge
-```Aufbau eines Teams zum Support der 'Avira Exchange Security'
+```
+Aufbau eines Teams zum Support der 'Avira Exchange Security'
 Signifikante Steigerung der aktualisierten und neu erstellten Artikel der Wissensdatenbanken
 ```
 
@@ -76,7 +81,8 @@ Signifikante Steigerung der aktualisierten und neu erstellten Artikel der Wissen
 * Für Amplifon sind bundesweit mehr als 640 hoch motivierte Mitarbeiterinnen und Mitarbeiter im Einsatz. In über 200 Fachgeschäften verbessern sie in 14 Bundesländern die Lebensqualität von Menschen mit Hörproblemen durch kompetente Beratung und professionelle Versorgung mit passgenauen Hörgeräten und -lösungen und beugen Hörschäden mit effektivem Gehörschutz vor. 
 
 #### Aufgaben
-```Evaluation und Implementierung einer serverbasierten Warenwirtschafts-Software
+```
+Evaluation und Implementierung einer serverbasierten Warenwirtschafts-Software
 Anbindung einer zentralen Warenwirtschaft inkl. Einarbeitung und Schulung des Lagerpersonals
 Migrationen von Kundendaten nach Akquisition
 Aufarbeitung eines kompletten Artikelstammes zur Datenzusammenführung
@@ -91,7 +97,8 @@ Test und Bewertung neuer Ausstattung für die Fachgeschäfte (Speziell: Otoskopi
 ```
 
 #### Erfolge
-```Aufbau einer zentralen Warenwirtschaft zur Lagerverwaltung der IT
+```
+Aufbau einer zentralen Warenwirtschaft zur Lagerverwaltung der IT
 Optimierung der Prozesse in der Warenwirtschaft
 Förderung der Transparenz in den Inventuren
 Aufbau der zentralen Softwareverwaltung für ca. 200 Standorte
@@ -103,7 +110,8 @@ Erstellung eines Konzepts zur Qualitätssicherung der schallisolierten Kabinen
 ### **04/2007 – 07/2008** Hörgeräteakustikgeselle / Amplifon Deutschland GmbH, Kiel
 
 #### Aufgaben
-```Individuelle Beratung der Kunden
+```
+Individuelle Beratung der Kunden
 Ermittlung der akustischen Kenndaten (Audiometrie)
 Auswahl und Anpassung von geeigneten Hörsystemen
 Gehörgangsabformungen
@@ -116,7 +124,8 @@ Schriftverkehr mit Kunden und Krankenkassen
 ### **07/2006 – 04/2007** Hörgeräteakustikgeselle / Pavel Hörgeräte GmbH, Kiel
 
 #### Aufgaben
-```s.o.
+```
+s.o.
 Betreuung der Hardware über 20 Standorte
 Support bei Problemen mit der Kundenverwaltungslösung
 Einrichtung und Aufbau neuer Fachgeschäfte
