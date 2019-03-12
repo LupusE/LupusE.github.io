@@ -7,6 +7,17 @@
     <atom:link href="https://git.lupuse.org/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Valentinstag und die Reparaturen</title>
+        <description>
+          
+          Ein Tag vor dem Valentinstag 2019 ging die waschmaschine kaputt. Sie ging an, sie pumpte, sie machte alles außer Schleudern. Die beste Ehefrau von allen hatte mittels Doctor Google drei Möglichkeiten ermittelt: Keilriemen gerissen Motor defekt Kohlestifte abgeschliffen Mein begrenztes Wossen von starken Motoren hat mich dazu gebracht mir den...
+        </description>
+        <pubDate>Thu, 14 Feb 2019 21:21:00 +0100</pubDate>
+        <link>https://git.lupuse.org/2019-02-14-valentinstag-und-die-reparaturen/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-02-14-valentinstag-und-die-reparaturen/</guid>
+      </item>
+    
+      <item>
         <title>s9y to Jekyll</title>
         <description>
           
@@ -213,17 +224,6 @@
         <pubDate>Sun, 30 Nov 2008 17:39:22 +0100</pubDate>
         <link>https://git.lupuse.org/2008-11-30-weihnachtsmarkt/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2008-11-30-weihnachtsmarkt/</guid>
-      </item>
-    
-      <item>
-        <title>Abschied</title>
-        <description>
-          
-          Der Tot ist fuer viele eine unangenehme Sache. Doof, wenn jemand gestorben ist, aber noch viel schlimmer ist der absehbare Tot in der Zukunft. Sei es durch Alter oder durch Krankheiten, wie Krebs. Langsam scheidet der Mensch dahin, man sieht sein Leid, aber kann nichts tun. Man schaut zu und...
-        </description>
-        <pubDate>Sun, 30 Nov 2008 17:28:13 +0100</pubDate>
-        <link>https://git.lupuse.org/2008-11-30-abschied/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2008-11-30-abschied/</guid>
       </item>
     
   </channel>
