@@ -262,6 +262,7 @@ Die Fehlermeldung selbst war nicht sehr aufschlussreich:</p>
   <p>exception=BootstrapError(‘Unable to bootstrap (cloud type: localhost)’,)&gt;</p>
 </blockquote>
 
+<p>Lösung:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>lvextend <span class="nt">-L</span>+50G /dev/mapper/ubuntu--vg-ubuntu--lv
 <span class="nv">$ </span><span class="nb">sudo </span>resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 </code></pre></div></div>
@@ -297,12 +298,17 @@ Ubuntu Server hat <a href="https://linuxcontainers.org/">Linux containers (LXD)<
 </ol>
 
 <h2 id="zusammenfassung">Zusammenfassung</h2>
-<p><code class="highlighter-rouge">$ sudo apt purge lxd lxd-client; sudo snap install lxd; lxd init</code></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt purge lxd lxd-client<span class="p">;</span> <span class="nb">sudo </span>snap install lxd<span class="p">;</span> lxd init
+</code></pre></div></div>
 <blockquote>
   <p>Das Deinstallieren der veralteten Version der ‘Linux container’ aus apt, und installieren der neueren Version aus snap. Im Anschluss die Umgebung einrichten
-An dieser Stelle auf keinen Fall vergessen ‘dir’ als Dateisystem und ‘none’ bei IPv6.
-<code class="highlighter-rouge">$ sudo lvextend -L+50G /dev/mapper/ubuntu--vg-ubuntu--lv; sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv</code>
-Je nachdem wie viel Speicher zur Verfügung steht können die 50G angepasst werden. Sehr viel weniger sollt es nicht sein.</p>
+An dieser Stelle auf keinen Fall vergessen <em>dir</em> als Dateisystem und <em>none</em> bei IPv6.</p>
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>lvextend <span class="nt">-L</span>+50G /dev/mapper/ubuntu--vg-ubuntu--lv<span class="p">;</span> <span class="nb">sudo </span>resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+</code></pre></div></div>
+<blockquote>
+  <p>Je nachdem wie viel Speicher zur Verfügung steht können die 50G angepasst werden. Sehr viel weniger sollt es nicht sein.</p>
 </blockquote>
 
 <h1 id="lasst-die-spiele-beginnen">Lasst die Spiele beginnen!</h1>

@@ -35,6 +35,7 @@ Das mit LVM eingerichtete Ubuntu denkt 4GB sind genug für / (root). Damit brich
 Die Fehlermeldung selbst war nicht sehr aufschlussreich:
 > exception=BootstrapError('Unable to bootstrap (cloud type: localhost)',)>
 
+Lösung:
 ```bash
 $ sudo lvextend -L+50G /dev/mapper/ubuntu--vg-ubuntu--lv
 $ sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
@@ -75,10 +76,15 @@ Die Umgebung erstellen wir mit `lxc init`. Hier gibt es zwei wichtige Unterschie
 2. OpenStack kann kein IPv6, hier muss 'none' eingegeben werden.
 
 ## Zusammenfassung
-`$ sudo apt purge lxd lxd-client; sudo snap install lxd; lxd init`
+```bash
+$ sudo apt purge lxd lxd-client; sudo snap install lxd; lxd init
+```
 > Das Deinstallieren der veralteten Version der 'Linux container' aus apt, und installieren der neueren Version aus snap. Im Anschluss die Umgebung einrichten
-> An dieser Stelle auf keinen Fall vergessen 'dir' als Dateisystem und 'none' bei IPv6.
-`$ sudo lvextend -L+50G /dev/mapper/ubuntu--vg-ubuntu--lv; sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv`
+> An dieser Stelle auf keinen Fall vergessen *dir* als Dateisystem und *none* bei IPv6.
+
+```bash
+$ sudo lvextend -L+50G /dev/mapper/ubuntu--vg-ubuntu--lv; sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+```
 > Je nachdem wie viel Speicher zur Verfügung steht können die 50G angepasst werden. Sehr viel weniger sollt es nicht sein.
 
 # Lasst die Spiele beginnen!
