@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>LupusE Weblife - Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte</title>
+  <title>OpenStack - erstes Hinfallen</title>
 
   <meta name="author" content="Benjamin Moeller" />
 
-  
-  <meta name="description" content="Ein Platz für geistige Ejakulationen und bedeutungsschwangere Worte.">
   
 
   <link rel="alternate" type="application/rss+xml" title="LupusE Weblife - Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte" href="/feed.xml" />
@@ -60,19 +58,19 @@
   
 
   
-  <meta property="og:title" content="LupusE Weblife" />
+  <meta property="og:title" content="OpenStack - erstes Hinfallen" />
   
 
    
-  <meta property="og:description" content="Ein Platz für geistige Ejakulationen und bedeutungsschwangere Worte.">
+  <meta property="og:description" content="Erste Schritte und harte Landungen Es ist keine gute Idee zwei unbekannte Techniken auf einmal zu verwenden, bei drei Techniken kann an davon ausgehen, dass die Zeit bis zum ersten Erfolg länger dauern kann, als das Installieren einer Technik allein. Neue Themen: Ubuntu Server und Snap LVM Linux container (lxd)...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="https://git.lupuse.org/page8/" />
-  <link rel="canonical" href="https://git.lupuse.org/page8/" />
+  <meta property="og:url" content="https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/" />
+  <link rel="canonical" href="https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/" />
   
 
   
@@ -84,11 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="LupusE Weblife" />
+  <meta name="twitter:title" content="OpenStack - erstes Hinfallen" />
   
 
   
-  <meta name="twitter:description" content="Ein Platz für geistige Ejakulationen und bedeutungsschwangere Worte.">
+  <meta name="twitter:description" content="Erste Schritte und harte Landungen Es ist keine gute Idee zwei unbekannte Techniken auf einmal zu verwenden, bei drei Techniken kann an davon ausgehen, dass die Zeit bis zum ersten Erfolg länger dauern kann, als das Installieren einer Technik allein. Neue Themen: Ubuntu Server und Snap LVM Linux container (lxd)...">
   
 
   
@@ -216,15 +214,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>LupusE Weblife</h1>
-		  
-		    
-            <hr class="small">
-            <span class="page-subheading">Ein Platz für geistige Ejakulationen und bedeutungsschwangere Worte.</span>
-			
+        <div class="post-heading">
+          <h1>OpenStack - erstes Hinfallen</h1>
 		  
 		  
+		  
+		  <span class="post-meta">Posted on March 12, 2019</span>
 		  
         </div>
       </div>
@@ -237,206 +232,167 @@
 
 
 
-<div class="container" role="main">
+<div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="posts-list">
-  
-  <article class="post-preview">
-    <a href="/2007-06-15-beziehungszutaten/">
-	  <h2 class="post-title">Beziehungszutaten</h2>
 
-	  
+      
+
+      <article role="main" class="blog-post">
+        <h1 id="erste-schritte-und-harte-landungen">Erste Schritte und harte Landungen</h1>
+<p>Es ist keine gute Idee zwei unbekannte Techniken auf einmal zu verwenden, bei drei Techniken kann an davon ausgehen, dass die Zeit bis zum ersten Erfolg länger dauern kann, als das Installieren einer Technik allein. Neue Themen:</p>
+<ol>
+  <li>Ubuntu Server und Snap</li>
+  <li>LVM</li>
+  <li>Linux container (lxd)</li>
+  <li>(conjure-up)</li>
+</ol>
+
+<h2 id="hallo-lucy">Hallo Lucy</h2>
+<p>Der (für mich) neue ncurses Dialog ist etwas gewöhnungsbedürftig, aber angenehm zu lesen und Schritt-für-Schritt sinnvoll aufgebaut.</p>
+
+<p>Der Ubuntu Server lässt sich recht schnell und sehr bequem installieren. Als Default wurde ‘Gesamte Festplatte verwenden’ vorgeschlagen. Das reicht mir nicht, ich wollte ‘Gesamte Festplatte verwenden und LVM einrichten’. LVM kenne ich noch aus alten Zeiten, und so konnten wir bequem virtuelle Festplatten von 100G bis 6T verteilen, ohne dass ein Neustart der Umgebung oder VM notwendig war. Das klingt verlockend für mein Projekt.</p>
+
+<p>Netzwerk konfigurieren, ersten Benutzer eingeben … das Übliche halt.
+Aber was war an dem alten eth0 falsch? Okay, anstelle einer halb zufälligen Bezeichnung haben wir nun eine Bezeichnung nach Steckplatz im System. Da es auch kein <code class="highlighter-rouge">ifconfig</code> mehr gibt, sondern <code class="highlighter-rouge">ip a</code>, ist die Umgewöhnung vermutlich einfacher als ich gerade denke. Wer soll sich nur <code class="highlighter-rouge">ip a show dev enp5s0</code> merken?</p>
+
+<p>Das mit LVM eingerichtete Ubuntu denkt 4GB sind genug für / (root). Damit bricht jeder conjure spell ab. Lösung:
+Die Fehlermeldung selbst war nicht sehr aufschlussreich:</p>
+<blockquote>
+  <p>exception=BootstrapError(‘Unable to bootstrap (cloud type: localhost)’,)&gt;</p>
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>lvextend <span class="nt">-L</span>+50G /dev/mapper/ubuntu--vg-ubuntu--lv
+<span class="nv">$ </span><span class="nb">sudo </span>resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+</code></pre></div></div>
+<p>Hiermit wird das ‘Linux Volume’ für / um 50GB vergrößert und ist dann 54GB groß. Der Zweite Befehl passt das Dateisystem (ext2|3|4) darauf an.
+Mit <code class="highlighter-rouge">df -h</code> lässt sich testen ob das Vorhaben geklappt hat.</p>
+
+<h2 id="veraltetes-linux-container-gegen-aktuelles-linux-container-tauschen">Veraltetes ‘linux container’ gegen aktuelles ‘Linux container’ tauschen</h2>
+<p>Wir rufen uns in das Gedächtnis was eine Distribution ist: Eine Sammlung von Paketen um einen Kernel (Betriebssystem), welche über einen Paketmanager einfach zu bedienen ist.
+Ubuntu Server hat <a href="https://linuxcontainers.org/">Linux containers (LXD)</a> vorinstalliert. Was in diversen Situationen sicher hilfreich ist, kann uns hier zum Verhängnis werden. Lösung:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt purge lxd lxd-client
+</code></pre></div></div>
+
+<p>Wir starten mit dem Einrichten von lxd. Wir bedienen uns der snap Version.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>snap install lxd
+</code></pre></div></div>
+
+<p>Zur Sicherheit kontrollieren wir, ob die richtige Version aktiv ist:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>which lxc
+/snap/bin/lxc
+</code></pre></div></div>
+<p>Falsch an dieser Stelle wäre /usr/bin/lxc.</p>
+
+<p>Der erste Benutzer sollte in der Gruppe lxd sein, aber hier noch einmal das Vorgehen:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>usermod <span class="nt">-a</span> <span class="nt">-G</span> lxd <span class="nv">$USER</span>
+<span class="nv">$ </span>newgrp lxd
+</code></pre></div></div>
+<p>Nach dem nächsten anmelden kann mit dem Befehl <code class="highlighter-rouge">id</code> kontrolliert werden, ob man in der Gruppe ist.</p>
+
+<p>Die Umgebung erstellen wir mit <code class="highlighter-rouge">lxc init</code>. Hier gibt es zwei wichtige Unterschiede zum Default:</p>
+<ol>
+  <li>OpenStack kann nur mit dem Dateisystem ‘dir’ um. Die Voreinstellung ‘btrfs’ führt zu Fehlern.</li>
+  <li>OpenStack kann kein IPv6, hier muss ‘none’ eingegeben werden.</li>
+</ol>
+
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<p><code class="highlighter-rouge">$ sudo apt purge lxd lxd-client; sudo snap install lxd; lxd init</code></p>
+<blockquote>
+  <p>Das Deinstallieren der veralteten Version der ‘Linux container’ aus apt, und installieren der neueren Version aus snap. Im Anschluss die Umgebung einrichten
+An dieser Stelle auf keinen Fall vergessen ‘dir’ als Dateisystem und ‘none’ bei IPv6.
+<code class="highlighter-rouge">$ sudo lvextend -L+50G /dev/mapper/ubuntu--vg-ubuntu--lv; sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv</code>
+Je nachdem wie viel Speicher zur Verfügung steht können die 50G angepasst werden. Sehr viel weniger sollt es nicht sein.</p>
+</blockquote>
+
+<h1 id="lasst-die-spiele-beginnen">Lasst die Spiele beginnen!</h1>
+<p>Die Magie macht für uns conjure-up.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>conjure-up
+</code></pre></div></div>
+
+<p>Ab hier gibt es genug Anleitungen über Google. Die ersten Fallstricke müsst ihr mir nicht nachmachen.
+je nach Ausstattung werden hier mehrere Stunden benötigt. Der Vorteil: Das System macht alles alleine. Fehler werden meist recht früh sichtbar.</p>
+
+<p>Die traurige Realität: das ist erst die Infrastruktur. Es existiert noch kein einziger Service für die Welt.</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#qnd">qnd</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=OpenStack+-+erstes+Hinfallen+https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
     </a>
-
-    <p class="post-meta">
-      Verfasst am June 15, 2007
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        Wie alles auf der Welt kann man auch eine Beziehung mit ein paar Zutaten richtig fuehren. Vieles wird mystifiziert, damals mit Hilfe von 'Magie', heute mit Hilfe von 'Technik'. Die Technik wird benutzt um die Normalbegabten zu beeindrucken und diese lassen sich, wie von Magie, lenken. - 'Das ist doch...
-        
-        
-          <a href="/2007-06-15-beziehungszutaten/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/tags#gedenke">gedenke</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/2007-06-11-relativetaeten/">
-	  <h2 class="post-title">Relativetaeten</h2>
 
-	  
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
     </a>
-
-    <p class="post-meta">
-      Verfasst am June 11, 2007
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        Es gibt 2 Dinge, die ich wirklich sehr hasse. 1. -- Die Unendlichkeit. -- 2. -- Die Endlichkeit. -- Kurz erklaert: 1. Die Unendlichkeit: Mit elendig vielen Jahren auf der Uhr werde ich noch den Film Bad Boys mittels CI hoeren, die Augen werden trueb sein, aber ich werde mich...
-        
-        
-          <a href="/2007-06-11-relativetaeten/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/tags#LupusE">LupusE</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/2007-05-24-wolfenbuettel-nacht-iv/">
-	  <h2 class="post-title">Wolfenbuettel - Nacht IV</h2>
 
-	  
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
     </a>
-
-    <p class="post-meta">
-      Verfasst am May 24, 2007
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        Die letzte Nacht, dann kommt ein 16h Tag. 8h Aufstehen, Klarschiff machen, zur Arbeit 9h finales Arbeiten 13h Mittagspause, 2 Kaffee im Barbarossa organisieren 14h finales Arbeiten II 18h letzte Kontrollen. 19:54h RB Braunschweig, 19:51h IC Hannover, 20:36h ICE Hamburg, 22:20h RE Kiel 23:36h Ankunft Kiel ~0:00h Ankunft Zuhause. Das...
-        
-        
-          <a href="/2007-05-24-wolfenbuettel-nacht-iv/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/tags#reise">reise</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/2007-05-23-wolfenbuettel-nacht-iii/">
-	  <h2 class="post-title">Wolfenbuettel - Nacht III</h2>
 
-	  
-    </a>
+</section>
 
-    <p class="post-meta">
-      Verfasst am May 23, 2007
-    </p>
 
-    <div class="post-entry-container">
+
       
-      <div class="post-entry">
-        Chillig in den Tag, Kunden nerven und Kaffee!!!!! Das Aufstehen gestaltet sich zunehmend als schwieriger. Der Kaffeeentzug macht sich bemerkbar. Ich kann in der Nacht kaum schlafen. Auch nicht mit Milchdrinks als Metadon. Doof! Die Buecherei, das einzige Kaffee und Doener. Der Kaffee ist trinkbar und mit viel liebe zubereitet....
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2019-02-14-valentinstag-und-die-reparaturen/" data-toggle="tooltip" data-placement="top" title="Valentinstag und die Reparaturen">&larr; Voriger Artikel</a>
+        </li>
         
         
-          <a href="/2007-05-23-wolfenbuettel-nacht-iii/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
+      </ul>
 
-    
-    <div class="blog-tags">
-      Tags:
       
+        <div class="disqus-comments">
+          
+
+        </div>
+          
+
+        <div class="staticman-comments">
+          
+
+        </div>
       
-      <a href="/tags#reise">reise</a>
-      
-      
-    </div>
-    
-
-   </article>
-  
-  <article class="post-preview">
-    <a href="/2007-05-22-wolfenbuettel-nacht-ii/">
-	  <h2 class="post-title">Wolfenbuettel - Nacht II</h2>
-
-	  
-    </a>
-
-    <p class="post-meta">
-      Verfasst am May 22, 2007
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        Nun habe ich mir die Stadt angesehen, ohne einen 15h Tag vorweg, und ganz neue Seiten entdeckt. Es gibt ein Kaffee, kein Sushi und den Hertie gibt es wirklich bundesweit! Jaegermeister kommt aus Wolfenbuettel. Die Hertie Gruppe wurde von KarstadtQuelle zwar aufgekauft, aber bundesweit sind einige Filialen wieder in Hertie...
-        
-        
-          <a href="/2007-05-22-wolfenbuettel-nacht-ii/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/tags#linux">linux</a>
-      
-      <a href="/tags#reise">reise</a>
-      
-      
-    </div>
-    
-
-   </article>
-  
-</div>
-
-
-<ul class="pager main-pager">
-  
-  <li class="previous">
-    <a href="/page7">&larr; Neuere Artikel</a>
-  </li>
-  
-  
-  <li class="next">
-    <a href="/page9">Ältere Artikel &rarr;</a>
-  </li>
-  
-</ul>
-
-
-	    
     </div>
   </div>
 </div>
