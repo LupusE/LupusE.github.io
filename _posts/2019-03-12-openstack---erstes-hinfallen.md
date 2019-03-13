@@ -91,3 +91,12 @@ Ab hier gibt es genug Anleitungen über Google. Die ersten Fallstricke müsst ih
 je nach Ausstattung werden hier mehrere Stunden benötigt. Der Vorteil: Das System macht alles alleine. Fehler werden meist recht früh sichtbar.
 
 Die traurige Realität: das ist erst die Infrastruktur. Es existiert noch kein einziger Service für die Welt.
+
+# Edit
+Ein i3 (2 Cores) mit 8GB Ram und 150GB drehender HDD ist vielleicht super Stromsparend, aber nicht genug Blech fuer OpenStack.
+Beim installieren schwankte die Load zwischen 600 und 1200. Die Install ist abgebrochen mit einem Timeout zwischen dne Services und nach einem Neustart pendelt die Load zwischen 25 und 162 ...
+
+Minimum Requirements sind aktuell  Cores, 16 GB RAM, 32GB SWAP (SSD recommended) und 100GB Platz. Offensichtlich nicht ohne Grund.
+Ich weis nicht, wie andere Testumgebungen auf dne Laptops installieren. Scheinbar gibt es noch einen anderne Trick... 
+
+*Mic drop Geräusch*
