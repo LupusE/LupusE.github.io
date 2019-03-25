@@ -9,11 +9,8 @@ author:
 author_login: lupuse
 author_email: blog@lupuse.org
 date: 2007-04-15 12:43:08 UTC
-categories:
-- linux
-tags:
-- cnf
-- linux
+categories: [linux]
+tags: [cnf, linux]
 comments: []
 ---
 <p>Ein Beispiel, wie eine .fetchmailrc aussehen kann.</p>
@@ -27,10 +24,10 @@ sslfingerprint -> Der Schluessel der Servers, wird angegeben bei 'fetchmail -v p
 <blockquote><p>keep</p></blockquote>
 <p>Die eMails auf dem Server belassen. Mehr Optionen  -> man fetchmailrc</p>
 <p># ~/.fetchmailrc<br />
-# programm zum abholen der mails von verschiedenen mailservern</p>
-<p>set postmaster "[user]"		#postmaster/root@... geht an [user] (für lokale dienste)<br />
+# Programm zum abholen der Mails von verschiedenen Mailservern</p>
+<p>set postmaster "[user]"		#postmaster/root@... geht an [user] (für lokale Dienste)<br />
 set bouncemail<br />
-set properties ""		  #möglichkeiten wie 'keep' nachzulesen in der manpage<br />
+set properties ""		  #möglichkeiten wie 'keep' nachzulesen in der Manpage<br />
 #sslcertck<br />
 #sslcertpath /home/[user]/.certs</p>
 <p>poll pop3.web.de with proto POP3<br />

@@ -9,10 +9,8 @@ author:
 author_login: lupuse
 author_email: blog@lupuse.org
 date: 2019-03-12 22:02:08 UTC
-categories:
-- QuickAndDirty
-tags:
-- qnd
+categories: [QuickAndDirty]
+tags: [qnd]
 comments: []
 ---
 

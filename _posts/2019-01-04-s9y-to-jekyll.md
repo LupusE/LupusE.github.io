@@ -9,10 +9,8 @@ author:
 author_login: lupuse
 author_email: blog@lupuse.org
 date: 2019-01-03 19:18:07 UTC
-categories:
-- QuickAndDirty
-tags:
-- qnd
+categories: [QuickAndDirty]
+tags: [qnd]
 comments: []
 ---
 Seit 2007 habe ich s9y als Blogengine genutzt. Leider fehlt mir die Zeit zum Pflegen der Version. Auch wenn mein Webspace gemietet ist, und sich verantwortungsvoll um den httpd und den Datenbankserver gekümmert wird, so habe ich doch ein besseres Gefühl, wenn ich wieder statische http Seiten nutze.
