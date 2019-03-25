@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>LupusE Weblife - Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte</title>
+  <title>LXC - Erste Fortschritte</title>
 
   <meta name="author" content="Benjamin Moeller" />
 
-  
-  <meta name="description" content="Ein Platz für geistige Ejakulationen und bedeutungsschwangere Worte.">
   
 
   <link rel="alternate" type="application/rss+xml" title="LupusE Weblife - Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte" href="/feed.xml" />
@@ -60,19 +58,19 @@
   
 
   
-  <meta property="og:title" content="LupusE Weblife" />
+  <meta property="og:title" content="LXC - Erste Fortschritte" />
   
 
    
-  <meta property="og:description" content="Ein Platz für geistige Ejakulationen und bedeutungsschwangere Worte.">
+  <meta property="og:description" content="Warum LXC? Der meist zitierte Vorteil von LXC ist womöglich, dass es sehr Hardwarenah arbeitet und durch den geringen Overhead (man spricht von gerade mal 7%) eine sehr hohe Dichte mitbringt. Das heißt mehr Leistung auf der VM pro Hardware. Die Leistung wird nicht mehr vom Hostmanagement gefressen. Nachdem ich...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="https://git.lupuse.org/page8/" />
-  <link rel="canonical" href="https://git.lupuse.org/page8/" />
+  <meta property="og:url" content="https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/" />
+  <link rel="canonical" href="https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/" />
   
 
   
@@ -84,11 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="LupusE Weblife" />
+  <meta name="twitter:title" content="LXC - Erste Fortschritte" />
   
 
   
-  <meta name="twitter:description" content="Ein Platz für geistige Ejakulationen und bedeutungsschwangere Worte.">
+  <meta name="twitter:description" content="Warum LXC? Der meist zitierte Vorteil von LXC ist womöglich, dass es sehr Hardwarenah arbeitet und durch den geringen Overhead (man spricht von gerade mal 7%) eine sehr hohe Dichte mitbringt. Das heißt mehr Leistung auf der VM pro Hardware. Die Leistung wird nicht mehr vom Hostmanagement gefressen. Nachdem ich...">
   
 
   
@@ -216,15 +214,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>LupusE Weblife</h1>
-		  
-		    
-            <hr class="small">
-            <span class="page-subheading">Ein Platz für geistige Ejakulationen und bedeutungsschwangere Worte.</span>
-			
+        <div class="post-heading">
+          <h1>LXC - Erste Fortschritte</h1>
 		  
 		  
+		  
+		  <span class="post-meta">Posted on March 24, 2019</span>
 		  
         </div>
       </div>
@@ -237,206 +232,121 @@
 
 
 
-<div class="container" role="main">
+<div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="posts-list">
-  
-  <article class="post-preview">
-    <a href="/2007-06-25-weltpuzzle-kiwo/">
-	  <h2 class="post-title">Weltpuzzle -- Kiwo</h2>
 
-	  
+      
+
+      <article role="main" class="blog-post">
+        <h1 id="warum-lxc">Warum LXC?</h1>
+<p>Der meist zitierte Vorteil von LXC ist womöglich, dass es sehr Hardwarenah arbeitet und durch den geringen Overhead (man spricht von gerade mal 7%) eine sehr hohe Dichte mitbringt.
+Das heißt mehr Leistung auf der VM pro Hardware. Die Leistung wird nicht mehr vom Hostmanagement gefressen.</p>
+
+<p>Nachdem ich einige Tests mit conjure gegen die Wand gefahren habe, weis ich nun, dass 8 GB Arbeitsspeicher nicht ausreichend sind. Damit ist conjure auf Eis gelegt.</p>
+
+<h2 id="ubuntu-server-aufsetzen">Ubuntu Server aufsetzen</h2>
+<p>Ubuntu steuert ganz klar in die Cloud. Und anstelle von <code class="highlighter-rouge">apt</code> wird auch <code class="highlighter-rouge">snap</code> bevorzugt. Ob ich das gut finde wird sich noch zeigen.</p>
+<ol>
+  <li>Image herunterladen</li>
+  <li>mit dd auf einen USB Stick kopieren</li>
+  <li>vom USB Stick booten</li>
+  <li>Installation durchlaufen lassen</li>
+  <li>Bei der Frage nach den Komponenten alles deaktivieren</li>
+  <li><code class="highlighter-rouge">sudo apt purge lxd lxd-client</code></li>
+  <li><code class="highlighter-rouge">snap install lxd</code></li>
+</ol>
+
+<h2 id="lxc-einrichten">LXC einrichten</h2>
+<p>Mit <code class="highlighter-rouge">$ sudo lxc init</code> erhalten wir einen Dialog, in dem wir die wichtigsten Parameter für ein Grundsystem angeben können. Soll später auf Docker/OpenStack gebaut werden, sollte <code class="highlighter-rouge">IPv6</code> ausgeschaltet sein. Auch das Filesystem muss in den Fall auf <code class="highlighter-rouge">dir</code> konfiguriert werden.</p>
+
+<p>Die danach erstellten VMs haben direkt Zugriff auf das Internet. Damit sie auch von außen erreichbar sind, habe ich eine Netzwerkbrücke eingerichtet.</p>
+
+<h2 id="status">Status</h2>
+<p>Es gibt eine VM, welche mittels ssh (PubKey) erreichbar ist. Jetzt räume ich noch etwas auf und schreibe dann wie die Infrastruktur aufgebaut ist.</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#server">server</a>
+          
+            <a href="/tags#lxd">lxd</a>
+          
+            <a href="/tags#linux">linux</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=LXC+-+Erste+Fortschritte+https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
     </a>
-
-    <p class="post-meta">
-      Verfasst am June 25, 2007
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        Was passiert, wenn man dem Gedanken freien Lauf laesst? Erst ist er klein und unscheinbar, aus einem Salat von wirren synaptischen Enden formt sich ein komplexes Netz in einer hinteren Ecke der Hirnpartien. Schnell vernetzen sich immer mehr Randgebiete mit dem Nest, und schon reift er heran zu einem ausgewachsenen...
-        
-        
-          <a href="/2007-06-25-weltpuzzle-kiwo/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/tags#gedenke">gedenke</a>
-      
-      <a href="/tags#LupusE">LupusE</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/2007-06-15-beziehungszutaten/">
-	  <h2 class="post-title">Beziehungszutaten</h2>
 
-	  
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
     </a>
-
-    <p class="post-meta">
-      Verfasst am June 15, 2007
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        Wie alles auf der Welt kann man auch eine Beziehung mit ein paar Zutaten richtig fuehren. Vieles wird mystifiziert, damals mit Hilfe von 'Magie', heute mit Hilfe von 'Technik'. Die Technik wird benutzt um die Normalbegabten zu beeindrucken und diese lassen sich, wie von Magie, lenken. - 'Das ist doch...
-        
-        
-          <a href="/2007-06-15-beziehungszutaten/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/tags#gedenke">gedenke</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/2007-06-11-relativetaeten/">
-	  <h2 class="post-title">Relativetaeten</h2>
 
-	  
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
     </a>
-
-    <p class="post-meta">
-      Verfasst am June 11, 2007
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        Es gibt 2 Dinge, die ich wirklich sehr hasse. 1. -- Die Unendlichkeit. -- 2. -- Die Endlichkeit. -- Kurz erklaert: 1. Die Unendlichkeit: Mit elendig vielen Jahren auf der Uhr werde ich noch den Film Bad Boys mittels CI hoeren, die Augen werden trueb sein, aber ich werde mich...
-        
-        
-          <a href="/2007-06-11-relativetaeten/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/tags#LupusE">LupusE</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/2007-05-24-wolfenbuettel-nacht-iv/">
-	  <h2 class="post-title">Wolfenbuettel - Nacht IV</h2>
 
-	  
-    </a>
+</section>
 
-    <p class="post-meta">
-      Verfasst am May 24, 2007
-    </p>
 
-    <div class="post-entry-container">
+
       
-      <div class="post-entry">
-        Die letzte Nacht, dann kommt ein 16h Tag. 8h Aufstehen, Klarschiff machen, zur Arbeit 9h finales Arbeiten 13h Mittagspause, 2 Kaffee im Barbarossa organisieren 14h finales Arbeiten II 18h letzte Kontrollen. 19:54h RB Braunschweig, 19:51h IC Hannover, 20:36h ICE Hamburg, 22:20h RE Kiel 23:36h Ankunft Kiel ~0:00h Ankunft Zuhause. Das...
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2019-03-12-openstack-erstes-hinfallen/" data-toggle="tooltip" data-placement="top" title="OpenStack - erstes Hinfallen">&larr; Voriger Artikel</a>
+        </li>
         
         
-          <a href="/2007-05-24-wolfenbuettel-nacht-iv/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
+      </ul>
 
-    
-    <div class="blog-tags">
-      Tags:
       
+        <div class="disqus-comments">
+          
+
+        </div>
+          
+
+        <div class="staticman-comments">
+          
+
+        </div>
       
-      <a href="/tags#reise">reise</a>
-      
-      
-    </div>
-    
-
-   </article>
-  
-  <article class="post-preview">
-    <a href="/2007-05-23-wolfenbuettel-nacht-iii/">
-	  <h2 class="post-title">Wolfenbuettel - Nacht III</h2>
-
-	  
-    </a>
-
-    <p class="post-meta">
-      Verfasst am May 23, 2007
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        Chillig in den Tag, Kunden nerven und Kaffee!!!!! Das Aufstehen gestaltet sich zunehmend als schwieriger. Der Kaffeeentzug macht sich bemerkbar. Ich kann in der Nacht kaum schlafen. Auch nicht mit Milchdrinks als Metadon. Doof! Die Buecherei, das einzige Kaffee und Doener. Der Kaffee ist trinkbar und mit viel liebe zubereitet....
-        
-        
-          <a href="/2007-05-23-wolfenbuettel-nacht-iii/" class="post-read-more">[Mehr]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/tags#reise">reise</a>
-      
-      
-    </div>
-    
-
-   </article>
-  
-</div>
-
-
-<ul class="pager main-pager">
-  
-  <li class="previous">
-    <a href="/page7">&larr; Neuere Artikel</a>
-  </li>
-  
-  
-  <li class="next">
-    <a href="/page9">Ältere Artikel &rarr;</a>
-  </li>
-  
-</ul>
-
-
-	    
     </div>
   </div>
 </div>

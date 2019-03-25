@@ -7,6 +7,17 @@
     <atom:link href="https://git.lupuse.org/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>LXC - Erste Fortschritte</title>
+        <description>
+          
+          Warum LXC? Der meist zitierte Vorteil von LXC ist womöglich, dass es sehr Hardwarenah arbeitet und durch den geringen Overhead (man spricht von gerade mal 7%) eine sehr hohe Dichte mitbringt. Das heißt mehr Leistung auf der VM pro Hardware. Die Leistung wird nicht mehr vom Hostmanagement gefressen. Nachdem ich...
+        </description>
+        <pubDate>Sun, 24 Mar 2019 21:02:42 +0100</pubDate>
+        <link>https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/</guid>
+      </item>
+    
+      <item>
         <title>OpenStack - erstes Hinfallen</title>
         <description>
           
@@ -21,7 +32,7 @@
         <title>Valentinstag und die Reparaturen</title>
         <description>
           
-          Ein Tag vor dem Valentinstag 2019 ging die waschmaschine kaputt. Sie ging an, sie pumpte, sie machte alles außer Schleudern. Die beste Ehefrau von allen hatte mittels Doctor Google drei Möglichkeiten ermittelt: Keilriemen gerissen Motor defekt Kohlestifte abgeschliffen Mein begrenztes Wossen von starken Motoren hat mich dazu gebracht mir den...
+          Ein Tag vor dem Valentinstag 2019 ging die Waschmaschine kaputt. Sie ging an, sie pumpte, sie machte alles außer Schleudern. Die beste Ehefrau von allen hatte mittels Doctor Google drei Möglichkeiten ermittelt: Keilriemen gerissen Motor defekt Kohlestifte abgeschliffen Mein begrenztes Wissen von starken Motoren hat mich dazu gebracht mir den...
         </description>
         <pubDate>Thu, 14 Feb 2019 21:21:00 +0100</pubDate>
         <link>https://git.lupuse.org/2019-02-14-valentinstag-und-die-reparaturen/</link>
@@ -120,7 +131,7 @@
         <title>quick-and-dirty - Sony Ericsson und der Generationskonflikt</title>
         <description>
           
-          Vor Jahren brauchte ich ein neues Telefon, da mein Nokia 6100 kein Bluetooth konnte, ich aber unbedingt ein BT Headset haben wollte. Also entschied ich mich für das Sony Ericsson T630. Mit dieser Wahl war ich lange Zeit zufrieden (6 Monate), und kaufe mir aufgrund der positiven Erfahrungen gleich noch...
+          Vor Jahren brauchte ich ein neues Telefon, da mein Nokia 6100 kein Bluetooth konnte, ich aber unbedingt ein BT Headset haben wollte. Also entschied ich mich für das Sony Ericsson T630. Mit dieser Wahl war ich lange Zeit zufrieden (6 Monate) und kaufe mir aufgrund der positiven Erfahrungen gleich noch...
         </description>
         <pubDate>Fri, 24 Jul 2009 01:42:00 +0200</pubDate>
         <link>https://git.lupuse.org/2009-07-24-qnd-sony-ericsson-und-der-generationskonflikt/</link>
@@ -153,7 +164,7 @@
         <title>quick-and-dirty - Debian meets WM61</title>
         <description>
           
-          Lange ist es her, da habe ich einmal versuche mein Adressbuch des Handys mit dem des Linux zu verheiraten. Ich habe es aufgegeben. Das einfachste war SyncML ueber Bluetooth auf eGroupWare (XML-RPC)/LDAP als Server. Das ist nicht verhältnismaessig, fuer z.B. einen Laptop. Vor wenigen Tagen dann kam ein neuer Hoffnungsträger,...
+          Lange ist es her, da habe ich einmal versuche mein Adressbuch des Handys mit dem des Linux zu verheiraten. Ich habe es aufgegeben. Das einfachste war SyncML ueber Bluetooth auf eGroupWare (XML-RPC)/LDAP als Server. Das ist nicht verhaeltnismaessig, fuer z.B. einen Laptop. Vor wenigen Tagen dann kam ein neuer Hoffnungsträger,...
         </description>
         <pubDate>Sun, 12 Jul 2009 02:34:58 +0200</pubDate>
         <link>https://git.lupuse.org/2009-07-12-qnd-debian-meets-wm61/</link>
@@ -164,7 +175,7 @@
         <title>Willkommen im 21. Jahrhundert</title>
         <description>
           
-          Willkommen im 21. Jahrhundert. -- oder -- Es gibt alles und nichts passt zusammen. Heute leben wir in einem modernen Zeitalter, in dem wir den Menschen zerlegen, analysieren, reparieren, nachbauen, klonen und am Ende noch die Ethik versuchen darauf anzupassen. Nicht nur die Wenigen, die lesen und schreiben können, kommen...
+          Willkommen im 21. Jahrhundert. -- oder -- Es gibt alles und nichts passt zusammen. Heute leben wir in einem Modernen Zeitalter, in dem wir den Menschen zerlegen, analysieren, reparieren, nachbauen, klonen und am Ende noch die Ethik versuchen darauf anzupassen. Nicht nur die Wenigen, die lesen und schreiben können, kommen...
         </description>
         <pubDate>Tue, 30 Jun 2009 22:26:26 +0200</pubDate>
         <link>https://git.lupuse.org/2009-06-30-willkommen-im-21-jahrhundert/</link>
@@ -213,17 +224,6 @@
         <pubDate>Tue, 09 Dec 2008 15:27:07 +0100</pubDate>
         <link>https://git.lupuse.org/2008-12-09-sternchenhimmel/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2008-12-09-sternchenhimmel/</guid>
-      </item>
-    
-      <item>
-        <title>Zwei Seiten</title>
-        <description>
-          
-          Es heißt alles hat zwei Seiten. Stille, Entspannung - Einsamkeit Weite, Freiheit - Verloren Gemeinschaft, Geborgenheit - Kompromisse Sonne, Wärme - Sonnenbrand Winter, Schnee - Erfrieren Es kommt gar nicht auf die Anzahl an, sondern auf die Intensität. Zu viel von einem oder zu viel vom anderen ist schädlich. Aber...
-        </description>
-        <pubDate>Mon, 01 Dec 2008 20:52:01 +0100</pubDate>
-        <link>https://git.lupuse.org/2008-12-01-zwei-seiten/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2008-12-01-zwei-seiten/</guid>
       </item>
     
   </channel>
