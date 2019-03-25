@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>Valentinstag und die Reparaturen</title>
+  <title>OpenStack - erstes Hinfallen</title>
 
   <meta name="author" content="Benjamin Moeller" />
 
@@ -58,19 +58,19 @@
   
 
   
-  <meta property="og:title" content="Valentinstag und die Reparaturen" />
+  <meta property="og:title" content="OpenStack - erstes Hinfallen" />
   
 
    
-  <meta property="og:description" content="Ein Tag vor dem Valentinstag 2019 ging die waschmaschine kaputt. Sie ging an, sie pumpte, sie machte alles außer Schleudern. Die beste Ehefrau von allen hatte mittels Doctor Google drei Möglichkeiten ermittelt: Keilriemen gerissen Motor defekt Kohlestifte abgeschliffen Mein begrenztes Wossen von starken Motoren hat mich dazu gebracht mir den...">
+  <meta property="og:description" content="Erste Schritte und harte Landungen Es ist keine gute Idee zwei unbekannte Techniken auf einmal zu verwenden, bei drei Techniken kann an davon ausgehen, dass die Zeit bis zum ersten Erfolg länger dauern kann, als das Installieren einer Technik allein. Neue Themen: Ubuntu Server und Snap LVM Linux container (lxd)...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="https://git.lupuse.org/2019-02-14-valentinstag-und-die-reparaturen/" />
-  <link rel="canonical" href="https://git.lupuse.org/2019-02-14-valentinstag-und-die-reparaturen/" />
+  <meta property="og:url" content="https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/" />
+  <link rel="canonical" href="https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/" />
   
 
   
@@ -82,11 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="Valentinstag und die Reparaturen" />
+  <meta name="twitter:title" content="OpenStack - erstes Hinfallen" />
   
 
   
-  <meta name="twitter:description" content="Ein Tag vor dem Valentinstag 2019 ging die waschmaschine kaputt. Sie ging an, sie pumpte, sie machte alles außer Schleudern. Die beste Ehefrau von allen hatte mittels Doctor Google drei Möglichkeiten ermittelt: Keilriemen gerissen Motor defekt Kohlestifte abgeschliffen Mein begrenztes Wossen von starken Motoren hat mich dazu gebracht mir den...">
+  <meta name="twitter:description" content="Erste Schritte und harte Landungen Es ist keine gute Idee zwei unbekannte Techniken auf einmal zu verwenden, bei drei Techniken kann an davon ausgehen, dass die Zeit bis zum ersten Erfolg länger dauern kann, als das Installieren einer Technik allein. Neue Themen: Ubuntu Server und Snap LVM Linux container (lxd)...">
   
 
   
@@ -215,11 +215,11 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>Valentinstag und die Reparaturen</h1>
+          <h1>OpenStack - erstes Hinfallen</h1>
 		  
 		  
 		  
-		  <span class="post-meta">Posted on February 14, 2019</span>
+		  <span class="post-meta">Posted on March 12, 2019</span>
 		  
         </div>
       </div>
@@ -239,24 +239,96 @@
       
 
       <article role="main" class="blog-post">
-        <p>Ein Tag vor dem Valentinstag 2019 ging die waschmaschine kaputt. Sie ging an, sie pumpte, sie machte alles außer Schleudern. Die beste Ehefrau von allen hatte mittels Doctor Google drei Möglichkeiten ermittelt:</p>
-<ul>
-  <li>Keilriemen gerissen</li>
-  <li>Motor defekt</li>
-  <li>Kohlestifte abgeschliffen</li>
-</ul>
+        <h1 id="erste-schritte-und-harte-landungen">Erste Schritte und harte Landungen</h1>
+<p>Es ist keine gute Idee zwei unbekannte Techniken auf einmal zu verwenden, bei drei Techniken kann an davon ausgehen, dass die Zeit bis zum ersten Erfolg länger dauern kann, als das Installieren einer Technik allein. Neue Themen:</p>
+<ol>
+  <li>Ubuntu Server und Snap</li>
+  <li>LVM</li>
+  <li>Linux container (lxd)</li>
+  <li>(conjure-up)</li>
+</ol>
 
-<p>Mein begrenztes Wossen von starken Motoren hat mich dazu gebracht mir den Keilriemen zu wünschen. Leider nein.
-Der Motor selbst sah benutzt, aber nicht unbedingt defekt aus. Beim versuchen die Blendne abzunehmen sah ich eine recht große Öffnung von unten. Mit ein wneig Licht war auch die Achse zu sehen und durch den feinen schwarzen Staub waren die Schleifer schnell gefunden.
-Noch schneller funktionierte der Ausbau und die entgültige Diagnose: Aufgebraucht.</p>
+<h2 id="hallo-lucy">Hallo Lucy</h2>
+<p>Der (für mich) neue ncurses Dialog ist etwas gewöhnungsbedürftig, aber angenehm zu lesen und Schritt-für-Schritt sinnvoll aufgebaut.</p>
 
-<p>Das Teil gibt es bei AEG nicht mehr, aber einige andere Lieferanten zeigten den gleichen Stift auf dme Photo. Bei amazon.com bestellt, am nächsten Tag da …
-Beim Anbringen sind mir 2 Schrauben des oberen Schleifers in den Motor gefallen. Sie sind nicht magnetisch. Mit USB Endoskopkamera und gewinkelter Pinzette gelang nach unnötig langer Zeit die Extrakton.</p>
+<p>Der Ubuntu Server lässt sich recht schnell und sehr bequem installieren. Als Default wurde ‘Gesamte Festplatte verwenden’ vorgeschlagen. Das reicht mir nicht, ich wollte ‘Gesamte Festplatte verwenden und LVM einrichten’. LVM kenne ich noch aus alten Zeiten, und so konnten wir bequem virtuelle Festplatten von 100G bis 6T verteilen, ohne dass ein Neustart der Umgebung oder VM notwendig war. Das klingt verlockend für mein Projekt.</p>
 
-<p>Für gerade mal 17 Euro und nicht ganz 2h Arbeit tut die Maschine wieder was sie soll.</p>
+<p>Netzwerk konfigurieren, ersten Benutzer eingeben … das Übliche halt.
+Aber was war an dem alten eth0 falsch? Okay, anstelle einer halb zufälligen Bezeichnung haben wir nun eine Bezeichnung nach Steckplatz im System. Da es auch kein <code class="highlighter-rouge">ifconfig</code> mehr gibt, sondern <code class="highlighter-rouge">ip a</code>, ist die Umgewöhnung vermutlich einfacher als ich gerade denke. Wer soll sich nur <code class="highlighter-rouge">ip a show dev enp5s0</code> merken?</p>
 
-<p>Warum schreibe ich das alles? Nur um nachzusehen, wie Formatierung in Markdown funktioniert.</p>
+<p>Das mit LVM eingerichtete Ubuntu denkt 4GB sind genug für / (root). Damit bricht jeder conjure spell ab. Lösung:
+Die Fehlermeldung selbst war nicht sehr aufschlussreich:</p>
+<blockquote>
+  <p>exception=BootstrapError(‘Unable to bootstrap (cloud type: localhost)’,)&gt;</p>
+</blockquote>
 
+<p>Lösung:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>lvextend <span class="nt">-L</span>+50G /dev/mapper/ubuntu--vg-ubuntu--lv
+<span class="nv">$ </span><span class="nb">sudo </span>resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+</code></pre></div></div>
+<p>Hiermit wird das ‘Linux Volume’ für / um 50GB vergrößert und ist dann 54GB groß. Der Zweite Befehl passt das Dateisystem (ext2|3|4) darauf an.
+Mit <code class="highlighter-rouge">df -h</code> lässt sich testen ob das Vorhaben geklappt hat.</p>
+
+<h2 id="veraltetes-linux-container-gegen-aktuelles-linux-container-tauschen">Veraltetes ‘linux container’ gegen aktuelles ‘Linux container’ tauschen</h2>
+<p>Wir rufen uns in das Gedächtnis was eine Distribution ist: Eine Sammlung von Paketen um einen Kernel (Betriebssystem), welche über einen Paketmanager einfach zu bedienen ist.
+Ubuntu Server hat <a href="https://linuxcontainers.org/">Linux containers (LXD)</a> vorinstalliert. Was in diversen Situationen sicher hilfreich ist, kann uns hier zum Verhängnis werden. Lösung:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt purge lxd lxd-client
+</code></pre></div></div>
+
+<p>Wir starten mit dem Einrichten von lxd. Wir bedienen uns der snap Version.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>snap install lxd
+</code></pre></div></div>
+
+<p>Zur Sicherheit kontrollieren wir, ob die richtige Version aktiv ist:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>which lxc
+/snap/bin/lxc
+</code></pre></div></div>
+<p>Falsch an dieser Stelle wäre /usr/bin/lxc.</p>
+
+<p>Der erste Benutzer sollte in der Gruppe lxd sein, aber hier noch einmal das Vorgehen:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>usermod <span class="nt">-a</span> <span class="nt">-G</span> lxd <span class="nv">$USER</span>
+<span class="nv">$ </span>newgrp lxd
+</code></pre></div></div>
+<p>Nach dem nächsten anmelden kann mit dem Befehl <code class="highlighter-rouge">id</code> kontrolliert werden, ob man in der Gruppe ist.</p>
+
+<p>Die Umgebung erstellen wir mit <code class="highlighter-rouge">lxc init</code>. Hier gibt es zwei wichtige Unterschiede zum Default:</p>
+<ol>
+  <li>OpenStack kann nur mit dem Dateisystem ‘dir’ um. Die Voreinstellung ‘btrfs’ führt zu Fehlern.</li>
+  <li>OpenStack kann kein IPv6, hier muss ‘none’ eingegeben werden.</li>
+</ol>
+
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt purge lxd lxd-client<span class="p">;</span> <span class="nb">sudo </span>snap install lxd<span class="p">;</span> lxd init
+</code></pre></div></div>
+<blockquote>
+  <p>Das Deinstallieren der veralteten Version der ‘Linux container’ aus apt, und installieren der neueren Version aus snap. Im Anschluss die Umgebung einrichten
+An dieser Stelle auf keinen Fall vergessen <em>dir</em> als Dateisystem und <em>none</em> bei IPv6.</p>
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>lvextend <span class="nt">-L</span>+50G /dev/mapper/ubuntu--vg-ubuntu--lv<span class="p">;</span> <span class="nb">sudo </span>resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+</code></pre></div></div>
+<blockquote>
+  <p>Je nachdem wie viel Speicher zur Verfügung steht können die 50G angepasst werden. Sehr viel weniger sollt es nicht sein.</p>
+</blockquote>
+
+<h1 id="lasst-die-spiele-beginnen">Lasst die Spiele beginnen!</h1>
+<p>Die Magie macht für uns conjure-up.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>conjure-up
+</code></pre></div></div>
+
+<p>Ab hier gibt es genug Anleitungen über Google. Die ersten Fallstricke müsst ihr mir nicht nachmachen.
+je nach Ausstattung werden hier mehrere Stunden benötigt. Der Vorteil: Das System macht alles alleine. Fehler werden meist recht früh sichtbar.</p>
+
+<p>Die traurige Realität: das ist erst die Infrastruktur. Es existiert noch kein einziger Service für die Welt.</p>
+
+<h1 id="edit">Edit</h1>
+<p>Ein i3 (2 Cores) mit 8GB Ram und 150GB drehender HDD ist vielleicht super Stromsparend, aber nicht genug Blech fuer OpenStack.
+Beim installieren schwankte die Load zwischen 600 und 1200. Die Install ist abgebrochen mit einem Timeout zwischen dne Services und nach einem Neustart pendelt die Load zwischen 25 und 162 …</p>
+
+<p>Minimum Requirements sind aktuell  Cores, 16 GB RAM, 32GB SWAP (SSD recommended) und 100GB Platz. Offensichtlich nicht ohne Grund.
+Ich weis nicht, wie andere Testumgebungen auf dne Laptops installieren. Scheinbar gibt es noch einen anderne Trick…</p>
+
+<p><em>Mic drop Geräusch</em></p>
 
       </article>
 
@@ -265,7 +337,7 @@ Beim Anbringen sind mir 2 Schrauben des oberen Schleifers in den Motor gefallen.
           Tags:
           
           
-            <a href="/tags#gedenke">gedenke</a>
+            <a href="/tags#qnd">qnd</a>
           
           
         </div>
@@ -282,7 +354,7 @@ Beim Anbringen sind mir 2 Schrauben des oberen Schleifers in den Motor gefallen.
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=Valentinstag+und+die+Reparaturen+https://git.lupuse.org/2019-02-14-valentinstag-und-die-reparaturen/"
+    <a href="https://twitter.com/intent/tweet?text=OpenStack+-+erstes+Hinfallen+https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -291,7 +363,7 @@ Beim Anbringen sind mir 2 Schrauben des oberen Schleifers in den Motor gefallen.
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://git.lupuse.org/2019-02-14-valentinstag-und-die-reparaturen/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -302,7 +374,7 @@ Beim Anbringen sind mir 2 Schrauben des oberen Schleifers in den Motor gefallen.
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://git.lupuse.org/2019-02-14-valentinstag-und-die-reparaturen/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -318,13 +390,9 @@ Beim Anbringen sind mir 2 Schrauben des oberen Schleifers in den Motor gefallen.
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="/2019-01-03-s9y-to-jekyll/" data-toggle="tooltip" data-placement="top" title="s9y to Jekyll">&larr; Voriger Artikel</a>
+          <a href="/2019-02-14-valentinstag-und-die-reparaturen/" data-toggle="tooltip" data-placement="top" title="Valentinstag und die Reparaturen">&larr; Voriger Artikel</a>
         </li>
         
-        
-        <li class="next">
-          <a href="/2019-03-12-openstack-erstes-hinfallen/" data-toggle="tooltip" data-placement="top" title="OpenStack - erstes Hinfallen">Nächster Artikel &rarr;</a>
-        </li>
         
       </ul>
 

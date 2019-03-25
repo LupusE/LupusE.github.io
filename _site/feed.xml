@@ -7,6 +7,17 @@
     <atom:link href="https://git.lupuse.org/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>OpenStack - erstes Hinfallen</title>
+        <description>
+          
+          Erste Schritte und harte Landungen Es ist keine gute Idee zwei unbekannte Techniken auf einmal zu verwenden, bei drei Techniken kann an davon ausgehen, dass die Zeit bis zum ersten Erfolg länger dauern kann, als das Installieren einer Technik allein. Neue Themen: Ubuntu Server und Snap LVM Linux container (lxd)...
+        </description>
+        <pubDate>Tue, 12 Mar 2019 23:02:08 +0100</pubDate>
+        <link>https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/</guid>
+      </item>
+    
+      <item>
         <title>Valentinstag und die Reparaturen</title>
         <description>
           
@@ -213,17 +224,6 @@
         <pubDate>Mon, 01 Dec 2008 20:52:01 +0100</pubDate>
         <link>https://git.lupuse.org/2008-12-01-zwei-seiten/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2008-12-01-zwei-seiten/</guid>
-      </item>
-    
-      <item>
-        <title>Weihnachtsmarkt</title>
-        <description>
-          
-          Nun werde ich mal versuchen meine zweite Aktion in Hamburg zu planen. Das Erste war ein DVD Abend, der in erster Linie von Anna organisiert wurde. Ich habe nur die DVD gestellt. Vielen Dank! Es geht dieses mal auf den Weihnachtsmarkt, ich moechte mit ein paar Leuten Gluehwein trinken gehen....
-        </description>
-        <pubDate>Sun, 30 Nov 2008 17:39:22 +0100</pubDate>
-        <link>https://git.lupuse.org/2008-11-30-weihnachtsmarkt/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2008-11-30-weihnachtsmarkt/</guid>
       </item>
     
   </channel>
