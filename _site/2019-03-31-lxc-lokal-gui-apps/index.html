@@ -62,7 +62,7 @@
   
 
    
-  <meta property="og:description" content="Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen. Ein sehr guter Blog Artikel zum Thema steht unter: https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/ Snap/LXC installieren Neuere Version (3.x) gibt es über snap # apt install snapd Alte Version deinstallieren, neue installieren # apt purge lxd; snap install lxd # adduser [benutzer]...">
+  <meta property="og:description" content="Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen. Ein sehr guter Blog Artikel zum Thema. Snap/LXC installieren Neuere Version (3.x) gibt es über snap # apt install snapd Alte Version deinstallieren, neue installieren # apt purge lxd; snap install lxd # adduser [benutzer] lxd LXC einrichten...">
   
 
 
@@ -86,7 +86,7 @@
   
 
   
-  <meta name="twitter:description" content="Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen. Ein sehr guter Blog Artikel zum Thema steht unter: https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/ Snap/LXC installieren Neuere Version (3.x) gibt es über snap # apt install snapd Alte Version deinstallieren, neue installieren # apt purge lxd; snap install lxd # adduser [benutzer]...">
+  <meta name="twitter:description" content="Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen. Ein sehr guter Blog Artikel zum Thema. Snap/LXC installieren Neuere Version (3.x) gibt es über snap # apt install snapd Alte Version deinstallieren, neue installieren # apt purge lxd; snap install lxd # adduser [benutzer] lxd LXC einrichten...">
   
 
   
@@ -240,7 +240,7 @@
 
       <article role="main" class="blog-post">
         <p>Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen.
-Ein sehr guter Blog Artikel zum Thema steht unter: https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/</p>
+Ein sehr guter <a href="https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/">Blog Artikel</a> zum Thema.</p>
 
 <h2 id="snaplxc-installieren">Snap/LXC installieren</h2>
 <ol>
@@ -250,7 +250,7 @@ Ein sehr guter Blog Artikel zum Thema steht unter: https://blog.simos.info/how-t
   <li>LXC einrichten <code class="highlighter-rouge"># lxc init</code></li>
   <li>Pool als <strong>dir</strong> definieren. Kein IPv6, wenn nicht absolut notwendig.</li>
   <li>Rechte setzen <code class="highlighter-rouge">$ echo "root:$UID:1" | sudo tee -a /etc/subuid /etc/subgid</code></li>
-  <li><code class="highlighter-rouge">wget https://blog.simos.info/wp-content/uploads/2018/06/lxdgiprofile.txt</code></li>
+  <li><code class="highlighter-rouge">wget https://git.lupuse.org/misc/lxdgiprofile.txt</code></li>
   <li>Profil anlegen <code class="highlighter-rouge">$ cat lxdguiprofile.txt | lxc profile edit gui</code></li>
   <li>VM erstellen <code class="highlighter-rouge">$ lxc launch --profile default --profile gui ubuntu:trusty oldbuntu</code></li>
   <li>In VM einloggen <code class="highlighter-rouge">$ lxc exec oldbuntu -- sudo --user ubuntu --login</code></li>

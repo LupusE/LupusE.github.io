@@ -10,7 +10,7 @@
         <title>LXC - Lokal virtualisieren</title>
         <description>
           
-          Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen. Ein sehr guter Blog Artikel zum Thema steht unter: https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/ Snap/LXC installieren Neuere Version (3.x) gibt es über snap # apt install snapd Alte Version deinstallieren, neue installieren # apt purge lxd; snap install lxd # adduser [benutzer]...
+          Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen. Ein sehr guter Blog Artikel zum Thema. Snap/LXC installieren Neuere Version (3.x) gibt es über snap # apt install snapd Alte Version deinstallieren, neue installieren # apt purge lxd; snap install lxd # adduser [benutzer] lxd LXC einrichten...
         </description>
         <pubDate>Sun, 31 Mar 2019 22:10:13 +0200</pubDate>
         <link>https://git.lupuse.org/2019-03-31-lxc-lokal-gui-apps/</link>
