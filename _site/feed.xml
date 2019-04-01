@@ -7,6 +7,17 @@
     <atom:link href="https://git.lupuse.org/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>LXC - Lokal virtualisieren</title>
+        <description>
+          
+          Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen. Ein sehr guter Blog Artikel zum Thema steht unter: https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/ Snap/LXC installieren Neuere Version (3.x) gibt es über snap # apt install snapd Alte Version deinstallieren, neue installieren # apt purge lxd; snap install lxd # adduser [benutzer]...
+        </description>
+        <pubDate>Sun, 31 Mar 2019 22:10:13 +0200</pubDate>
+        <link>https://git.lupuse.org/2019-03-31-lxc-lokal-gui-apps/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-03-31-lxc-lokal-gui-apps/</guid>
+      </item>
+    
+      <item>
         <title>LXC - Erste Fortschritte</title>
         <description>
           
@@ -15,6 +26,17 @@
         <pubDate>Sun, 24 Mar 2019 21:02:42 +0100</pubDate>
         <link>https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2019-03-24-lxc-erste-fortschritte/</guid>
+      </item>
+    
+      <item>
+        <title>Snaptain Drohne</title>
+        <description>
+          
+          Heute habe ich gelernt, dass es viele Schreibweisen des Wortes ‘Drohne’ gibt, aber nur eine vom Duden erlaubte. Zumindest wenn man möchte, dass damit das ferngesteuerte fliegende Spielzeug gemeint ist. Ich habe von meiner Frau eine Snaptain S5C Drohne zum Gebutstag bekommen. In dem Karton lag ein gleiner Zettel bei,...
+        </description>
+        <pubDate>Sat, 23 Mar 2019 22:42:32 +0100</pubDate>
+        <link>https://git.lupuse.org/2019-03-23-Snaptain-Drohne/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-03-23-Snaptain-Drohne/</guid>
       </item>
     
       <item>
@@ -202,28 +224,6 @@
         <pubDate>Thu, 29 Jan 2009 20:02:14 +0100</pubDate>
         <link>https://git.lupuse.org/2009-01-29-geburtstage-geschenkewahn/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2009-01-29-geburtstage-geschenkewahn/</guid>
-      </item>
-    
-      <item>
-        <title>Aufklaerung und das Web2.0</title>
-        <description>
-          
-          Wiedermal eine schlaflose Nacht, und bevor ich noch aus versehen produktiv werde habe ich mir gedacht ich nutze mal die Erinnerung um 0:00h meines tollen Telefons an einen Geburtstag und gruesse im MeinVZ. Dabei habe ich mir gleich ihre Gruppen angesehen und siehe da, etwas fuer den Weltfrieden: Fatale Fehler,...
-        </description>
-        <pubDate>Mon, 19 Jan 2009 02:16:42 +0100</pubDate>
-        <link>https://git.lupuse.org/2009-01-19-aufklaerung-und-das-web2-0/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2009-01-19-aufklaerung-und-das-web2-0/</guid>
-      </item>
-    
-      <item>
-        <title>Sternchenhimmel</title>
-        <description>
-          
-          Schaut man im richtigen Moment in die richtige Richtung, so erscheint es manchmal, als taeuschen einen die Sinne. Was ist die Realitaet und wollen wir an diesem Ort ueberhaupt sein? There are patterns everywhere in nature -- Maximillian Cohen (1998) Es faengt an in Kiel, auf einem 30. Gebtag, mit...
-        </description>
-        <pubDate>Tue, 09 Dec 2008 15:27:07 +0100</pubDate>
-        <link>https://git.lupuse.org/2008-12-09-sternchenhimmel/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2008-12-09-sternchenhimmel/</guid>
       </item>
     
   </channel>
