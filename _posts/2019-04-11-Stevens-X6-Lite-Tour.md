@@ -43,7 +43,7 @@ Nach 300 KM gab das linke Pedal auf.
 
 Auf Amazon wird es für 13-20e Angeboten. Die Bewertungen (4,1 Sterne) sind gar nicht mal so übel, doch die negativen Rezensionen beschrieben alle das gleiche: Nicht für Vielfahrer geeignet.
 
-### 500km, erste Inspektion nach 3 Monaten
+### 500km, 3 Monate, erste Inspektion
 
 - Das oben angesprochene Pedal wurde anstandslos getauscht. Jetzt fahre ich `Union Pedale 600` von Marwi. Amazon sagt 13e das Paar.
 - Der Lenker `Lenker Oxygen Driver` ist mit 640mm deutlich zu breit und wurde um 4cm gekürzt.
@@ -57,7 +57,7 @@ Das linke Pedal ist wieder ausgeschlagen und hat ein Spiel von etwa 5mm. Später
 Nach 1600 km bin ich wieder in Essen und der Austauch klappt ohne Probleme. Leider nur gegen die gleichen, weil "die ja so gut sind". Ich bezweifle dass sie Pendlertauglich sind.  
 die Pedalen liegen nun unangetastet in meinem Werkzeugkoffer und ich habe meine alten `VP-133` Klickpedale aus dem Koffer wieder reaktiviert. Sicher nicht die hochwertigsten, aber die haben mich auch auf dem MTB lange Zeit unterstützt. nur hatte ich sie vor dem Diebstahl gegen Shimano Pedale ohne Käfig getauscht.
 
-### 1700km, die Reifen
+### 1700km, 8 Monate, die Reifen
 
 Ich fahre das Rad nun etwa ein halbes Jahr. In der Zeit mussten die Reifen 8x (2x vorn, 6x hinten) geflickt werden, hinten habe ich bereits den Schlauch ersetzt (Schnitt/Riss an der Naht, doof zu flicken).  
 Ich fahre die `Schwalbe G-One Allround Performance / 35-622` auf 5 Bar. Beim letzten reparieren habe ich 3 Steinchen und eine Scherbe aus dem Mantel geholt. Diesen möchte ich als 'nicht für Pendler geeignet' bezeichnen.  
@@ -75,7 +75,7 @@ Der Hinterreifen ist in der Mitte schon deutlich runter. Bis 2000km möchte ich 
 - **Bremsen** `Shimano Deore` (BR-T610)
 
 ### Laufräder
-- **Naben** `Shimano DH-C3000-3N-QR` | Deore (Nabendynamo vorne, FH-T610 hinten)
+- **Naben** `Shimano Deore` (DH-C3000-3N-QR - Nabendynamo vorne, FH-T610 hinten)
 - **Felgen** `Oxygen PRO A19`
 - **Reifen** `Schwalbe G-One Allround Performance` (35-622)
 
@@ -99,7 +99,7 @@ Der Hinterreifen ist in der Mitte schon deutlich runter. Bis 2000km möchte ich 
 ### Sonstiges
 - **Beleuchtung** `Scheinwerfer B+M IQ Avy T Senso+` 40 Lux
 - **Rücklicht** `Tec Small`
-- **Zubehör** `Racktime Light-it Gepäckträger` | `SKS Schutzbleche`
+- **Zubehör** `Racktime Light-it Gepäckträger`, `SKS Schutzbleche`
 
 ### Daten
 - **Gewicht** `13,0 kg`
