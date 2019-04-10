@@ -3,7 +3,7 @@ status: published
 published: true
 title: Snaptain Drohne
 author:
-  display_name: Benjamn Moeller
+  display_name: Benjamin Moeller
   login: lupuse
   email: blog@lupuse.org
 author_login: lupuse
@@ -16,7 +16,7 @@ comments: []
 
 Heute habe ich gelernt, dass es viele Schreibweisen des Wortes 'Drohne' gibt, aber nur eine vom Duden erlaubte. Zumindest wenn man möchte, dass damit das ferngesteuerte fliegende Spielzeug gemeint ist.
 
-Ich habe von meiner Frau eine Snaptain S5C Drohne zum Gebutstag bekommen. In dem Karton lag ein gleiner Zettel bei, in dem erklärt wurde: Mit einer Rezension auf amazon hat man die Wahl zwischen '2x Akku mit USB Ladegerät', 'Eine 64GB SD Karte' oder 'Eine Actioncam'.
+Ich habe von meiner Frau eine Snaptain S5C Drohne zum Gebutstag bekommen. In dem Karton lag ein kleiner Zettel bei, in dem erklärt wurde: Mit einer Rezension auf Amazon hat man die Wahl zwischen '2x Akku mit USB Ladegerät', 'Eine 64GB SD Karte' oder 'Eine Actioncam'.
 
 Zugegeben hat mich die Actioncam sehr gereizt, aber ein kurzes hochrechnen des Wertes des Akkus (ca. 17e) und der Karte (ca. 10e) brachte mich davon ab und ich habe mich für die Akkus entschieden.
 
@@ -29,7 +29,7 @@ Was mich aber störte, dass beim umfliegen eines Baumes immer nur Happen zu sehe
 
 
 Sehr gute Anfängerdrohne.  
-21. März 2019  
+Datum: 21. März 2019  
 Verifizierter Kauf  
 Die Snaptain S5C war ein Geburtstagsgeschenk für ein Mitte 30 Jahre altes Kind. Eine Micro-Drohne (ca 3x3 cm) und ein Gyroskop-Helikopter waren bereits vorhanden, aber bisher nichts mit Kamera.
 
