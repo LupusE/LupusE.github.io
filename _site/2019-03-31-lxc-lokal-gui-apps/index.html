@@ -250,7 +250,7 @@ Ein sehr guter <a href="https://blog.simos.info/how-to-easily-run-graphics-accel
   <li>LXC einrichten <code class="highlighter-rouge"># lxc init</code></li>
   <li>Pool als <strong>dir</strong> definieren. Kein IPv6, wenn nicht absolut notwendig.</li>
   <li>Rechte setzen <code class="highlighter-rouge">$ echo "root:$UID:1" | sudo tee -a /etc/subuid /etc/subgid</code></li>
-  <li><code class="highlighter-rouge">wget https://git.lupuse.org/misc/lxdgiprofile.txt</code></li>
+  <li><code class="highlighter-rouge">wget https://git.lupuse.org/misc/lxdguiprofile.txt</code></li>
   <li>Profil anlegen <code class="highlighter-rouge">$ cat lxdguiprofile.txt | lxc profile edit gui</code></li>
   <li>VM erstellen <code class="highlighter-rouge">$ lxc launch --profile default --profile gui ubuntu:trusty oldbuntu</code></li>
   <li>In VM einloggen <code class="highlighter-rouge">$ lxc exec oldbuntu -- sudo --user ubuntu --login</code></li>

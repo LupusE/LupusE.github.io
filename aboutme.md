@@ -26,7 +26,7 @@ Was kommt nun?
 
 ## Details
 
-Ich war nie gern ein der Schule. Aber ich habe immer gerne gelernt. Eine Mischung zwischen 'Was mache ich hier?' (Regelschule) und 'Wach bleiben durch Melden' (Berufsschule versauten mir meinen erfolgreichen Werdegang.
+Ich war nie gerne in der Schule. Aber ich habe immer gerne gelernt. Eine Mischung zwischen 'Was mache ich hier?' (Regelschule) und 'Wach bleiben durch Melden' (Berufsschule versauten mir meinen erfolgreichen Werdegang.
 
 > 'Everyone you'll ever meet knows something you don't' (by Bill Nye).
 
