@@ -26,7 +26,7 @@ Der (für mich) neue ncurses Dialog ist etwas gewöhnungsbedürftig, aber angene
 
 Der Ubuntu Server lässt sich recht schnell und sehr bequem installieren. Als Default wurde 'Gesamte Festplatte verwenden' vorgeschlagen. Das reicht mir nicht, ich wollte 'Gesamte Festplatte verwenden und LVM einrichten'. LVM kenne ich noch aus alten Zeiten, und so konnten wir bequem virtuelle Festplatten von 100G bis 6T verteilen, ohne dass ein Neustart der Umgebung oder VM notwendig war. Das klingt verlockend für mein Projekt.
 
-Netzwerk konfigurieren, ersten Benutzer eingeben ... das Übliche halt.
+Netzwerk konfigurieren, ersten Benutzer eingeben ... das Übliche halt.  
 Aber was war an dem alten eth0 falsch? Okay, anstelle einer halb zufälligen Bezeichnung haben wir nun eine Bezeichnung nach Steckplatz im System. Da es auch kein `ifconfig` mehr gibt, sondern `ip a`, ist die Umgewöhnung vermutlich einfacher als ich gerade denke. Wer soll sich nur `ip a show dev enp5s0` merken? 
 
 Das mit LVM eingerichtete Ubuntu denkt 4GB sind genug für / (root). Damit bricht jeder conjure spell ab. Lösung:
@@ -43,7 +43,7 @@ Mit `df -h` lässt sich testen ob das Vorhaben geklappt hat.
 
 
 ## Veraltetes 'linux container' gegen aktuelles 'Linux container' tauschen
-Wir rufen uns in das Gedächtnis was eine Distribution ist: Eine Sammlung von Paketen um einen Kernel (Betriebssystem), welche über einen Paketmanager einfach zu bedienen ist.
+Wir rufen uns in das Gedächtnis was eine Distribution ist: Eine Sammlung von Paketen um einen Kernel (Betriebssystem), welche über einen Paketmanager einfach zu bedienen ist.  
 Ubuntu Server hat [Linux containers (LXD)](https://linuxcontainers.org/) vorinstalliert. Was in diversen Situationen sicher hilfreich ist, kann uns hier zum Verhängnis werden. Lösung:
 ```bash
 $ sudo apt purge lxd lxd-client
@@ -91,16 +91,16 @@ Die Magie macht für uns conjure-up.
 $ conjure-up
 ```
 
-Ab hier gibt es genug Anleitungen über Google. Die ersten Fallstricke müsst ihr mir nicht nachmachen.
+Ab hier gibt es genug Anleitungen über Google. Die ersten Fallstricke müsst ihr mir nicht nachmachen.  
 je nach Ausstattung werden hier mehrere Stunden benötigt. Der Vorteil: Das System macht alles alleine. Fehler werden meist recht früh sichtbar.
 
 Die traurige Realität: das ist erst die Infrastruktur. Es existiert noch kein einziger Service für die Welt.
 
 # Edit
-Ein i3 (2 Cores) mit 8GB Ram und 150GB drehender HDD ist vielleicht super Stromsparend, aber nicht genug Blech fuer OpenStack.
+Ein i3 (2 Cores) mit 8GB Ram und 150GB drehender HDD ist vielleicht super Stromsparend, aber nicht genug Blech fuer OpenStack.  
 Beim installieren schwankte die Load zwischen 600 und 1200. Die Install ist abgebrochen mit einem Timeout zwischen dne Services und nach einem Neustart pendelt die Load zwischen 25 und 162 ...
 
-Minimum Requirements sind aktuell  Cores, 16 GB RAM, 32GB SWAP (SSD recommended) und 100GB Platz. Offensichtlich nicht ohne Grund.
+Minimum Requirements sind aktuell  Cores, 16 GB RAM, 32GB SWAP (SSD recommended) und 100GB Platz. Offensichtlich nicht ohne Grund.  
 Ich weis nicht, wie andere Testumgebungen auf dne Laptops installieren. Scheinbar gibt es noch einen anderne Trick... 
 
 *Mic drop Geräusch*

@@ -15,30 +15,30 @@ comments: []
 ---
 
 # Vorgeschichte (mal wieder)
-Wer mich kennt, dem ist bekannt, ich fahre gerne Rad. Vor geraumer Zeit ist mein Rad (Parkpre AluComp 17") in Hamburg gestohlen worden. Lange Zeit habe ich mich mit Inline Skates fortbewegt und beim Aufräumen des Keller meiner Schwester fielen 2 Räder ab.
-Ein fast ungenutztes 'Ghost Cross 1300' und ein sehr zusammengestückeltes 'No Saint San Andreas'. Das Ghost war zwar angenehm klein (47cm Rahmen), aber ich konnte mich nie an die schmalen 28" Reifen gewöhnen. Es fehlte an Agilität. Das NoSaint dagegen war ein in die Jahre gekommenes kompaktes Downhill Rad mit Cross Country touch. Die 2,5" Bereifung auf dem 60cm Lenker mit Mag21 Gabel und RockShox Dämpfer machten einiges her. Die Deore XT Gruppe von ca '94-'97 arbeitete zuverlässig.
+Wer mich kennt, dem ist bekannt, ich fahre gerne Rad. Vor geraumer Zeit ist mein Rad (Parkpre AluComp 17") in Hamburg gestohlen worden. Lange Zeit habe ich mich mit Inline Skates fortbewegt und beim Aufräumen des Keller meiner Schwester fielen 2 Räder ab.  
+Ein fast ungenutztes 'Ghost Cross 1300' und ein sehr zusammengestückeltes 'No Saint San Andreas'. Das Ghost war zwar angenehm klein (47cm Rahmen), aber ich konnte mich nie an die schmalen 28" Reifen gewöhnen. Es fehlte an Agilität. Das NoSaint dagegen war ein in die Jahre gekommenes kompaktes Downhill Rad mit Cross Country touch. Die 2,5" Bereifung auf dem 60cm Lenker mit Mag21 Gabel und RockShox Dämpfer machten einiges her. Die Deore XT Gruppe von ca '94-'97 arbeitete zuverlässig.  
 Ich fahre fünf Tage die Woche ca 2x 7 KM. Die in die Jahre gekommenen Teile wurden auch nicht stabiler, so entschied ich mich für ein neues Fahrrad.
 
 ## 200 eBikes
 
-Die Entscheidung ist viel früher als die Umsetzung gefallen. Damals kamen gerade die ersten 2018er Modelle raus. Anfangs war ich sehr für ein E-Bike. Ungeachtet der politischen Diskussion dachte ich auch an schlechten Tagen damit noch gut voran zu kommen.
+Die Entscheidung ist viel früher als die Umsetzung gefallen. Damals kamen gerade die ersten 2018er Modelle raus. Anfangs war ich sehr für ein E-Bike. Ungeachtet der politischen Diskussion dachte ich auch an schlechten Tagen damit noch gut voran zu kommen.  
 Gefühlte 200 Probefahrten und 6 Monate später kam die Entscheidung dagegen. Ich bin gut trainiert und fahre die meiste Zeit jenseits der 25km/h. Mit einigen E-Bikes komme ich auch ohne Unterstützung auf 32km/h, aber bei der Trittfrequenz lässt sich das Tempo nicht lange halten. Zudem muss Motor und Akku auch im Ausgeschalteten Zustand bewegt werden und die 25KG sind spürbar.
 
-Aber das wichtigste Argument dagegen war vermutlich die Probefahrt mit Timos 27,5" Mountainbike. Das war in Hessen, am Biedenkopf. Die Fahrt war nicht lang, ca 15 KM in 40 Minuten, darunter 500 Höhenmeter am Schluss. Timo ist ein ganzes Stück größer als ich, dennoch habe ich nichts verstellt. Immerhin wollte ich ja Argumente gegen das Rad haben ...
+Aber das wichtigste Argument dagegen war vermutlich die Probefahrt mit Timos 27,5" Mountainbike. Das war in Hessen, am Biedenkopf. Die Fahrt war nicht lang, ca 15 KM in 40 Minuten, darunter 500 Höhenmeter am Schluss. Timo ist ein ganzes Stück größer als ich, dennoch habe ich nichts verstellt. Immerhin wollte ich ja Argumente gegen das Rad haben ...  
 Wie gehabt fehlte es an Agilität, aber diese habe ich auf der Strecke gar nicht gebraucht. Auf den Waldwegen kam ich gut von der Stelle, auf Asphalt musste ich bremsen, da ich die Strecke und den weiteren Verlauf nicht kannte. Aber nach kurzer Eingewöhnung konnte ich nicht nur fahren, sondern auch heizen.
 
 # Stevens kommt ins Spiel
 
-Ein paar nicht-Elektrische Räder bin ich zur Probe gefahren, aber überzeugt hat mich nichts. Das Cube NuRoad EXC 2018 (Gravel) hat mir sehr gut gefallen, aber es war ausverkauft oder der Händler war doof.
+Ein paar nicht-Elektrische Räder bin ich zur Probe gefahren, aber überzeugt hat mich nichts. Das Cube NuRoad EXC 2018 (Gravel) hat mir sehr gut gefallen, aber es war ausverkauft oder der Händler war doof.  
 Einen Tag im Sommerurlaub waren wir in Essen und in der brüllenden Hitze konnte man nicht viel erledigen. Die Radläden sind weit auseinander, so dass zumindest zwischen den Stationen die Klimaanlage vom Auto hilft. Diese Theorie wurde aber nie bestätigt.
 
-Im ersten Laden, die Bergetappe in Kupferdreh, stand ein Stevens X6. Es ist ja überhaupt nicht mein Rad. Es sieht aus wie ein Herrenrad, mit dem Aktentaschenträger am Wochenende mit der Familie einen Ausflug machen.
-Das dort gesehene Rad war schon verkauft und wurde gerade aufgebaut. Aber ein Kollege aus der Werkstatt fährt das Rad in einer besseren Ausstattung. Und auf diesem durfte ich eine Probefahrt machen.
+Im ersten Laden, die Bergetappe in Kupferdreh, stand ein Stevens X6. Es ist ja überhaupt nicht mein Rad. Es sieht aus wie ein Herrenrad, mit dem Aktentaschenträger am Wochenende mit der Familie einen Ausflug machen.  
+Das dort gesehene Rad war schon verkauft und wurde gerade aufgebaut. Aber ein Kollege aus der Werkstatt fährt das Rad in einer besseren Ausstattung. Und auf diesem durfte ich eine Probefahrt machen.  
 Wie gesagt, es war elendig heiß, meine Ortskenntnisse sind beschränkt und in der Mittagssonne war kaum Schatten zu finden. Also blieb es bei 5 Runden auf dem Parkplatz. Präzise Schaltung, enge Kurven, angenehme Sitzposition und trotz der Ausstattung (Licht, Nabendynamo, Gepäckträger) sehr leicht.
 
 ### 300km, linkes Pedal
 
-Nach 300 KM gab das linke Pedal auf.
+Nach 300 KM gab das linke Pedal auf.  
 `Pedale ATB Alu Comp Reflex`
 
 Auf Amazon wird es für 13-20e Angeboten. Die Bewertungen (4,1 Sterne) sind gar nicht mal so übel, doch die negativen Rezensionen beschrieben alle das gleiche: Nicht für Vielfahrer geeignet.
@@ -53,14 +53,14 @@ Auf Amazon wird es für 13-20e Angeboten. Die Bewertungen (4,1 Sterne) sind gar 
 
 ### 1300km, linkes Pedal
 
-Das linke Pedal ist wieder ausgeschlagen und hat ein Spiel von etwa 5mm. Später sind es 7mm und die Pedale bleibt gelegentlich stecken, so dass sie sich mit der Kurbel und nicht mehr frei dreht.
-Nach 1600 km bin ich wieder in Essen und der Austauch klappt ohne Probleme. Leider nur gegen die gleichen, weil "die ja so gut sind". Ich bezweifle dass sie Pendlertauglich sind.
+Das linke Pedal ist wieder ausgeschlagen und hat ein Spiel von etwa 5mm. Später sind es 7mm und die Pedale bleibt gelegentlich stecken, so dass sie sich mit der Kurbel und nicht mehr frei dreht.  
+Nach 1600 km bin ich wieder in Essen und der Austauch klappt ohne Probleme. Leider nur gegen die gleichen, weil "die ja so gut sind". Ich bezweifle dass sie Pendlertauglich sind.  
 die Pedalen liegen nun unangetastet in meinem Werkzeugkoffer und ich habe meine alten `VP-133` Klickpedale aus dem Koffer wieder reaktiviert. Sicher nicht die hochwertigsten, aber die haben mich auch auf dem MTB lange Zeit unterstützt. nur hatte ich sie vor dem Diebstahl gegen Shimano Pedale ohne Käfig getauscht.
 
 ### 1700km, die Reifen
 
-Ich fahre das Rad nun etwa ein halbes Jahr. In der Zeit mussten die Reifen 8x (2x vorn, 6x hinten) geflickt werden, hinten habe ich bereits den Schlauch ersetzt (Schnitt/Riss an der Naht, doof zu flicken).
-Ich fahre die `Schwalbe G-One Allround Performance / 35-622` auf 5 Bar. Beim letzten reparieren habe ich 3 Steinchen und eine Scherbe aus dem Mantel geholt. Diesen möchte ich als 'nicht für Pendler geeignet' bezeichnen.
+Ich fahre das Rad nun etwa ein halbes Jahr. In der Zeit mussten die Reifen 8x (2x vorn, 6x hinten) geflickt werden, hinten habe ich bereits den Schlauch ersetzt (Schnitt/Riss an der Naht, doof zu flicken).  
+Ich fahre die `Schwalbe G-One Allround Performance / 35-622` auf 5 Bar. Beim letzten reparieren habe ich 3 Steinchen und eine Scherbe aus dem Mantel geholt. Diesen möchte ich als 'nicht für Pendler geeignet' bezeichnen.  
 Den einen Platten hinten habe ich zu spät bemerkt, so dass ich mit der `Oxygen PRO A19` Felge auf den Kantstein aufgesetzt bin. Mittlerweile habe ich es wieder so zentrieren können, dass der Bremshebel-Weg geringer als 2 cm ist.
 
 Der Hinterreifen ist in der Mitte schon deutlich runter. Bis 2000km möchte ich den noch fahren, dann kommt ein Unplattbarer Reifen. Leider mit mehr Gewicht.

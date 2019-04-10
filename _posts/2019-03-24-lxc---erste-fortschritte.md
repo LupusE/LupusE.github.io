@@ -15,7 +15,7 @@ comments: []
 ---
 
 # Warum LXC?
-Der meist zitierte Vorteil von LXC ist womöglich, dass es sehr Hardwarenah arbeitet und durch den geringen Overhead (man spricht von gerade mal 7%) eine sehr hohe Dichte mitbringt.
+Der meist zitierte Vorteil von LXC ist womöglich, dass es sehr Hardwarenah arbeitet und durch den geringen Overhead (man spricht von gerade mal 7%) eine sehr hohe Dichte mitbringt.  
 Das heißt mehr Leistung auf der VM pro Hardware. Die Leistung wird nicht mehr vom Hostmanagement gefressen.
 
 Nachdem ich einige Tests mit conjure gegen die Wand gefahren habe, weis ich nun, dass 8 GB Arbeitsspeicher nicht ausreichend sind. Damit ist conjure auf Eis gelegt.
