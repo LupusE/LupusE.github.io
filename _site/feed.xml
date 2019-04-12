@@ -7,6 +7,17 @@
     <atom:link href="https://git.lupuse.org/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Stevens X6 Lite Tour Gent</title>
+        <description>
+          
+          Vorgeschichte (mal wieder) Wer mich kennt, dem ist bekannt, ich fahre gerne Rad. Vor geraumer Zeit ist mein Rad (Parkpre AluComp 17”) in Hamburg gestohlen worden. Lange Zeit habe ich mich mit Inline Skates fortbewegt und beim Aufräumen des Keller meiner Schwester fielen 2 Räder ab. Ein fast ungenutztes ‘Ghost...
+        </description>
+        <pubDate>Fri, 12 Apr 2019 00:17:27 +0200</pubDate>
+        <link>https://git.lupuse.org/2019-04-12-Stevens-X6-Lite-Tour/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-04-12-Stevens-X6-Lite-Tour/</guid>
+      </item>
+    
+      <item>
         <title>LXC - Lokal virtualisieren</title>
         <description>
           
@@ -48,6 +59,17 @@
         <pubDate>Tue, 12 Mar 2019 23:02:08 +0100</pubDate>
         <link>https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2019-03-12-openstack-erstes-hinfallen/</guid>
+      </item>
+    
+      <item>
+        <title>Nerf - Eine Uebersicht</title>
+        <description>
+          
+          Als ich meine Frau kennengelernt habe fand sie Waffen und waffen-ähnliche Spielzeuge aller Art doof. Ich als überzeugter Pazifist habe dafür volles Verständnis. In München durfte ich in die heiligen Hallen von Google und dort war an jedem Schreibtisch ein Nerf-Blaster zu sehen. Das Nerf-Blaster eher als Spielzeug, denn als...
+        </description>
+        <pubDate>Mon, 11 Mar 2019 21:04:37 +0100</pubDate>
+        <link>https://git.lupuse.org/2019-03-11-nerf-uebersicht/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-03-11-nerf-uebersicht/</guid>
       </item>
     
       <item>
@@ -202,28 +224,6 @@
         <pubDate>Tue, 30 Jun 2009 22:26:26 +0200</pubDate>
         <link>https://git.lupuse.org/2009-06-30-willkommen-im-21-jahrhundert/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2009-06-30-willkommen-im-21-jahrhundert/</guid>
-      </item>
-    
-      <item>
-        <title>Low budget life</title>
-        <description>
-          
-          -oder- Was ist Reichtum? Ich lebe derzeit an der untersten Grenze des Geldes. Ich kann mir etwas zu essen leisten und alle zwei Wochen gehe ich einmal einen großen Caramel Macciato trinken. Dann ist der Monat auch schon am Ende, zumindest finanziell. Geht es mir dadurch essentiell schlecht? Nein! Eine...
-        </description>
-        <pubDate>Wed, 18 Mar 2009 21:57:07 +0100</pubDate>
-        <link>https://git.lupuse.org/2009-03-18-low-budget-life/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2009-03-18-low-budget-life/</guid>
-      </item>
-    
-      <item>
-        <title>Geburtstage - Geschenkewahn</title>
-        <description>
-          
-          Hey Folks, bald ist wieder Geburtstag. Und ich schenke eher selten zum Geburtstag, bevor ich 'Irgendwas' schenke. Denn was soll 'Irgendwas' im Schrank wertvollen Platz nehmen und verstauben? Aber wohl schenke ich gerne auch ohne offiziellen Anlass, wenn etwas passt. Aber was ist denn Sinnvoll oder eben nicht? Soweit ich...
-        </description>
-        <pubDate>Thu, 29 Jan 2009 20:02:14 +0100</pubDate>
-        <link>https://git.lupuse.org/2009-01-29-geburtstage-geschenkewahn/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2009-01-29-geburtstage-geschenkewahn/</guid>
       </item>
     
   </channel>
