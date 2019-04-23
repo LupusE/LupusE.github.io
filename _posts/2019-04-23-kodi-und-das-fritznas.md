@@ -1,7 +1,7 @@
 ---
 status: published
 published: true
-title: s9y to Jekyll
+title: Kodi und das Fritz!NAS
 author:
   display_name: Benjamin Moeller
   login: lupuse
