@@ -2,12 +2,7 @@
 status: published
 published: true
 title: LXC - Erste Fortschritte
-author:
-  display_name: Benjamin Moeller
-  login: lupuse
-  email: blog@lupuse.org
-author_login: lupuse
-author_email: blog@lupuse.org
+author: Benjamin Moeller
 date: 2019-03-24 20:02:42 UTC
 categories: [server]
 tags: [server, lxd, linux]

@@ -2,12 +2,7 @@
 status: published
 published: true
 title: Valentinstag und die Reparaturen
-author:
-  display_name: Benjamn Moeller
-  login: lupuse
-  email: blog@lupuse.org
-author_login: lupuse
-author_email: blog@lupuse.org
+author: Benjamin Moeller
 date: 2019-02-14 20:21:00 UTC
 categories: []
 tags: [gedenke]

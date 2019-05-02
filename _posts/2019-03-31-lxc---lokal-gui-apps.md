@@ -2,12 +2,7 @@
 status: published
 published: true
 title: LXC - Lokal virtualisieren
-author:
-  display_name: Benjamin Moeller
-  login: lupuse
-  email: blog@lupuse.org
-author_login: lupuse
-author_email: blog@lupuse.org
+author: Benjamin Moeller
 date: 2019-03-31 20:10:13 UTC
 categories: [server]
 tags: [server, lxd, linux]

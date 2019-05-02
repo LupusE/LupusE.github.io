@@ -2,12 +2,7 @@
 status: published
 published: true
 title: Stevens X6 Lite Tour Gent
-author:
-  display_name: Benjamin Moeller
-  login: lupuse
-  email: blog@lupuse.org
-author_login: lupuse
-author_email: blog@lupuse.org
+author: Benjamin Moeller
 date: 2019-04-11 22:17:27 UTC
 categories: [bike]
 tags: [pendeln, fahrrad, bike, mdrza]

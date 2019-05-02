@@ -2,12 +2,7 @@
 status: published
 published: true
 title: OpenStack - erstes Hinfallen
-author:
-  display_name: Benjamin Moeller
-  login: lupuse
-  email: blog@lupuse.org
-author_login: lupuse
-author_email: blog@lupuse.org
+author: Benjamin Moeller
 date: 2019-03-12 22:02:08 UTC
 categories: [QuickAndDirty]
 tags: [qnd]

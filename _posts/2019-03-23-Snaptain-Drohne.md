@@ -2,12 +2,7 @@
 status: published
 published: true
 title: Snaptain Drohne
-author:
-  display_name: Benjamin Moeller
-  login: lupuse
-  email: blog@lupuse.org
-author_login: lupuse
-author_email: blog@lupuse.org
+author: Benjamin Moeller
 date: 2019-03-23 21:42:32 UTC
 categories: []
 tags: [ drohne ]

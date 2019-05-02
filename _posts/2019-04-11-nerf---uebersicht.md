@@ -2,12 +2,7 @@
 status: published
 published: true
 title: Nerf - Eine Uebersicht
-author:
-  display_name: Benjamin Moeller
-  login: lupuse
-  email: blog@lupuse.org
-author_login: lupuse
-author_email: blog@lupuse.org
+author: Benjamin Moeller
 date: 2019-04-11 20:04:37 UTC
 categories: [nerf]
 tags: [nerf, blaster]
