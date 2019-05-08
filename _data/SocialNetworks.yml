@@ -99,4 +99,4 @@ yelp:
 pluspora:
   name: "pluspora"
   baseURL: "https://www.pluspora.com/u/"
-  icon: "fa-dispora"
+  icon: "fa-diaspora"
