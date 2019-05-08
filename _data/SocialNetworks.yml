@@ -95,3 +95,8 @@ yelp:
   name: "Yelp"
   baseURL: "https://{{ site.author.yelp }}.yelp.com"
   icon: "fa-yelp"
+
+pluspora:
+  name: "pluspora"
+  baseURL: "https://www.pluspora.com/u/"
+  icon: "fa-dispora"
