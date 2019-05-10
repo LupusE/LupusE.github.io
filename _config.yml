@@ -90,6 +90,7 @@ social-network-links:
   steam: LupusE
 #  twitch: yourname
 #  yelp: yourname
+  pluspora: lupuse
 
 # Select which share links to show in posts
 share-links-active:
@@ -256,5 +257,5 @@ plugins_dir:
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
-
-incremental: false
+## build whole site new (fix tagging, for example)
+#incremental: false
