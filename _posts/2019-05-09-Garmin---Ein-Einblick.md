@@ -88,12 +88,26 @@ Bekannt aus Computerspielen, aber auch immer weiter Verbreitet unter dem Stichwo
 Garmin bietet innerhalb der Connect App die Möglichkeit durch verschiedene Aktionen entsprechende Auszeichnungen zu erlangen. Je schwieriger die Herausforderung, desto mehr Punkte bekommt man mit der Auszeichnung. Das Maximum ist 8 Punkte und die wohl einfachste schwierigste Auszeichnung ist der 60-Tage-Meister. Diese 8 Punkte Errungenschaft erhält man, nachdem 60 Tage am Stück das Tagesziel in Schritten erreicht wurde. Viele Errungenschaften gibt es nur einmalig, bei dieser fängt der Zähler aber wieder bei 1 an und nach 180 Tagen hat man schon 16 Punkte. Je einen Punkt gibt es für das Tracken einer beliebigen Aktivität zu Sylvester oder zu Neujahr. Der Spaziergang ist immer eine gute Möglichkeit. Wer, wie ich, unterhalb der Woche jeden Tag pendelt, bekommt auch die eher unbekannte Ereignisse mit, wie zum Beispiel das chinesische 'Jahr des Schweins'.  
 Während der erste Levelaufstieg noch recht einfach ist, muss man beim zweiten schon genau durch die Trophäen schauen. Um das vierte Level zu erreichen gehört schon eine Portion Geduld und Ambition notwendig. Mit niedrigen Puls sie Intensivminuten (150/200/300 an einem Tag) zu erreichen ist nicht einfach. Als Ausgleich bekommt man das Fernsehen oder Kino schon als Schlafenszeit angerechnet.  
 
+----
+Ab hier wird es etwas nerdiger
+----
+
 ## Mit den Daten weiter arbeiten
-Damit man mit den ganzen gesammelten Daten etwas anfangen kann, reicht natürlich so ein kleines Garmin Connect Dashboard nicht aus. Garmin ändert gelegentlich die Authentifizierung der API. Ab und zu muss also das verwendete Programm aktualisiert werden. Das Python Skript `garmin-connect-export` von kjkjava funktioniert in der Regel sehr gut.
+Damit man mit den ganzen gesammelten Daten etwas anfangen kann, reicht natürlich so ein kleines Garmin Connect Dashboard nicht aus. Garmin ändert gelegentlich die Authentifizierung der API. Ab und zu muss also das verwendete Programm aktualisiert werden. Das Python Skript `garmin-connect-export` von pe-st funktioniert in der Regel sehr gut. Das Repo von kjkjava wird seit 2015 nicht mehr betreut.  
 ```bash
-$ git clone https://github.com/kjkjava/garmin-connect-export
+$ sudo apt install python unzip
+$ git clone https://github.com/pe-st/garmin-connect-export
 $ cd garmin-connect-export
-$ ./gcexport.py -format original -count all --username [email] --directory ~/Domumente/garmin_connect/
+$ ./gcexport.py --format tcx --count all --username [email] --directory ~/Domumente/garmin_connect/
 ```
-Jetzt hat man die Daten, welche in ein Datencube oder Hadoop Cluster importiert und analysiert werden. Oder weniger spektakulär in dem OpenSource Programm [GoldenCheetah](https://www.goldencheetah.org/).  
+Das Format `Original` kommt als Zip, welches erst entpackt werden muss um an die fit Daten zu kommen(`cd ~/garmin_connect/; unzip \*.zip`). Das Format tcx kann sofort z.B. in Excel weiterverarbeit oder [GoldenCheetah](https://www.goldencheetah.org/) importiert werden.
+
+```bash
+$ lxc launch --profile default --profile gui ubuntu:bionic goldenbuntu
+$ lxc exec goldenbuntu -- sudo --user ubuntu --login
+ubuntu@goldenbuntu:~$ sudo apt update && sudo apt upgrade; sudo apt install goldencheetah
+ubuntu@goldenbuntu:~$ GoldenCheetah
+```
+Beim ersten Starten muss ein Profil angelegt werden. Je nachdem wie gut die virtualisierte Umgebung funktioniert geht es sofort oder es muss erst abgeschossen und nochmal gestartet werden.  
+In der VM kann der oben genannte Importer genutzt werden, da die VM keinen einfachen Zugang zu den Daten des Hostsystems hat.  
 
