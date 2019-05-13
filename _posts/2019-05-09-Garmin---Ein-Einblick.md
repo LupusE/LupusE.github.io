@@ -18,14 +18,15 @@ Ich war zu der Zeit viel unterwegs, und fand besonders interessant den Schlaftra
 
 ## Ernsthafter Tracker - vivoactive
 Meine Frau hat mir wenige Monate danach zum Geburtstag eine **Garmin vivoactive** gekauft. Nicht ohne Eigennutzen, da sie weis dass ich solche Geräte komplett durchgehe und Funktionen ausprobiere auf die sie nicht gekommen wäre. Bis zu 30 Tagen Akkulaufzeit ohne Tracking, 7 Tage mit 45 Minuten Tracking/Tag. Telefon finden. Bluetooth und ANT+. GPS und Glonass. Schritte, Radfahren, Schwimmen ...  
-Die einzige nennenswerte Schwierigkeit, die ich mit der Uhr hatte waren 6 Monate Syncronisierungsprobleme, vermutlich verursacht durch die Zeitumstellung. Der ist bei folgenden Zeitumstellungen nicht mehr aufgetreten.
+Die einzige nennenswerte Schwierigkeit, die ich mit der Uhr hatte waren 6 Monate Syncronisierungsprobleme, vermutlich verursacht durch die Zeitumstellung. Der ist bei folgenden Zeitumstellungen nicht mehr aufgetreten.  
 [Garmin vivoactive bei Amazon](https://www.amazon.de/Garmin-vivoactive-Sport-GPS-Smartwatch-Batterielaufzeit-Schwarz/dp/B00RE1UL52)
 
 ### Herzfrequenzmessung - Brustgurt
 Während andere Fitness-Gadget Hersteller im Besten Fall auf Bluetooth Low Energy (BLE) oder manchmal eigenes 2,4GHz setzen, geht Garmin den Weg des ANT+. Wie bei allem was Funkt: Solange auf beiden Seiten das ANT+ Logo gedruckt ist sprechen die miteinander. Es gibt verschieden Brustgurte von Garmin zum genaueren Aufnehmen der Herzfrequenz:
 * Der Brustgurt (Plastik Band)
 * Der Textil Brustgutrt (Meine Wahl)
-* 3 Premium Brustgurte (Plus Bodenkontaktmessung für Marathon oder Unterwasser HR für Schwimmen/Triathlon)  
+* 3 Premium Brustgurte (Plus Bodenkontaktmessung für Marathon oder Unterwasser HR für Schwimmen/Triathlon)
+Bei Amazon und in diversen Foren liest man immer wieder wie schlecht oder ungenau der Textilgurt im Vergleich zum Plastikgurt sein soll. Das kann ich nicht bestätigen. Im ersten Jahr habe ich vor dem Anlegen die 4 Kontaktflächen immer mit Wasser benetzt. Der Tipp erschien mir Sinnvoll, da elektrische Ströme gemessen werden und ich nicht wenig Brustbehaarung habe. Seit etwa 6 Monaten lasse ich diesen Schritt weg. Ganz selten verbindet der Gurt erst nach etwa 300m, Radfahren, damit kann ich aber gut leben.  
 [Garmin Brustkurt (textil) bei Amazon](https://www.amazon.de/Garmin-Premium-Herzfrequenz-Brustgurt-HRM-Tragekomfort/dp/B00BI9X1QM)
 
 ## Upgrade - vivoactive 3/vivoactive3 Music
@@ -36,7 +37,6 @@ Mit **Garmin Connect** verbinden, Einstellungen vornehmen ... Und super. Höhere
 Meine Frau trägt die **vivoactive 3**. Es hat einen Rahmen in dem das Display schützend eingelassen ist. An der Seite gibt es ein Sensorfeld zum exakteren Scrollen, auf der anderen einen Knopf. Lange drücken und kurz drücken hat jeweils eine andere Funktion.  
 Ich trage die **vivoactive 3 Music**. Die ist etwas größer, hat kein Touchfeld und leider steht das Display hervor ohne den schützenden Rahmen. Dafür spricht sie WLAN. Der Kopfhörer wird per Bluetooth verbunden. Die Uhr wird per USB mit dem MTP Protokoll verbunden. In die entsprechenden Ordner kann Musik, Hörbücher oder Posdcasts geladen werden. Wer einen Spotify oder Deezer Premium Account besitzt kann Playlisten per WLAN auf die Uhr laden.  
 Die Uhr hat einen eingebauten Herzfrequenzsensor (HR), aber für das Radfahren oder auf dem Laufband verwende ich weiterhin den Brustgurt.
-
 * Garmin Pay - Per NFC bezahlen
 * MoveIQ - Automatisches erkennen von Aktivitäten (Holz Hacken ist Schwimmen!)
 * Sideswipe - Nur ohne Music. Scrollen und dabei das Display sehen
@@ -47,6 +47,11 @@ Die Uhr hat einen eingebauten Herzfrequenzsensor (HR), aber für das Radfahren o
 
 [Garmin vivoactive 3](https://www.amazon.de/Garmin-vívoactive-GPS-Fitness-Smartwatch-vorinstallierte-Schwarz-Silber/dp/B0751GBCKN)
 [Garmin vivoactive 3 Music](https://www.amazon.de/Garmin-vívoactive-Music-GPS-Fitness-Smartwatch-vorinstallierte-Schwarz/dp/B07CR8NBQB)
+
+Edit 12.05.2019:  
+Sehr Schön ist auch die Funktion 'Notfallkontakt'. In der Garmin Connect App über das Hamburgemenü wählt man 'Kontakt' aus. Entweder man legt einen neuen an oder wählt einen oder mehrere aus dem Telefonbuch. Nun kann unter 'Sicherheit und Tracking' die 'Unfallbenachrichtigung und Notfallhilfe' für bis zu 3 Personen aktiviert werden. Bei einigen Garmin Edge Fahrradcomputer weiss ich, dass sie einen Crash-Sensor haben. Bei der vivoactive3 weis ich nur, dass es durch laaaanges Drücken auf den Button (bis es vibriert) aktiviert werden kann. Der Notfallkontakt bekommt dann eine SMS und/oder Email, genau konfigurieren kann man es nicht, das wird wohl aus dem Kontakt-Eintrag ermittelt. Der Notfallkontakt benötigt also kein Garmin Connect.  
+Ich finde das ist eine sinnvolle Funktion. Dafür muss natürlich die Uhr mit dem Handy kommunizieren und Empfang gegeben sein, zusätzlich funktioniert es nur, wenn die Uhr ein GPS Signal hat und wenn dam 'Live Tracking' zugestimmt wurde. Das 'Live Tracking' muss zu der Unfall-/Notfallzeit aber nicht aktiv sein. Garmin selbst weist darauf hin, dass man sich nicht nur auf dieses System verlassen soll.  
+Ich finde das ist eine enorm sinnvolle funktion, und ich möchte nun ein paar Tage testen ob es zu Fehlalarmen kommt. Meine Frau habe ich vorweg informiert und sie bekam von Garmin eine Benachrichtigung, dass sie nun mein Notfallkontakt ist.
 
 ### Fahrrad - Trittfrequenz/Geschwindigkeit
 Mehrere Jahre habe ich auf Amazon den **Garmin Cardence-/Speedsensor** beobachtet. Auch immer mal wider bei Idealo oder im Laden gesucht., Aber der Preis hielt sich stabil bei knapp unter 50e. Jetzt habe ich ein neues Fahrrad für 100e, dann waren die 50e auch noch drin.  
@@ -68,7 +73,7 @@ Garmin Connect kann man entweder über die [Webseite](https://connect.garmin.com
 Je nach Garmin Gerät sendet die Uhr die Daten ständig zum Telefon und wenn eine Internetverbindung besteht wird synchronisiert. Oder die Synchronisierung muss manuell ausgelöst werden, z.B. durch langes Drücken auf die Taste, was im sofern ärgerlich ist, weil ein zu kurzes Drücken eine Aktivität (Laufen) startet. Wichtig ist zu wissen: Es muss eine Internetverbindung bestehen. Garmin arbeitet nur sehr eingeschränkt offline, so dass es kaum mehr benutzbar ist.  
 Mir ist vor allem aufgefallen, dass ich morgens aufstehe, meine Uhr beim Frühstück synchronisiere und eine Schlaftracking angezeigt bekomme. Es kommt gelegentlich vor, dass zum Mittag/Abend ganz andere Werte dort stehen. Der Verlauf ist gleich, oder zumindest sehr ähnlich, aber die Start/Stop Phasen springen um teilweise mehrere Stunden und die Schlafphasen werden angepasst.  
 Auf der Startseite sehe ich übersichtlich ganz oben meine heutigen Trainings, darunter meine aktuelle Herzfrequenz, aktuelle Schritte, Intensitätsminuten der aktuellen Woche, heute gelaufene Stockwerke, heutiger Stresslevel, Kalorienbilanz (mit MyFitnesPal verlinkt), mein Gewicht (wenn ich heute auf der Garmin Index stand) und den Schlaf der letzten Nacht. Jedes Feld kann ich antippen für Details oder rechts oben tippen für ein Langzeit-Diagramm (7-Tage, 4 Wochen, 12 Monate). Darunter kommt eine kürzere Zusammenfassung von gestern. Und zum Schluss ein Block mit dem Durchschnitt der wichtigsten Werte über die letzten 7 Tage.  
-Im Menü oben habe ich ein Hamburger Menu (drei waagerechte Striche übereinander), in dem Aktivitäten oder Einstellungen aufgerufen werden können. Daneben befindet sich mein Profilbild, mit einem tippen komme ich in meine Einstellungen zum Profil und Übersicht der Auszeichnungen. Weiter geht es mit dem aktuellen Gerät und mit einem tippen bekomme ich eine Übersicht meiner Geräte und kann welche hinzufügen oder entfernen. Das vierte und letzte Symbol in der Leiste stößt ein Synchronisieren des aktuellen Geräts mit dem Telefon an.
+Im Menü oben habe ich ein Hamburger Menu (drei waagerechte Striche übereinander), in dem Aktivitäten oder Einstellungen aufgerufen werden können. Daneben befindet sich mein Profilbild, mit einem tippen komme ich in meine Einstellungen zum Profil und Übersicht der Auszeichnungen. Weiter geht es mit dem aktuellen Gerät und mit einem tippen bekomme ich eine Übersicht meiner Geräte und kann welche hinzufügen oder entfernen. Das vierte und letzte Symbol in der Leiste stößt ein Synchronisieren des aktuellen Geräts mit dem Telefon an.  
 Im Menü unten fängt es an mit 'Mein Tag', das ist die im vorigen Absatz beschriebene Ansicht. Dann kommen die 'Challenges', bei denen jeder seine Verbindungen zu einer Challenge herausfordern kann. Das können über einen frei wählbaren Zeitraum Schritte, Laufen, Radfahren (Kilometer) oder Schwimmen sein. Hier kann der 'Kalender' ausgewählt werden, der auch mit O365 synchronisiert werden kann um absolvierte Aktivitäten oder anstehende Trainings automatisch eintragen zu lassen. Der 'Garmin Coach' kann in dem Menü anstelle des 'Newsfeed' angezeigt werden, wenn ein Trainingsplan erstellt oder ausgewählt wurde. Hier ist der zentrale Einblick in die nächsten Trainings mit kleinen Videos, die zum erreichen des Ziel helfen sollen. Unter 'Benachrichtigungen' habe ich gefühlt noch nie etwas gelesen, aber nur weil ich mir alle Ereignisse auch per Email senden lasse und darüber schneller bearbeite. Der 'Newsfeed' zeigt die Aktivitäten aller Verbundenen Freunde und Kontakte an und ist über das HamburgerMenü zu erreichen, wenn der 'Garmin Coach' in dem unteren Menü den Platz einnimmt.  
 
 Die App ist übersichtlich. Es gibt einen Farbcode, aber es ist nicht zu bunt. Sie wird weiterentwickelt, so dass sogar in der Android App Beschreibung die monatlichen Update beworben stehen. Nach einem Update folgt oft kurze Zeit danach ein zweites. Bisher war ich noch nicht betroffen von einem kurzfristig gefixten Bug ...  
@@ -89,18 +94,19 @@ Garmin bietet innerhalb der Connect App die Möglichkeit durch verschiedene Akti
 Während der erste Levelaufstieg noch recht einfach ist, muss man beim zweiten schon genau durch die Trophäen schauen. Um das vierte Level zu erreichen gehört schon eine Portion Geduld und Ambition notwendig. Mit niedrigen Puls sie Intensivminuten (150/200/300 an einem Tag) zu erreichen ist nicht einfach. Als Ausgleich bekommt man das Fernsehen oder Kino schon als Schlafenszeit angerechnet.  
 
 ----
+
 Ab hier wird es etwas nerdiger
-----
 
 ## Mit den Daten weiter arbeiten
 Damit man mit den ganzen gesammelten Daten etwas anfangen kann, reicht natürlich so ein kleines Garmin Connect Dashboard nicht aus. Garmin ändert gelegentlich die Authentifizierung der API. Ab und zu muss also das verwendete Programm aktualisiert werden. Das Python Skript `garmin-connect-export` von pe-st funktioniert in der Regel sehr gut. Das Repo von kjkjava wird seit 2015 nicht mehr betreut.  
+
 ```bash
 $ sudo apt install python unzip
 $ git clone https://github.com/pe-st/garmin-connect-export
 $ cd garmin-connect-export
-$ ./gcexport.py --format tcx --count all --username [email] --directory ~/Domumente/garmin_connect/
+$ ./gcexport.py --format original --count all --username **[email]** --directory ~/Domumente/garmin_connect/
 ```
-Das Format `Original` kommt als Zip, welches erst entpackt werden muss um an die fit Daten zu kommen(`cd ~/garmin_connect/; unzip \*.zip`). Das Format tcx kann sofort z.B. in Excel weiterverarbeit oder [GoldenCheetah](https://www.goldencheetah.org/) importiert werden.
+Das Format `Original` kommt als Zip, welches erst entpackt werden muss um an die fit Daten zu kommen(`cd ~/garmin_connect/; unzip \*.zip`). Das Format tcx kann sofort z.B. in Excel weiter verarbeit oder [GoldenCheetah](https://www.goldencheetah.org/) importiert werden.  
 
 ```bash
 $ lxc launch --profile default --profile gui ubuntu:bionic goldenbuntu
