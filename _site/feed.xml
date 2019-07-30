@@ -7,6 +7,17 @@
     <atom:link href="https://git.lupuse.org/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Bluetooth Headset - Jabra und Sony</title>
+        <description>
+          
+          Vorgeschichte Mein erstes Bluetooth Headset war ein Jabra BT800 um die Jahrtausendwende. Mono, schwer (25 Gramm), Software aktualisierbar und mit Display zur Rufnummernanzeige plus bereits 6 Stunden Gesprächszeit. Das habe ich bereits beim Radfahren genutzt und war begeistert über die Gesprächsqualität, selbst bei Gegenwind. Dann ging die Reise über ein...
+        </description>
+        <pubDate>Mon, 29 Jul 2019 22:00:00 +0200</pubDate>
+        <link>https://git.lupuse.org/2019-07-29-BT-headsets-Jabra-und-Sony/</link>
+        <guid isPermaLink="true">https://git.lupuse.org/2019-07-29-BT-headsets-Jabra-und-Sony/</guid>
+      </item>
+    
+      <item>
         <title>Wohnmobil - Zweiter Akt</title>
         <description>
           
@@ -70,17 +81,6 @@
         <pubDate>Sun, 31 Mar 2019 22:10:13 +0200</pubDate>
         <link>https://git.lupuse.org/2019-03-31-lxc-lokal-gui-apps/</link>
         <guid isPermaLink="true">https://git.lupuse.org/2019-03-31-lxc-lokal-gui-apps/</guid>
-      </item>
-    
-      <item>
-        <title>Bluetooth Headset - Jabra und Sony</title>
-        <description>
-          
-          Vorgeschichte Mein erstes Bluetooth Headset war ein Jabra BT800 um die Jahrtausendwende. Mono, schwer (25 Gramm), Software aktualisierbar und mit Display zur Rufnummernanzeige plus bereits 6 Stunden Gesprächszeit. Das habe ich bereits beim Radfahren genutzt und war begeistert über die Gesprächsqualität, selbst bei Gegenwind. Dann ging die Reise über ein...
-        </description>
-        <pubDate>Fri, 29 Mar 2019 21:00:00 +0100</pubDate>
-        <link>https://git.lupuse.org/2019-03-29-BT-headsets-Jabra-und-Sony/</link>
-        <guid isPermaLink="true">https://git.lupuse.org/2019-03-29-BT-headsets-Jabra-und-Sony/</guid>
       </item>
     
       <item>
