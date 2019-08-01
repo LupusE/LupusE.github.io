@@ -5,7 +5,7 @@
 
 # If you are building a simple GitHub user page (https://username.github.io) then use these settings:
 #url: "https://LupusE.github.io"
-url: "https://git.lupuse.org"
+url: "https://blog.lupuse.org"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -101,7 +101,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "git.lupuse.org"
+url-pretty: "blog.lupuse.org"
 
 # --- Web Statistics Section --- #
 
