@@ -26,11 +26,6 @@ reddit:
   baseURL: "https://reddit.com/u/"
   icon: "fa-reddit"
 
-google-plus:
-  name: "Google+"
-  baseURL: "https://plus.google.com/"
-  icon: "fa-google-plus"
-
 email:
   name: "Email me"
   baseURL: "mailto:"
@@ -78,7 +73,7 @@ telephone:
 
 rss:
   name: "RSS"
-  baseURL: "{{ '/feed.xml' | prepend: site.baseurl }}"
+  baseURL: "{{ '/feed.xml' | relative_url }}"
   icon: "fa-rss"
 
 steam:
@@ -95,8 +90,3 @@ yelp:
   name: "Yelp"
   baseURL: "https://{{ site.author.yelp }}.yelp.com"
   icon: "fa-yelp"
-
-pluspora:
-  name: "pluspora"
-  baseURL: "https://www.pluspora.com/u/"
-  icon: "fa-diaspora"
