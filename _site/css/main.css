@@ -116,7 +116,7 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 800;
-  color: #00C0C2;
+  color: #2A7C7D;
 }
 
 .navbar-custom .navbar-brand:hover,
@@ -271,7 +271,7 @@ footer p.text-muted {
 }
 
 footer a {
-  color: #00C0C2;
+  color: #2A7C7D;
 }
 
 footer .list-inline {
