@@ -1,7 +1,7 @@
 ---
 status: published
 published: true
-title: Wohnmobil - Zweiter Akt
+title: Wohnmobil - Dritter Akt
 author: Benjamin Moeller
 date: 2020-10-24 22:03:45 UTC
 categories: [Wohnmobil]
