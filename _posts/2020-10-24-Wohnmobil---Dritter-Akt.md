@@ -14,12 +14,12 @@ Wir haben angefangen mit unserem HasenMobil. Ein **Knaus Sport Traveller**, mit 
 Nach 4 Jahren haben wir uns für das FlashMobil entschieden, einen tizianroten **Sunlight Cliff 601 SoMo** Kastenwagen. Mit Doppelstockbett Platz für 4 erwachsene zum Fahren und schlafen. Unterhalb der Betten war Platz für eine geräumige Hundekiste oder auch 2 Stühle liegend. Es war durch die kompakte Bauform einfach sehr viel sparsamer und auch Stadt-tauglich. Wenn wir in München standen ist es aufgrund der sportlichen Farbgebung kaum aufgefallen. Die große Seitentür und die beiden Hacktüren waren großartig und nervig zugleich. Im Sommer super Belüftung, bei Regen immer alles innen und außen nass. 1,5 Jahre haben wir es erprobt.
 
 # Was gibt es neues?
-Ein **4-Pfoten-Mobile** https://www.4pfoten-mobile.de/. Das ist ein spezieller Umbau für Hundebesitzer auf Basis eines Dethleffs Trend T7xxx.
+Ein [**4-Pfoten-Mobile**](https://www.4pfoten-mobile.de/). Das ist ein spezieller Umbau für Hundebesitzer auf Basis eines Dethleffs Trend T7xxx.
 
 Wir waren 2016 auf unserer ersten Wohnmobilmesse in Düsseldorf. Zwar hatten wir bereits unser HasenMobil, aber man darf sich ja umsehen. Hier lernten wir das 4pfoten-Mobil kennen. Auf über 7 Meter purer Luxus. Klimaanlage, Platz für 2-3 mittelgroße Hunde, riesiges Bett, helle Möbel. Aber viel zu groß, wir sind doch eher Städtereisende. Immer wieder haben wir es uns angesehen, aber festgestellt dass es groß ist.   
 
 ## Was war nun anders?
-Im Sommerurlaub 2020 standen wir mit unserem FlashMobil in Zaue am See (Irgendwo ganz tief in Ostdeutschland), hatten ein Glas (oder eine Flasche?) Wein getrunken und wir haben das Leben genossen. Leider stellten wir in diesem Urlaub fest, dass unsere Klimaanlage im Fahrerhaus kaputt war und eine Aufbau Klimaanlage gab es nicht ... Bei 34° im Schatten war es ein sehr heißer Urlaub. Au fdem Platz waren zum Glück viele Bäume, welche viel Schatten, aber auch herunterfallende Zapfen spendeten.  
+Im Sommerurlaub 2020 standen wir mit unserem FlashMobil in Zaue am See (Irgendwo ganz tief in Ostdeutschland), hatten ein Glas (oder eine Flasche?) Wein getrunken und wir haben das Leben genossen. Leider stellten wir in diesem Urlaub fest, dass unsere Klimaanlage im Fahrerhaus kaputt war und eine Aufbau Klimaanlage gab es nicht ... Bei 34° im Schatten war es ein sehr heißer Urlaub. Auf dem Platz waren zum Glück viele Bäume, welche viel Schatten, aber auch herunterfallende Zapfen spendeten.  
 
 An diesem besagten Tag haben wir die Handys raus geholt, verschiedene Klimaanlagen für unseren Kastenwagen angesehen und Preise verglichen. Die Fahrerhausklima war ein Garantiefall, aber ein vernünftiger Schlaf ist damit noch nicht gewährleistet. Wir haben uns auch wieder über das 4Pfoten-Mobile unterhalten.  
 Ich habe auf der Webseite den Kontakt herausgesucht und eine kurze Email verfasst. Meine Frau ist zu den Duschen gegangen. Keine 30 Minuten nach meiner Kontaktanfrage bekam ich einen Rückruf. Ein sehr netter Kontakt, aber wir haben festgestellt, dass 'in der Nähe von Essen' etwas weit weg ist, er wollte meinen Kontakt lieber an Jörn Zimmermann, dem 4Pfoten-Anbieter aus Neumünster weiterleiten.  
@@ -28,6 +28,7 @@ Nach wiedereinmal sehr kurzer Zeit und einem weiteren sehr netten Kontakt wollte
 - Die Hunderampe herausgeholt
 - Die Fahrersitze zur Sitzgruppe gedreht
 - ...
+
 Viel mehr gibt es eigentlich auch nicht mehr. Ich denke unsere 5,5 Jahre Campingerfahrung haben geholfen trotz der Hitze sinnvolle Eindrücke zu gewinnen. Kurz vor der Verabschiedung sprach meine Frau bereits von 'unserem Wohnmobil'. Die 4Pfoten Mobile werden eigentlich von Freitag bis Freitag vermietet. Herr Zimmermann meinte aber, da wir ein ernsthaftes Kaufinteresse haben lässt sich bestimmt auch eine andere Lösung finden... Das war es für das Erste.  
 Noch in der Woche habe ich Herrn Zimmermann kontaktiert, ob wir es uns 3 Tage ausleihen können. Das war kein Problem. Dazu noch zu einem super Sonderpreis. Wir hatten zwar keinen Urlaub, konnten dennoch 2 Übernachtungen lang alles ausprobieren. Der Hammer!  
 Es vergingen noch ein paar Tage, und wir haben uns entschieden das FlashMobil zu verkaufen und umzusteigen.  
@@ -84,7 +85,7 @@ Jetzt hatten wir schon wieder eine sportliche Idee: Wir könnten mit dem neuen W
   * Unter den Betten, etwa die Hälfte der Garage
   * Zugang vom Wohnraum oder der Außentür, letztere mit Rampe
   * mit einem leicht zu reinigenden, weichen Kissen
-  * Hundedusche mit Temperaturkontrolle vor dem Außeneingang
+  * Hundedusche vor dem Außeneingang
   * Anti-Schlabber-Napf mit 1,4l
   * Eine Kamera auf den Hund, bei Bedarf während der Fahrt
 
@@ -115,7 +116,7 @@ Ich habe am 7.11. Telefonisch mit Frau Müller-Claasen gesprochen. Die Garantier
 Die Abgabe gestaltete sich unkompliziert. Fahrzeug abstellen, Schlüssel und Fahrzeugschein in eine Werkstatttüte, diese mit den wichtigsten Daten beschriften und ab in den Briefkasten. Der klingt sehr tief und hängt an einer Metalltür. Ich hatte ein sehr gutes Gefühl, das es dort sicher steht.  
 Am 16.11. vormittags bekam ich den Anruf, das Wohnmobil ist fertig. Also am Abend mit meiner Frau wieder hin und abholen. Als erstes habe ich auf die Truma DuoC gedrückt: Wie ein Weihnachtsbaum. Alles perfekt.  
 
-Schnell, unkompliziert, sehr zuverlässig! Warum habe ich von dem Wohnmobil-Zentrum-Bongard (http://w-z-b.de/cms/wb/) nicht schon die letzten 5,5, Jahre gewusst und bin immer nach Winsen gefahren?
+Schnell, unkompliziert, sehr zuverlässig! Warum habe ich von dem [Wohnmobil-Zentrum-Bongard](http://w-z-b.de/cms/wb/) nicht schon die letzten 5,5, Jahre gewusst und bin immer nach Winsen gefahren?
 
 Disclaimer: Ich werde weder von 4Pfoten-Mobile Neumünster, noch vom Wohnmobil-Zentrum-Bongard bezahlt. Ich beschreibe hier nur meine positiven Eindrücke.
 
