@@ -67,6 +67,9 @@ Jetzt hatten wir schon wieder eine sportliche Idee: Wir könnten mit dem neuen W
 * Geräumige Dusche, getrennt vom WC
   * Bei nicht Gebrauch ist >50% der Dusche Wohnraum im Schlafbereich
   * Kleiderstange im Duschraum. Sehr praktisch nach dem Hundespaziergang im Regen.
+* 3-flammiger Gasherd
+  * grosse Küchenarbeitsfläche
+  * Mülleimer in der abschliessbaren Küchenschranktür (der Hund kann den Mülleimer nicht plündern)
 * Thetford N4142A(?) Absorber Kühlschrank
   * Automatische Quellenwahl (Gas/230V Landstrom/12V Fahrzeugstrom)
   * Volumen: 140l inkl. 15l Gefrierfach
@@ -94,28 +97,33 @@ Wenn man ein 4pfoten-mobile mietet, gibt es ein umfangreiches Paket dazu.
 * Leichter aber großer Campingtisch mit gummierter Kante
 * 4 Klappstühle
 * Gaskocher/-grill für den Außengasanschluss
+* 2 volle 11kg Gasflaschen
 * Komplettes 4 Personen Besteck und Geschirr (Brunner Space)
 * Dosenöffner, Schere, Gemüsemesser, Brotmesser, ...
 * Salatschüssel
 * 4 Töpfe von Balarini mit klappbaren Griffen inkl. Glasdeckel
-* 2 Leinen
-* Alle benötigten Stromadapter und eine Kabeltrommel (CEE-Schuko)
-* Fiamma Level Up Auffahrkeile 3 Stufen
-  * Mit Stopper-Keilen
-  * Mit Anfahrhilfe/Versinkschutz
+* Hundeleinen aus Biothane. Mit grossem Karbiner, eine mit Ruckdämpfer
+  * Haken zum befestigen der Leine im Boden, wenn die Sicherung weiter weg vom Wohnmobil sein soll
+* Alle benötigten Stromadapter und eine Kabeltrommel (CEE-Schuko, Verlängerung, Schuko-CEE)
+* Fiamma Level Up Kit - Auffahrkeile 3 Stufen mit praktischer Tasche
+  * Mit Stopper-Keilen (Chock Level)
+  * Mit Anfahrhilfe/Versinkschutz (Level Plate)
 * Rot/Weißes Warnschild für die Fahrräder im Ausland
 * ADAC Campingplatzführer (man greift aber vermutlich eher auf eine App zurück)
 * 
-* ... und ich habe vermutlich noch ganz viel vergessen
+* ... und ich habe vermutlich noch ganz viel vergessen.
 
-Leider haben wir etwa 60-70% der Ausstattung schon, ansonsten hätten wir uns für 500 Euro das Starter-Set dazu gegönnt.
+Wenn man als Erstlingscamper ohne Erfahrung nur eine Reisetasche mit genügend Unterhosen, ein paar wetter-geeignete Wechselklamotten und die Lieblingsdecke des Hundes einpackt, hat man im 4pfoten-mobile über die geasammte Fahrzeit ein rundum sorglos Paket!  
+Leider haben wir etwa 60-70% der Ausstattung schon, ansonsten hätten wir uns für 500 Euro das Starter-Set dazu gegönnt.  
+
+Über die ausführliche Einweisung an allen Mietstationen kann man viel im Internet und im Gästebuch lesen. Diese haben wir nicht in Anspruch genommen, wir wollten sofort los :) Aber im Gespräch merkt man, dass Herr Zimmermann auch selbst mit Seinen Autos unterwegs ist. Er kennt die Stärken und Schwächen der Fahrzeuge und versucht letzteres auch nicht schönzureden.  
+Die Aussenreinigung eines Wohnnmobils kann ohne Equipment (Hohe Leiter mit gepolsterter Auflage, Schrubber mit GFK geeigneten Borsten, ...) sehr schwierig werden, diese übernimmt die 4pfoten-mobile-Station. Über die einfache Innenreinigung freuen wir uns jedes Mal. Keine komplizierten Ecken, pflegeleichte Polster (unsere Buffy liebt es auf dem Fahrersitz zu schlafen), einfach zu reinigende Oberflächen.  
 
 # Nachtrag:
-Wer gelegentlich neue Autos gefahren hat, weis das es nicht immer ein Spaß ist. 'Neuwagenprobleme' können ziemlich nerven, auch wenn das meiste über Garantie geregelt wird. Hier kommt es in erster Linie darauf an, wie der Partner mit der Situation umgeht.  
-Auch hier hat sich Herr Zimmermann als super erwiesen.  
-Es klapperte bei der Fahrt im sonst sehr Ruhigen Auto enorm. Bei der Suche der Ursache ist mir aufgefallen, dass die Glasscheibe des Backofen nur lose in der Tür hängt. Das sah mir mehr nach einem Designfehler als nach einem Defekt aus. Also hätte ich einfach den Rahmen genommen und etwas nach innen gebogen, so dass die Scheibe leicht auf Spannung sitzt. Aber während der Garantie nehme ich solche Eingriffe nicht voreilig vor. Herr Zimmermann hat unser Mobil noch vor dem Verkauf einmal über den TÜV gebracht (Bei Mietfahrzeugen Jährlich) und eine Gasprüfung vornehmen lassen. Dabei den besagten Mangel erwähnt, und ich bekam ein deutlich leiseres Wohnmobil wieder. Auch der Tisch wackelte unnatürlich, das haben sie in der Werkstatt zwar gut repariert, dennoch wurde ein Garantieauftrag an Dethleffs eingereicht und die haben den kompletten Tausch genehmigt.  
+Wer gelegentlich neue Autos gefahren hat, weis das es nicht immer ein Spaß ist. 'Neuwagenprobleme' können ziemlich nerven, auch wenn das meiste über Garantie geregelt wird. Hier kommt es in erster Linie darauf an, wie der Partner mit der Situation umgeht. Auch hier hat sich Herr Zimmermann als super Ansprechpartner erwiesen.  
+Es klapperte bei der Fahrt im sonst sehr Ruhigen Auto enorm. Bei der Suche der Ursache ist mir aufgefallen, dass die Glasscheibe des Backofen nur lose in der Tür hängt. Das sah mir mehr nach einem Designfehler als nach einem Defekt aus. Also hätte ich einfach den Rahmen genommen und etwas nach innen gebogen, so dass die Scheibe leicht auf Spannung sitzt. Aber während der Garantie nehme ich solche Eingriffe nicht voreilig vor. Herr Zimmermann hat unser Mobil noch vor dem Verkauf einmal über den TÜV gebracht (bei Mietfahrzeugen jährlich) und eine Gasprüfung vornehmen lassen. Dabei den besagten Mangel erwähnt, und ich bekam ein deutlich leiseres Wohnmobil wieder. Auch der Tisch wackelte unnatürlich, das haben sie in der Werkstatt zwar gut repariert, dennoch wurde ein Garantieauftrag an Dethleffs eingereicht und die haben den kompletten Tausch genehmigt.  
 Jetzt hatte ich das Wohnmobil schon gekauft und mir ist aufgefallen, das die Truma DuoC Einheit im Wohnraum nichts anzeigt. Nach Rücksprache mit der Firma 'Wohnmobil-Zentrum-Bongard', welche schon die ersten Ausbesserungen durchgeführt haben, wollten sie sich das beim Tausch des Tischfuß auch ansehen.  
-Ich habe am 7.11. Telefonisch mit Frau Müller-Claasen gesprochen. Die Garantiereparatur muss dieses Jahr noch durchgeführt werden, aber vor dem 16.11. ist keine Zeit. Die Werkstatt ist 30KM von mir zuhause entfernt, also sind wir so verblieben, das meine Frau und ich am 15.11. unser Buffy-Mobil dort abstellen, die schauen wann sie zu der Reparatur kommen und wir bekommen telefonisch Bescheid, wann wir es wieder abholen können.  
+Ich habe am 7.11. Telefonisch mit Frau Müller-Claasen gesprochen. Die Garantiereparatur muss dieses Jahr noch durchgeführt werden, aber vor dem 16.11. ist keine Zeit. Die Werkstatt ist 30 KM von mir zuhause entfernt, also sind wir so verblieben, das meine Frau und ich am 15.11. unser Buffy-Mobil dort abstellen, die schauen wann sie zu der Reparatur kommen und wir bekommen telefonisch Bescheid, wann wir es wieder abholen können.  
 Die Abgabe gestaltete sich unkompliziert. Fahrzeug abstellen, Schlüssel und Fahrzeugschein in eine Werkstatttüte, diese mit den wichtigsten Daten beschriften und ab in den Briefkasten. Der klingt sehr tief und hängt an einer Metalltür. Ich hatte ein sehr gutes Gefühl, das es dort sicher steht.  
 Am 16.11. vormittags bekam ich den Anruf, das Wohnmobil ist fertig. Also am Abend mit meiner Frau wieder hin und abholen. Als erstes habe ich auf die Truma DuoC gedrückt: Wie ein Weihnachtsbaum. Alles perfekt.  
 
@@ -123,7 +131,7 @@ Schnell, unkompliziert, sehr zuverlässig! Warum habe ich von dem [Wohnmobil-Zen
 
 Disclaimer: Ich werde weder von 4pfoten-mobile Neumünster, noch vom Wohnmobil-Zentrum-Bongard bezahlt. Ich beschreibe hier nur meine positiven Erfahrungen und Eindrücke.  
 
-PS: Ich bin totaler Fan von Rettungskarten. Ich bin bisher 100% Unfallfrei gefahren. Dennoch kann es jederzeit vorkommen, das man in einen Unfall verwickelt wird. Die Rettungskarte wird unter der Sonnenblende des Fahrers gelegt, dort schauen die Rettungskräfte zuerst nach. In deer Rettungskarte ist je nach Typ vermerkt, wo die Elektroanlagen, Aurbags, Steuergeräte und Gasflaschen sind. Manchmal auch wo am besten geschnitten werden kann.  
-Dethleffs bietet soclhe Rettungkarten an, man sucht also das passendste Dehtleffs aus und kann die Karte hier herunterladen: [https://www.dethleffs.de/service/infos/rettungskarten/rettungskarten/modelljahr-2020/](https://www.dethleffs.de/service/infos/rettungskarten/rettungskarten/modelljahr-2020/)  
+PS: Ich bin totaler Fan von Rettungskarten. Ich bin bisher 100% Unfallfrei gefahren. Dennoch kann es jederzeit vorkommen, das man in einen Unfall verwickelt wird. Die Rettungskarte wird unter der Sonnenblende des Fahrers gelegt, dort schauen die Rettungskräfte zuerst nach. In deer Rettungskarte ist je nach Typ vermerkt, wo die Elektroanlagen, Airbags, Steuergeräte und Gasflaschen sind. Manchmal auch wo am besten geschnitten werden kann.  
+Dethleffs bietet solche Rettungkarten an, man sucht also das passendste Dehtleffs aus und kann die Karte hier herunterladen: [https://www.dethleffs.de/service/infos/rettungskarten/rettungskarten/modelljahr-2020/](https://www.dethleffs.de/service/infos/rettungskarten/rettungskarten/modelljahr-2020/)  
 Der DogLiner TE740 ist baugleich dem [Trend T 7057 EB](https://www.dethleffs.de/fileadmin/user_upload/dethleffs/master_de/content/Rettungskarten/2020/Trend_T_7057_EB.pdf), auch wenn die Gurtanschnaller innen sind. Der Dethleffs Support hat mir auf die Anfrage ob es eine korrigierte Version gibt nicht geantwortet.
 
