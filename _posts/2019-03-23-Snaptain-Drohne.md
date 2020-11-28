@@ -5,7 +5,7 @@ title: Snaptain Drohne
 author: Benjamin Moeller
 date: 2019-03-23 21:42:32 UTC
 categories: []
-tags: [ drohne ]
+tags: [drohne]
 comments: []
 ---
 

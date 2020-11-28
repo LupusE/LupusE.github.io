@@ -4,8 +4,8 @@ published: true
 title: Wohnmobil - Zweiter Akt
 author: Benjamin Moeller
 date: 2019-06-12 19:00:48 UTC
-categories: [QuickAndDirty]
-tags: [qnd]
+categories: [Wohnmobil]
+tags: [UnterwegsZuhause]
 comments: []
 ---
 
