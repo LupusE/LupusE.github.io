@@ -1,0 +1,41 @@
+---
+status: published
+published: true
+title: quick-and-dirty - Bluez
+author: Benjamin Moeller
+date: 2007-05-15 21:05:00 UTC
+categories: [linux, QuickAndDirty]
+tags: [cnf, linux, qnd]
+comments: []
+---
+<p>Der blaue Zahn war schon immer ein Spass.</p>
+<p>Der Name kommt von einem Wikinger, der besonders wegen seiner diplomatischen Art bekannt war und sich fuer Kommunikation stark machte.</p>
+<p>Unter Windows hat man den AVM Stack, den MS eigenen Stack (ab WinXP, SP2) oder den Widcomm Stack (z.B. bei MSI).<br />
+- Der AVM Stack funktioniert von AVM zu AVM ganz gut und ist zu Grossenteilen auch fuer Obex brauchbar (Handy/PDA sync)<br />
+- Der MS Stack scheint ein netter Ansatz zu sein um auf dem Markt praesenz zu zeigen, aber hat so gut wie keinen Sinn.<br />
+- Der Widcomm Stack war schon immer ClosedSource und seit der Version 4 lizenzpflichtig, was unter umstaenden SEHR nervig sein kann. Technisch funktionirt er, aber nistet sich 'irgendwie(!)' in den Explorer ein. Keine Sonne.</p>
+<p>Unter Linux hat man den Affix oder den Bluez stack.<br />
+- Affix wurde damals von Nokia ins Leben gerufen und recht schnell unter die GPL gestellt, findet dennoch kaum Anwendung.<br />
+- Bluez ist DER Stack der Wahl!! Funktioniert auf alles, was HCI spricht und ist eine sehr brauchbare Implementierung.</p>
+<p>Leider hat auch Bluez seine Probleme, hier kann ich nur von meinen Erfahrungen unter Debian sprechen.</p>
+<p>Installierte Pakete:</p>
+<blockquote><p>bluetooth bluez-utils bluez-hcidump python-bluez kdebluetooth bluez-gnome</p></blockquote>
+<p>-> Der Rechner ueber BT wird nicht gefunden:<br />
+Auch wenn in der /etc/bluetooth/hcid.conf 'iscan enable; pscan enable;' steht uebernimmt er den pscan nicht korrekt, daher:</p>
+<blockquote><p>hciconfig hci0 piscan</p></blockquote>
+<p>und es funktioniert.</p>
+<p>-> keine Aufforderung zur PIN Eingabe:<br />
+Der passkey-agent wurde veraendert/entfernt/vergessen.</p>
+<blockquote><p>/usr/bin/passkey-agent --default /usr/lib/kdebluetooth/kbluepin</p></blockquote>
+<p>oder</p>
+<blockquote><p>passkey-agent --default /bin/bluepin</p></blockquote>
+<p>wenn /bin/bluepin ist:</p>
+<blockquote><p>#!/bin/bash<br />
+cat /etc/bluetooth/pin<br />
+exit</p></blockquote>
+<p>und /etc/bluetooth/pin ist:</p>
+<blockquote><p>0000</p></blockquote>
+<p>Ich tendiere hier zur ersteren Variante.</p>
+<p>Als Applikation nutze ich derzeit recht intensiv das kdebluetooth Paket. also eine Sammlung aus KIO-Slaves, wleches ueber den Konqueror und bluetooth:// oder sdp:// das Handy gut erreichbar machen.<br />
+Alternativ gibt es den tsemgr fuer Sony Ericsson, (x)gnokii fuer Nokia oder auch gammu.</p>
+<p>Fuer andere Alternativen bin ich immer offen, ob sie funktionieren oder nicht. Immer melden!</p>

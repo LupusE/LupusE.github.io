@@ -1,0 +1,99 @@
+<p>Seit 2007 habe ich s9y als Blogengine genutzt. Leider fehlt mir die Zeit zum Pflegen der Version. Auch wenn mein Webspace gemietet ist, und sich verantwortungsvoll um den httpd und den Datenbankserver gekümmert wird, so habe ich doch ein besseres Gefühl, wenn ich wieder statische http Seiten nutze.</p>
+
+<p>Ende 2018 wurde github von Microsoft gekauft. Das große und böse MS will sich nun Freunde im FOSS machen. Okay. Die Reaktion war aber nicht viele neue MS Fans, sondern das Abwandern zu anderen GIT Hostern.
+Ich habe ganz am Rande gelesen, dass github auch ein Hosting bietet. Das Ruby Projekt ‘jekyll’ fügt in html oder Markdown geschriebene Dateien einfach in das Layout ein.
+Zugegeben, es ist nicht der aus s9y bekannte WYSIWYG Editor (für den ich nie einen Mobilen/Offline Client gefunden habe), aber den Preis bin ich bereit zu zahlen.</p>
+
+<p>Wer mit git und ruby nicht täglich arbeitet, wie ich, dem möchte ich kurz niederschrieben was ich getan habe.</p>
+
+<p>Es hat sich herausgestellt, dass das Debian jekyll für einige Plugins aus beautiful-jekyll einfach zu alt ist. So sehr ich auch alles aus dem Debian Repository liebe, hier muss auf die gem Variante zurückgegriffen werden.
+Die Fehlermeldungen beim build sind ansonsten nicht zu verstehen.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bm@zoe:~<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>bundler ~~jekyll~~
+bm@zoe:~<span class="nv">$ </span><span class="nb">sudo </span>gem <span class="nb">install </span>jekyll
+</code></pre></div></div>
+
+<p>Ich setze voraus, dass git schon eingerichtet ist …Ach, was solls… kurz git einrichten:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bm@zoe:~<span class="nv">$ </span>apt-get <span class="nb">install </span>git
+bm@zoe:~<span class="nv">$ </span>git config <span class="nt">--global</span> user.name <span class="s2">"Benjamin Moeller"</span>
+bm@zoe:~<span class="nv">$ </span>git config <span class="nt">--global</span> user.email git@lupuse.org
+</code></pre></div></div>
+
+<p>Verzeichnis zum Arbeiten in git erzeugen. Kann alles mögliche sein, mit Schreibrechten. Je nachdem wie schnell Änderungen im git hochgeladen werden, kann es Sinn machen einen Speicherort mit oder ohne Backup zu wählen.
+Dann in das Verzeichnis wechseln, das Design beziehen (nein, es ist nicht geklaut, der Autor stellt es zur Verfügung!), das heruntergeladene Repository kopieren und in das Verzeichnis wechseln.
+Zuletzt die dort enthaltene gemfile mittels bundler abarbeiten.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bm@zoe:~<span class="nv">$ </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/git
+bm@zoe:~<span class="nv">$ </span><span class="nb">cd</span> ~/git
+bm@zoe:~/git<span class="nv">$ </span>git clone https://github.com/daattali/beautiful-jekyll
+bm@zoe:~/git<span class="nv">$ </span><span class="nb">mv </span>beautiful-jekyll LupusE.github.io
+bm@zoe:~/git<span class="nv">$ </span><span class="nb">cd </span>LupusE.github.io
+bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>An dieser Stelle bin ich mir nicht sicher ob ich es vor oder nach dem <code class="language-plaintext highlighter-rouge">bundle install</code> ausgeführt habe.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>ruby-dev
+bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span><span class="nb">sudo </span>gem <span class="nb">install </span>unidecode htmlentities reverse_markdown
+</code></pre></div></div>
+<p>Der nächste Teil ist zum Erstellen einer Webseite optional, ich möchte meine s9y Blogposts aber ungerne verlieren. Unter https://import.jekyllrb.com/docs/s9ydatabase/ auf der rechten Seite stehen noch weitere Blogsysteme, von den importiert werden kann.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>mysql-server default-libmysqlclient-dev
+bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span><span class="nb">sudo </span>gem <span class="nb">install </span>jekyll-import sequel mysql2
+</code></pre></div></div>
+
+<p>Den RSS Feed zu importieren geht viel einfacher und schneller. Allerdings bekommt man auch nur einen Teil der Daten präsentiert, wenn der Feed keine erweiterten Posts zeigt.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span>ruby <span class="nt">-r</span> rubygems <span class="nt">-e</span> <span class="s1">'require "jekyll-import";
+    JekyllImport::Importers::S9Y.run({
+      "source" =&gt; "https://www.lupuse.de/blog/rss.php?version=2.0&amp;all=1"
+    })'</span>
+</code></pre></div></div>
+
+<p>Der mühsame Weg mit allen Daten beginnt mit einem SQL Dump, den man entweder vom Provider oder über das Frontend (z.B. phpmyadmin) bekommt.
+Vor dem Schreiben des Imports sollte man prüfen wo der Dump anfängt. Mein Dump hat keine eigene Datenbank erstellt.
+Debian setzt in 9.x nicht mehr auf MySQL, sondern MariaDB. Das sollte weitgehend kompatibel sein, aber man muss ich daran gewöhnen, dass das Default Login jetzt per unix_socket funktioniert. Als root darf ich mich anmelden und benötige kein Kennwort, erspart euch das Kennwort zurücksetzen im safe-mode</p>
+
+<pre><code class="language-SQL">bm@zoe:~/git/LupusE.github.io$ sudo mysql
+MariaDB [(none)]&gt; CREATE USER bm IDENTIFIED VIA unix_socket;
+MariaDB [(none)]&gt; GRANT ALL PRIVILEGES on *.* to 'bm'@'%';
+MariaDB [(none)]&gt; exit;
+bm@zoe:~/git/LupusE.github.io$ mysql
+MariaDB [(none)]&gt; CREATE USER 'jekyll_convert'@'localhost' IDENTIFIED BY 'abcdef';
+MariaDB [(none)]&gt; CREATE DATABASE temp_jekyll;
+MariaDB [(none)]&gt; GRANT ALL PRIVILIGES ON temp_jekyll.* TO 'jekyll_convert'@localhost;
+MariaDB [(none)]&gt; exit;
+</code></pre>
+
+<p>Nun den Dump in die lokale, gerade erstellte Datenbank und dem jekyll-import die Magie machen lassen.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span>mysql temp_jekyll &lt; ~/temp/s9y_dump.sql
+bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span>ruby <span class="nt">-r</span> rubygems <span class="nt">-e</span> <span class="s1">'require "jekyll-import";
+    JekyllImport::Importers::S9YDatabase.run({
+      "dbname"         =&gt; "temp_jekyll",
+      "user"           =&gt; "jekyll_convert",
+      "password"       =&gt; "Password1",
+      "host"           =&gt; "localhost",
+      "table_prefix"   =&gt; "serendipity_",
+      "clean_entities" =&gt; false,
+      "comments"       =&gt; true,
+      "categories"     =&gt; true,
+      "tags"           =&gt; true,
+      "extension"      =&gt; "html",
+      "drafts"         =&gt; true,
+      "markdown"       =&gt; false,
+      "permalinks"     =&gt; false
+    })'</span>
+</code></pre></div></div>
+
+<p>an dieser stelle kommt ganz viel vim … Aber das ist jedem selbst überlassen sich in dem Code zurechtzufinden.
+Der Ersteller des Layout hat es sich leicht gemacht und eher auf ‘erfolgreich in 5 Minuten’ oder ‘zur Webseite in 3 Schritten’ beschrieben. Die Anleitung auf https://jekyllrb.com/ hat sehr viele aufeinanderfolgende Seiten, dennoch empfehle ich durchzuhalten und einmal Schritt für Schritt den Aufbau zu erleben.</p>
+
+<p>Die Seite erfolgreich hochladen:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bm@zoe:~/git/LupusE.github.io<span class="nv">$ </span>jekyll build<span class="p">;</span> git add <span class="nt">--all</span><span class="p">;</span> git commit <span class="nt">-m</span> <span class="s2">"My Website!"</span><span class="p">;</span> git push <span class="nt">-u</span> origin master
+</code></pre></div></div>
+
+<p>Nächste Schritte:</p>
+<ul>
+  <li>Eigene Domain erklären (lupuse.github.io -&gt; git.lupuse.de)</li>
+  <li>https mit Lets Encrypt erklären</li>
+  <li>Eigenes git Projekt erklären</li>
+  <li>.js aus dem Design operieren</li>
+  <li>Tags/Kategorien reparieren</li>
+  <li>Konsequent übersetzen</li>
+</ul>

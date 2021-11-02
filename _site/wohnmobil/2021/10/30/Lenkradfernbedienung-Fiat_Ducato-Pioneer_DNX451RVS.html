@@ -1,0 +1,213 @@
+<h1 id="lenkradfernbedienung-vom-fiat-ducato-zum-pioneer-dnx451rvs">Lenkradfernbedienung vom Fiat Ducato zum Pioneer DNX451RVS</h1>
+
+<h2 id="ausgangslage">Ausgangslage</h2>
+
+<p>Meine Frau und ich haben uns eien <a href="https://www.4pfoten-mobile.de/">4Pfoten-Mobile Dogliner TE740</a> gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkaeufer, Joern Zimmermann vom Standort Neumuenster, war so nett und hat fuer uns die fehlenden Teile in Erfahrung gebracht:</p>
+<ul>
+  <li>Kabelbaum: CAW-CCOMFI1</li>
+  <li>Steuerbox: CAW-COMUN2
+Bei <a href="https://www.toms-car-hifi.de/">Toms-Car-Hifi</a> bestellt, nach 3 Tagen war alles da und die OP konnte beginnen.</li>
+</ul>
+
+<p>Nach dieser Anleitung ist klar, das wird nicht einfach:<br />
+<img src="/media/lenkradfb_ducato_dnx451/01_anleitung.png" alt="Anleitung der Verkabelung der CAW-COMUN2 Box" /></p>
+
+<p>Interpretation: Sehr viele schwarze kabel. Ein schwarzes Kabel der Box muss an einen gruenen Adapter vorbei an das schwarze Kabel des Radios, welches mit ‘Steering Wheel Remote’ bezeichnet ist??!??!?! Oder so.
+Auf dem Bild oben rechts koennte man erahnen das schwarz auch blau/gelb sein koennte, mit ‘Remo.cont’ beschriftet. Das wird lustig.</p>
+
+<h2 id="das-einbauen-des-adapters-mit-kabelbaum">Das Einbauen des Adapters mit Kabelbaum</h2>
+<p>Das Radio im Ausgangszustand<br />
+<img src="/media/lenkradfb_ducato_dnx451/02_ausgangslage.png" alt="Das Radio im fertig eingebauten Zustand" /></p>
+
+<p>Beim Aushebeln der Blende brechen sicher ein oder zwei klemmen ab. Durch das tolle klebrige silber Deko-Element (Pfeil) haelt es aber.<br />
+Das Radio ist an dem Blech festgeschraubt, nicht eingeschoben. Ich empfehle mit den oberen beiden Schrauben anzufangen und mit schmaler Spitze (PH2) die untern beiden schrauben parallel zu loesen, so dass das Radio nach vorne oben mitkommt. Ansonsten hat man Macken an dem Radio unten rechts und links.<br />
+<img src="/media/lenkradfb_ducato_dnx451/03_schrauben.png" alt="Blende offen" /></p>
+
+<p>Was soll ich schreiben? Kabelchaos. Wenn man keine Ahnung von Kabeln/Stecker/Elektronik hat, sollte man spaetesten hier aufhoeren. Auf jeden Fall die Stromversorgung trennen!<br />
+Wenn man schonmal z.B. einen PC zusammengeschraubt hat, dann trennt man den ISO Stecker (2 Stecker in einem nahezu quadratischen Port) zwischen Radio und Auto und klemmt den Kabelbaum (CAW-CCOMFI1) dazwischen. Der neue Kabelbaum hat eine schwarze schmale Steckerleiste, welche in die Box (CAW-COMUN2) kommt.<br />
+<img src="/media/lenkradfb_ducato_dnx451/04_kabelchaos.png" alt="Die Kabel hinter dem Radio. Chaos." /></p>
+
+<p>Nochmal etwas zurechtgelegt, der nicht selbsterklaerende Teil:<br />
+Der Box (CAW-COMUN2) liegt ein kleines Kabel bei. Der Stecker kommt in das entsprechende gegenstueck des neuen Kabelbaum (CAW-CCOMFI1). Das lose braune Kabel wird mit dem blau/gelb-Kabel des Autoradios verbunden. Den Mini-Klinkenstecker irgendwie isolieren/fixieren, vielleicht eleganter als meine Loesung mit dem weissen Panzertape.<br />
+<img src="/media/lenkradfb_ducato_dnx451/05_kabeladapter.png" alt="Der schlecht beschriebene Adapter Kabelbaum-LenkradFB" /></p>
+
+<p>Jetzt muss die Box angelernt werden. <a href="#ablauf">Siehe unten</a>. Spart Euch den Schritt fruehzeitig alles wieder zusammenzubauen.<br />
+Das Plastikteil in der Tuete der Box, welches wie abgebrochen aussieht, ist ein Stift, mit den man den Taster in der Box erreicht (siehe rote Markierung).<br />
+<img src="/media/lenkradfb_ducato_dnx451/06_box.png" alt="Die Box eingebaut und angeschlossen. Der Button ist erreichbar." /></p>
+
+<p>Beim Zusammenschrauben in umgekerter Reihenfolge: Erst die unteren Schrauben, das Radio langsam mit reingleiten lassen, dann die oberen. Achtet drauf, dass die unteren Schrauben trotz des Winkels auch wirklich fest sind. Das Quietschen vom Radio an der Blende auf Kopfsteinpflaster ist nicht schoen.</p>
+
+<h2 id="programmieren-die-anleitung-sagt">Programmieren. Die Anleitung sagt</h2>
+
+<ul>
+  <li>Zuendung aktivieren, die Box blinkt.</li>
+  <li>Wenn die Box schnell blinkt, kann sofort gestartet werden. Wenn nicht, Reset: ‘Zuendung aus, Taste druecken und gedrueckt halten, Zuendung an. Wenn die LED rot blinkt, Button loslassen.’</li>
+  <li>Man drueckt eine Taste auf der Lenkradfernbedienung, die Box zeigt mit einem aufleuchten der LED an, dass der Steuerbefehl angenommen wurde.<br />
+Ist ja einfach.</li>
+</ul>
+
+<p>Folgende Zustaende kann die Box anzeigen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>LED Signal</th>
+      <th>Bedeutung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LED aus</td>
+      <td>Zuendung einschalten oder Box mit Strom versorgen</td>
+    </tr>
+    <tr>
+      <td>LED blinkt rot</td>
+      <td>Die Box ist im Anlernmodus</td>
+    </tr>
+    <tr>
+      <td>LED blinkt einmal, wenn Taste am Lenkrad gedrueckt wurde.</td>
+      <td>Befehl wurde erkannt</td>
+    </tr>
+    <tr>
+      <td>LED blinkt einmal, wenn ‘Button’ auf Box gedrueckt wurde.</td>
+      <td>Funktion wurde uebersprungen</td>
+    </tr>
+    <tr>
+      <td>LED blinkt gruen</td>
+      <td>Kommandos hinterlegt, kein Radioprofil eingestellt</td>
+    </tr>
+    <tr>
+      <td>LED leuchtet gruen</td>
+      <td>Alles OK, Box ist programmiert</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die Box hat 12 Funktionen. Der Ducato hat, abhaengig von Baujahr, 6 oder 8 Tasten. Belegen darf jeder wie er will. Zum Beispiel:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Funktion</th>
+      <th>In der Box</th>
+      <th>Meine Belegung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>Lautstaerke -</td>
+      <td>Lautstaerke -</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>Lautstaerke +</td>
+      <td>Lautstaerke +</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td>Suchen -</td>
+      <td>Suchen -</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td>Suchen +</td>
+      <td>Suchen +</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td>Quelle</td>
+      <td>Leere Taste</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td>Stumm</td>
+      <td>Stumm</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td>Hoch</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td>Sprachbefehl</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">9</td>
+      <td>Anruf annehmen</td>
+      <td>Anruf annehmen</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10</td>
+      <td>Anruf beenden</td>
+      <td>Anruf beenden</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11</td>
+      <td>X</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">12</td>
+      <td>X</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-praktisches-anlernen-der-box"><a name="ablauf"></a> Praktisches Anlernen der Box</h2>
+<ul>
+  <li>Box in Programmiermodus bringen (Entweder im Auslieferungszustand oder nach Reset: Zuendung aus -&gt; Button an der Box gedrueckt halten. Zuendung an. Wenn die LED rot blinkt -&gt; Button loslassen.)</li>
+  <li>An der Lenkradfernbedienung ‘Lautstaerke +’ druecken, die Box blinkt einmal rot</li>
+  <li>An der Lenkradfernbedienung ‘Lautstaerke -‘ druecken, die Box blinkt einmal rot</li>
+  <li>An der Lenkradfernbedienung ‘Wippe rechts nach unten’ druecken, die Box blinkt einmal rot</li>
+  <li>An der Lenkradfernbedienung ‘Wippe rechts nach oben’ druecken, die Box blinkt einmal rot</li>
+  <li>An der Lenkradfernbedienung ‘Leere Taste (links unten)’ druecken, die Box blinkt einmal rot</li>
+  <li>An der Lenkradfernbedienung ‘Durchgestrichenen Lautsprecher’ druecken, die Box blinkt einmal rot</li>
+  <li>Auf der Box einmal den Button drucken (7 ueberspringen), die Box blinkt einmal rot</li>
+  <li>Auf der Box einmal den Button drucken (8 ueberspringen), die Box blinkt einmal rot</li>
+  <li>An der Lenkradfernbedienung ‘Telefon annehmen’ druecken, die Box blinkt einmal rot</li>
+  <li>An der Lenkradfernbedienung ‘Telefon auflegen’ druecken, die Box blinkt einmal rot</li>
+  <li>Auf der Box einmal den Button drucken (11 ueberspringen), die Box blinkt einmal rot</li>
+  <li>Auf der Box einmal den Button drucken (12 ueberspringen), die Box blinkt gruen</li>
+  <li>Radioprotokoll auswaehlen: ‘Suchen +’ druecken</li>
+</ul>
+
+<h3 id="lenkradfernbedienung---tasten">Lenkradfernbedienung - Tasten</h3>
+
+<p><img src="/media/lenkradfb_ducato_dnx451/07_lenkrad-ducato.jpg" alt="Fiat Ducato - Lenkradfernbedienung Tasten" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Tasten links</th>
+      <th style="text-align: center">Mitte</th>
+      <th style="text-align: right">Tasten rechts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Stumm</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">Tel Annehmen</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Lautstaerke +</td>
+      <td style="text-align: center">Hupe</td>
+      <td style="text-align: right">Suchen +</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Lautstaerke -</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">Suchen -</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Leer</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">Tel Beenden</td>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-11-02T16:55:16+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://0.0.0.0:4000/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://0.0.0.0:4000/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://0.0.0.0:4000/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h1 id=&quot;lenkradfernbedienung-vom-fiat-ducato-zum-pioneer-dnx451rvs&quot;&gt;Lenkradfernbedienung vom Fiat Ducato zum Pioneer DNX451RVS&lt;/h1&gt;
+
+&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
+
+&lt;p&gt;Meine Frau und ich haben uns eien &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4Pfoten-Mobile Dogliner TE740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkaeufer, Joern Zimmermann vom Standort Neumuenster, war so nett und hat fuer uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kabelbaum: CAW-CCOMFI1&lt;/li&gt;
+  &lt;li&gt;Steuerbox: CAW-COMUN2
+Bei &lt;a href=&quot;https://www.toms-car-hifi.de/&quot;&gt;Toms-Car-Hifi&lt;/a&gt; bestellt, nach 3 Tagen war alles da und die OP konnte beginnen.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nach dieser Anleitung ist klar, das wird nicht einfach:&lt;br /&gt;
+&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/01_anleitung.png&quot; alt=&quot;Anleitung der Verkabelung der CAW-COMUN2 Box&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Interpretation: Sehr viele schwarze kabel. Ein schwarzes Kabel der Box muss an einen gruenen Adapter vorbei an das schwarze Kabel des Radios, welches mit ‘Steering Wheel Remote’ bezeichnet ist??!??!?! Oder so.
+Auf dem Bild oben rechts koennte man erahnen das schwarz auch blau/gelb sein koennte, mit ‘Remo.cont’ beschriftet. Das wird lustig.&lt;/p&gt;
+
+&lt;h2 id=&quot;das-einbauen-des-adapters-mit-kabelbaum&quot;&gt;Das Einbauen des Adapters mit Kabelbaum&lt;/h2&gt;
+&lt;p&gt;Das Radio im Ausgangszustand&lt;br /&gt;
+&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/02_ausgangslage.png&quot; alt=&quot;Das Radio im fertig eingebauten Zustand&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Beim Aushebeln der Blende brechen sicher ein oder zwei klemmen ab. Durch das tolle klebrige silber Deko-Element (Pfeil) haelt es aber.&lt;br /&gt;
+Das Radio ist an dem Blech festgeschraubt, nicht eingeschoben. Ich empfehle mit den oberen beiden Schrauben anzufangen und mit schmaler Spitze (PH2) die untern beiden schrauben parallel zu loesen, so dass das Radio nach vorne oben mitkommt. Ansonsten hat man Macken an dem Radio unten rechts und links.&lt;br /&gt;
+&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/03_schrauben.png&quot; alt=&quot;Blende offen&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Was soll ich schreiben? Kabelchaos. Wenn man keine Ahnung von Kabeln/Stecker/Elektronik hat, sollte man spaetesten hier aufhoeren. Auf jeden Fall die Stromversorgung trennen!&lt;br /&gt;
+Wenn man schonmal z.B. einen PC zusammengeschraubt hat, dann trennt man den ISO Stecker (2 Stecker in einem nahezu quadratischen Port) zwischen Radio und Auto und klemmt den Kabelbaum (CAW-CCOMFI1) dazwischen. Der neue Kabelbaum hat eine schwarze schmale Steckerleiste, welche in die Box (CAW-COMUN2) kommt.&lt;br /&gt;
+&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/04_kabelchaos.png&quot; alt=&quot;Die Kabel hinter dem Radio. Chaos.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nochmal etwas zurechtgelegt, der nicht selbsterklaerende Teil:&lt;br /&gt;
+Der Box (CAW-COMUN2) liegt ein kleines Kabel bei. Der Stecker kommt in das entsprechende gegenstueck des neuen Kabelbaum (CAW-CCOMFI1). Das lose braune Kabel wird mit dem blau/gelb-Kabel des Autoradios verbunden. Den Mini-Klinkenstecker irgendwie isolieren/fixieren, vielleicht eleganter als meine Loesung mit dem weissen Panzertape.&lt;br /&gt;
+&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/05_kabeladapter.png&quot; alt=&quot;Der schlecht beschriebene Adapter Kabelbaum-LenkradFB&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jetzt muss die Box angelernt werden. &lt;a href=&quot;#ablauf&quot;&gt;Siehe unten&lt;/a&gt;. Spart Euch den Schritt fruehzeitig alles wieder zusammenzubauen.&lt;br /&gt;
+Das Plastikteil in der Tuete der Box, welches wie abgebrochen aussieht, ist ein Stift, mit den man den Taster in der Box erreicht (siehe rote Markierung).&lt;br /&gt;
+&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/06_box.png&quot; alt=&quot;Die Box eingebaut und angeschlossen. Der Button ist erreichbar.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Beim Zusammenschrauben in umgekerter Reihenfolge: Erst die unteren Schrauben, das Radio langsam mit reingleiten lassen, dann die oberen. Achtet drauf, dass die unteren Schrauben trotz des Winkels auch wirklich fest sind. Das Quietschen vom Radio an der Blende auf Kopfsteinpflaster ist nicht schoen.&lt;/p&gt;
+
+&lt;h2 id=&quot;programmieren-die-anleitung-sagt&quot;&gt;Programmieren. Die Anleitung sagt&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Zuendung aktivieren, die Box blinkt.&lt;/li&gt;
+  &lt;li&gt;Wenn die Box schnell blinkt, kann sofort gestartet werden. Wenn nicht, Reset: ‘Zuendung aus, Taste druecken und gedrueckt halten, Zuendung an. Wenn die LED rot blinkt, Button loslassen.’&lt;/li&gt;
+  &lt;li&gt;Man drueckt eine Taste auf der Lenkradfernbedienung, die Box zeigt mit einem aufleuchten der LED an, dass der Steuerbefehl angenommen wurde.&lt;br /&gt;
+Ist ja einfach.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Folgende Zustaende kann die Box anzeigen:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;LED Signal&lt;/th&gt;
+      &lt;th&gt;Bedeutung&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LED aus&lt;/td&gt;
+      &lt;td&gt;Zuendung einschalten oder Box mit Strom versorgen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LED blinkt rot&lt;/td&gt;
+      &lt;td&gt;Die Box ist im Anlernmodus&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LED blinkt einmal, wenn Taste am Lenkrad gedrueckt wurde.&lt;/td&gt;
+      &lt;td&gt;Befehl wurde erkannt&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LED blinkt einmal, wenn ‘Button’ auf Box gedrueckt wurde.&lt;/td&gt;
+      &lt;td&gt;Funktion wurde uebersprungen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LED blinkt gruen&lt;/td&gt;
+      &lt;td&gt;Kommandos hinterlegt, kein Radioprofil eingestellt&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LED leuchtet gruen&lt;/td&gt;
+      &lt;td&gt;Alles OK, Box ist programmiert&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Die Box hat 12 Funktionen. Der Ducato hat, abhaengig von Baujahr, 6 oder 8 Tasten. Belegen darf jeder wie er will. Zum Beispiel:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Funktion&lt;/th&gt;
+      &lt;th&gt;In der Box&lt;/th&gt;
+      &lt;th&gt;Meine Belegung&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt;Lautstaerke -&lt;/td&gt;
+      &lt;td&gt;Lautstaerke -&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt;Lautstaerke +&lt;/td&gt;
+      &lt;td&gt;Lautstaerke +&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt;Suchen -&lt;/td&gt;
+      &lt;td&gt;Suchen -&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt;Suchen +&lt;/td&gt;
+      &lt;td&gt;Suchen +&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt;Quelle&lt;/td&gt;
+      &lt;td&gt;Leere Taste&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt;Stumm&lt;/td&gt;
+      &lt;td&gt;Stumm&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt;Hoch&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt;Sprachbefehl&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;
+      &lt;td&gt;Anruf annehmen&lt;/td&gt;
+      &lt;td&gt;Anruf annehmen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10&lt;/td&gt;
+      &lt;td&gt;Anruf beenden&lt;/td&gt;
+      &lt;td&gt;Anruf beenden&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;11&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;-praktisches-anlernen-der-box&quot;&gt;&lt;a name=&quot;ablauf&quot;&gt;&lt;/a&gt; Praktisches Anlernen der Box&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Box in Programmiermodus bringen (Entweder im Auslieferungszustand oder nach Reset: Zuendung aus -&amp;gt; Button an der Box gedrueckt halten. Zuendung an. Wenn die LED rot blinkt -&amp;gt; Button loslassen.)&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Lautstaerke +’ druecken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Lautstaerke -‘ druecken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Wippe rechts nach unten’ druecken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Wippe rechts nach oben’ druecken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Leere Taste (links unten)’ druecken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Durchgestrichenen Lautsprecher’ druecken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;Auf der Box einmal den Button drucken (7 ueberspringen), die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;Auf der Box einmal den Button drucken (8 ueberspringen), die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Telefon annehmen’ druecken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Telefon auflegen’ druecken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;Auf der Box einmal den Button drucken (11 ueberspringen), die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;Auf der Box einmal den Button drucken (12 ueberspringen), die Box blinkt gruen&lt;/li&gt;
+  &lt;li&gt;Radioprotokoll auswaehlen: ‘Suchen +’ druecken&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;lenkradfernbedienung---tasten&quot;&gt;Lenkradfernbedienung - Tasten&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/07_lenkrad-ducato.jpg&quot; alt=&quot;Fiat Ducato - Lenkradfernbedienung Tasten&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Tasten links&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Mitte&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Tasten rechts&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Stumm&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;Tel Annehmen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Lautstaerke +&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Hupe&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;Suchen +&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Lautstaerke -&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;Suchen -&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Leer&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;Tel Beenden&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Lenkradfernbedienung vom Fiat Ducato zum Pioneer DNX451RVS</summary></entry><entry><title type="html">Garmin - Fenix 6 Pro</title><link href="http://0.0.0.0:4000/gadgets/2021/01/28/Garmin-Fenix-6-Pro.html" rel="alternate" type="text/html" title="Garmin - Fenix 6 Pro" /><published>2021-01-28T22:00:12+00:00</published><updated>2021-01-28T22:00:12+00:00</updated><id>http://0.0.0.0:4000/gadgets/2021/01/28/Garmin---Fenix-6-Pro</id><content type="html" xml:base="http://0.0.0.0:4000/gadgets/2021/01/28/Garmin-Fenix-6-Pro.html">&lt;h1 id=&quot;der-rückblick&quot;&gt;Der Rückblick&lt;/h1&gt;
+&lt;p&gt;Meine Frau hat angefangen mit einer Garmin Vivoacrive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt.&lt;br /&gt;
+Danach haben wir eine Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.&lt;/p&gt;
+
+&lt;h2 id=&quot;fenix&quot;&gt;Fenix&lt;/h2&gt;
+&lt;p&gt;Da wir nun das ganze Equipment haben (Brustgurt, Geschwindigkeit-/Trittfrequenzsensor für das Fahrrad, SmartScale Waage, vollständiges Garmin Connect Profil), war klar das wir nicht zu einem Mitbewerber wechseln werden. Aber das Training wurde immer ernster. So kamen wir zur ersten Fenix.&lt;/p&gt;
+
+&lt;p&gt;Die Garmin Fenix 6 ist schon seit Ende 2019 auf dem Markt, so ist zu erwarten das es zeitnah entweder die Fenix 6 Plus (wie bei der 5) oder die Fenix 7 geben wird. Durch Corona verschiebt sich alles, so dass wir nicht warten wollten. Lieber ein gut abgehangenes Produkt, als das neuste mit neuen Fehlern.&lt;br /&gt;
+Die Fenix 6 Serien besteht aus der Fenix 6 (ohne GPS/Musik), der Fenix 6 Pro (nahezu Vollausstattung) und der Fenix 6 Pro Solar (Vollausstattung plus Laden über Solar). Erstere fällt raus, weil GPS für das Gehen/Wandern/Orientieren durchaus relevant ist. Letztere fällt raus, weil sie fast das doppelte kostet.&lt;br /&gt;
+Wenn man sich für die Pro Variante entschieden hat stellt sie die Frage nach der Größe. S = 1,2”/Ohne = 1,3”/X = 1,4” Display. Meine Frau hat sich schnell für die S Variante entschieden, ich habe mit der ohne Zusatz geliebäugelt, aber da sie nicht verfügbar ist habe ich auch die S gewählt. Etwas weniger Akku, aber dafür auch leichter/kleiner am Arm.&lt;/p&gt;
+
+&lt;p&gt;Wenn man nur läuft ist die Forerunner auch einen Blick wert. Die Fenix ist aber mit Kartendarstellung und vielen Aktivitätsprofile ein Allrounder.&lt;/p&gt;
+
+&lt;h3 id=&quot;erster-eindruck&quot;&gt;Erster Eindruck&lt;/h3&gt;
+&lt;p&gt;Schwerer als die Vivoactive 3, aber nicht klobig. Sobald sie am Arm sitzt einfach nur angenehm.&lt;br /&gt;
+Wenn man mehrere Jahre Touchscreen genutzt hat, dann wischt man ein paar Tage wie wild auf dem Display herum. Es dauert sich an dich Knopf-Only Bedienung zu gewöhnen. Das ist aber kein Nachteil. Gerade bei feuchtem Wetter hat mein Ärmel nach dem Radfahren schon mein Tracking gelöscht. Das kann nun nicht mehr vorkommen. Dazu ist die Fenix mit jedem Handschuh zu bedienen, man benötigt keine besonderen Touchscreen Handschuhe.&lt;br /&gt;
+Das Display ist im Gegensatz zur Vivoactive 3 Music wieder etwas eingelassen. Eine Schutzfolie habe ich dennoch umgehend drauf geklebt um Kratzer abzufangen.&lt;/p&gt;
+
+&lt;h3 id=&quot;zweiter-eindruck---nach-etwa-einem-monat&quot;&gt;Zweiter Eindruck - Nach etwa einem Monat&lt;/h3&gt;
+&lt;p&gt;Gelegentlich wische ich noch über das Display. Manchmal erwische ich den falschen Knopf und anstelle Licht einzuschalten habe ich dann eine Runde gesetzt. Aber eine grobe Fehlbedienung hatte ich noch nicht.&lt;br /&gt;
+Das Gerät ist ein Akkufresser. Klar habe ich gerade zum Anfang alle Sensoren dauerhaft eingeschaltet. Das bedeutet ich lade alle 4-6 Tage den Akku, wenn er unter 25% geht. Die Uhr gibt beim Unterschreiten der 25% Schwelle die Möglichkeit in einen Energiesparmodus zu schalten.&lt;br /&gt;
+Das Pulsoxiometer hatte ich zwischenzeitlich abgeschaltet, daran ist aber auch die Atemfrequenz gekoppelt. Da ich weis, das ich mich mehr auf meine Atmung konzentrieren sollte finde ich diesen Wert sehr hilfreich. Das Pulsoxiometer selbst schwankt zwischen 93 und 97%. Das ist bei unseren norddeutschen Berglandschaften (maximal auf dem Deich) nicht verwunderlich. Um die Atemfrequenz während eines Training zu sehen muss man einen externen HF-Gurt tragen.&lt;/p&gt;
+
+&lt;p&gt;Von einem Tag auf den Anderen stieg der Stress rapide an. Ich bin fast den ganzen Tag über im orangen Bereich. Im Tagesdurchschnitt sieht es gar nicht mehr so schlimm aus, daher gehe ich davon aus, das die Uhr einfach höher auflöst.&lt;/p&gt;
+
+&lt;p&gt;Was mir gut gefällt ist der Aerobe/Anaerobe Effekt. Dieser beschreibt ob ich mich aus der Kondition heraus anstrenge oder den Körper gerade überfordere. Beide Werte sind auf einer Skala von 1-5 angezeigt, so dass ich jeweils sehe und bewerten kann ob die Strecke gut war oder ich kürzer treten sollte.&lt;/p&gt;
+
+&lt;h3 id=&quot;was-fehlt&quot;&gt;Was fehlt?&lt;/h3&gt;
+&lt;p&gt;Während eines ‘Gehen’ Tracking wird auf einem Bildschirm eine Karte mit der zurückgelegten Strecke angezeigt. Die Karten haben in der Größe selbstverständlich keine Adressnavigation, aber mit den Koordinaten kann durchaus der Weg berechnet und dort hin navigiert werden. Damit will ich mich spätestens im nächsten Urlaub weiter befassen.&lt;br /&gt;
+Die Fenix hat bebilderte Anleitungen für einige Fitness-Aktivitäten, z.B. Krafttraining. Da ich nicht der Krafttraining-Typ bin, will ich es aber zumindest mal ausprobieren. Mehrere Krafttrainings Bringen auch Auszeichnungen und damit Punkte in der Statistik.&lt;br /&gt;
+Ich weis nicht, wie man den VO2Max Wert korrekt/besser ermittelt. Ich dachte das passiert einfach während der Aktivitäten.&lt;br /&gt;
+Neben Radfahren gibt es nun auch die Aktivität ‘Mountainbining’. Die Uhr ist Multisport-fähig, so dass auch Triathlons (oder weniger extreme Mischsportarten) aufgenommen werden können (Das gibt jeweils wieder Auszeichnungen)).&lt;/p&gt;
+
+&lt;h2 id=&quot;zukunft&quot;&gt;Zukunft&lt;/h2&gt;
+&lt;p&gt;Ich bin gerade am überlegen ob ich mir einen besseren Brustgurt oder nur den ‘Foot Pod’ kaufen sollte. Da ich aktuell ein Lauftrainingsplan verfolge (10KM Laufband in 53 Minuten), interessieren mich auch weitere Daten, wie genauere Schrittlänge oder Zeit in der Luft, um mein Training zu optimieren. Wobei ich mich nach diesem Training wieder mehr auf das Radfahren konzentrieren werde.&lt;br /&gt;
+Der Vorteil an einem Foot Pod ist, das man nur Einen braucht, den können meine Frau und ich uns teilen. Ein durchgeschwitzter Brustgurt ist eher ekelig.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="gadgets" /><category term="garmin" /><summary type="html">Der Rückblick Meine Frau hat angefangen mit einer Garmin Vivoacrive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt. Danach haben wir eine Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.</summary></entry><entry><title type="html">Wohnmobil - Dritter Akt</title><link href="http://0.0.0.0:4000/wohnmobil/2020/10/24/Wohnmobil-Dritter-Akt.html" rel="alternate" type="text/html" title="Wohnmobil - Dritter Akt" /><published>2020-10-24T22:03:45+00:00</published><updated>2020-10-24T22:03:45+00:00</updated><id>http://0.0.0.0:4000/wohnmobil/2020/10/24/Wohnmobil---Dritter-Akt</id><content type="html" xml:base="http://0.0.0.0:4000/wohnmobil/2020/10/24/Wohnmobil-Dritter-Akt.html">&lt;h1 id=&quot;was-gab-es-bisher&quot;&gt;Was gab es bisher?&lt;/h1&gt;
+&lt;p&gt;Wir haben angefangen mit unserem HasenMobil. Ein &lt;strong&gt;Knaus Sport Traveller&lt;/strong&gt;, mit Alkoven und sehr viel Platz auf 5,99m. Es sind 6 Fahrsitze eingetragen, durch den Umbau der Sitzecke gab es offiziell 4 Schlafplätze, auf den 2x80x190 im Alkoven war das Schlafen mit drei Personen aber auch möglich.&lt;br /&gt;
+Nach 4 Jahren haben wir uns für das FlashMobil entschieden, einen tizianroten &lt;strong&gt;Sunlight Cliff 601 SoMo&lt;/strong&gt; Kastenwagen. Mit Doppelstockbetten gab es Platz für 4 Erwachsene zum Fahren und schlafen. Unterhalb der Betten war Platz für eine geräumige Hundekiste oder auch eine Garage für 2 Stühle, Tisch und Grill. Es war durch die kompakte Bauform einfach sehr viel sparsamer und auch Stadttauglich. Wenn wir in München standen ist es aufgrund der sportlichen Farbgebung kaum aufgefallen. Die große Seitentür und die beiden Hacktüren waren großartig und nervig zugleich. Im Sommer super Belüftung, bei Regen immer alles innen und außen nass. 1,5 Jahre haben wir es erprobt.&lt;/p&gt;
+
+&lt;h1 id=&quot;was-gibt-es-neues&quot;&gt;Was gibt es neues?&lt;/h1&gt;
+&lt;p&gt;Ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;&lt;strong&gt;4pfoten-mobile&lt;/strong&gt;&lt;/a&gt;. Das ist ein spezieller Umbau für Hundebesitzer auf Basis eines Dethleffs Trend T7507 EB.&lt;/p&gt;
+
+&lt;p&gt;Wir waren 2016 auf unserer ersten Wohnmobilmesse in Düsseldorf. Zwar hatten wir bereits unser HasenMobil, aber man darf sich ja umsehen. Hier lernten wir das 4pfoten-mobile kennen. Auf über 7 Meter purer Luxus. Klimaanlage, Platz für 2-3 mittelgroße Hunde, riesiges Bett, helle Möbel. Aber viel zu groß, wir sind doch eher Städtereisende. Immer wieder haben wir es uns angesehen, aber festgestellt dass es groß ist.&lt;br /&gt;
+Unsere Buffy hat auf dme Messestand den kompletten 1,4l Anti-Schalbber-Bapf leer gemacht.&lt;/p&gt;
+
+&lt;h2 id=&quot;was-war-nun-anders&quot;&gt;Was war nun anders?&lt;/h2&gt;
+&lt;p&gt;Im Sommerurlaub 2020 standen wir mit unserem FlashMobil in Zaue am See (Irgendwo ganz tief in Ostdeutschland), hatten ein Glas (oder eine Flasche?) Wein getrunken und wir haben das Leben genossen. Leider stellten wir in diesem Urlaub fest, dass unsere Klimaanlage im Fahrerhaus kaputt war und eine Aufbau Klimaanlage gab es nicht … Bei 34° im Schatten war es ein sehr heißer Urlaub. Auf dem Platz waren zum Glück viele Bäume, welche viel Schatten, aber auch herunterfallende Zapfen spendeten.&lt;/p&gt;
+
+&lt;p&gt;An diesem besagten Tag haben wir die Handys raus geholt, verschiedene Klimaanlagen für unseren Kastenwagen angesehen und Preise verglichen. Die Fahrerhausklima war ein Garantiefall, aber ein vernünftiger Schlaf ist damit noch nicht gewährleistet. Wir haben uns auch wieder über das 4pfoten-mobile unterhalten.&lt;br /&gt;
+Ich habe auf der Webseite den Kontakt herausgesucht und eine kurze Email verfasst. Meine Frau ist zu den Duschen gegangen. Keine 30 Minuten nach meiner Kontaktanfrage bekam ich einen Rückruf. Ein sehr netter Kontakt, aber wir haben festgestellt, dass ‘in der Nähe von Essen’ etwas weit weg ist, er wollte meinen Kontakt lieber an Jörn Zimmermann, dem 4pfoten-mobile-Anbieter aus Neumünster weiterleiten.&lt;br /&gt;
+Nach wiedereinmal sehr kurzer Zeit und einem weiteren sehr netten Kontakt wollten wir uns das aktuelle Mobil ansehen. Wir hatten in der folgenden Woche noch Kiel auf der Liste, auf dem Rückweg nachhause kommen wir an Neumünster vorbei. Es waren immer noch 32°C im Schatten, optimales Wetter um mit 3 Erwachsenen ein Wohnmobil anzusehen. Herr Zimmermann hat alles aufgebaut:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Die 4,5m Markise ausgefahren&lt;/li&gt;
+  &lt;li&gt;Die Hunderampe herausgeholt&lt;/li&gt;
+  &lt;li&gt;Die Fahrersitze zur Sitzgruppe gedreht&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Viel mehr gibt es eigentlich auch nicht mehr. Ich denke unsere 5,5 Jahre Campingerfahrung haben geholfen trotz der Hitze sinnvolle Eindrücke zu gewinnen. Kurz vor der Verabschiedung sprach meine Frau bereits von ‘unserem Wohnmobil’. Die 4Pfoten Mobile werden eigentlich von Freitag bis Freitag vermietet. Herr Zimmermann meinte aber, da wir ein ernsthaftes Kaufinteresse haben lässt sich bestimmt auch eine andere Lösung finden… Das war es für das Erste.&lt;br /&gt;
+Noch in der Woche habe ich Herrn Zimmermann kontaktiert, ob wir es uns 3 Tage ausleihen können. Das war kein Problem. Dazu noch zu einem super Sonderpreis. Wir hatten zwar keinen Urlaub, konnten dennoch 2 Übernachtungen lang alles ausprobieren. Der Hammer!&lt;br /&gt;
+Es vergingen noch ein paar Tage und wir haben uns entschieden das FlashMobil zu verkaufen und umzusteigen.&lt;/p&gt;
+
+&lt;p&gt;Ein 15 Monate alter Kastenwaren mit Rahmenfenster und viel Sonderausstattung zu verkaufen kann ja nicht so schwer sein. Dachten wir. Aber in der Realität sind wir keine Privatverkäufer. Also haben wir es mit etwas Minus an das Freizeit-Center-Albrecht zurück verkauft. Das lief alles nicht ganz so glatt, aber wir standen unter Zeitdruck, daher wollen wir uns nicht beschweren.&lt;br /&gt;
+Während der ganzen Zeit hat Herr Zimmermann uns super unterstützt. Er stand uns immer mit Rat und Tat zur Seite.&lt;/p&gt;
+
+&lt;p&gt;Jetzt hatten wir schon wieder eine sportliche Idee: Wir könnten mit dem neuen Wohnmobil nach Dänemark. Das Haus war gebucht, kam noch aus den Anfängen der Corona-Zeit. Das klappte hinten uns vorne nicht: Verkaufen, Abmelden, neu Anmelden und Finanzierung über unsere Hausbank. Aber auch hier war Herr Zimmermann wieder die Rettung. Wir haben das Mobil ganz einfach für eine Woche gemietet, so war es versichert. Nach dem Urlaub haben wir es zurück gebracht, und Herr Zimmermann hat es innerhalb von 3 Tagen abgemeldet, ausgeräumt und ie Aufkleber abgemacht. Wir haben das Geld überwiesen, das Wohnmobil abgeholt und hatten einen super Urlaubsabschluss.&lt;/p&gt;
+
+&lt;h1 id=&quot;technische-daten&quot;&gt;Technische Daten&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fiat Ducato 2,3 140
+    &lt;ul&gt;
+      &lt;li&gt;140PS/103kW, 2,3l Diesel (10PS mehr sind auch ca. 100e/Jahr mehr Steuern!)&lt;/li&gt;
+      &lt;li&gt;75l Tankinhalt (bisher hatten wir 95l, das merkt man)&lt;/li&gt;
+      &lt;li&gt;Abmessung: Länge 7,40m x Breite 2,33m x Höhe 3,10m (plus Fahrradträger und Klimaanlage)&lt;/li&gt;
+      &lt;li&gt;90l Abwassertank (reicht für bis zu 2 Wochen mit 3 Personen)&lt;/li&gt;
+      &lt;li&gt;125l Frischwassertank (man nimmt immer zu viel Wasser mit)&lt;/li&gt;
+      &lt;li&gt;3,5 Tonnen. Also keine Geschwindigkeitsbeschränkung und Führerschein Klasse B&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Markise
+    &lt;ul&gt;
+      &lt;li&gt;4,5m Thule Omnistor&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fahrradträger
+    &lt;ul&gt;
+      &lt;li&gt;Thule. 3 Schienen bis 60KG, kein Problem auch mit eBike.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Spurverbreiterung hinten (macht das Fahren bei Wind/in Kurven deutlich angenehmer)&lt;/li&gt;
+  &lt;li&gt;Gas-Aussensteckdose mit 30mbar Druck&lt;/li&gt;
+  &lt;li&gt;Navi/Multimediacenter
+    &lt;ul&gt;
+      &lt;li&gt;Kenwood DNX451RVS&lt;/li&gt;
+      &lt;li&gt;Garmin LKW/Camper Navigation&lt;/li&gt;
+      &lt;li&gt;Rückfahrkamera mit Leitlinien&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Tempomat&lt;/li&gt;
+  &lt;li&gt;Lenkradfernbedienung&lt;/li&gt;
+  &lt;li&gt;2 Einzellängsbetten. Mit echtem Lattenrost unter 14cm Schaumstoff.
+    &lt;ul&gt;
+      &lt;li&gt;Brückenposlster für eine große ‘Liegewiese’&lt;/li&gt;
+      &lt;li&gt;Auf der Landschaft können wir zu zweit längs, quer oder diagonal schlafen!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Die Tür zum WC lässt sich komplett öffnen, als Raumtrenner Schlafbereich/Wohnbereich&lt;/li&gt;
+  &lt;li&gt;Geräumige Dusche, getrennt vom WC
+    &lt;ul&gt;
+      &lt;li&gt;Bei nicht Gebrauch ist &amp;gt;50% der Dusche Wohnraum im Schlafbereich&lt;/li&gt;
+      &lt;li&gt;Kleiderstange im Duschraum. Sehr praktisch nach dem Hundespaziergang im Regen.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;3-flammiger Gasherd
+    &lt;ul&gt;
+      &lt;li&gt;grosse Küchenarbeitsfläche&lt;/li&gt;
+      &lt;li&gt;Mülleimer in der abschliessbaren Küchenschranktür (der Hund kann den Mülleimer nicht plündern)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Thetford N4142A(?) Absorber Kühlschrank
+    &lt;ul&gt;
+      &lt;li&gt;Automatische Quellenwahl (Gas/230V Landstrom/12V Fahrzeugstrom)&lt;/li&gt;
+      &lt;li&gt;Volumen: 140l inkl. 15l Gefrierfach&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Thetford 420 Backofen&lt;/li&gt;
+  &lt;li&gt;Truma Combi6 mit CP Plus Bedienfeld
+    &lt;ul&gt;
+      &lt;li&gt;Truma DuoControl CS (Gasheizung während der Fahrt)&lt;/li&gt;
+      &lt;li&gt;Truma DuoC Fernbedienungseinheit (Grober Gasstand und EisEx für sehr kalte Tage)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Truma Aventa Comfort Klimaanlage
+    &lt;ul&gt;
+      &lt;li&gt;Mit 5stufig dimmbarer ambient Beleuchtung&lt;/li&gt;
+      &lt;li&gt;IR-Fernbedienung&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Alden 100Wh Solarmodul
+    &lt;ul&gt;
+      &lt;li&gt;mit Alden SPS 300 Solarregler&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Alden 22” TFT
+    &lt;ul&gt;
+      &lt;li&gt;Vollautomatische SAT Antenne (Orbiter 65 HD?) und Alden S.S.C. HD-Steuermodul&lt;/li&gt;
+      &lt;li&gt;Eingänge: HDMI, VGA, CI&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Extra Kiste für den Hund
+    &lt;ul&gt;
+      &lt;li&gt;Unter den Betten, etwa die Hälfte der Garage&lt;/li&gt;
+      &lt;li&gt;Zugang vom Wohnraum oder der Außentür, letztere mit Rampe&lt;/li&gt;
+      &lt;li&gt;mit einem leicht zu reinigenden, weichen Kissen&lt;/li&gt;
+      &lt;li&gt;Hundedusche vor dem Außeneingang mit Warmwasser&lt;/li&gt;
+      &lt;li&gt;Anti-Schlabber-Napf mit 1,4l&lt;/li&gt;
+      &lt;li&gt;Eine Kamera auf den Hund, bei Bedarf während der Fahrt&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wenn man ein 4pfoten-mobile mietet, gibt es ein umfangreiches Paket dazu.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Leichter aber großer Campingtisch mit gummierter Kante&lt;/li&gt;
+  &lt;li&gt;4 Klappstühle&lt;/li&gt;
+  &lt;li&gt;Gaskocher/-grill für den Außengasanschluss&lt;/li&gt;
+  &lt;li&gt;2 volle 11kg Gasflaschen&lt;/li&gt;
+  &lt;li&gt;Komplettes 4 Personen Besteck und Geschirr (Brunner Space)&lt;/li&gt;
+  &lt;li&gt;Dosenöffner, Schere, Gemüsemesser, Brotmesser, …&lt;/li&gt;
+  &lt;li&gt;Salatschüssel&lt;/li&gt;
+  &lt;li&gt;4 Töpfe von Balarini mit klappbaren Griffen inkl. Glasdeckel&lt;/li&gt;
+  &lt;li&gt;Hundeleinen aus Biothane. Mit grossem Karbiner, eine mit Ruckdämpfer
+    &lt;ul&gt;
+      &lt;li&gt;Haken zum befestigen der Leine im Boden, wenn die Sicherung weiter weg vom Wohnmobil sein soll&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Alle benötigten Stromadapter und eine Kabeltrommel (CEE-Schuko, Verlängerung, Schuko-CEE)&lt;/li&gt;
+  &lt;li&gt;Fiamma Level Up Kit - Auffahrkeile 3 Stufen mit praktischer Tasche
+    &lt;ul&gt;
+      &lt;li&gt;Mit Stopper-Keilen (Chock Level)&lt;/li&gt;
+      &lt;li&gt;Mit Anfahrhilfe/Versinkschutz (Level Plate)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rot/Weißes Warnschild für die Fahrräder im Ausland&lt;/li&gt;
+  &lt;li&gt;ADAC Campingplatzführer (man greift aber vermutlich eher auf eine App zurück)&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;… und ich habe vermutlich noch ganz viel vergessen.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wenn man als Erstlingscamper ohne Erfahrung nur eine Reisetasche mit genügend Unterhosen, ein paar wetter-geeignete Wechselklamotten und die Lieblingsdecke des Hundes einpackt, hat man im 4pfoten-mobile über die geasammte Fahrzeit ein rundum sorglos Paket!&lt;br /&gt;
+Leider haben wir etwa 60-70% der Ausstattung schon, ansonsten hätten wir uns für 500 Euro das Starter-Set dazu gegönnt.&lt;/p&gt;
+
+&lt;p&gt;Über die ausführliche Einweisung an allen Mietstationen kann man viel im Internet und im Gästebuch lesen. Diese haben wir nicht in Anspruch genommen, wir wollten sofort los :) Aber im Gespräch merkt man, dass Herr Zimmermann auch selbst mit Seinen Autos unterwegs ist. Er kennt die Stärken und Schwächen der Fahrzeuge und versucht letzteres auch nicht schönzureden.&lt;br /&gt;
+Die Aussenreinigung eines Wohnnmobils kann ohne Equipment (Hohe Leiter mit gepolsterter Auflage, Schrubber mit GFK geeigneten Borsten, …) sehr schwierig werden, diese übernimmt die 4pfoten-mobile-Station. Über die einfache Innenreinigung freuen wir uns jedes Mal. Keine komplizierten Ecken, pflegeleichte Polster (unsere Buffy liebt es auf dem Fahrersitz zu schlafen), einfach zu reinigende Oberflächen.&lt;/p&gt;
+
+&lt;h1 id=&quot;nachtrag&quot;&gt;Nachtrag:&lt;/h1&gt;
+&lt;p&gt;Wer gelegentlich neue Autos gefahren hat, weis das es nicht immer ein Spaß ist. ‘Neuwagenprobleme’ können ziemlich nerven, auch wenn das meiste über Garantie geregelt wird. Hier kommt es in erster Linie darauf an, wie der Partner mit der Situation umgeht. Auch hier hat sich Herr Zimmermann als super Ansprechpartner erwiesen.&lt;br /&gt;
+Es klapperte bei der Fahrt im sonst sehr Ruhigen Auto enorm. Bei der Suche der Ursache ist mir aufgefallen, dass die Glasscheibe des Backofen nur lose in der Tür hängt. Das sah mir mehr nach einem Designfehler als nach einem Defekt aus. Also hätte ich einfach den Rahmen genommen und etwas nach innen gebogen, so dass die Scheibe leicht auf Spannung sitzt. Aber während der Garantie nehme ich solche Eingriffe nicht voreilig vor. Herr Zimmermann hat unser Mobil noch vor dem Verkauf einmal über den TÜV gebracht (bei Mietfahrzeugen jährlich) und eine Gasprüfung vornehmen lassen. Dabei den besagten Mangel erwähnt, und ich bekam ein deutlich leiseres Wohnmobil wieder. Auch der Tisch wackelte unnatürlich, das haben sie in der Werkstatt zwar gut repariert, dennoch wurde ein Garantieauftrag an Dethleffs eingereicht und die haben den kompletten Tausch genehmigt.&lt;br /&gt;
+Jetzt hatte ich das Wohnmobil schon gekauft und mir ist aufgefallen, das die Truma DuoC Einheit im Wohnraum nichts anzeigt. Nach Rücksprache mit der Firma ‘Wohnmobil-Zentrum-Bongard’, welche schon die ersten Ausbesserungen durchgeführt haben, wollten sie sich das beim Tausch des Tischfuß auch ansehen.&lt;br /&gt;
+Ich habe am 7.11. Telefonisch mit Frau Müller-Claasen gesprochen. Die Garantiereparatur muss dieses Jahr noch durchgeführt werden, aber vor dem 16.11. ist keine Zeit. Die Werkstatt ist 30 KM von mir zuhause entfernt, also sind wir so verblieben, das meine Frau und ich am 15.11. unser Buffy-Mobil dort abstellen, die schauen wann sie zu der Reparatur kommen und wir bekommen telefonisch Bescheid, wann wir es wieder abholen können.&lt;br /&gt;
+Die Abgabe gestaltete sich unkompliziert. Fahrzeug abstellen, Schlüssel und Fahrzeugschein in eine Werkstatttüte, diese mit den wichtigsten Daten beschriften und ab in den Briefkasten. Der klingt sehr tief und hängt an einer Metalltür. Ich hatte ein sehr gutes Gefühl, das es dort sicher steht.&lt;br /&gt;
+Am 16.11. vormittags bekam ich den Anruf, das Wohnmobil ist fertig. Also am Abend mit meiner Frau wieder hin und abholen. Als erstes habe ich auf die Truma DuoC gedrückt: Wie ein Weihnachtsbaum. Alles perfekt.&lt;/p&gt;
+
+&lt;p&gt;Schnell, unkompliziert, sehr zuverlässig! Warum habe ich von dem &lt;a href=&quot;http://w-z-b.de/cms/wb/&quot;&gt;Wohnmobil-Zentrum-Bongard&lt;/a&gt; nicht schon die letzten 5,5, Jahre gewusst und bin immer nach Winsen gefahren?&lt;/p&gt;
+
+&lt;p&gt;Disclaimer: Ich werde weder von 4pfoten-mobile Neumünster, noch vom Wohnmobil-Zentrum-Bongard bezahlt. Ich beschreibe hier nur meine positiven Erfahrungen und Eindrücke.&lt;/p&gt;
+
+&lt;p&gt;PS: Ich bin totaler Fan von Rettungskarten. Ich bin bisher 100% Unfallfrei gefahren. Dennoch kann es jederzeit vorkommen, das man in einen Unfall verwickelt wird. Die Rettungskarte wird unter der Sonnenblende des Fahrers gelegt, dort schauen die Rettungskräfte zuerst nach. In deer Rettungskarte ist je nach Typ vermerkt, wo die Elektroanlagen, Airbags, Steuergeräte und Gasflaschen sind. Manchmal auch wo am besten geschnitten werden kann.&lt;br /&gt;
+Dethleffs bietet solche Rettungkarten an, man sucht also das passendste Dehtleffs aus und kann die Karte hier herunterladen: &lt;a href=&quot;https://www.dethleffs.de/service/infos/rettungskarten/rettungskarten/modelljahr-2020/&quot;&gt;https://www.dethleffs.de/service/infos/rettungskarten/rettungskarten/modelljahr-2020/&lt;/a&gt;&lt;br /&gt;
+Der DogLiner TE740 ist baugleich dem &lt;a href=&quot;https://www.dethleffs.de/fileadmin/user_upload/dethleffs/master_de/content/Rettungskarten/2020/Trend_T_7057_EB.pdf&quot;&gt;Trend T 7057 EB&lt;/a&gt;, auch wenn die Gurtanschnaller innen sind. Der Dethleffs Support hat mir auf die Anfrage ob es eine korrigierte Version gibt nicht geantwortet.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Was gab es bisher? Wir haben angefangen mit unserem HasenMobil. Ein Knaus Sport Traveller, mit Alkoven und sehr viel Platz auf 5,99m. Es sind 6 Fahrsitze eingetragen, durch den Umbau der Sitzecke gab es offiziell 4 Schlafplätze, auf den 2x80x190 im Alkoven war das Schlafen mit drei Personen aber auch möglich. Nach 4 Jahren haben wir uns für das FlashMobil entschieden, einen tizianroten Sunlight Cliff 601 SoMo Kastenwagen. Mit Doppelstockbetten gab es Platz für 4 Erwachsene zum Fahren und schlafen. Unterhalb der Betten war Platz für eine geräumige Hundekiste oder auch eine Garage für 2 Stühle, Tisch und Grill. Es war durch die kompakte Bauform einfach sehr viel sparsamer und auch Stadttauglich. Wenn wir in München standen ist es aufgrund der sportlichen Farbgebung kaum aufgefallen. Die große Seitentür und die beiden Hacktüren waren großartig und nervig zugleich. Im Sommer super Belüftung, bei Regen immer alles innen und außen nass. 1,5 Jahre haben wir es erprobt.</summary></entry><entry><title type="html">Bluetooth Headset - Jabra und Sony</title><link href="http://0.0.0.0:4000/2019/07/30/BT-headsets-Jabra-und-Sony.html" rel="alternate" type="text/html" title="Bluetooth Headset - Jabra und Sony" /><published>2019-07-30T08:00:00+00:00</published><updated>2019-07-30T08:00:00+00:00</updated><id>http://0.0.0.0:4000/2019/07/30/BT-headsets--Jabra-und-Sony</id><content type="html" xml:base="http://0.0.0.0:4000/2019/07/30/BT-headsets-Jabra-und-Sony.html">&lt;h1 id=&quot;vorgeschichte&quot;&gt;Vorgeschichte&lt;/h1&gt;
+&lt;p&gt;Mein erstes Bluetooth Headset war ein &lt;a href=&quot;https://www.amazon.de/Jabra-100-96000000-60-BT800-Bluetooth-Headset-Blau/dp/B0007LOZHG&quot;&gt;Jabra BT800&lt;/a&gt; um die Jahrtausendwende. Mono, schwer (25 Gramm), Software aktualisierbar und mit Display zur Rufnummernanzeige plus bereits 6 Stunden Gesprächszeit. Das habe ich bereits beim Radfahren genutzt und war begeistert über die Gesprächsqualität, selbst bei Gegenwind.&lt;br /&gt;
+Dann ging die Reise über ein &lt;a href=&quot;https://mobile-review.com/print.php?filename=/review/sonyericcson-hbh200-en.shtml&quot;&gt;Sony Ericsson HBH-200&lt;/a&gt; Clip mit 2,5mm Klinke über ein Apple Kabelheadset und einige zu den Telefon beigelegten.&lt;/p&gt;
+
+&lt;h1 id=&quot;jabra-halo-smart&quot;&gt;Jabra Halo Smart&lt;/h1&gt;
+&lt;p&gt;Richtig zufrieden war ich dann erst wieder mit dem &lt;a href=&quot;https://www.amazon.de/Jabra-kabelloser-Ear-Kopfhörer-telefonieren-Smartphone-Rot/dp/B01FDI62DC/&quot;&gt;Jabra Halo Smart&lt;/a&gt; ein Headset mit einem Nackenbügel, der einen großen Akku beinhaltet. Links waren die Bedienelemente für die Steuerung von und rechts ein extra Button um den Sprachassistenten des Telefon aufzurufen.&lt;br /&gt;
+Es ist zum Telefonieren das Hands Free Protokoll verfügbar, für die Medienwiedergabe A2DP (Stereo Übertragung) und die Fernsteuerung per AVRCP. Morgens konnte ich per Sprachbefehl mit druck auf die rechte Taste ‘Google Play’ starten und per Knöpfe links lauter/leiser oder mit lange drücken Track vor/zurück. Zwischen den plus/minus Tasten war der Knopf zum Ein-/Ausschalten (lange drücken), Pause (kurz drücken) und Wahlwiederholung (zweimal drücken).&lt;br /&gt;
+Das Headset funktioniert generell auch ohne App an jedem Bluetooth fähigem Gerät, die Jabra App hat aber zusätzlich den Akkustand des Headset angezeigt und eingehende WhatsApp vorgelesen. Schnell hat man sich daran gewöhnt, dass als Einleitung “Überprüfe auf neue Nachrichten” gesagt wurde. In der Zeit konnte man entweder den Hörer richtig positionieren oder auch lauter stellen, wenn die Ansage zu leise ist.&lt;br /&gt;
+Das Laden funktionierte gut, der MicroUSB Stecker ist fest im Port. Wenn man allerdings einen zu breiten Stecker genommen hat, passte er nicht in die versenkte Öffnung. Das Bose Ladekabel konnte ich nicht benutzen. Wenn der Akku voll geladen ist kam ich locker über die Woche, teilweise bis zu zwei Wochen. Akustisch hat er erst bei einem Batteriestand unter 20% mit ‘Battery low’ auf sich aufmerksam gemacht.&lt;br /&gt;
+Das Vibrieren des Headset beim Ein-/Ausschalten oder eingehendem Anruf vermisse ich aktuell sehr. Zwar übernimmt das auch meine vivoactive 3 am Handgelenk, aber die signalisiert so viel, dass ich erst spät auf Anrufe reagiere.&lt;/p&gt;
+
+&lt;h2 id=&quot;probleme-und-defekt&quot;&gt;Probleme und Defekt&lt;/h2&gt;
+&lt;p&gt;Das erste Gerät setzte immer wieder aus. Damit meine ich nicht die obligatorischen Verbindungsabbrüche über Bluetooth, wenn das Handy in der Hosentasche ist. Je nachdem wie der Winkel des Nackenbügel war, hatte ich eine Übertragung oder nicht. Da die Kabel zu den Hörern gleichzeitig auch Bluetooth-Antenne sind, kam es auch zu kompletten Verbindungsabbrüchen.&lt;br /&gt;
+Das passierte noch innerhalb der Garantie, also zu Amazon eingeschickt, einen Ersatz bekommen. An dem Austauschgerät wurde herumgelötet und es hing Ohrenschmalz vom Vorbesitzer dran. Sehr sehr ekelig. Also nochmal getauscht, dieses Mal gab es Neuware. Nach ca 9 Monaten das gleiche. Ich höre nur auf der linken Seite, selten habe ich beide Stöpsel drin, daher weis ich nicht wann die rechte Seite ausgefallen ist … Ein weiterer Tausch kam für mich nicht in Frage. Seit die Jabra App deinstalliert ist hält mein Mobiltelefon Akku 3-6h länger.&lt;/p&gt;
+
+&lt;h1 id=&quot;sony-wi-c200b&quot;&gt;Sony WI-C200B&lt;/h1&gt;
+&lt;p&gt;Laut Amazon Kundenfragen sind die Geräte &lt;a href=&quot;https://www.amazon.de/Sony-Akkulaufzeit-magnetische-integrierte-Headset-Funktion-Schwarz/dp/B07QYWD718/&quot;&gt;Sony WI-C200B&lt;/a&gt; und &lt;a href=&quot;https://www.amazon.de/Sony-Akkulaufzeit-magnetische-integrierte-Headset-Funktion-Schwarz/dp/B07R37BSZ6/&quot;&gt;Sony WI-C310&lt;/a&gt; baugleich und unterscheiden sich nur im Farbtyp (matt gegen glänzend). Ich habe mich für das günstiger Modell entschieden und finde mattiert schöner.&lt;/p&gt;
+
+&lt;p&gt;Ich vermisse das Vibrieren. Ansonsten ist der Kopfhörer in jedem Punkt überlegen.&lt;br /&gt;
+Der Klang ist super. Ob es elektronische Musik ist, Rock, Metal, Pop, NuAge. Alles bringt der Kopfhörer sauber und mit genügend Bass und klaren Höhen an das Trommelfell. Wobei ich die Lieder in meiner Playlist natürlich alle schon kenne. Der Kopfhörer ist natürlich kein Ersatz für ein HiFi Kopfhörer an der Heimanlage oder Gaming-Kopfhörer für den PC zuhause. Aber für unterwegs bietet er die perfekte Balance zwischen geringem Gewicht/geringer Größe und viel Leistung.&lt;br /&gt;
+Ob der Akku wirklich 15 Stunden durchhält habe ich nicht nachgemessen. Ich höre auf dem Weg zur Arbeit morgens etwa 20 Minuten, in der Mittagspause etwa 55 Minuten und auf dem Weg nachhause etwa 20 Minuten. Ich komme locker eine Woche mit einer Ladung durch. Geladen wird über USB-C. Ich benötige in meiner Ausstattung also wieder ein extra Ladekabel. Bis USB-D kommt mache ich mir aber keine Sorgen, denn das nächste Mobiltelefon wird sicher auch USB-C haben.&lt;br /&gt;
+An dem rechten Hörer hängt vermutlich der Akku, es ist eine schwarze Box. An der Linke Seite finden wir den Ladeport und auch die Bedienelemente. Die drei Knöpfe sind für lauter/leiser und an/aus. Lange auf den mittleren Knopf drücken schaltet das Headset ein, es meldet sich mit der Information dass es an ist, gibt den Akkustatus (voll, 70%, 50%,…) durch und teilt mit dass Bluetooth verbunden ist. einmal auf den mittleren Knopf gedrückt startet ‘Google Play’. Ob das Voreinstellung oder Zufall ist weis ich noch nicht. Wenn ich lauter/leiser länger drücke, während Musik wiedergegeben wird, springt er einen Titel vor oder zurück. Zweimal auf den mittleren Knopf pausiert die aktuelle Wiedergabe und ich kann einen Sprachbefehl an den Google Assistant geben. Wenn der Befehl ausgeführt/beantwortet ist, wird die Wiedergabe fortgesetzt.&lt;br /&gt;
+Mir gefällt sehr gut, dass man während der Sprachbefehle und auch während des Telefonierens sich selbst über das Mikrofon hört. Zuvor hatte ich immer das Gefühl zu leise zu sprechen, weil ein Ohr verstopft war und mein Umfeld fragte warum ich am Telefon immer so schreie. Anfangs war es etwas störend, beim Radfahren wegen der Windgeräusche, aber mittlerweile weis ich dieses Feature zu schätzen.&lt;/p&gt;
+
+&lt;h2 id=&quot;tests-bisher&quot;&gt;Tests bisher&lt;/h2&gt;
+&lt;p&gt;Verbunden habe ich den Kopfhörer mit:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mobiltelefon (Sony Xperia X)
+    &lt;ul&gt;
+      &lt;li&gt;Google Play, WhatsApp (Diktieren), Youtube&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Laptop (Lenovo T470s)
+    &lt;ul&gt;
+      &lt;li&gt;Skype, Youtube, Steam, Audacious)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Smartwatch (Garmin Vivoactive 3)
+    &lt;ul&gt;
+      &lt;li&gt;Musik, Hörbuch&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Festnetz Telefon (Siemens Gigaset DX600 ISDN)
+    &lt;ul&gt;
+      &lt;li&gt;Telefonieren&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;fazit&quot;&gt;Fazit&lt;/h1&gt;
+&lt;p&gt;Wie bei allen Themen, so gibt es auch beim Headset nicht ‘das Perfekte’. Sowohl das BT800, als auch das Halo Smart und das WI-C200B sind super Geräte. Jedes mit seinen individuellen Vor- und Nachteilen.&lt;br /&gt;
+Bei einem Kabel Headset stören mich am meisten die letzten 10cm zum Telefon hin. Da ich tagsüber meistens Hemden trage, die in die Hose gehören, habe ich hier noch keine optimale Lösung gefunden.&lt;br /&gt;
+Bei Bluetooth Headsets ist es das Tragen des Mobiltelefon in der Hosentasche. Hier ist offenbar die Dämpfung durch die Flüssigkeit im Körper so hoch, dass es beim Drehen des Kopfes zu Fragmenten in der Medienwiedergabe kommt. Andersrum kann das Mobiltelefon im Auto liegen und ich gehe gute 10-20m weiter in die Tankstelle und bezahle ohne Verbindungsabbruch (natürlich würde ich nie an einer Tankstelle telefonieren!).&lt;br /&gt;
+Und es liegt an jedem selbst mit welchen Kompromissen er leben möchte. sicher gibt es auch ‘earBuds’ oder ‘True Wireless’, ohne Kabel zwischen den Hörern. Aber ich persönlich finde es gerade angenehm die Stöpsel aus den Ohren nehmen zu können und bei Bedarf schnell wieder einzusetzen, ohne suchen zu müssen. Dazu kommt die wesentlich längere Laufzeit durch den größeren Akku (15h vs. 3x3h).&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><summary type="html">Vorgeschichte Mein erstes Bluetooth Headset war ein Jabra BT800 um die Jahrtausendwende. Mono, schwer (25 Gramm), Software aktualisierbar und mit Display zur Rufnummernanzeige plus bereits 6 Stunden Gesprächszeit. Das habe ich bereits beim Radfahren genutzt und war begeistert über die Gesprächsqualität, selbst bei Gegenwind. Dann ging die Reise über ein Sony Ericsson HBH-200 Clip mit 2,5mm Klinke über ein Apple Kabelheadset und einige zu den Telefon beigelegten.</summary></entry><entry><title type="html">Wohnmobil - Zweiter Akt</title><link href="http://0.0.0.0:4000/wohnmobil/2019/06/12/Wohnmobil-Zweiter-Akt.html" rel="alternate" type="text/html" title="Wohnmobil - Zweiter Akt" /><published>2019-06-12T19:00:48+00:00</published><updated>2019-06-12T19:00:48+00:00</updated><id>http://0.0.0.0:4000/wohnmobil/2019/06/12/Wohnmobil---Zweiter-Akt</id><content type="html" xml:base="http://0.0.0.0:4000/wohnmobil/2019/06/12/Wohnmobil-Zweiter-Akt.html">&lt;h1 id=&quot;was-gab-es-bisher&quot;&gt;Was gab es bisher?&lt;/h1&gt;
+&lt;p&gt;Meine Frau und ich wollten vor etwa 5 Jahren ein Haus bauen. Der Hauptgrund es zu verwerfen war das Grundstück. Der Grundriss stand, ein Bauträger war gefunden, die Finanzierung war so gut wie gesichert.&lt;br /&gt;
+Aber es hat nicht sein sollen, und so haben wir uns ein Haus auf 4 Rädern gekauft, einen &lt;strong&gt;Knaus Sport TR&lt;/strong&gt;. Ein tolles Wohnmobil, welches auf 5,99m Länge enorm viel Platz bietet. Die Bad-Lösung mit der 45° versetzten Tür ist einfach genial. Man hat bei zugeklappter Tür ein kleines WC oder Duschraum und jemand anderes kann Zähne putzen oder mit aufgeklappter Tür hat man ein grosses Bad um sich nach dem Duschen bequem anzuziehen.&lt;br /&gt;
+Durch den Alkoven war der Schlafplatz über dem Fahrrerhaus immer bereit und es musste nichts geklappt oder gebaut werden. Manchmal war die Leiter zum Alkoven zu viel, oder durch die Hitze konnte man dort kaum liegen, dann hat der umgebaute Sitzbereich als alternative Schlafgelegenheit geholfen. Der Umbau funktionierte schnell. Nur war es für mich mit 182cm dort etwas eng. Mit 6 eingetragenen Sitzplätzen konnten mehr Leute mit als schlafen konnten, aber für ein Zelt war in der schmalen Heckgarage immer Platz. Dort lagen sonst nur die Auffahrkeile, die nicht benötigten Fahrradträger-Halterungen, eine Sitzbank mit Tisch und die 25m Kabeltrommel mit Wasserschlauch.&lt;/p&gt;
+
+&lt;h1 id=&quot;was-gibt-es-neues&quot;&gt;Was gibt es neues?&lt;/h1&gt;
+&lt;p&gt;Im Herbst 2017 waren wir in Düßeldorf auf der Wohnmobilmesse und haben uns die Kastenwagen genauer angesehen. Windschnittiger ohne Alkoven, schmaler für das Parken in der Stadt und ich bin der Meinung dass der Kasten besser Lärm und Wärme dämmt als der Aufbau.&lt;br /&gt;
+Wir waren mal wieder bei diversen Händler, aber in Norddeutschland ist es nicht einfach einen PArtner zu finden. Am Ende sind wir wieder beim &lt;strong&gt;Freizeit-Center Albrecht&lt;/strong&gt; in Winsen an der Luhe gelandet.&lt;br /&gt;
+Im Internet gesehen hatten wir einen gebrauchten &lt;strong&gt;Sunlight Cliff 601&lt;/strong&gt;. Die Photos sahen gut aus, der Preis war in unserem Rahmen und der Händler hat uns vor 5 Jahren bereits gut gefallen.&lt;br /&gt;
+Das ausgesuchte Mobil wurde es allerdings nicht, denn für gerade mal 5000 Euro Mehr bekamen wir den Nachfolger (2018 Modell) als Neuwagen, mit entsprechender Ausstattung.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Markise
+    &lt;ul&gt;
+      &lt;li&gt;Nun mit Seitenteilen um sie als Vorzelt zu nutzen&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fahrradträger
+    &lt;ul&gt;
+      &lt;li&gt;Nur bis 35KG. Mal sehen wie das mit dem eBike klappt&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Navi/Multimediacenter
+    &lt;ul&gt;
+      &lt;li&gt;Endlich mit Camper-Navigation für das umfahren von engen Strassen.&lt;/li&gt;
+      &lt;li&gt;Sogar mit Android/iPhone Unterstürtung&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rückfahrkamera&lt;/li&gt;
+  &lt;li&gt;Tempomat&lt;/li&gt;
+  &lt;li&gt;Stockbett
+    &lt;ul&gt;
+      &lt;li&gt;Es sollte ein Hubbett werden, aber so ist es noch besser, mit 4 festen Schlafplätzen&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Kleiderstange im Duschraum
+    &lt;ul&gt;
+      &lt;li&gt;War kein konkreter Wunsch, aber sehr geniale Idee von Sunlight&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;hochgesetzter Kühlschrank&lt;/li&gt;
+  &lt;li&gt;Raum für den Hund&lt;/li&gt;
+  &lt;li&gt;Flache Scheiben an den Seiten, mit Gasdruckfeder
+    &lt;ul&gt;
+      &lt;li&gt;wer sich mit Wohnmobilen/Wagen auskennt weis was gemeint ist&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also das &lt;strong&gt;Sunlight Cliff 601 Edition&lt;/strong&gt; wird das neue. Darüber findet man im Internet nicht viel. Es hat nur 2x5kg Gasflaschen, damit das Stockbett rein passt. Ich musste auf meine Solarzellen verzichten. Es ist nicht weis, sondern rot. Das wars aber auch mit den Kompromissen, alles andere ist super.&lt;br /&gt;
+Am Montag wird es abgeholt, und nach intensiver prüfung kann ich auch mehr schrieben.&lt;/p&gt;
+
+&lt;h1 id=&quot;das-ummelden&quot;&gt;Das Ummelden.&lt;/h1&gt;
+&lt;p&gt;Der Vorteil ist, dass es egal ist ob ich einen PKW oder ein Wohnmobil ummelde, man hat beide male eine ganze Menge ‘hilfreicher’ Zettel, und muss genau aufpassen nichts zu übersehen.&lt;/p&gt;
+&lt;h2 id=&quot;versicherung&quot;&gt;Versicherung&lt;/h2&gt;
+&lt;p&gt;Wir sind über die RMV (ReiseMobil Versicherung) der Kravag versichert. Ein kurzer Anruf mit Nennung der Versicherungsnummer, ein paar Fragen zum Mobil beantworten (Typ (Kastenwagen), Erstzulassung (kommt noch), Halter bleibt meien Frau (ja)) und innerhalb von 5 Minuten wurde das Angebot per Email gesendet und ich erhielt die eVB (elektroniscvhe  Nummer, die ich benötige um es beim Amt anzumelden.&lt;br /&gt;
+Die Kündigung der bestehenden KFZ-Versicherung geschieht automatisch mit der Abmeldung des alten Wohnmobils.&lt;/p&gt;
+&lt;h2 id=&quot;kennzeichen&quot;&gt;Kennzeichen&lt;/h2&gt;
+&lt;p&gt;Die Kennzeichen konnten wir obline bestellen, und dort sogar für unter 15 Euro ein Wunschkennzeichen auswählen. Dazu bieten sie gleich an die Kennzeichen per Post zu schicken. Ich habe damals mal 44e für meine Blechschilder bezahlt, heute war es unter 25e. Am Samstag bestellt, Montag war ein Feiertag, Mittwoch zustellung, Alles super.&lt;/p&gt;
+&lt;h2 id=&quot;die-finanzierung&quot;&gt;Die Finanzierung&lt;/h2&gt;
+&lt;p&gt;Hier möchte ich das &lt;strong&gt;Freizeit-Center Albrecht&lt;/strong&gt; besonders hervorheben. Die nehmen unser alter Wohnmobil in Zahlung, lösen davon den Fahrzeugbrief bei der Bank ab, die Differenz wird als Anzahlung für das neue Mobil genommen und die Finanzierung für das neue Mobil läuft nahtlos weiter.&lt;br /&gt;
+Für Manche mag das selbstverständlich sein, aber ich habe auch schon andere Szenarien angeboten bekommen. Mal wieder hat die Schufa bei meiner Abfrage am Samstag gezickt, aber auch das war kein Problem, am folgenden Montag hatten wir die Bestätigung. Herr Albrecht war in jeder Hinsicht gelassen und hat uns unterstützt.&lt;/p&gt;
+&lt;h2 id=&quot;die-abholung&quot;&gt;Die Abholung&lt;/h2&gt;
+&lt;p&gt;Natürlich wollen alle Ihre Mobile an einem Samstag abholen, daher sind die Termine sehr begehrt. Nach einiger Absprache und Verschieben von Termienen konnte ich die Abholung auf einen Montag Mittag legen.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Was gab es bisher? Meine Frau und ich wollten vor etwa 5 Jahren ein Haus bauen. Der Hauptgrund es zu verwerfen war das Grundstück. Der Grundriss stand, ein Bauträger war gefunden, die Finanzierung war so gut wie gesichert. Aber es hat nicht sein sollen, und so haben wir uns ein Haus auf 4 Rädern gekauft, einen Knaus Sport TR. Ein tolles Wohnmobil, welches auf 5,99m Länge enorm viel Platz bietet. Die Bad-Lösung mit der 45° versetzten Tür ist einfach genial. Man hat bei zugeklappter Tür ein kleines WC oder Duschraum und jemand anderes kann Zähne putzen oder mit aufgeklappter Tür hat man ein grosses Bad um sich nach dem Duschen bequem anzuziehen. Durch den Alkoven war der Schlafplatz über dem Fahrrerhaus immer bereit und es musste nichts geklappt oder gebaut werden. Manchmal war die Leiter zum Alkoven zu viel, oder durch die Hitze konnte man dort kaum liegen, dann hat der umgebaute Sitzbereich als alternative Schlafgelegenheit geholfen. Der Umbau funktionierte schnell. Nur war es für mich mit 182cm dort etwas eng. Mit 6 eingetragenen Sitzplätzen konnten mehr Leute mit als schlafen konnten, aber für ein Zelt war in der schmalen Heckgarage immer Platz. Dort lagen sonst nur die Auffahrkeile, die nicht benötigten Fahrradträger-Halterungen, eine Sitzbank mit Tisch und die 25m Kabeltrommel mit Wasserschlauch.</summary></entry><entry><title type="html">Garmin - Ein Einblick</title><link href="http://0.0.0.0:4000/gadgets/2019/05/09/Garmin-Ein-Einblick.html" rel="alternate" type="text/html" title="Garmin - Ein Einblick" /><published>2019-05-09T22:20:28+00:00</published><updated>2019-05-09T22:20:28+00:00</updated><id>http://0.0.0.0:4000/gadgets/2019/05/09/Garmin---Ein-Einblick</id><content type="html" xml:base="http://0.0.0.0:4000/gadgets/2019/05/09/Garmin-Ein-Einblick.html">&lt;h1 id=&quot;hardware---den-alltag-vermessen&quot;&gt;Hardware - Den Alltag vermessen&lt;/h1&gt;
+&lt;p&gt;Angefangen hat meine Frau mit der &lt;strong&gt;Garmin vivoactive&lt;/strong&gt;. Sie wollte aktiver werden und hat sich belesen über den aktuellen Stand der Technik, und sich als Unterstützung die Garmin vivoactive gekauft. Sie hat es mit dem Smartphone gekoppelt und hatte ab dann eine abgespecktes Smartwatch.&lt;/p&gt;
+
+&lt;h2 id=&quot;erster-tracker---sony-swr10&quot;&gt;Erster Tracker - Sony SWR10&lt;/h2&gt;
+&lt;p&gt;Ich war zu der Zeit viel unterwegs, und fand besonders interessant den Schlaftracker. Da ich nicht fast 300e ausgeben wollte für einen Schätzwert, habe ich bei Mediamarkt für 15e ein &lt;strong&gt;Sony Mobile SWR10&lt;/strong&gt; gekauft. Kein Display, 5 Tage Akkulaufzeit, Beim Tanzen im Tunnel (Hamburg) bin ich Rad gefahren, die Schritte waren recht realistisch. Die App &lt;strong&gt;Sony Lifelog&lt;/strong&gt; sieht auch mehr aus wie ein Kinderspiel, denn einer Sport App.&lt;br /&gt;
+&lt;a href=&quot;https://www.amazon.de/Sony-SmartBand-Aktivit%C3%A4tstracker-Schlaftracker-Fitness-Schwarz/dp/B00HQIFKWW&quot;&gt;Sony SWR10 bei Amazon&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ernsthafter-tracker---vivoactive&quot;&gt;Ernsthafter Tracker - vivoactive&lt;/h2&gt;
+&lt;p&gt;Meine Frau hat mir wenige Monate danach zum Geburtstag eine &lt;strong&gt;Garmin vivoactive&lt;/strong&gt; gekauft. Nicht ohne Eigennutzen, da sie weis dass ich solche Geräte komplett durchgehe und Funktionen ausprobiere auf die sie nicht gekommen wäre. Bis zu 30 Tagen Akkulaufzeit ohne Tracking, 7 Tage mit 45 Minuten Tracking/Tag. Telefon finden. Bluetooth und ANT+. GPS und Glonass. Schritte, Radfahren, Schwimmen …&lt;br /&gt;
+Die einzige nennenswerte Schwierigkeit, die ich mit der Uhr hatte waren 6 Monate Syncronisierungsprobleme, vermutlich verursacht durch die Zeitumstellung. Der ist bei folgenden Zeitumstellungen nicht mehr aufgetreten.&lt;br /&gt;
+&lt;a href=&quot;https://www.amazon.de/Garmin-vivoactive-Sport-GPS-Smartwatch-Batterielaufzeit-Schwarz/dp/B00RE1UL52&quot;&gt;Garmin vivoactive bei Amazon&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;herzfrequenzmessung---brustgurt&quot;&gt;Herzfrequenzmessung - Brustgurt&lt;/h3&gt;
+&lt;p&gt;Während andere Fitness-Gadget Hersteller im Besten Fall auf Bluetooth Low Energy (BLE) oder manchmal eigenes 2,4GHz setzen, geht Garmin den Weg des ANT+. Wie bei allem was Funkt: Solange auf beiden Seiten das ANT+ Logo gedruckt ist sprechen die miteinander. Es gibt verschieden Brustgurte von Garmin zum genaueren Aufnehmen der Herzfrequenz:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Der Brustgurt (Plastik Band)&lt;/li&gt;
+  &lt;li&gt;Der Textil Brustgutrt (Meine Wahl)&lt;/li&gt;
+  &lt;li&gt;3 Premium Brustgurte (Plus Bodenkontaktmessung für Marathon oder Unterwasser HR für Schwimmen/Triathlon)
+Bei Amazon und in diversen Foren liest man immer wieder wie schlecht oder ungenau der Textilgurt im Vergleich zum Plastikgurt sein soll. Das kann ich nicht bestätigen. Im ersten Jahr habe ich vor dem Anlegen die 4 Kontaktflächen immer mit Wasser benetzt. Der Tipp erschien mir Sinnvoll, da elektrische Ströme gemessen werden und ich nicht wenig Brustbehaarung habe. Seit etwa 6 Monaten lasse ich diesen Schritt weg. Ganz selten verbindet der Gurt erst nach etwa 300m, Radfahren, damit kann ich aber gut leben.&lt;br /&gt;
+&lt;a href=&quot;https://www.amazon.de/Garmin-Premium-Herzfrequenz-Brustgurt-HRM-Tragekomfort/dp/B00BI9X1QM&quot;&gt;Garmin Brustkurt (textil) bei Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrade---vivoactive-3vivoactive3-music&quot;&gt;Upgrade - vivoactive 3/vivoactive3 Music&lt;/h2&gt;
+&lt;p&gt;Nach gut 3 Jahren war die Uhr täglich im Einsatz. Die Updates kamen nicht mehr so regelmäßig. Der Akku lässt langsam nach. Das Display ist dank Schutzfolie noch so gut wie am ersten Tag … Dennoch war es Zeit für etwas neues.&lt;br /&gt;
+Am 5. Hochzeitstag und zu Weihnachten hat meine Freu uns als 2 neue Uhren bestellt. Der Karton Ist gewohnt wertig. Das Multilinguale Handbuch wurde zur Seite gepackt. Die Uhr -huch- die Uhr ist deutlich größer als ihr Vorgänger, aber super leicht. Das macht sich in der geringeren Akkulaufzeit bemerkbar, aber auf 5-7 Tage komme ich mit Tracking noch immer.&lt;br /&gt;
+Mit &lt;strong&gt;Garmin Connect&lt;/strong&gt; verbinden, Einstellungen vornehmen … Und super. Höhere Auflösung, bessere Empfindlichkeit des Touch, angenehmes Tragegefühl …&lt;/p&gt;
+
+&lt;p&gt;Meine Frau trägt die &lt;strong&gt;vivoactive 3&lt;/strong&gt;. Es hat einen Rahmen in dem das Display schützend eingelassen ist. An der Seite gibt es ein Sensorfeld zum exakteren Scrollen, auf der anderen einen Knopf. Lange drücken und kurz drücken hat jeweils eine andere Funktion.&lt;br /&gt;
+Ich trage die &lt;strong&gt;vivoactive 3 Music&lt;/strong&gt;. Die ist etwas größer, hat kein Touchfeld und leider steht das Display hervor ohne den schützenden Rahmen. Dafür spricht sie WLAN. Der Kopfhörer wird per Bluetooth verbunden. Die Uhr wird per USB mit dem MTP Protokoll verbunden. In die entsprechenden Ordner kann Musik, Hörbücher oder Posdcasts geladen werden. Wer einen Spotify oder Deezer Premium Account besitzt kann Playlisten per WLAN auf die Uhr laden.&lt;br /&gt;
+Die Uhr hat einen eingebauten Herzfrequenzsensor (HR), aber für das Radfahren oder auf dem Laufband verwende ich weiterhin den Brustgurt.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Garmin Pay - Per NFC bezahlen&lt;/li&gt;
+  &lt;li&gt;MoveIQ - Automatisches erkennen von Aktivitäten (Holz Hacken ist Schwimmen!)&lt;/li&gt;
+  &lt;li&gt;Sideswipe - Nur ohne Music. Scrollen und dabei das Display sehen&lt;/li&gt;
+  &lt;li&gt;WLAN - Nur mir Music. Musik, Posdcasts, Hörbücher per WLAN auf die Uhr laden&lt;/li&gt;
+  &lt;li&gt;Herzfrequenz Sensor - Stressmessung und die Herzfrequenz nicht nur im Training, sondern den ganzen Tag, im Blick&lt;/li&gt;
+  &lt;li&gt;Bedienung mit Handschuhen (Touchfähig) auf dem übersichtlichen Display problemlos möglich&lt;/li&gt;
+  &lt;li&gt;IQ Apps - Individualisierung im eigenen Shop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.de/Garmin-vívoactive-GPS-Fitness-Smartwatch-vorinstallierte-Schwarz-Silber/dp/B0751GBCKN&quot;&gt;Garmin vivoactive 3&lt;/a&gt;
+&lt;a href=&quot;https://www.amazon.de/Garmin-vívoactive-Music-GPS-Fitness-Smartwatch-vorinstallierte-Schwarz/dp/B07CR8NBQB&quot;&gt;Garmin vivoactive 3 Music&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Edit 12.05.2019:&lt;br /&gt;
+Sehr Schön ist auch die Funktion ‘Notfallkontakt’. In der Garmin Connect App über das Hamburgemenü wählt man ‘Kontakt’ aus. Entweder man legt einen neuen an oder wählt einen oder mehrere aus dem Telefonbuch. Nun kann unter ‘Sicherheit und Tracking’ die ‘Unfallbenachrichtigung und Notfallhilfe’ für bis zu 3 Personen aktiviert werden. Bei einigen Garmin Edge Fahrradcomputer weiss ich, dass sie einen Crash-Sensor haben. Bei der vivoactive3 weis ich nur, dass es durch laaaanges Drücken auf den Button (bis es vibriert) aktiviert werden kann. Der Notfallkontakt bekommt dann eine SMS und/oder Email, genau konfigurieren kann man es nicht, das wird wohl aus dem Kontakt-Eintrag ermittelt. Der Notfallkontakt benötigt also kein Garmin Connect.&lt;br /&gt;
+Ich finde das ist eine sinnvolle Funktion. Dafür muss natürlich die Uhr mit dem Handy kommunizieren und Empfang gegeben sein, zusätzlich funktioniert es nur, wenn die Uhr ein GPS Signal hat und wenn dam ‘Live Tracking’ zugestimmt wurde. Das ‘Live Tracking’ muss zu der Unfall-/Notfallzeit aber nicht aktiv sein. Garmin selbst weist darauf hin, dass man sich nicht nur auf dieses System verlassen soll.&lt;br /&gt;
+Ich finde das ist eine enorm sinnvolle funktion, und ich möchte nun ein paar Tage testen ob es zu Fehlalarmen kommt. Meine Frau habe ich vorweg informiert und sie bekam von Garmin eine Benachrichtigung, dass sie nun mein Notfallkontakt ist.&lt;/p&gt;
+
+&lt;h3 id=&quot;fahrrad---trittfrequenzgeschwindigkeit&quot;&gt;Fahrrad - Trittfrequenz/Geschwindigkeit&lt;/h3&gt;
+&lt;p&gt;Mehrere Jahre habe ich auf Amazon den &lt;strong&gt;Garmin Cardence-/Speedsensor&lt;/strong&gt; beobachtet. Auch immer mal wider bei Idealo oder im Laden gesucht., Aber der Preis hielt sich stabil bei knapp unter 50e. Jetzt habe ich ein neues Fahrrad für 100e, dann waren die 50e auch noch drin.&lt;br /&gt;
+Den &lt;strong&gt;Geschwindigkeitssensor&lt;/strong&gt; habe ich an die Hinterrad Narbe befestigt, da ich vorne einen Nabendynamo habe. Die Übertragung läuft per ANT+, und Elektromagnetische Einflüsse stören diese Übertragung. Zudem Ist die Nabe so groß, dass das mitgelieferte Gummi nicht gehalten hätte. Hinten sitzt der Sensor leicht gekippt, das hat aber keine Auswirkungen auf die Funktion.&lt;br /&gt;
+Der &lt;strong&gt;Cardencesensor (Tritteschwindigkeit)&lt;/strong&gt; kommt an die linke Kurbel. Da meine Kurbeln in der Regel großflächig Abrieb durch den Schuh aufzeigen war ich zunächst skeptisch. Aber seit mehreren Wochen funktioniert die Anbringung nun sehr gut, das Gummi hat keine Spuren bisher. Ich habe den Sensor sehr nah an das Tretlager befestigt, als weg von der Pedale.&lt;br /&gt;
+Beide Sensoren arbeiten vollkommen ohne Kalibrierung. Einmal müssen sie mit der Uhr gekoppelt werden und verbinden sich danach jedes mal automatisch wieder. Nach einer gewissen Zeit ohne Bewegung schalten sich die Sensoren automatisch aus. Sobald sie in Bewegung gesetzt werden aktivieren sie sich und verbinden sich. Da eine Umdrehung immer 360° ist, muss der Sensor auch nach einem Wechsel des Mantel nicht neu kalibriert werden.&lt;br /&gt;
+Morgens den HR Gurt anlegen, auf der Uhr das Tracken (Radfahren) starten. zuerst verbindet sich der Herzfrequenz Gurt. Wenn ich das Rad vor die Tür schiebe verbindet sich der Geschwindigkeit-Sensor. Jetzt hat die Uhr auch GPS gefunden und das Aufnehmen kann mit einem kurzen Druck auf den Knopf (mit Handschuhen möglich) gestartet werden. Beim Verlassen des Grundstücks durch Treten verbindet sich der Trittfrequenz-Sensor. Ich habe die besten Zeiten, wenn die Trittfrequenz gleichmäßig bei etwas über 60 1/m. (Umdrehung die Minute) liegt. Durch wenige Ampeln ist das meistens kein Problem.&lt;br /&gt;
+&lt;a href=&quot;https://www.amazon.de/Garmin-Geschwindigkeits-Trittfrequenzsensor-Trainingsunterstützung-schnelle/dp/B00JM6DKUA/&quot;&gt;Garmin Geschwindigkeits- und Trittfrequenzsensor&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;gewicht---garmin-index&quot;&gt;Gewicht - Garmin Index&lt;/h2&gt;
+&lt;p&gt;Da wir uns im Garmin Ecosystem befinden, lag es nah auch die &lt;strong&gt;Garmin Index&lt;/strong&gt; Waage zu kaufen. Seit Jahren kostet sie um die 120-160e und für ganz kurze Zeit ist sie gelegentlich für unter 100e zu haben. Und da haben wir zugegriffen.&lt;br /&gt;
+Ein, wie von Garmin gewohnt, sehr gut abzulesendes Display. Die Waage wird mit per Bluetooth mit dem Handy verbunden und per Garmin Connect App eingerichtet(?). Dann ist sie im WLAN. Wer die Waage zuerst einrichtet ist natürlich verbunden und kann andere Benutzer einladen. Der Eingeladene bestätigt und ist auch in der Waage vermerkt. Die Index kennt das vorige Gewicht und lernt über die Zeit, wann der Benutzer typischer Weise auf die Waage steigt. So wird ermittelt in welches Konto der Wert gespeichert werden soll. Hat sich das Gerät mal geirrt, kann mit dem rechten Fuß durch die angemeldeten Benutzer getippt werden.&lt;br /&gt;
+In den Amazon Rezensionen und auch diversen Foren ist zu lesen dass es Schwierigkeiten mit dem WLAN geben soll. Trotz hervorragender Verbindung kein Sync auf das Konto. Ich vermutete dahinter den Kinder- und Jugendschutz von AVM und habe den Router auf Standard eingestellt gelassen. Leider trat das Problem bei mir nicht auf, die Waage synchronisiert alles.&lt;br /&gt;
+Experten, und welche die sich so nennen, empfehlen an einem bestimmten Tag die Woche auf die Waage zu steigen und so ein Profil zu erstellen. Ich steige nach Möglichkeit jeden Tag auf die Waage um so mehr Daten zu erhalten. Klar ärgere ich mich dann über die 500g Packung Lebkuchen und 2 Barcadi Cola am Vortag. Aber das ist mein Profil. Leider kann Garmin Connect nur einen Wert am Tag speichern, ansonsten würde ich wohl morgens und abends auf die Waage steigen.&lt;br /&gt;
+&lt;a href=&quot;https://www.amazon.de/Garmin-Körperanalysewaage-Körperanalysen-Körperfett-Kompatibilität/dp/B0177X5ASE&quot;&gt;Garmin Index Körperanalysewaage&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;software---garmin-connect&quot;&gt;Software - Garmin Connect&lt;/h1&gt;
+&lt;p&gt;Garmin Connect kann man entweder über die &lt;a href=&quot;https://connect.garmin.com/&quot;&gt;Webseite&lt;/a&gt; aufrufen oder per App auf &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.garmin.android.apps.connectmobile&quot;&gt;Android&lt;/a&gt; und &lt;a href=&quot;https://itunes.apple.com/us/app/garmin-connect-mobile/id583446403?mt=8&amp;amp;uo=4&quot;&gt;iOS&lt;/a&gt;.&lt;br /&gt;
+Je nach Garmin Gerät sendet die Uhr die Daten ständig zum Telefon und wenn eine Internetverbindung besteht wird synchronisiert. Oder die Synchronisierung muss manuell ausgelöst werden, z.B. durch langes Drücken auf die Taste, was im sofern ärgerlich ist, weil ein zu kurzes Drücken eine Aktivität (Laufen) startet. Wichtig ist zu wissen: Es muss eine Internetverbindung bestehen. Garmin arbeitet nur sehr eingeschränkt offline, so dass es kaum mehr benutzbar ist.&lt;br /&gt;
+Mir ist vor allem aufgefallen, dass ich morgens aufstehe, meine Uhr beim Frühstück synchronisiere und eine Schlaftracking angezeigt bekomme. Es kommt gelegentlich vor, dass zum Mittag/Abend ganz andere Werte dort stehen. Der Verlauf ist gleich, oder zumindest sehr ähnlich, aber die Start/Stop Phasen springen um teilweise mehrere Stunden und die Schlafphasen werden angepasst.&lt;br /&gt;
+Auf der Startseite sehe ich übersichtlich ganz oben meine heutigen Trainings, darunter meine aktuelle Herzfrequenz, aktuelle Schritte, Intensitätsminuten der aktuellen Woche, heute gelaufene Stockwerke, heutiger Stresslevel, Kalorienbilanz (mit MyFitnesPal verlinkt), mein Gewicht (wenn ich heute auf der Garmin Index stand) und den Schlaf der letzten Nacht. Jedes Feld kann ich antippen für Details oder rechts oben tippen für ein Langzeit-Diagramm (7-Tage, 4 Wochen, 12 Monate). Darunter kommt eine kürzere Zusammenfassung von gestern. Und zum Schluss ein Block mit dem Durchschnitt der wichtigsten Werte über die letzten 7 Tage.&lt;br /&gt;
+Im Menü oben habe ich ein Hamburger Menu (drei waagerechte Striche übereinander), in dem Aktivitäten oder Einstellungen aufgerufen werden können. Daneben befindet sich mein Profilbild, mit einem tippen komme ich in meine Einstellungen zum Profil und Übersicht der Auszeichnungen. Weiter geht es mit dem aktuellen Gerät und mit einem tippen bekomme ich eine Übersicht meiner Geräte und kann welche hinzufügen oder entfernen. Das vierte und letzte Symbol in der Leiste stößt ein Synchronisieren des aktuellen Geräts mit dem Telefon an.&lt;br /&gt;
+Im Menü unten fängt es an mit ‘Mein Tag’, das ist die im vorigen Absatz beschriebene Ansicht. Dann kommen die ‘Challenges’, bei denen jeder seine Verbindungen zu einer Challenge herausfordern kann. Das können über einen frei wählbaren Zeitraum Schritte, Laufen, Radfahren (Kilometer) oder Schwimmen sein. Hier kann der ‘Kalender’ ausgewählt werden, der auch mit O365 synchronisiert werden kann um absolvierte Aktivitäten oder anstehende Trainings automatisch eintragen zu lassen. Der ‘Garmin Coach’ kann in dem Menü anstelle des ‘Newsfeed’ angezeigt werden, wenn ein Trainingsplan erstellt oder ausgewählt wurde. Hier ist der zentrale Einblick in die nächsten Trainings mit kleinen Videos, die zum erreichen des Ziel helfen sollen. Unter ‘Benachrichtigungen’ habe ich gefühlt noch nie etwas gelesen, aber nur weil ich mir alle Ereignisse auch per Email senden lasse und darüber schneller bearbeite. Der ‘Newsfeed’ zeigt die Aktivitäten aller Verbundenen Freunde und Kontakte an und ist über das HamburgerMenü zu erreichen, wenn der ‘Garmin Coach’ in dem unteren Menü den Platz einnimmt.&lt;/p&gt;
+
+&lt;p&gt;Die App ist übersichtlich. Es gibt einen Farbcode, aber es ist nicht zu bunt. Sie wird weiterentwickelt, so dass sogar in der Android App Beschreibung die monatlichen Update beworben stehen. Nach einem Update folgt oft kurze Zeit danach ein zweites. Bisher war ich noch nicht betroffen von einem kurzfristig gefixten Bug …&lt;br /&gt;
+Die App ist nicht nur gut. Zum Beispiel ist nie ganz klar welche Einstellungen beim ersten Synchronisieren gewinnen, zum Beispiel nach dem Zurücksetzen auf Werkseinstellung. Im schlimmsten Fall werden einige aber nicht alle Einstellungen übernommen, das ist schwieriger herauszufinden als die eigentliche Ersteinrichtung. Bei mir war zum Beispiel die Einstellung für ‘Autopause’ auf der ersten vivoactive nicht mehr eingestellt.&lt;/p&gt;
+
+&lt;h2 id=&quot;auf-dem-pcmac---garmin-express&quot;&gt;Auf dem PC/Mac - Garmin Express&lt;/h2&gt;
+&lt;p&gt;Für den PC hat Garmin einen ANT+ USB Stick und die Software ‘Garmin Express’. Das Design erinnert an das unbeliebte Metro-Design mit den Kacheln, man könnte aber Garmin zugestehen, dass es sich mit Navigationsgeräten und Touch Oberflächen auskennt. Garmin Express kann:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Läuft als Service im Hintergrund (Windows/Mac)&lt;/li&gt;
+  &lt;li&gt;Musik verwalten (bei entsprechendem Gerät)&lt;/li&gt;
+  &lt;li&gt;IQ Apps verwalten&lt;/li&gt;
+  &lt;li&gt;Extras und Inhalt - Daten zum Konto und Gerät, plus Handbücher&lt;/li&gt;
+  &lt;li&gt;Garmin Connect - Öffnet die Garmin Connect Seite im Standard Browser
+Ganz klar ist der Fokus von Garmin auf die Verwendung per App.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;garmin-auszeichnungen&quot;&gt;Garmin Auszeichnungen&lt;/h2&gt;
+&lt;p&gt;Bekannt aus Computerspielen, aber auch immer weiter Verbreitet unter dem Stichwort ‘Gamification’ ist das sammeln von Punkten. Mit mehr Punkten erreiche ich höhere Level und kann damit … nichts. Ich habe einfach im Vergleich zu anderen mehr oder weniger gemacht um die Punkte zu erreichen. Ob ich sie erreichen könnte ist damit noch nicht gesagt.&lt;br /&gt;
+Garmin bietet innerhalb der Connect App die Möglichkeit durch verschiedene Aktionen entsprechende Auszeichnungen zu erlangen. Je schwieriger die Herausforderung, desto mehr Punkte bekommt man mit der Auszeichnung. Das Maximum ist 8 Punkte und die wohl einfachste schwierigste Auszeichnung ist der 60-Tage-Meister. Diese 8 Punkte Errungenschaft erhält man, nachdem 60 Tage am Stück das Tagesziel in Schritten erreicht wurde. Viele Errungenschaften gibt es nur einmalig, bei dieser fängt der Zähler aber wieder bei 1 an und nach 180 Tagen hat man schon 16 Punkte. Je einen Punkt gibt es für das Tracken einer beliebigen Aktivität zu Sylvester oder zu Neujahr. Der Spaziergang ist immer eine gute Möglichkeit. Wer, wie ich, unterhalb der Woche jeden Tag pendelt, bekommt auch die eher unbekannte Ereignisse mit, wie zum Beispiel das chinesische ‘Jahr des Schweins’.&lt;br /&gt;
+Während der erste Levelaufstieg noch recht einfach ist, muss man beim zweiten schon genau durch die Trophäen schauen. Um das vierte Level zu erreichen gehört schon eine Portion Geduld und Ambition notwendig. Mit niedrigen Puls sie Intensivminuten (150/200/300 an einem Tag) zu erreichen ist nicht einfach. Als Ausgleich bekommt man das Fernsehen oder Kino schon als Schlafenszeit angerechnet.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Ab hier wird es etwas nerdiger&lt;/p&gt;
+
+&lt;h2 id=&quot;mit-den-daten-weiter-arbeiten&quot;&gt;Mit den Daten weiter arbeiten&lt;/h2&gt;
+&lt;p&gt;Damit man mit den ganzen gesammelten Daten etwas anfangen kann, reicht natürlich so ein kleines Garmin Connect Dashboard nicht aus. Garmin ändert gelegentlich die Authentifizierung der API. Ab und zu muss also das verwendete Programm aktualisiert werden. Das Python Skript &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;garmin-connect-export&lt;/code&gt; von pe-st funktioniert in der Regel sehr gut. Das Repo von kjkjava wird seit 2015 nicht mehr betreut.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python unzip
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/pe-st/garmin-connect-export
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;garmin-connect-export
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./gcexport.py &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt; original &lt;span class=&quot;nt&quot;&gt;--count&lt;/span&gt; all &lt;span class=&quot;nt&quot;&gt;--username&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;email]&lt;span class=&quot;k&quot;&gt;**&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--directory&lt;/span&gt; ~/Domumente/garmin_connect/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Das Format &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Original&lt;/code&gt; kommt als Zip, welches erst entpackt werden muss um an die fit Daten zu kommen(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd ~/garmin_connect/; unzip \*.zip&lt;/code&gt;). Das Format tcx kann sofort z.B. in Excel weiter verarbeit oder &lt;a href=&quot;https://www.goldencheetah.org/&quot;&gt;GoldenCheetah&lt;/a&gt; importiert werden.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;lxc launch &lt;span class=&quot;nt&quot;&gt;--profile&lt;/span&gt; default &lt;span class=&quot;nt&quot;&gt;--profile&lt;/span&gt; gui ubuntu:bionic goldenbuntu
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;lxc &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;goldenbuntu &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--user&lt;/span&gt; ubuntu &lt;span class=&quot;nt&quot;&gt;--login&lt;/span&gt;
+ubuntu@goldenbuntu:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;goldencheetah
+ubuntu@goldenbuntu:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;GoldenCheetah
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Beim ersten Starten muss ein Profil angelegt werden. Je nachdem wie gut die virtualisierte Umgebung funktioniert geht es sofort oder es muss erst abgeschossen und nochmal gestartet werden.&lt;br /&gt;
+In der VM kann der oben genannte Importer genutzt werden, da die VM keinen einfachen Zugang zu den Daten des Hostsystems hat.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="gadgets" /><category term="garmin" /><summary type="html">Hardware - Den Alltag vermessen Angefangen hat meine Frau mit der Garmin vivoactive. Sie wollte aktiver werden und hat sich belesen über den aktuellen Stand der Technik, und sich als Unterstützung die Garmin vivoactive gekauft. Sie hat es mit dem Smartphone gekoppelt und hatte ab dann eine abgespecktes Smartwatch.</summary></entry><entry><title type="html">Kodi und das Fritz!NAS</title><link href="http://0.0.0.0:4000/quickanddirty/2019/04/20/kodi-und-das-fritznas.html" rel="alternate" type="text/html" title="Kodi und das Fritz!NAS" /><published>2019-04-20T07:16:21+00:00</published><updated>2019-04-20T07:16:21+00:00</updated><id>http://0.0.0.0:4000/quickanddirty/2019/04/20/kodi-und-das-fritznas</id><content type="html" xml:base="http://0.0.0.0:4000/quickanddirty/2019/04/20/kodi-und-das-fritznas.html">&lt;h1 id=&quot;fritznas---für-das-kleine-portemonaie&quot;&gt;Fritz!NAS - Für das kleine Portemonaie&lt;/h1&gt;
+&lt;p&gt;Hier in Deutschland besitzt wohl ein grossteil der Internetbenutzer eine Fritz!Box. Diese plastik Router besitzen zwar keine enterprise Funktionen, aber sind für den Heimgebrauch einfach ausreichend.&lt;br /&gt;
+Zusätzlich zum Routing per LAN und WLAN bieten die Boxen einen oder zwei USB Ports um einen externen Datenträger anzubinden. In der letzten Labor Firmware hat AVM sogar mit SMBv3 experiemntiert, aber ist dann in der finalien Version (7.10) doch wieder auf v1 geblieben. Schade.&lt;br /&gt;
+Das nennt AVM Fritz!NAS, hat aber durch die Protokollauswahl (FTP, HTTP, SMB) relativ wenig mit einer ernstzunehmendne Alternative gemein. Selbst Windows 10 muss man erst dazu überreden das veraltete und unsichere SMBv1 zu sprechen, um per ‘Dateifreigabe’ auf sen Fritz!NAS zu kommen.&lt;/p&gt;
+
+&lt;h2 id=&quot;fritzbox-benutzer-einrichten&quot;&gt;Fritz!Box Benutzer einrichten&lt;/h2&gt;
+
+&lt;h1 id=&quot;kodi---multimediacenter&quot;&gt;Kodi - Multimediacenter&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.kvibes.de/mediaelch/&quot;&gt;Kodi&lt;/a&gt; läuft bei mir mit einem &lt;a href=&quot;https://libreelec.tv&quot;&gt;LibreELEC&lt;/a&gt; auf einem Raspberry Pi. LibreELEC ist eine ‘Just enough OS for Kodi’ Distribution, welche die Leistung des Systems für die eigentliche Anwendung (Kodi) bereit hält. Kodi habe ich schon genutzt als der Name noch XBMC (XBox Media Center) war.&lt;br /&gt;
+Kodi spricht fast alles was es an Schnittstellen gibt um auf Dateien zuzugreifen. SMB, NFS, FTP, DNLA, … Das kleinste gemeinsame Vielfache ist hier SMB.&lt;/p&gt;
+
+&lt;h2 id=&quot;mediaelch---kodi-datenbank-pflegen&quot;&gt;MediaElch - Kodi Datenbank pflegen&lt;/h2&gt;
+&lt;p&gt;Kodi bringt Scrapper mit, kleine Dienste, welche einen Titel nehmen, einen passenden Datensatz innerhalb einer Onlinebibliothek, zum Beispiel IMDB, suchen und die Metadaten ziehen. Die Daten werden in den Filmordner als .nfo ud Bilddateien gespeichert. Als Standard nutzt Kodi eine SQLite Datenbank, es besteht aber id eMöglichkeit mehrere Kodi Installation per MySQL (MariaDB/Postgress) Datenbank zentral zu verwalten.&lt;br /&gt;
+Der Scrapper funktionierte anfangs sehr gut, bei einer größeren Sammlung und serien gab es baer immer wieder schwierigkeiten, so dass ich das Pflegen der Metadaten heute bequemer manuell am PC mache. Dazu hilft mir MediaElch.&lt;br /&gt;
+Das Programm gibt es als Ubuntu reposetory, was nicht wirklich aktiv gepflegt wird, aber auf allen getesteten Ubuntu Versionen funktioniert. Mittlerweile nutze ich Debian und daher kompiliere ich es selbst.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;build-essential git libmediainfo-dev libcurl4-openssl-dev
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;qt5-default qtmultimedia5-dev qtscript5-dev qtdeclarative5-dev qtdeclarative5-controls-plugin qtdeclarative5-models-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Quelle: https://www.kodinerds.net/index.php/Thread/49966-MediaElch-Kompilieren/&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; ~/git&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/Komet/MediaElch.git &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;MediaElch
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;build &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;qmake ..
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make &lt;span class=&quot;nt&quot;&gt;-j4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;… Abwarten.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./MediaElch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;arbeitsweise&quot;&gt;Arbeitsweise&lt;/h3&gt;
+&lt;p&gt;Im MediaElch werden die Verzeichnisse konfiguriert, in denen die Medien liegen. Mit ‘Aktualisieren’ aus dme Menü oben werden die Verzeichnisse neu eingelesen und in der Liste links stehen ganz oben die Filme, welche noch keine Metadaten haben. Mit einem rechtsklick auf diesen Namen und aus dem Kontextmenü ‘Informationen holen’, wird ein dialog angezeigt, in dme Vorschläge gemacht werden. Der Film sollte daher im Verzeichnisnamen ‘Titel__Erscheinungsjahr’ gespeichert sein. Damit erhalte ich bisher das beste Ergebnis.&lt;br /&gt;
+Nach einem Doppelklick auf den richtigen Eintrag werden Metadaten und Bilder heruntergeladen. Im anshcluss wird oben im Menü auf ‘Speichern’ geklickt und die Daten werden in das Filmverzeichnis geschrieben.&lt;/p&gt;
+
+&lt;h1 id=&quot;curlftpfs&quot;&gt;curlftpfs&lt;/h1&gt;
+&lt;p&gt;Obwohl ich FTP soweit es geht meide, finde ich SMB unter Linux noch doofer und nutze das Paket &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curlftpfs&lt;/code&gt; um das Fritz!NAS Verzeichnis lokal verfügbar zu machen.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; /mnt/kodi
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo chown &lt;/span&gt;user:user /mnt/kodi
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vim /etc/fstab
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;...]
+curlftpfs#ftp://fritz.nas /mnt/kodi fuse noauto,allow_other,codepage&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;latin1,iocharset&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;utf8,umask&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0022,user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;user:password 0 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;noauto - Nicht beim Booten laden&lt;/li&gt;
+  &lt;li&gt;allow_other - Andere Benutzer erlauben&lt;/li&gt;
+  &lt;li&gt;codepage=&lt;strong&gt;latin1&lt;/strong&gt; - Damit das Fritz!NAS auch umlaute speichert&lt;/li&gt;
+  &lt;li&gt;iocharset=&lt;strong&gt;utf8&lt;/strong&gt; - Lokal sollte man nichts anderes mehr nutzen&lt;/li&gt;
+  &lt;li&gt;umask=&lt;strong&gt;0022&lt;/strong&gt; - Standardberechtigung für angelegte Dateien&lt;/li&gt;
+  &lt;li&gt;user=&lt;strong&gt;user:password&lt;/strong&gt; - user und password natürlich anpassen&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Manchmal funktioniert durch das Routing der Hostname nicht, dann hilft es fritz.box als Hostnamen oder die IP anzugeben.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="QuickAndDirty" /><category term="qnd" /><summary type="html">Fritz!NAS - Für das kleine Portemonaie Hier in Deutschland besitzt wohl ein grossteil der Internetbenutzer eine Fritz!Box. Diese plastik Router besitzen zwar keine enterprise Funktionen, aber sind für den Heimgebrauch einfach ausreichend. Zusätzlich zum Routing per LAN und WLAN bieten die Boxen einen oder zwei USB Ports um einen externen Datenträger anzubinden. In der letzten Labor Firmware hat AVM sogar mit SMBv3 experiemntiert, aber ist dann in der finalien Version (7.10) doch wieder auf v1 geblieben. Schade. Das nennt AVM Fritz!NAS, hat aber durch die Protokollauswahl (FTP, HTTP, SMB) relativ wenig mit einer ernstzunehmendne Alternative gemein. Selbst Windows 10 muss man erst dazu überreden das veraltete und unsichere SMBv1 zu sprechen, um per ‘Dateifreigabe’ auf sen Fritz!NAS zu kommen.</summary></entry><entry><title type="html">Stevens X6 Lite Tour Gent</title><link href="http://0.0.0.0:4000/bike/2019/04/11/Stevens-X6-Lite-Tour.html" rel="alternate" type="text/html" title="Stevens X6 Lite Tour Gent" /><published>2019-04-11T22:17:27+00:00</published><updated>2019-04-11T22:17:27+00:00</updated><id>http://0.0.0.0:4000/bike/2019/04/11/Stevens-X6-Lite-Tour</id><content type="html" xml:base="http://0.0.0.0:4000/bike/2019/04/11/Stevens-X6-Lite-Tour.html">&lt;h1 id=&quot;vorgeschichte-mal-wieder&quot;&gt;Vorgeschichte (mal wieder)&lt;/h1&gt;
+&lt;p&gt;Wer mich kennt, dem ist bekannt, ich fahre gerne Rad. Vor geraumer Zeit ist mein Rad (Parkpre AluComp 17”) in Hamburg gestohlen worden. Lange Zeit habe ich mich mit Inline Skates fortbewegt und beim Aufräumen des Keller meiner Schwester fielen 2 Räder ab.&lt;br /&gt;
+Ein fast ungenutztes ‘Ghost Cross 1300’ und ein sehr zusammengestückeltes ‘No Saint San Andreas’. Das Ghost war zwar angenehm klein (47cm Rahmen), aber ich konnte mich nie an die schmalen 28” Reifen gewöhnen. Es fehlte an Agilität. Das NoSaint dagegen war ein in die Jahre gekommenes kompaktes Downhill Rad mit Cross Country touch. Die 2,5” Bereifung auf dem 60cm Lenker mit Mag21 Gabel und RockShox Dämpfer machten einiges her. Die Deore XT Gruppe von ca ‘94-‘97 arbeitete zuverlässig.&lt;br /&gt;
+Ich fahre fünf Tage die Woche ca 2x 7km. Die in die Jahre gekommenen Teile wurden auch nicht stabiler, so entschied ich mich für ein neues Fahrrad.&lt;/p&gt;
+
+&lt;h2 id=&quot;200-ebikes&quot;&gt;200 eBikes&lt;/h2&gt;
+
+&lt;p&gt;Die Entscheidung ist viel früher als die Umsetzung gefallen. Damals kamen gerade die ersten 2018er Modelle raus. Anfangs war ich sehr für ein E-Bike. Ungeachtet der politischen Diskussion dachte ich auch an schlechten Tagen damit noch gut voran zu kommen.&lt;br /&gt;
+Gefühlte 200 Probefahrten und 6 Monate später kam die Entscheidung dagegen. Ich bin gut trainiert und fahre die meiste Zeit jenseits der 25km/h. Mit einigen E-Bikes komme ich auch ohne Unterstützung auf 32km/h, aber bei der Trittfrequenz lässt sich das Tempo nicht lange halten. Zudem muss Motor und Akku auch im Ausgeschalteten Zustand bewegt werden und die 25kg sind spürbar.&lt;/p&gt;
+
+&lt;p&gt;Aber das wichtigste Argument dagegen war vermutlich die Probefahrt mit Timos 27,5” Mountainbike. Das war in Hessen, am Biedenkopf. Die Fahrt war nicht lang, ca 15 KM in 40 Minuten, darunter 500 Höhenmeter am Schluss. Timo ist ein ganzes Stück größer als ich, dennoch habe ich nichts verstellt. Immerhin wollte ich ja Argumente gegen das Rad haben …&lt;br /&gt;
+Wie gehabt fehlte es an Agilität, aber diese habe ich auf der Strecke gar nicht gebraucht. Auf den Waldwegen kam ich gut von der Stelle, auf Asphalt musste ich bremsen, da ich die Strecke und den weiteren Verlauf nicht kannte. Aber nach kurzer Eingewöhnung konnte ich nicht nur fahren, sondern auch heizen.&lt;/p&gt;
+
+&lt;h1 id=&quot;stevens-kommt-ins-spiel&quot;&gt;Stevens kommt ins Spiel&lt;/h1&gt;
+
+&lt;p&gt;Ein paar nicht-Elektrische Räder bin ich zur Probe gefahren, aber überzeugt hat mich nichts. Das &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cube NuRoad EXC 2018&lt;/code&gt; (Gravel mit Shimano 105er Gruppe) hat mir sehr gut gefallen, aber es war ausverkauft oder der Händler war doof.&lt;br /&gt;
+Einen Tag im Sommerurlaub waren wir in Essen und in der brüllenden Hitze konnte man nicht viel erledigen. Die Radläden sind weit auseinander, so dass zumindest zwischen den Stationen die Klimaanlage vom Auto hilft. Diese Theorie wurde aber nie bestätigt.&lt;/p&gt;
+
+&lt;p&gt;Im ersten Laden, die &lt;a href=&quot;https://bergetappe.de&quot;&gt;Bergetappe&lt;/a&gt; in Kupferdreh, stand ein Stevens X6. Es ist ja überhaupt nicht mein Rad. Es sieht aus wie ein Herrenrad, mit dem Aktentaschenträger am Wochenende mit der Familie einen Ausflug machen.&lt;br /&gt;
+Das dort gesehene Rad war schon verkauft und wurde gerade aufgebaut. Aber ein Kollege aus der Werkstatt fährt das Rad in einer besseren Ausstattung. Und auf diesem durfte ich eine Probefahrt machen.&lt;br /&gt;
+Wie gesagt, es war elendig heiß, meine Ortskenntnisse sind beschränkt und in der Mittagssonne war kaum Schatten zu finden. Also blieb es bei 5 Runden auf dem Parkplatz. Präzise Schaltung, enge Kurven, angenehme Sitzposition und trotz der Ausstattung (Licht, Nabendynamo, Gepäckträger) sehr leicht.&lt;br /&gt;
+Das Rad hat keine Federung, das gefällt mir sehr gut. Leider wurde vorne eine Aluminium Gabel verbaut, die wesentlich steifer ist als Carbon. Vermutlich lässt sich das nur im direkten Vergleich merken, bisher fahre ich gut.&lt;/p&gt;
+
+&lt;h3 id=&quot;300km-linkes-pedal&quot;&gt;300km, linkes Pedal&lt;/h3&gt;
+
+&lt;p&gt;Nach 300 KM gab das linke Pedal auf.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pedale ATB Alu Comp Reflex&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Auf Amazon wird es für 13-20e Angeboten. Die Bewertungen (4,1 Sterne) sind gar nicht mal so übel, doch die negativen Rezensionen beschrieben alle das gleiche: Nicht für Vielfahrer geeignet.&lt;/p&gt;
+
+&lt;h3 id=&quot;500km-3-monate-erste-inspektion&quot;&gt;500km, 3 Monate, erste Inspektion&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Das oben angesprochene Pedal wurde anstandslos getauscht. Jetzt fahre ich &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Union Pedale 600&lt;/code&gt; von Marwi. Amazon sagt 13e das Paar.&lt;/li&gt;
+  &lt;li&gt;Der Lenker &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lenker Oxygen Driver&lt;/code&gt; ist mit 640mm deutlich zu breit und wurde um 4cm gekürzt.&lt;/li&gt;
+  &lt;li&gt;Die Schaltzüge laufen in engen Bögen, da die Führung unten so ausgelegt ist. Das finde ich doof, aber ist wohl so vorgesehen.&lt;/li&gt;
+  &lt;li&gt;Die V-Brake hinten hat einen 90° Winkel, da komme ich immer mit dem Bein dran. Den muss ich bei Zeiten gegen einen 135° Winkel tauschen. Hätte ich doch Scheibenbremsen nehmen sollen?&lt;/li&gt;
+  &lt;li&gt;Die Lampe vorne &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B+M IQ Avy T Senso+ 40 Lux&lt;/code&gt; klappert sporadisch. Das konnte der Mechaniker nicht bestätigen, aber seit dem Service ist es weg.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1300km-linkes-pedal&quot;&gt;1300km, linkes Pedal&lt;/h3&gt;
+
+&lt;p&gt;Das linke Pedal ist wieder ausgeschlagen und hat ein Spiel von etwa 5mm. Später sind es 7mm und die Pedale bleibt gelegentlich stecken, so dass sie sich mit der Kurbel und nicht mehr frei dreht.&lt;br /&gt;
+Nach 1600 km bin ich wieder in Essen und der Austauch klappt ohne Probleme. Leider nur gegen die gleichen, weil “die ja so gut sind”. Ich bezweifle dass sie Pendlertauglich sind.&lt;br /&gt;
+die Pedalen liegen nun unangetastet in meinem Werkzeugkoffer und ich habe meine alten &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VP-133&lt;/code&gt; Klickpedale aus dem Koffer wieder reaktiviert. Sicher nicht die hochwertigsten, aber die haben mich auch auf dem MTB lange Zeit unterstützt. Nur hatte ich sie vor dem Diebstahl gegen Shimano Pedale ohne Käfig getauscht.&lt;/p&gt;
+
+&lt;h3 id=&quot;1700km-8-monate-die-reifen&quot;&gt;1700km, 8 Monate, die Reifen&lt;/h3&gt;
+
+&lt;p&gt;Ich fahre das Rad nun etwas über ein halbes Jahr. In der Zeit mussten die Reifen 8x (2x vorn, 6x hinten) geflickt werden, hinten habe ich bereits den Schlauch ersetzt (Schnitt/Riss an der Naht (seitlich?), doof zu flicken).&lt;br /&gt;
+Ich fahre die &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Schwalbe G-One Allround Performance / 35-622&lt;/code&gt; auf 5 Bar. Beim letzten reparieren habe ich 3 Steinchen und eine Scherbe aus dem Mantel geholt. Diesen möchte ich als ‘nicht für Pendler geeignet’ bezeichnen.&lt;br /&gt;
+Den einen Platten hinten habe ich zu spät bemerkt, so dass ich mit der &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Oxygen PRO A19&lt;/code&gt; Felge auf den Kantstein aufgesetzt bin. Mittlerweile habe ich es wieder so zentrieren können, dass der Bremshebel-Weg geringer als 2 cm ist.&lt;/p&gt;
+
+&lt;p&gt;Der Hinterreifen ist in der Mitte schon deutlich runter. Bis 2000km möchte ich den noch fahren, dann kommt ein Unplattbarer Reifen. Leider mit mehr Gewicht.&lt;/p&gt;
+
+&lt;h2 id=&quot;ausstattung&quot;&gt;Ausstattung&lt;/h2&gt;
+&lt;p&gt;An der Ausstattung habe ich nichts individualisiert. Anfangs überlegte ich gleich Clickpedale zu nehmen oder gleich andere Bremsblöcke in das Cardrige zu stecken. Aber auf der anderen Seite ist das Rad so ausgeliefert und ich kenne mich mit der Qualität der aktuellen Produkte zu wenig aus.&lt;/p&gt;
+
+&lt;h3 id=&quot;rahmen&quot;&gt;Rahmen&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Rahmen&lt;/strong&gt; Aluminium 6061 DB&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Gabel&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;STEVENS S-Lite Aluminium&lt;/code&gt; (Shaft 1 1/8”, Achse: QR10x135, ungefedert)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Steuersatz&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;STEVENS AH 1 1/8&quot;&lt;/code&gt; (Oben: ZS44/28,6 - Unten: ZS44/30)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bremsen&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano Deore&lt;/code&gt; (BR-T610)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;laufräder&quot;&gt;Laufräder&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Naben&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano Deore&lt;/code&gt; (DH-C3000-3N-QR - Nabendynamo vorne, FH-T610 hinten)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Felgen&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Oxygen PRO A19&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Reifen&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Schwalbe G-One Allround Performance&lt;/code&gt; (35-622)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;antrieb&quot;&gt;Antrieb&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Kurbelsatz&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano Deore Trekking&lt;/code&gt; (48-36-26, Tretlager BSA 68mm Hollowtech II)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Umwerfer&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano Deore Trekking&lt;/code&gt; (FD-T6000-H3)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Schaltwerk&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano Deore Trekking Shadow&lt;/code&gt; (RD-T6000-SGS, 10-fach, 47 Zähne)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Kette&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano CN-HG54&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Kassette&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano CS-HG500&lt;/code&gt; (10 Fach, 11-12-14-16-18-20-22-25-28-32)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pedale&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ATB Alu Comp Reflex&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Entfaltung&lt;/strong&gt;  1.76 - 9.47 m, 3x10 (ca. 500%)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cockpit&quot;&gt;Cockpit&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Lenker&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Oxygen Driver&lt;/code&gt; (640mm, 9° Kröpfung, 13mm Rise, 31,8mm Klemmung)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vorbau&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Oxygen Driver&lt;/code&gt; (31,8mm Klemmung, 6° Winkel)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sattel&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Oxygen Havoc&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sattelstütze&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Oxygen Driver&lt;/code&gt; (350mm Länge, 27,2mm Durchmesser, 100mm min. Einstecktiefe)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Schalthebel&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano Deore&lt;/code&gt; (SL-M6000)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bremshebel&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shimano Deore Trekking&lt;/code&gt; (BL-T611, 3 Finger)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sonstiges&quot;&gt;Sonstiges&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Beleuchtung&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scheinwerfer B+M IQ Avy T Senso+&lt;/code&gt; 40 Lux&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Rücklicht&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tec Small&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Zubehör&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Racktime Light-it Gepäckträger&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SKS Schutzbleche&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;daten&quot;&gt;Daten&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Gewicht&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;13,0 kg&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Größe&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;52 cm&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Farbe&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Velvet Black&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Zul. Gesamtgewicht&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;130 kg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;zusätzlich&quot;&gt;Zusätzlich&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Fahrradtasche&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ortlieb Back-Roller Orange Line&lt;/code&gt; (QL1)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Klingel&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Standard Miniklingel&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;klamotten&quot;&gt;Klamotten&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sichtbarkeit&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ikea Beskydda&lt;/code&gt; Warnweste (L/XL, mit Reisverschluss)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Helm&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alpina Panorama LE&lt;/code&gt; (56-59cm, 260gramm)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Brille&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Performer PS03_207&lt;/code&gt; (Selbsttönende Gläser mit Stärke)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Schuhe&lt;/strong&gt; Divers (bei Regen mit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vaude Gaiter&lt;/code&gt; Gamaschen, neongelb)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Handschuhe&lt;/strong&gt; Sommer: Laufhandschuhe, Winter: Neopren Handschuhe&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hals&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Buff&lt;/code&gt; Multifunktionstuch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Quelle: &lt;a href=&quot;https://www.stevensbikes.de/2018/index.php?bik_id=112&amp;amp;cou=DE&amp;amp;lang=de_DE&quot;&gt;Stevens Bikes&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;fazit&quot;&gt;Fazit&lt;/h1&gt;
+&lt;p&gt;Nach über 1700km auf dem Rad bin ich doch sehr erstaunt, dass ich weiterhin in der Klasse 10-15kg bleibe, aber die Geometrie von 17” (26” Reifen) auf 52cm (28” Reifen) mittlerweile kein Problem mehr ist.&lt;br /&gt;
+Den gesteckten Steuersatz habe ich sehr tief eingestellt, die spacer aber noch über den Vorbau gelassen, so dass ich jeder Zeit wieder eine aufrechtere Position einstellen kann.&lt;br /&gt;
+Die Deora V-Brakes sind schon mit Cardrige System gekommen, mal sehen was für Schuhe ich mir nächsten Monat kaufen werde. Wie die Reifen ist das ausgelieferte Gummi nicht wirklich für Pendler geeignet.&lt;br /&gt;
+Die Reifen haben sicher ien geringeres Gewicht, aber der unplattbare Schwalbe Marathon hat seine vorzüge, wenn man Wert darauf legt nicht mindestens einmal im Quartal nach Hause zu laufen.&lt;br /&gt;
+Die SKS Schutzbleche sind schön, aber bisher hat sich noch kein Stock zwischen Reifen und Schutzblech verklemmt. Ob das Kunststoff das aushält wird sich noch zeigen. Für die Rückleuchte ist das Kabel im Schutzblech verlegt.&lt;br /&gt;
+Am Aluminium Gepäckträger sind mittlerweile schleifspuren von den Gepäcktaschen zu fühlen. Da im Gepäck öfter ein Laptop und eine komplette Arbeits-Garnitur (im Winter mit Schuhen) liegt, ist er nicht leicht. Wie sich das auf Dauer verhält werde ich beobachten.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="bike" /><category term="pendeln" /><category term="fahrrad" /><category term="bike" /><category term="mdrza" /><summary type="html">Vorgeschichte (mal wieder) Wer mich kennt, dem ist bekannt, ich fahre gerne Rad. Vor geraumer Zeit ist mein Rad (Parkpre AluComp 17”) in Hamburg gestohlen worden. Lange Zeit habe ich mich mit Inline Skates fortbewegt und beim Aufräumen des Keller meiner Schwester fielen 2 Räder ab. Ein fast ungenutztes ‘Ghost Cross 1300’ und ein sehr zusammengestückeltes ‘No Saint San Andreas’. Das Ghost war zwar angenehm klein (47cm Rahmen), aber ich konnte mich nie an die schmalen 28” Reifen gewöhnen. Es fehlte an Agilität. Das NoSaint dagegen war ein in die Jahre gekommenes kompaktes Downhill Rad mit Cross Country touch. Die 2,5” Bereifung auf dem 60cm Lenker mit Mag21 Gabel und RockShox Dämpfer machten einiges her. Die Deore XT Gruppe von ca ‘94-‘97 arbeitete zuverlässig. Ich fahre fünf Tage die Woche ca 2x 7km. Die in die Jahre gekommenen Teile wurden auch nicht stabiler, so entschied ich mich für ein neues Fahrrad.</summary></entry><entry><title type="html">Nerf - Eine Uebersicht</title><link href="http://0.0.0.0:4000/nerf/2019/04/11/nerf-uebersicht.html" rel="alternate" type="text/html" title="Nerf - Eine Uebersicht" /><published>2019-04-11T20:04:37+00:00</published><updated>2019-04-11T20:04:37+00:00</updated><id>http://0.0.0.0:4000/nerf/2019/04/11/nerf---uebersicht</id><content type="html" xml:base="http://0.0.0.0:4000/nerf/2019/04/11/nerf-uebersicht.html">&lt;p&gt;Als ich meine Frau kennengelernt habe fand sie Waffen und waffen-ähnliche Spielzeuge aller Art doof. Ich als überzeugter Pazifist habe dafür volles Verständnis.&lt;br /&gt;
+In München durfte ich in die heiligen Hallen von Google und dort war an jedem Schreibtisch ein Nerf-Blaster zu sehen. Das Nerf-Blaster eher als Spielzeug, denn als Waffe gesehen werden, machen die poppigen Farben deutlich. Es gibt verschiedenste Sportarten, bei denen ‘geschossen’ wird.&lt;br /&gt;
+Der Tag, an dem ich Avira verlassen habe, an dem hat mein Team mir eine Nerf geschenkt. Schnell war klar, dass der Kurze damit nicht spielen sollte. Eines Tages nahm meine Frau den Blaster aus dem Regal und feuerte 25 Klett-Darts durch ca. 15m Flur. Und hatte Spass dabei.&lt;br /&gt;
+Kurz darauf folgte der erste Kauf bei Toys’R’Us und wir hatten alle drei eine. Dann wurden es immer mehr.&lt;/p&gt;
+
+&lt;p&gt;Eine Liste unserer Sammlung:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Serie&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Schuss&lt;/th&gt;
+      &lt;th&gt;Bemerkung&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Swarmfire&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20&lt;/td&gt;
+      &lt;td&gt;Elektrisch, Klett-Darts&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;N-Strike Elite&lt;/td&gt;
+      &lt;td&gt;Retaliator&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Magazin&lt;/td&gt;
+      &lt;td&gt;die Transparent-Blaue ‘Iced’ Variante&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;N-Strike Elite&lt;/td&gt;
+      &lt;td&gt;Jolt&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt;‘Zirpende Grille’&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;N-Strike Elite&lt;/td&gt;
+      &lt;td&gt;Firestrike&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt;Mit ‘Laserpointer’ zum Zielen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;N-Strike Elite&lt;/td&gt;
+      &lt;td&gt;Strongarm&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt;Trommelmagazin&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zombie Strike&lt;/td&gt;
+      &lt;td&gt;Hammershot&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt;Einhändig zu spannen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zombie Strike&lt;/td&gt;
+      &lt;td&gt;Doublestrike&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt;Einhändig zu spannen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zombie Strike&lt;/td&gt;
+      &lt;td&gt;Sidestrike&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt;Mit Holster&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;N-Strike Mega&lt;/td&gt;
+      &lt;td&gt;Magnus&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt;Mega Darts (20g, rot)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Vortex&lt;/td&gt;
+      &lt;td&gt;Vigilon&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt;Disk&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Vortex&lt;/td&gt;
+      &lt;td&gt;Lumitron&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10&lt;/td&gt;
+      &lt;td&gt;Leuchtende Disks (Aufladen im Magazin)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Serie&lt;/td&gt;
+      &lt;td&gt;Name&lt;/td&gt;
+      &lt;td&gt;Schuss&lt;/td&gt;
+      &lt;td&gt;Bemerkung&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Rebelle&lt;/td&gt;
+      &lt;td&gt;Pink Crush&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;N-Strike&lt;/td&gt;
+      &lt;td&gt;Barricade&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Der Fön.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Serie&lt;/td&gt;
+      &lt;td&gt;Name&lt;/td&gt;
+      &lt;td&gt;Schuss&lt;/td&gt;
+      &lt;td&gt;Bemerkung&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;N-Strike Elite&lt;/td&gt;
+      &lt;td&gt;Rayven CS-18&lt;/td&gt;
+      &lt;td&gt;Magazin&lt;/td&gt;
+      &lt;td&gt;Leuchtende Darts (Aufladen im Magazin)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Vortex&lt;/td&gt;
+      &lt;td&gt;Proton&lt;/td&gt;
+      &lt;td&gt;Magazin&lt;/td&gt;
+      &lt;td&gt;Disk&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Wir haben auch elektrische Nerf Blaster probiert, aber immer waren sie zu laut und benötigten lange um ‘auf Schwung’ zu kommen. Die mechanischen gefallen uns bei weiten besser.&lt;br /&gt;
+Was ich unbedingt noch haben möchte ist ein Bogen. Die ‘Rebel’ Serie wird nicht mehr fortgesetzt, aber einen Zombie Strike Bogen (mit Pfeilen, nicht mit Darts) werde ich mir noch zulegen.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="nerf" /><category term="nerf" /><category term="blaster" /><summary type="html">Als ich meine Frau kennengelernt habe fand sie Waffen und waffen-ähnliche Spielzeuge aller Art doof. Ich als überzeugter Pazifist habe dafür volles Verständnis. In München durfte ich in die heiligen Hallen von Google und dort war an jedem Schreibtisch ein Nerf-Blaster zu sehen. Das Nerf-Blaster eher als Spielzeug, denn als Waffe gesehen werden, machen die poppigen Farben deutlich. Es gibt verschiedenste Sportarten, bei denen ‘geschossen’ wird. Der Tag, an dem ich Avira verlassen habe, an dem hat mein Team mir eine Nerf geschenkt. Schnell war klar, dass der Kurze damit nicht spielen sollte. Eines Tages nahm meine Frau den Blaster aus dem Regal und feuerte 25 Klett-Darts durch ca. 15m Flur. Und hatte Spass dabei. Kurz darauf folgte der erste Kauf bei Toys’R’Us und wir hatten alle drei eine. Dann wurden es immer mehr.</summary></entry><entry><title type="html">LXC - Lokal virtualisieren</title><link href="http://0.0.0.0:4000/server/2019/03/31/lxc-lokal-gui-apps.html" rel="alternate" type="text/html" title="LXC - Lokal virtualisieren" /><published>2019-03-31T20:10:13+00:00</published><updated>2019-03-31T20:10:13+00:00</updated><id>http://0.0.0.0:4000/server/2019/03/31/lxc---lokal-gui-apps</id><content type="html" xml:base="http://0.0.0.0:4000/server/2019/03/31/lxc-lokal-gui-apps.html">&lt;p&gt;Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen.
+Ein sehr guter &lt;a href=&quot;https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/&quot;&gt;Blog Artikel&lt;/a&gt; zum Thema.&lt;/p&gt;
+
+&lt;h2 id=&quot;snaplxc-installieren&quot;&gt;Snap/LXC installieren&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Neuere Version (3.x) gibt es über snap &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;# apt install snapd&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Alte Version deinstallieren, neue installieren &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;# apt purge lxd; snap install lxd&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;# adduser [benutzer] lxd&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;LXC einrichten &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;# lxc init&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Pool als &lt;strong&gt;dir&lt;/strong&gt; definieren. Kein IPv6, wenn nicht absolut notwendig.&lt;/li&gt;
+  &lt;li&gt;Rechte setzen &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ echo &quot;root:$UID:1&quot; | sudo tee -a /etc/subuid /etc/subgid&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget https://LupusE.github.io/misc/lxdguiprofile.txt&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Profil anlegen &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ cat lxdguiprofile.txt | lxc profile edit gui&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;VM erstellen &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ lxc launch --profile default --profile gui ubuntu:trusty oldbuntu&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;In VM einloggen &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ lxc exec oldbuntu -- sudo --user ubuntu --login&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;aufräumen&quot;&gt;Aufräumen&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;VM verlassen &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ exit&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;VM beenden &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ lxc stop oldbuntu&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;VM löschen &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ lxc delete oldbuntu&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Benjamin Moeller</name></author><category term="server" /><category term="server" /><category term="lxd" /><category term="linux" /><summary type="html">Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen. Ein sehr guter Blog Artikel zum Thema.</summary></entry></feed>

@@ -1,0 +1,25 @@
+<h1 id="warum-lxc">Warum LXC?</h1>
+<p>Der meist zitierte Vorteil von LXC ist womöglich, dass es sehr Hardwarenah arbeitet und durch den geringen Overhead (man spricht von gerade mal 7%) eine sehr hohe Dichte mitbringt.<br />
+Das heißt mehr Leistung auf der VM pro Hardware. Die Leistung wird nicht mehr vom Hostmanagement gefressen.</p>
+
+<p>Nachdem ich einige Tests mit conjure gegen die Wand gefahren habe, weis ich nun, dass 8 GB Arbeitsspeicher nicht ausreichend sind. Damit ist conjure auf Eis gelegt.</p>
+
+<h2 id="ubuntu-server-aufsetzen">Ubuntu Server aufsetzen</h2>
+<p>Ubuntu steuert ganz klar in die Cloud. Und anstelle von <code class="language-plaintext highlighter-rouge">apt</code> wird auch <code class="language-plaintext highlighter-rouge">snap</code> bevorzugt. Ob ich das gut finde wird sich noch zeigen.</p>
+<ol>
+  <li>Image herunterladen</li>
+  <li>mit dd auf einen USB Stick kopieren</li>
+  <li>vom USB Stick booten</li>
+  <li>Installation durchlaufen lassen</li>
+  <li>Bei der Frage nach den Komponenten alles deaktivieren</li>
+  <li><code class="language-plaintext highlighter-rouge">sudo apt purge lxd lxd-client</code></li>
+  <li><code class="language-plaintext highlighter-rouge">snap install lxd</code></li>
+</ol>
+
+<h2 id="lxc-einrichten">LXC einrichten</h2>
+<p>Mit <code class="language-plaintext highlighter-rouge">$ sudo lxc init</code> erhalten wir einen Dialog, in dem wir die wichtigsten Parameter für ein Grundsystem angeben können. Soll später auf Docker/OpenStack gebaut werden, sollte <code class="language-plaintext highlighter-rouge">IPv6</code> ausgeschaltet sein. Auch das Filesystem muss in den Fall auf <code class="language-plaintext highlighter-rouge">dir</code> konfiguriert werden.</p>
+
+<p>Die danach erstellten VMs haben direkt Zugriff auf das Internet. Damit sie auch von außen erreichbar sind, habe ich eine Netzwerkbrücke eingerichtet.</p>
+
+<h2 id="status">Status</h2>
+<p>Es gibt eine VM, welche mittels ssh (PubKey) erreichbar ist. Jetzt räume ich noch etwas auf und schreibe dann wie die Infrastruktur aufgebaut ist.</p>

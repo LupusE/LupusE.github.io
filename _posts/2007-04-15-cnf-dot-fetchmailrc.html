@@ -1,0 +1,45 @@
+---
+status: published
+published: true
+title: CNF - dot.fetchmailrc
+author: Benjamin Moeller
+date: 2007-04-15 12:43:08 UTC
+categories: [linux]
+tags: [cnf, linux]
+comments: []
+---
+<p>Ein Beispiel, wie eine .fetchmailrc aussehen kann.</p>
+<blockquote><p>poll pop3.web.de with proto POP3</p></blockquote>
+<p>abholen, von server, mit, protokoll</p>
+<blockquote><p>user "[remote user]" there with password "[pass]" is [localuser] here</p></blockquote>
+<p>benutzer, "login user", da mit passwort, "login passwort", ist, der benutzer, hier</p>
+<blockquote><p>ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"</p></blockquote>
+<p>ssl -> man sollte eMailverkehr verschluesseln! Denn auch das Passwort wirt im Klartext uebertragen!<br />
+sslfingerprint -> Der Schluessel der Servers, wird angegeben bei 'fetchmail -v pop3.web.de'</p>
+<blockquote><p>keep</p></blockquote>
+<p>Die eMails auf dem Server belassen. Mehr Optionen  -> man fetchmailrc</p>
+<p># ~/.fetchmailrc<br />
+# Programm zum abholen der Mails von verschiedenen Mailservern</p>
+<p>set postmaster "[user]"		#postmaster/root@... geht an [user] (für lokale Dienste)<br />
+set bouncemail<br />
+set properties ""		  #möglichkeiten wie 'keep' nachzulesen in der Manpage<br />
+#sslcertck<br />
+#sslcertpath /home/[user]/.certs</p>
+<p>poll pop3.web.de with proto POP3<br />
+	user "[remote user]" there with password "[pass]" is [localuser] here<br />
+	ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"<br />
+#	keep</p>
+<p>poll pop.gmx.net with proto POP3<br />
+	user "[remoteuser]@gmx.de" there with password "[pass]" is [localuser] here<br />
+#      ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"<br />
+#	keep</p>
+<p>#poll mail.domain.de with proto POP3<br />
+#	user "[remote login]" there with password "[password]" is [local user] here<br />
+#	ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"<br />
+#	keep</p>
+<p>#poll pop.t-online.de with proto POP3<br />
+#	user "[user]@t-online.de" there with password "[pass]" is [local user] here</p>
+<p>mda '/usr/bin/procmail -f fetchmail'	# die direkte abgabe an procmail.</p>
+<p># schema:<br />
+#poll mail.server.de with proto POP3<br />
+#        user "remote-login" there with password "passwort" is lokaler-user here</p>
