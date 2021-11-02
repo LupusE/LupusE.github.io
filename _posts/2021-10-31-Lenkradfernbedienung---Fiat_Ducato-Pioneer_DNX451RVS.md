@@ -13,7 +13,7 @@ comments: []
 
 ## Ausgangslage
 
-Meine Frau und ich haben uns eien [4Pfoten-Mobile Dogliner TE740](https://www.4pfoten-mobile.de/) gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkaeufer, Joern Zimmermann vom Standort Neumuenster, war so nett und hat fuer uns die fehlenden Teile in Erfahrung gebracht:
+Meine Frau und ich haben uns ein [4Pfoten-Mobile - Dog-Liner TE 740](https://www.4pfoten-mobile.de/) gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkaeufer, [Joern Zimmermann](www.4pfoten-mobile.de/neumuenster/) vom Standort Neumuenster, war so nett und hat fuer uns die fehlenden Teile in Erfahrung gebracht:
 * Kabelbaum: CAW-CCOMFI1
 * Steuerbox: CAW-COMUN2
 Bei [Toms-Car-Hifi](https://www.toms-car-hifi.de/) bestellt, nach 3 Tagen war alles da und die OP konnte beginnen.
