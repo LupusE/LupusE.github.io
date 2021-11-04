@@ -1,0 +1,35 @@
+# ~/.webcam
+# ein prog, welches mit hilfe einer webcam bilder automatisch auf einen webserver läd.
+
+[ftp]
+host = ftp.domain.org		#die url des ftp-servers
+user = [ftpuser]		#der login-name
+pass = [ftppass]		#das login-passwort
+
+dir  = /webcam/			#das remote verzeichniss
+file = webcam.jpg		#die remote file
+tmp  = uploading.jpg		#die locale file
+passive = 1			#bei 1 passive ftp
+debug = 0			#debug informationen werden beim upload ausgegen, wenn 1
+auto = 0			#holt sich die logindaten aus ~/.netrc
+local = 0			#bei 1 wird lokal gespeichtert, nicht auf ftp
+ssh = 0				#bei 1 wird ssh anstelle von ftp genutzt
+
+[grab]
+device = /dev/video0
+text = "webcam %Y-%m-%d %H:%M:%S" #text, der im bic eingeblendet wird (beschreibung jahr-monat-tag std-min-sek)
+infofile = filename		#'text' kann auch aus einer datei gelesen werden
+width = 320
+height = 240
+delay = 30			#zeitraum in sek zwischen den aktualisierungen
+input = Camera			#von welchem video-device soll geholt werden
+norm = pal			#die verwendete TV norm
+rotate = 0			#im urzeigersinn 90° gedreht (0, 1, 2, 3)
+top = 0
+left = 0
+bottom = -1
+right = -1
+quality = 75			#die verwendete jpg qualität (100=unkomprimiert)
+trigger = 0			#bei 1 wird das bild nur hochgeladen, wenn sich was geändert hat.
+once = 0			#bei 1 wird nur ein bild hochgeladen und das programm endet.
+

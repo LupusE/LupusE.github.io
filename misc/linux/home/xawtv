@@ -1,0 +1,112 @@
+[global]
+#fullscreen 	= 1280x1024
+#fullscreen 	= 800x600
+#fullscreen 	= 1152x864
+#fullscreen 	= 768x576
+mixer		= line1
+
+[defaults]
+source		= television
+norm    	= pal
+# capture = grabdisplay | overlay | off
+capture 	= overlay 
+# input = Television | Composite1 | Composite2 | SVHS
+#input 		= 
+# audio = mono | stereo | lang1 | lang2
+audio 		= stereo
+# osd = on | off
+osd 		= on
+
+[viva]
+channel	= SE12
+
+[mtv]
+channel	= SE7
+
+[onyx.tv]
+channel	= S22
+
+[ard]
+channel	= E6
+
+[sat1]
+channel	= E3
+
+[n-tv]
+channel	= E10
+
+[okkiel]
+channel	= E9
+
+[pro7]
+channel	= SE14
+
+[kabel1]
+channel	= SE6
+
+[ndr]
+channel	= E7
+
+[vox]
+channel	= SE10
+
+[3sat]
+channel	= SE11
+
+[eurosport]
+channel	= SE15
+
+[dsf]
+channel	= E12
+
+[tm3]
+channel	= SE20
+
+[qvc]
+channel	= S25
+
+[nbc]
+channel	= S24
+
+[phönix]
+channel	= SE8
+
+[eurosport]
+channel	= S21
+
+[br3]
+channel	= SE17
+
+[euronews]
+channel	= E5
+
+[zdf]
+channel	= E8
+
+[pro7]
+channel	= E11
+
+[dsf]
+channel	= SE13
+
+[super rtl]
+channel	= S23
+
+[kabel1]
+channel	= SE9
+
+[cnn]
+channel	= SE4
+
+[dr1]
+channel	= E4
+
+[tv2]
+channel	= SE19
+
+[tv5]
+channel	= SE16
+
+[rtl2]
+channel	=E12
+

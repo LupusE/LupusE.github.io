@@ -1,0 +1,84 @@
+der blaue tux -- hier geht es um das spielen mit bluetooth.
+
+1. der bluetooth stack.
+
+ a. affix - nokia hatte mal angefangen einen stack zu schreiben, diesen aber verworfen und zu opensource gemacht. netter versuch, aber darauf gehe ich nicht weiter ein
+ b. bluez - die erste wahl in sachen bluetooth unter linux. es funktioniert, was will man mehr?
+
+2. der bluetooth kernel.
+
+$ cd /usr/src/linux; make menuconfig
+Linux Kernel v2.6.13.1 Configuration
+[...]
+Networking  --->
+<M>   Bluetooth subsystem support  --->
+<M>   L2CAP protocol support  -- haupt kommunikations schicht
+<M>   SCO links support  -- audio transport schicht
+<M>   RFCOMM protocol support  -- die serielle schnittstelle
+[*]     RFCOMM TTY support  -- eine ser. konsole für bt
+<M>   BNEP protocol support  -- ein mini netzwerk aufbauen
+<M>   CMTP protocol support  -- isdn (capi) für bt
+<M>   HIDP protocol support  -- tastatur und maus über bt
+Bluetooth device drivers  ---> 
+<M> HCI USB driver  -- für die meisten usb bt adapter passend
+[*]   SCO (voice) support  -- mehr spielzeug
+[... wollen wir nicht ...]
+Device Drivers  --->
+USB support  --->
+---   USB Bluetooth TTY can only be used with disabled Bluetooth subs...
+[... wollen wir nicht ...]
+
+3. das bluetooth debian.
+
+$ apt-cache search bluez
+$ apt-cache search bluetooth
+# aptitude install bluez-hcidump bluez-pin bluez-utils kdebluetooth
+[...]
+bluez-hcidump  -- zum ansehen was denn da durch die luft segelt
+bluez-pin  -- einige brauchen selbst zum eingeben einer pin eine gui
+bluez-utils  -- der userspace teil
+kdebluetooth  -- wer denn kde benutzt
+[...]
+
+4. die bluetooth arbeit.
+
+zum einrichten schaut man sich einige dateien an.
+$ ls -hl /etc/bluetooth/
+insgesamt 28K
+-rw-r--r--  1 root root 1,4K 2005-02-05 19:10 hcid.conf
+----------  1 root root  108 2005-06-20 22:19 link_key
+-rw-r--r--  1 root root    5 2005-05-22 20:52 pin
+-rw-r--r--  1 root root  604 2005-05-22 20:38 rfcomm.conf
+
+hcid.conf  -- schon herrvorragend vorbereitet. nur bearbeiten, wenn es sein muss!
+link_key  -- das macht das system selbst. NICHT bearbeiten!
+pin  -- 0000 oder 1234 oder 0815 ... sucht euch nen bt-pin aus.
+rfcomm.conf  -- hier wird es interessant:
+[... rfcomm.conf start ...]
+rfcomm0 {
+ bind yes;  # beim start, verbinden
+	device 00:0F:DE:31:7F:04;  # btadr der gegenstelle
+	channel 4;  # rfcomm channel (siehe sdptool)
+	comment "handy t630";  # kleine beschreibung
+	}
+[... rfcomm.conf stop ...]
+
+5. der bluetooth versuch.
+
+das programm hcitool (bluez-utils) hilft die gegenstelle zu finden:
+$ hcitool scan 
+Scanning ...
+    00:00:00:00:00:00   handy
+mit sdptool (bluez-utils) bekommt man genauere informationen:
+$ sdptool browse 00:00:00:00:00:00
+Browsing 00:00:00:00:00:00 ...
+[...]
+Service Name: OBEX file transfer
+Service Description: OBEX file transfer
+[...]
+    Channel: 9 
+[...]
+
+6. das war ein genereller einblick. ab nun wird es speziell.
+die pakete 'btcid' oder 'bluemote' gibt es bei mir auf anfrage.
+

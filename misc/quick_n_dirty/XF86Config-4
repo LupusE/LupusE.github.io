@@ -1,0 +1,111 @@
+### /etc/X11/XF86Config-4 -- leonie2.0 -- 15.Sep 03
+### sony vaio (pcg - n505x)
+
+Section "ServerLayout"
+	Identifier     "XFree86 Configured"
+	Screen      0  "Screen0" 0 0
+	InputDevice    "Keyboard0" "CoreKeyboard"
+	InputDevice    "PS/2 Mouse" "CorePointer"
+	InputDevice    "USB Mouse"
+EndSection
+
+Section "ServerFlags"
+	Option "AllowMouseOpenFail"  "true"
+EndSection
+
+Section "Files"
+	RgbPath      "/usr/X11R6/lib/X11/rgb"
+	ModulePath   "/usr/X11R6/lib/modules"
+	FontPath     "/usr/X11R6/lib/X11/fonts/misc:unscaled"
+	FontPath     "/usr/X11R6/lib/X11/fonts/misc"
+	FontPath     "/usr/X11R6/lib/X11/fonts/75dpi:unscaled"
+	FontPath     "/usr/X11R6/lib/X11/fonts/75dpi"
+	FontPath     "/usr/X11R6/lib/X11/fonts/100dpi:unscaled"
+	FontPath     "/usr/X11R6/lib/X11/fonts/100dpi"
+EndSection
+
+Section "Module"
+        Load  "ddc"  # ddc probing of monitor
+	Load  "dbe"
+	Load  "dri"
+	Load  "extmod"
+	Load  "glx"
+        Load  "bitmap" # bitmap-fonts
+	Load  "type1"
+	Load  "freetype"
+	Load  "record"
+EndSection
+
+Section "InputDevice"
+	Identifier	"Keyboard0"
+	Driver		"keyboard"
+        Option		"CoreKeyboard"
+	Option		"XkbRules"	"xfree86"
+	Option		"XkbModel"	"pc105"
+	Option		"XkbLayout"	"de"
+	Option		"XkbVariant"	"nodeadkeys"
+EndSection
+
+Section "InputDevice"
+	Identifier  	"PS/2 Mouse"
+	Driver      	"mouse"
+	Option      	"Protocol"	"ImPS/2"
+	Option      	"Device"	"/dev/psaux"
+	Option      	"Emulate3Buttons" "true"
+	Option      	"Emulate3Timeout" "70"
+	Option	    	"SendCoreEvents" "true"
+EndSection
+
+Section "InputDevice"
+	Identifier	"USB Mouse"
+	Driver		"mouse"
+	Option		"Device"	"/dev/input/mice"
+	Option		"SendCoreEvents" "true"
+	Option		"Protocol"	"ImPS/2"
+	Option		"ZAxisMapping"	"4 5"
+	Option		"Buttons"	"5"
+EndSection
+
+## vorschlag aus KNOPPIX (mkxf86config)
+
+Section "Monitor"
+	Identifier	"Monitor0"
+	Option	"DPMS"	"true"
+#	HorizSync    28.0 - 78.0 # Warning: This may fry very old Monitors
+	HorizSync    28.0 - 96.0 # Warning: This may fry old Monitors
+	VertRefresh  50.0 - 76.0 # Very conservative. May flicker.
+	Modeline "640x480"     25.175 640  664  760  800   480  491  493  525 #60Hz
+	Modeline "800x600"     40.12  800  848  968 1056   600  601  605  628 #60Hz
+	Modeline "1024x768"    85    1024 1056 1152 1360   768  784  787  823
+EndSection
+
+Section "Device"
+	Identifier  "Card0"
+	Driver      "neomagic"
+	VendorName  "All"
+	BoardName   "All"
+EndSection
+
+Section "Screen"
+	Identifier "Screen0"
+	Device     "Card0"
+	Monitor    "Monitor0"
+	DefaultColorDepth 24
+	SubSection "Display"
+		Depth     8
+		Modes "1024x768" "800x600" "640x480"
+	EndSubSection
+	SubSection "Display"
+		Depth     16
+		Modes "1024x768" "800x600" "640x480"
+	EndSubSection
+	SubSection "Display"
+		Depth     24
+		Modes "1024x768" "800x600" "640x480"
+	EndSubSection
+	SubSection "Display"
+		Depth     32
+		Modes "1024x768" "800x600" "640x480"
+	EndSubSection
+EndSection
+

@@ -1,0 +1,18 @@
+# ~/.xsession
+#
+# hier werden porgramme und tools festgelegt, die beim starten von x, mit dem
+# komandozeilenbefehl 'startx', ausgeführt werden sollen.
+
+# root-tail schreibt logfiles transparent auf den hintergrund.
+exec root-tail -shade -color white -g 90x20+950+930 \
+	/var/log/syslog /var/log/exim/mainlog \
+	/var/log/kern.log /var/log/auth.log \
+	/mnt/save/mail/procmail.log &
+
+# gkrellm zeigt diverse system inzormationen in einer dezenten leiste an.
+/usr/bin/gkrellm &
+
+# hier ist der windowmanager anzugeben, bei mir ist es enlightenment.
+# _kein_ & hinter der letzen zeile!
+/usr/bin/enlightenment
+

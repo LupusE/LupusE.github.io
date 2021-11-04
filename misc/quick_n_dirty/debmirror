@@ -1,0 +1,55 @@
+## debian nina2zoe
+debmirror -v --ignore-release-gpg --pdiff=none -p --nosource --method=http -h 192.168.1.11 -r debian -d lenny,sid -s main,contrib,non-free -a i386 /mount/mirror/debian/
+
+## debian balista2nina
+debmirror --pdiff=none -v --ignore-release-gpg -p --nosource --method=http -h 192.168.1.250 -r debian -d lenny,sid -s main,contrib,non-free -a i386 debian/
+
+## debian2nina
+debmirror -v --cleanup --ignore-release-gpg -p --nosource -h ftp2.de.debian.org -r debian -d lenny -s main,contrib,non-free,main/debian-installer -a i386 mirror/debian/
+
+## debian-multimedia2nina
+debmirror -v --ignore-release-gpg -p --nosource -h www.debian-multimedia.org -r / -d lenny -s main -a i386 mirror/debian-multimedia/
+
+## init debian2zoe
+debmirror -v --cleanup --ignore-release-gpg -p --nosource -h ftp.de.debian.org -r debian -d lenny,sid -s main,contrib,non-free,main/debian-installer -a i386 /mount/mirror/debian/
+
+## init debian-multimedia2zoe
+debmirror -v --ignore-release-gpg -p --nosource -h www.debian-multimedia.org -r / -d lenny,sid -s main -a i386 /mount/mirror/debian-multimedia/
+
+## init ubuntu2zoe jaunty
+debmirror --verbose --cleanup --host=de.archive.ubuntu.com --method=http --root=ubuntu/ --dist=jaunty,jaunty-updates,jaunty-security --section=main,universe,multiverse,restricted,main/debian-installer --arch=i386 --ignore-release-gpg --nosource /mount/mirror/ubuntu
+
+## init medibuntu2zoe
+debmirror --cleanup -v --ignore-release-gpg -p --nosource -h de.packages.medibuntu.org -r / -d intrepid -s free,non-free -a i386 /mount/mirror/medibuntu
+
+########### /etc/apache2/sites-available/mirror-debian
+Alias /debian /mount/mirror/debian
+
+<Directory /mount/mirror/debian>
+      Options Indexes FollowSymLinks
+      AllowOverride None
+      Order allow,deny
+      allow from all
+</Directory>
+############
+
+
+## leonie
+debmirror -v -p --nosource -h ftp.de.debian.org -r debian -d sid -s main,contrib,non-free -a i386 /mnt/mirror/debian/
+debmirror -v -p --nosource -h ftp.nerim.net -r debian-marillat -d unstable -s main -a i386 /mnt/mirror/marillat/
+
+debmirror -p -v --ignore-release-gpg --nosource -h 192.168.0.10 -r e17 -method=http -s main,contrib -d unstable /mnt/mirror/e17/
+
+## joshua
+debmirror -p -v --nosource -h 192.168.0.10 -r debian -method=http -s main,contrib,non-free -d sid /mnt/mirror/debian/
+debmirror -p -v --nosource -h 192.168.0.10 -r marillat -method=http -s main -d unstable /mnt/mirror/marillat
+
+## medibuntu2zoe
+debmirror --cleanup -v --ignore-release-gpg -p --nosource --method=http -h de.packages.medibuntu.org -r / -d karmic -s free,non-free -a i386,amd64 /media/mirror/medibuntu
+
+## ppa_nc102zoe
+debmirror --cleanup -v --ignore-release-gpg -p --nosource --method=http -h ppa.launchpad.net -r /voria/ppa/ubuntu -d karmic -s main -a i386 /media/mirror/ppa-nc10
+
+## ppa_ffgtk2zoe
+debmirror --cleanup -v --ignore-release-gpg -p --nosource --method=http -h ppa.launchpad.net -r /stevi/ppa/ubuntu -d karmic -s main -a i386,amd64 /media/mirror/ppa-ffgtk
+

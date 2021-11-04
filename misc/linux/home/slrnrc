@@ -1,0 +1,80 @@
+%% personification
+%% ---------------
+set hostname		"[domain.tld]"
+set username		"[username]"
+set realname		"[realname]"
+set replyto		"[user]@[mailhost.tld]"
+%set organization	"[organisation]"
+
+%% mailer config
+%% -------------
+set signature		".mail/signature"
+set followup		"* %r <%f>:"
+set quote_string	"> "
+
+set server_object	"nntp"
+set post_object		"nntp"
+
+set editor_command	"vim %s +%d -c ':0;/^$/+'"
+set mail_editor_command	"mutt -H '%s' -e 'set signature=' ; exit 1"
+set sendmail_command	"/usr/sbin/sendmail -oi -t -oem -odb"
+set Xbrowser		"galeon %s"
+set non_Xbrowser	"links %s"
+
+%% misc
+%% ----
+%set user_agent		"[user agent]"
+%visible_headers 	"From:,Subject:,Date:,Newsgroups:, \
+%			 Followup-To:,Reply-To:,User-Agent:, \
+%			 X-Mailer:,X-Newsreader"
+
+set clock_in_top_status_line 1	% replace statusline help to a clock
+set beep 3			% 0none 1noisy 2visible 3both
+set hide_pgpsignature 1		% non-null = hidden signature
+set mime_charset	"iso-8859-15"	% de_DE@euro
+
+%% colors
+%% ------
+color article		"lightgray"	"default"
+color author		"brightcyan"	"default"
+color boldtext		"blue"		"default"
+color box		"black"		"white"
+color cursor		"white"		"blue"
+color description	"lightgray"	"default"
+color error		"red"		"default"
+color frame		"yellow"	"blue"
+color group		"white"		"default"
+color grouplens_display	"white"		"default"
+color header_name	"green"		"default"
+color header_number	"lightgray"	"default"
+color headers		"yellow"	"default"
+color high_score	"red"		"default"
+color italicstext	"blue"		"default"
+color menu		"yellow"	"blue"
+color menu_press	"yellow"	"blue"
+color normal		"lightgray"	"default"
+color pgpsignature	"cyan"		"default"
+color quotes		"cyan"		"default"
+color quotes1		"blue"		"default"
+color quotes2		"white"		"default"
+color quotes3		"green"		"default"
+color quotes4		"cyan"		"default"
+color quotes5		"brown"		"default"
+color quotes6		"red"		"default"
+color quotes7		"green"		"default"
+color response_char	"green"		"default"
+color signature		"cyan"		"default"
+color selection		"yellow"	"blue"
+color status		"brightyellow"	"blue"
+color subject		"lightgray"	"default"
+color thread_number	"blue"		"default"
+color tilde		"blue"		"default"
+color tree		"red"		"default"
+color underlinetext	"blue"		"default"
+color verbatim		"green"		"default"
+
+%% explain
+
+% set followup "... "
+%   %d: date		%r: realname	%f: email	%s: subject
+%   %m: message-id  	%n: newsgroup	%%: percent

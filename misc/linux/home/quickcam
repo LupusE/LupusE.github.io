@@ -1,0 +1,40 @@
+hey folks,
+heute widme ich mich in ein paar kurzen zeilen der logitech quickcam.
+eine usb webcam, der billigern klasse, aber durchaus nicht unnütz. ja, doch
+unnütz, aber das ignorieren wir an dieser stelle.
+
+als erstes: wir brauchen einen angepassten kernel.
+
+Multimedia devices  --->
+ <M> Video For Linux		#videodev.o
+
+USB support  --->
+ <M> Support for USB		#usbcore.o
+ <M> UHCI (Intel PIIX4, VIA, ...) support	#usb-uhci.o
+
+und wie gewohnt arbeiten wir nur mit modulen, also keinen komplett neuen
+kernel, sondern:
+# make modules modules_install && depmod -a
+
+wenn usbview (apt-get install ..) die cam anzeit ist shcon einiges
+geschafft. nu brauchen wir die sourcen für das cam modul:
+$ mkdir sys; cd sys
+$ cvs -d:pserver:anonymous@cvs.qce-ga.sourceforge.net:/cvsroot/qce-ga login
+Pass: <enter>
+$ cvs -z3 -d:pserver:anonymous@cvs.qce-ga.sourceforge.net:/cvsroot/qce-ga co quickcam
+$ cd quickcam
+
+und das ganze backen.
+$ make
+
+und schliesslich laden
+$ su
+# ./quickcam.sh
+
+nun gann man sich betrachten unter 'xawtv' (device /dev/video0) oder die
+bilder lustig hochladen per scp/ftp oder wie auch immer, mit den packeten
+'webcam' oder 'camE'.
+läuft bei mir unter 2.4.19 und 2.4.20.
+
+happy shootin.
+

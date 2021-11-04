@@ -1,0 +1,37 @@
+Mit Apt bekommt man ein mächtiges Tool, welches unter Debian den
+Paketmanager (dpkg) einfach nutzen lässt.
+Natürlich sind einige Fontends verfügbar (aptitude, dselect, synaptic,
+gnome-apt, ...) aber warum lange laden und klicken, wenn das meiste bequem
+per Befehlszeile geht?
+
+$ apt-cache search <suchbegriff>
+  Findet Packete nach dem Muster <suchbegriff>
+  Anzeigeformat: <Paket> - <beschreibung>
+$ apt-cache show <packet>
+  gibt Informationen zu einem Paket
+  Name, Version, Beschreibung, Konflikte, Maintainer, ...
+# apt-get install <paket>
+  Installiert das gewünschte Paket mit allen Abhängigkeiten
+# apt-get remove <paket>
+  Löscht das gewünschte Paket
+  -purge - löscht auch die 'config' Dateien
+# apt-get update
+  Aktualisiert die Paketliste nach den in /etc/apt/sources.list angegebenen
+  Quellen.
+# apt-get upgrade
+  Kontrolliert Aktualisiert die Dateien die nach Versionsnummer neuer sind.
+# apt-get dist-upgrade
+  Ist weniger empfindlich gegenüber abhängigkeits Problemen. Wird normal
+  benutzt zum Sprung von stable/testing zu testing/unstable.
+# vim /etc/apt/sources.list
+  Zum Ändern der Quellen, von den Pakete geholt werden sollen.
+
+$ dpkg -l <paket>
+  Zeigt an ob ein Paket installiert ist. (regex möglich)
+# dpkg -i <paket>
+  installiert ein Paket, ohne das Apt die Abhängigkeiten oder Konflikte
+  prüft. Nur bedingt empfehlenswert.
+# dpkg -r <paket>
+  Löscht ein Packet, ohne das Apt die Abhängigkeiten oder Konflikte prüft.
+  Nur bedingt empfehlenswert.
+

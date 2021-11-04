@@ -1,0 +1,62 @@
+### config zum ifup/ifdown script
+
+## das loopback interface um lokale dienste über lo anzusprechen
+## (127.0.0.1, ::1, localhost, X, rpc, ...)
+# <typ> <dev> [net] [cmd]
+auto lo
+iface lo inet loopback
+
+## erste netzwerkkarte
+## per dhcp
+
+#auto eth0
+#iface eth0 inet dhcp
+
+## --oder--
+## manuell konfiguriert
+
+auto eth0
+iface eth0 inet static
+	address 192.168.0.2
+	netmask 255.255.255.0
+	gateway 192.168.0.1
+	wireless_essid any
+	 # "mein wlan" any off on
+	wireless_mode ad-hoc
+	 #ad-hoc managed master monitor
+	 #Repeater Secondary Auto
+	wireless_nick "laptop"
+	wireless_key1 0000000000
+	wireless_key2 0000000001
+	wireless_key3 0000000002
+	wireless_defaultkey 1
+
+	wireless_channel 3
+	wireless_sens -80
+	wireless_ap any
+	 #<mac> off auto
+	wireless_rate auto 
+	 #11M 5.5M auto
+
+## <typ> <dev> [net] [cmd]
+# <typ>  mapping (logischer name), iface (lan-karte), auto (automatisch laden)
+# <dev>  devicefile name (lo, eth[n], wlan[n])
+# [net]
+# inet (tcp/ip), ipx (ipx), inet6 (IPv6)
+# [cmd]
+#> loopback - internes device, ohne verbindung zu anderen rechnern
+#> dhcp - automatisches holen der daten vom dhcp server
+#> static - festlegen der netzwerkdaten
+# address - ip adresse (v4 192.168.0.1, v6 fe80::209:5bff:fe93:f85d)
+# netmask - broadcast adresse (255.255.255.0)
+# gateway - router, bridge, ...
+##  wireless-<ext>
+# wireless_essid - name des wlan (any, default, ...)
+# wireless_ap <name> - any, mac (00:09:5B:00:00:01)
+# wireless_mode <mode> - ad-hoc managed master monitor
+#                        repeater secondary auto
+# wireless_nick <name> - rechner name, noch ohne viel nutzen
+# wireless_key[n] <key> - wep key.
+# wireless_defaultkey [n] - erster zu benutzender key.
+# wireless_channel <n> - n=1-13
+

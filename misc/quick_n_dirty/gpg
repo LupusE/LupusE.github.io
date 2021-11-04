@@ -1,0 +1,9 @@
+gpg --gen-key
+
+...
+
+gpg --edit-key <key>
+gpg --send-keys <key> [key]
+
+gpg --refresh-keys
+

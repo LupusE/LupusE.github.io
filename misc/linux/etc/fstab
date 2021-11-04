@@ -1,0 +1,45 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+proc		/proc		proc	defaults	0	0
+/dev/hda2	none		swap	sw		0	0
+/dev/hda1	/		ext3	defaults,errors=remount-ro 0 1
+
+/dev/hda3	/home		ext3	defaults,users,exec 0	2
+/dev/hda5	/mnt/work	ext3	defaults,users	0	2
+/dev/hda6	/mnt/media	ext3	defaults,users	0	2
+#/dev/hda7	/mnt/misc	ext3	defaults,users	0	2
+#/dev/hda8	/mnt/mirror	ext3	defaults,users	0	2
+
+/dev/hdb6	/mnt/system	ext3	defaults,users,exec 0	2
+/dev/hdb5	/mnt/crap	ext3	defaults,users	0	2
+/dev/hdb7	/mnt/music	ext3	defaults,users	0	2
+
+/dev/hdd	/media/cdrom0	iso9660	ro,user,noauto	0	0
+/dev/hdc	/media/cdrom1	iso9660	ro,user,noauto	0	0
+/dev/fd0	/media/floppy0	auto	rw,user,noauto	0	0
+/dev/scd0	/media/dvd	iso9660	rw,user,noauto	0	2
+
+/dev/sda1	/mnt/flash	vfat	defaults,users,noauto 0 0
+/dev/sda	/media/usb0	auto	rw,user,noauto	0	0
+/dev/sde2	/mnt/ipod	vfat	defaults,users,noauto 0 0
+/dev/sda5	/mnt/windows	vfat	defaults,users,noauto 0 0
+
+# defaults	Use default options: rw, suid, dev, exec,  auto,  nouser,
+# 		and async.
+# exec		Permit execution of binaries.
+# noauto	Can  only be mounted explicitly (i.e., the -a option will
+#		not cause the file system to be mounted)
+# remount	Attempt  to remount an already-mounted file system.
+# ro		Mount the file system read-only.
+# rw		Mount the file system read-write.
+# suid		Allow set-user-identifier or set-group-identifier bits to
+#		take effect.
+# user		Allow  an  ordinary  user  to mount the file system.
+# users		Allow every user to mount and unmount  the  file  system,
+#		implies noexec, nosuid and nodev.
+#
+# <file system> also could be
+# - UUID="xxxxx-xxxxx" (get by blkid)
+# - LABEL="xxxxx" (see above)
+

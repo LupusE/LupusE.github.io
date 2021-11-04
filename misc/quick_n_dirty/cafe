@@ -1,0 +1,79 @@
+für zwischendurch muss man auch wissen was getrunken werden will. beim
+italiener gegenüber oder an der ecke gibt es sicherlich
+
+Zubereitung:
+------------
+Feines Kaffeemehl plus schnelle Extraktion.
+Innerhalb von 25 Sek (max. 30 Sek) wird das 88-94°C heisse Wasser mit 9-15bar
+durch das Kaffeemehl gepresst. Hierbei ist der Wiederstand des Kaffeemehls
+wichtig.
+Optimal sollte das Mehl auf 36% seines Volumens im Sieb komprimiert sein
+(das entspricht einen Anpressdruck von ca 15kg)
+Das Ergebniss misst sich an der haselnussbraunen Crema des gewonnenen
+Getränks. Fehlt die Crema ganz, so ist das Wasser zu langsam duchgelaufen,
+die Ursache könnte sein zu wenig oder zu grobes Kaffeemehl.
+
+Vergleich:
+----------
+Espresso:
+Eine Maschine extrahiert in 25-30Sek ca 25% der Substanz aus 14g Kaffeemehl
+(Doppelter Espresso/60ml Wasser)
+88-94°C, 9-15bar, 6-8g/50ml, sehr fein (0,2mm), angepresst
+Koffein je Tasse: 50-60mg
+
+Filterkaffee:
+Eine Maschine extrahiert in 6-8min ca 17% der Substanz aus 10g Kaffeemehl
+(100ml Wasser/Tasse)
+92-86°C, kein Druck, 6-8g/125ml, mittelfein bis fein (0,3-0,5mm), locker
+Koffein je Tasse: 60-100ml
+
+Variationen:
+------------
+- Ristretto
+7g Kaffeemehl auf 25ml Wasser. Klein aber oho.
+- Espresso
+7g sehr fein gemahlenes Kaffeemehl auf 30ml Wasser.
+Bei bedarf gerne etwas Zucker auf die Crema
+- Caffe Latte
+Ein doppelter Espresso im Glas mit Milch auffüllen.
+Bei bedarf mit ein wenig Milchschaum.
+- Cappuchino
+1/3 Espresso, 1/3 Milch, 1/3 Milchschaum -> 60ml ;)
+- Caffe Lungo
+Espresso mit mehr Wasser, nach Geschmack.
+- Caffe Macchiato
+Espresso mit einem schuss Milch und wenig Milchschaum.
+Macchiato: ital. für "gefleckt"
+- Caffe Corretto
+Espresso mit einem schuss Grappa, Weinbrand ODER Likör.
+- Latte Macchiato
+3/4 heisse Milch, bis zum Rand mit Milchschaum auffüllen
+Wenn sich Milch und Milchschaum getrennt haben 1-2 Espresso durch den
+Milchschaum giessen. Dieser sollte sich zwischen den Schichten ausbreiten.
+- Cafe Creme
+Helleres Espresso-Kaffeemehl für den 'normalen' Kaffee
+
+Tassen:
+-------
+Espresso: Porzellan, dickwandig (Wärme bleibt erhalten), zylindrisch (hilft
+bei dem Bilden der Crema), 50-70ml.
+Cappucchino: Porzellan, dichwandig, bauchige Form, 150-200ml
+Latte Macchiato/Milchkaffee: Glas, hitzebeständig, 180-200ml
+Kaffee: Mug (Bürotasse), Dicker Keramik. Feines Porzellan ist nur Deko.
+Cafe Latte: Traditionell aus Frankreich trinkt man aus der Schale, der
+Franzose stippt darin sein Croisant.
+
+Tipp: Espresso tassen vor den Gebrauch wärmen. entweder mit Heiztplatte
+(Espressomat), oder vor gebraucht mit heissem Wasser spülen.
+
+Schlusswort:
+------------
+Wem das alles zuviel Hype ist, der sollte sich ne Coke bei der Tanke gönnen,
+niemand wird zu seinem Glück gezwungen.
+
+[-- snip --]
+lupus@joshua:~$ apt-cache search cappu     
+cappuccino - an utility to let your boss think that you're working hard
+lupus@joshua:/home/lupus# apt-get install cappuccino
+[-- snap --]
+
