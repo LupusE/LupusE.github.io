@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Benjamin Moeller
+title: CV
 subtitle: Lebenslauf
 ---
 
@@ -12,7 +12,7 @@ subtitle: Lebenslauf
 
 ## BERUFSERFAHRUNG
 ---
-### **03/2015 – heute Leiter IT** / Gaschler Hörgeräte (Inh. Sandra Frommer), Elmshorn
+### **03/2015 – heute Leiter IT** / Frommer oHG, Bad Segeberg
 
 * Inhabergeführtes Unternehmen für die Anpassung und den Verkauf von Hörlösungen. Die Firma legt Wert auf sehr gut ausgebildetes Personal und die beste Ausstattung für eine individuelle Bedarfsanalyse und Versorgung.
 * 33 Mitarbeiter an 9 Standorten in Elmshorn, Tornesch, Bad Segeberg, Neumünster, Wahlstedt und Hamburg
@@ -157,7 +157,8 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 ## SPRACH-KENNTNISSE
 ---
 > Deutsch: Muttersprache<br />
-> Englisch: sicher, mehrjährige Arbeit im internationalen Team und gehaltene Schulungen
+> Englisch: sicher, mehrjährige Arbeit im internationalen Team und gehaltene Schulung<br />
+> SQL: flüssig in Präsentation und Schrift
 
 ## IT-KENNTNISSE
 ---
@@ -165,6 +166,7 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 * Kenntnisse der gängigen Serverdienste für Linux und MS Exchange
 * Fundierte Kenntnisse über gängige Netzwerke und deren Protokolle
 * Sicherer Umgang mit MS SQL, MySQL/MariaDB
+* Privater Betrieb eines Proxmox Nodes mit mehreren Containern und VMs
 * Grundlagenwissen über Microsoft BI und DWH
 * Fertigkeiten in Datenforensik für Wiederherstellung von Flashspeicher und Festplatten
 * Kenntnisse in Debugging für gängige Hochsprachen

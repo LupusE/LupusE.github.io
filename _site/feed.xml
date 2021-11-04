@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2021-11-02T20:44:14+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2021-11-03T16:13:31+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
 
-&lt;p&gt;Meine Frau und ich haben uns ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4Pfoten-Mobile - Dog-Liner TE 740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkaeufer, &lt;a href=&quot;www.4pfoten-mobile.de/neumuenster/&quot;&gt;Joern Zimmermann&lt;/a&gt; vom Standort Neumuenster, war so nett und hat fuer uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
+&lt;p&gt;Meine Frau und ich haben uns ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4Pfoten-Mobile - Dog-Liner TE740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, &lt;a href=&quot;www.4pfoten-mobile.de/neumuenster/&quot;&gt;Jörn Zimmermann&lt;/a&gt; vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Kabelbaum: CAW-CCOMFI1&lt;/li&gt;
   &lt;li&gt;Steuerbox: CAW-COMUN2&lt;/li&gt;
@@ -11,37 +11,37 @@
 &lt;p&gt;Nach dieser Anleitung ist klar, das wird nicht einfach:&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/01_anleitung.png&quot; alt=&quot;Anleitung der Verkabelung der CAW-COMUN2 Box&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Interpretation: Sehr viele schwarze kabel. Ein schwarzes Kabel der Box muss an einen gruenen Adapter vorbei an das schwarze Kabel des Radios, welches mit ‘Steering Wheel Remote’ bezeichnet ist??!??!?! Oder so.
-Auf dem Bild oben rechts koennte man erahnen das schwarz auch blau/gelb sein koennte, mit ‘Remo.cont’ beschriftet. Das wird lustig.&lt;/p&gt;
+&lt;p&gt;Interpretation: Sehr viele schwarze Kabel. Ein schwarzes Kabel der Box muss an einen grünen Adapter vorbei an das schwarze Kabel des Radios, welches mit ‘Steering Wheel Remote’ bezeichnet ist??!??!?! Oder so.&lt;br /&gt;
+Auf dem Bild oben rechts könnte man erahnen das schwarz auch blau/gelb sein könnte, mit ‘Remo.cont’ beschriftet. Das wird lustig.&lt;/p&gt;
 
 &lt;h2 id=&quot;das-einbauen-des-adapters-mit-kabelbaum&quot;&gt;Das Einbauen des Adapters mit Kabelbaum&lt;/h2&gt;
 &lt;p&gt;Das Radio im Ausgangszustand&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/02_ausgangslage.png&quot; alt=&quot;Das Radio im fertig eingebauten Zustand&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Beim Aushebeln der Blende brechen sicher ein oder zwei Klemmen ab. Durch das tolle klebrige silber Deko-Element (Pfeil) haelt es aber.&lt;br /&gt;
+&lt;p&gt;Beim Aushebeln der Blende brechen sicher ein oder zwei Klemmen ab. Durch das tolle klebrige silber Deko-Element (Pfeil) hält es aber.&lt;br /&gt;
 Das Radio ist an dem Blech festgeschraubt, nicht eingeschoben. Ich empfehle mit den oberen beiden Schrauben anzufangen und mit schmaler Spitze (PH2) die untern beiden schrauben parallel zu loesen, so dass das Radio nach vorne oben mitkommt. Ansonsten hat man Macken an dem Radio unten rechts und links.&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/03_schrauben.png&quot; alt=&quot;Blende offen&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Was soll ich schreiben? Kabelchaos. Wenn man keine Ahnung von Kabeln/Stecker/Elektronik hat, sollte man spaetesten hier aufhoeren. Auf jeden Fall die Stromversorgung trennen!&lt;br /&gt;
-Wenn man schonmal z.B. einen PC zusammengeschraubt hat, dann trennt man den ISO Stecker (2 Stecker in einem nahezu quadratischen Port) zwischen Radio und Auto und klemmt den Kabelbaum (CAW-CCOMFI1) dazwischen. Der neue Kabelbaum hat eine schwarze schmale Steckerleiste, welche in die Box (CAW-COMUN2) kommt.&lt;br /&gt;
+&lt;p&gt;Was soll ich schreiben? Kabelchaos. Wenn man keine Ahnung von Kabeln/Stecker/Elektronik hat, sollte man spätesten hier aufhören. Auf jeden Fall die Stromversorgung trennen!&lt;br /&gt;
+Wenn man schon z.B. einen PC zusammengeschraubt hat, dann trennt man den ISO Stecker (2 Stecker in einem nahezu quadratischen Port) zwischen Radio und Auto und klemmt den Kabelbaum (CAW-CCOMFI1) dazwischen. Der neue Kabelbaum hat eine schwarze schmale Steckerleiste, welche in die Box (CAW-COMUN2) kommt.&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/04_kabelchaos.png&quot; alt=&quot;Die Kabel hinter dem Radio. Chaos.&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Nochmal etwas zurechtgelegt, der nicht selbsterklaerende Teil:&lt;br /&gt;
-Der Box (CAW-COMUN2) liegt ein kleines Kabel bei. Der Stecker kommt in das entsprechende gegenstueck des neuen Kabelbaum (CAW-CCOMFI1). Das lose braune Kabel wird mit dem blau/gelb-Kabel des Autoradios verbunden. Den Mini-Klinkenstecker irgendwie isolieren/fixieren, vielleicht eleganter als meine Loesung mit dem weissen Panzertape.&lt;br /&gt;
+&lt;p&gt;Nochmal etwas zurechtgelegt, der nicht selbsterklärende Teil:&lt;br /&gt;
+Der Box (CAW-COMUN2) liegt ein kleines Kabel bei. Der Stecker kommt in das entsprechende gegenstück des neuen Kabelbaum (CAW-CCOMFI1). Das lose braune Kabel wird mit dem blau/gelb-Kabel des Autoradios verbunden. Den Mini-Klinkenstecker irgendwie isolieren/fixieren, vielleicht eleganter als meine Lösung mit dem weißen Panzertape.&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/05_kabeladapter.png&quot; alt=&quot;Der schlecht beschriebene Adapter Kabelbaum-LenkradFB&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Jetzt muss die Box angelernt werden, &lt;a href=&quot;#ablauf&quot;&gt;siehe unten&lt;/a&gt;. Spart Euch den Schritt fruehzeitig alles wieder zusammenzubauen. Ich habe die Box mehrfach neu programmiert, bis es mir gefallen hat.&lt;br /&gt;
-Das Plastikteil in der Tuete der Box, welches wie abgebrochen aussieht, ist ein Stift, mit den man den Taster in der Box erreicht (siehe rote Markierung).&lt;br /&gt;
+&lt;p&gt;Jetzt muss die Box angelernt werden, &lt;a href=&quot;#ablauf&quot;&gt;siehe unten&lt;/a&gt;. Spart Euch den Schritt frühzeitig alles wieder zusammenzubauen. Ich habe die Box mehrfach neu programmiert, bis es mir gefallen hat.&lt;br /&gt;
+Das Plastikteil in der Tüte der Box, welches wie abgebrochen aussieht, ist ein Stift, mit den man den Taster in der Box erreicht (siehe rote Markierung).&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/06_box.png&quot; alt=&quot;Die Box eingebaut und angeschlossen. Der Button ist erreichbar.&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Beim Zusammenschrauben in umgekerter Reihenfolge: Erst die unteren Schrauben, das Radio langsam mit reingleiten lassen, dann die oberen. Achtet drauf, dass die unteren Schrauben trotz des Winkels auch wirklich fest sind. Das Quietschen vom Radio an der Blende auf Kopfsteinpflaster ist nicht schoen.&lt;/p&gt;
+&lt;p&gt;Beim Zusammenschrauben in umgekerter Reihenfolge: Erst die unteren Schrauben, das Radio langsam mit reingleiten lassen, dann die oberen. Achtet drauf, dass die unteren Schrauben trotz des Winkels auch wirklich fest sind. Das Quietschen vom Radio an der Blende auf Kopfsteinpflaster ist nicht schön.&lt;/p&gt;
 
 &lt;h2 id=&quot;programmieren-die-anleitung-sagt-&quot;&gt;Programmieren. Die Anleitung sagt …&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;… Zuendung aktivieren, die Box blinkt.&lt;/li&gt;
-  &lt;li&gt;Wenn die Box schnell blinkt, kann sofort gestartet werden. Wenn nicht, Reset: ‘Zuendung aus, Taste druecken und gedrueckt halten, Zuendung an. Wenn die LED rot blinkt, Button loslassen.’&lt;/li&gt;
-  &lt;li&gt;Man drueckt eine Taste auf der Lenkradfernbedienung, die Box zeigt mit einem aufleuchten der LED an, dass der Steuerbefehl angenommen wurde.&lt;/li&gt;
+  &lt;li&gt;Wenn die Box schnell blinkt, kann sofort gestartet werden. Wenn nicht, Reset: ‘Zündung aus, Taste drücken und gedrückt halten, Zündung an. Wenn die LED rot blinkt, Button loslassen.’&lt;/li&gt;
+  &lt;li&gt;Man drückt eine Taste auf der Lenkradfernbedienung, die Box zeigt mit einem aufleuchten der LED an, dass der Steuerbefehl angenommen wurde.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Das ist ja einfach.&lt;/p&gt;
@@ -58,32 +58,32 @@ Das Plastikteil in der Tuete der Box, welches wie abgebrochen aussieht, ist ein 
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;LED aus&lt;/td&gt;
-      &lt;td&gt;Zuendung einschalten oder Box mit Strom versorgen&lt;/td&gt;
+      &lt;td&gt;Kein Strom. Zündung einschalten oder Box mit Strom versorgen&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;LED blinkt rot&lt;/td&gt;
       &lt;td&gt;Die Box ist im Anlernmodus&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;LED blinkt einmal, wenn Taste am Lenkrad gedrueckt wurde.&lt;/td&gt;
+      &lt;td&gt;LED blinkt einmal, wenn Taste am Lenkrad gedrückt wurde.&lt;/td&gt;
       &lt;td&gt;Befehl wurde erkannt&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;LED blinkt einmal, wenn ‘Button’ auf Box gedrueckt wurde.&lt;/td&gt;
-      &lt;td&gt;Funktion wurde uebersprungen&lt;/td&gt;
+      &lt;td&gt;LED blinkt einmal, wenn ‘Button’ auf Box gedrückt wurde.&lt;/td&gt;
+      &lt;td&gt;Funktion wurde übersprungen&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;LED blinkt gruen&lt;/td&gt;
+      &lt;td&gt;LED blinkt grün&lt;/td&gt;
       &lt;td&gt;Kommandos hinterlegt, kein Radioprofil eingestellt&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;LED leuchtet gruen&lt;/td&gt;
+      &lt;td&gt;LED leuchtet grün&lt;/td&gt;
       &lt;td&gt;Alles OK, Box ist programmiert&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Die Box hat 12 Funktionen. Der Ducato hat, abhaengig von Baujahr, 6 oder 8 Tasten. Belegen darf jeder wie er will. Zum Beispiel:&lt;/p&gt;
+&lt;p&gt;Die Box hat 12 Funktionen. Der Ducato hat, abhängig von Baujahr, 6 oder 8 Tasten. Belegen darf jeder wie er will. Zum Beispiel:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -96,13 +96,13 @@ Das Plastikteil in der Tuete der Box, welches wie abgebrochen aussieht, ist ein 
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt;Lautstaerke -&lt;/td&gt;
-      &lt;td&gt;Lautstaerke -&lt;/td&gt;
+      &lt;td&gt;Lautstärke -&lt;/td&gt;
+      &lt;td&gt;Lautstärke -&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt;Lautstaerke +&lt;/td&gt;
-      &lt;td&gt;Lautstaerke +&lt;/td&gt;
+      &lt;td&gt;Lautstärke +&lt;/td&gt;
+      &lt;td&gt;Lautstärke +&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
@@ -159,19 +159,19 @@ Das Plastikteil in der Tuete der Box, welches wie abgebrochen aussieht, ist ein 
 
 &lt;h2 id=&quot;-praktisches-anlernen-der-box&quot;&gt;&lt;a name=&quot;ablauf&quot;&gt;&lt;/a&gt; Praktisches Anlernen der Box&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Box in Programmiermodus bringen (Entweder im Auslieferungszustand oder nach Reset: Zuendung aus -&amp;gt; Button an der Box gedrueckt halten. Zuendung an. Wenn die LED rot blinkt -&amp;gt; Button loslassen.)&lt;/li&gt;
-  &lt;li&gt;An der Lenkradfernbedienung ‘Lautstaerke +’ druecken, die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;An der Lenkradfernbedienung ‘Lautstaerke -‘ druecken, die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;An der Lenkradfernbedienung ‘Wippe rechts nach unten’ druecken, die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;An der Lenkradfernbedienung ‘Wippe rechts nach oben’ druecken, die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;An der Lenkradfernbedienung ‘Leere Taste (links unten)’ druecken, die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;An der Lenkradfernbedienung ‘Durchgestrichenen Lautsprecher’ druecken, die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;Auf der Box einmal den Button drucken (7 ueberspringen), die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;Auf der Box einmal den Button drucken (8 ueberspringen), die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;An der Lenkradfernbedienung ‘Telefon annehmen’ druecken, die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;An der Lenkradfernbedienung ‘Telefon auflegen’ druecken, die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;Auf der Box einmal den Button drucken (11 ueberspringen), die Box blinkt einmal rot&lt;/li&gt;
-  &lt;li&gt;Auf der Box einmal den Button drucken (12 ueberspringen), die Box blinkt gruen&lt;/li&gt;
+  &lt;li&gt;Box in Programmiermodus bringen (Entweder im Auslieferungszustand oder nach Reset: Zündung aus -&amp;gt; Button an der Box gedrückt halten. Zündung an. Wenn die LED rot blinkt -&amp;gt; Button loslassen.)&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Lautstärke +’ drücken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Lautstärke -‘ drücken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Wippe rechts nach unten’ drücken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Wippe rechts nach oben’ drücken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Leere Taste (links unten)’ drücken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Durchgestrichenen Lautsprecher’ drücken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;Auf der Box einmal den Button drücken (7 überspringen), die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;Auf der Box einmal den Button drücken (8 überspringen), die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Telefon annehmen’ drücken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;An der Lenkradfernbedienung ‘Telefon auflegen’ drücken, die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;Auf der Box einmal den Button drücken (11 überspringen), die Box blinkt einmal rot&lt;/li&gt;
+  &lt;li&gt;Auf der Box einmal den Button drücken (12 überspringen), die Box blinkt grüen&lt;/li&gt;
   &lt;li&gt;Radioprotokoll auswaehlen: ‘Suchen +’ druecken&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -194,12 +194,12 @@ Das Plastikteil in der Tuete der Box, welches wie abgebrochen aussieht, ist ein 
       &lt;td style=&quot;text-align: left&quot;&gt;Tel Annehmen&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Lautstaerke +&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;Lautstärke +&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Hupe&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Suchen +&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Lautstaerke -&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;Lautstärke -&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Suchen -&lt;/td&gt;
     &lt;/tr&gt;
@@ -209,9 +209,17 @@ Das Plastikteil in der Tuete der Box, welches wie abgebrochen aussieht, ist ein 
       &lt;td style=&quot;text-align: left&quot;&gt;Tel Beenden&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Ausgangslage</summary></entry><entry><title type="html">Garmin - Fenix 6 Pro</title><link href="http://www.lupuse.org/gadgets/2021/01/28/Garmin-Fenix-6-Pro.html" rel="alternate" type="text/html" title="Garmin - Fenix 6 Pro" /><published>2021-01-28T22:00:12+00:00</published><updated>2021-01-28T22:00:12+00:00</updated><id>http://www.lupuse.org/gadgets/2021/01/28/Garmin---Fenix-6-Pro</id><content type="html" xml:base="http://www.lupuse.org/gadgets/2021/01/28/Garmin-Fenix-6-Pro.html">&lt;h1 id=&quot;der-rückblick&quot;&gt;Der Rückblick&lt;/h1&gt;
-&lt;p&gt;Meine Frau hat angefangen mit einer Garmin Vivoacrive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt.&lt;br /&gt;
-Danach haben wir eine Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.&lt;/p&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;fazit&quot;&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Die Box war das Geburtstagsgeschenk 2021 an mich von meiner Frau, als wegen Corona alles zu hatte. so konnten wir die Funktion zwar nicht sofort testen, aber ich konnte am Wohnmobil basteln.&lt;br /&gt;
+Jetzt, nach einigen Fahrten, muss ich sagen der Mehrwert ist gewaltig. Es handelt sich immernoch um einen Transporter, das heisst es ist nicht zu vergleichen mit dem Multimediacockpit eines Mini Cooper oder BMW, aber man muss nicht mehr in die Mitte greifen und versuchen per Touch das richtige Feld zu treffen.&lt;br /&gt;
+Das Radio hat seine Schwächen, aber das Telefonieren per Bluetooth auf Landstrasse und Autobahn funktioniert sehr gut. Auch hier ist Lenkradfernbedienung ein deutlicher Mehrwert.&lt;/p&gt;
+
+&lt;p&gt;Es gibt per Amazon auch Boxen, welche etwa ein drittel der orignalen Lösung kosten. Von denen habe ich ersteinmal abstand genommen, denn in meinem Urlaub soll es funktionieren. Wenn jemand Erfahrungne mit diesen 3rd Party Lösungen aus China hat, bin ich sehr an einem Erfahrungsbericht interessiert.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Ausgangslage</summary></entry><entry><title type="html">Garmin - Fenix 6 Pro</title><link href="http://www.lupuse.org/gadgets/2021/01/28/Garmin-Fenix-6-Pro.html" rel="alternate" type="text/html" title="Garmin - Fenix 6 Pro" /><published>2021-01-28T22:00:12+00:00</published><updated>2021-01-28T22:00:12+00:00</updated><id>http://www.lupuse.org/gadgets/2021/01/28/Garmin---Fenix-6-Pro</id><content type="html" xml:base="http://www.lupuse.org/gadgets/2021/01/28/Garmin-Fenix-6-Pro.html">&lt;h1 id=&quot;der-rückblick&quot;&gt;Der Rückblick&lt;/h1&gt;
+&lt;p&gt;Meine Frau hat angefangen mit einer Garmin Vivoactive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt.&lt;br /&gt;
+Danach haben wir eine Garmin Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.&lt;/p&gt;
 
 &lt;h2 id=&quot;fenix&quot;&gt;Fenix&lt;/h2&gt;
 &lt;p&gt;Da wir nun das ganze Equipment haben (Brustgurt, Geschwindigkeit-/Trittfrequenzsensor für das Fahrrad, SmartScale Waage, vollständiges Garmin Connect Profil), war klar das wir nicht zu einem Mitbewerber wechseln werden. Aber das Training wurde immer ernster. So kamen wir zur ersten Fenix.&lt;/p&gt;
@@ -224,7 +232,7 @@ Wenn man sich für die Pro Variante entschieden hat stellt sie die Frage nach de
 
 &lt;h3 id=&quot;erster-eindruck&quot;&gt;Erster Eindruck&lt;/h3&gt;
 &lt;p&gt;Schwerer als die Vivoactive 3, aber nicht klobig. Sobald sie am Arm sitzt einfach nur angenehm.&lt;br /&gt;
-Wenn man mehrere Jahre Touchscreen genutzt hat, dann wischt man ein paar Tage wie wild auf dem Display herum. Es dauert sich an dich Knopf-Only Bedienung zu gewöhnen. Das ist aber kein Nachteil. Gerade bei feuchtem Wetter hat mein Ärmel nach dem Radfahren schon mein Tracking gelöscht. Das kann nun nicht mehr vorkommen. Dazu ist die Fenix mit jedem Handschuh zu bedienen, man benötigt keine besonderen Touchscreen Handschuhe.&lt;br /&gt;
+Wenn man mehrere Jahre Touchscreen genutzt hat, dann wischt man ein paar Tage wie wild auf dem Display herum. Es dauert sich an die Knopf-Only Bedienung zu gewöhnen. Das ist aber kein Nachteil. Gerade bei feuchtem Wetter hat mein Ärmel nach dem Radfahren schon mein Tracking gelöscht. Das kann nun nicht mehr vorkommen. Dazu ist die Fenix mit jedem Handschuh zu bedienen, man benötigt keine besonderen Touchscreen Handschuhe.&lt;br /&gt;
 Das Display ist im Gegensatz zur Vivoactive 3 Music wieder etwas eingelassen. Eine Schutzfolie habe ich dennoch umgehend drauf geklebt um Kratzer abzufangen.&lt;/p&gt;
 
 &lt;h3 id=&quot;zweiter-eindruck---nach-etwa-einem-monat&quot;&gt;Zweiter Eindruck - Nach etwa einem Monat&lt;/h3&gt;
@@ -244,7 +252,7 @@ Neben Radfahren gibt es nun auch die Aktivität ‘Mountainbining’. Die Uhr is
 
 &lt;h2 id=&quot;zukunft&quot;&gt;Zukunft&lt;/h2&gt;
 &lt;p&gt;Ich bin gerade am überlegen ob ich mir einen besseren Brustgurt oder nur den ‘Foot Pod’ kaufen sollte. Da ich aktuell ein Lauftrainingsplan verfolge (10KM Laufband in 53 Minuten), interessieren mich auch weitere Daten, wie genauere Schrittlänge oder Zeit in der Luft, um mein Training zu optimieren. Wobei ich mich nach diesem Training wieder mehr auf das Radfahren konzentrieren werde.&lt;br /&gt;
-Der Vorteil an einem Foot Pod ist, das man nur Einen braucht, den können meine Frau und ich uns teilen. Ein durchgeschwitzter Brustgurt ist eher ekelig.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="gadgets" /><category term="garmin" /><summary type="html">Der Rückblick Meine Frau hat angefangen mit einer Garmin Vivoacrive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt. Danach haben wir eine Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.</summary></entry><entry><title type="html">Wohnmobil - Dritter Akt</title><link href="http://www.lupuse.org/wohnmobil/2020/10/24/Wohnmobil-Dritter-Akt.html" rel="alternate" type="text/html" title="Wohnmobil - Dritter Akt" /><published>2020-10-24T22:03:45+00:00</published><updated>2020-10-24T22:03:45+00:00</updated><id>http://www.lupuse.org/wohnmobil/2020/10/24/Wohnmobil---Dritter-Akt</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2020/10/24/Wohnmobil-Dritter-Akt.html">&lt;h1 id=&quot;was-gab-es-bisher&quot;&gt;Was gab es bisher?&lt;/h1&gt;
+Der Vorteil an einem Foot Pod ist, das man nur Einen braucht, den können meine Frau und ich uns teilen. Ein durchgeschwitzter Brustgurt ist eher ekelig.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="gadgets" /><category term="garmin" /><summary type="html">Der Rückblick Meine Frau hat angefangen mit einer Garmin Vivoactive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt. Danach haben wir eine Garmin Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.</summary></entry><entry><title type="html">Wohnmobil - Dritter Akt</title><link href="http://www.lupuse.org/wohnmobil/2020/10/24/Wohnmobil-Dritter-Akt.html" rel="alternate" type="text/html" title="Wohnmobil - Dritter Akt" /><published>2020-10-24T22:03:45+00:00</published><updated>2020-10-24T22:03:45+00:00</updated><id>http://www.lupuse.org/wohnmobil/2020/10/24/Wohnmobil---Dritter-Akt</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2020/10/24/Wohnmobil-Dritter-Akt.html">&lt;h1 id=&quot;was-gab-es-bisher&quot;&gt;Was gab es bisher?&lt;/h1&gt;
 &lt;p&gt;Wir haben angefangen mit unserem HasenMobil. Ein &lt;strong&gt;Knaus Sport Traveller&lt;/strong&gt;, mit Alkoven und sehr viel Platz auf 5,99m. Es sind 6 Fahrsitze eingetragen, durch den Umbau der Sitzecke gab es offiziell 4 Schlafplätze, auf den 2x80x190 im Alkoven war das Schlafen mit drei Personen aber auch möglich.&lt;br /&gt;
 Nach 4 Jahren haben wir uns für das FlashMobil entschieden, einen tizianroten &lt;strong&gt;Sunlight Cliff 601 SoMo&lt;/strong&gt; Kastenwagen. Mit Doppelstockbetten gab es Platz für 4 Erwachsene zum Fahren und schlafen. Unterhalb der Betten war Platz für eine geräumige Hundekiste oder auch eine Garage für 2 Stühle, Tisch und Grill. Es war durch die kompakte Bauform einfach sehr viel sparsamer und auch Stadttauglich. Wenn wir in München standen ist es aufgrund der sportlichen Farbgebung kaum aufgefallen. Die große Seitentür und die beiden Hacktüren waren großartig und nervig zugleich. Im Sommer super Belüftung, bei Regen immer alles innen und außen nass. 1,5 Jahre haben wir es erprobt.&lt;/p&gt;
 

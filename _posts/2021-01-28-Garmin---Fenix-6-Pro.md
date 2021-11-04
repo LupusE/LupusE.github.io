@@ -10,8 +10,8 @@ comments: []
 ---
 
 # Der Rückblick
-Meine Frau hat angefangen mit einer Garmin Vivoacrive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt.  
-Danach haben wir eine Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.
+Meine Frau hat angefangen mit einer Garmin Vivoactive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt.  
+Danach haben wir eine Garmin Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.
 
 ## Fenix
 Da wir nun das ganze Equipment haben (Brustgurt, Geschwindigkeit-/Trittfrequenzsensor für das Fahrrad, SmartScale Waage, vollständiges Garmin Connect Profil), war klar das wir nicht zu einem Mitbewerber wechseln werden. Aber das Training wurde immer ernster. So kamen wir zur ersten Fenix.  
@@ -24,7 +24,7 @@ Wenn man nur läuft ist die Forerunner auch einen Blick wert. Die Fenix ist aber
 
 ### Erster Eindruck
 Schwerer als die Vivoactive 3, aber nicht klobig. Sobald sie am Arm sitzt einfach nur angenehm.  
-Wenn man mehrere Jahre Touchscreen genutzt hat, dann wischt man ein paar Tage wie wild auf dem Display herum. Es dauert sich an dich Knopf-Only Bedienung zu gewöhnen. Das ist aber kein Nachteil. Gerade bei feuchtem Wetter hat mein Ärmel nach dem Radfahren schon mein Tracking gelöscht. Das kann nun nicht mehr vorkommen. Dazu ist die Fenix mit jedem Handschuh zu bedienen, man benötigt keine besonderen Touchscreen Handschuhe.  
+Wenn man mehrere Jahre Touchscreen genutzt hat, dann wischt man ein paar Tage wie wild auf dem Display herum. Es dauert sich an die Knopf-Only Bedienung zu gewöhnen. Das ist aber kein Nachteil. Gerade bei feuchtem Wetter hat mein Ärmel nach dem Radfahren schon mein Tracking gelöscht. Das kann nun nicht mehr vorkommen. Dazu ist die Fenix mit jedem Handschuh zu bedienen, man benötigt keine besonderen Touchscreen Handschuhe.  
 Das Display ist im Gegensatz zur Vivoactive 3 Music wieder etwas eingelassen. Eine Schutzfolie habe ich dennoch umgehend drauf geklebt um Kratzer abzufangen.
 
 ### Zweiter Eindruck - Nach etwa einem Monat
@@ -45,3 +45,4 @@ Neben Radfahren gibt es nun auch die Aktivität 'Mountainbining'. Die Uhr ist Mu
 ## Zukunft
 Ich bin gerade am überlegen ob ich mir einen besseren Brustgurt oder nur den 'Foot Pod' kaufen sollte. Da ich aktuell ein Lauftrainingsplan verfolge (10KM Laufband in 53 Minuten), interessieren mich auch weitere Daten, wie genauere Schrittlänge oder Zeit in der Luft, um mein Training zu optimieren. Wobei ich mich nach diesem Training wieder mehr auf das Radfahren konzentrieren werde.  
 Der Vorteil an einem Foot Pod ist, das man nur Einen braucht, den können meine Frau und ich uns teilen. Ein durchgeschwitzter Brustgurt ist eher ekelig.
+
