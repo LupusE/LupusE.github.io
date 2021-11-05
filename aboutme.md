@@ -5,7 +5,7 @@ subtitle: Die Welt ist ein Theater. Und das Publikum will etwas geboten bekommen
 ---
 
 Hallo Welt. Mein Name ist Benjamin Moeller.
-Ich hatte bisher ein großartiges Leben.
+Ich habe ein großartiges Leben.
 
 ## Eine Kurze Geschichte vom Lebenslauf
 
@@ -26,11 +26,11 @@ Was kommt nun?
 
 ## Details
 
-Ich war nie gerne in der Schule. Aber ich habe immer gerne gelernt. Eine Mischung zwischen 'Was mache ich hier?' (Regelschule) und 'Wach bleiben durch Melden' (Berufsschule versauten mir meinen erfolgreichen Werdegang.
+Ich war nie gerne in der Schule. Aber ich habe immer gerne gelernt. Eine Mischung zwischen 'Was mache ich hier?' (Regelschule) und 'Wach bleiben durch Melden' (Berufsschule versauten mir meinen 'erfolgreichen' Werdegang.
 
 > 'Everyone you'll ever meet knows something you don't' (by Bill Nye).
 
-Ich habe ernsthafte Schwierigkeiten meinen Lebenslauf auf 2 DIN A4 Seiten zu bekommen. Alle 2 Jahre mit einem neuen Arbeitgeber und jeweils verschiedene Verantwortungsbereiche.
+Ich habe mittlerweile Schwierigkeiten meinen Lebenslauf auf 2 DIN A4 Seiten zu bekommen. Alle 2 Jahre mit einem neuen Arbeitgeber und jeweils verschiedene Verantwortungsbereiche.
 Es wird gesagt, dass nach einer gewissen Zeit der Lebenslauf nicht mehr entscheidend ist. Und auch, dass im Lebenslauf nur das erscheinen soll, was für die beworbene Position relevant ist.
 
 Aufgefallen ist mir nur, dass sich wesentlich weniger Zurückgemeldet wird.
