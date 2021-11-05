@@ -12,7 +12,7 @@ subtitle: Lebenslauf
 
 ## BERUFSERFAHRUNG
 ---
-### **03/2015 – heute Leiter IT** / Frommer oHG, Bad Segeberg
+### 03/2015 – heute **Leiter IT** / Frommer oHG, Bad Segeberg
 
 * Inhabergeführtes Unternehmen für die Anpassung und den Verkauf von Hörlösungen. Die Firma legt Wert auf sehr gut ausgebildetes Personal und die beste Ausstattung für eine individuelle Bedarfsanalyse und Versorgung.
 * 33 Mitarbeiter an 9 Standorten in Elmshorn, Tornesch, Bad Segeberg, Neumünster, Wahlstedt und Hamburg
@@ -26,7 +26,7 @@ Umzug der Infrastruktur in die Cloud und Transformation in das papierloses Büro
 Unterstützung bei Renovierung und Aufbau der Standorte
 ```
 
-### **04/2015 – 02/2017 Unternehmensberater für Betriebsprozessautomation** / Best-blu consulting with energy GmbH, Salzgitter
+### 04/2015 – 02/2017 **Unternehmensberater für Betriebsprozessautomation** / Best-blu consulting with energy GmbH, Salzgitter
 
 * Ansprechpartner weltweit für die Betriebsprozessautomation mit Automic.
 * Von der Einführung über die Migration bis zum Update unterstützen Experten den Kunden für einen reibungslosen Ablauf.
@@ -41,7 +41,7 @@ Interne Schulungen und 3rd Level Support bei Fragen rund um Datenbank und Linux.
 ```
 
 
-### **08/2013 – 03/2015 Consultant, IT Service** / SMP Management AG, Hamburg
+### 08/2013 – 03/2015 **Consultant, IT Service** / SMP Management AG, Hamburg
 
 * Ansprechpartner bei allen Fragen und Aufgabenstellungen rund um das Thema IT zur Seite. Unser hochqualifiziertes Team hat dabei den Anspruch, kompetent und zielgerichtet Ihre Anforderungen bis hin zu komplexen Projekten abzuwickeln. www.smp-it.com
 * 25 Mitarbeiter. Im Süden von Hamburg haben wir unseren Hauptsitz von dem aus wir europaweit agieren.
@@ -54,7 +54,7 @@ Pflege und Aufbau der internen Wissensdatenbank
 ```
 
 
-### **10/2011 – 06/2013 Technical Support and Services, Corporate** / Avira GmbH, Tettnang
+### 10/2011 – 06/2013 **Technical Support and Services, Corporate** / Avira GmbH, Tettnang
 
 * Weltweit führender Anbieter von selbst entwickelten Sicherheitslösungen im Privat- und Geschäftsbereich, www.avira.de
 * 500 Mitarbeiter Global mit Hauptsitz in Deutschland, Tettnang. Mit über 20 Jahren Erfahrung ist das Unternehmen ein Pionier auf dem Gebiet
@@ -78,7 +78,7 @@ Signifikante Steigerung der aktualisierten und neu erstellten Artikel der Wissen
 ```
 
 
-### **07/2010 – 09/2011 Mitarbeiter Helpdesk** / Amplifon Deutschland GmbH, Hamburg
+### 07/2010 – 09/2011 **Mitarbeiter Helpdesk** / Amplifon Deutschland GmbH, Hamburg
 * Für Amplifon sind bundesweit mehr als 640 hoch motivierte Mitarbeiterinnen und Mitarbeiter im Einsatz. In über 200 Fachgeschäften verbessern sie in 14 Bundesländern die Lebensqualität von Menschen mit Hörproblemen durch kompetente Beratung und professionelle Versorgung mit passgenauen Hörgeräten und -lösungen und beugen Hörschäden mit effektivem Gehörschutz vor. 
 
 ##### Aufgaben
@@ -108,7 +108,7 @@ Erstellung eines Konzepts zur Qualitätssicherung der schallisolierten Kabinen
 ```
 
 
-### **04/2007 – 07/2008 Hörgeräteakustikgeselle** / Amplifon Deutschland GmbH, Kiel
+### 04/2007 – 07/2008 **Hörgeräteakustikgeselle** / Amplifon Deutschland GmbH, Kiel
 
 ##### Aufgaben
 ```
@@ -122,7 +122,7 @@ Schriftverkehr mit Kunden und Krankenkassen
 ```
 
 
-### **07/2006 – 04/2007 Hörgeräteakustikgeselle** / Pavel Hörgeräte GmbH, Kiel
+### 07/2006 – 04/2007 **Hörgeräteakustikgeselle** / Pavel Hörgeräte GmbH, Kiel
 
 ##### Aufgaben
 ```
@@ -142,15 +142,15 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 
 ## AUSBILDUNG
 ---
-#### **2008 – 2010** Ausbildung / Amplifon Deutschland GmbH, Hamburg
+#### 2008 – 2010 **Ausbildung** / Amplifon Deutschland GmbH, Hamburg
 * Abschluss: Fachinformatiker Systemintegration
 
-#### **2003 – 2006** Ausbildung / Pavel Hörgeräte GmbH, Kiel
+#### 2003 – 2006 **Ausbildung** / Pavel Hörgeräte GmbH, Kiel
 * Abschluss: Geselle der Hörgeräteakustik
 
-#### **2000 – 2001** Zivildienstleistender – Unterstützung der Gerontopsychatrischen Abteilung der Arbeiterwohlfahrt in Kiel
+#### 2000 – 2001 **Zivildienstleistender** / Gerontopsychatrische Abteilung der Arbeiterwohlfahrt in Kiel
 
-#### **2000** Realschule des BZM in Kiel
+#### bis 2000 **Realschule des BZM in Kiel**
 * Abschluss: Mittlere Reife mit Note 2
 
 
@@ -164,13 +164,14 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 ---
 * Windows und Linux im Einsatz als Desktop und Server
 * Kenntnisse der gängigen Serverdienste für Linux und MS Exchange
+* Kenntnisse in Migration und Betrieb von AzureAD/O365 im KMU
 * Fundierte Kenntnisse über gängige Netzwerke und deren Protokolle
 * Sicherer Umgang mit MS SQL, MySQL/MariaDB
 * Privater Betrieb eines Proxmox Nodes mit mehreren Containern und VMs
 * Grundlagenwissen über Microsoft BI und DWH
 * Fertigkeiten in Datenforensik für Wiederherstellung von Flashspeicher und Festplatten
 * Kenntnisse in Debugging für gängige Hochsprachen
-* Kenntnisse der Automationslösung ‚Automic‘, sowie Grundlagen anderer Lösungen
+* Kenntnisse der Automationslösung 'Automic', sowie Grundlagen anderer Lösungen
 
 ## WEITERBILDUNG
 ---
@@ -180,6 +181,6 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 
 ## FREIZEIT
 ---
-> Radfahren, Wandern, Reparaturen von elektrischen und mechanischen Geräten im Haushalt, allgemeine Arbeiten im und am Haus, Reisen mit dem Wohnmobil
+> Radfahren, Wandern, Reparaturen von elektrischen und mechanischen Geräten im Haushalt, allgemeine Arbeiten im und am Haus, Reisen mit dem Wohnmobil, Smathome, Inlineskating
 
 
