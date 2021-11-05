@@ -1,0 +1,19 @@
+# ~/.screenrc von ChristianHahn schickard.dyndns.org
+
+# keine startmeldung
+startup_message off
+
+# statuszeile mit [ UHR | DATUM | WINDOW ]
+#hardstatus alwayslastline \
+#	" [ %H ]  %c | %d.%m.%Y | Load: %l %{wr} %c:%s %{wb} %n %t %{kw} %W "
+
+# statuszeile mit [ HOSTNAME ] UHR | DATUM | LOAD | WINDOW ]
+hardstatus alwayslastline " [ %H ] %{wb} %c:%s %{wr} Load: %l %{wb} %w "
+
+# visual bell
+#vbell on
+#vbell_msg " *beep* "
+
+# zeilen puffer
+defscrollback		3000
+

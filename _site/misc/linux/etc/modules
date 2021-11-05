@@ -1,0 +1,81 @@
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file should contain the names of kernel modules that are
+# to be loaded at boot time, one per line.  Comments begin with
+# a "#", and everything on the line after them are ignored.
+
+# diese file legt fest, welche module beim booten geladen werden. da die
+# modules.conf automatisch generiert wird, und nicht per hand bearbeitet
+# werden sollte (wie es bei anderen distributuinen üblich ist.)
+
+#af_packet
+
+# filesystem
+############
+#fat			#DOS FAT fs support
+#msdos			#MSDOS fs support
+#vfat			#VFAT (Windows-95) fs support
+ext3			#Ext3 journalling file system support
+#isofs			#ISO 9660 CDROM file system support
+
+# netzwerk
+##########
+via-rhine		#VIA Rhine support
+#8139too		#RealTek RTL-8139 PCI Fast Ethernet Adapter support
+#dummy			#Dummy net driver support
+
+# power managment
+#################
+apm			#Advanced Power Management BIOS support
+
+# multimedia 
+############
+emu10k1			#Creative SBLive! (EMU10K1)
+nvidia			#ab dem 1.0-4191 nichtmehr NVdriver
+#i2c-algo-bit		#I2C bit-banging interfaces
+#videodev		#Video For Linux
+#bttv			#BT848 Video For Linux
+#btaudio		#BT878 audio dma
+
+# usb
+#####
+usbcore			#Support for USB
+usb-uhci		#UHCI (Intel PIIX4, VIA, ...) support
+#uhci			#UHCI Alternate Driver (JE) support
+#usb-storage		#USB Mass Storage support
+
+# scsi
+######
+#scsi_mod               #SCSI support
+#sd_mod			#SCSI disk support
+ncr53c8xx		#NCR53C8XX SCSI support
+sr_mod			#SCSI CD-ROM support
+sg			#SCSI generic support
+
+# buring
+########
+loop			#Loopback device support
+#ide-scsi		#SCSI emulation support
+
+# misc basics
+#############
+#parport_pc
+#floppy			#Normal floppy disk support
+#ide-cd			#Include IDE/ATAPI CDROM support
+
+# misc internal
+###############
+#serial			#Standard/generic serial support
+#i2c-core		#I2C support
+#i2c-algo-bit           #I2C bit-banging interfaces
+#i2c-dev		#I2C device interface
+#i2c-proc		#I2C /proc interface (required for hardware sensors)
+
+# irda
+######
+irda			#IrDA subsystem support
+ircomm			#IrCOMM protocol
+#irtty			#IrTTY (uses Linux serial driver)
+#irport			#IrPORT (IrDA serial driver)
+#tekram			#Tekram IrMate 210B dongle
+

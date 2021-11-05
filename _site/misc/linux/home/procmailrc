@@ -1,0 +1,35 @@
+# ~/procmailrc
+# programm zum sortieren der eingehenden mails in lokale mailboxen
+
+PATH=/bin:/usr/bin:/usr/bin
+MAILDIR=/home/[user]/mail	#das local dir, in dem die mails gespeichter werden
+LOGFILE=$MAILDIR/procmail.log	#file, in der die logfile gespeichert wird
+DEFAULT=$MAILDIR/inbox		#default maildir
+
+:0:
+* ^TO.webmaster@domain*		#an wen adressiert?
+homepage			#in welche mailbox?
+
+:0:
+* ^TO.*@domain.*
+meine_domain
+
+:0:
+* ^TO.*web.de
+web
+
+:0:
+* ^TO.*gmx.*
+gmx
+
+:0:
+* ^TO.*@arbeitgeber.*
+beruflich
+
+:0:
+* ^TO.*@t-online.de
+tonline
+
+:0:
+inbox				# wohin der rest?
+

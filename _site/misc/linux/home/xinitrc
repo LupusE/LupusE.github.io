@@ -1,0 +1,25 @@
+## some stats on the desktop
+gkrellm &
+
+## boring backgroundcolor
+#xsetroot -solid "#6e7a8a" &
+
+## nice bachgroundpicture
+fbsetbg ~/.fluxbox/clubambient.jpg &
+
+## personalize general look and feel
+xrdb -merge .Xdefaults &
+
+## beeing paranoid! at 1600x1200
+#exec root-tail -shade -color white -g 500x200+1000+970 \
+#	-font -*-fixed-*-*-*-*-12-*-*-*-*-*-*-* \
+#	/var/log/auth.log /var/log/messages /var/log/syslog &
+## see whats happen in the system at 1280x1024
+exec root-tail -shade -color white -g 500x200+650+780 \
+	-font -*-fixed-*-*-*-*-8-*-*-*-*-*-*-* \
+	/var/log/auth.log /var/log/messages /var/log/syslog &
+
+## small, nice and fluffig!
+fluxbox 
+
+

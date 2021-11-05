@@ -1,0 +1,86 @@
+# See sources.list(5) for more information, especialy
+# Remember that you can only use http, ftp or file URIs
+# CDROMs are managed through the apt-cdrom tool.
+
+#deb http://security.debian.org stable/updates main contrib non-free
+
+# debian binary ftp stable (woody 3.0)
+#deb ftp://ftp2.de.debian.org/debian stable main contrib non-free
+#deb http://non-us.debian.org/debian-non-US stable/non-US main contrib non-free
+
+# debian binary ftp testing (sarge)
+#deb ftp://ftp2.de.debian.org/debian testing main contrib non-free
+#deb http://non-us.debian.org/debian-non-US testing/non-US main contrib non-free
+
+# debian binary ftp unstable (sid)
+#deb ftp://ftp2.de.debian.org/debian-non-US unstable/non-US main contrib non-free
+#deb ftp://ftp2.de.debian.org/debian unstable main contrib non-free
+
+# debian sources ftp stable (woody 3.0)
+#deb-src ftp://ftp2.de.debian.org/debian stable main contrib non-free
+
+# debian sources ftp testing (sarge)
+#deb-src ftp://ftp2.de.debian.org/debian testing main contrib non-free
+
+# debian sources ftp unstable (sid)
+#deb-src ftp://ftp2.de.debian.org/debian-non-US unstable/non-US main contrib non-free
+#deb-src ftp://ftp2.de.debian.org/debian unstable main contrib non-free
+
+# IPv6
+#deb http://www.debian.or.jp/~kitame/ipv6/ ipv6 unstable
+#deb-src http://people.debian.or.jp/~kitame/ipv6/ ipv6 unstable
+
+# helix gnome and tools
+#deb http://spidermonkey.helixcode.com/distributions/debian unstable main
+
+# helix sources
+#deb-src http://spidermonkey.helixcode.com/distributions/debian unstable main
+
+# mozilla
+#deb http://www.debian.or.jp/~kitame/mozilla/ ./
+
+# blackdown.org jdk
+#deb ftp://ftp.gwdg.de/pub/languages/java/linux/debian stable main non-free
+#deb ftp://ftp.gwdg.de/pub/languages/java/linux/debian unstable main non-free
+
+# gnome
+#deb http://red-carpet.ximian.com/debian unstable main
+#deb http://red-carpet.ximian.com/debian stable main
+
+# ickle
+#deb http://stud3.tuwien.ac.at/~e0027500/debian/ ./
+
+# licq cvs deb
+#deb http://www.xanadunet.net/debian/licq ./
+
+# oroborus
+#deb http://www.dreamind.de/debian sid main
+#deb-src http://www.dreamind.de/debian sid main
+
+# open office
+#deb http://ftp.openoffice.tuxfamily.org/openoffice unstable main contrib
+#deb ftp://ftp.freenet.de/pub/ftp.vpn-junkies.de/openoffice/ unstable main contrib
+#deb http://ftp.freenet.de/pub/ftp.vpn-junkies.de/openoffice/ unstable main contrib
+
+# gnome 2 builds
+#deb ftp://ftp.de.debian.org/debian ../project/experimental main
+#deb-src ftp://ftp.de.debian.org/debian ../project/experimental main
+#deb http://people.debian.org/~walters/debian/local ./
+#deb-src http://people.debian.org/~walters/debian/local ./
+
+# roxfiler
+#deb http://www.janw.easynet.be/rox/ stable/
+#deb http://www.janw.easynet.be/rox/ developer/
+
+# mplayer (unofficial debs)
+#deb http://marillat.free.fr/ stable main
+#deb http://marillat.free.fr/ unstable main
+#deb-src http://marillat.free.fr/ unstable main
+
+# enlightenment dr17
+#deb http://people.debian.org/~ljlane/downloads e17/
+
+# streamripper
+#deb http://wshs.dhs.org/~roland/streamripper/ ./$(ARCH)/
+#deb-src http://wshs.dhs.org/~roland/streamripper/ ./
+

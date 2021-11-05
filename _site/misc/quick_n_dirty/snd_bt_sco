@@ -1,0 +1,57 @@
+## hier testen wir nun einmal das snd_bt_sco, also den alsa treiber fuer
+## bluetooth headsets.
+## ich habe hier laufen:
+## - ein AVM BlueFritz! USB v2.0 (ID 057c:3800)
+## - ein SonyEricsson HBH-200, BDA: 000E074DA396
+##   Type DDA-0001001, FCC: PY7DDA-1001, BT1.1
+## - Linux joshua 2.6.11.11 #1 [...] i686 GNU/Linux
+## - Debian GNU/Linux 'sid' (unstable)
+##   bluez-utils    2.15-1
+##   bluez-pin      0.25-1
+##   libsdp2        1.5.dummy2
+##   gcc            3.3.5-3
+##   make           3.80-9
+## - Pentium III 700MHz, 512MB Ram (VT82C693A/694x [Apollo PRO133x])
+
+## nach dem runterladen und sinnvollem ablegen entpacken wir
+lupus@joshua:~/sys/$ tar xfvz btsco-0.4.tar.gz
+lupus@joshua:~/sys/$ cd btsco-0.4/kernel/
+
+## nun kompilieren installieren und laden wir das kenrel modul
+lupus@joshua:~/sys/btsco-0.4/kernel$ make
+[...]
+joshua:/home/lupus/sys/btsco-0.4/kernel# make install
+[...]
+joshua:/home/lupus/sys/btsco-0.4/kernel# depmod -a  
+joshua:/home/lupus/sys/btsco-0.4/kernel# modprobe snd-bt-sco
+joshua:/home/lupus/sys/btsco-0.4/kernel# exit
+lupus@joshua:~/sys/btsco-0.4/kernel$ cd ..
+
+## hier wird das usermodul kompiliert und installiert
+joshua:/home/lupus# apt-get install libao-dev
+lupus@joshua:~/sys/btsco-0.4$ ./configure
+[...]
+lupus@joshua:~/sys/btsco-0.4$ make
+[...]
+joshua:/home/lupus/sys/btsco-0.4# make install
+[...]
+
+## einige vorbereitungen
+## esd (Enlightened Sound Daemon) runterfahren
+lupus@joshua:~/sys/btsco-0.4$ esdctl stop
+[-- bt connection zum headset -- siehe handbuch --]
+## bluetooth adapter zum fuer sprache vorbereiten
+joshua:/home/lupus# hciconfig hci0 voice 0x0060
+## in erfahrung bringen auf welchem channel das hs lauscht
+sdptool search --bdaddr 00:0E:07:4D:A3:96 0x1108
+[...]
+
+## deamon starten (./<programm> <btaddr> [channel])
+lupus@joshua:~/sys/btsco-0.4$ ./btsco2 00:0E:07:4D:A3:96 1
+[-- pinhelper -> 0000 -- connection established --]
+## (apt-get install alsa-utils) und das ganze austesten.
+lupus@joshua:~/sys/btsco-0.4$ aplay -B 1000000 -D plughw:Headset sound.wav
+
+## ab hier bekomme ich nurnoch ein rauschen auf dem headset
+## das kann aber headset bedingt sein. evtl klappt es bei euch besser.
+

@@ -1,0 +1,41 @@
+\\ Alle development Pakete installieren
+# aptitude install wget bzip2 kernel-package tk8.4-dev kernel-package libncurses5-dev binutils bin86 make fakeroot
+\\ Dem <$user> die noetigen Rechte fuer /usr/src geben ...
+# adduser <user> src
+\\ ... und User neu einloggen!
+
+\\ Den Kernel bekommen, verschieben, entpacken, symlinken, konfigurieren
+$ cd /usr/src; \
+wget ftp://ftp.de.kernel.org/pub/linux/kernel/v2.6/linux-<ver>.tar.bz2; \
+tar xfvj linux-<version>.tar.bz2; \
+ln -s linux-<version> linux; \
+cd linux; \
+make menuconfig
+
+
+\\ Ab hier wird es unuebersichtlich. Das sollte Jeder fuer sich entscheiden.
+\\ Oft hilft es anzufangen dort wo man aufgehoert hat,
+\\ Ganz unten im 'make menuconfig' steht:
+>> Load an Alternate Configuration File
+\\ Hier kann man angeben: /boot/config-<version> (siehe 'ls /boot/')
+
+\\ Den Kernel als .deb bauen
+$ fakeroot make-kpkg kernel-image --revision=<rechnername>1.0
+\\ Den Kernel installieren
+# cd .. ; dpkg --install linux-image-<version>_<rechnername>_i386.deb
+\\ Neuen Kernel starten
+# shutdown -r now
+\\ Vertrauen ist gut, Kontrolle ist besser
+$ uname -a
+Linux <rechnername> <version> #1 Mon Sep 12 21:04:19 CEST 2005 i686 GNU/Linux
+
+	good luck!
+
+\\ Ein Nachtraegliches einbinden von Modulen funktioniert ohne Reboot.
+# cd /usr/src/linux
+# make menuconfig
+\\ Das entsprechende Modul auswaehlen.
+# make modules modules_install && depmod -a
+# modprobe <$module>
+\\ Und immer drauf achten, es ist NICHT im linux-*.deb geaendert!
+

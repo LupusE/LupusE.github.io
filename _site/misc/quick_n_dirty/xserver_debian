@@ -1,0 +1,30 @@
+# apt-get install xserver-xfree86 xfs xfonts-base xfonts-base-transcoded xfonts-100dpi xfonts-100dpi-transcoded xfonts-75dpi xfonts-75dpi-transcoded freefont sharefont xbase-clients <$windowmanager>
+
+$windowmanager == (kde|gnome|enlightenment|(flux|open)box|oroborus|...)
+$filemanager == (konqueror|nautilus|xffm4)
+$webbrowser == (konqueror|mozilla|galeon|lynx|w3m)
+$emailclient == (kmail|evolution|firefox|mutt)
+$mediaplayer == (xmms&&mplayer|xine-ui)
+$terminal == (konsole|(e|a|x|ux)term)
+$editor == ((x)emacs|(g)vi(m)|kedit)
+...
+
+$ vim /etc/X11/XF86Config-4
+## ggf aus einer Knoppix Session kopieren.
+
+$ vim .xsession
+
+### Nvidia
+##########
+
+$ make menuconfig
+[...]
+Character devices  --->
+/dev/agpgart (AGP Support) (y/n/m) n
+[...]
+
+www.nvidia.de -> treiber -> linux -> latest -> download
+
+$ vim README_<arch>_<version>_<language>_unix.txt
+# sh NVIDIA-Linux-<arch>-<version>-<revision>-pkg1.run
+

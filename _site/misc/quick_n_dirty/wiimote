@@ -1,0 +1,16 @@
+## ubuntu
+sudo aptitude install libcwiimote-0.2 wmgui wminput
+
+## debian
+aptitude install wmgui wminput
+## /etc/udev/rules.d/91-permissions.rules
+## KERNEL=="uinput"                        GROUP="plugdev"
+
+sudo modprobe uinput
+
+Press Btn1+2 (Wiimote discovery mode)
+hcitool scan
+
+wmgui #show wiimote events
+wminput #wiimote as mouse
+
