@@ -181,6 +181,6 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 
 ## FREIZEIT
 ---
-> Radfahren, Wandern, Reparaturen von elektrischen und mechanischen Geräten im Haushalt, allgemeine Arbeiten im und am Haus, Reisen mit dem Wohnmobil, Smathome, Inlineskating
+> Radfahren, Wandern, Reparaturen von elektrischen und mechanischen Geräten im Haushalt, allgemeine Arbeiten im und am Haus, Reisen mit dem Wohnmobil, Smarthome, Inlineskating
 
 
