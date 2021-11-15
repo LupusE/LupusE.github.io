@@ -1,27 +1,27 @@
 <p>Kuerzlich verfolgte ich eine Diskussion im IRC, in der diskutiert wurde ‘Ein negativer Ping sagt genauso wenig aus, wie ein positiver’. Das ist (so, wie ich das sehe) nicht ganz richtig, denn ein Ping ist immer noch ein brauchbares Analysetool.</p>
 
 <blockquote>
-  <p>lupus@zoe:~$ ping -c4 eva5.lupuse.net
-PING eva5.lupuse.net (192.168.0.1) 56(84) bytes of data.
-64 bytes from eva5.lupuse.net: icmp_seq=1 ttl=255 time=0.455 ms
-64 bytes from eva5.lupuse.net: icmp_seq=2 ttl=255 time=0.392 ms
-64 bytes from eva5.lupuse.net: icmp_seq=3 ttl=255 time=0.396 ms
-64 bytes from eva5.lupuse.net: icmp_seq=4 ttl=255 time=0.393 ms
-— eva5.lupuse.net ping statistics —
-4 packets transmitted, 4 received, 0% packet loss, time 2998ms
+  <p>lupus@zoe:~$ ping -c4 eva5.lupuse.net<br />
+PING eva5.lupuse.net (192.168.0.1) 56(84) bytes of data.<br />
+64 bytes from eva5.lupuse.net: icmp_seq=1 ttl=255 time=0.455 ms<br />
+64 bytes from eva5.lupuse.net: icmp_seq=2 ttl=255 time=0.392 ms<br />
+64 bytes from eva5.lupuse.net: icmp_seq=3 ttl=255 time=0.396 ms<br />
+64 bytes from eva5.lupuse.net: icmp_seq=4 ttl=255 time=0.393 ms<br />
+— eva5.lupuse.net ping statistics —<br />
+4 packets transmitted, 4 received, 0% packet loss, time 2998ms<br />
 rtt min/avg/max/mdev = 0.392/0.409/0.455/0.026 ms</p>
 </blockquote>
 
 <p>Hier sehen wir einen positiven Ping. Also ich pinge meinen Router, der gibt mir eine Antwort. Zusaetzlich sehe ich eine Statistik (Groesse des Paketes, Host, laufende Nummerierung, time-to-live, Zeit von Anfrage bis Antwort).</p>
 
 <blockquote>
-  <p>lupus@zoe:~$ ping -c4 pontus.lupuse.net
-PING pontus.lupuse.net (192.168.0.2) 56(84) bytes of data.
-From zoe.lupuse.net icmp_seq=1 Destination Host Unreachable
-From zoe.lupuse.net icmp_seq=2 Destination Host Unreachable
-From zoe.lupuse.net icmp_seq=3 Destination Host Unreachable
-From zoe.lupuse.net icmp_seq=4 Destination Host Unreachable
-— pontus.lupuse.net ping statistics —
+  <p>lupus@zoe:~$ ping -c4 pontus.lupuse.net<br />
+PING pontus.lupuse.net (192.168.0.2) 56(84) bytes of data.<br />
+From zoe.lupuse.net icmp_seq=1 Destination Host Unreachable<br />
+From zoe.lupuse.net icmp_seq=2 Destination Host Unreachable<br />
+From zoe.lupuse.net icmp_seq=3 Destination Host Unreachable<br />
+From zoe.lupuse.net icmp_seq=4 Destination Host Unreachable<br />
+— pontus.lupuse.net ping statistics —<br />
 4 packets transmitted, 0 received, +4 errors, 100% packet loss, time 3009ms, pipe 3</p>
 </blockquote>
 
