@@ -1,21 +1,33 @@
-<p>Grade bei einem Kaffee im Cup'n'Chino (Kiel) war mal wieder das leidige Thema 'Alsa wuerfelt mit meinen Karten' aktuell, daher hier mein Ansatz.</p>
-<p>Situation:<br />
-Debian 'SID'<br />
+<p>Grade bei einem Kaffee im Cup’n’Chino (Kiel) war mal wieder das leidige Thema ‘Alsa wuerfelt mit meinen Karten’ aktuell, daher hier mein Ansatz.</p>
+
+<h3 id="situation">Situation</h3>
+
+<p>Debian ‘SID’<br />
 alsa-base 1.0.13-3, alsa-oss 1.0.12-1, alsa-tools 1.0.13-1, alsa-utils 1.0.13-2<br />
 Linux zoe 2.6.19 #1 PREEMPT Tue Dec 5 22:28:20 CET 2006 i686 GNU/Linux</p>
-<p>Ziel:<br />
-Die Karten nach dem Reboot immer in der gleichen Reihenfolge laden</p>
-<p>Problem:<br />
-Bis vor kurzem reichte es die Module in der gewuenschten Reihenfolge in die /etc/modules einzutragen, doch hier spielt libdiscover nicht mehr mit.</p>
-<p>Loesungsansatz1:<br />
-Laut den alsa-Webseiten soll man in der /etc/modutils/alsa-base die gewuenschte Reihenfolge unten anfuegen mit<br />
-[---snip---]<br />
-options snd-cmipci snd_index=0 #C-Media Electronics Inc CM8738 (rev 10)<br />
-options snd-emu10k1 snd_index=1 #Creative Labs SB Audigy (rev 03)<br />
-options snd-usb-audio snd_index=2 #Logitech Messanger Webcam<br />
-[---snap---]<br />
-Quellen:<br />
-http://alsa.opensrc.org/MultipleCards#How_to_choose_a_particular_order_for_multiple_installed_cards<br />
-http://alsa.opensrc.org/MultipleCards#Multiple_Sound_Cards_--_Example_on_Debian_GNU.2FLinux</p>
-<p>Loesungsansatz2:<br />
-Das alsa ueber udev auf die Devicefile binden. Das halte ich fuer unmoeglich, aber sicher ein Versuch wert.</p>
+
+<h3 id="ziel">Ziel</h3>
+
+<p>Die Karten nach dem Reboot immer in der gleichen Reihenfolge laden</p>
+
+<h3 id="problem">Problem</h3>
+
+<p>Bis vor kurzem reichte es die Module in der gewuenschten Reihenfolge in die <code class="language-plaintext highlighter-rouge">/etc/modules</code> einzutragen, doch hier spielt libdiscover nicht mehr mit.</p>
+
+<h3 id="loesungsansatz1">Loesungsansatz1</h3>
+
+<p>Laut den alsa-Webseiten soll man in der <code class="language-plaintext highlighter-rouge">/etc/modutils/alsa-base</code> die gewuenschte Reihenfolge unten anfuegen mit</p>
+
+<blockquote>
+  <p>options snd-cmipci snd_index=0 #C-Media Electronics Inc CM8738 (rev 10)
+options snd-emu10k1 snd_index=1 #Creative Labs SB Audigy (rev 03)
+options snd-usb-audio snd_index=2 #Logitech Messanger Webcam</p>
+</blockquote>
+
+<h4 id="quellen">Quellen</h4>
+
+<p>http://alsa.opensrc.org/MultipleCards#How_to_choose_a_particular_order_for_multiple_installed_cards<br />
+http://alsa.opensrc.org/MultipleCards#Multiple_Sound_Cards_–_Example_on_Debian_GNU.2FLinux</p>
+
+<h4 id="loesungsansatz2">Loesungsansatz2</h4>
+<p>Das alsa ueber udev auf die Devicefile binden. Das halte ich fuer unmoeglich, aber sicher ein Versuch wert.</p>
