@@ -1,39 +1,66 @@
-<p>Heute sich selbst referenzierend im s9y über seine Installation.</p>
+<h2 id="heute-sich-selbst-referenzierend-im-s9y-über-seine-installation">Heute sich selbst referenzierend im s9y über seine Installation</h2>
 <p>Wie einige wissen ist s9y (Serendipity) ein Blog-System, welches ich gerne einsetze, weil es schlank und einfach ist.</p>
-<p>Beim Upgrade von Ubuntu lucid auf Ubuntu precise hatte ich nur bemerkt, das MySQL nicht mehr installiert ist. Die Datenbanken selbst waren nach der wieder Installation alle noch vorhanden.</p>
-<p>Bei der Installation unter quantal bin ich auf ein ganz anderes Problem gestoßen.</p>
-<blockquote><p>$ sudo aptitude install serendipity</p></blockquote>
-<p>sieht zunächst gut aus. Beim automatischen Einrichten der Datenbank über debconf der Fehler:</p>
-<blockquote><p>#1214 - The used table type doesn't support FULLTEXT indexes</p></blockquote>
-<p>Die Meldung hatte ich schon mal, aber da habe ich bewusst auf einer Tabelle die InnoDB testen wollen.<br />
-Da MySQL als Standard MyISAM nutzt kann es daran gar nicht liegen. Oder?</p>
-<p>Analyse:</p>
+
+<p>Beim Upgrade von Ubuntu lucid auf Ubuntu precise hatte ich nur bemerkt, das MySQL nicht mehr installiert ist. Die Datenbanken selbst waren nach der wieder Installation alle noch vorhanden.<br />
+Bei der Installation unter quantal bin ich auf ein ganz anderes Problem gestoßen.</p>
+<blockquote>
+  <p>$ sudo aptitude install serendipity</p>
+</blockquote>
+
+<p>Sieht zunächst gut aus. Beim automatischen Einrichten der Datenbank über debconf der Fehler:</p>
+<blockquote>
+  <p>#1214 - The used table type doesn’t support FULLTEXT indexes</p>
+</blockquote>
+
+<p>Die Meldung hatte ich schon mal, aber da habe ich bewusst auf einer Tabelle die InnoDB testen wollen.</p>
+
+<p>Da MySQL als Standard MyISAM nutzt kann es daran gar nicht liegen. Oder?</p>
+
+<h3 id="analyse">Analyse:</h3>
 <p>Zunächst gehe ich sicher, das meine Annahme stimmt:</p>
-<blockquote><p>$ mysql -u root -p<br />
-mysql> SHOW ENGINES;<br />
-[...]<br />
+
+<blockquote>
+  <p>$ mysql -u root -p<br />
+mysql&gt; SHOW ENGINES;<br />
+[…]<br />
 | Engine             | Support | Comment<br />
-[...]<br />
+[…]<br />
 | MyISAM             | YES     | MyISAM storage engine<br />
-[...]<br />
-| InnoDB             | DEFAULT | Supports transactions, row-level locking,...<br />
-[...]</p></blockquote>
+[…]<br />
+| InnoDB             | DEFAULT | Supports transactions, row-level locking,…<br />
+[…]</p>
+</blockquote>
+
 <p>Okay, stimmt nicht. Was habe ich hier falsch gemacht? Nichts! Ausser vielleicht Changelogs nicht aufmerksam gelesen.</p>
-<blockquote><p>Permitted Values (<= 5.5.4) Default	MyISAM<br />
-Permitted Values (>= 5.5.5) Default	InnoDB<br />
-Quelle: http://dev.mysql.com/doc/refman/5.5/en/server-options.html#option_mysqld_default-storage-engine</p></blockquote>
-<p>Seit precise wird MySQL 5.5 eingesetzt, davor war es noch 5.1.<br />
+<blockquote>
+  <p>Permitted Values (&lt;= 5.5.4) Default	MyISAM<br />
+Permitted Values (&gt;= 5.5.5) Default	InnoDB<br />
+Quelle: http://dev.mysql.com/doc/refman/5.5/en/server-options.html#option_mysqld_default-storage-engine</p>
+</blockquote>
+
+<blockquote>
+  <p>Seit precise wird MySQL 5.5 eingesetzt, davor war es noch 5.1.<br />
 Quelle: http://packages.ubuntu.com/mysql-server</p>
+</blockquote>
+
 <p>Alle Fragen geklärt. Jetzt heisst es aufräumen:</p>
-<p>Lösung:<br />
-Default setzen, in die (zuvor geleerte!) Datenbank wechseln, Dump erneut einlesen.</p>
-<blockquote><p>mysql> SET storage_engine=MYISAM;<br />
-mysql> USE serendipity;<br />
-mysql> \. /usr/share/doc/serendipity/sql-schema/mysql</p></blockquote>
+
+<h3 id="lösung">Lösung:</h3>
+<p>Default setzen, in die (zuvor geleerte!) Datenbank wechseln, Dump erneut einlesen.</p>
+<blockquote>
+  <p>mysql&gt; SET storage_engine=MYISAM;<br />
+mysql&gt; USE serendipity;<br />
+mysql&gt; . /usr/share/doc/serendipity/sql-schema/mysql</p>
+</blockquote>
+
 <p>Done.</p>
-<p>Der Import läuft durch es musste kein Script angepasst werden. Keep it simple.</p>
-<p>PS: Allen PhpMyAdmin Liebhaber sei gesagt: Macht es über die Konsole!<br />
+
+<p>Der Import läuft durch es musste kein Script angepasst werden. Keep it simple.<br />
+PS: Allen PhpMyAdmin Liebhaber sei gesagt: Macht es über die Konsole!<br />
 Das Frontend nimmt das SET an und gibt auch positives Feedback, aber wendet es nicht auf das nächste Query an. Viel Spaß beim selbst Testen.</p>
+
 <p>PPS: Bevor jemand auf die Idee kommt jede durch den ersten Lauf angelegte Tabelle einzeln zu dropen:</p>
-<blockquote><p>mysql> DROP DATABASE serendipity;<br />
-mysql> CREATE DATABASE serendipity;</p></blockquote>
+<blockquote>
+  <p>mysql&gt; DROP DATABASE serendipity;<br />
+mysql&gt; CREATE DATABASE serendipity;</p>
+</blockquote>
