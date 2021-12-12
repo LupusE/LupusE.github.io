@@ -1,26 +1,39 @@
-<p>Lange ist es her, da habe ich einmal versuche mein Adressbuch des Handys mit dem des Linux zu verheiraten. Ich habe es aufgegeben. Das einfachste war SyncML ueber Bluetooth auf eGroupWare (XML-RPC)/LDAP als Server. Das ist nicht verhaeltnismaessig, fuer z.B. einen Laptop.<br />
+<p>Lange ist es her, da habe ich einmal versuche mein Adressbuch des Handys mit dem des Linux zu verheiraten. Ich habe es aufgegeben. Das einfachste war SyncML über Bluetooth auf eGroupWare (XML-RPC) und LDAP als Server. Das ist nicht verhaeltnismässig, fuer z.B. einen Laptop.<br />
 Vor wenigen Tagen dann kam ein neuer Hoffnungsträger, der Source zu <a href="http://downloads.sourceforge.net/synce/usb-rndis-lite-0.11.tar.gz">usb-rndis</a> von <a href="http://www.synce.org">synce.org</a>.</p>
-<blockquote><p>$ wget http://downloads.sourceforge.net/synce/usb-rndis-lite-0.11.tar.gz<br />
-$ cd usb-rndis-lite-0.11/<br />
-$ make<br />
-$ su<br />
-# ./clean.sh<br />
-# make install</p></blockquote>
-<p>Damit kann Linux nun WMisch sprechen (ganz schlimmer Dialekt ähnliche dem Walischen).</p>
-<blockquote><p>aptitude install opensync-plugin-synce synce-kde multisync-tools</p></blockquote>
-<p>Und man hat auch die notwendigen Tools. Nun an die Einrichtung</p>
-<blockquote><p>$ synce-sync-engine &<br />
-$ synce-create-partnership "eniezoe" "Contacts,Calendar,Tasks"</p></blockquote>
-<blockquote><p>$ msynctool --listplugins<br />
-$ msynctool --addgroup enie<br />
-$ msynctool --addmember enie synce-opensync-plugin<br />
-$ msynctool --addmember enie kdepim-sync</p>
-<p>$ msynctool --sync enie</p></blockquote>
-<p>Enie ist der Name meines Telefons, Zoe der meines Rechners, beide sind frei wählbar.<br />
-Die Optionen beim Partnership sind: <strong>Contacts,Calendar,Tasks,Files</strong></p>
-<p>Als letztes noch Kontakt öffnen und das Ergebnis bestaunen.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget http://downloads.sourceforge.net/synce/usb-rndis-lite-0.11.tar.gz  
+$ cd usb-rndis-lite-0.11/  
+$ make  
+$ su  
+# ./clean.sh  
+# make install  
+</code></pre></div></div>
+
+<p>Damit kann Linux nun WMisch sprechen (ganz schlimmer Dialekt ähnliche dem Walischen).<br />
+<code class="language-plaintext highlighter-rouge">aptitude install opensync-plugin-synce synce-kde multisync-tools</code></p>
+
+<p>Und man bekommt auch die notwendigen Tools. Nun an die Einrichtung</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ synce-sync-engine &amp;
+$ synce-create-partnership "eniezoe" "Contacts,Calendar,Tasks"
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ msynctool --listplugins  
+$ msynctool --addgroup enie  
+$ msynctool --addmember enie synce-opensync-plugin  
+$ msynctool --addmember enie kdepim-sync
+$ msynctool --sync enie  
+</code></pre></div></div>
+
+<p><strong>Enie</strong> ist der Name meines Telefons, <strong>Zoe</strong> der meines Rechners, beide sind frei wählbar.<br />
+Die Optionen beim Partnership sind: <strong>Contacts,Calendar,Tasks,Files</strong><br />
+Als letztes noch Kontakt öffnen und das Ergebnis bestaunen.</p>
+
 <p>Ich hoffe in diesem QuickAndDirty nichts essentielles ausgelassen zu haben, ich habe die Schritte nicht by-doing dokumentiert.<br />
 Und, ehm, Patrick, ich schulde Dir ne Flasche Vodka :)</p>
-<p>[Edit] Mein System:<br />
-Debian GNU/Linux SID "Unstable"<br />
-XDA Orbit II "M-Amine 2.0 FINAL ROM"</p>
+
+<h2 id="edit-mein-system">[Edit] Mein System:</h2>
+<ul>
+  <li>Debian GNU/Linux SID “Unstable”</li>
+  <li>XDA Orbit II “M-Amine 2.0 FINAL ROM”</li>
+</ul>
+
