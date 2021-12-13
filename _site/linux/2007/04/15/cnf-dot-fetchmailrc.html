@@ -1,35 +1,41 @@
-<p>Ein Beispiel, wie eine .fetchmailrc aussehen kann.</p>
-<blockquote><p>poll pop3.web.de with proto POP3</p></blockquote>
-<p>abholen, von server, mit, protokoll</p>
-<blockquote><p>user "[remote user]" there with password "[pass]" is [localuser] here</p></blockquote>
-<p>benutzer, "login user", da mit passwort, "login passwort", ist, der benutzer, hier</p>
-<blockquote><p>ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"</p></blockquote>
-<p>ssl -> man sollte eMailverkehr verschluesseln! Denn auch das Passwort wirt im Klartext uebertragen!<br />
-sslfingerprint -> Der Schluessel der Servers, wird angegeben bei 'fetchmail -v pop3.web.de'</p>
-<blockquote><p>keep</p></blockquote>
-<p>Die eMails auf dem Server belassen. Mehr Optionen  -> man fetchmailrc</p>
-<p># ~/.fetchmailrc<br />
-# Programm zum abholen der Mails von verschiedenen Mailservern</p>
-<p>set postmaster "[user]"		#postmaster/root@... geht an [user] (für lokale Dienste)<br />
+<p>Ein Beispiel, wie eine .fetchmailrc aussehen kann.<br />
+<code class="language-plaintext highlighter-rouge">poll pop3.web.de with proto POP3</code><br />
+abholen, von server, mit, protokoll<br />
+<code class="language-plaintext highlighter-rouge">user "[remote user]" there with password "[pass]" is [localuser] here</code><br />
+benutzer, “login user”, da mit passwort, “login passwort”, ist, der benutzer, hier<br />
+<code class="language-plaintext highlighter-rouge">ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"</code><br />
+ssl -&gt; man sollte eMailverkehr verschluesseln! Denn auch das Passwort wirt im Klartext uebertragen!<br />
+sslfingerprint -&gt; Der Schluessel der Servers, wird angegeben bei ‘fetchmail -v pop3.web.de’<br />
+<code class="language-plaintext highlighter-rouge">keep</code><br />
+Die eMails auf dem Server belassen. Mehr Optionen -&gt; man fetchmailrc</p>
+
+<p>```</p>
+<h1 id="fetchmailrc">~/.fetchmailrc</h1>
+<h1 id="programm-zum-abholen-der-mails-von-verschiedenen-mailservern">Programm zum abholen der Mails von verschiedenen Mailservern</h1>
+<p>set postmaster “[user]”		#postmaster/root@… geht an [user] (für lokale Dienste)<br />
 set bouncemail<br />
-set properties ""		  #möglichkeiten wie 'keep' nachzulesen in der Manpage<br />
+set properties “”		  #möglichkeiten wie ‘keep’ nachzulesen in der Manpage<br />
 #sslcertck<br />
-#sslcertpath /home/[user]/.certs</p>
-<p>poll pop3.web.de with proto POP3<br />
-	user "[remote user]" there with password "[pass]" is [localuser] here<br />
-	ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"<br />
-#	keep</p>
+#sslcertpath /home/[user]/.certs<br />
+  poll pop3.web.de with proto POP3<br />
+	user “[remote user]” there with password “[pass]” is [localuser] here<br />
+	ssl sslfingerprint “AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP”</p>
+<h1 id="keep">keep</h1>
+
 <p>poll pop.gmx.net with proto POP3<br />
-	user "[remoteuser]@gmx.de" there with password "[pass]" is [localuser] here<br />
-#      ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"<br />
-#	keep</p>
-<p>#poll mail.domain.de with proto POP3<br />
-#	user "[remote login]" there with password "[password]" is [local user] here<br />
-#	ssl sslfingerprint "AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP"<br />
-#	keep</p>
-<p>#poll pop.t-online.de with proto POP3<br />
-#	user "[user]@t-online.de" there with password "[pass]" is [local user] here</p>
-<p>mda '/usr/bin/procmail -f fetchmail'	# die direkte abgabe an procmail.</p>
-<p># schema:<br />
-#poll mail.server.de with proto POP3<br />
-#        user "remote-login" there with password "passwort" is lokaler-user here</p>
+	user “[remoteuser]@gmx.de” there with password “[pass]” is [localuser] here</p>
+<h1 id="ssl-sslfingerprint-aabbccddeeffgghhiijjkkllmmnnoopp">ssl sslfingerprint “AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP”</h1>
+<h1 id="keep-1">keep</h1>
+
+<p>#poll mail.domain.de with proto POP3</p>
+<h1 id="user-remote-login-there-with-password-password-is-local-user-here">user “[remote login]” there with password “[password]” is [local user] here</h1>
+<h1 id="ssl-sslfingerprint-aabbccddeeffgghhiijjkkllmmnnoopp-1">ssl sslfingerprint “AA:BB:CC:DD:EE:FF:GG:HH:II:JJ:KK:LL:MM:NN:OO:PP”</h1>
+<h1 id="keep-2">keep</h1>
+
+<p>#poll pop.t-online.de with proto POP3</p>
+<h1 id="user-usert-onlinede-there-with-password-pass-is-local-user-here">user “[user]@t-online.de” there with password “[pass]” is [local user] here</h1>
+<p>mda ‘/usr/bin/procmail -f fetchmail’	# die direkte abgabe an procmail.</p>
+
+<h1 id="schema">schema:</h1>
+<p>#poll mail.server.de with proto POP3</p>
+<h1 id="user-remote-login-there-with-password-passwort-is-lokaler-user-here">user “remote-login” there with password “passwort” is lokaler-user here</h1>
