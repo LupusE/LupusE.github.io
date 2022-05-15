@@ -1,0 +1,136 @@
+<h2 id="vorgeschichte">Vorgeschichte</h2>
+
+<p>Heutzutage benötigt man Internet. Nicht nur als Roadwarrior (Arbeiten von Unterwegs), auch um einfach Uptodate zu bleiben oder Urlaubsphotos zu posten. Und wenn man Kinder ab einem gewissen Alter dabei hat ist das Internet unterwegs bald keine Option mehr.</p>
+
+<p>Für Wohnmobile werden verschiedene Systeme angeboten und auch von Fachzeitschriften getestet.<br />
+Zum einen gibt es die Mobilen ‘Ostereier’ für 40-150 Euro, die man mit einer billigen Prepaid-Karte in die Hosentasche stekcen kann, mit einer Powerbank sind sie recht flexibel. Aber halt auch auf LTE angewiesen.<br />
+Zum anderen gibt es, oft aus dem Bootsbereich, Antennen auf dem Dach mit einem kleinen Router im Wetterfesten Gehäuse oder im Mobil. Diese bieten dann z.B. LTE(4G) an und unter umständen auch WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches das einfach aufrüsten lässt.<br />
+Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren, aber oft unter einem oder mehr Nachteile der vorgenannten Lösungen leiden.</p>
+
+<p>Ich war auf der Suche nach einem kleinen günstigen Router, der mir im Wohnmobil Netzwerk gibt und auch kaputt gehen darf, ohne dass es weh tut.</p>
+
+<h2 id="recherche">Recherche</h2>
+
+<p>Ich bin beruflich sowas wie ein Informatiker. Das bedeutet ich habe einen relativ guten Überblick über Netzwerktechnik.</p>
+
+<p>Vor einigen Wochen habe ich einen Microrouter der Firma <a href="https://www.gl-inet.com/">Gl.iNet</a> gesehen. Der GL-AR300M-Ext war eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Dei Box stellt in der Basiskonfiguration eine sogenante ‘Bridge’. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den WAN Port weiter geben (Laptop ohne Netzwerkkarte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen (Konferenztisch?). Oder, durch mehrere Antennen, kann ich auch ein öffentliches WLAN aufnehmen und daraus ein eigenes lokales machen. Für das Wohnzimmer auf Rädern also perfekt.<br />
+Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt.</p>
+
+<p>Wie zuvor erwähnt bin ich Informatiker, das bedeutet ich habe mir das Datenblatt angesehen und so richtig hat es mich nicht überzeugt. Also habe ich mir alle Modelle des Herstellers angesehen:</p>
+<ul>
+  <li><a href="https://www.gl-inet.com/products/gl-ar300m/">GL-AR300M</a> (Shadow)/<a href="https://www.gl-inet.com/products/gl-mt300n-v2/">GL-MT300N-V2</a> (Mango) sind kleine günstige Boxen, mit verschiedener Ausstattung. Vergleichbar mit der zuerst erwähnten.</li>
+  <li>Die <a href="https://www.gl-inet.com/products/gl-ar750s/">GL-AR750S</a> (Slate) hat einen deutlich stärkeren Prozessor und mehr RAM (Arbeitsspeicher) und sollte für die meisten Anwendungen im Wohnmobil ausreichen. Stromverbrauch &lt;6W laut Datenblatt. Für 75 Euro okay.</li>
+  <li>Der <a href="https://www.gl-inet.com/products/gl-mv1000/">GL-MV1000W</a> (Brumme-W) hat mir am besten gefallen, ist aber derzeit nicht verfügbar.</li>
+  <li>Der <a href="https://www.gl-inet.com/products/gl-sft1200/">GL-SFT1200</a> (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. Dafür nur feste WLAN Antennen.</li>
+  <li>Der <a href="https://www.gl-inet.com/products/gl-mt1300/">GL-MT1300</a> (Beryl) ist es bei mir geworden, da es das einzige Modell ist, wleches bei auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum ‘mal kaufen und schauen was daraus wird’. Wie zuvor auch nur mit festen WLAN Antennen.</li>
+</ul>
+
+<h3 id="der-beryl-gl-mt1300">Der Beryl (GL-MT1300)</h3>
+
+<p>Er ist der teuerste unter allen bewerteten Modellen. Meine Entscheidung hat besonders die Unterstützung von IPv6 beeinflusst. Wem das nicht wichtig ist, der wird mit dem GL-SFT1200 (Opal) 30 Euro günstiger weg kommen. Wem bisher nur störte, dass sein Android Telefon kein WLAN Tethering konnte, der kann auf WLAN gänzlich verzichten und direkt die Shadow/Mango Box in Betracht ziehen.<br />
+Die Beryl kann ich auch mit einer bis zu 265GB großen SD Karte füttern und per FTP Daten oder DNLA Medien bereitstellen. Unser Fernseher im Wohnmobil ist nicht smart, das wäre für mich der einzig sinnvolle Einsatz. Aber vielleicht spiele ich auch mal mit dem Chromecast rum. Ich werde berichten…</p>
+
+<p>Zunächst fragte ich mich, warum er nach Spezifikation unbedingt ein 5V/3A Netzteil verlangt, obwohl der Verbrauch mit &lt;8,65W angegeben ist (8,65W/5V=1,75A). Beim Testen ging mir dann ein 15 Watt Licht auf. Ein Mobiltelefon am USB Port will ja auch mit Strom versorgt werden. Wenn dieses 2,1A (Schnellladen) zieht, dann hat das Board nicht mehr genügend Strom.<br />
+Warum sollte ich ein Mobiltelefon anschliessen? Das Thema Tethering kommt noch.</p>
+
+<h3 id="ersteinrichtung-kabel">Ersteinrichtung (Kabel)</h3>
+
+<p>Ich habe den Luxus, dass mein Wohnmobil direkt vor der Tür steht. Das bedeutet ich konnte so tun als wäre mein Haus-WLAN ein Campingplatz. Aber bevor ich raus gegangen bin habe ich die kleine Box an meinem Schreibtisch ausgiebig getestet.</p>
+
+<p>Die Ersteinrichtung war super einfach:</p>
+<ul>
+  <li>Auspacken, Strom dran, warten bis die Lampe vorne leuchtet.</li>
+  <li>Browser öffnen und auf http://192.168.8.1 gehen</li>
+  <li>
+    <p>Beim ersten Login ein Adminpasswort vergeben</p>
+  </li>
+  <li>In der Weboberfläche auf <strong>Wireless</strong></li>
+  <li>Jetzt habe ich das WLAN umbenannt in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.</li>
+  <li>Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden.</li>
+</ul>
+
+<p>Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt <strong>Upgrade</strong> hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein WLAN mehr… Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.</p>
+
+<p><strong>Tipp</strong>: Ich habe ein extra Notebook für soche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden
+Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer ‘goodlife’</p>
+
+<h3 id="einrichtung-wlan-zu-wlan">Einrichtung (WLAN zu WLAN)</h3>
+
+<ul>
+  <li>Nach dem grundlegenden Einrichten bekam das Gerät unter <strong>Internet</strong> Die Zugangsdaten zu meinem WLAN. Fertig.</li>
+</ul>
+
+<p>Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich ja WLAN zu WLAN haben möchte.<br />
+Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durchsatz. Reichweite benötige ich auf 2,33mx7,40m nicht, aber draussen. Wenn ich intern auf einem anderen Band funkte, sorge ich gleichzeitig für weniger Störungen untereinander.</p>
+
+<h3 id="feintuning-tethering">Feintuning (Tethering)</h3>
+
+<p>Im Menupunkt <strong>Internet</strong> ist die Option <strong>Tethering</strong> ausgegraut.<br />
+Wenn ein Android Telefon an einen Computer angeschlossen wird, dann steht im Drop-Down (vom oberen Bildschirmrand nach unten ziehen) ‘Android-System - Gerät wird über USB aufgeladen / Für weitere Optionen tippen)’. Dann kann ich in den ‘USB-Einstellungen’ ‘USB-Tethering’ (neben z.B. ‘Dateiübertragung’) auswählen. Ab sofort kann ich <strong>Tethering</strong> in der Box auswählen.<br />
+USB-Tethering bedeutet, dass das Mobiltelefon die vorhandene Internetverbindung über den USB Port zur Verfügung stellt. Dabei interessiert dem Gerät am USB Port nicht ob es sich um eine WLAN oder Mobilfunkverbindung handelt. Sollte ich also ein Mobiltelefon mit sehr guter WLAN-Antenne besitzen, kann ich sogar ganz auf ein WLAN Modul im Router verzichten. Dabei gilt aber zu beachten, dass in dem Fall auch immer 2 Geräte mit Strom versorgt werden müssen.</p>
+
+<p>In unserem Fall hat meine Frau ihr altes ‘Sony Xperia Z3 Compact’ zur Verfügung gestellt und wir haben bei O2 eine Datenkarte bestellt. Da sie Europaweit 120GB LTE Datenvolumen pro Monat hat, kann sie ein wenig davon im Urlaub teilen.</p>
+
+<p>Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt es sich aber die PIN der Datenkarte zu deaktivieren. Da ich nur einen 3G Stick mit anderer SIM-Größe hier habe, habe ich es noch nicht getestet.</p>
+
+<h2 id="technisch">Technisch</h2>
+
+<p>Die Box besitzt eine OpenWRT Firmware mit eigener Weboberfläche. Es wird eine App angebunden um die Verwaltung noch ein wenig bequemer zu gestalten.<br />
+Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuell die Version 21.</p>
+
+<h3 id="luci-web-ui">LuCI Web UI</h3>
+
+<p>Die Gl.iNet Oberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.<br />
+Dazu einfach unter https://192.168.8.1 im Menü ganz unten auf <strong>More Settings</strong> den unterpunkt <strong>Advanced</strong> auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dme Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.</p>
+
+<h3 id="länderkonfiguration-sshconsole">Länderkonfiguration (SSH/Console)</h3>
+
+<p>Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. Dei erlaubten WLAN Kanäle im 2,4GHz Band sind 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefundne wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.<br />
+Um das Problem zu beheben logt man sich per SSH auf die Box ein. Unter Linux per PuTTY oder unter Linux/Mac mit ‘ssh’ aus dem ‘OpenSSH’ Paket. Erlaubt ist nur ssh-rsa als Hostkey. Daher gibt man auf der Console den folgenden Befehl ein:</p>
+
+<blockquote>
+  <p>ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1</p>
+</blockquote>
+
+<p>Als Passwort git man das im ersten Schritt vergebene ein.</p>
+
+<p>Dann bearbeitet man die Konfigurationsdatei /etc/config/wireless</p>
+
+<blockquote>
+  <p>vim /etc/config/wireless</p>
+</blockquote>
+
+<p>… indem 2x die Zeile <strong>option Country ‘CN’</strong> mit <strong>option Country ‘DE’</strong> ersetzt wird.<br />
+Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) <strong>option region ‘1’</strong> und <strong>option aregion ‘1’</strong> gesetzt um den Europäischen Regularien gerecht zu werden. <a href="https://blog.csdn.net/linbounconstraint/article/details/80899321">Details</a> <a href="https://en.wikipedia.org/wiki/List_of_WLAN_channels">Wikipedia</a><br />
+Nach einem Neustart werden diese Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/RT2860/*.dat geschrieben.</p>
+
+<p>Tipp: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal!</p>
+
+<h2 id="zukunft">Zukunft</h2>
+
+<p>Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17” Laptop vor, die um die Dachlucke kommt.<br />
+Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.<br />
+Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden, davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten glüssig Youtube zu streamen.<br />
+VPN ist zwar kein super relevantes Thema, aber da es nunmal angeboten wird, werde ich es hier auch mindestens mit WireGuard etwas ausführlicher beschreiben.<br />
+Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker <a href="https://www.amazon.de/dp/B09B7X3XKH/">Beispiel</a>. Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.</p>
+
+<h2 id="bilder">Bilder</h2>
+
+<p>Der lokale Testaufbau für Referenzwerte.
+<img src="/media/router_beryl/router_beryl_test.jpg" alt="Testaufbau" /></p>
+
+<p>Der erste Standort am Panel. Unten ds Netzteil, oben der Router.
+<img src="/media/router_beryl/router_beryl_panel.jpg" alt="Testaufbau" /></p>
+
+<p>Der Standort über dem Fahrer ist fast perfekt. Aber nur 230V Anschluss.
+<img src="/media/router_beryl/router_beryl_dach.jpg" alt="Testaufbau" /></p>
+
+<p>Im Zentrum des Buffymobils für Testmessungen.
+<img src="/media/router_beryl/router_beryl_kueche.jpg" alt="Testaufbau" /></p>
+
+<p>Auch hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant besser.
+<img src="/media/router_beryl/router_beryl_bett.jpg" alt="Testaufbau" /></p>
+
+<p>Es wurde an fast jeder Steckdose getestet.
+<img src="/media/router_beryl/router_beryl_bad.jpg" alt="Testaufbau" /></p>
+
