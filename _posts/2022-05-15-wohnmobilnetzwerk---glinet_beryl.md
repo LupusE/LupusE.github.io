@@ -53,9 +53,13 @@ Die Ersteinrichtung war super einfach:
 
 * In der Weboberfläche auf **Wireless**
 * Jetzt habe ich das WLAN umbenannt in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
- * Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden.
+  * Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden.
 
-Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt **Upgrade** hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein WLAN mehr... Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.
+![Browser Wireless](/media/router_beryl/browser_beryl_wireless.png)
+
+Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt **Upgrade** hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein Remote-WLAN mehr... Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.
+
+![Browser Upgrade](/media/router_beryl/browser_beryl_upgrade.png)
 
 **Tipp**: Ich habe ein extra Notebook für soche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden
 Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer 'goodlife'  
@@ -64,6 +68,8 @@ Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder
 ### Einrichtung (WLAN zu WLAN)
 
 * Nach dem grundlegenden Einrichten bekam das Gerät unter **Internet** Die Zugangsdaten zu meinem WLAN. Fertig.
+
+![Browser Internet](/media/router_beryl/browser_beryl_internet.png)
 
 Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich ja WLAN zu WLAN haben möchte.  
 Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durchsatz. Reichweite benötige ich auf 2,33mx7,40m nicht, aber draussen. Wenn ich intern auf einem anderen Band funkte, sorge ich gleichzeitig für weniger Störungen untereinander.
@@ -90,6 +96,8 @@ Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag
 Die Gl.iNet Oberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.  
 Dazu einfach unter https://192.168.8.1 im Menü ganz unten auf **More Settings** den unterpunkt **Advanced** auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dme Button 'Install' nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist 'root' und das Passwort wieder das zuerst vergebene.
 
+![Browser LuCI](/media/router_beryl/browser_beryl_luci_overview.png)
+
 ### Länderkonfiguration (SSH/Console)
 
 Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. Dei erlaubten WLAN Kanäle im 2,4GHz Band sind 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefundne wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.  
@@ -112,29 +120,29 @@ Tipp: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen
 
 ## Zukunft
 
-Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17" Laptop vor, die um die Dachlucke kommt.  
-Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.  
-Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden, davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten glüssig Youtube zu streamen.  
-VPN ist zwar kein super relevantes Thema, aber da es nunmal angeboten wird, werde ich es hier auch mindestens mit WireGuard etwas ausführlicher beschreiben.  
-Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker [Beispiel](https://www.amazon.de/dp/B09B7X3XKH/). Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.  
+- Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17" Laptop vor, die um die Dachlucke kommt. Das ist nicht schlimm, Gl.iNet stellt dafür sogar eine Anleitung bereit. Die Garantie verliert man trotzdem.  
+- Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.  
+- Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden, davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten glüssig Youtube zu streamen.  
+- VPN ist zwar kein super relevantes Thema, aber da es nunmal angeboten wird, werde ich es hier auch mindestens mit WireGuard etwas ausführlicher beschreiben.  
+- Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker [Beispiel](https://www.amazon.de/dp/B09B7X3XKH/). Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.  
 
 ## Bilder
 
 Der lokale Testaufbau für Referenzwerte.
-![Testaufbau](/media/router_beryl/router_beryl_test.jpg)
+![Testaufbau Desktop](/media/router_beryl/router_beryl_test.jpg)
 
-Der erste Standort am Panel. Unten ds Netzteil, oben der Router.
-![Testaufbau](/media/router_beryl/router_beryl_panel.jpg)
+Der erste Standort am zentralen Panel. Unten das Netzteil, oben der Router.
+![Testaufbau Panel](/media/router_beryl/router_beryl_panel.jpg)
 
 Der Standort über dem Fahrer ist fast perfekt. Aber nur 230V Anschluss.
-![Testaufbau](/media/router_beryl/router_beryl_dach.jpg)
+![Testaufbau Dach](/media/router_beryl/router_beryl_dach.jpg)
 
 Im Zentrum des Buffymobils für Testmessungen.
-![Testaufbau](/media/router_beryl/router_beryl_kueche.jpg)
+![Testaufbau Kueche](/media/router_beryl/router_beryl_kueche.jpg)
 
-Auch hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant besser.
-![Testaufbau](/media/router_beryl/router_beryl_bett.jpg)
+Auch hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant besser (ca. 2m weiter weg vom Router).
+![Testaufbau Bett](/media/router_beryl/router_beryl_bett.jpg)
 
 Es wurde an fast jeder Steckdose getestet.
-![Testaufbau](/media/router_beryl/router_beryl_bad.jpg)
+![Testaufbau Bad](/media/router_beryl/router_beryl_bad.jpg)
 
