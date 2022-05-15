@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2021-12-13T16:40:45+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-15T17:45:21+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;vorgeschichte&quot;&gt;Vorgeschichte&lt;/h2&gt;
+
+&lt;p&gt;Heutzutage benötigt man Internet. Nicht nur als Roadwarrior (Arbeiten von Unterwegs), auch um einfach Uptodate zu bleiben oder Urlaubsphotos zu posten. Und wenn man Kinder ab einem gewissen Alter dabei hat ist das Internet unterwegs bald keine Option mehr.&lt;/p&gt;
+
+&lt;p&gt;Für Wohnmobile werden verschiedene Systeme angeboten und auch von Fachzeitschriften getestet.&lt;br /&gt;
+Zum einen gibt es die Mobilen ‘Ostereier’ für 40-150 Euro, die man mit einer billigen Prepaid-Karte in die Hosentasche stekcen kann, mit einer Powerbank sind sie recht flexibel. Aber halt auch auf LTE angewiesen.&lt;br /&gt;
+Zum anderen gibt es, oft aus dem Bootsbereich, Antennen auf dem Dach mit einem kleinen Router im Wetterfesten Gehäuse oder im Mobil. Diese bieten dann z.B. LTE(4G) an und unter umständen auch WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches das einfach aufrüsten lässt.&lt;br /&gt;
+Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren, aber oft unter einem oder mehr Nachteile der vorgenannten Lösungen leiden.&lt;/p&gt;
+
+&lt;p&gt;Ich war auf der Suche nach einem kleinen günstigen Router, der mir im Wohnmobil Netzwerk gibt und auch kaputt gehen darf, ohne dass es weh tut.&lt;/p&gt;
+
+&lt;h2 id=&quot;recherche&quot;&gt;Recherche&lt;/h2&gt;
+
+&lt;p&gt;Ich bin beruflich sowas wie ein Informatiker. Das bedeutet ich habe einen relativ guten Überblick über Netzwerktechnik.&lt;/p&gt;
+
+&lt;p&gt;Vor einigen Wochen habe ich einen Microrouter der Firma &lt;a href=&quot;https://www.gl-inet.com/&quot;&gt;Gl.iNet&lt;/a&gt; gesehen. Der GL-AR300M-Ext war eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Dei Box stellt in der Basiskonfiguration eine sogenante ‘Bridge’. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den WAN Port weiter geben (Laptop ohne Netzwerkkarte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen (Konferenztisch?). Oder, durch mehrere Antennen, kann ich auch ein öffentliches WLAN aufnehmen und daraus ein eigenes lokales machen. Für das Wohnzimmer auf Rädern also perfekt.&lt;br /&gt;
+Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt.&lt;/p&gt;
+
+&lt;p&gt;Wie zuvor erwähnt bin ich Informatiker, das bedeutet ich habe mir das Datenblatt angesehen und so richtig hat es mich nicht überzeugt. Also habe ich mir alle Modelle des Herstellers angesehen:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gl-inet.com/products/gl-ar300m/&quot;&gt;GL-AR300M&lt;/a&gt; (Shadow)/&lt;a href=&quot;https://www.gl-inet.com/products/gl-mt300n-v2/&quot;&gt;GL-MT300N-V2&lt;/a&gt; (Mango) sind kleine günstige Boxen, mit verschiedener Ausstattung. Vergleichbar mit der zuerst erwähnten.&lt;/li&gt;
+  &lt;li&gt;Die &lt;a href=&quot;https://www.gl-inet.com/products/gl-ar750s/&quot;&gt;GL-AR750S&lt;/a&gt; (Slate) hat einen deutlich stärkeren Prozessor und mehr RAM (Arbeitsspeicher) und sollte für die meisten Anwendungen im Wohnmobil ausreichen. Stromverbrauch &amp;lt;6W laut Datenblatt. Für 75 Euro okay.&lt;/li&gt;
+  &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-mv1000/&quot;&gt;GL-MV1000W&lt;/a&gt; (Brumme-W) hat mir am besten gefallen, ist aber derzeit nicht verfügbar.&lt;/li&gt;
+  &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-sft1200/&quot;&gt;GL-SFT1200&lt;/a&gt; (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. Dafür nur feste WLAN Antennen.&lt;/li&gt;
+  &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-mt1300/&quot;&gt;GL-MT1300&lt;/a&gt; (Beryl) ist es bei mir geworden, da es das einzige Modell ist, wleches bei auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum ‘mal kaufen und schauen was daraus wird’. Wie zuvor auch nur mit festen WLAN Antennen.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;der-beryl-gl-mt1300&quot;&gt;Der Beryl (GL-MT1300)&lt;/h3&gt;
+
+&lt;p&gt;Er ist der teuerste unter allen bewerteten Modellen. Meine Entscheidung hat besonders die Unterstützung von IPv6 beeinflusst. Wem das nicht wichtig ist, der wird mit dem GL-SFT1200 (Opal) 30 Euro günstiger weg kommen. Wem bisher nur störte, dass sein Android Telefon kein WLAN Tethering konnte, der kann auf WLAN gänzlich verzichten und direkt die Shadow/Mango Box in Betracht ziehen.&lt;br /&gt;
+Die Beryl kann ich auch mit einer bis zu 265GB großen SD Karte füttern und per FTP Daten oder DNLA Medien bereitstellen. Unser Fernseher im Wohnmobil ist nicht smart, das wäre für mich der einzig sinnvolle Einsatz. Aber vielleicht spiele ich auch mal mit dem Chromecast rum. Ich werde berichten…&lt;/p&gt;
+
+&lt;p&gt;Zunächst fragte ich mich, warum er nach Spezifikation unbedingt ein 5V/3A Netzteil verlangt, obwohl der Verbrauch mit &amp;lt;8,65W angegeben ist (8,65W/5V=1,75A). Beim Testen ging mir dann ein 15 Watt Licht auf. Ein Mobiltelefon am USB Port will ja auch mit Strom versorgt werden. Wenn dieses 2,1A (Schnellladen) zieht, dann hat das Board nicht mehr genügend Strom.&lt;br /&gt;
+Warum sollte ich ein Mobiltelefon anschliessen? Das Thema Tethering kommt noch.&lt;/p&gt;
+
+&lt;h3 id=&quot;ersteinrichtung-kabel&quot;&gt;Ersteinrichtung (Kabel)&lt;/h3&gt;
+
+&lt;p&gt;Ich habe den Luxus, dass mein Wohnmobil direkt vor der Tür steht. Das bedeutet ich konnte so tun als wäre mein Haus-WLAN ein Campingplatz. Aber bevor ich raus gegangen bin habe ich die kleine Box an meinem Schreibtisch ausgiebig getestet.&lt;/p&gt;
+
+&lt;p&gt;Die Ersteinrichtung war super einfach:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Auspacken, Strom dran, warten bis die Lampe vorne leuchtet.&lt;/li&gt;
+  &lt;li&gt;Browser öffnen und auf http://192.168.8.1 gehen&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Beim ersten Login ein Adminpasswort vergeben&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In der Weboberfläche auf &lt;strong&gt;Wireless&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Jetzt habe ich das WLAN umbenannt in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.&lt;/li&gt;
+  &lt;li&gt;Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt &lt;strong&gt;Upgrade&lt;/strong&gt; hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein WLAN mehr… Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tipp&lt;/strong&gt;: Ich habe ein extra Notebook für soche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden
+Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer ‘goodlife’&lt;/p&gt;
+
+&lt;h3 id=&quot;einrichtung-wlan-zu-wlan&quot;&gt;Einrichtung (WLAN zu WLAN)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nach dem grundlegenden Einrichten bekam das Gerät unter &lt;strong&gt;Internet&lt;/strong&gt; Die Zugangsdaten zu meinem WLAN. Fertig.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich ja WLAN zu WLAN haben möchte.&lt;br /&gt;
+Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durchsatz. Reichweite benötige ich auf 2,33mx7,40m nicht, aber draussen. Wenn ich intern auf einem anderen Band funkte, sorge ich gleichzeitig für weniger Störungen untereinander.&lt;/p&gt;
+
+&lt;h3 id=&quot;feintuning-tethering&quot;&gt;Feintuning (Tethering)&lt;/h3&gt;
+
+&lt;p&gt;Im Menupunkt &lt;strong&gt;Internet&lt;/strong&gt; ist die Option &lt;strong&gt;Tethering&lt;/strong&gt; ausgegraut.&lt;br /&gt;
+Wenn ein Android Telefon an einen Computer angeschlossen wird, dann steht im Drop-Down (vom oberen Bildschirmrand nach unten ziehen) ‘Android-System - Gerät wird über USB aufgeladen / Für weitere Optionen tippen)’. Dann kann ich in den ‘USB-Einstellungen’ ‘USB-Tethering’ (neben z.B. ‘Dateiübertragung’) auswählen. Ab sofort kann ich &lt;strong&gt;Tethering&lt;/strong&gt; in der Box auswählen.&lt;br /&gt;
+USB-Tethering bedeutet, dass das Mobiltelefon die vorhandene Internetverbindung über den USB Port zur Verfügung stellt. Dabei interessiert dem Gerät am USB Port nicht ob es sich um eine WLAN oder Mobilfunkverbindung handelt. Sollte ich also ein Mobiltelefon mit sehr guter WLAN-Antenne besitzen, kann ich sogar ganz auf ein WLAN Modul im Router verzichten. Dabei gilt aber zu beachten, dass in dem Fall auch immer 2 Geräte mit Strom versorgt werden müssen.&lt;/p&gt;
+
+&lt;p&gt;In unserem Fall hat meine Frau ihr altes ‘Sony Xperia Z3 Compact’ zur Verfügung gestellt und wir haben bei O2 eine Datenkarte bestellt. Da sie Europaweit 120GB LTE Datenvolumen pro Monat hat, kann sie ein wenig davon im Urlaub teilen.&lt;/p&gt;
+
+&lt;p&gt;Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt es sich aber die PIN der Datenkarte zu deaktivieren. Da ich nur einen 3G Stick mit anderer SIM-Größe hier habe, habe ich es noch nicht getestet.&lt;/p&gt;
+
+&lt;h2 id=&quot;technisch&quot;&gt;Technisch&lt;/h2&gt;
+
+&lt;p&gt;Die Box besitzt eine OpenWRT Firmware mit eigener Weboberfläche. Es wird eine App angebunden um die Verwaltung noch ein wenig bequemer zu gestalten.&lt;br /&gt;
+Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuell die Version 21.&lt;/p&gt;
+
+&lt;h3 id=&quot;luci-web-ui&quot;&gt;LuCI Web UI&lt;/h3&gt;
+
+&lt;p&gt;Die Gl.iNet Oberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.&lt;br /&gt;
+Dazu einfach unter https://192.168.8.1 im Menü ganz unten auf &lt;strong&gt;More Settings&lt;/strong&gt; den unterpunkt &lt;strong&gt;Advanced&lt;/strong&gt; auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dme Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.&lt;/p&gt;
+
+&lt;h3 id=&quot;länderkonfiguration-sshconsole&quot;&gt;Länderkonfiguration (SSH/Console)&lt;/h3&gt;
+
+&lt;p&gt;Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. Dei erlaubten WLAN Kanäle im 2,4GHz Band sind 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefundne wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.&lt;br /&gt;
+Um das Problem zu beheben logt man sich per SSH auf die Box ein. Unter Linux per PuTTY oder unter Linux/Mac mit ‘ssh’ aus dem ‘OpenSSH’ Paket. Erlaubt ist nur ssh-rsa als Hostkey. Daher gibt man auf der Console den folgenden Befehl ein:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Als Passwort git man das im ersten Schritt vergebene ein.&lt;/p&gt;
+
+&lt;p&gt;Dann bearbeitet man die Konfigurationsdatei /etc/config/wireless&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;vim /etc/config/wireless&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;… indem 2x die Zeile &lt;strong&gt;option Country ‘CN’&lt;/strong&gt; mit &lt;strong&gt;option Country ‘DE’&lt;/strong&gt; ersetzt wird.&lt;br /&gt;
+Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) &lt;strong&gt;option region ‘1’&lt;/strong&gt; und &lt;strong&gt;option aregion ‘1’&lt;/strong&gt; gesetzt um den Europäischen Regularien gerecht zu werden. &lt;a href=&quot;https://blog.csdn.net/linbounconstraint/article/details/80899321&quot;&gt;Details&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_WLAN_channels&quot;&gt;Wikipedia&lt;/a&gt;&lt;br /&gt;
+Nach einem Neustart werden diese Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/RT2860/*.dat geschrieben.&lt;/p&gt;
+
+&lt;p&gt;Tipp: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal!&lt;/p&gt;
+
+&lt;h2 id=&quot;zukunft&quot;&gt;Zukunft&lt;/h2&gt;
+
+&lt;p&gt;Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17” Laptop vor, die um die Dachlucke kommt.&lt;br /&gt;
+Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.&lt;br /&gt;
+Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden, davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten glüssig Youtube zu streamen.&lt;br /&gt;
+VPN ist zwar kein super relevantes Thema, aber da es nunmal angeboten wird, werde ich es hier auch mindestens mit WireGuard etwas ausführlicher beschreiben.&lt;br /&gt;
+Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker &lt;a href=&quot;https://www.amazon.de/dp/B09B7X3XKH/&quot;&gt;Beispiel&lt;/a&gt;. Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.&lt;/p&gt;
+
+&lt;h2 id=&quot;bilder&quot;&gt;Bilder&lt;/h2&gt;
+
+&lt;p&gt;Der lokale Testaufbau für Referenzwerte.
+&lt;img src=&quot;/media/router_beryl/router_beryl_test.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Der erste Standort am Panel. Unten ds Netzteil, oben der Router.
+&lt;img src=&quot;/media/router_beryl/router_beryl_panel.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Der Standort über dem Fahrer ist fast perfekt. Aber nur 230V Anschluss.
+&lt;img src=&quot;/media/router_beryl/router_beryl_dach.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Im Zentrum des Buffymobils für Testmessungen.
+&lt;img src=&quot;/media/router_beryl/router_beryl_kueche.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Auch hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant besser.
+&lt;img src=&quot;/media/router_beryl/router_beryl_bett.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es wurde an fast jeder Steckdose getestet.
+&lt;img src=&quot;/media/router_beryl/router_beryl_bad.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Vorgeschichte</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
 
 &lt;p&gt;Meine Frau und ich haben uns ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4Pfoten-Mobile - Dog-Liner TE740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, &lt;a href=&quot;www.4pfoten-mobile.de/neumuenster/&quot;&gt;Jörn Zimmermann&lt;/a&gt; vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
 &lt;ul&gt;
@@ -859,137 +993,4 @@ Den gesteckten Steuersatz habe ich sehr tief eingestellt, die spacer aber noch �
 Die Deora V-Brakes sind schon mit Cardrige System gekommen, mal sehen was für Schuhe ich mir nächsten Monat kaufen werde. Wie die Reifen ist das ausgelieferte Gummi nicht wirklich für Pendler geeignet.&lt;br /&gt;
 Die Reifen haben sicher ien geringeres Gewicht, aber der unplattbare Schwalbe Marathon hat seine vorzüge, wenn man Wert darauf legt nicht mindestens einmal im Quartal nach Hause zu laufen.&lt;br /&gt;
 Die SKS Schutzbleche sind schön, aber bisher hat sich noch kein Stock zwischen Reifen und Schutzblech verklemmt. Ob das Kunststoff das aushält wird sich noch zeigen. Für die Rückleuchte ist das Kabel im Schutzblech verlegt.&lt;br /&gt;
-Am Aluminium Gepäckträger sind mittlerweile schleifspuren von den Gepäcktaschen zu fühlen. Da im Gepäck öfter ein Laptop und eine komplette Arbeits-Garnitur (im Winter mit Schuhen) liegt, ist er nicht leicht. Wie sich das auf Dauer verhält werde ich beobachten.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="bike" /><category term="pendeln" /><category term="fahrrad" /><category term="bike" /><category term="mdrza" /><summary type="html">Vorgeschichte (mal wieder) Wer mich kennt, dem ist bekannt, ich fahre gerne Rad. Vor geraumer Zeit ist mein Rad (Parkpre AluComp 17”) in Hamburg gestohlen worden. Lange Zeit habe ich mich mit Inline Skates fortbewegt und beim Aufräumen des Keller meiner Schwester fielen 2 Räder ab. Ein fast ungenutztes ‘Ghost Cross 1300’ und ein sehr zusammengestückeltes ‘No Saint San Andreas’. Das Ghost war zwar angenehm klein (47cm Rahmen), aber ich konnte mich nie an die schmalen 28” Reifen gewöhnen. Es fehlte an Agilität. Das NoSaint dagegen war ein in die Jahre gekommenes kompaktes Downhill Rad mit Cross Country touch. Die 2,5” Bereifung auf dem 60cm Lenker mit Mag21 Gabel und RockShox Dämpfer machten einiges her. Die Deore XT Gruppe von ca ‘94-‘97 arbeitete zuverlässig. Ich fahre fünf Tage die Woche ca 2x 7km. Die in die Jahre gekommenen Teile wurden auch nicht stabiler, so entschied ich mich für ein neues Fahrrad.</summary></entry><entry><title type="html">Nerf - Eine Uebersicht</title><link href="http://www.lupuse.org/nerf/2019/04/11/nerf-uebersicht.html" rel="alternate" type="text/html" title="Nerf - Eine Uebersicht" /><published>2019-04-11T20:04:37+00:00</published><updated>2019-04-11T20:04:37+00:00</updated><id>http://www.lupuse.org/nerf/2019/04/11/nerf---uebersicht</id><content type="html" xml:base="http://www.lupuse.org/nerf/2019/04/11/nerf-uebersicht.html">&lt;p&gt;Als ich meine Frau kennengelernt habe fand sie Waffen und waffen-ähnliche Spielzeuge aller Art doof. Ich als überzeugter Pazifist habe dafür volles Verständnis.&lt;br /&gt;
-In München durfte ich in die heiligen Hallen von Google und dort war an jedem Schreibtisch ein Nerf-Blaster zu sehen. Das Nerf-Blaster eher als Spielzeug, denn als Waffe gesehen werden, machen die poppigen Farben deutlich. Es gibt verschiedenste Sportarten, bei denen ‘geschossen’ wird.&lt;br /&gt;
-Der Tag, an dem ich Avira verlassen habe, an dem hat mein Team mir eine Nerf geschenkt. Schnell war klar, dass der Kurze damit nicht spielen sollte. Eines Tages nahm meine Frau den Blaster aus dem Regal und feuerte 25 Klett-Darts durch ca. 15m Flur. Und hatte Spass dabei.&lt;br /&gt;
-Kurz darauf folgte der erste Kauf bei Toys’R’Us und wir hatten alle drei eine. Dann wurden es immer mehr.&lt;/p&gt;
-
-&lt;p&gt;Eine Liste unserer Sammlung:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Serie&lt;/th&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Schuss&lt;/th&gt;
-      &lt;th&gt;Bemerkung&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;Swarmfire&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20&lt;/td&gt;
-      &lt;td&gt;Elektrisch, Klett-Darts&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;N-Strike Elite&lt;/td&gt;
-      &lt;td&gt;Retaliator&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Magazin&lt;/td&gt;
-      &lt;td&gt;die Transparent-Blaue ‘Iced’ Variante&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;N-Strike Elite&lt;/td&gt;
-      &lt;td&gt;Jolt&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt;‘Zirpende Grille’&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;N-Strike Elite&lt;/td&gt;
-      &lt;td&gt;Firestrike&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt;Mit ‘Laserpointer’ zum Zielen&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;N-Strike Elite&lt;/td&gt;
-      &lt;td&gt;Strongarm&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt;Trommelmagazin&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Zombie Strike&lt;/td&gt;
-      &lt;td&gt;Hammershot&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt;Einhändig zu spannen&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Zombie Strike&lt;/td&gt;
-      &lt;td&gt;Doublestrike&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt;Einhändig zu spannen&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Zombie Strike&lt;/td&gt;
-      &lt;td&gt;Sidestrike&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt;Mit Holster&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;N-Strike Mega&lt;/td&gt;
-      &lt;td&gt;Magnus&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt;Mega Darts (20g, rot)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Vortex&lt;/td&gt;
-      &lt;td&gt;Vigilon&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt;Disk&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Vortex&lt;/td&gt;
-      &lt;td&gt;Lumitron&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10&lt;/td&gt;
-      &lt;td&gt;Leuchtende Disks (Aufladen im Magazin)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Serie&lt;/td&gt;
-      &lt;td&gt;Name&lt;/td&gt;
-      &lt;td&gt;Schuss&lt;/td&gt;
-      &lt;td&gt;Bemerkung&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Rebelle&lt;/td&gt;
-      &lt;td&gt;Pink Crush&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;N-Strike&lt;/td&gt;
-      &lt;td&gt;Barricade&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;Der Fön.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Serie&lt;/td&gt;
-      &lt;td&gt;Name&lt;/td&gt;
-      &lt;td&gt;Schuss&lt;/td&gt;
-      &lt;td&gt;Bemerkung&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;N-Strike Elite&lt;/td&gt;
-      &lt;td&gt;Rayven CS-18&lt;/td&gt;
-      &lt;td&gt;Magazin&lt;/td&gt;
-      &lt;td&gt;Leuchtende Darts (Aufladen im Magazin)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Vortex&lt;/td&gt;
-      &lt;td&gt;Proton&lt;/td&gt;
-      &lt;td&gt;Magazin&lt;/td&gt;
-      &lt;td&gt;Disk&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Wir haben auch elektrische Nerf Blaster probiert, aber immer waren sie zu laut und benötigten lange um ‘auf Schwung’ zu kommen. Die mechanischen gefallen uns bei weiten besser.&lt;br /&gt;
-Was ich unbedingt noch haben möchte ist ein Bogen. Die ‘Rebel’ Serie wird nicht mehr fortgesetzt, aber einen Zombie Strike Bogen (mit Pfeilen, nicht mit Darts) werde ich mir noch zulegen.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="nerf" /><category term="nerf" /><category term="blaster" /><summary type="html">Als ich meine Frau kennengelernt habe fand sie Waffen und waffen-ähnliche Spielzeuge aller Art doof. Ich als überzeugter Pazifist habe dafür volles Verständnis. In München durfte ich in die heiligen Hallen von Google und dort war an jedem Schreibtisch ein Nerf-Blaster zu sehen. Das Nerf-Blaster eher als Spielzeug, denn als Waffe gesehen werden, machen die poppigen Farben deutlich. Es gibt verschiedenste Sportarten, bei denen ‘geschossen’ wird. Der Tag, an dem ich Avira verlassen habe, an dem hat mein Team mir eine Nerf geschenkt. Schnell war klar, dass der Kurze damit nicht spielen sollte. Eines Tages nahm meine Frau den Blaster aus dem Regal und feuerte 25 Klett-Darts durch ca. 15m Flur. Und hatte Spass dabei. Kurz darauf folgte der erste Kauf bei Toys’R’Us und wir hatten alle drei eine. Dann wurden es immer mehr.</summary></entry></feed>
+Am Aluminium Gepäckträger sind mittlerweile schleifspuren von den Gepäcktaschen zu fühlen. Da im Gepäck öfter ein Laptop und eine komplette Arbeits-Garnitur (im Winter mit Schuhen) liegt, ist er nicht leicht. Wie sich das auf Dauer verhält werde ich beobachten.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="bike" /><category term="pendeln" /><category term="fahrrad" /><category term="bike" /><category term="mdrza" /><summary type="html">Vorgeschichte (mal wieder) Wer mich kennt, dem ist bekannt, ich fahre gerne Rad. Vor geraumer Zeit ist mein Rad (Parkpre AluComp 17”) in Hamburg gestohlen worden. Lange Zeit habe ich mich mit Inline Skates fortbewegt und beim Aufräumen des Keller meiner Schwester fielen 2 Räder ab. Ein fast ungenutztes ‘Ghost Cross 1300’ und ein sehr zusammengestückeltes ‘No Saint San Andreas’. Das Ghost war zwar angenehm klein (47cm Rahmen), aber ich konnte mich nie an die schmalen 28” Reifen gewöhnen. Es fehlte an Agilität. Das NoSaint dagegen war ein in die Jahre gekommenes kompaktes Downhill Rad mit Cross Country touch. Die 2,5” Bereifung auf dem 60cm Lenker mit Mag21 Gabel und RockShox Dämpfer machten einiges her. Die Deore XT Gruppe von ca ‘94-‘97 arbeitete zuverlässig. Ich fahre fünf Tage die Woche ca 2x 7km. Die in die Jahre gekommenen Teile wurden auch nicht stabiler, so entschied ich mich für ein neues Fahrrad.</summary></entry></feed>
