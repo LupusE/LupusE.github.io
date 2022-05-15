@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-15T17:45:21+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;vorgeschichte&quot;&gt;Vorgeschichte&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-15T18:19:59+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;vorgeschichte&quot;&gt;Vorgeschichte&lt;/h2&gt;
 
 &lt;p&gt;Heutzutage benötigt man Internet. Nicht nur als Roadwarrior (Arbeiten von Unterwegs), auch um einfach Uptodate zu bleiben oder Urlaubsphotos zu posten. Und wenn man Kinder ab einem gewissen Alter dabei hat ist das Internet unterwegs bald keine Option mehr.&lt;/p&gt;
 
@@ -45,11 +45,18 @@ Warum sollte ich ein Mobiltelefon anschliessen? Das Thema Tethering kommt noch.&
     &lt;p&gt;Beim ersten Login ein Adminpasswort vergeben&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;In der Weboberfläche auf &lt;strong&gt;Wireless&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Jetzt habe ich das WLAN umbenannt in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.&lt;/li&gt;
-  &lt;li&gt;Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden.&lt;/li&gt;
+  &lt;li&gt;Jetzt habe ich das WLAN umbenannt in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
+    &lt;ul&gt;
+      &lt;li&gt;Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt &lt;strong&gt;Upgrade&lt;/strong&gt; hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein WLAN mehr… Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/router_beryl/browser_beryl_wireless.png&quot; alt=&quot;Browser Wireless&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt &lt;strong&gt;Upgrade&lt;/strong&gt; hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein Remote-WLAN mehr… Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/router_beryl/browser_beryl_upgrade.png&quot; alt=&quot;Browser Upgrade&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Tipp&lt;/strong&gt;: Ich habe ein extra Notebook für soche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden
 Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer ‘goodlife’&lt;/p&gt;
@@ -59,6 +66,8 @@ Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder
 &lt;ul&gt;
   &lt;li&gt;Nach dem grundlegenden Einrichten bekam das Gerät unter &lt;strong&gt;Internet&lt;/strong&gt; Die Zugangsdaten zu meinem WLAN. Fertig.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/router_beryl/browser_beryl_internet.png&quot; alt=&quot;Browser Internet&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich ja WLAN zu WLAN haben möchte.&lt;br /&gt;
 Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durchsatz. Reichweite benötige ich auf 2,33mx7,40m nicht, aber draussen. Wenn ich intern auf einem anderen Band funkte, sorge ich gleichzeitig für weniger Störungen untereinander.&lt;/p&gt;
@@ -82,6 +91,8 @@ Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag
 
 &lt;p&gt;Die Gl.iNet Oberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.&lt;br /&gt;
 Dazu einfach unter https://192.168.8.1 im Menü ganz unten auf &lt;strong&gt;More Settings&lt;/strong&gt; den unterpunkt &lt;strong&gt;Advanced&lt;/strong&gt; auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dme Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/router_beryl/browser_beryl_luci_overview.png&quot; alt=&quot;Browser LuCI&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;länderkonfiguration-sshconsole&quot;&gt;Länderkonfiguration (SSH/Console)&lt;/h3&gt;
 
@@ -108,31 +119,33 @@ Nach einem Neustart werden diese Werte automatisch in die Treiberkonfigurationen
 
 &lt;h2 id=&quot;zukunft&quot;&gt;Zukunft&lt;/h2&gt;
 
-&lt;p&gt;Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17” Laptop vor, die um die Dachlucke kommt.&lt;br /&gt;
-Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.&lt;br /&gt;
-Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden, davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten glüssig Youtube zu streamen.&lt;br /&gt;
-VPN ist zwar kein super relevantes Thema, aber da es nunmal angeboten wird, werde ich es hier auch mindestens mit WireGuard etwas ausführlicher beschreiben.&lt;br /&gt;
-Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker &lt;a href=&quot;https://www.amazon.de/dp/B09B7X3XKH/&quot;&gt;Beispiel&lt;/a&gt;. Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17” Laptop vor, die um die Dachlucke kommt. Das ist nicht schlimm, Gl.iNet stellt dafür sogar eine Anleitung bereit. Die Garantie verliert man trotzdem.&lt;/li&gt;
+  &lt;li&gt;Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.&lt;/li&gt;
+  &lt;li&gt;Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden, davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten glüssig Youtube zu streamen.&lt;/li&gt;
+  &lt;li&gt;VPN ist zwar kein super relevantes Thema, aber da es nunmal angeboten wird, werde ich es hier auch mindestens mit WireGuard etwas ausführlicher beschreiben.&lt;/li&gt;
+  &lt;li&gt;Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker &lt;a href=&quot;https://www.amazon.de/dp/B09B7X3XKH/&quot;&gt;Beispiel&lt;/a&gt;. Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;bilder&quot;&gt;Bilder&lt;/h2&gt;
 
 &lt;p&gt;Der lokale Testaufbau für Referenzwerte.
-&lt;img src=&quot;/media/router_beryl/router_beryl_test.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/media/router_beryl/router_beryl_test.jpg&quot; alt=&quot;Testaufbau Desktop&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Der erste Standort am Panel. Unten ds Netzteil, oben der Router.
-&lt;img src=&quot;/media/router_beryl/router_beryl_panel.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Der erste Standort am zentralen Panel. Unten das Netzteil, oben der Router.
+&lt;img src=&quot;/media/router_beryl/router_beryl_panel.jpg&quot; alt=&quot;Testaufbau Panel&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Der Standort über dem Fahrer ist fast perfekt. Aber nur 230V Anschluss.
-&lt;img src=&quot;/media/router_beryl/router_beryl_dach.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/media/router_beryl/router_beryl_dach.jpg&quot; alt=&quot;Testaufbau Dach&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Im Zentrum des Buffymobils für Testmessungen.
-&lt;img src=&quot;/media/router_beryl/router_beryl_kueche.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/media/router_beryl/router_beryl_kueche.jpg&quot; alt=&quot;Testaufbau Kueche&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Auch hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant besser.
-&lt;img src=&quot;/media/router_beryl/router_beryl_bett.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Auch hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant besser (ca. 2m weiter weg vom Router).
+&lt;img src=&quot;/media/router_beryl/router_beryl_bett.jpg&quot; alt=&quot;Testaufbau Bett&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Es wurde an fast jeder Steckdose getestet.
-&lt;img src=&quot;/media/router_beryl/router_beryl_bad.jpg&quot; alt=&quot;Testaufbau&quot; /&gt;&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Vorgeschichte</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
+&lt;img src=&quot;/media/router_beryl/router_beryl_bad.jpg&quot; alt=&quot;Testaufbau Bad&quot; /&gt;&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Vorgeschichte</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
 
 &lt;p&gt;Meine Frau und ich haben uns ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4Pfoten-Mobile - Dog-Liner TE740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, &lt;a href=&quot;www.4pfoten-mobile.de/neumuenster/&quot;&gt;Jörn Zimmermann&lt;/a&gt; vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
 &lt;ul&gt;
