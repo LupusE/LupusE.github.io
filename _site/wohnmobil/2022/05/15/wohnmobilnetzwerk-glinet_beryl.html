@@ -45,11 +45,18 @@ Warum sollte ich ein Mobiltelefon anschliessen? Das Thema Tethering kommt noch.<
     <p>Beim ersten Login ein Adminpasswort vergeben</p>
   </li>
   <li>In der Weboberfläche auf <strong>Wireless</strong></li>
-  <li>Jetzt habe ich das WLAN umbenannt in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.</li>
-  <li>Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden.</li>
+  <li>Jetzt habe ich das WLAN umbenannt in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
+    <ul>
+      <li>Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden.</li>
+    </ul>
+  </li>
 </ul>
 
-<p>Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt <strong>Upgrade</strong> hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein WLAN mehr… Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.</p>
+<p><img src="/media/router_beryl/browser_beryl_wireless.png" alt="Browser Wireless" /></p>
+
+<p>Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt <strong>Upgrade</strong> hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein Remote-WLAN mehr… Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.</p>
+
+<p><img src="/media/router_beryl/browser_beryl_upgrade.png" alt="Browser Upgrade" /></p>
 
 <p><strong>Tipp</strong>: Ich habe ein extra Notebook für soche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden
 Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer ‘goodlife’</p>
@@ -59,6 +66,8 @@ Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder
 <ul>
   <li>Nach dem grundlegenden Einrichten bekam das Gerät unter <strong>Internet</strong> Die Zugangsdaten zu meinem WLAN. Fertig.</li>
 </ul>
+
+<p><img src="/media/router_beryl/browser_beryl_internet.png" alt="Browser Internet" /></p>
 
 <p>Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich ja WLAN zu WLAN haben möchte.<br />
 Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durchsatz. Reichweite benötige ich auf 2,33mx7,40m nicht, aber draussen. Wenn ich intern auf einem anderen Band funkte, sorge ich gleichzeitig für weniger Störungen untereinander.</p>
@@ -82,6 +91,8 @@ Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag
 
 <p>Die Gl.iNet Oberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.<br />
 Dazu einfach unter https://192.168.8.1 im Menü ganz unten auf <strong>More Settings</strong> den unterpunkt <strong>Advanced</strong> auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dme Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.</p>
+
+<p><img src="/media/router_beryl/browser_beryl_luci_overview.png" alt="Browser LuCI" /></p>
 
 <h3 id="länderkonfiguration-sshconsole">Länderkonfiguration (SSH/Console)</h3>
 
@@ -108,29 +119,31 @@ Nach einem Neustart werden diese Werte automatisch in die Treiberkonfigurationen
 
 <h2 id="zukunft">Zukunft</h2>
 
-<p>Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17” Laptop vor, die um die Dachlucke kommt.<br />
-Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.<br />
-Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden, davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten glüssig Youtube zu streamen.<br />
-VPN ist zwar kein super relevantes Thema, aber da es nunmal angeboten wird, werde ich es hier auch mindestens mit WireGuard etwas ausführlicher beschreiben.<br />
-Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker <a href="https://www.amazon.de/dp/B09B7X3XKH/">Beispiel</a>. Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.</p>
+<ul>
+  <li>Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17” Laptop vor, die um die Dachlucke kommt. Das ist nicht schlimm, Gl.iNet stellt dafür sogar eine Anleitung bereit. Die Garantie verliert man trotzdem.</li>
+  <li>Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.</li>
+  <li>Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden, davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten glüssig Youtube zu streamen.</li>
+  <li>VPN ist zwar kein super relevantes Thema, aber da es nunmal angeboten wird, werde ich es hier auch mindestens mit WireGuard etwas ausführlicher beschreiben.</li>
+  <li>Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker <a href="https://www.amazon.de/dp/B09B7X3XKH/">Beispiel</a>. Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.</li>
+</ul>
 
 <h2 id="bilder">Bilder</h2>
 
 <p>Der lokale Testaufbau für Referenzwerte.
-<img src="/media/router_beryl/router_beryl_test.jpg" alt="Testaufbau" /></p>
+<img src="/media/router_beryl/router_beryl_test.jpg" alt="Testaufbau Desktop" /></p>
 
-<p>Der erste Standort am Panel. Unten ds Netzteil, oben der Router.
-<img src="/media/router_beryl/router_beryl_panel.jpg" alt="Testaufbau" /></p>
+<p>Der erste Standort am zentralen Panel. Unten das Netzteil, oben der Router.
+<img src="/media/router_beryl/router_beryl_panel.jpg" alt="Testaufbau Panel" /></p>
 
 <p>Der Standort über dem Fahrer ist fast perfekt. Aber nur 230V Anschluss.
-<img src="/media/router_beryl/router_beryl_dach.jpg" alt="Testaufbau" /></p>
+<img src="/media/router_beryl/router_beryl_dach.jpg" alt="Testaufbau Dach" /></p>
 
 <p>Im Zentrum des Buffymobils für Testmessungen.
-<img src="/media/router_beryl/router_beryl_kueche.jpg" alt="Testaufbau" /></p>
+<img src="/media/router_beryl/router_beryl_kueche.jpg" alt="Testaufbau Kueche" /></p>
 
-<p>Auch hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant besser.
-<img src="/media/router_beryl/router_beryl_bett.jpg" alt="Testaufbau" /></p>
+<p>Auch hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant besser (ca. 2m weiter weg vom Router).
+<img src="/media/router_beryl/router_beryl_bett.jpg" alt="Testaufbau Bett" /></p>
 
 <p>Es wurde an fast jeder Steckdose getestet.
-<img src="/media/router_beryl/router_beryl_bad.jpg" alt="Testaufbau" /></p>
+<img src="/media/router_beryl/router_beryl_bad.jpg" alt="Testaufbau Bad" /></p>
 
