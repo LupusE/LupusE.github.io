@@ -12,33 +12,34 @@ comments: []
 ## tl;dr
 
 Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.
-1. gl.iNet Router in gewünschter Ausstattung (Preis) kaufen
-2. An Strom anschliessen, mit Daten auf der Unterseite anmelden
+1. gl.iNet Router in gewünschter Ausstattung (und Preis) kaufen
+2. an Strom anschliessen, mit Daten auf der Unterseite anmelden
 3. 'Internet' per Kabel, WLAN oder Tethering/USB Modem bereitstellen
 4. Fertig.
 
 ## Vorgeschichte
 
-Heutzutage benötigt man Internet. Nicht nur als Roadwarrior (Arbeiten von Unterwegs), auch um einfach Uptodate zu bleiben oder Urlaubsphotos zu posten oder auch Videos und Musik zu streamen. Und wenn man Kinder ab einem gewissen Alter dabei hat ist das Internet unterwegs keine Option mehr.
+Heutzutage benötigt man Internet. Nicht nur als Roadwarrior (Arbeiten von Unterwegs), auch um Up-to-date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möcht man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist 'das Internet' unterwegs keine Option mehr.
 
-Für Wohnmobile werden verschiedene Systeme angeboten und auch von Fachzeitschriften getestet.  
-Zum einen gibt es die Mobilen 'Ostereier' für 40-150 Euro, die man mit einer billigen Prepaid-Karte in die Hosentasche stechen kann, mit einer internen Powerbank sind sie recht flexibel. Aber halt auch auf LTE angewiesen und eher für den Ein-Personen-Gebrauch eines Tablet/Notebooks.  
-Zum anderen gibt es, oft aus dem Bootsbereich, Antennen auf dem Dach mit einem kleinen Router im Wetterfesten Gehäuse oder im Mobil. Diese bieten z.B. LTE(4G) an und unter umständen auch WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches sich einfach aufrüsten lässt. Auch ein Faktor: Meine Frau möchte keine Löcher in ihr Wohnmobil gebohrt haben.  
-Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren. Aber oft leiden diese unter einem oder mehr Nachteile der vorgenannten Lösungen.
+Für Wohnmobile werden verschiedene Systeme angeboten und auch regelmäßig in Fachliteratur getestet.  
+Zum Einen gibt es 'Mobile Ostereier' für 40-150 Euro. Diese werden mit einer billigen SIM-Karte, meist PrePaid betrieben und sind durch internen Akku flexibel. Aber halt auch auf Mobilfunk-Netz angewiesen. Nach dem was ich weis, eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook.  
+Zum Anderen gibt es, oft aus dem Bootsbereich, mehr oder weniger klobige Boxen auf dem Dach mit einem kleinen Router. Diese bieten z.B. LTE(4G) an und unter Umständen auch WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches sich 'einfach' aufrüsten lässt. Auch ein Faktor: Meine Frau möchte keine zusätzlichen Löcher in ihr Wohnmobil gebohrt haben.  
+Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren. Aber oft leiden diese unter einem oder mehr Nachteile der vorgenannten Lösungen.  
 
-Ich war auf der Suche nach einem kleinen günstigen Router, der mir im Wohnmobil ein gutes Netzwerk gibt und auch kaputt gehen darf, ohne dass es weh tut.
+Ich war auf der Suche nach einem kleinen günstigen Router, der mir im Wohnmobil ein gutes Netzwerk gibt, vielleicht flexibel ist und auch kaputt gehen darf, ohne dass es weh tut.
 
 ## Recherche
 
-Vor einigen Wochen habe ich einen Microrouter der Firma [Gl.iNet](https://www.gl-inet.com/) gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt in der Basiskonfiguration eine sogenante 'Bridge'. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen (Konferenztisch?). Oder, durch mehrere Antennen, kann ich auch ein externes WLAN aufnehmen und daraus ein eigenes lokales machen. Für das Wohnzimmer auf Rädern auf dem Campingplatz also perfekt.  
+Vor einigen Wochen habe ich einen Microrouter der Firma [Gl.iNet](https://www.gl-inet.com/) gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt in der Basiskonfiguration eine sogenante 'Bridge'. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen (Konferenztisch?).  
+Interessant für uns Camper: Durch mehrere Antennen, kann ich mit geringem Verlust ein externes WLAN (Campingplatz) aufnehmen und daraus ein eigenes lokales WLAN für alle Geräte machen. Für das Wohnzimmer auf Rädern auf dem Campingplatz also perfekt.  
 Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt.  
 
-Wie zuvor erwähnt bin ich Informatiker, das bedeutet ich habe mir das Datenblatt angesehen und so richtig hat es mich nicht überzeugt. Also habe ich mir alle Modelle des Herstellers angesehen:  
+Als Informatiker habe ich mir das Datenblatt genauer angesehen und so richtig hat es mich nicht überzeugt. Also was bieten die anderen Modelle des Herstellers?  
 * [GL-AR300M](https://www.gl-inet.com/products/gl-ar300m/) (Shadow)/[GL-MT300N-V2](https://www.gl-inet.com/products/gl-mt300n-v2/) (Mango) sind kleine günstige Boxen, mit verschiedener Ausstattung. Vergleichbar mit der zuerst erwähnten.
 * Die [GL-AR750S](https://www.gl-inet.com/products/gl-ar750s/) (Slate) hat einen deutlich stärkeren Prozessor und mehr RAM (Arbeitsspeicher) und sollte für die meisten Anwendungen im Wohnmobil ausreichen. Stromverbrauch <6W laut Datenblatt. Für 75 Euro okay.
 * Der [GL-MV1000W](https://www.gl-inet.com/products/gl-mv1000/) (Brumme-W) hat mir am besten gefallen, ist aber derzeit nicht verfügbar.
-* Der [GL-SFT1200](https://www.gl-inet.com/products/gl-sft1200/) (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. Dafür nur feste WLAN Antennen.
-* Der [GL-MT1300](https://www.gl-inet.com/products/gl-mt1300/) (Beryl) ist es bei mir geworden, da es das einzige Modell ist, wleches bei auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum 'mal kaufen und schauen was daraus wird'. Wie zuvor auch nur mit festen WLAN Antennen.
+* Der [GL-SFT1200](https://www.gl-inet.com/products/gl-sft1200/) (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. Dafür nur 2 feste WLAN Antennen. Preis-/Leistungssieger.  
+* Der [GL-MT1300](https://www.gl-inet.com/products/gl-mt1300/) (Beryl) ist es bei mir geworden, da es das einzige Modell ist, welches zu dme Zeitpunkt bei Auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum 'mal kaufen und schauen was daraus wird'. Wie zuvor auch nur mit festen WLAN Antennen.
 
 ### Vergleichstabelle
 
@@ -56,16 +57,16 @@ Wie zuvor erwähnt bin ich Informatiker, das bedeutet ich habe mir das Datenblat
 Er ist der teuerste unter allen bewerteten Modellen. Meine Entscheidung hat besonders die Unterstützung von IPv6 und der Einsatz einer SD Karte beeinflusst. Wem das nicht wichtig ist, der wird mit dem GL-SFT1200 (Opal) 30 Euro günstiger weg kommen. Wem bisher nur störte, dass sein Android Telefon kein WLAN Tethering konnte, der kann auf WLAN gänzlich verzichten und direkt die Shadow/Mango Box in Betracht ziehen.  
 Die Beryl kann ich auch mit einer bis zu 265GB großen SD Karte füttern und per FTP Daten oder DNLA Medien bereitstellen. Unser Fernseher im Wohnmobil ist nicht smart, das wäre für mich der einzig sinnvolle Einsatz. Aber vielleicht spiele ich auch mal mit dem Chromecast rum. Ich werde berichten...  
 
-Zunächst fragte ich mich, warum er nach Spezifikation unbedingt ein 5V/3A Netzteil verlangt, obwohl der Verbrauch mit <8,65W angegeben ist (8,65W/5V=1,75A). Beim Testen ging mir dann ein 15 Watt Licht auf. Ein Mobiltelefon am USB Port will ja auch mit Strom versorgt werden. Wenn dieses 2,1A (Schnellladen) zieht, dann hat das Board nicht mehr genügend Strom.  
+Zunächst fragte ich mich, warum er nach Spezifikation unbedingt ein 5V/3A Netzteil verlangt, obwohl der Verbrauch mit <8,65W angegeben ist (8,65W/5V=1,75A). Beim Testen ging mir dann ein 15 Watt Licht auf. Ein Mobiltelefon am USB Port will ja auch mit Strom versorgt werden. Wenn dieses 2,1A zieht, dann hat das Board nicht mehr genügend Strom.  
 Warum sollte ich ein Mobiltelefon anschliessen? Das Thema Tethering kommt noch.
 
 Die Kaufentscheidung hängt ab von:
 - Brauche ich WLAN oder nutze ich immer ein Mobiltelefon als Sender/Empfänger?
 - Wie viel Strom habe ich zur Verfügung? Bei 3A muss ich mir schon etwas einfallen lassen, während ich 1A einfach an jedem USB Port betreiben kann.
 - Will ich jetzt oder später Medien per DNLA im Wohnmobil bereitstellen? (MicroSD Slot)
-- Will ich ddaraus noch weitere DIY Projekte bauen? Dann sollte die Box auch GPIO Pins bieten.
+- Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box vielleicht auch auch GPIO Pins bieten.
 
-Die Größe des Mobils spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau.
+Die Größe des Mobils spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau.  
 
 
 ### Ersteinrichtung (Kabel)
@@ -73,17 +74,17 @@ Die Größe des Mobils spielt dabei kaum eine Rolle, bis 12m Länge sollte alles
 Ich habe den Luxus, dass mein Wohnmobil direkt vor der Tür steht. Das bedeutet ich konnte so tun als wäre mein Haus-WLAN ein Campingplatz. Aber bevor ich raus gegangen bin habe ich die kleine Box an meinem Schreibtisch ausgiebig getestet.  
 
 Die Ersteinrichtung war super einfach:
-* Auspacken, Strom dran, warten bis die Lampe vorne leuchtet.
+* Auspacken, Strom dran, LAN an Laptop, warten bis die LED vorne leuchtet
 * Browser öffnen und auf http://192.168.8.1 gehen
 * Beim ersten Login ein Adminpasswort vergeben
 
 * In der Weboberfläche auf **Wireless**
-* Jetzt habe ich das WLAN umbenannt in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
+* Zuerst habe ich das WLAN umbenannt (SSID) in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
   * Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden. Das geht nur nicht zum lokalen Testen.
 
 ![Browser Wireless](/media/router_beryl/browser_beryl_wireless.png)
 
-Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt **Upgrade** hat die Box sich das Image selbst aus dem Internet gezogen und installiert. Danach ging kein Remote-WLAN mehr... Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.
+Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt **Upgrade** hat die Box sich auf Bottonklick das Image selbst aus dem Internet gezogen und installiert. Danach ging kein Remote-WLAN mehr... Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.
 
 ![Browser Upgrade](/media/router_beryl/browser_beryl_upgrade.png)
 
@@ -114,12 +115,12 @@ Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt e
 
 ## Technisch
 
-Die Box besitzt eine OpenWRT Firmware mit eigener Weboberfläche. Es wird eine App angebunden um die Verwaltung noch ein wenig bequemer zu gestalten.  
+Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.  
 Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuell die Version 21.  
 
 ### LuCI Web UI
 
-Die Gl.iNet Oberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.  
+Die Gl.iNet Weboberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.  
 Dazu einfach unter https://192.168.8.1 im Menü ganz unten auf **More Settings** den unterpunkt **Advanced** auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dme Button 'Install' nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist 'root' und das Passwort wieder das zuerst vergebene.
 
 ![Browser LuCI](/media/router_beryl/browser_beryl_luci_overview.png)
@@ -127,7 +128,7 @@ Dazu einfach unter https://192.168.8.1 im Menü ganz unten auf **More Settings**
 ### Länderkonfiguration (SSH/Console)
 
 Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. Dei erlaubten WLAN Kanäle im 2,4GHz Band sind 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefundne wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.  
-Um das Problem zu beheben logt man sich per SSH auf die Box ein. Unter Linux per PuTTY oder unter Linux/Mac mit 'ssh' aus dem 'OpenSSH' Paket. Erlaubt ist nur ssh-rsa als Hostkey. Daher gibt man auf der Console den folgenden Befehl ein:
+Um das Problem zu beheben logt man sich per SSH auf die Box ein. Unter Windows per PuTTY oder unter Linux/Mac mit 'ssh' aus dem 'OpenSSH' Paket. Erlaubt ist nur ssh-rsa als Hostkey. Daher gibt man auf der Console den folgenden Befehl ein:
 
 > ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1
 
