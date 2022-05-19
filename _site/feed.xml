@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-19T17:23:20+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-19T20:00:30+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
 
 &lt;p&gt;Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.&lt;/p&gt;
 &lt;ol&gt;
@@ -20,7 +20,7 @@
 
 &lt;h2 id=&quot;vorgeschichte&quot;&gt;Vorgeschichte&lt;/h2&gt;
 
-&lt;p&gt;Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs keine Option mehr.&lt;/p&gt;
+&lt;p&gt;Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs nicht merh optional.&lt;/p&gt;
 
 &lt;p&gt;Für Wohnmobile werden verschiedene Systeme angeboten und auch regelmäßig in Fachliteratur getestet:&lt;br /&gt;
 Zum Einen gibt es Pocketrouter (‘Mobile Ostereier’) für 40-150 Euro. Diese werden oft mit einer billigen SIM-Karte, meist PrePaid, betrieben und sind durch internen Akku auch ausserhalb der Wohnmobils flexibel. Aber diese lösung ist auf das Mobilfunk-Netz angewiesen. Nachdem was ich weis, eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook. Im Ausland kann man heutzutuage fast immer einfach eine lokale Karte kaufen und diese nutzen. Roaming sollte innerhalb der EU kein Thema mehr sein.Die gibt es imme rmal wieder von TCM (Tchibo) oder AldiTalk.&lt;br /&gt;
@@ -43,6 +43,8 @@ Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben i
   &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-sft1200/&quot;&gt;GL-SFT1200&lt;/a&gt; (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. Dafür nur 2 feste WLAN Antennen. Preis-/Leistungssieger.&lt;/li&gt;
   &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-mt1300/&quot;&gt;GL-MT1300&lt;/a&gt; (Beryl) ist es bei mir geworden, da es das einzige Modell ist, welches zu dem Zeitpunkt bei Auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum ‘mal kaufen und schauen was daraus wird’. Wie zuvor auch nur mit festen WLAN Antennen.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Alle diese Lösungen haben keine SIM-Karte, sind aber einfach mittels USB-Modem oder USB-Tethering mit der derzeit aktuellen oder erschwinglichen Technik auszustatten.&lt;/p&gt;
 
 &lt;h3 id=&quot;vergleichstabelle&quot;&gt;Vergleichstabelle&lt;/h3&gt;
 
@@ -93,7 +95,7 @@ Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben i
       &lt;td&gt;16MB/128MB NAND&lt;/td&gt;
       &lt;td&gt;300Mbps (2,4GHz), 433Mbps (5GHz)&lt;/td&gt;
       &lt;td&gt;1x 2.0&lt;/td&gt;
-      &lt;td&gt;3x 1G&lt;/td&gt;
+      &lt;td&gt;3x 1GB&lt;/td&gt;
       &lt;td&gt;max 128GB&lt;/td&gt;
       &lt;td&gt;Nein&lt;/td&gt;
       &lt;td&gt;5V/2A USB-C (&amp;lt;6W)&lt;/td&gt;
@@ -105,7 +107,7 @@ Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben i
       &lt;td&gt;32MB&lt;/td&gt;
       &lt;td&gt;400Mbps (2,4GHz), 867Mbps (5GHz)&lt;/td&gt;
       &lt;td&gt;1x 3.0&lt;/td&gt;
-      &lt;td&gt;3x 1G&lt;/td&gt;
+      &lt;td&gt;3x 1GB&lt;/td&gt;
       &lt;td&gt;max. 512GB&lt;/td&gt;
       &lt;td&gt;Ja&lt;/td&gt;
       &lt;td&gt;5V/3A USB-C (&amp;lt;8,65W)&lt;/td&gt;
@@ -117,7 +119,7 @@ Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben i
       &lt;td&gt;SPI NAND 128MB&lt;/td&gt;
       &lt;td&gt;300Mbps (2,4GHz), 867Mbps (5GHz)&lt;/td&gt;
       &lt;td&gt;1x 2.0&lt;/td&gt;
-      &lt;td&gt;3x 1G&lt;/td&gt;
+      &lt;td&gt;3x 1GB&lt;/td&gt;
       &lt;td&gt;Nein&lt;/td&gt;
       &lt;td&gt;Ja&lt;/td&gt;
       &lt;td&gt;5V/3A USB-C&lt;/td&gt;
@@ -135,13 +137,14 @@ Tetherung = Mobilfunk vom Mobiltelefon/Tablet weitergeleitet. Meist über USB.&l
 
 &lt;p&gt;Die Kaufentscheidung hängt ab von:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Brauche ich WLAN oder nutze ich immer ein Mobiltelefon als Sender/Empfänger?&lt;/li&gt;
-  &lt;li&gt;Wie viel Strom habe ich zur Verfügung? Bei 3A muss ich mir schon etwas einfallen lassen, während ich 1A einfach an jedem USB Port betreiben kann.&lt;/li&gt;
+  &lt;li&gt;Binde ich das Gerät ins WLAN, per Kabel ein oder Tethering? Oder will ich flexibel alle Möglichkeiten haben?&lt;/li&gt;
+  &lt;li&gt;Wie viel Strom habe ich zur Verfügung? Bei 3A muss ich mir schon etwas einfallen lassen, während ich bis 2,1A einfach an jedem USB Port betreiben kann.&lt;/li&gt;
   &lt;li&gt;Will ich jetzt oder später Medien per DNLA im Wohnmobil bereitstellen? (MicroSD Slot)&lt;/li&gt;
-  &lt;li&gt;Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box vielleicht auch auch GPIO Pins bieten.&lt;/li&gt;
+  &lt;li&gt;Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box vielleicht auch auch GPIO Pins bieten, z.B. im den TIN Bus der Truma auszulesen.&lt;/li&gt;
+  &lt;li&gt;IPv6 wird heute weniger eine Rolle spielen, da es über OpenWRT sicher nachgereicht wird, sobald es salonfähig ist.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Die Größe des Wohnmobil/-wagen spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau.&lt;/p&gt;
+&lt;p&gt;Die Größe des Wohnmobil/-wagen spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auch im 5GHz Band auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau.&lt;/p&gt;
 
 &lt;h3 id=&quot;ersteinrichtung-kabel&quot;&gt;Ersteinrichtung (Kabel)&lt;/h3&gt;
 
@@ -243,6 +246,35 @@ Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenn
 
 &lt;p&gt;Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der &lt;a href=&quot;https://www.gl-inet.com/app/&quot;&gt;Website&lt;/a&gt;.&lt;br /&gt;
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.&lt;/p&gt;
+
+&lt;h3 id=&quot;vpn&quot;&gt;VPN&lt;/h3&gt;
+
+&lt;p&gt;Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit schon oft die Zähne an IPSec oder OpenVPN ausgebissen habe, habe ich diese Runde an WireGuard vergeben.&lt;br /&gt;
+WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen auszeichen soll. Dabei kommen in der Voreinstellung modernste Crypto Standards zum Einsatz, welche nach heutigem Wissen als als sicher gelten.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;root@walter:~# wget git.io/wireguard -O wireguard-install.sh &amp;amp;&amp;amp; bash wireguard-install.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ich bin kein Fan davon Services per Script aus dem Internet auszuführen. Aber für den Test genügt es. Das finale Produkt wird aus den Debian Bullseye Repository installiert. Das Script hat den weiteren Vorteil, dass es einfach nochmal ausgeführt werden kann, um einen weiteren Host hinzuzufügen.&lt;br /&gt;
+Der Befehl ‘bash wireguard-install.sh’ stellt ein paar Fragen. Als erstes den Namen der neu angelegten Verbindung, dann ein paar Details zu Hostname, Port und so weiter. Der Name ist wichtig, da so nachher die Datei im aktuellen Verzeichniss heisst. Das Einrichten eines weltweit verfügbaren Hosntamen oder die Portweiterleitung würde hier dne Rahmen sprengen, dafür gibt es bessere Tutorials.&lt;br /&gt;
+Zum Schluss wird ein qrcode auf der Console angezeigt, den man mit einem Telefon scannen kann. Die glinet App bietet auch das Einrichten der VPN Verbindung via QR Code. Das funktioniert sehr gut.&lt;/p&gt;
+
+&lt;p&gt;Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerichtet, musst eich den Code erneut generieren, mittels:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;root@walter:~# qrencode -t ansiutf8 &amp;lt; beryl.conf&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client per Scan in Euer VPN!&lt;/p&gt;
+
+&lt;p&gt;Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Die Verbindung wurde schnell aufgebaut und hatte einen schnellen Durchsatz.&lt;/p&gt;
+
+&lt;h3 id=&quot;wireguard-server&quot;&gt;WireGuard Server&lt;/h3&gt;
+
+&lt;p&gt;Bei mir Zuhause läuft eh ein Proxmox Host, als Virtualisierungslösung verschiedenster Server.&lt;br /&gt;
+Schnell einen neuen Container (LXC) erstellt, 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein Unpriviligierter Container ist ausreichend.&lt;br /&gt;
+&lt;strong&gt;Update&lt;/strong&gt;: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein &lt;strong&gt;option Country&lt;/strong&gt; mehr. Im Block mit &lt;strong&gt;option Band ‘5g’&lt;/strong&gt; den Eintrag &lt;strong&gt;option region ‘1’&lt;/strong&gt; setzen (zuvor 10). Im Block mit &lt;strong&gt;option Band ‘2g’&lt;/strong&gt; kontrollieren &lt;strong&gt;option region ‘1’&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;zukunft&quot;&gt;Zukunft&lt;/h2&gt;
 
