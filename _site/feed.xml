@@ -1,29 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-18T17:33:48+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-19T17:23:20+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
 
 &lt;p&gt;Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;gl.iNet Router in gewünschter Ausstattung (und Preis) kaufen&lt;/li&gt;
-  &lt;li&gt;an Strom anschliessen, mit Daten auf der Unterseite anmelden&lt;/li&gt;
-  &lt;li&gt;‘Internet’ per Kabel, WLAN oder Tethering/USB Modem bereitstellen&lt;/li&gt;
-  &lt;li&gt;Fertig.&lt;/li&gt;
+  &lt;li&gt;An Strom anschliessen, mit Daten auf der Unterseite anmelden&lt;/li&gt;
+  &lt;li&gt;‘Internet’ per Kabel, WLAN oder Tethering/USB Modem bereitstellen (siehe unten)&lt;/li&gt;
+  &lt;li&gt;Fertig&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;Dabei gibt es die folgenden Wege für das Internet:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kabel an den Netzwerkport WAN anschliessen. Am einfachsten, aber selten beim Camping vorhanden.&lt;/li&gt;
+  &lt;li&gt;WLAN Bridge einrichten. Auf http://192.168.8.1 anmelden, links &lt;em&gt;Internet&lt;/em&gt; auswählen, unter &lt;em&gt;repeater&lt;/em&gt; den Button &lt;em&gt;Scan&lt;/em&gt; klicken, das entsprechende WLAN auswählen, das Passwort eingeben und &lt;em&gt;Join&lt;/em&gt; klicken.&lt;/li&gt;
+  &lt;li&gt;USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen. Im Menü des Telefons ‘Tethering’ freigeben.&lt;/li&gt;
+  &lt;li&gt;USB-Modem. Noch nicht getestet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tipp: Beim ausführlichen Testen ist mir desöfteren die WLAN Verbindung abgebrochen, gerade beim Aufbau einer WLAN Bridge. Irgendwann funktiniert es, aber die Button Scan/Join müssen häufig geklickt werden, bis man zufällig den richtigen Moment erwischt und ‘Success’ oben in der Menuleiste steht. Per LAN Kabel gab es keine Probleme… Vielleicht geht das einfacher/stabiler per App.&lt;/p&gt;
 
 &lt;h2 id=&quot;vorgeschichte&quot;&gt;Vorgeschichte&lt;/h2&gt;
 
-&lt;p&gt;Heutzutage benötigt man Internet. Nicht nur als Roadwarrior (Arbeiten von Unterwegs), auch um Up-to-date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möcht man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist ‘das Internet’ unterwegs keine Option mehr.&lt;/p&gt;
+&lt;p&gt;Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs keine Option mehr.&lt;/p&gt;
 
-&lt;p&gt;Für Wohnmobile werden verschiedene Systeme angeboten und auch regelmäßig in Fachliteratur getestet.&lt;br /&gt;
-Zum Einen gibt es ‘Mobile Ostereier’ für 40-150 Euro. Diese werden mit einer billigen SIM-Karte, meist PrePaid betrieben und sind durch internen Akku flexibel. Aber halt auch auf Mobilfunk-Netz angewiesen. Nach dem was ich weis, eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook.&lt;br /&gt;
-Zum Anderen gibt es, oft aus dem Bootsbereich, mehr oder weniger klobige Boxen auf dem Dach mit einem kleinen Router. Diese bieten z.B. LTE(4G) an und unter Umständen auch WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches sich ‘einfach’ aufrüsten lässt. Auch ein Faktor: Meine Frau möchte keine zusätzlichen Löcher in ihr Wohnmobil gebohrt haben.&lt;br /&gt;
-Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren. Aber oft leiden diese unter einem oder mehr Nachteile der vorgenannten Lösungen.&lt;/p&gt;
+&lt;p&gt;Für Wohnmobile werden verschiedene Systeme angeboten und auch regelmäßig in Fachliteratur getestet:&lt;br /&gt;
+Zum Einen gibt es Pocketrouter (‘Mobile Ostereier’) für 40-150 Euro. Diese werden oft mit einer billigen SIM-Karte, meist PrePaid, betrieben und sind durch internen Akku auch ausserhalb der Wohnmobils flexibel. Aber diese lösung ist auf das Mobilfunk-Netz angewiesen. Nachdem was ich weis, eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook. Im Ausland kann man heutzutuage fast immer einfach eine lokale Karte kaufen und diese nutzen. Roaming sollte innerhalb der EU kein Thema mehr sein.Die gibt es imme rmal wieder von TCM (Tchibo) oder AldiTalk.&lt;br /&gt;
+Zum Anderen gibt es, oft aus dem Bootsbereich, mehr oder weniger klobige Boxen auf dem Dach mit einem kleinen Router. Diese bieten deutlich mehr, LTE(4G) und WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches sich ‘einfach’ aufrüsten lässt. Auch ein Faktor: Meine Frau möchte keine zusätzlichen Löcher in ihr Wohnmobil gebohrt haben.&lt;br /&gt;
+Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren. Aber oft leiden diese unter einem oder mehr Nachteile der vorgenannten Lösungen, aber unter Umständen eine sehr gute Übersicht über den Datenverbrauch. Die bekanntesten dieser Klasse sind wohl die ‘Netgear Nighthawk’ Modelle.&lt;/p&gt;
 
-&lt;p&gt;Ich war auf der Suche nach einem kleinen günstigen Router, der mir im Wohnmobil ein gutes Netzwerk gibt, vielleicht flexibel ist und auch kaputt gehen darf, ohne dass es weh tut.&lt;/p&gt;
+&lt;p&gt;Ich war auf der Suche nach einem kleinen, flexiblen und günstigen Router, der mir im Wohnmobil ein gutes Netzwerk gibt und auch kaputt gehen darf, ohne dass es weh tut.&lt;/p&gt;
 
 &lt;h2 id=&quot;recherche&quot;&gt;Recherche&lt;/h2&gt;
 
 &lt;p&gt;Vor einigen Wochen habe ich einen Microrouter der Firma &lt;a href=&quot;https://www.gl-inet.com/&quot;&gt;Gl.iNet&lt;/a&gt; gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt in der Basiskonfiguration eine sogenante ‘Bridge’. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen (Konferenztisch?).&lt;br /&gt;
-Interessant für uns Camper: Durch mehrere Antennen, kann ich mit geringem Verlust ein externes WLAN (Campingplatz) aufnehmen und daraus ein eigenes lokales WLAN für alle Geräte machen. Für das Wohnzimmer auf Rädern auf dem Campingplatz also perfekt.&lt;br /&gt;
-Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt.&lt;/p&gt;
+Interessant für uns Camper: Durch mehrere Antennen, kann ich mit geringem Verlust ein externes WLAN (Campingplatz) aufnehmen und daraus ein eigenes lokales WLAN für alle Geräte machen. Für das Wohnzimmer auf Rädern auf dem Campingplatz also perfekt. Durhc die tauschbaren Antennen könnte ich, ohne die Leistung physikalisch zu ändern, vollkommen legal mehr Reichweite durch Richtwirkung erhalten.&lt;br /&gt;
+Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt, dazu in einem späteren Artikel mehr.&lt;/p&gt;
 
 &lt;p&gt;Als Informatiker habe ich mir das Datenblatt genauer angesehen und so richtig hat es mich nicht überzeugt. Also was bieten die anderen Modelle des Herstellers?&lt;/p&gt;
 &lt;ul&gt;
@@ -31,7 +41,7 @@ Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben i
   &lt;li&gt;Die &lt;a href=&quot;https://www.gl-inet.com/products/gl-ar750s/&quot;&gt;GL-AR750S&lt;/a&gt; (Slate) hat einen deutlich stärkeren Prozessor und mehr RAM (Arbeitsspeicher) und sollte für die meisten Anwendungen im Wohnmobil ausreichen. Stromverbrauch &amp;lt;6W laut Datenblatt. Für 75 Euro okay.&lt;/li&gt;
   &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-mv1000/&quot;&gt;GL-MV1000W&lt;/a&gt; (Brumme-W) hat mir am besten gefallen, ist aber derzeit nicht verfügbar.&lt;/li&gt;
   &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-sft1200/&quot;&gt;GL-SFT1200&lt;/a&gt; (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. Dafür nur 2 feste WLAN Antennen. Preis-/Leistungssieger.&lt;/li&gt;
-  &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-mt1300/&quot;&gt;GL-MT1300&lt;/a&gt; (Beryl) ist es bei mir geworden, da es das einzige Modell ist, welches zu dme Zeitpunkt bei Auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum ‘mal kaufen und schauen was daraus wird’. Wie zuvor auch nur mit festen WLAN Antennen.&lt;/li&gt;
+  &lt;li&gt;Der &lt;a href=&quot;https://www.gl-inet.com/products/gl-mt1300/&quot;&gt;GL-MT1300&lt;/a&gt; (Beryl) ist es bei mir geworden, da es das einzige Modell ist, welches zu dem Zeitpunkt bei Auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum ‘mal kaufen und schauen was daraus wird’. Wie zuvor auch nur mit festen WLAN Antennen.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;vergleichstabelle&quot;&gt;Vergleichstabelle&lt;/h3&gt;
@@ -83,7 +93,7 @@ Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben i
       &lt;td&gt;16MB/128MB NAND&lt;/td&gt;
       &lt;td&gt;300Mbps (2,4GHz), 433Mbps (5GHz)&lt;/td&gt;
       &lt;td&gt;1x 2.0&lt;/td&gt;
-      &lt;td&gt;3x 1GB&lt;/td&gt;
+      &lt;td&gt;3x 1G&lt;/td&gt;
       &lt;td&gt;max 128GB&lt;/td&gt;
       &lt;td&gt;Nein&lt;/td&gt;
       &lt;td&gt;5V/2A USB-C (&amp;lt;6W)&lt;/td&gt;
@@ -117,11 +127,11 @@ Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben i
 
 &lt;h2 id=&quot;meine-lösung-glinet-gl-mt1300-beryl&quot;&gt;Meine Lösung: Gl.iNet GL-MT1300 (Beryl)&lt;/h2&gt;
 
-&lt;p&gt;Er ist der teuerste unter allen bewerteten Modellen. Meine Entscheidung hat besonders die Unterstützung von IPv6 und der Einsatz einer SD Karte beeinflusst. Wem das nicht wichtig ist, der wird mit dem GL-SFT1200 (Opal) 30 Euro günstiger weg kommen. Wem bisher nur störte, dass sein Android Telefon kein WLAN Tethering konnte, der kann auf WLAN gänzlich verzichten und direkt die Shadow/Mango Box in Betracht ziehen.&lt;br /&gt;
-Die Beryl kann ich auch mit einer bis zu 265GB großen SD Karte füttern und per FTP Daten oder DNLA Medien bereitstellen. Unser Fernseher im Wohnmobil ist nicht smart, das wäre für mich der einzig sinnvolle Einsatz. Aber vielleicht spiele ich auch mal mit dem Chromecast rum. Ich werde berichten…&lt;/p&gt;
+&lt;p&gt;Er ist der teuerste unter allen bewerteten Modellen. Meine Entscheidung hat besonders die Unterstützung von IPv6 und der Einsatz einer SD Karte beeinflusst. Wem das nicht wichtig ist, der wird mit dem GL-SFT1200 (Opal) 30 Euro günstiger weg kommen. Wem bisher nur stört, dass das Android Telefon/Tablet kein WLAN Tethering kann, der kann die deutlich günstigeren Shadow/Mango Boxen ohne 5GHz WLAN in Betracht ziehen.&lt;br /&gt;
+Der Beryl kann ich auch mit einer bis zu 512GB großen SD Karte füttern und per FTP Daten oder per DNLA Medien bereitstellen. Unser Fernseher im Wohnmobil ist nicht smart, das wäre für mich der einzig sinnvolle Einsatz. Aber vielleicht spiele ich auch mal mit dem Chromecast rum. Ich werde berichten…&lt;/p&gt;
 
 &lt;p&gt;Zunächst fragte ich mich, warum er nach Spezifikation unbedingt ein 5V/3A Netzteil verlangt, obwohl der Verbrauch mit &amp;lt;8,65W angegeben ist (8,65W/5V=1,75A). Beim Testen ging mir dann ein 15 Watt Licht auf. Ein Mobiltelefon am USB Port will ja auch mit Strom versorgt werden. Wenn dieses 2,1A zieht, dann hat das Board nicht mehr genügend Strom.&lt;br /&gt;
-Warum sollte ich ein Mobiltelefon anschliessen? Das Thema Tethering kommt noch.&lt;/p&gt;
+Tetherung = Mobilfunk vom Mobiltelefon/Tablet weitergeleitet. Meist über USB.&lt;/p&gt;
 
 &lt;p&gt;Die Kaufentscheidung hängt ab von:&lt;/p&gt;
 &lt;ul&gt;
@@ -131,7 +141,7 @@ Warum sollte ich ein Mobiltelefon anschliessen? Das Thema Tethering kommt noch.&
   &lt;li&gt;Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box vielleicht auch auch GPIO Pins bieten.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Die Größe des Mobils spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau.&lt;/p&gt;
+&lt;p&gt;Die Größe des Wohnmobil/-wagen spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau.&lt;/p&gt;
 
 &lt;h3 id=&quot;ersteinrichtung-kabel&quot;&gt;Ersteinrichtung (Kabel)&lt;/h3&gt;
 
@@ -185,19 +195,29 @@ USB-Tethering bedeutet, dass das Mobiltelefon die vorhandene Internetverbindung 
 &lt;h2 id=&quot;technisch&quot;&gt;Technisch&lt;/h2&gt;
 
 &lt;p&gt;Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.&lt;br /&gt;
-Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuell die Version 21.&lt;/p&gt;
+Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuelle Images für die Version 21.&lt;br /&gt;
+(https://openwrt.org/toh/views/toh_tfdownload &amp;lt;- suchen nach ‘Brand = gl.inet’)&lt;/p&gt;
+
+&lt;p&gt;Alle Weboberflächen nutzen http anstatt https. Da wir mit einem Microcomputer arbeiten und das ausschliesslich im privaten LAN, verzichtet man auf den Overhead der Verschlüsselung und einer unschönen Sicherheitswarnung im Browser.&lt;/p&gt;
+
+&lt;h3 id=&quot;was-ist-openwrt&quot;&gt;Was ist OpenWRT?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://openwrt.org&quot;&gt;OpenWRT&lt;/a&gt; ist ein offenes Routerbetriebssystem auf Linux Basis, mit dem Paketmanager &lt;strong&gt;opkg&lt;/strong&gt;.&lt;br /&gt;
+Da bestimmt 95% der im Alltag vorkommenden Konfigurationen über die LuCI Weboberfläche erledigt werden können, ist dieses System für den ambitionierten Anwender nicht schwieriger zu benutzen als eine AVM Fritz!Box.&lt;br /&gt;
+Die Standardanwendungen sind gut auf deutsch übersetzt, ich benutze es aber gerne auf Englisch.&lt;/p&gt;
 
 &lt;h3 id=&quot;luci-web-ui&quot;&gt;LuCI Web UI&lt;/h3&gt;
 
 &lt;p&gt;Die Gl.iNet Weboberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.&lt;br /&gt;
-Dazu einfach unter https://192.168.8.1 im Menü ganz unten auf &lt;strong&gt;More Settings&lt;/strong&gt; den unterpunkt &lt;strong&gt;Advanced&lt;/strong&gt; auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dme Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.&lt;/p&gt;
+Dazu einfach unter http://192.168.8.1 im Menü ganz unten auf &lt;strong&gt;More Settings&lt;/strong&gt; den unterpunkt &lt;strong&gt;Advanced&lt;/strong&gt; auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dem Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/media/router_beryl/browser_beryl_luci_overview.png&quot; alt=&quot;Browser LuCI&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;länderkonfiguration-sshconsole&quot;&gt;Länderkonfiguration (SSH/Console)&lt;/h3&gt;
+&lt;h3 id=&quot;länderkonfiguration-kanäle&quot;&gt;Länderkonfiguration (Kanäle)&lt;/h3&gt;
 
-&lt;p&gt;Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. Dei erlaubten WLAN Kanäle im 2,4GHz Band sind 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefundne wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.&lt;br /&gt;
-Um das Problem zu beheben logt man sich per SSH auf die Box ein. Unter Windows per PuTTY oder unter Linux/Mac mit ‘ssh’ aus dem ‘OpenSSH’ Paket. Erlaubt ist nur ssh-rsa als Hostkey. Daher gibt man auf der Console den folgenden Befehl ein:&lt;/p&gt;
+&lt;p&gt;Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. Die erlaubten WLAN Kanäle im 2,4GHz Band sind 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefunden wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.&lt;/p&gt;
+
+&lt;p&gt;Um das Problem zu beheben logt man sich per SSH auf die Box ein. Unter Windows per &lt;strong&gt;PuTTY&lt;/strong&gt; oder unter Linux/Mac mit &lt;strong&gt;ssh&lt;/strong&gt; aus dem ‘OpenSSH’ Paket. Erlaubt ist nur ssh-rsa als Algorithmus. Daher gibt man auf der Console den folgenden Befehl ein:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1&lt;/p&gt;
@@ -209,12 +229,15 @@ Um das Problem zu beheben logt man sich per SSH auf die Box ein. Unter Windows p
   &lt;p&gt;vim /etc/config/wireless&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;… indem 2x die Zeile &lt;strong&gt;option Country ‘CN’&lt;/strong&gt; mit &lt;strong&gt;option Country ‘DE’&lt;/strong&gt; ersetzt wird.&lt;br /&gt;
-Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) &lt;strong&gt;option region ‘1’&lt;/strong&gt; und &lt;strong&gt;option aregion ‘1’&lt;/strong&gt; gesetzt um den Europäischen Regularien gerecht zu werden. &lt;a href=&quot;https://blog.csdn.net/linbounconstraint/article/details/80899321&quot;&gt;Details&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_WLAN_channels&quot;&gt;Wikipedia&lt;/a&gt;&lt;br /&gt;
-Aus dem Editor kommt Ihr mit der Tastenfolge: [Esc] [:][x] [Enter]. Es gibt auch die Variante [:][w][q], das kommt auf das selbe hinaus.&lt;br /&gt;
-Nach einem Neustart werden diese Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/RT2860/*.dat geschrieben.&lt;/p&gt;
+&lt;p&gt;Mit der Taste [i] kommt man in den editier-Modus.
+&lt;del&gt;… indem 2x die Zeile &lt;strong&gt;option Country ‘CN’&lt;/strong&gt; mit &lt;strong&gt;option Country ‘DE’&lt;/strong&gt; ersetzt wird.&lt;br /&gt;
+Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) &lt;strong&gt;option region ‘1’&lt;/strong&gt; und &lt;strong&gt;option aregion ‘1’&lt;/strong&gt; gesetzt um den Europäischen Regularien gerecht zu werden.&lt;/del&gt;&lt;br /&gt;
+&lt;strong&gt;Update&lt;/strong&gt;: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein &lt;strong&gt;option Country&lt;/strong&gt; mehr. Im Block mit &lt;strong&gt;option Band ‘5g’&lt;/strong&gt; den Eintrag &lt;strong&gt;option region ‘1’&lt;/strong&gt; setzen (zuvor 10). Im Block mit &lt;strong&gt;option Band ‘2g’&lt;/strong&gt; kontrollieren &lt;strong&gt;option region ‘1’&lt;/strong&gt;. &lt;a href=&quot;https://blog.csdn.net/linbounconstraint/article/details/80899321&quot;&gt;Details zu den Werten&lt;/a&gt; und &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_WLAN_channels&quot;&gt;Wikipedia List of WLAN channels&lt;/a&gt;&lt;br /&gt;
+Aus dem Editor kommt Ihr mit der Tastenfolge: [Esc][:][x][Enter]. Es gibt auch die Variante [:][w][q], das kommt auf das selbe hinaus.&lt;br /&gt;
+Nach einem Neustart des Routers werden diese Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/… geschrieben.&lt;/p&gt;
 
-&lt;p&gt;Tipp: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal!&lt;/p&gt;
+&lt;p&gt;Tipp: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal (kein Scherz)!&lt;br /&gt;
+Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenne investieren.&lt;/p&gt;
 
 &lt;h3 id=&quot;glinet-app&quot;&gt;glinet App&lt;/h3&gt;
 
