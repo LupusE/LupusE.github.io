@@ -28,7 +28,7 @@ Tipp: Beim ausführlichen Testen ist mir desöfteren die WLAN Verbindung abgebro
 
 ## Vorgeschichte
 
-Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs keine Option mehr.  
+Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs nicht merh optional.  
 
 Für Wohnmobile werden verschiedene Systeme angeboten und auch regelmäßig in Fachliteratur getestet:  
 Zum Einen gibt es Pocketrouter ('Mobile Ostereier') für 40-150 Euro. Diese werden oft mit einer billigen SIM-Karte, meist PrePaid, betrieben und sind durch internen Akku auch ausserhalb der Wohnmobils flexibel. Aber diese lösung ist auf das Mobilfunk-Netz angewiesen. Nachdem was ich weis, eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook. Im Ausland kann man heutzutuage fast immer einfach eine lokale Karte kaufen und diese nutzen. Roaming sollte innerhalb der EU kein Thema mehr sein.Die gibt es imme rmal wieder von TCM (Tchibo) oder AldiTalk.  
@@ -50,15 +50,17 @@ Als Informatiker habe ich mir das Datenblatt genauer angesehen und so richtig ha
 * Der [GL-SFT1200](https://www.gl-inet.com/products/gl-sft1200/) (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. Dafür nur 2 feste WLAN Antennen. Preis-/Leistungssieger.  
 * Der [GL-MT1300](https://www.gl-inet.com/products/gl-mt1300/) (Beryl) ist es bei mir geworden, da es das einzige Modell ist, welches zu dem Zeitpunkt bei Auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum 'mal kaufen und schauen was daraus wird'. Wie zuvor auch nur mit festen WLAN Antennen.
 
+Alle diese Lösungen haben keine SIM-Karte, sind aber einfach mittels USB-Modem oder USB-Tethering mit der derzeit aktuellen oder erschwinglichen Technik auszustatten.
+
 ### Vergleichstabelle
 
 | Bezeichnung (Name) | CPU | RAM | Speicher | WLAN | USB | Ethernet | Micro SD | IPv6 | Power
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 | GL-AR300M-Ext (Shadow) | QC9531 @650MHz | DDR2 128MB | 16MB | 300Mbps (2,4GHz) | 1x 2.0 | 2x 10/100 | Nein | Nein | 5V/1A USB-C (<2W)
 | GL-MT300N (Mango) | MT7628NN @580MHz | DDR2 128MB | 16MB | 300Mbps (2,4GHz) | 1x 2.0 | 2x 10/100 | Nein | Nein | 5V/1A USB-C (<2,75W)
-| GL-AR750S (Slate) | QCA9563 @775MHz | DDR2 128MB | 16MB/128MB NAND | 300Mbps (2,4GHz), 433Mbps (5GHz) | 1x 2.0 | 3x 1G | max 128GB | Nein | 5V/2A USB-C (<6W)
-| GL-MT1300 (Beryl) | MT7621 @880MHz | DDR3L 256MB | 32MB | 400Mbps (2,4GHz), 867Mbps (5GHz) | 1x 3.0 | 3x 1G | max. 512GB | Ja | 5V/3A USB-C (<8,65W)
-| GL-SFT1200 (Opal) | SF19A28 @1GHz | DDR3 128MB | SPI NAND 128MB | 300Mbps (2,4GHz), 867Mbps (5GHz) | 1x 2.0 | 3x 1G | Nein | Ja | 5V/3A USB-C
+| GL-AR750S (Slate) | QCA9563 @775MHz | DDR2 128MB | 16MB/128MB NAND | 300Mbps (2,4GHz), 433Mbps (5GHz) | 1x 2.0 | 3x 1GB | max 128GB | Nein | 5V/2A USB-C (<6W)
+| GL-MT1300 (Beryl) | MT7621 @880MHz | DDR3L 256MB | 32MB | 400Mbps (2,4GHz), 867Mbps (5GHz) | 1x 3.0 | 3x 1GB | max. 512GB | Ja | 5V/3A USB-C (<8,65W)
+| GL-SFT1200 (Opal) | SF19A28 @1GHz | DDR3 128MB | SPI NAND 128MB | 300Mbps (2,4GHz), 867Mbps (5GHz) | 1x 2.0 | 3x 1GB | Nein | Ja | 5V/3A USB-C
 
 
 ## Meine Lösung: Gl.iNet GL-MT1300 (Beryl)
@@ -70,12 +72,13 @@ Zunächst fragte ich mich, warum er nach Spezifikation unbedingt ein 5V/3A Netzt
 Tetherung = Mobilfunk vom Mobiltelefon/Tablet weitergeleitet. Meist über USB.  
 
 Die Kaufentscheidung hängt ab von:
-- Brauche ich WLAN oder nutze ich immer ein Mobiltelefon als Sender/Empfänger?
-- Wie viel Strom habe ich zur Verfügung? Bei 3A muss ich mir schon etwas einfallen lassen, während ich 1A einfach an jedem USB Port betreiben kann.
+- Binde ich das Gerät ins WLAN, per Kabel ein oder Tethering? Oder will ich flexibel alle Möglichkeiten haben?
+- Wie viel Strom habe ich zur Verfügung? Bei 3A muss ich mir schon etwas einfallen lassen, während ich bis 2,1A einfach an jedem USB Port betreiben kann.
 - Will ich jetzt oder später Medien per DNLA im Wohnmobil bereitstellen? (MicroSD Slot)
-- Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box vielleicht auch auch GPIO Pins bieten.
+- Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box vielleicht auch auch GPIO Pins bieten, z.B. im den TIN Bus der Truma auszulesen.
+- IPv6 wird heute weniger eine Rolle spielen, da es über OpenWRT sicher nachgereicht wird, sobald es salonfähig ist.
 
-Die Größe des Wohnmobil/-wagen spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau.  
+Die Größe des Wohnmobil/-wagen spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auch im 5GHz Band auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau.  
 
 
 ### Ersteinrichtung (Kabel)
@@ -169,6 +172,31 @@ Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenn
 
 Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der [Website](https://www.gl-inet.com/app/).  
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.
+
+### VPN
+
+Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit schon oft die Zähne an IPSec oder OpenVPN ausgebissen habe, habe ich diese Runde an WireGuard vergeben.  
+WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen auszeichen soll. Dabei kommen in der Voreinstellung modernste Crypto Standards zum Einsatz, welche nach heutigem Wissen als als sicher gelten.  
+
+> root@walter:~# wget git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh
+
+Ich bin kein Fan davon Services per Script aus dem Internet auszuführen. Aber für den Test genügt es. Das finale Produkt wird aus den Debian Bullseye Repository installiert. Das Script hat den weiteren Vorteil, dass es einfach nochmal ausgeführt werden kann, um einen weiteren Host hinzuzufügen.  
+Der Befehl 'bash wireguard-install.sh' stellt ein paar Fragen. Als erstes den Namen der neu angelegten Verbindung, dann ein paar Details zu Hostname, Port und so weiter. Der Name ist wichtig, da so nachher die Datei im aktuellen Verzeichniss heisst. Das Einrichten eines weltweit verfügbaren Hosntamen oder die Portweiterleitung würde hier dne Rahmen sprengen, dafür gibt es bessere Tutorials.  
+Zum Schluss wird ein qrcode auf der Console angezeigt, den man mit einem Telefon scannen kann. Die glinet App bietet auch das Einrichten der VPN Verbindung via QR Code. Das funktioniert sehr gut.
+
+Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerichtet, musst eich den Code erneut generieren, mittels:
+
+> root@walter:~# qrencode -t ansiutf8 < beryl.conf
+
+Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client per Scan in Euer VPN!
+
+Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Die Verbindung wurde schnell aufgebaut und hatte einen schnellen Durchsatz.
+
+### WireGuard Server
+
+Bei mir Zuhause läuft eh ein Proxmox Host, als Virtualisierungslösung verschiedenster Server.  
+Schnell einen neuen Container (LXC) erstellt, 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein Unpriviligierter Container ist ausreichend.  
+**Update**: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein **option Country** mehr. Im Block mit **option Band '5g'** den Eintrag **option region '1'** setzen (zuvor 10). Im Block mit **option Band '2g'** kontrollieren **option region '1'**.
 
 
 ## Zukunft
