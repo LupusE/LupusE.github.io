@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-19T20:00:30+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-19T20:05:15+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
 
 &lt;p&gt;Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.&lt;/p&gt;
 &lt;ol&gt;
@@ -232,7 +232,7 @@ Dazu einfach unter http://192.168.8.1 im Menü ganz unten auf &lt;strong&gt;More
   &lt;p&gt;vim /etc/config/wireless&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Mit der Taste [i] kommt man in den editier-Modus.
+&lt;p&gt;Mit der Taste [i] kommt man in den editier-Modus.&lt;br /&gt;
 &lt;del&gt;… indem 2x die Zeile &lt;strong&gt;option Country ‘CN’&lt;/strong&gt; mit &lt;strong&gt;option Country ‘DE’&lt;/strong&gt; ersetzt wird.&lt;br /&gt;
 Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) &lt;strong&gt;option region ‘1’&lt;/strong&gt; und &lt;strong&gt;option aregion ‘1’&lt;/strong&gt; gesetzt um den Europäischen Regularien gerecht zu werden.&lt;/del&gt;&lt;br /&gt;
 &lt;strong&gt;Update&lt;/strong&gt;: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein &lt;strong&gt;option Country&lt;/strong&gt; mehr. Im Block mit &lt;strong&gt;option Band ‘5g’&lt;/strong&gt; den Eintrag &lt;strong&gt;option region ‘1’&lt;/strong&gt; setzen (zuvor 10). Im Block mit &lt;strong&gt;option Band ‘2g’&lt;/strong&gt; kontrollieren &lt;strong&gt;option region ‘1’&lt;/strong&gt;. &lt;a href=&quot;https://blog.csdn.net/linbounconstraint/article/details/80899321&quot;&gt;Details zu den Werten&lt;/a&gt; und &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_WLAN_channels&quot;&gt;Wikipedia List of WLAN channels&lt;/a&gt;&lt;br /&gt;
@@ -247,7 +247,7 @@ Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenn
 &lt;p&gt;Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der &lt;a href=&quot;https://www.gl-inet.com/app/&quot;&gt;Website&lt;/a&gt;.&lt;br /&gt;
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.&lt;/p&gt;
 
-&lt;h3 id=&quot;vpn&quot;&gt;VPN&lt;/h3&gt;
+&lt;h3 id=&quot;vpn-wireguard&quot;&gt;VPN (WireGuard)&lt;/h3&gt;
 
 &lt;p&gt;Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit schon oft die Zähne an IPSec oder OpenVPN ausgebissen habe, habe ich diese Runde an WireGuard vergeben.&lt;br /&gt;
 WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen auszeichen soll. Dabei kommen in der Voreinstellung modernste Crypto Standards zum Einsatz, welche nach heutigem Wissen als als sicher gelten.&lt;/p&gt;
@@ -270,11 +270,10 @@ Zum Schluss wird ein qrcode auf der Console angezeigt, den man mit einem Telefon
 
 &lt;p&gt;Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Die Verbindung wurde schnell aufgebaut und hatte einen schnellen Durchsatz.&lt;/p&gt;
 
-&lt;h3 id=&quot;wireguard-server&quot;&gt;WireGuard Server&lt;/h3&gt;
+&lt;h4 id=&quot;wireguard-server&quot;&gt;WireGuard Server&lt;/h4&gt;
 
 &lt;p&gt;Bei mir Zuhause läuft eh ein Proxmox Host, als Virtualisierungslösung verschiedenster Server.&lt;br /&gt;
-Schnell einen neuen Container (LXC) erstellt, 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein Unpriviligierter Container ist ausreichend.&lt;br /&gt;
-&lt;strong&gt;Update&lt;/strong&gt;: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein &lt;strong&gt;option Country&lt;/strong&gt; mehr. Im Block mit &lt;strong&gt;option Band ‘5g’&lt;/strong&gt; den Eintrag &lt;strong&gt;option region ‘1’&lt;/strong&gt; setzen (zuvor 10). Im Block mit &lt;strong&gt;option Band ‘2g’&lt;/strong&gt; kontrollieren &lt;strong&gt;option region ‘1’&lt;/strong&gt;.&lt;/p&gt;
+Schnell einen neuen Container (LXC) erstellt, 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein Unpriviligierter Container ist ausreichend.&lt;/p&gt;
 
 &lt;h2 id=&quot;zukunft&quot;&gt;Zukunft&lt;/h2&gt;
 

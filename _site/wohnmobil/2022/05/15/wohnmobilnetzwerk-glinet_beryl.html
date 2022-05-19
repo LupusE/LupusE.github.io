@@ -232,7 +232,7 @@ Dazu einfach unter http://192.168.8.1 im Menü ganz unten auf <strong>More Setti
   <p>vim /etc/config/wireless</p>
 </blockquote>
 
-<p>Mit der Taste [i] kommt man in den editier-Modus.
+<p>Mit der Taste [i] kommt man in den editier-Modus.<br />
 <del>… indem 2x die Zeile <strong>option Country ‘CN’</strong> mit <strong>option Country ‘DE’</strong> ersetzt wird.<br />
 Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) <strong>option region ‘1’</strong> und <strong>option aregion ‘1’</strong> gesetzt um den Europäischen Regularien gerecht zu werden.</del><br />
 <strong>Update</strong>: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein <strong>option Country</strong> mehr. Im Block mit <strong>option Band ‘5g’</strong> den Eintrag <strong>option region ‘1’</strong> setzen (zuvor 10). Im Block mit <strong>option Band ‘2g’</strong> kontrollieren <strong>option region ‘1’</strong>. <a href="https://blog.csdn.net/linbounconstraint/article/details/80899321">Details zu den Werten</a> und <a href="https://en.wikipedia.org/wiki/List_of_WLAN_channels">Wikipedia List of WLAN channels</a><br />
@@ -247,7 +247,7 @@ Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenn
 <p>Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der <a href="https://www.gl-inet.com/app/">Website</a>.<br />
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.</p>
 
-<h3 id="vpn">VPN</h3>
+<h3 id="vpn-wireguard">VPN (WireGuard)</h3>
 
 <p>Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit schon oft die Zähne an IPSec oder OpenVPN ausgebissen habe, habe ich diese Runde an WireGuard vergeben.<br />
 WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen auszeichen soll. Dabei kommen in der Voreinstellung modernste Crypto Standards zum Einsatz, welche nach heutigem Wissen als als sicher gelten.</p>
@@ -270,11 +270,10 @@ Zum Schluss wird ein qrcode auf der Console angezeigt, den man mit einem Telefon
 
 <p>Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Die Verbindung wurde schnell aufgebaut und hatte einen schnellen Durchsatz.</p>
 
-<h3 id="wireguard-server">WireGuard Server</h3>
+<h4 id="wireguard-server">WireGuard Server</h4>
 
 <p>Bei mir Zuhause läuft eh ein Proxmox Host, als Virtualisierungslösung verschiedenster Server.<br />
-Schnell einen neuen Container (LXC) erstellt, 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein Unpriviligierter Container ist ausreichend.<br />
-<strong>Update</strong>: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein <strong>option Country</strong> mehr. Im Block mit <strong>option Band ‘5g’</strong> den Eintrag <strong>option region ‘1’</strong> setzen (zuvor 10). Im Block mit <strong>option Band ‘2g’</strong> kontrollieren <strong>option region ‘1’</strong>.</p>
+Schnell einen neuen Container (LXC) erstellt, 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein Unpriviligierter Container ist ausreichend.</p>
 
 <h2 id="zukunft">Zukunft</h2>
 

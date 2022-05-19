@@ -158,7 +158,7 @@ Um das Problem zu beheben logt man sich per SSH auf die Box ein. Unter Windows p
 
 > vim /etc/config/wireless
 
-Mit der Taste [i] kommt man in den editier-Modus.
+Mit der Taste [i] kommt man in den editier-Modus.  
 ~~... indem 2x die Zeile **option Country 'CN'** mit **option Country 'DE'** ersetzt wird.  
 Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) **option region '1'** und **option aregion '1'** gesetzt um den Europäischen Regularien gerecht zu werden.~~  
 **Update**: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein **option Country** mehr. Im Block mit **option Band '5g'** den Eintrag **option region '1'** setzen (zuvor 10). Im Block mit **option Band '2g'** kontrollieren **option region '1'**. [Details zu den Werten](https://blog.csdn.net/linbounconstraint/article/details/80899321) und [Wikipedia List of WLAN channels](https://en.wikipedia.org/wiki/List_of_WLAN_channels)  
@@ -173,7 +173,7 @@ Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenn
 Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der [Website](https://www.gl-inet.com/app/).  
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.
 
-### VPN
+### VPN (WireGuard)
 
 Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit schon oft die Zähne an IPSec oder OpenVPN ausgebissen habe, habe ich diese Runde an WireGuard vergeben.  
 WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen auszeichen soll. Dabei kommen in der Voreinstellung modernste Crypto Standards zum Einsatz, welche nach heutigem Wissen als als sicher gelten.  
@@ -192,11 +192,10 @@ Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt wie
 
 Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Die Verbindung wurde schnell aufgebaut und hatte einen schnellen Durchsatz.
 
-### WireGuard Server
+#### WireGuard Server
 
 Bei mir Zuhause läuft eh ein Proxmox Host, als Virtualisierungslösung verschiedenster Server.  
 Schnell einen neuen Container (LXC) erstellt, 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein Unpriviligierter Container ist ausreichend.  
-**Update**: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein **option Country** mehr. Im Block mit **option Band '5g'** den Eintrag **option region '1'** setzen (zuvor 10). Im Block mit **option Band '2g'** kontrollieren **option region '1'**.
 
 
 ## Zukunft
