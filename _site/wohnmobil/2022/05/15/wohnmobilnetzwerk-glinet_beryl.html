@@ -17,7 +17,7 @@
   <li>USB-Modem. Noch nicht getestet.</li>
 </ul>
 
-<p>Tipp: Beim ausführlichen Testen ist mir desöfteren das private WLAN der Box abgebrochen beim Versuch mit ienme externen WLAN zu verbinden. Irgendwann funktioniert es, aber die Buttons Scan/Join mussten häufig geklickt werden, bis man zufällig den richtigen Moment erwischt und ‘Success’ oben in der Menuleiste steht. Per LAN Kabel gab es keine Probleme… Vielleicht geht das einfacher/stabiler per App.</p>
+<p>Tipp: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, wleche unter Umständen das Verbinden zu WLAN mit Key verhintert. An diesem arbeitet Gl.iNet anscheinend gerade. Zum anderen scheint es ein nicht näher beschriebenes Problem mit Fritz!Boxen zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.</p>
 
 <h2 id="vorgeschichte">Vorgeschichte</h2>
 
@@ -169,7 +169,8 @@ Tethering = Mobilfunk oder WLAN vom Mobiltelefon/Tablet weitergeleitet. Meist ü
   </li>
 </ul>
 
-<p>Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links <strong>Upgrade</strong> hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.<br />
+<p>Wer plant eine Fritz!Box einzusetzen, NICHT upgraden! Es gibt einen nicht näher beschriebenen Bug in der aktuellen Firmware. Gl.iNet arbeitet wohl dran. Leider ist genau dieser Teil der Software (Netzwerktreiber) Closed Source. Aber die Gute Nachricht: Bis Firmware 3.203 funktioniert es. <a href="https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/34">Quelle</a><br />
+Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links <strong>Upgrade</strong> hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.<br />
 <del>Danach ging kein Remote-WLAN mehr… Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.</del></p>
 
 <p>Vor der Installation hat man die Möglichkeit auszuwählen ‘Einstellungen beibehalten’. Aktuell wähle ich diese Option immer ab, da mit einem Firmwareupdate neue und verbesserte Funktionen und unter Umständen auch neue Konfigurationen kommen. Wenn der Router ein paar Monate läuft und einige individuelle Konfigurationen vorgenommen wurden, dann kann man die Einstellung übernehmen, sollte aber darauf achten dass der Versionssprung nicht zu gross wird.</p>
@@ -240,7 +241,7 @@ Dazu einfach unter http://192.168.8.1 im Menü ganz unten auf <strong>More Setti
 
 <p>Mit der Taste [i] kommt man in den editier-Modus.<br />
 <del>… indem 2x die Zeile <strong>option Country ‘CN’</strong> mit <strong>option Country ‘DE’</strong> ersetzt wird.<br />
-Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) <strong>option region ‘1’</strong> und <strong>option aregion ‘1’</strong> gesetzt um den Europäischen Regularien gerecht zu werden.</del><br />
+Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) <strong>option region ‘1’</strong> (von 0) und <strong>option aregion ‘1’</strong> gesetzt um den Europäischen Regularien gerecht zu werden.</del><br />
 <strong>Update</strong>: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein <strong>option Country</strong> mehr. Im Block mit <strong>option Band ‘5g’</strong> den Eintrag <strong>option region ‘1’</strong> setzen (zuvor 10). Im Block mit <strong>option Band ‘2g’</strong> kontrollieren <strong>option region ‘1’</strong>. <a href="https://blog.csdn.net/linbounconstraint/article/details/80899321">Details zu den Werten</a> und <a href="https://en.wikipedia.org/wiki/List_of_WLAN_channels">Wikipedia List of WLAN channels</a><br />
 Aus dem Editor kommt Ihr mit der Tastenfolge: [Esc][:][x][Enter]. Es gibt auch die Variante [:][w][q] (write quit), das kommt auf das selbe hinaus.<br />
 Nach einem Neustart des Routers werden die neuen Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/… geschrieben.</p>
@@ -254,6 +255,12 @@ Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenn
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.</p>
 
 <p>Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel per QR-Code in der App einrichten. Alternativ kann ich die Konfigurationsdatei auch in dne entsprechenden Browser Dialog ziehen oder alles manuell eintippen, bequemer ist aber die App.</p>
+
+<p>Insgesamt reagiert die App schnell und ist übersichtlich. Es gibt keinen Grund die Arbeit nicht damit zu vereinfachen. Es muss nur zum Start die Cloud ignoriert werden. Alles funktioniert super auch ohne diese.<br />
+Auf der ersten Seite findne sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren seiten zu kommen. Die zweite Seite bietet alle Möglichkeitne in das Internet zu kommen, sehr ähnlich der Weboberfläche. Dei dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu Blocken.<br />
+Das letzte Fenster bietet einen schnellzugriff auf einige Feineinstellungen, das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.</p>
+
+<p>(Bilder folgen)</p>
 
 <h3 id="vpn-wireguard">VPN (WireGuard)</h3>
 <p>Wer nach dem Lesen dieses Absatz weniger versteht als vorher, der sollte diesen Punkt einfach überspringen.</p>
@@ -282,6 +289,8 @@ Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefo
 <p>Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Die Verbindung wurde schnell aufgebaut und hatte einen schnellen Durchsatz.</p>
 
 <p>Alle Gl.iNet router bieten einen Hardware Switch, über den ich verschiedene Aktionen steuern kann. Zum Beispiel kann ich darüber das VPN schnell ein- und ausschalten. Zuhause, per Mobilfunk und in vertreienswürdigen Netzen kann ich das VPN ausschalten, wenn ich das offene WLAN bekannter FastFood Ketten oder das Campingnetz nutze kann ich das VPN einschalten. Vorausgesetzt ich habe ein dauerhaft verfügbaren VPN Endpunkt mit gutem Duchsatz als Server!</p>
+
+<p>Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwegs privat/annonym das TOR Netzwerk zu nutzen.</p>
 
 <h2 id="zukunft">Zukunft</h2>
 

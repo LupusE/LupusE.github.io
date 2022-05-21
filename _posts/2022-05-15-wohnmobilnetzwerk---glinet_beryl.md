@@ -24,8 +24,7 @@ Dabei gibt es folgende Wege für das Internet:
 - USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen. Am Telefon/Tablet 'Tethering' freigeben.
 - USB-Modem. Noch nicht getestet.
 
-Tipp: Beim ausführlichen Testen ist mir desöfteren das private WLAN der Box abgebrochen beim Versuch mit ienme externen WLAN zu verbinden. Irgendwann funktioniert es, aber die Buttons Scan/Join mussten häufig geklickt werden, bis man zufällig den richtigen Moment erwischt und 'Success' oben in der Menuleiste steht. Per LAN Kabel gab es keine Probleme... Vielleicht geht das einfacher/stabiler per App.  
-
+Tipp: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, wleche unter Umständen das Verbinden zu WLAN mit Key verhintert. An diesem arbeitet Gl.iNet anscheinend gerade. Zum anderen scheint es ein nicht näher beschriebenes Problem mit Fritz!Boxen zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.  
 
 ## Vorgeschichte
 
@@ -98,6 +97,7 @@ Die Ersteinrichtung war super einfach:
   * Auf gar keinen Fall die Standardeinstellungen lassen. Wer als SSID 'GL-' liesst, wird gleich das Kennwort 'goodlife' versuchen. Wer nur die SSID umbenennt, könnte anhand der MAC Adresse als Goodlife Gerät identifiziert werden.
 ![Browser Wireless](/media/router_beryl/browser_beryl_wireless.png)
 
+Wer plant eine Fritz!Box einzusetzen, NICHT upgraden! Es gibt einen nicht näher beschriebenen Bug in der aktuellen Firmware. Gl.iNet arbeitet wohl dran. Leider ist genau dieser Teil der Software (Netzwerktreiber) Closed Source. Aber die Gute Nachricht: Bis Firmware 3.203 funktioniert es. [Quelle](https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/34)  
 Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links **Upgrade** hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.  
 ~~Danach ging kein Remote-WLAN mehr... Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.~~
 
@@ -169,7 +169,7 @@ Um das Problem zu beheben loggt man sich per SSH auf die Box ein. Unter Windows 
 
 Mit der Taste [i] kommt man in den editier-Modus.  
 ~~... indem 2x die Zeile **option Country 'CN'** mit **option Country 'DE'** ersetzt wird.  
-Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) **option region '1'** und **option aregion '1'** gesetzt um den Europäischen Regularien gerecht zu werden.~~  
+Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) **option region '1'** (von 0) und **option aregion '1'** gesetzt um den Europäischen Regularien gerecht zu werden.~~  
 **Update**: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein **option Country** mehr. Im Block mit **option Band '5g'** den Eintrag **option region '1'** setzen (zuvor 10). Im Block mit **option Band '2g'** kontrollieren **option region '1'**. [Details zu den Werten](https://blog.csdn.net/linbounconstraint/article/details/80899321) und [Wikipedia List of WLAN channels](https://en.wikipedia.org/wiki/List_of_WLAN_channels)  
 Aus dem Editor kommt Ihr mit der Tastenfolge: [Esc][:][x][Enter]. Es gibt auch die Variante [:][w][q] (write quit), das kommt auf das selbe hinaus.  
 Nach einem Neustart des Routers werden die neuen Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/... geschrieben.
@@ -183,6 +183,12 @@ Die App Kann entweder über den Google Playstore oder dem Apple AppStrore herunt
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.  
 
 Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel per QR-Code in der App einrichten. Alternativ kann ich die Konfigurationsdatei auch in dne entsprechenden Browser Dialog ziehen oder alles manuell eintippen, bequemer ist aber die App.  
+
+Insgesamt reagiert die App schnell und ist übersichtlich. Es gibt keinen Grund die Arbeit nicht damit zu vereinfachen. Es muss nur zum Start die Cloud ignoriert werden. Alles funktioniert super auch ohne diese.  
+Auf der ersten Seite findne sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren seiten zu kommen. Die zweite Seite bietet alle Möglichkeitne in das Internet zu kommen, sehr ähnlich der Weboberfläche. Dei dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu Blocken.  
+Das letzte Fenster bietet einen schnellzugriff auf einige Feineinstellungen, das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.  
+
+(Bilder folgen)
 
 ### VPN (WireGuard)
 Wer nach dem Lesen dieses Absatz weniger versteht als vorher, der sollte diesen Punkt einfach überspringen.
@@ -207,6 +213,8 @@ TIPP: Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behande
 Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Die Verbindung wurde schnell aufgebaut und hatte einen schnellen Durchsatz.
 
 Alle Gl.iNet router bieten einen Hardware Switch, über den ich verschiedene Aktionen steuern kann. Zum Beispiel kann ich darüber das VPN schnell ein- und ausschalten. Zuhause, per Mobilfunk und in vertreienswürdigen Netzen kann ich das VPN ausschalten, wenn ich das offene WLAN bekannter FastFood Ketten oder das Campingnetz nutze kann ich das VPN einschalten. Vorausgesetzt ich habe ein dauerhaft verfügbaren VPN Endpunkt mit gutem Duchsatz als Server!  
+
+Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwegs privat/annonym das TOR Netzwerk zu nutzen.
 
 
 ## Zukunft
