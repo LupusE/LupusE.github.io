@@ -12,28 +12,30 @@ comments: []
 ## tl;dr
 
 Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.
-1. gl.iNet Router in gewünschter Ausstattung (und Preis) kaufen
+1. gl.iNet Router in gewünschter Ausstattung (und Preis) kaufen: [Gl.iNet Produkte](https://www.gl-inet.com/products/)
 2. An Strom anschliessen, mit warten bis die Lampe durchgehend leuchtet
 3. Mit den Daten auf der Unterseite anmelden
 4. 'Internet' per Kabel, WLAN oder Tethering/USB Modem bereitstellen (siehe unten)
 5. Fertig
 
 Dabei gibt es folgende Wege für das Internet:
-- Kabel an den Netzwerkport WAN anschliessen. Am einfachsten, gut zum ersten Einrichten, aber selten beim Camping sinnvoll.
-- WLAN Bridge. Unter *Repeater* den Button *Scan* klicken, das entsprechende WLAN auswählen, das Passwort eingeben und *Join* klicken. (siehe 'Tipp')
-- USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen. Am Telefon/Tablet 'Tethering' freigeben.
+- Kabel an den Netzwerkport WAN anschliessen. Am einfachsten, gut zum ersten Einrichten, aber selten sinnvoll beim Camping.
+- WLAN Bridge. Unter *Repeater* den Button *Scan* klicken, das entsprechende WLAN auswählen, das Passwort eingeben und *Join* klicken. (siehe 'Tipp'). Das Mittel der Wahl auf dem Campinglplatz, in Kombination mit VPN auch für öffentliche WLAN.
+- USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen, am Telefon/Tablet 'Tethering' freigeben. Für alle Fans des 100% autarken Camping.
 - USB-Modem. Noch nicht getestet.
 
-Tipp: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, wleche unter Umständen das Verbinden zu WLAN mit Key verhintert. An diesem arbeitet Gl.iNet anscheinend gerade. Zum anderen scheint es ein nicht näher beschriebenes Problem mit Fritz!Boxen zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.  
+Tipp: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, welche unter Umständen das Verbinden zu WLAN mit Key verhindert An diesem [arbeitet Gl.iNet anscheinend gerade](https://forum.gl-inet.com/t/20556), und vermutlich ist es in der aktuellsten Beta behoben. Zum Anderen scheint es ein nicht näher beschriebenes [Problem mit Fritz!Boxen](https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/37) zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.  
+
+--- 
 
 ## Vorgeschichte
 
 Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs nicht merh optional.  
 
 Für Wohnmobile werden unterschiedliche Systeme angeboten und in Fachliteratur getestet:  
-Zum Einen gibt es Pocketrouter ('Mobile Ostereier') für 40-150 Euro. Diese werden oft mit einer billigen SIM-Karte, meist PrePaid, betrieben und sind durch den internen Akku auch ausserhalb der Wohnmobils flexibel. Aber diese Lösung ist auf das Mobilfunk-Netz angewiesen. Nachdem was ich weis eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook. Im Ausland kann man einfach eine lokale Karte kaufen und einsetzen. Roaming sollte innerhalb der EU kein Thema mehr sein. Die Systeme gibt es im Angebot von TCM (Tchibo) oder AldiTalk. 
-Zum Anderen gibt es, oft aus dem Bootsbereich, mehr oder weniger klobige Boxen, fest montiert auf dem Dach. Diese bieten deutlich mehr Leistung und mehr Anbindung, z.B. Mobilfunk und WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches sich 'einfach' aufrüsten lässt. Auch ein Faktor: Meine Frau möchte keine zusätzlichen Löcher in ihr Wohnmobil gebohrt haben.  
-Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren. Oft leiden diese unter einem oder mehr Nachteile der vorgenannten Lösungen, aber unter Umständen eine sehr gute Übersicht über den Datenverbrauch. Die bekanntesten dieser Klasse sind wohl die 'Netgear Nighthawk' Modelle.  
+* Zum Einen gibt es Pocketrouter ('Mobile Ostereier') für 40-150 Euro. Diese werden oft mit einer billigen SIM-Karte, meist PrePaid, betrieben und sind durch den internen Akku auch ausserhalb der Wohnmobils flexibel. Aber diese Lösung ist auf das Mobilfunk-Netz angewiesen. Nachdem was ich weis eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook. Im Ausland kann man einfach eine lokale Karte kaufen und einsetzen. Roaming sollte innerhalb der EU kein Thema mehr sein. Die Systeme gibt es im Angebot von TCM (Tchibo) oder AldiTalk. Dies machen Sinn um autark zu stehen, in Kombination mit meiner beschriebenen Lösung.  
+* Zum Anderen gibt es, oft aus dem Bootsbereich, mehr oder weniger klobige Boxen, fest montiert auf dem Dach. Diese bieten deutlich mehr Leistung und mehr Anbindung, z.B. Mobilfunk und WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches sich 'einfach' aufrüsten lässt. Auch ein Faktor: Meine Frau möchte keine zusätzlichen Löcher in ihr Wohnmobil gebohrt haben.  
+* Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren. Oft leiden diese unter einem oder mehr Nachteile der vorgenannten Lösungen, aber einige bieten eine sehr gute Übersicht über den aktuellen Datenverbrauch. Die bekanntesten dieser Klasse sind wohl die [Netgear Hotspot](https://www.netgear.com/de/home/mobile-wifi/hotspots/) Modelle.  
 
 Ich war auf der Suche nach einem kleinen, flexiblen und günstigen Router, der mir im Wohnmobil ein gutes Netzwerk gibt und auch kaputt gehen darf, ohne dass es weh tut.
 
@@ -66,7 +68,7 @@ Alle diese Lösungen haben keine SIM-Karte, sind aber einfach mittels USB-Modem 
 ## Meine Lösung: Gl.iNet GL-MT1300 (Beryl)
 
 Er ist der teuerste der untersuchten Modelle. Meine Entscheidung hat besonders die Unterstützung von IPv6 und der Einsatz einer SD Karte beeinflusst. Wem das nicht wichtig ist, der wird mit dem GL-SFT1200 (Opal) 30 Euro günstiger weg kommen. Wem bisher nur stört, dass das Android Telefon/Tablet kein WLAN-WLAN Tethering kann, der kann die deutlich günstigeren Shadow/Mango Boxen in Betracht ziehen.  
-Den Beryl kann ich mit einer bis zu 512GB großen SD Karte füttern und per FTP Daten oder per DNLA Medien bereitstellen. Unser Fernseher im Wohnmobil ist nicht smart, das wäre für mich der einzig sinnvolle Einsatz. Aber vielleicht spiele ich mit dem Chromecast rum. Ich werde berichten...  
+Den Beryl kann ich mit einer bis zu 512GB großen SD Karte füttern und per FTP Daten oder per DLNA Medien bereitstellen. Unser Fernseher im Wohnmobil ist nicht smart, das wäre für mich der einzig sinnvolle Einsatz. Aber vielleicht spiele ich mit dem Chromecast rum. Ich werde berichten...  
 
 Zunächst fragte ich mich, warum er nach Spezifikation unbedingt ein 5V/3A Netzteil verlangt, obwohl der Verbrauch mit <8,65W angegeben ist (8,65W/5V=1,75A). Beim Testen ging mir dann ein 15 Watt Licht auf. Ein Mobiltelefon am USB Port will ja auch mit Strom versorgt werden. Wenn dieses 2,1A zieht, dann hat das Board nicht mehr genügend Strom.  
 Tethering = Mobilfunk oder WLAN vom Mobiltelefon/Tablet weitergeleitet. Meist über USB.  
@@ -80,7 +82,6 @@ Die Kaufentscheidung hängt ab von:
 - Wenn ich VPN und andere Dienste zeitgleich nutzn will muss, muss ich irgendwann auch auf MHz und RAM achten.  
 
 Die Größe des Wohnmobil/-wagen spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auch im 5GHz Band auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau. Die kleinen Boxen kann man sehr gut fensternah verstauen.  
-
 
 ### Ersteinrichtung (Kabel)
 
@@ -109,8 +110,7 @@ Vor der Installation hat man die Möglichkeit auszuwählen 'Einstellungen beibeh
 **Tipp**: Ich habe ein Notebook für solche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden.  
 Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer 'goodlife'. Bei anderen Modellen ist die SSID ähnlich aufgebaut: GL-[Modellnummer]-[Letzten 3 Zeichen der MAC].  
 
-Ich hatte beim Verbinden zum Firmennetzwerk nach dem Klick auf 'Scan' oder 'Join' oft einen WLAN Abbuch. Nach mehrfachen Klicken hat es irgendwann geklappt und oben im Browserfenster wurde 'Success' eingeblendet, danach lief alles wie erwartet. Das Android Tablet und Telefon hat bei den nicht funktioniernden Versuchen immer für 1-3 Minuten die WLAN-Verbindung verloren.  
-Vielleicht geht das mit der App besser, ich werde es testen.
+~~Ich hatte beim Verbinden zum Firmennetzwerk nach dem Klick auf 'Scan' oder 'Join' oft einen WLAN Abbuch. Nach mehrfachen Klicken hat es irgendwann geklappt und oben im Browserfenster wurde 'Success' eingeblendet, danach lief alles wie erwartet. Das Android Tablet und Telefon hat bei den nicht funktioniernden Versuchen immer für 1-3 Minuten die WLAN-Verbindung verloren. Vielleicht geht das mit der App besser, ich werde es testen.~~ (Update: Auf oben gennten Bug zurückzuführen, mit älterer Firmware funktioniert alles.)
 
 
 ### Einrichtung (WLAN zu WLAN)
@@ -133,6 +133,7 @@ In unserem Fall hat meine Frau ihr altes [Sony Xperia Z3 Compact](https://de.wik
 
 Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt es sich aber die PIN der Datenkarte zu deaktivieren. Da ich nur einen 3G Stick (Huawai E1750) mit anderer SIM-Größe hier habe, habe ich es noch nicht getestet.  
 
+---
 
 ## Technisch
 
@@ -182,13 +183,19 @@ Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenn
 Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der [Website](https://www.gl-inet.com/app/).  
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.  
 
-Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel per QR-Code in der App einrichten. Alternativ kann ich die Konfigurationsdatei auch in dne entsprechenden Browser Dialog ziehen oder alles manuell eintippen, bequemer ist aber die App.  
+Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel per QR-Code in der App einrichten. Alternativ kann ich die Konfigurationsdatei auch in den entsprechenden Browser Dialog ziehen oder alles manuell eintippen, bequemer ist aber die App.  
 
 Insgesamt reagiert die App schnell und ist übersichtlich. Es gibt keinen Grund die Arbeit nicht damit zu vereinfachen. Es muss nur zum Start die Cloud ignoriert werden. Alles funktioniert super auch ohne diese.  
-Auf der ersten Seite findne sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren seiten zu kommen. Die zweite Seite bietet alle Möglichkeitne in das Internet zu kommen, sehr ähnlich der Weboberfläche. Dei dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu Blocken.  
-Das letzte Fenster bietet einen schnellzugriff auf einige Feineinstellungen, das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.  
+Auf der ersten Seite finden sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren Seiten zu kommen.  
+Gl.iNet App Mit VPN Aus oder ein. Der Klick auf das Symbol überschreibt die Einstellung des Hardware-Schalter.  
+![Gl.iNetApp Home VPN Off](/media/router_beryl/N7glinet_app-1_home_VPNoff.png) ![Gl.iNetApp Home VPN On](/media/router_beryl/N7glinet_app-2_home_VPNon.png)  
 
-(Bilder folgen)
+Die zweite Seite bietet alle Möglichkeiten in das Internet zu kommen, sehr ähnlich der Weboberfläche. Dei dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu blocken.  
+Einn Übersicht der möglichen Internetzugänge und der Clients im lokalen Netzwerk.  
+![Gl.iNetApp Network](/media/router_beryl/N7glinet_app-3_network.png) ![Gl.iNetApp Clients](/media/router_beryl/N7glinet_app-4_clients.png)  
+
+Das letzte Fenster bietet einen Schnellzugriff auf einige Feineinstellungen, das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.  
+![Gl.iNetApp Network](/media/router_beryl/N7glinet_app-5_system.png)  
 
 ### VPN (WireGuard)
 Wer nach dem Lesen dieses Absatz weniger versteht als vorher, der sollte diesen Punkt einfach überspringen.
@@ -208,25 +215,29 @@ Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerich
 
 > root@walter:~# qrencode -t ansiutf8 < beryl.conf
 
-TIPP: Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client per Scan in Euer VPN!
+TIPP: Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt, wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client in Euer VPN!  
 
-Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Die Verbindung wurde schnell aufgebaut und hatte einen schnellen Durchsatz.
+Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Daher gibt es noch keine Testergebnisse.  
 
-Alle Gl.iNet router bieten einen Hardware Switch, über den ich verschiedene Aktionen steuern kann. Zum Beispiel kann ich darüber das VPN schnell ein- und ausschalten. Zuhause, per Mobilfunk und in vertreienswürdigen Netzen kann ich das VPN ausschalten, wenn ich das offene WLAN bekannter FastFood Ketten oder das Campingnetz nutze kann ich das VPN einschalten. Vorausgesetzt ich habe ein dauerhaft verfügbaren VPN Endpunkt mit gutem Duchsatz als Server!  
+Alle Gl.iNet Router bieten einen Hardware-Switch, über den ich verschiedene Aktionen steuern kann. Zum Beispiel kann ich darüber das VPN schnell ein- und ausschalten. Zuhause, per Mobilfunk und in vertrauenswürdigen Netzen kann ich das VPN ausschalten. Wenn ich das offene WLAN bekannter FastFood Ketten oder das Campingnetz nutze, kann ich das VPN einschalten. Vorausgesetzt ich habe ein dauerhaft verfügbaren VPN Endpunkt mit gutem Duchsatz als Server!  
 
-Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwegs privat/annonym das TOR Netzwerk zu nutzen.
+Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwegs privat/anonym das TOR Netzwerk zu nutzen.
 
+---
 
 ## Zukunft
 
-- Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantenne aus einem 17" Laptop vor, die um die Dachlucke kommt. Das ist nicht schlimm, Gl.iNet stellt dafür sogar eine Anleitung bereit. Die Garantie verliert man trotzdem.  
+- Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantene aus einem 17" Laptop vor, die um die Dachlucke kommt. Das ist nicht schlimm, Gl.iNet stellt dafür sogar eine Anleitung bereit. Die Garantie verliert man trotzdem.  
 - Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.  
 - Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden und verteile das WLAN über 3 strategisch verteilte Router im Mesh, also ganz ähnlich einem besser ausgestattetem Campingplatz. Davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten flüssig Youtube zu streamen.  
 - Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker [Beispiel](https://www.amazon.de/dp/B09B7X3XKH/). Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.  
+- Langfristig werde ich mir das neue [Truma iNet X Panel](https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel) einbauen. Dieses hat noch kein 'eigenes Modem', sondern nur Bluetooth. Für diesen Einsatz ist mir wichtig bequem alle anderen Datenverbraucher abschalten zu können. Das benötigt noch einen [GL-S10](https://www.gl-inet.com/products/gl-s10/)/[GL-S200](https://www.gl-inet.com/products/gl-s200/) oder ähnlich, als BT Gateway. Vielleicht geht das auch über den USB Port, wenn man auf das Tethering verzichtet... Ist noch Zukunft.
+
+---
 
 ## Bilder
 
-Der lokale Testaufbau für Referenzwerte am Schriebtisch.
+Der lokale Testaufbau für Referenzwerte am Schreibtisch.
 ![Testaufbau Desktop](/media/router_beryl/router_beryl_test.jpg)
 
 Der erste Standort am zentralen Panel. Oben der Router, unten das Netzteil an 230V. Die neben der 230V Landstrom-Steckdose serienmäßig verbaute 12V KFZ-Steckdose habe ich gegen eine 2xUSB (max. 2,1A) Umgebaut.
@@ -244,8 +255,8 @@ Hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant schlechter 
 Es wurde an fast jeder Steckdose getestet.
 ![Testaufbau Bad](/media/router_beryl/router_beryl_bad.jpg)
 
-Die Box würde ich bei trockenem Wetter ohne bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen, für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.  
+Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen, für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.  
 Im 4-Pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V->5V/3A Spannungswandler einzubauen.  
 Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke.  
-Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren.  
+Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei man ein Mobiltelefon nicht in der prallen Sonne liegen lassen sollte.  
 
