@@ -20,7 +20,7 @@ Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktion
 
 Dabei gibt es folgende Wege für das Internet:
 - Kabel an den Netzwerkport WAN anschliessen. Am einfachsten, gut zum ersten Einrichten, aber selten sinnvoll beim Camping.
-- WLAN Bridge. Unter *Repeater* den Button *Scan* klicken, das entsprechende WLAN auswählen, das Passwort eingeben und *Join* klicken. (siehe 'Tipp'). Das Mittel der Wahl auf dem Campinglplatz, in Kombination mit VPN auch für öffentliche WLAN.
+- WLAN Bridge. Unter **Internet** **Repeater** den Button **Scan** klicken, das entsprechende WLAN auswählen, das Passwort eingeben und **Join**/Beitreten klicken. (siehe 'Tipp'). Das Mittel der Wahl auf dem Campinglplatz, in Kombination mit VPN auch für öffentliche WLAN.
 - USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen, am Telefon/Tablet 'Tethering' freigeben. Für alle Fans des 100% autarken Camping.
 - USB-Modem. Noch nicht getestet.
 
@@ -42,7 +42,7 @@ Ich war auf der Suche nach einem kleinen, flexiblen und günstigen Router, der m
 
 ## Recherche
 
-Vor einigen Wochen habe ich einen Microrouter der Firma [Gl.iNet](https://www.gl-inet.com/) gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt eine sogenante 'Bridge', übersetzt also ein gegebenes Netzwerk in ein eigenes. Wie das Internet zuhause mit ienem Router in das Heimnetzwerk gewandelt wird. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen. Zu kompliziert? Kurz: Ich kann alles in mein eigenes WLAN übersetzen.  
+Vor einigen Wochen habe ich einen Microrouter der Firma [Gl.iNet](https://www.gl-inet.com/) gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt eine sogenante 'Bridge', übersetzt also ein gegebenes Netzwerk in ein eigenes (Network Adress Translation/NAT). Wie das Internet zuhause mit einem Router in das Heimnetzwerk gewandelt wird. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen. Zu kompliziert? Kurz: Ich kann alles in mein eigenes WLAN übersetzen.  
 Interessant für uns Camper: Durch mehrere Antennen kann ich mit geringem Verlust ein externes WLAN (Campingplatz) aufnehmen und daraus ein eigenes lokales WLAN für alle Geräte in der Nähe bereitstellen. Für das Wohnzimmer auf Rädern also perfekt. Durch tauschbaren Antennen könnte ich, ohne die Leistung physikalisch zu ändern, vollkommen legal mehr Reichweite durch Richtwirkung erhalten.  
 Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt, dazu in einem späteren Artikel mehr.  
 
@@ -90,20 +90,20 @@ Ich habe den Luxus, dass mein Wohnmobil direkt vor der Tür steht. Das bedeutet 
 
 Die Ersteinrichtung war super einfach:
 * Auspacken, Strom dran, LAN an Laptop, warten bis die LED dauerhaft leuchtet
-* Browser öffnen und auf http://192.168.8.1 gehen
+* Browser öffnen und auf [http://192.168.8.1](http://192.168.8.1) gehen
 * Beim ersten Login Sprache einstellen und Adminpasswort vergeben
 
-* In der Weboberfläche auf **Wireless**
+* In der Weboberfläche auf **Wireless**/Kabellos
 * Zuerst habe ich das WLAN umbenannt (SSID) in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
   * Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden. Das geht nur nicht zum lokalen Testen.
-  * Auf gar keinen Fall die Standardeinstellungen lassen. Wer als SSID 'GL-' liesst, wird gleich das Kennwort 'goodlife' versuchen. Wer nur die SSID umbenennt, könnte anhand der MAC Adresse als Goodlife Gerät identifiziert werden.
+  * Auf gar keinen Fall die Standardeinstellungen lassen. Wer als SSID 'GL-...' sieht, wird gleich das Kennwort 'goodlife' versuchen. Wer nur die SSID umbenennt, könnte anhand der MAC Adresse als Goodlife Gerät identifiziert werden.
 ![Browser Wireless](/media/router_beryl/browser_beryl_wireless.png)
 
 Wer plant eine Fritz!Box einzusetzen, NICHT upgraden! Es gibt einen nicht näher beschriebenen Bug in der aktuellen Firmware. Gl.iNet arbeitet wohl dran. Leider ist genau dieser Teil der Software (Netzwerktreiber) Closed Source. Aber die Gute Nachricht: Bis Firmware 3.203 funktioniert es. [Quelle](https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/34)  
-Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links **Upgrade** hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.  
-~~Danach ging kein Remote-WLAN mehr... Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.~~
+Ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links **Upgrade**/Aktualisierung hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.  
+Möchte man ein Downgrade (Letzte Version installieren), dann geht das nicht automatisch, aber auch einfach: Das Image von der Webseite herunteladen und im nächsten Reiter (Local Upgrade/lokale Aktualisierung) auf den Router hochladen, der Rest ist gleich.  
 
-Vor der Installation hat man die Möglichkeit auszuwählen 'Einstellungen beibehalten'. Aktuell wähle ich diese Option immer ab, da mit einem Firmwareupdate neue und verbesserte Funktionen und unter Umständen auch neue Konfigurationen kommen. Wenn der Router ein paar Monate läuft und einige individuelle Konfigurationen vorgenommen wurden, dann kann man die Einstellung übernehmen, sollte aber darauf achten dass der Versionssprung nicht zu gross wird.  
+Vor der Installation hat man die Möglichkeit auszuwählen 'Keep Settings'/Einstellungen beibehalten und 'Keep installed Packages'/Installierte Pakete behalten. Aktuell wähle ich diese Optionen immer ab, da mit einem Firmwareupdate neue und verbesserte Funktionen und unter Umständen auch geänderte Konfigurationen kommen. Wenn der Router ein paar Monate läuft und einige individuelle Konfigurationen vorgenommen wurden, dann kann man die Einstellung übernehmen, sollte aber darauf achten dass der Versionssprung nicht zu gross wird. Auf jeden Fall vorher eine Sicherung machen, falls das Update beim Übernehmen der Daten fehlschlägt.  
 
 
 ![Browser Upgrade](/media/router_beryl/browser_beryl_upgrade.png)
@@ -111,16 +111,13 @@ Vor der Installation hat man die Möglichkeit auszuwählen 'Einstellungen beibeh
 > TIPP: Ich habe ein Notebook für solche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden.  
 > Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer 'goodlife'. Bei anderen Modellen ist die SSID ähnlich aufgebaut: GL-[Modellnummer]-[Letzten 3 Zeichen der MAC].  
 
-~~Ich hatte beim Verbinden zum Firmennetzwerk nach dem Klick auf 'Scan' oder 'Join' oft einen WLAN Abbuch. Nach mehrfachen Klicken hat es irgendwann geklappt und oben im Browserfenster wurde 'Success' eingeblendet, danach lief alles wie erwartet. Das Android Tablet und Telefon hat bei den nicht funktioniernden Versuchen immer für 1-3 Minuten die WLAN-Verbindung verloren. Vielleicht geht das mit der App besser, ich werde es testen.~~ (Update: Auf oben gennten Bug zurückzuführen, mit älterer Firmware funktioniert alles.)
-
-
 ### Einrichtung (WLAN zu WLAN)
 
 Nach dem grundlegenden Einrichten bekam das Gerät im Menü links unter **Internet** die Zugangsdaten zu meinem Heim-WLAN. Fertig.
 
 ![Browser Internet](/media/router_beryl/browser_beryl_internet.png)
 
-Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich zunächst WLAN auf WLAN haben möchte.  
+Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich meist WLAN auf WLAN haben möchte.  
 Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durchsatz. Reichweite benötige ich auf 2,33mx7,40m nicht, aber draussen. Wenn ich innen und außen auf jeweils einem anderen Band funke, sorge ich gleichzeitig für weniger Störungen untereinander.  
 
 
@@ -130,9 +127,9 @@ Im Menupunkt **Internet** ist die Option **Tethering** ausgegraut.
 Wenn ein Android Telefon an ein System angeschlossen wird, dann steht im Drop-Down (vom oberen Bildschirmrand nach unten ziehen) 'Android-System - Gerät wird über USB aufgeladen / Für weitere Optionen tippen)', tippe ich da drauf komm eich in 'USB-Einstellungen' und kann 'USB-Tethering' (neben z.B. 'Dateiübertragung') auswählen. Ab sofort kann ich **Tethering** in der Box auswählen.  
 USB-Tethering bedeutet, dass das Mobiltelefon die vorhandene Internetverbindung über den USB Port zur Verfügung stellt. Dabei interessiert dem Gerät am USB Port nicht ob es sich um eine WLAN oder Mobilfunkverbindung handelt. Sollte ich also ein Mobiltelefon mit sehr guter WLAN-Antenne besitzen, kann ich sogar ganz auf ein WLAN Modul im Router verzichten. Dabei gilt aber zu beachten, dass in dem Fall auch immer 2 Geräte mit Strom versorgt werden müssen.  
 
-In unserem Fall hat meine Frau ihr altes [Sony Xperia Z3 Compact](https://de.wikipedia.org/wiki/Sony_Xperia_Z3_Compact) zur Verfügung gestellt. Wir haben bei O2 eine Datenkarte zu ihrem Vertrag bestellt, da sie Europaweit 120GB LTE Datenvolumen pro Monat hat.  
+In unserem Fall hat meine Frau ihr altes [Sony Xperia Z3 Compact](https://de.wikipedia.org/wiki/Sony_Xperia_Z3_Compact) zur Verfügung gestellt. Wir haben bei O2 eine Datenkarte zu ihrem Vertrag bestellt, da sie Europaweit 120GB LTE Datenvolumen pro Monat hat, ohne Telefonie.  
 
-Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt es sich aber die PIN der Datenkarte zu deaktivieren. Da ich nur einen 3G Stick (Huawai E1750) mit anderer SIM-Größe hier habe, habe ich es noch nicht getestet.  
+Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt es sich bei den meisten Systemen die PIN der Datenkarte zu deaktivieren. Da ich nur einen 3G Stick (Huawai E1750) mit anderer SIM-Größe hier habe, habe ich es noch nicht getestet.  
 
 ---
 
@@ -141,6 +138,7 @@ Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt e
 
 Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Die Oberfläche benutzt einiges an Scripting, das bedeutet auf alternativen (LineageOS) oder sehr eingeschränkten (NoScript Plugin) Browsern muss gelegentlich per Hand nachgeladen werden. Generell funktioniert aber alles.  
 Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.  
+
 Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuelle Images, für den Beryl aktuell die Version 21.  
 https://openwrt.org/toh/views/toh_tfdownload <- suchen nach 'Brand = gl.inet'  
 
@@ -158,21 +156,19 @@ Dazu auf [http://192.168.8.1/cgi-bin/luci](http://192.168.8.1/cgi-bin/luci) gehe
 
 ![Browser LuCI](/media/router_beryl/browser_beryl_luci_overview.png)
 
-### Länderkonfiguration (Kanäle)
+### Länderkonfiguration
 
 Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. man merkt es kaum, die offensichtlichste Auswirkung sind die erlaubten WLAN Kanäle im 2,4GHz Band: 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefunden wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.  
 
-Um das Problem zu beheben loggt man sich per SSH auf die Box ein. Unter Windows per **PuTTY** oder unter Linux/Mac mit **ssh** aus dem 'OpenSSH' Paket. Erlaubt ist nur ssh-rsa als Algorithmus. Daher gibt man auf der Console den folgenden Befehl ein:
+Um das Problem zu beheben loggt man sich per SSH auf die Box ein. Unter Windows per `PuTTY` oder unter Linux/Mac mit `ssh` aus dem 'OpenSSH' Paket. Erlaubt ist nur ssh-rsa als Algorithmus. Daher gibt man auf der Konsole den folgenden Befehl ein:  
 `ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1`  
-
-... als Passwort gibt man das im ersten Schritt gesetzte ein. Dann bearbeitet man die Konfigurationsdatei mit `vim /etc/config/wireless`
+... als Passwort gibt man das im ersten Schritt gesetzte ein. Dann bearbeitet man die Konfigurationsdatei mit `vim /etc/config/wireless`  
 
 Mit der Taste `[i]` kommt man in den editier-Modus.  
-~~... indem 2x die Zeile **option Country 'CN'** mit **option Country 'DE'** ersetzt wird.  
-Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) **option region '1'** (von 0) und **option aregion '1'** gesetzt um den Europäischen Regularien gerecht zu werden.~~  
-**Update**: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein **option Country** mehr. Im Block mit **option Band '5g'** den Eintrag **option region '1'** setzen (zuvor 10). Im Block mit **option Band '2g'** kontrollieren **option region '1'**. [Details zu den Werten](https://blog.csdn.net/linbounconstraint/article/details/80899321) und [Wikipedia List of WLAN channels](https://en.wikipedia.org/wiki/List_of_WLAN_channels)  
-Aus dem Editor kommt Ihr mit der Tastenfolge: `[Esc][:][x][Enter]`. Es gibt auch die Variante `[:][w][q]` (write quit), das kommt auf das selbe hinaus.  
-Nach einem Neustart des Routers werden die neuen Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/... geschrieben.
+Firmware 3.203: 2x die Zeile **option Country 'CN'** mit **option Country 'DE'** ersetzen. Zusätzlich in beiden Blöcken (2,4GHz und 5GHz) **option region '1'** (von 0) und **option aregion '1'** setzen um den Europäischen Regularien gerecht zu werden.  
+Firmware 3.211: Im Block mit **option Band '5g'** den Eintrag auf **option region '1'** setzen (zuvor 10). Im Block **option Band '2g'** kontrollieren, dass **option region '1'** gesetzt ist.  
+[Details zu den Werten](https://blog.csdn.net/linbounconstraint/article/details/80899321) und [Wikipedia List of WLAN channels](https://en.wikipedia.org/wiki/List_of_WLAN_channels)  
+Aus dem Editor (vim) kommt Ihr mit der Tastenfolge: `[Esc][:][x][Enter]`. Es gibt auch die Variante `[:][w][q]` (write quit), das kommt auf das selbe hinaus. Nach einem Neustart des Routers werden die neuen Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/... geschrieben.
 
 > TIPP: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal (kein Scherz)!  
 Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenne investieren.  

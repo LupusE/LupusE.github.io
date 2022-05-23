@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-22T20:46:02+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://www.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-05-23T19:36:10+00:00</updated><id>http://www.lupuse.org/feed.xml</id><title type="html">LupusE WebLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h2 id=&quot;tldr&quot;&gt;tl;dr&lt;/h2&gt;
 
 &lt;p&gt;Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.&lt;/p&gt;
 &lt;ol&gt;
@@ -12,12 +12,14 @@
 &lt;p&gt;Dabei gibt es folgende Wege für das Internet:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Kabel an den Netzwerkport WAN anschliessen. Am einfachsten, gut zum ersten Einrichten, aber selten sinnvoll beim Camping.&lt;/li&gt;
-  &lt;li&gt;WLAN Bridge. Unter &lt;em&gt;Repeater&lt;/em&gt; den Button &lt;em&gt;Scan&lt;/em&gt; klicken, das entsprechende WLAN auswählen, das Passwort eingeben und &lt;em&gt;Join&lt;/em&gt; klicken. (siehe ‘Tipp’). Das Mittel der Wahl auf dem Campinglplatz, in Kombination mit VPN auch für öffentliche WLAN.&lt;/li&gt;
+  &lt;li&gt;WLAN Bridge. Unter &lt;strong&gt;Internet&lt;/strong&gt; &lt;strong&gt;Repeater&lt;/strong&gt; den Button &lt;strong&gt;Scan&lt;/strong&gt; klicken, das entsprechende WLAN auswählen, das Passwort eingeben und &lt;strong&gt;Join&lt;/strong&gt;/Beitreten klicken. (siehe ‘Tipp’). Das Mittel der Wahl auf dem Campinglplatz, in Kombination mit VPN auch für öffentliche WLAN.&lt;/li&gt;
   &lt;li&gt;USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen, am Telefon/Tablet ‘Tethering’ freigeben. Für alle Fans des 100% autarken Camping.&lt;/li&gt;
   &lt;li&gt;USB-Modem. Noch nicht getestet.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Tipp: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, welche unter Umständen das Verbinden zu WLAN mit Key verhindert An diesem &lt;a href=&quot;https://forum.gl-inet.com/t/20556&quot;&gt;arbeitet Gl.iNet anscheinend gerade&lt;/a&gt;, und vermutlich ist es in der aktuellsten Beta behoben. Zum Anderen scheint es ein nicht näher beschriebenes &lt;a href=&quot;https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/37&quot;&gt;Problem mit Fritz!Boxen&lt;/a&gt; zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;TIPP: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, welche unter Umständen das Verbinden zu WLAN mit Key verhindert An diesem &lt;a href=&quot;https://forum.gl-inet.com/t/20556&quot;&gt;arbeitet Gl.iNet anscheinend gerade&lt;/a&gt;, und vermutlich ist es in der aktuellsten Beta behoben. Zum Anderen scheint es ein nicht näher beschriebenes &lt;a href=&quot;https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/37&quot;&gt;Problem mit Fritz!Boxen&lt;/a&gt; zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;hr /&gt;
 
@@ -36,7 +38,7 @@
 
 &lt;h2 id=&quot;recherche&quot;&gt;Recherche&lt;/h2&gt;
 
-&lt;p&gt;Vor einigen Wochen habe ich einen Microrouter der Firma &lt;a href=&quot;https://www.gl-inet.com/&quot;&gt;Gl.iNet&lt;/a&gt; gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt eine sogenante ‘Bridge’, übersetzt also ein gegebenes Netzwerk in ein eigenes. Wie das Internet zuhause mit ienem Router in das Heimnetzwerk gewandelt wird. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen. Zu kompliziert? Kurz: Ich kann alles in mein eigenes WLAN übersetzen.&lt;br /&gt;
+&lt;p&gt;Vor einigen Wochen habe ich einen Microrouter der Firma &lt;a href=&quot;https://www.gl-inet.com/&quot;&gt;Gl.iNet&lt;/a&gt; gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt eine sogenante ‘Bridge’, übersetzt also ein gegebenes Netzwerk in ein eigenes (Network Adress Translation/NAT). Wie das Internet zuhause mit einem Router in das Heimnetzwerk gewandelt wird. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen. Zu kompliziert? Kurz: Ich kann alles in mein eigenes WLAN übersetzen.&lt;br /&gt;
 Interessant für uns Camper: Durch mehrere Antennen kann ich mit geringem Verlust ein externes WLAN (Campingplatz) aufnehmen und daraus ein eigenes lokales WLAN für alle Geräte in der Nähe bereitstellen. Für das Wohnzimmer auf Rädern also perfekt. Durch tauschbaren Antennen könnte ich, ohne die Leistung physikalisch zu ändern, vollkommen legal mehr Reichweite durch Richtwirkung erhalten.&lt;br /&gt;
 Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt, dazu in einem späteren Artikel mehr.&lt;/p&gt;
 
@@ -159,32 +161,32 @@ Tethering = Mobilfunk oder WLAN vom Mobiltelefon/Tablet weitergeleitet. Meist ü
 &lt;p&gt;Die Ersteinrichtung war super einfach:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Auspacken, Strom dran, LAN an Laptop, warten bis die LED dauerhaft leuchtet&lt;/li&gt;
-  &lt;li&gt;Browser öffnen und auf http://192.168.8.1 gehen&lt;/li&gt;
+  &lt;li&gt;Browser öffnen und auf &lt;a href=&quot;http://192.168.8.1&quot;&gt;http://192.168.8.1&lt;/a&gt; gehen&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Beim ersten Login Sprache einstellen und Adminpasswort vergeben&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;In der Weboberfläche auf &lt;strong&gt;Wireless&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;In der Weboberfläche auf &lt;strong&gt;Wireless&lt;/strong&gt;/Kabellos&lt;/li&gt;
   &lt;li&gt;Zuerst habe ich das WLAN umbenannt (SSID) in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
     &lt;ul&gt;
       &lt;li&gt;Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden. Das geht nur nicht zum lokalen Testen.&lt;/li&gt;
-      &lt;li&gt;Auf gar keinen Fall die Standardeinstellungen lassen. Wer als SSID ‘GL-‘ liesst, wird gleich das Kennwort ‘goodlife’ versuchen. Wer nur die SSID umbenennt, könnte anhand der MAC Adresse als Goodlife Gerät identifiziert werden.
+      &lt;li&gt;Auf gar keinen Fall die Standardeinstellungen lassen. Wer als SSID ‘GL-…’ sieht, wird gleich das Kennwort ‘goodlife’ versuchen. Wer nur die SSID umbenennt, könnte anhand der MAC Adresse als Goodlife Gerät identifiziert werden.
 &lt;img src=&quot;/media/router_beryl/browser_beryl_wireless.png&quot; alt=&quot;Browser Wireless&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Wer plant eine Fritz!Box einzusetzen, NICHT upgraden! Es gibt einen nicht näher beschriebenen Bug in der aktuellen Firmware. Gl.iNet arbeitet wohl dran. Leider ist genau dieser Teil der Software (Netzwerktreiber) Closed Source. Aber die Gute Nachricht: Bis Firmware 3.203 funktioniert es. &lt;a href=&quot;https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/34&quot;&gt;Quelle&lt;/a&gt;&lt;br /&gt;
-Siehe da, ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links &lt;strong&gt;Upgrade&lt;/strong&gt; hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.&lt;br /&gt;
-&lt;del&gt;Danach ging kein Remote-WLAN mehr… Ich habe vorerst ein Downgrade (3.203) durchgeführt, es könnte mehrere Gründe (auch mein verschulden) haben.&lt;/del&gt;&lt;/p&gt;
+Ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links &lt;strong&gt;Upgrade&lt;/strong&gt;/Aktualisierung hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.&lt;br /&gt;
+Möchte man ein Downgrade (Letzte Version installieren), dann geht das nicht automatisch, aber auch einfach: Das Image von der Webseite herunteladen und im nächsten Reiter (Local Upgrade/lokale Aktualisierung) auf den Router hochladen, der Rest ist gleich.&lt;/p&gt;
 
-&lt;p&gt;Vor der Installation hat man die Möglichkeit auszuwählen ‘Einstellungen beibehalten’. Aktuell wähle ich diese Option immer ab, da mit einem Firmwareupdate neue und verbesserte Funktionen und unter Umständen auch neue Konfigurationen kommen. Wenn der Router ein paar Monate läuft und einige individuelle Konfigurationen vorgenommen wurden, dann kann man die Einstellung übernehmen, sollte aber darauf achten dass der Versionssprung nicht zu gross wird.&lt;/p&gt;
+&lt;p&gt;Vor der Installation hat man die Möglichkeit auszuwählen ‘Keep Settings’/Einstellungen beibehalten und ‘Keep installed Packages’/Installierte Pakete behalten. Aktuell wähle ich diese Optionen immer ab, da mit einem Firmwareupdate neue und verbesserte Funktionen und unter Umständen auch geänderte Konfigurationen kommen. Wenn der Router ein paar Monate läuft und einige individuelle Konfigurationen vorgenommen wurden, dann kann man die Einstellung übernehmen, sollte aber darauf achten dass der Versionssprung nicht zu gross wird. Auf jeden Fall vorher eine Sicherung machen, falls das Update beim Übernehmen der Daten fehlschlägt.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/media/router_beryl/browser_beryl_upgrade.png&quot; alt=&quot;Browser Upgrade&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Tipp&lt;/strong&gt;: Ich habe ein Notebook für solche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden.&lt;br /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;TIPP: Ich habe ein Notebook für solche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden.&lt;br /&gt;
 Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer ‘goodlife’. Bei anderen Modellen ist die SSID ähnlich aufgebaut: GL-[Modellnummer]-[Letzten 3 Zeichen der MAC].&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;Ich hatte beim Verbinden zum Firmennetzwerk nach dem Klick auf ‘Scan’ oder ‘Join’ oft einen WLAN Abbuch. Nach mehrfachen Klicken hat es irgendwann geklappt und oben im Browserfenster wurde ‘Success’ eingeblendet, danach lief alles wie erwartet. Das Android Tablet und Telefon hat bei den nicht funktioniernden Versuchen immer für 1-3 Minuten die WLAN-Verbindung verloren. Vielleicht geht das mit der App besser, ich werde es testen.&lt;/del&gt; (Update: Auf oben gennten Bug zurückzuführen, mit älterer Firmware funktioniert alles.)&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;einrichtung-wlan-zu-wlan&quot;&gt;Einrichtung (WLAN zu WLAN)&lt;/h3&gt;
 
@@ -192,7 +194,7 @@ Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder
 
 &lt;p&gt;&lt;img src=&quot;/media/router_beryl/browser_beryl_internet.png&quot; alt=&quot;Browser Internet&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich zunächst WLAN auf WLAN haben möchte.&lt;br /&gt;
+&lt;p&gt;Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich meist WLAN auf WLAN haben möchte.&lt;br /&gt;
 Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durchsatz. Reichweite benötige ich auf 2,33mx7,40m nicht, aber draussen. Wenn ich innen und außen auf jeweils einem anderen Band funke, sorge ich gleichzeitig für weniger Störungen untereinander.&lt;/p&gt;
 
 &lt;h3 id=&quot;feintuning-tethering&quot;&gt;Feintuning (Tethering)&lt;/h3&gt;
@@ -201,16 +203,18 @@ Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durch
 Wenn ein Android Telefon an ein System angeschlossen wird, dann steht im Drop-Down (vom oberen Bildschirmrand nach unten ziehen) ‘Android-System - Gerät wird über USB aufgeladen / Für weitere Optionen tippen)’, tippe ich da drauf komm eich in ‘USB-Einstellungen’ und kann ‘USB-Tethering’ (neben z.B. ‘Dateiübertragung’) auswählen. Ab sofort kann ich &lt;strong&gt;Tethering&lt;/strong&gt; in der Box auswählen.&lt;br /&gt;
 USB-Tethering bedeutet, dass das Mobiltelefon die vorhandene Internetverbindung über den USB Port zur Verfügung stellt. Dabei interessiert dem Gerät am USB Port nicht ob es sich um eine WLAN oder Mobilfunkverbindung handelt. Sollte ich also ein Mobiltelefon mit sehr guter WLAN-Antenne besitzen, kann ich sogar ganz auf ein WLAN Modul im Router verzichten. Dabei gilt aber zu beachten, dass in dem Fall auch immer 2 Geräte mit Strom versorgt werden müssen.&lt;/p&gt;
 
-&lt;p&gt;In unserem Fall hat meine Frau ihr altes &lt;a href=&quot;https://de.wikipedia.org/wiki/Sony_Xperia_Z3_Compact&quot;&gt;Sony Xperia Z3 Compact&lt;/a&gt; zur Verfügung gestellt. Wir haben bei O2 eine Datenkarte zu ihrem Vertrag bestellt, da sie Europaweit 120GB LTE Datenvolumen pro Monat hat.&lt;/p&gt;
+&lt;p&gt;In unserem Fall hat meine Frau ihr altes &lt;a href=&quot;https://de.wikipedia.org/wiki/Sony_Xperia_Z3_Compact&quot;&gt;Sony Xperia Z3 Compact&lt;/a&gt; zur Verfügung gestellt. Wir haben bei O2 eine Datenkarte zu ihrem Vertrag bestellt, da sie Europaweit 120GB LTE Datenvolumen pro Monat hat, ohne Telefonie.&lt;/p&gt;
 
-&lt;p&gt;Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt es sich aber die PIN der Datenkarte zu deaktivieren. Da ich nur einen 3G Stick (Huawai E1750) mit anderer SIM-Größe hier habe, habe ich es noch nicht getestet.&lt;/p&gt;
+&lt;p&gt;Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt es sich bei den meisten Systemen die PIN der Datenkarte zu deaktivieren. Da ich nur einen 3G Stick (Huawai E1750) mit anderer SIM-Größe hier habe, habe ich es noch nicht getestet.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;technisch&quot;&gt;Technisch&lt;/h2&gt;
 
-&lt;p&gt;Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.&lt;br /&gt;
-Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuelle Images, für den Beryl aktuell die Version 21.&lt;br /&gt;
+&lt;p&gt;Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Die Oberfläche benutzt einiges an Scripting, das bedeutet auf alternativen (LineageOS) oder sehr eingeschränkten (NoScript Plugin) Browsern muss gelegentlich per Hand nachgeladen werden. Generell funktioniert aber alles.&lt;br /&gt;
+Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.&lt;/p&gt;
+
+&lt;p&gt;Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuelle Images, für den Beryl aktuell die Version 21.&lt;br /&gt;
 https://openwrt.org/toh/views/toh_tfdownload &amp;lt;- suchen nach ‘Brand = gl.inet’&lt;/p&gt;
 
 &lt;p&gt;Alle Weboberflächen nutzen http anstatt https. Da wir mit einem Microcomputer arbeiten und das ausschliesslich im privaten LAN konfigurieren, verzichtet man auf den Overhead der Verschlüsselung und einer unschönen Sicherheitswarnung im Browser.&lt;/p&gt;
@@ -220,39 +224,31 @@ https://openwrt.org/toh/views/toh_tfdownload &amp;lt;- suchen nach ‘Brand = gl
 &lt;p&gt;&lt;a href=&quot;https://openwrt.org&quot;&gt;OpenWRT&lt;/a&gt; ist ein offenes Routerbetriebssystem auf Linux Basis, mit dem Paketmanager &lt;strong&gt;opkg&lt;/strong&gt;.&lt;br /&gt;
 Da bestimmt 95% der im Alltag vorkommenden Konfigurationen über die LuCI Weboberfläche erledigt werden können, ist dieses System für den ambitionierten Anwender nicht schwieriger zu benutzen als eine AVM Fritz!Box.&lt;br /&gt;
 Die Standardanwendungen sind gut auf deutsch übersetzt, ich benutze es auf Englisch.&lt;/p&gt;
-
 &lt;h3 id=&quot;luci-web-ui&quot;&gt;LuCI Web UI&lt;/h3&gt;
 
 &lt;p&gt;Die Gl.iNet Weboberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.&lt;br /&gt;
-Dazu einfach unter http://192.168.8.1 im Menü ganz unten auf &lt;strong&gt;More Settings&lt;/strong&gt; den unterpunkt &lt;strong&gt;Advanced&lt;/strong&gt; auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dem Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.&lt;/p&gt;
+Dazu auf &lt;a href=&quot;http://192.168.8.1/cgi-bin/luci&quot;&gt;http://192.168.8.1/cgi-bin/luci&lt;/a&gt; gehen, oder im Menü ganz unten auf &lt;strong&gt;More Settings&lt;/strong&gt; den unterpunkt &lt;strong&gt;Advanced&lt;/strong&gt; auswählen. Wenn die Oberfläche nicht installiert ist, kann sie mit dem Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/media/router_beryl/browser_beryl_luci_overview.png&quot; alt=&quot;Browser LuCI&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;länderkonfiguration-kanäle&quot;&gt;Länderkonfiguration (Kanäle)&lt;/h3&gt;
+&lt;h3 id=&quot;länderkonfiguration&quot;&gt;Länderkonfiguration&lt;/h3&gt;
 
 &lt;p&gt;Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. man merkt es kaum, die offensichtlichste Auswirkung sind die erlaubten WLAN Kanäle im 2,4GHz Band: 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefunden wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.&lt;/p&gt;
 
-&lt;p&gt;Um das Problem zu beheben loggt man sich per SSH auf die Box ein. Unter Windows per &lt;strong&gt;PuTTY&lt;/strong&gt; oder unter Linux/Mac mit &lt;strong&gt;ssh&lt;/strong&gt; aus dem ‘OpenSSH’ Paket. Erlaubt ist nur ssh-rsa als Algorithmus. Daher gibt man auf der Console den folgenden Befehl ein:&lt;/p&gt;
+&lt;p&gt;Um das Problem zu beheben loggt man sich per SSH auf die Box ein. Unter Windows per &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PuTTY&lt;/code&gt; oder unter Linux/Mac mit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh&lt;/code&gt; aus dem ‘OpenSSH’ Paket. Erlaubt ist nur ssh-rsa als Algorithmus. Daher gibt man auf der Konsole den folgenden Befehl ein:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1&lt;/code&gt;&lt;br /&gt;
+… als Passwort gibt man das im ersten Schritt gesetzte ein. Dann bearbeitet man die Konfigurationsdatei mit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim /etc/config/wireless&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Mit der Taste &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[i]&lt;/code&gt; kommt man in den editier-Modus.&lt;br /&gt;
+Firmware 3.203: 2x die Zeile &lt;strong&gt;option Country ‘CN’&lt;/strong&gt; mit &lt;strong&gt;option Country ‘DE’&lt;/strong&gt; ersetzen. Zusätzlich in beiden Blöcken (2,4GHz und 5GHz) &lt;strong&gt;option region ‘1’&lt;/strong&gt; (von 0) und &lt;strong&gt;option aregion ‘1’&lt;/strong&gt; setzen um den Europäischen Regularien gerecht zu werden.&lt;br /&gt;
+Firmware 3.211: Im Block mit &lt;strong&gt;option Band ‘5g’&lt;/strong&gt; den Eintrag auf &lt;strong&gt;option region ‘1’&lt;/strong&gt; setzen (zuvor 10). Im Block &lt;strong&gt;option Band ‘2g’&lt;/strong&gt; kontrollieren, dass &lt;strong&gt;option region ‘1’&lt;/strong&gt; gesetzt ist.&lt;br /&gt;
+&lt;a href=&quot;https://blog.csdn.net/linbounconstraint/article/details/80899321&quot;&gt;Details zu den Werten&lt;/a&gt; und &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_WLAN_channels&quot;&gt;Wikipedia List of WLAN channels&lt;/a&gt;&lt;br /&gt;
+Aus dem Editor (vim) kommt Ihr mit der Tastenfolge: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Esc][:][x][Enter]&lt;/code&gt;. Es gibt auch die Variante &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[:][w][q]&lt;/code&gt; (write quit), das kommt auf das selbe hinaus. Nach einem Neustart des Routers werden die neuen Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/… geschrieben.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;… als Passwort gibt man das im ersten Schritt gesetzte ein. Dann bearbeitet man die Konfigurationsdatei …&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;vim /etc/config/wireless&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Mit der Taste [i] kommt man in den editier-Modus.&lt;br /&gt;
-&lt;del&gt;… indem 2x die Zeile &lt;strong&gt;option Country ‘CN’&lt;/strong&gt; mit &lt;strong&gt;option Country ‘DE’&lt;/strong&gt; ersetzt wird.&lt;br /&gt;
-Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) &lt;strong&gt;option region ‘1’&lt;/strong&gt; (von 0) und &lt;strong&gt;option aregion ‘1’&lt;/strong&gt; gesetzt um den Europäischen Regularien gerecht zu werden.&lt;/del&gt;&lt;br /&gt;
-&lt;strong&gt;Update&lt;/strong&gt;: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein &lt;strong&gt;option Country&lt;/strong&gt; mehr. Im Block mit &lt;strong&gt;option Band ‘5g’&lt;/strong&gt; den Eintrag &lt;strong&gt;option region ‘1’&lt;/strong&gt; setzen (zuvor 10). Im Block mit &lt;strong&gt;option Band ‘2g’&lt;/strong&gt; kontrollieren &lt;strong&gt;option region ‘1’&lt;/strong&gt;. &lt;a href=&quot;https://blog.csdn.net/linbounconstraint/article/details/80899321&quot;&gt;Details zu den Werten&lt;/a&gt; und &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_WLAN_channels&quot;&gt;Wikipedia List of WLAN channels&lt;/a&gt;&lt;br /&gt;
-Aus dem Editor kommt Ihr mit der Tastenfolge: [Esc][:][x][Enter]. Es gibt auch die Variante [:][w][q] (write quit), das kommt auf das selbe hinaus.&lt;br /&gt;
-Nach einem Neustart des Routers werden die neuen Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/… geschrieben.&lt;/p&gt;
-
-&lt;p&gt;Tipp: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal (kein Scherz)!&lt;br /&gt;
+  &lt;p&gt;TIPP: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal (kein Scherz)!&lt;br /&gt;
 Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenne investieren.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;glinet-app&quot;&gt;glinet App&lt;/h3&gt;
 
@@ -262,40 +258,37 @@ Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöne
 &lt;p&gt;Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel per QR-Code in der App einrichten. Alternativ kann ich die Konfigurationsdatei auch in den entsprechenden Browser Dialog ziehen oder alles manuell eintippen, bequemer ist aber die App.&lt;/p&gt;
 
 &lt;p&gt;Insgesamt reagiert die App schnell und ist übersichtlich. Es gibt keinen Grund die Arbeit nicht damit zu vereinfachen. Es muss nur zum Start die Cloud ignoriert werden. Alles funktioniert super auch ohne diese.&lt;br /&gt;
-Auf der ersten Seite finden sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren Seiten zu kommen.&lt;br /&gt;
-Gl.iNet App Mit VPN Aus oder ein. Der Klick auf das Symbol überschreibt die Einstellung des Hardware-Schalter.&lt;br /&gt;
+Auf der ersten Seite finden sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren Seiten zu kommen.&lt;/p&gt;
+
+&lt;p&gt;Gl.iNet App Mit VPN aus oder ein. Der Klick auf das Symbol überschreibt die Einstellung des Hardware-Schalter.&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/N7glinet_app-1_home_VPNoff.png&quot; alt=&quot;Gl.iNetApp Home VPN Off&quot; /&gt; &lt;img src=&quot;/media/router_beryl/N7glinet_app-2_home_VPNon.png&quot; alt=&quot;Gl.iNetApp Home VPN On&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Die zweite Seite bietet alle Möglichkeiten in das Internet zu kommen, sehr ähnlich der Weboberfläche. Dei dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu blocken.&lt;br /&gt;
-Einn Übersicht der möglichen Internetzugänge und der Clients im lokalen Netzwerk.&lt;br /&gt;
+&lt;p&gt;Die zweite Seite bietet alle Möglichkeiten in das Internet zu kommen, sehr ähnlich der Weboberfläche. Die dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu blocken oder ‘als Favoriten’ zu markieren.&lt;/p&gt;
+
+&lt;p&gt;Eine Übersicht der möglichen Internetzugänge und der Clients im lokalen Netzwerk.&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/N7glinet_app-3_network.png&quot; alt=&quot;Gl.iNetApp Network&quot; /&gt; &lt;img src=&quot;/media/router_beryl/N7glinet_app-4_clients.png&quot; alt=&quot;Gl.iNetApp Clients&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Das letzte Fenster bietet einen Schnellzugriff auf einige Feineinstellungen, das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.&lt;br /&gt;
+&lt;p&gt;Das letzte Fenster bietet einen Schnellzugriff auf einige Systemeinstellungen. Das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/N7glinet_app-5_system.png&quot; alt=&quot;Gl.iNetApp Network&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;vpn-wireguard&quot;&gt;VPN (WireGuard)&lt;/h3&gt;
-&lt;p&gt;Wer nach dem Lesen dieses Absatz weniger versteht als vorher, der sollte diesen Punkt einfach überspringen.&lt;/p&gt;
+&lt;h3 id=&quot;vpn&quot;&gt;VPN&lt;/h3&gt;
+&lt;p&gt;Vorweg: Wer nach dem Lesen dieses Absatz weniger versteht als vorher, dieser Abschnitt ist wichtig für die Privatsphäre, nicht für die grundlegende Funktion. Wenn ich zuvor einfach jedes Gerät in das Campingplatz WLAN angemeldet habe, dann macht es jetzt auch keinen Unterschied.&lt;/p&gt;
 
-&lt;p&gt;Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit die Zähne an IPSec und OpenVPN ausgebissen habe, habe ich diese Runde an WireGuard vergeben.&lt;br /&gt;
-WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen auszeichen soll. Dabei kommen in der Voreinstellung modernste Crypto Standards zum Einsatz, welche nach heutigem Wissen als als sicher gelten.&lt;br /&gt;
-Bei mir Zuhause laufen 2 Proxmox Host, als Virtualisierungslösung verschiedenster Dienste.&lt;br /&gt;
-Schnell ist ein neuer Container (LXC/Ubuntu) erstellt: 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein unpriviligierter Container ist ausreichend.&lt;/p&gt;
+&lt;p&gt;Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit die Zähne an IPSec und OpenVPN ausgebissen habe, habe ich diese Runde an &lt;strong&gt;WireGuard&lt;/strong&gt; vergeben.&lt;br /&gt;
+WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen (mehr Netzwerkgeschwindigkeit) auszeichen soll. Dabei kommen modernste Crypto Standards zum Einsatz, welche nach heutigem Stand als als sicher gelten.&lt;br /&gt;
+Bei mir Zuhause laufen 2 Proxmox Host, als Virtualisierungslösung verschiedenster Dienste. Schnell ist ein neuer Container (LXC/Ubuntu) erstellt: [x] 8GB HDD, [x] 512MB RAM, [x] 1 CPU Kern und eine [x] Netzwerkkarte mit Internetzugriff. Ein unpriviligierter Container ist ausreichend.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;root@walter:~# wget git.io/wireguard -O wireguard-install.sh &amp;amp;&amp;amp; bash wireguard-install.sh&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Ich bin kein Fan davon Services per Script aus dem Internet auszuführen. Aber für den Test genügt es, ich habe mir das Script vor dme Ausführen natürlich angesehen. Das finale Produkt wird aus den Debian Bullseye Repository installiert. Das Script hat den weiteren Vorteil, dass es erneut ausgeführt werden kann, um weitere VPN Clients hinzuzufügen.&lt;br /&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root@walter:~# wget git.io/wireguard -O wireguard-install.sh &amp;amp;&amp;amp; bash wireguard-install.sh&lt;/code&gt;&lt;br /&gt;
+Ich bin kein Fan davon Services per Script aus dem Internet auszuführen. Aber für den Test genügt es, ich habe mir das Script vor dme Ausführen natürlich angesehen. Das finale Produkt wird aus den Debian Bullseye Repository installiert. Das Script hat den weiteren Vorteil, dass es erneut ausgeführt werden kann, um weitere VPN Clients hinzuzufügen.&lt;br /&gt;
 Der Befehl &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash wireguard-install.sh&lt;/code&gt; stellt ein paar Fragen. Als erstes den Namen der neu angelegten Verbindung, dann ein paar Details zu Hostname (Server), Port (Server) und so weiter. Der Name ist wichtig, da so nachher die Datei im aktuellen Verzeichniss heisst. Das Einrichten eines weltweit verfügbaren Hostnamen oder die Portweiterleitung (Standard: 51820/UDP) würde hier den Rahmen sprengen, dafür gibt es bessere Tutorials.&lt;br /&gt;
 Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefon scannen kann. Die glinet App bietet das Einrichten der VPN Verbindung via QR Code. Das funktioniert sehr gut.&lt;/p&gt;
 
-&lt;p&gt;Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerichtet, musste ich den Code erneut generieren, mittels:&lt;/p&gt;
+&lt;p&gt;Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerichtet, musste ich den Code erneut generieren, mittels:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root@walter:~# qrencode -t ansiutf8 &amp;lt; beryl.conf&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;root@walter:~# qrencode -t ansiutf8 &amp;lt; beryl.conf&lt;/p&gt;
+  &lt;p&gt;TIPP: Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt, wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client in Euer VPN!&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;TIPP: Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt, wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client in Euer VPN!&lt;/p&gt;
 
 &lt;p&gt;Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Daher gibt es noch keine Testergebnisse.&lt;/p&gt;
 
@@ -337,10 +330,9 @@ Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefo
 &lt;p&gt;Es wurde an fast jeder Steckdose getestet.
 &lt;img src=&quot;/media/router_beryl/router_beryl_bad.jpg&quot; alt=&quot;Testaufbau Bad&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen, für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.&lt;br /&gt;
+&lt;p&gt;Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen (ggf. mit Geschirrtuch gegen direkte Sonneneinstrahlung), für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.&lt;br /&gt;
 Im 4-Pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V-&amp;gt;5V/3A Spannungswandler einzubauen.&lt;br /&gt;
-Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke.&lt;br /&gt;
-Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei man ein Mobiltelefon nicht in der prallen Sonne liegen lassen sollte.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">tl;dr</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
+Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">tl;dr</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://www.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
 
 &lt;p&gt;Meine Frau und ich haben uns ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4Pfoten-Mobile - Dog-Liner TE740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, &lt;a href=&quot;www.4pfoten-mobile.de/neumuenster/&quot;&gt;Jörn Zimmermann&lt;/a&gt; vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
 &lt;ul&gt;
