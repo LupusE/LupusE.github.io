@@ -24,9 +24,10 @@ Dabei gibt es folgende Wege für das Internet:
 - USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen, am Telefon/Tablet 'Tethering' freigeben. Für alle Fans des 100% autarken Camping.
 - USB-Modem. Noch nicht getestet.
 
-Tipp: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, welche unter Umständen das Verbinden zu WLAN mit Key verhindert An diesem [arbeitet Gl.iNet anscheinend gerade](https://forum.gl-inet.com/t/20556), und vermutlich ist es in der aktuellsten Beta behoben. Zum Anderen scheint es ein nicht näher beschriebenes [Problem mit Fritz!Boxen](https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/37) zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.  
+> TIPP: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, welche unter Umständen das Verbinden zu WLAN mit Key verhindert An diesem [arbeitet Gl.iNet anscheinend gerade](https://forum.gl-inet.com/t/20556), und vermutlich ist es in der aktuellsten Beta behoben. Zum Anderen scheint es ein nicht näher beschriebenes [Problem mit Fritz!Boxen](https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/37) zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.  
 
 --- 
+
 
 ## Vorgeschichte
 
@@ -107,15 +108,15 @@ Vor der Installation hat man die Möglichkeit auszuwählen 'Einstellungen beibeh
 
 ![Browser Upgrade](/media/router_beryl/browser_beryl_upgrade.png)
 
-**Tipp**: Ich habe ein Notebook für solche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden.  
-Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer 'goodlife'. Bei anderen Modellen ist die SSID ähnlich aufgebaut: GL-[Modellnummer]-[Letzten 3 Zeichen der MAC].  
+> TIPP: Ich habe ein Notebook für solche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden.  
+> Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer 'goodlife'. Bei anderen Modellen ist die SSID ähnlich aufgebaut: GL-[Modellnummer]-[Letzten 3 Zeichen der MAC].  
 
 ~~Ich hatte beim Verbinden zum Firmennetzwerk nach dem Klick auf 'Scan' oder 'Join' oft einen WLAN Abbuch. Nach mehrfachen Klicken hat es irgendwann geklappt und oben im Browserfenster wurde 'Success' eingeblendet, danach lief alles wie erwartet. Das Android Tablet und Telefon hat bei den nicht funktioniernden Versuchen immer für 1-3 Minuten die WLAN-Verbindung verloren. Vielleicht geht das mit der App besser, ich werde es testen.~~ (Update: Auf oben gennten Bug zurückzuführen, mit älterer Firmware funktioniert alles.)
 
 
 ### Einrichtung (WLAN zu WLAN)
 
- Nach dem grundlegenden Einrichten bekam das Gerät im Menü links unter **Internet** die Zugangsdaten zu meinem Heim-WLAN. Fertig.
+Nach dem grundlegenden Einrichten bekam das Gerät im Menü links unter **Internet** die Zugangsdaten zu meinem Heim-WLAN. Fertig.
 
 ![Browser Internet](/media/router_beryl/browser_beryl_internet.png)
 
@@ -135,9 +136,11 @@ Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt e
 
 ---
 
+
 ## Technisch
 
-Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.  
+Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Die Oberfläche benutzt einiges an Scripting, das bedeutet auf alternativen (LineageOS) oder sehr eingeschränkten (NoScript Plugin) Browsern muss gelegentlich per Hand nachgeladen werden. Generell funktioniert aber alles.  
+Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.  
 Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuelle Images, für den Beryl aktuell die Version 21.  
 https://openwrt.org/toh/views/toh_tfdownload <- suchen nach 'Brand = gl.inet'  
 
@@ -148,11 +151,10 @@ Alle Weboberflächen nutzen http anstatt https. Da wir mit einem Microcomputer a
 [OpenWRT](https://openwrt.org) ist ein offenes Routerbetriebssystem auf Linux Basis, mit dem Paketmanager **opkg**.  
 Da bestimmt 95% der im Alltag vorkommenden Konfigurationen über die LuCI Weboberfläche erledigt werden können, ist dieses System für den ambitionierten Anwender nicht schwieriger zu benutzen als eine AVM Fritz!Box.  
 Die Standardanwendungen sind gut auf deutsch übersetzt, ich benutze es auf Englisch.  
-
 ### LuCI Web UI
 
 Die Gl.iNet Weboberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.  
-Dazu einfach unter http://192.168.8.1 im Menü ganz unten auf **More Settings** den unterpunkt **Advanced** auswählen. Wenn die Oberfläche noch nicht installiert ist, kann sie mit dem Button 'Install' nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt zum aufrufen. Der Benutzer ist 'root' und das Passwort wieder das zuerst vergebene.
+Dazu auf [http://192.168.8.1/cgi-bin/luci](http://192.168.8.1/cgi-bin/luci) gehen, oder im Menü ganz unten auf **More Settings** den unterpunkt **Advanced** auswählen. Wenn die Oberfläche nicht installiert ist, kann sie mit dem Button 'Install' nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt. Der Benutzer ist 'root' und das Passwort wieder das zuerst vergebene.
 
 ![Browser LuCI](/media/router_beryl/browser_beryl_luci_overview.png)
 
@@ -161,21 +163,18 @@ Dazu einfach unter http://192.168.8.1 im Menü ganz unten auf **More Settings** 
 Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. man merkt es kaum, die offensichtlichste Auswirkung sind die erlaubten WLAN Kanäle im 2,4GHz Band: 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefunden wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.  
 
 Um das Problem zu beheben loggt man sich per SSH auf die Box ein. Unter Windows per **PuTTY** oder unter Linux/Mac mit **ssh** aus dem 'OpenSSH' Paket. Erlaubt ist nur ssh-rsa als Algorithmus. Daher gibt man auf der Console den folgenden Befehl ein:
+`ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1`  
 
-> ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1
+... als Passwort gibt man das im ersten Schritt gesetzte ein. Dann bearbeitet man die Konfigurationsdatei mit `vim /etc/config/wireless`
 
-... als Passwort gibt man das im ersten Schritt gesetzte ein. Dann bearbeitet man die Konfigurationsdatei ...
-
-> vim /etc/config/wireless
-
-Mit der Taste [i] kommt man in den editier-Modus.  
+Mit der Taste `[i]` kommt man in den editier-Modus.  
 ~~... indem 2x die Zeile **option Country 'CN'** mit **option Country 'DE'** ersetzt wird.  
 Zusätzlich habe ich in beiden Blöcken (2,4GHz und 5GHz) **option region '1'** (von 0) und **option aregion '1'** gesetzt um den Europäischen Regularien gerecht zu werden.~~  
 **Update**: In der neusten Firmware (3.211 vom 27.12.2021) gibt es kein **option Country** mehr. Im Block mit **option Band '5g'** den Eintrag **option region '1'** setzen (zuvor 10). Im Block mit **option Band '2g'** kontrollieren **option region '1'**. [Details zu den Werten](https://blog.csdn.net/linbounconstraint/article/details/80899321) und [Wikipedia List of WLAN channels](https://en.wikipedia.org/wiki/List_of_WLAN_channels)  
-Aus dem Editor kommt Ihr mit der Tastenfolge: [Esc][:][x][Enter]. Es gibt auch die Variante [:][w][q] (write quit), das kommt auf das selbe hinaus.  
+Aus dem Editor kommt Ihr mit der Tastenfolge: `[Esc][:][x][Enter]`. Es gibt auch die Variante `[:][w][q]` (write quit), das kommt auf das selbe hinaus.  
 Nach einem Neustart des Routers werden die neuen Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/... geschrieben.
 
-Tipp: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal (kein Scherz)!  
+> TIPP: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal (kein Scherz)!  
 Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenne investieren.  
 
 ### glinet App 
@@ -187,35 +186,34 @@ Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel pe
 
 Insgesamt reagiert die App schnell und ist übersichtlich. Es gibt keinen Grund die Arbeit nicht damit zu vereinfachen. Es muss nur zum Start die Cloud ignoriert werden. Alles funktioniert super auch ohne diese.  
 Auf der ersten Seite finden sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren Seiten zu kommen.  
-Gl.iNet App Mit VPN Aus oder ein. Der Klick auf das Symbol überschreibt die Einstellung des Hardware-Schalter.  
+
+Gl.iNet App Mit VPN aus oder ein. Der Klick auf das Symbol überschreibt die Einstellung des Hardware-Schalter.  
 ![Gl.iNetApp Home VPN Off](/media/router_beryl/N7glinet_app-1_home_VPNoff.png) ![Gl.iNetApp Home VPN On](/media/router_beryl/N7glinet_app-2_home_VPNon.png)  
 
-Die zweite Seite bietet alle Möglichkeiten in das Internet zu kommen, sehr ähnlich der Weboberfläche. Dei dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu blocken.  
-Einn Übersicht der möglichen Internetzugänge und der Clients im lokalen Netzwerk.  
+Die zweite Seite bietet alle Möglichkeiten in das Internet zu kommen, sehr ähnlich der Weboberfläche. Die dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu blocken oder 'als Favoriten' zu markieren.  
+
+Eine Übersicht der möglichen Internetzugänge und der Clients im lokalen Netzwerk.  
 ![Gl.iNetApp Network](/media/router_beryl/N7glinet_app-3_network.png) ![Gl.iNetApp Clients](/media/router_beryl/N7glinet_app-4_clients.png)  
 
-Das letzte Fenster bietet einen Schnellzugriff auf einige Feineinstellungen, das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.  
+Das letzte Fenster bietet einen Schnellzugriff auf einige Systemeinstellungen. Das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.  
 ![Gl.iNetApp Network](/media/router_beryl/N7glinet_app-5_system.png)  
 
-### VPN (WireGuard)
-Wer nach dem Lesen dieses Absatz weniger versteht als vorher, der sollte diesen Punkt einfach überspringen.
+### VPN
+Vorweg: Wer nach dem Lesen dieses Absatz weniger versteht als vorher, dieser Abschnitt ist wichtig für die Privatsphäre, nicht für die grundlegende Funktion. Wenn ich zuvor einfach jedes Gerät in das Campingplatz WLAN angemeldet habe, dann macht es jetzt auch keinen Unterschied.  
 
-Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit die Zähne an IPSec und OpenVPN ausgebissen habe, habe ich diese Runde an WireGuard vergeben.  
-WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen auszeichen soll. Dabei kommen in der Voreinstellung modernste Crypto Standards zum Einsatz, welche nach heutigem Wissen als als sicher gelten.  
-Bei mir Zuhause laufen 2 Proxmox Host, als Virtualisierungslösung verschiedenster Dienste.  
-Schnell ist ein neuer Container (LXC/Ubuntu) erstellt: 8GB HDD, 512MB RAM, 1 CPU Kern und eine Netzwerkkarte mit Internetzugriff. Ein unpriviligierter Container ist ausreichend.  
+Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit die Zähne an IPSec und OpenVPN ausgebissen habe, habe ich diese Runde an **WireGuard** vergeben.  
+WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen (mehr Netzwerkgeschwindigkeit) auszeichen soll. Dabei kommen modernste Crypto Standards zum Einsatz, welche nach heutigem Stand als als sicher gelten.  
+Bei mir Zuhause laufen 2 Proxmox Host, als Virtualisierungslösung verschiedenster Dienste. Schnell ist ein neuer Container (LXC/Ubuntu) erstellt: [x] 8GB HDD, [x] 512MB RAM, [x] 1 CPU Kern und eine [x] Netzwerkkarte mit Internetzugriff. Ein unpriviligierter Container ist ausreichend.  
 
-> root@walter:~# wget git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh
-
+`root@walter:~# wget git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh`  
 Ich bin kein Fan davon Services per Script aus dem Internet auszuführen. Aber für den Test genügt es, ich habe mir das Script vor dme Ausführen natürlich angesehen. Das finale Produkt wird aus den Debian Bullseye Repository installiert. Das Script hat den weiteren Vorteil, dass es erneut ausgeführt werden kann, um weitere VPN Clients hinzuzufügen.  
 Der Befehl `bash wireguard-install.sh` stellt ein paar Fragen. Als erstes den Namen der neu angelegten Verbindung, dann ein paar Details zu Hostname (Server), Port (Server) und so weiter. Der Name ist wichtig, da so nachher die Datei im aktuellen Verzeichniss heisst. Das Einrichten eines weltweit verfügbaren Hostnamen oder die Portweiterleitung (Standard: 51820/UDP) würde hier den Rahmen sprengen, dafür gibt es bessere Tutorials.  
 Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefon scannen kann. Die glinet App bietet das Einrichten der VPN Verbindung via QR Code. Das funktioniert sehr gut.
 
-Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerichtet, musste ich den Code erneut generieren, mittels:
+Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerichtet, musste ich den Code erneut generieren, mittels:  
+`root@walter:~# qrencode -t ansiutf8 < beryl.conf`  
 
-> root@walter:~# qrencode -t ansiutf8 < beryl.conf
-
-TIPP: Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt, wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client in Euer VPN!  
+> TIPP: Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt, wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client in Euer VPN!  
 
 Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Daher gibt es noch keine Testergebnisse.  
 
@@ -224,6 +222,7 @@ Alle Gl.iNet Router bieten einen Hardware-Switch, über den ich verschiedene Akt
 Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwegs privat/anonym das TOR Netzwerk zu nutzen.
 
 ---
+
 
 ## Zukunft
 
@@ -234,6 +233,7 @@ Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwe
 - Langfristig werde ich mir das neue [Truma iNet X Panel](https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel) einbauen. Dieses hat noch kein 'eigenes Modem', sondern nur Bluetooth. Für diesen Einsatz ist mir wichtig bequem alle anderen Datenverbraucher abschalten zu können. Das benötigt noch einen [GL-S10](https://www.gl-inet.com/products/gl-s10/)/[GL-S200](https://www.gl-inet.com/products/gl-s200/) oder ähnlich, als BT Gateway. Vielleicht geht das auch über den USB Port, wenn man auf das Tethering verzichtet... Ist noch Zukunft.
 
 ---
+
 
 ## Bilder
 
@@ -255,8 +255,8 @@ Hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant schlechter 
 Es wurde an fast jeder Steckdose getestet.
 ![Testaufbau Bad](/media/router_beryl/router_beryl_bad.jpg)
 
-Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen, für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.  
+
+Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen (ggf. mit Geschirrtuch gegen direkte Sonneneinstrahlung), für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.  
 Im 4-Pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V->5V/3A Spannungswandler einzubauen.  
-Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke.  
-Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei man ein Mobiltelefon nicht in der prallen Sonne liegen lassen sollte.  
+Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.  
 
