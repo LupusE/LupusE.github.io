@@ -24,14 +24,14 @@ Dabei gibt es folgende Wege für das Internet:
 - USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen, am Telefon/Tablet 'Tethering' freigeben. Für alle Fans des 100% autarken Camping.
 - USB-Modem. Noch nicht getestet.
 
-> TIPP: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, welche unter Umständen das Verbinden zu WLAN mit Key verhindert An diesem [arbeitet Gl.iNet anscheinend gerade](https://forum.gl-inet.com/t/20556), und vermutlich ist es in der aktuellsten Beta behoben. Zum Anderen scheint es ein nicht näher beschriebenes [Problem mit Fritz!Boxen](https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/37) zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.  
+> TIPP: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, welche unter Umständen das Verbinden zu WLAN mit Key verhindert. An diesem [arbeitet Gl.iNet anscheinend gerade](https://forum.gl-inet.com/t/20556) und vermutlich ist es in der aktuellen Beta behoben. Zum Anderen scheint es ein nicht näher beschriebenes [Problem mit Fritz!Boxen](https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/37) zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.  
 
 --- 
 
 
 ## Vorgeschichte
 
-Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs nicht merh optional.  
+Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs nicht mehr optional.  
 
 Für Wohnmobile werden unterschiedliche Systeme angeboten und in Fachliteratur getestet:  
 * Zum Einen gibt es Pocketrouter ('Mobile Ostereier') für 40-150 Euro. Diese werden oft mit einer billigen SIM-Karte, meist PrePaid, betrieben und sind durch den internen Akku auch ausserhalb der Wohnmobils flexibel. Aber diese Lösung ist auf das Mobilfunk-Netz angewiesen. Nachdem was ich weis eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook. Im Ausland kann man einfach eine lokale Karte kaufen und einsetzen. Roaming sollte innerhalb der EU kein Thema mehr sein. Die Systeme gibt es im Angebot von TCM (Tchibo) oder AldiTalk. Dies machen Sinn um autark zu stehen, in Kombination mit meiner beschriebenen Lösung.  
@@ -42,15 +42,18 @@ Ich war auf der Suche nach einem kleinen, flexiblen und günstigen Router, der m
 
 ## Recherche
 
-Vor einigen Wochen habe ich einen Microrouter der Firma [Gl.iNet](https://www.gl-inet.com/) gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt eine sogenante 'Bridge', übersetzt also ein gegebenes Netzwerk in ein eigenes (Network Adress Translation/NAT). Wie das Internet zuhause mit einem Router in das Heimnetzwerk gewandelt wird. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen. Zu kompliziert? Kurz: Ich kann alles in mein eigenes WLAN übersetzen.  
-Interessant für uns Camper: Durch mehrere Antennen kann ich mit geringem Verlust ein externes WLAN (Campingplatz) aufnehmen und daraus ein eigenes lokales WLAN für alle Geräte in der Nähe bereitstellen. Für das Wohnzimmer auf Rädern also perfekt. Durch tauschbaren Antennen könnte ich, ohne die Leistung physikalisch zu ändern, vollkommen legal mehr Reichweite durch Richtwirkung erhalten.  
-Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt, dazu in einem späteren Artikel mehr.  
+Vor einigen Wochen habe ich einen Microrouter der Firma [Gl.iNet](https://www.gl-inet.com/) gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt eine sogenante 'Bridge', übersetzt also ein gegebenes Netzwerk in ein eigenes (Network Adress Translation/NAT). Wie das Internet zuhause mit einem Router in das Heimnetzwerk gewandelt wird. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen.
 
-Als Informatiker habe ich mir das Datenblatt genauer angesehen und so richtig hat es mich noch nicht überzeugt. Was bieten die anderen Modelle des Herstellers?  
+> Zu kompliziert? Kurz: Ich kann alles in mein eigenes WLAN übersetzen.  
+
+Interessant für uns Camper: Durch mehrere Antennen kann ich mit geringem Verlust ein externes WLAN (Campingplatz) aufnehmen und daraus ein eigenes lokales WLAN für alle Geräte in der Nähe bereitstellen. Für das Wohnzimmer auf Rädern perfekt. Durch tauschbaren Antennen könnte ich, ohne die Leistung physikalisch zu ändern, vollkommen legal mehr Reichweite durch Richtwirkung erhalten.  
+Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt, dazu in einem später mehr.  
+
+Als Informatiker habe ich mir das Datenblatt angesehen und so richtig hat es mich doch nicht überzeugt. Was bieten die anderen Modelle des Herstellers?  
 * [GL-AR300M](https://www.gl-inet.com/products/gl-ar300m/) (Shadow)/[GL-MT300N-V2](https://www.gl-inet.com/products/gl-mt300n-v2/) (Mango) sind kleine günstige Boxen, mit verschiedener Ausstattung. Vergleichbar mit der zuerst erwähnten.
 * Die [GL-AR750S](https://www.gl-inet.com/products/gl-ar750s/) (Slate) hat einen deutlich stärkeren Prozessor und mehr RAM (Arbeitsspeicher) und sollte für die meisten Anwendungen im Wohnmobil ausreichen. Stromverbrauch <6W laut Datenblatt. Für 75 Euro okay.
-* Der [GL-MV1000W](https://www.gl-inet.com/products/gl-mv1000/) (Brumme-W) hat mir am besten gefallen, ist aber derzeit nicht verfügbar.
-* Der [GL-SFT1200](https://www.gl-inet.com/products/gl-sft1200/) (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. Dafür nur 2 feste WLAN Antennen. Preis-/Leistungssieger.  
+* Der [GL-MV1000W](https://www.gl-inet.com/products/gl-mv1000/) (Brumme-W), derzeit nicht verfügbar.
+* Der [GL-SFT1200](https://www.gl-inet.com/products/gl-sft1200/) (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. 2 feste WLAN Antennen. Preis-/Leistungssieger.  
 * Der [GL-MT1300](https://www.gl-inet.com/products/gl-mt1300/) (Beryl) ist es bei mir geworden, da es das einzige Modell ist, welches zu dem Zeitpunkt bei Auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum 'mal kaufen und schauen was daraus wird'. Wie zuvor auch nur mit festen WLAN Antennen.
 
 Alle diese Lösungen haben keine SIM-Karte, sind aber einfach mittels USB-Modem oder USB-Tethering mit der derzeit aktuellen oder erschwinglichen Technik auszustatten.
@@ -77,12 +80,12 @@ Tethering = Mobilfunk oder WLAN vom Mobiltelefon/Tablet weitergeleitet. Meist ü
 Die Kaufentscheidung hängt ab von:
 - Binde ich das Gerät ins WLAN, per Kabel ein oder Tethering? Oder will ich flexibel alle Möglichkeiten haben?  
 - Wie viel Strom habe ich zur Verfügung? Bei 3A muss ich mir Gedanken machen, während ich bis 2,1A einfach an (fast) jedem USB Port betreiben kann. Brandgefahr bei Missachtung!  
-- Will ich jetzt oder später Medien per DNLA im Wohnmobil bereitstellen? (MicroSD Slot)  
-- Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box vielleicht auch auch GPIO Pins bieten, z.B. den TIN Bus der Truma auslesen?  
+- Will ich jetzt oder später Medien per DLNA im Wohnmobil bereitstellen? (MicroSD Slot, genug CPU/RAM)  
+- Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box GPIO Pins bieten, um z.B. den TIN Bus der Truma auszulesen?  
 - IPv6 wird allgemein weniger eine Rolle spielen, da es über OpenWRT sicher nachgereicht wird, sobald es salonfähig ist.  
-- Wenn ich VPN und andere Dienste zeitgleich nutzn will muss, muss ich irgendwann auch auf MHz und RAM achten.  
+- Wenn ich VPN und andere Dienste zeitgleich nutzen will muss, muss ich zusätzlich auf MHz und RAM achten.  
 
-Die Größe des Wohnmobil/-wagen spielt dabei kaum eine Rolle, bis 12m Länge sollte alles problemlos auch im 5GHz Band auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau. Die kleinen Boxen kann man sehr gut fensternah verstauen.  
+Die Größe des Wohnmobil/-wagen spielt kaum eine Rolle, bis 12m Länge sollte es problemlos im 5GHz Band auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau. Die kleinen Boxen kann man sehr gut fensternah verstauen.  
 
 ### Ersteinrichtung (Kabel)
 
@@ -95,21 +98,20 @@ Die Ersteinrichtung war super einfach:
 
 * In der Weboberfläche auf **Wireless**/Kabellos
 * Zuerst habe ich das WLAN umbenannt (SSID) in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
-  * Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden. Das geht nur nicht zum lokalen Testen.
-  * Auf gar keinen Fall die Standardeinstellungen lassen. Wer als SSID 'GL-...' sieht, wird gleich das Kennwort 'goodlife' versuchen. Wer nur die SSID umbenennt, könnte anhand der MAC Adresse als Goodlife Gerät identifiziert werden.
+  * Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden. Das geht nicht zum lokalen Testen.  
+  * Auf gar keinen Fall die Standardeinstellungen lassen. Wer als SSID 'GL-...' sieht, wird gleich das Kennwort 'goodlife' versuchen. Wird nur die SSID umbenannt, könnte anhand der MAC Adresse ein Gl.iNet Gerät identifiziert werden.
 ![Browser Wireless](/media/router_beryl/browser_beryl_wireless.png)
 
 Wer plant eine Fritz!Box einzusetzen, NICHT upgraden! Es gibt einen nicht näher beschriebenen Bug in der aktuellen Firmware. Gl.iNet arbeitet wohl dran. Leider ist genau dieser Teil der Software (Netzwerktreiber) Closed Source. Aber die Gute Nachricht: Bis Firmware 3.203 funktioniert es. [Quelle](https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/34)  
 Ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links **Upgrade**/Aktualisierung hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.  
 Möchte man ein Downgrade (Letzte Version installieren), dann geht das nicht automatisch, aber auch einfach: Das Image von der Webseite herunteladen und im nächsten Reiter (Local Upgrade/lokale Aktualisierung) auf den Router hochladen, der Rest ist gleich.  
 
-Vor der Installation hat man die Möglichkeit auszuwählen 'Keep Settings'/Einstellungen beibehalten und 'Keep installed Packages'/Installierte Pakete behalten. Aktuell wähle ich diese Optionen immer ab, da mit einem Firmwareupdate neue und verbesserte Funktionen und unter Umständen auch geänderte Konfigurationen kommen. Wenn der Router ein paar Monate läuft und einige individuelle Konfigurationen vorgenommen wurden, dann kann man die Einstellung übernehmen, sollte aber darauf achten dass der Versionssprung nicht zu gross wird. Auf jeden Fall vorher eine Sicherung machen, falls das Update beim Übernehmen der Daten fehlschlägt.  
-
+Vor der Installation hat man die Möglichkeit auszuwählen 'Keep Settings'/Einstellungen beibehalten und 'Keep installed Packages'/Installierte Pakete behalten. Aktuell wähle ich diese Optionen ab, da mit einem Firmwareupdate neue und verbesserte Funktionen und unter Umständen auch geänderte Konfigurationen kommen. Wenn der Router ein paar Monate läuft und einige individuelle Konfigurationen zusammen kommen, dann kann man die Einstellung übernehmen. Der Versionssprung sollte dabei nicht zu gross werden. Auf jeden Fall vorher eine Sicherung machen, falls das Update beim Übernehmen der Daten fehlschlägt.  
 
 ![Browser Upgrade](/media/router_beryl/browser_beryl_upgrade.png)
 
 > TIPP: Ich habe ein Notebook für solche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden.  
-> Mit dem unten aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer 'goodlife'. Bei anderen Modellen ist die SSID ähnlich aufgebaut: GL-[Modellnummer]-[Letzten 3 Zeichen der MAC].  
+> Mit dem unter der Box aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer 'goodlife'. Bei anderen Modellen ist die SSID ähnlich: GL-[Modellnummer]-[Letzten 3 Zeichen der MAC].  
 
 ### Einrichtung (WLAN zu WLAN)
 
@@ -148,11 +150,12 @@ Alle Weboberflächen nutzen http anstatt https. Da wir mit einem Microcomputer a
 
 [OpenWRT](https://openwrt.org) ist ein offenes Routerbetriebssystem auf Linux Basis, mit dem Paketmanager **opkg**.  
 Da bestimmt 95% der im Alltag vorkommenden Konfigurationen über die LuCI Weboberfläche erledigt werden können, ist dieses System für den ambitionierten Anwender nicht schwieriger zu benutzen als eine AVM Fritz!Box.  
-Die Standardanwendungen sind gut auf deutsch übersetzt, ich benutze es auf Englisch.  
+Die Standarddialoge sind meist gut auf deutsch übersetzt.  
+
 ### LuCI Web UI
 
 Die Gl.iNet Weboberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.  
-Dazu auf [http://192.168.8.1/cgi-bin/luci](http://192.168.8.1/cgi-bin/luci) gehen, oder im Menü ganz unten auf **More Settings** den unterpunkt **Advanced** auswählen. Wenn die Oberfläche nicht installiert ist, kann sie mit dem Button 'Install' nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt. Der Benutzer ist 'root' und das Passwort wieder das zuerst vergebene.
+Dazu auf [http://192.168.8.1/cgi-bin/luci](http://192.168.8.1/cgi-bin/luci) gehen, oder im Menü ganz unten auf **More Settings** den Unterpunkt **Advanced** auswählen. Wenn die Oberfläche nicht installiert ist, kann sie mit dem Button 'Install' nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt. Der Benutzer ist 'root' und das Passwort wieder das zuerst vergebene.
 
 ![Browser LuCI](/media/router_beryl/browser_beryl_luci_overview.png)
 
@@ -178,12 +181,12 @@ Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenn
 Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der [Website](https://www.gl-inet.com/app/).  
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.  
 
-Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel per QR-Code in der App einrichten. Alternativ kann ich die Konfigurationsdatei auch in den entsprechenden Browser Dialog ziehen oder alles manuell eintippen, bequemer ist aber die App.  
+Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel per QR-Code in der App einrichten. Alternativ kann ich die Konfigurationsdatei auch in den entsprechenden Browser Dialog ziehen oder alles manuell eintippen.  
 
-Insgesamt reagiert die App schnell und ist übersichtlich. Es gibt keinen Grund die Arbeit nicht damit zu vereinfachen. Es muss nur zum Start die Cloud ignoriert werden. Alles funktioniert super auch ohne diese.  
+Insgesamt reagiert die App schnell und ist übersichtlich. Es gibt keinen Grund die Arbeit nicht damit zu vereinfachen. Es muss nur zum Start die Cloud ignoriert werden. Alles funktioniert super lokal.  
 Auf der ersten Seite finden sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren Seiten zu kommen.  
 
-Gl.iNet App Mit VPN aus oder ein. Der Klick auf das Symbol überschreibt die Einstellung des Hardware-Schalter.  
+Gl.iNet App Mit VPN aus (erstes Bild) oder ein (zweites Bild). Der Klick auf das Symbol überschreibt die Einstellung des Hardware-Schalter (siehe Abschnitt VPN).  
 ![Gl.iNetApp Home VPN Off](/media/router_beryl/N7glinet_app-1_home_VPNoff.png) ![Gl.iNetApp Home VPN On](/media/router_beryl/N7glinet_app-2_home_VPNon.png)  
 
 Die zweite Seite bietet alle Möglichkeiten in das Internet zu kommen, sehr ähnlich der Weboberfläche. Die dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu blocken oder 'als Favoriten' zu markieren.  
@@ -202,9 +205,9 @@ WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einr
 Bei mir Zuhause laufen 2 Proxmox Host, als Virtualisierungslösung verschiedenster Dienste. Schnell ist ein neuer Container (LXC/Ubuntu) erstellt: [x] 8GB HDD, [x] 512MB RAM, [x] 1 CPU Kern und eine [x] Netzwerkkarte mit Internetzugriff. Ein unpriviligierter Container ist ausreichend.  
 
 `root@walter:~# wget git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh`  
-Ich bin kein Fan davon Services per Script aus dem Internet auszuführen. Aber für den Test genügt es, ich habe mir das Script vor dme Ausführen natürlich angesehen. Das finale Produkt wird aus den Debian Bullseye Repository installiert. Das Script hat den weiteren Vorteil, dass es erneut ausgeführt werden kann, um weitere VPN Clients hinzuzufügen.  
-Der Befehl `bash wireguard-install.sh` stellt ein paar Fragen. Als erstes den Namen der neu angelegten Verbindung, dann ein paar Details zu Hostname (Server), Port (Server) und so weiter. Der Name ist wichtig, da so nachher die Datei im aktuellen Verzeichniss heisst. Das Einrichten eines weltweit verfügbaren Hostnamen oder die Portweiterleitung (Standard: 51820/UDP) würde hier den Rahmen sprengen, dafür gibt es bessere Tutorials.  
-Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefon scannen kann. Die glinet App bietet das Einrichten der VPN Verbindung via QR Code. Das funktioniert sehr gut.
+Ich bin kein Fan davon Services per Script aus dem Internet auszuführen. Aber für den Test genügt es, ich habe mir das Script vor dme Ausführen natürlich angesehen. Es prüft die Umgebung, macht diese bereicht für Wireguard und automatisiert eine Reihe von Befehlen, die man sonst per Hand abtippt. Das Script kann beliebig oft ausgeführt werden, um weitere VPN Clients hinzuzufügen oder vorhandene zu bearbeiten.  
+Der Befehl `bash wireguard-install.sh` stellt ein paar Fragen. Als erstes den Namen der neu angelegten Verbindung, dann ein paar Details zu Hostname (Server), Port (Forwarding) und so weiter. Der Name ist wichtig, da so nachher auch die Datei im aktuellen Verzeichniss heisst. Das Einrichten eines weltweit verfügbaren Hostnamen oder die Portweiterleitung (Standard: 51820/UDP) würde hier den Rahmen sprengen, dafür gibt es bessere Tutorials.  
+Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefon scannen kann. Die glinet App bietet das Einrichten der VPN Verbindung via QR Code. Das funktioniert sehr gut.  
 
 Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerichtet, musste ich den Code erneut generieren, mittels:  
 `root@walter:~# qrencode -t ansiutf8 < beryl.conf`  
@@ -213,7 +216,7 @@ Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerich
 
 Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Daher gibt es noch keine Testergebnisse.  
 
-Alle Gl.iNet Router bieten einen Hardware-Switch, über den ich verschiedene Aktionen steuern kann. Zum Beispiel kann ich darüber das VPN schnell ein- und ausschalten. Zuhause, per Mobilfunk und in vertrauenswürdigen Netzen kann ich das VPN ausschalten. Wenn ich das offene WLAN bekannter FastFood Ketten oder das Campingnetz nutze, kann ich das VPN einschalten. Vorausgesetzt ich habe ein dauerhaft verfügbaren VPN Endpunkt mit gutem Duchsatz als Server!  
+Alle Gl.iNet Router bieten einen Hardware-Switch, über den ich verschiedene Aktionen steuern kann. Zum Beispiel kann ich darüber das VPN schnell ein- und ausschalten. Zuhause, per Mobilfunk und in vertrauenswürdigen Netzen kann ich das VPN ausschalten. Wenn ich das offene WLAN bekannter FastFood Ketten oder das Campingnetz nutze, kann ich das VPN einschalten. Vorausgesetzt ich habe ein dauerhaft verfügbaren VPN Server/Provider mit gutem Duchsatz!  
 
 Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwegs privat/anonym das TOR Netzwerk zu nutzen.
 
