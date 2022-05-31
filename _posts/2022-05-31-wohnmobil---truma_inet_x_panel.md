@@ -19,42 +19,43 @@ Also heute kam mein neues Truma Inet X Panel.
 So haben wir unser 4-Pfoten-Mobil bekommen.
 ![Panel mit Truma CP Plus](/media/truma_inet_x/truma_x_panel-01_before.jpg)
 
-## Ausbau
+## Ausbau Truma CP Plus
 
-Den Knopf kann man einfach nach vorne abziehen, darunter befindet sich eine Schraube zum Lösen. Wenn die reus ist kann das Panel einfach abgenommen werden.
+Den Knopf kann man einfach nach vorne abziehen, darunter befindet sich eine Schraube zum Lösen. Wenn die raus ist kann das Panel einfach abgenommen werden.  
 ![Truma CP Plus](/media/truma_inet_x/truma_x_panel-02_ausbau.jpg)
 
-Übrig bleiben der rote 2V Stromstecker und der RJ11 TIN Stecker. Bei uns direkt mit Y Adapter.
-Der Rahmen muss auch abgenommen werden.
+Übrig bleiben der rote 2V Stromstecker und der RJ11 TIN Stecker. Bei uns direkt mit Y Adapter.  
+Der Rahmen muss auch abgenommen werden.  
 ![Truma CP Plus - Kabel](/media/truma_inet_x/truma_x_panel-04_ausbau.jpg)
 
-Oben liegt das alte CP Plus auf dem Display, darunter sieht man, dass das Inet CX Panel deutlich breiter ist.
+Oben liegt das alte CP Plus auf dem Display, darunter sieht man, dass das Inet CX Panel deutlich breiter ist.  
 ![Truma CP Plus](/media/truma_inet_x/truma_x_panel-06_alt_vs_neu.jpg)
 
 ## Anpassungen am Holz
 
-Ich bin davon ausgegangen ich bekomme den Holzkasten ab. Leider sind links zwei Schrauben rein gedreht, an die ich nicht komme ohne das halbe Mobil zu zerlegen.
+Ich bin davon ausgegangen ich bekomme den Holzkasten ab. Leider sind links zwei Schrauben rein gedreht, an die ich nicht komme ohne das halbe Mobil zu zerlegen.  
 ![Panel leer](/media/truma_inet_x/truma_x_panel-07_panel_leer.jpg)
 
-Also erstmal herausfinden wie ich die Blende der Menuknöpfe ab bekomme. Denn das steht nicht in der Anleitung ... Ist einfach: Flachen Schreubendreher in die Seite:
+Also erstmal herausfinden wie ich die Blende der Menuknöpfe ab bekomme. Denn das steht nicht in der Anleitung ... Ist einfach: Flachen Schraubendreher in die Seite:  
 ![Panel leer](/media/truma_inet_x/truma_x_panel-08_front.jpg)
 
-Nach rechts weg ist kein Platz um das Loch des CP Plus zu erweitern. Mit Glück würde es bündig mit dem Kasten abschließen, dazu muss ich aber ein Stück des Winkels weg fräsen.
-Sinnvoller erschien mir das Versetzen der EisEx und Abwassertank-Beheizung und ausarbeiten nach links.
+Nach rechts weg ist kein Platz um das Loch des CP Plus zu erweitern. Mit Glück würde es bündig mit dem Kasten abschließen, dazu muss ich aber ein Stück des Winkels weg fräsen.  
+Sinnvoller erschien mir das Versetzen der EisEx und Abwassertank-Beheizung und ausarbeiten nach links.  
 ![Ein drittes Loch](/media/truma_inet_x/truma_x_panel-08_panel_3loch.jpg)
 
-Das Loch habe ich sehr knapp gesetzt, so dass ich den Schalter für die Abwasserheizung nochmal neu setzen musste. Aber ich konnte bequem das Panel anzeichen.
+Das Loch habe ich sehr knapp gesetzt, so dass ich den Schalter für die Abwasserheizung nochmal neu setzen musste. Aber ich konnte bequem das Panel anzeichen.  
 ![Einbau EisEx und Anzeichnen](/media/truma_inet_x/truma_x_panel-09_einbau_eisex.jpg)
 
 ## Einbau
 
-Passt genau. Um das halbe Loch mache ich mir später Gedanken.
+Passt genau. Um das halbe Loch mache ich mir später Gedanken.  
 ![Einbau Truma Inet X Panel](/media/truma_inet_x/truma_x_panel-10_einbau_panel.jpg)
 
-Sieh gut aus und funktioniert.
+Sieh gut aus und funktioniert.  
 ![Sieht gut aus und funktioniert](/media/truma_inet_x/truma_x_panel-10_eingebaut.jpg)![Menu](/media/truma_inet_x/truma_x_panel-11_panel_menu.jpg)
 
 ## Finale
 
-Natürlich habe ich die Klima Fernbedienung vergessen. Schnell nachgeholt ... Und das halbe Loch? Darüber mache ich mir VIEL später Gedanken.
+Natürlich habe ich die Klima-Fernbedienung vergessen. Schnell nachgeholt ... Und das halbe Loch? Darüber mache ich mir VIEL später Gedanken.  
 ![Fertig, zu 98%](/media/truma_inet_x/truma_x_panel-19_final.jpg)
+
