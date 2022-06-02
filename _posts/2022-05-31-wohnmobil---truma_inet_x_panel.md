@@ -9,22 +9,23 @@ tags: [UnterwegsZuhause]
 comments: []
 ---
 
-Meine Frau und ich haben uns über das neue Truma Inet X System unterhalten. Sie ist desöfteren nach vorne zur Truma CP Plus gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen. Jetzt hat mein Vater in seinem neuen Wohnmobil die Truma Inet Box, mit der er die komplette Anlage aus dem Bett steuern kann. Man muss wissen, dass diese Anlage lokal Bluetooth kann, aber remote nur G2 (GSM) spricht welches z.B. in der Schweiz bereits abgeschaltet wurde.  
+Mit meiner Frau habe ich mich über das neue [Truma Inet X Panel](https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel) unterhalten. Sie ist bisher morgens nach vorne zur [Truma CP Plus](https://www.truma.com/de/de/produkte/truma-inet-system/truma-bedienteil-cp-plus) gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen.  
+Jetzt hat mein Vater in seinem neuen [Wohnmobil](https://weinsberg.com/wohnmobile/edition-pepper) die das CP Plus inklusive der Inet Box, mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit Android oder iOS App bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.  
 
-Ich erzählte meiner Frau von dem seit Februar 2022 erhältlichen Truma Inet X Panel. Diese Lösung spricht aktuell nur Bluetooth, weitere Konnektivität wird nachgereicht, so verspricht es Truma. Dafür 319 Euro finde ich etwas happig, auch wenn versprochen wird, dass es erweitert wird und Zukunftstsicher ist.  
+Ich erzählte meiner Frau von dem seit Februar 2022 erhältlichen Truma Inet X Panel. Diese Lösung spricht aktuell nur Bluetooth. Weitere Konnektivität wird nachgereicht, so verspricht es Truma. Dafür 319 Euro finde ich etwas happig, auch wenn versprochen wird, dass es funktional erweitert wird und Zukunftstsicher ist.  
 Meine Frau guckte mich mit grossen Augen an und fragte "...sollte ich etwa noch nicht bestellen?" ...  
 ... also heute kam mein neues Truma Inet X Panel.  
 
 ## Vorher
 
 So haben wir unser 4-Pfoten-Mobil bekommen.  
-Links die Truma Aventa Comfort Klimaanlagen-Fernbedienung. Oben das Dethleffs Panel. Unten mittig den Taster für die Abwasserheizung (Wintercamping geeignet) und daneben die Truma Eis-Ex. Unten rechts das Truma CP Plus Panel. Der kleine Punkt darunter ist das Raumthermometer.  
-Oben steht mein neuer Mobilerouter, das ist ein anderes Projekt.  
+Links die Truma Aventa Comfort Klimaanlagen-Fernbedienung. Oben das Dethleffs Panel. Unten mittig den Taster für die Abwasserheizung (Wintercamping geeignet) und daneben die Truma Eis-Ex. Unten rechts das Truma CP Plus Panel. Der Punkt darunter ist das Truma Raumthermometer.  
+Oben das hellblaue steht mein neuer Mobilerouter, das ist [ein anderes Projekt](/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html).  
 ![Panel mit Truma CP Plus](/media/truma_inet_x/truma_x_panel-01_before.jpg)
 
 ## Ausbau Truma CP Plus
 
-Den Drehknopf nach vorne abziehen, darunter befindet sich eine Schraube. Wenn die raus ist kann das Panel einfach nach vorne abgenommen werden.  
+Den Drehknopf nach vorne abziehen, darunter befindet sich eine Schraube. Wenn die rausgedreht ist, kann das Panel einfach nach vorne oben geklappt und abgenommen werden.  
 ![Truma CP Plus](/media/truma_inet_x/truma_x_panel-02_ausbau.jpg)
 
 Übrig bleiben der rote 12V Stromstecker und der RJ11 TIN Stecker. Bei uns direkt mit Y Adapter für Truma Combi6 und Aventa Comfort.  
@@ -38,17 +39,17 @@ Oben liegt das alte CP Plus auf dem Display. Im Karton sieht man das Inet X Pane
 
 Ganz ehrlich: Ich bin kein guter Handwerker. Ich stecke lieber als dass ich Säge und Fräse.  
 
-Ich bin davon ausgegangen ich bekomme den Holzkasten ab. Leider sind links zwei Schrauben, an die ich nicht komme ohne das halbe Mobil zu zerlegen.  
+Ich bin davon ausgegangen ich bekomme den Holzkasten ab. Leider sind links zwei Schrauben im Panel, an die ich nicht komme, ohne das halbe Mobil zu zerlegen.  
 ![Panel leer](/media/truma_inet_x/truma_x_panel-07_panel_leer.jpg)
 
 Also erstmal ablenken und herausfinden wie ich die Blende der Menuknöpfe ab bekomme. Denn das steht nicht in der Anleitung ... Ist einfach: Flachen Schraubendreher in die Seite.  
 ![Panel leer](/media/truma_inet_x/truma_x_panel-08_front.jpg)
 
-Nach rechts weg ist kein Platz um das Loch des CP Plus zu erweitern. Mit Glück würde es bündig mit dem Kasten abschließen, dazu muss ich aber ein Stück eines Winkels (braun, wie oben rechts) weg fräsen.  
+Nach rechts weg ist kein Platz um das Loch des CP Plus zu erweitern. Mit Glück würde es bündig mit dem Kasten abschließen (plusminus 1mm), dazu muss ich aber ein Stück eines Winkels (braun, wie oben rechts) weg fräsen.  
 Sinnvoller erschien mir das Versetzen der EisEx und Abwassertankheizung und ausarbeiten nach links.  
 ![Ein drittes Loch](/media/truma_inet_x/truma_x_panel-08_panel_3loch.jpg)
 
-Das Loch habe ich sehr knapp gemesen (5mm+49mm, dürfte gerne 6+49 sein), so dass ich den Schalter für die Abwasserheizung nochmal neu setzen musste. Aber ich konnte schon das Panel anzeichen.  
+Das Loch habe ich sehr knapp gemesen (5mm+49mm, dürfte gerne 6+49 sein), so dass ich den Schalter für die Abwasserheizung nochmal neu setzen musste. Aber ich konnte jetzt schon das Panel anzeichen.  
 ![Einbau EisEx und Anzeichnen](/media/truma_inet_x/truma_x_panel-09_einbau_eisex.jpg)
 
 ## Einbau
@@ -64,6 +65,6 @@ Sieh gut aus und funktioniert.
 ## Finale
 
 Natürlich habe ich die Klima-Fernbedienung vergessen.  
-Schnell nachgeholt ... Und das halbe Loch? Darüber mache ich mir VIEL später Gedanken.  
+Schnell nachgeschraubt ... Und das halbe Loch? Darüber mache ich mir VIEL später Gedanken.  
 ![Fertig, zu 98%](/media/truma_inet_x/truma_x_panel-19_final.jpg)
 
