@@ -10,16 +10,16 @@ comments: []
 ---
 
 Mit meiner Frau habe ich mich über das neue [Truma Inet X Panel](https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel) unterhalten. Sie ist bisher morgens nach vorne zur [Truma CP Plus](https://www.truma.com/de/de/produkte/truma-inet-system/truma-bedienteil-cp-plus) gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen.  
-Jetzt hat mein Vater in seinem neuen [Wohnmobil](https://weinsberg.com/wohnmobile/edition-pepper) die das CP Plus inklusive der Inet Box, mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit Android oder iOS App bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.  
+Jetzt hat mein Vater in seinem neuen [Wohnmobil](https://weinsberg.com/wohnmobile/edition-pepper) die das [CP Plus inklusive der Inet Box](https://www.truma.com/de/de/produkte/truma-inet-system/truma-inet-set), mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit [Android oder iOS App](https://www.truma.com/de/de/produkte/truma-inet-system/truma-app) bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.  
 
 Ich erzählte meiner Frau von dem seit Februar 2022 erhältlichen Truma Inet X Panel. Diese Lösung spricht aktuell nur Bluetooth. Weitere Konnektivität wird nachgereicht, so verspricht es Truma. Dafür 319 Euro finde ich etwas happig, auch wenn versprochen wird, dass es funktional erweitert wird und Zukunftstsicher ist.  
 Meine Frau guckte mich mit grossen Augen an und fragte "...sollte ich etwa noch nicht bestellen?" ...  
-... also heute kam mein neues Truma Inet X Panel.  
+... also heute kam mein neues Truma Inet X Panel. Mit Touchsreen, Temperaturautomatik, ...  
 
 ## Vorher
 
 So haben wir unser 4-Pfoten-Mobil bekommen.  
-Links die Truma Aventa Comfort Klimaanlagen-Fernbedienung. Oben das Dethleffs Panel. Unten mittig den Taster für die Abwasserheizung (Wintercamping geeignet) und daneben die Truma Eis-Ex. Unten rechts das Truma CP Plus Panel. Der Punkt darunter ist das Truma Raumthermometer.  
+Links die [Truma Aventa Comfort](https://www.truma.com/de/de/produkte/truma-klimaanlagen/truma-aventa-comfort) Klimaanlagen-Fernbedienung. Oben das Dethleffs Panel. Unten mittig den Taster für die Abwasserheizung (Wintercamping geeignet) und daneben die Truma EisEx. Unten rechts das Truma CP Plus Panel für die [Truma Combi 6](https://www.truma.com/de/de/produkte/truma-heizungen/combi-6). Der Punkt darunter ist das Truma Raumthermometer.  
 Oben das hellblaue steht mein neuer Mobilerouter, das ist [ein anderes Projekt](/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html).  
 ![Panel mit Truma CP Plus](/media/truma_inet_x/truma_x_panel-01_before.jpg)
 
@@ -67,4 +67,13 @@ Sieh gut aus und funktioniert.
 Natürlich habe ich die Klima-Fernbedienung vergessen.  
 Schnell nachgeschraubt ... Und das halbe Loch? Darüber mache ich mir VIEL später Gedanken.  
 ![Fertig, zu 98%](/media/truma_inet_x/truma_x_panel-19_final.jpg)
+
+## Erster Eindruck
+
+Die Bedienung auf dem Panel ist etwas träge. Ich weis aber, dass ich eine geringe Körperelektrizität habe und manchmal gerade kapazitive Touchscreens nicht gut funktionieren.  
+Die Bedienung auf dem Handy über App ist auch träge, aber auf dem Handy gewohnt zuverlässig.  
+Der Praxistest steht aus, meine Frau ist bisher begeistert.  
+
+Es wurde einiges an Funktionalität reduziert, da z.B: die Fernsteuerung aktuell nicht gegeben ist. Besonders gespannt bin ich auf die erste Fehlermeldung, das sollen keine cryptischen Codes mehr sein, sondenr nachvollziehbare Sätze.  
+Leider ist die Steuerung der EisEx und DuoControl nur mit dem Pro Panel möglich, welches nur bei neuen Mobilen verbaut wird und nicht nachzurüsten ist.
 
