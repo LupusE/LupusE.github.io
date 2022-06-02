@@ -44,11 +44,12 @@ Ich bin davon ausgegangen ich bekomme den Holzkasten ab. Leider sind links zwei 
 Also erstmal ablenken und herausfinden wie ich die Blende der Menuknöpfe ab bekomme. Denn das steht nicht in der Anleitung ... Ist einfach: Flachen Schraubendreher in die Seite.  
 ![Panel leer](/media/truma_inet_x/truma_x_panel-08_front.jpg)
 
-Nach rechts weg ist kein Platz um das Loch des CP Plus zu erweitern. Mit Glück würde es bündig mit dem Kasten abschließen (plusminus 1mm), dazu muss ich aber ein Stück eines Winkels (braun, wie oben rechts) weg fräsen.  
+Nach rechts ist kein Platz um das Loch des CP Plus zu erweitern. Mit Glück würde es bündig mit dem Kasten abschließen (plusminus 1mm), dazu muss ich aber ein Stück eines Winkels (braun, wie oben rechts) weg fräsen.  
 Sinnvoller erschien mir das Versetzen der EisEx und Abwassertankheizung und ausarbeiten nach links.  
 ![Ein drittes Loch](/media/truma_inet_x/truma_x_panel-08_panel_3loch.jpg)
 
-Das Loch habe ich sehr knapp gemesen (5mm+49mm, dürfte gerne 6+49 sein), so dass ich den Schalter für die Abwasserheizung nochmal neu setzen musste. Aber ich konnte jetzt schon das Panel anzeichen.  
+Das Loch habe ich sehr knapp gemesen (1. Schraube 5mm, 2. Schraube 49mm, dürfte gerne 6+49mm sein), so dass ich den Schalter für die Abwasserheizung nochmal setzen musste. Aber ich konnte jetzt das Panel anzeichen.  
+Die Kabel habe ich desöfteren neu gelegt. Die meisten sind in ausreichender Länge, so dass sie nur aus dem Arbeitsbereich geschoben werden mussten. Ein paar ultra lange Kabel habe ich mit Kabelstrapsen versehen, bei der nächsten Aktion werden die wohl gekürzt.  
 ![Einbau EisEx und Anzeichnen](/media/truma_inet_x/truma_x_panel-09_einbau_eisex.jpg)
 
 ## Einbau
