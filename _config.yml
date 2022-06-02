@@ -14,13 +14,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: LupusE WebLife
+name: Benjamin Moeller
 email: git@lupuse.org
 description: >- # this means to ignore newlines until "baseurl:"
   Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.lupuse.org" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://blog.lupuse.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: LupusE42
 github_username:  LupusE
+linkedin_username: benjamin-moeller-95455472
+facebook_username: LupusE
 
 # Build settings
 markdown: kramdown
