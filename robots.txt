@@ -1,3 +1,5 @@
 User-agent: *
-Disallow: /
-
+Disallow: /media/
+Disallow: /misc/
+Disallow: /cv_de.html
+Sitemap: https://blog.lupuse.org/sitemap.xml
