@@ -51,7 +51,8 @@ Jetzt hatten wir schon wieder eine sportliche Idee: Wir könnten mit dem neuen W
 * Markise
   * 4,5m x 2,50m Thule Omnistor 5200 (Anbauhöhe ca. 2,55m-2,65m)
 * Fahrradträger
-  * Thule. 3 Schienen bis 60KG, kein Problem auch mit eBike.
+  * Thule. 3 Schienen bis 60KG
+  * Kein Problem auch mit eBike. Achslast beachten!
 * Spurverbreiterung hinten (macht das Fahren bei Wind/in Kurven deutlich angenehmer)
 * Gas-Aussensteckdose mit 30mbar Druck
 * Navi/Multimediacenter - Kenwood DNX451RVS
@@ -116,7 +117,7 @@ Wenn man ein 4Pfoten-Mobile mietet, gibt es ein umfangreiches Paket dazu.
 * 
 * ... und ich habe vermutlich noch ganz viel vergessen.
 
-Wenn man als Erstlingscamper ohne Erfahrung nur eine Reisetasche mit genügend Unterhosen, ein paar wetter-geeignete Wechselklamotten und die Lieblingsdecke des Hundes einpackt, hat man im 4Pfoten-Mobile über die geasammte Fahrzeit ein rundum sorglos Paket!  
+Wenn man als Erstlingscamper ohne Erfahrung nur eine Reisetasche mit genügend Unterhosen, ein paar wetter-geeignete Wechselklamotten und die Lieblingsdecke des Hundes einpackt, hat man im 4pfoten-Mobile über die geasammte Fahrzeit ein rundum sorglos Paket!  
 Leider haben wir etwa 60-70% der Ausstattung schon, ansonsten hätten wir uns für 500 Euro das Starter-Set dazu gegönnt.  
 
 Über die ausführliche Einweisung an allen Mietstationen kann man viel im Internet und im Gästebuch lesen. Diese haben wir nicht in Anspruch genommen, wir wollten sofort los :) Aber im Gespräch merkt man, dass Herr Zimmermann auch selbst mit seinen Autos unterwegs ist. Er kennt die Stärken und Schwächen der Fahrzeuge und versucht letzteres auch nicht schönzureden.  
@@ -130,9 +131,9 @@ Ich habe am 7.11. Telefonisch mit Frau Müller-Claasen gesprochen. Die Garantier
 Die Abgabe gestaltete sich unkompliziert. Fahrzeug abstellen, Schlüssel und Fahrzeugschein in eine Werkstatttüte, diese mit den wichtigsten Daten beschriften und ab in den Briefkasten. Der klingt sehr tief und hängt an einer Metalltür. Ich hatte ein sehr gutes Gefühl, das es dort sicher steht.  
 Am 16.11. vormittags bekam ich den Anruf, das Wohnmobil ist fertig. Also am Abend mit meiner Frau wieder hin und abholen. Als erstes habe ich auf die Truma DuoC gedrückt: Wie ein Weihnachtsbaum. Alles perfekt.  
 
-Schnell, unkompliziert, sehr zuverlässig! Warum habe ich von dem [Wohnmobil-Zentrum-Bongard](http://w-z-b.de/cms/wb/) nicht schon die letzten 5,5 Jahre gewusst und bin immer nach Winsen gefahren?
+Schnell, unkompliziert, sehr zuverlässig! Warum habe ich von [Wohnmobil-Zentrum-Bongard](http://w-z-b.de/cms/wb/) nicht schon die letzten 5,5 Jahre gewusst und bin immer nach Winsen gefahren?
 
-Disclaimer: Ich werde weder von 4Pfoten-Mobile Neumünster, noch vom Wohnmobil-Zentrum-Bongard bezahlt. Ich beschreibe hier nur meine positiven Erfahrungen und Eindrücke.  
+Disclaimer: Ich werde weder von 4pfoten-Mobile Neumünster, noch vom Wohnmobil-Zentrum-Bongard bezahlt. Ich beschreibe hier nur meine positiven Erfahrungen und Eindrücke.  
 
 PS: Ich bin totaler Fan von Rettungskarten. Ich bin bisher 100% Unfallfrei gefahren. Dennoch kann es jederzeit vorkommen, das man in einen Unfall verwickelt wird. Die Rettungskarte wird unter der Sonnenblende des Fahrers gelegt, dort schauen die Rettungskräfte zuerst nach. In deer Rettungskarte ist je nach Typ vermerkt, wo die Elektroanlagen, Airbags, Steuergeräte und Gasflaschen sind. Manchmal auch wo am besten geschnitten werden kann.  
 Dethleffs bietet solche Rettungkarten an, man sucht also das passendste Dehtleffs aus und kann die Karte hier herunterladen: [https://www.dethleffs.de/infos/rettungskarten/rettungskarten/modelljahr-2020/](https://www.dethleffs.de/infos/rettungskarten/rettungskarten/modelljahr-2020/). 

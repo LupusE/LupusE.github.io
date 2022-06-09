@@ -1,4 +1,4 @@
-<h2 id="tldr">tl;dr</h2>
+<h1 id="tldr">tl;dr</h1>
 
 <p>Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.</p>
 <ol>
@@ -23,7 +23,7 @@
 
 <hr />
 
-<h2 id="vorgeschichte">Vorgeschichte</h2>
+<h1 id="vorgeschichte">Vorgeschichte</h1>
 
 <p>Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs nicht mehr optional.</p>
 
@@ -214,7 +214,7 @@ USB-Tethering bedeutet, dass das Mobiltelefon die vorhandene Internetverbindung 
 
 <hr />
 
-<h2 id="technisch">Technisch</h2>
+<h1 id="technisch">Technisch</h1>
 
 <p>Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Die Oberfläche benutzt einiges an Scripting, das bedeutet auf alternativen (LineageOS) oder sehr eingeschränkten (NoScript Plugin) Browsern muss gelegentlich per Hand nachgeladen werden. Generell funktioniert aber alles.<br />
 Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.</p>
@@ -224,20 +224,20 @@ https://openwrt.org/toh/views/toh_tfdownload &lt;- suchen nach ‘Brand = gl.ine
 
 <p>Alle Weboberflächen nutzen http anstatt https. Da wir mit einem Microcomputer arbeiten und das ausschliesslich im privaten LAN konfigurieren, verzichtet man auf den Overhead der Verschlüsselung und einer unschönen Sicherheitswarnung im Browser.</p>
 
-<h3 id="was-ist-openwrt">Was ist OpenWRT?</h3>
+<h2 id="was-ist-openwrt">Was ist OpenWRT?</h2>
 
 <p><a href="https://openwrt.org">OpenWRT</a> ist ein offenes Routerbetriebssystem auf Linux Basis, mit dem Paketmanager <strong>opkg</strong>.<br />
 Da bestimmt 95% der im Alltag vorkommenden Konfigurationen über die LuCI Weboberfläche erledigt werden können, ist dieses System für den ambitionierten Anwender nicht schwieriger zu benutzen als eine AVM Fritz!Box.<br />
 Die Standarddialoge sind meist gut auf deutsch übersetzt.</p>
 
-<h3 id="luci-web-ui">LuCI Web UI</h3>
+<h2 id="luci-web-ui">LuCI Web UI</h2>
 
 <p>Die Gl.iNet Weboberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.<br />
 Dazu auf <a href="http://192.168.8.1/cgi-bin/luci">http://192.168.8.1/cgi-bin/luci</a> gehen, oder im Menü ganz unten auf <strong>More Settings</strong> den Unterpunkt <strong>Advanced</strong> auswählen. Wenn die Oberfläche nicht installiert ist, kann sie mit dem Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.</p>
 
 <p><img src="/media/router_beryl/browser_beryl_luci_overview.png" alt="Browser LuCI" /></p>
 
-<h3 id="länderkonfiguration">Länderkonfiguration</h3>
+<h2 id="länderkonfiguration">Länderkonfiguration</h2>
 
 <p>Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. man merkt es kaum, die offensichtlichste Auswirkung sind die erlaubten WLAN Kanäle im 2,4GHz Band: 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefunden wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.</p>
 
@@ -256,7 +256,7 @@ Aus dem Editor (vim) kommt Ihr mit der Tastenfolge: <code class="language-plaint
 Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenne investieren.</p>
 </blockquote>
 
-<h3 id="glinet-app">glinet App</h3>
+<h2 id="glinet-app">glinet App</h2>
 
 <p>Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der <a href="https://www.gl-inet.com/app/">Website</a>.<br />
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.</p>
@@ -277,7 +277,7 @@ Auf der ersten Seite finden sich die wichtigsten Punkte um sich im Netzwerk zure
 <p>Das letzte Fenster bietet einen Schnellzugriff auf einige Systemeinstellungen. Das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.<br />
 <img src="/media/router_beryl/N7glinet_app-5_system.png" alt="Gl.iNetApp Network" /></p>
 
-<h3 id="vpn">VPN</h3>
+<h2 id="vpn">VPN</h2>
 <p>Vorweg: Wer nach dem Lesen dieses Absatz weniger versteht als vorher, dieser Abschnitt ist wichtig für die Privatsphäre, nicht für die grundlegende Funktion. Wenn ich zuvor einfach jedes Gerät in das Campingplatz WLAN angemeldet habe, dann macht es jetzt auch keinen Unterschied.</p>
 
 <p>Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit die Zähne an IPSec und OpenVPN ausgebissen habe, habe ich diese Runde an <strong>WireGuard</strong> vergeben.<br />
@@ -304,7 +304,7 @@ Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefo
 
 <hr />
 
-<h2 id="zukunft">Zukunft</h2>
+<h1 id="zukunft">Zukunft</h1>
 
 <ul>
   <li>Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantene aus einem 17” Laptop vor, die um die Dachlucke kommt. Das ist nicht schlimm, Gl.iNet stellt dafür sogar eine Anleitung bereit. Die Garantie verliert man trotzdem.</li>
@@ -316,7 +316,7 @@ Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefo
 
 <hr />
 
-<h2 id="bilder">Bilder</h2>
+<h1 id="bilder">Bilder</h1>
 
 <p>Der lokale Testaufbau für Referenzwerte am Schreibtisch.
 <img src="/media/router_beryl/router_beryl_test.jpg" alt="Testaufbau Desktop" /></p>
@@ -337,6 +337,6 @@ Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefo
 <img src="/media/router_beryl/router_beryl_bad.jpg" alt="Testaufbau Bad" /></p>
 
 <p>Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen (ggf. mit Geschirrtuch gegen direkte Sonneneinstrahlung), für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.<br />
-Im 4-Pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V-&gt;5V/3A Spannungswandler einzubauen.<br />
+Im 4pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V-&gt;5V/3A Spannungswandler einzubauen.<br />
 Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.</p>
 

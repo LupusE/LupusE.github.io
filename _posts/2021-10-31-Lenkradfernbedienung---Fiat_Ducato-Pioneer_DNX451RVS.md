@@ -4,14 +4,16 @@ published: true
 title: Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS
 author: Benjamin Moeller
 date: 2021-10-30 23:36:59 UTC
+sitemap:
+  lastmod: 2022-06-09
 categories: [Wohnmobil]
 tags: [UnterwegsZuhause]
 comments: []
 ---
 
-## Ausgangslage
+# Ausgangslage
 
-Meine Frau und ich haben uns ein [4Pfoten-Mobile - Dog-Liner TE740](https://www.4pfoten-mobile.de/) gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, [Jörn Zimmermann](www.4pfoten-mobile.de/neumuenster/) vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:
+Meine Frau und ich haben uns ein [4pfoten-Mobile - Dog-Liner TE740](https://www.4pfoten-mobile.de/) gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, [Jörn Zimmermann](www.4pfoten-mobile.de/neumuenster/) vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:
 * Kabelbaum: CAW-CCOMFI1
 * Steuerbox: CAW-COMUN2
 
@@ -23,7 +25,7 @@ Nach dieser Anleitung ist klar, das wird nicht einfach:
 Interpretation: Sehr viele schwarze Kabel. Ein schwarzes Kabel der Box muss an einen grünen Adapter vorbei an das schwarze Kabel des Radios, welches mit 'Steering Wheel Remote' bezeichnet ist??!??!?! Oder so.  
 Auf dem Bild oben rechts könnte man erahnen das schwarz auch blau/gelb sein könnte, mit 'Remo.cont' beschriftet. Das wird lustig.
 
-## Das Einbauen des Adapters mit Kabelbaum
+# Das Einbauen des Adapters mit Kabelbaum
 Das Radio im Ausgangszustand  
 ![Das Radio im fertig eingebauten Zustand](/media/lenkradfb_ducato_dnx451/02_ausgangslage.png)
 
@@ -51,13 +53,13 @@ Beim Zusammenschrauben in umgekerter Reihenfolge: Erst die unteren Schrauben, da
 
 ## Programmieren. Die Anleitung sagt ...
 
-* ... Zuendung aktivieren, die Box blinkt.
+* ... Zündung aktivieren, die Box blinkt.
 * Wenn die Box schnell blinkt, kann sofort gestartet werden. Wenn nicht, Reset: 'Zündung aus, Taste drücken und gedrückt halten, Zündung an. Wenn die LED rot blinkt, Button loslassen.'
 * Man drückt eine Taste auf der Lenkradfernbedienung, die Box zeigt mit einem aufleuchten der LED an, dass der Steuerbefehl angenommen wurde.  
 
-Das ist ja einfach.
+Das ist ja einfach. Bis auf das man gleichzeitig drücken und auf die LED achten muss.  
 
-### Folgende Zustaende kann die Box anzeigen
+## Folgende Zustände kann die Box anzeigen
 
 | LED Signal | Bedeutung |
 | --- | --- |
@@ -116,11 +118,16 @@ Die Box hat 12 Funktionen. Der Ducato hat, abhängig von Baujahr, 6 oder 8 Taste
 | Leer          |           | Tel Beenden   |
 
 
-## Fazit
+# Fazit
 
-Die Box war das Geburtstagsgeschenk 2021 an mich von meiner Frau, als wegen Corona alles zu hatte. so konnten wir die Funktion zwar nicht sofort testen, aber ich konnte am Wohnmobil basteln.  
+Die Box war das Geburtstagsgeschenk 2021 an mich von meiner Frau, als wegen Corona alles zu hatte. So konnten wir die Funktion zwar nicht sofort testen, aber ich konnte am Wohnmobil basteln.  
 Jetzt, nach einigen Fahrten, muss ich sagen der Mehrwert ist gewaltig. Es handelt sich immernoch um einen Transporter, das heisst es ist nicht zu vergleichen mit dem Multimediacockpit eines Mini Cooper oder BMW, aber man muss nicht mehr in die Mitte greifen und versuchen per Touch das richtige Feld zu treffen.  
 Das Radio hat seine Schwächen, aber das Telefonieren per Bluetooth auf Landstrasse und Autobahn funktioniert sehr gut. Auch hier ist Lenkradfernbedienung ein deutlicher Mehrwert.
 
 Es gibt per Amazon auch Boxen, welche etwa ein drittel der orignalen Lösung kosten. Von denen habe ich ersteinmal abstand genommen, denn in meinem Urlaub soll es funktionieren. Wenn jemand Erfahrungne mit diesen 3rd Party Lösungen aus China hat, bin ich sehr an einem Erfahrungsbericht interessiert.
+
+# Nachtrag 09.06.2022: Leitung braun/blaugelb
+
+In der Zwischenzeit hat die Lenkradfernbedienung schon ein paar KM gesehen, und sie setzte immer wieder aus. Ich vermutete schon, dass es an meiner professionellen Panzertape Kabelverbindung liegt. Seit ich dort eine Wago-Klemme einsetze läuft auch alles zuverlässig.  
+Beim nächsten Mal auseinandernehmen werde ich die leere Taste von 'Quelle' auf 'Sprachbefehl' programmieren.  
 

@@ -15,14 +15,14 @@ Jetzt hat mein Vater in seinem neuen [Wohnmobil](https://weinsberg.com/wohnmobil
 Meine Frau guckte mich mit grossen Augen an und fragte "...sollte ich etwa noch nicht bestellen?" ...  
 ... also heute kam mein neues Truma Inet X Panel. Mit Touchsreen, Temperaturautomatik, ...  
 
-## Vorher
+# Vorher
 
 So haben wir unser [4-Pfoten-Mobil](https://4pfoten-mobile.de){:target="\_blank"} bekommen.  
 Links die [Truma Aventa Comfort](https://www.truma.com/de/de/produkte/truma-klimaanlagen/truma-aventa-comfort){:target="\_blank"} Klimaanlagen-Fernbedienung. Oben das Dethleffs Panel. Unten mittig den Taster für die Abwasserheizung (Wintercamping geeignet) und daneben die Truma EisEx. Unten rechts das Truma CP Plus Panel für die [Truma Combi 6](https://www.truma.com/de/de/produkte/truma-heizungen/combi-6){:target="\_blank"}. Der Punkt darunter ist das Truma Raumthermometer.  
 Oben das hellblaue steht mein neuer Mobilerouter, das ist [ein anderes Projekt](/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html).  
 ![Panel mit Truma CP Plus](/media/truma_inet_x/truma_x_panel-01_before.jpg)
 
-## Ausbau Truma CP Plus
+# Ausbau Truma CP Plus
 
 Den Drehknopf nach vorne abziehen, darunter befindet sich eine Schraube. Wenn die rausgedreht ist, kann das Panel einfach nach vorne oben geklappt und abgenommen werden.  
 ![Truma CP Plus](/media/truma_inet_x/truma_x_panel-02_ausbau.jpg)
@@ -52,7 +52,7 @@ Das Loch habe ich sehr knapp gemesen (1. Schraube 5mm, 2. Schraube 49mm, dürfte
 Die Kabel habe ich desöfteren neu gelegt. Die meisten sind in ausreichender Länge, so dass sie nur aus dem Arbeitsbereich geschoben werden mussten. Ein paar ultra lange Kabel habe ich mit Kabelstrapsen versehen, bei der nächsten Aktion werden die wohl gekürzt.  
 ![Einbau EisEx und Anzeichnen](/media/truma_inet_x/truma_x_panel-09_einbau_eisex.jpg)
 
-## Einbau
+# Einbau
 
 Passt genau. Um das halbe Loch mache ich mir später Gedanken.  
 ![Einbau Truma Inet X Panel](/media/truma_inet_x/truma_x_panel-10_einbau_panel.jpg)
@@ -62,7 +62,7 @@ Sieh gut aus und funktioniert.
 
 ![Menu](/media/truma_inet_x/truma_x_panel-11_panel_menu.jpg)
 
-## Finale
+# Finale
 
 Natürlich habe ich die Klima-Fernbedienung vergessen.  
 Schnell nachgeschraubt ... Und das halbe Loch? Darüber mache ich mir VIEL später Gedanken.  
