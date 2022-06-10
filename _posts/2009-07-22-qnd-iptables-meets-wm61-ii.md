@@ -4,8 +4,8 @@ published: true
 title: quick-and-dirty - IPTables meets WM61 II
 author: Benjamin Moeller
 date: 2009-07-22 05:09:21 UTC
-categories: [QuickAndDirty]
-tags: [cnf, linux, qnd]
+categories: [howto]
+tags: [config, linux, handy]
 comments: []
 ---
 

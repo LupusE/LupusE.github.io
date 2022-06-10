@@ -5,7 +5,7 @@ title: Elementarreaktionen
 author: Benjamin Moeller
 date: 2007-05-15 18:56:43 UTC
 categories: [gedenke]
-tags: [gedenke]
+tags: [reaktionen, gesellschaft, zitate]
 comments: []
 ---
 
@@ -42,7 +42,7 @@ Nun weigere ich mich zu glauben das ich einen freien Willen habe, ich denke wenn
 > und seiner Vergangenheit
 > -- Gerd Blum (dt./rel. Lehrer am BZM, 2001)  
 
-## Zusammengefasst
+# Zusammengefasst
 
 Wir denken nicht frei! Wir 'Handeln' so wie wir es tun, weil es ein festes Vorher gab.  
 Ich will damit nicht sagen alles ist sinnfrei, denn egal ob wir 'frei' oder 'bestimmt' handeln, wenn wir es nicht tun ist auch das 'bestimmt'.  

@@ -4,8 +4,8 @@ published: true
 title: Weihnachtsmarkt
 author: Benjamin Moeller
 date: 2008-11-30 16:39:22 UTC
-categories: [Treffen]
-tags: [event, reise, treffen]
+categories: [event]
+tags: [treffen, weihnachten]
 comments: []
 ---
 

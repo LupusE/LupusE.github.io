@@ -4,8 +4,8 @@ published: true
 title: quick-and-dirty eMail unter Linux.
 author: Benjamin Moeller
 date: 2007-04-16 21:38:16 UTC
-categories: [QuickAndDirty]
-tags: [cnf, linux, qnd]
+categories: [howto]
+tags: [config, linux, mail]
 comments: []
 ---
 

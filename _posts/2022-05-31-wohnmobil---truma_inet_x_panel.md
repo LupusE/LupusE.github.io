@@ -4,8 +4,8 @@ published: true
 title: Wohnmobil - Truma Inet X Panel
 author: Benjamin Moeller
 date: 2022-05-31 19:22:32 UTC
-categories: [Wohnmobil]
-tags: [UnterwegsZuhause]
+categories: [wohnmobil]
+tags: [reise]
 comments: []
 ---
 

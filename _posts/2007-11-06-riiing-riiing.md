@@ -4,8 +4,8 @@ published: true
 title: Riiing Riiing
 author: Benjamin Moeller
 date: 2007-11-06 05:07:12 UTC
-categories: [LupusE]
-tags: [gedenke, LupusE]
+categories: [gedenke]
+tags: [wecker, schlaflos]
 comments: []
 ---
 

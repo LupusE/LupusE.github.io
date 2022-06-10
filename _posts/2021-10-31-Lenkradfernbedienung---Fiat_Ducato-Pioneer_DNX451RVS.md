@@ -6,8 +6,8 @@ author: Benjamin Moeller
 date: 2021-10-30 23:36:59 UTC
 sitemap:
   lastmod: 2022-06-09
-categories: [Wohnmobil]
-tags: [UnterwegsZuhause]
+categories: [wohnmobil]
+tags: [reise]
 comments: []
 ---
 

@@ -4,7 +4,7 @@ published: true
 title: Sonnenaufgang
 author: Benjamin Moeller
 date: 2007-07-01 04:30:49 UTC
-categories: [LupusE]
+categories: [gedenke]
 tags: [LupusE]
 comments: []
 ---

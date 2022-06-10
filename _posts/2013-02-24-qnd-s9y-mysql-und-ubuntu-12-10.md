@@ -4,12 +4,12 @@ published: true
 title: quick-and-dirty - s9y, MySQL und Ubuntu 12.10
 author: Benjamin Moeller
 date: 2013-02-24 00:47:16 UTC
-categories: [QuickAndDirty]
-tags: []
+categories: [howto]
+tags: [mysql, blog, linux]
 comments: []
 ---
 
-## Heute sich selbst referenzierend im s9y über seine Installation
+# Heute sich selbst referenzierend im s9y über seine Installation
 Wie einige wissen ist s9y (Serendipity) ein Blog-System, welches ich gerne einsetze, weil es schlank und einfach ist.  
 
 Beim Upgrade von Ubuntu lucid auf Ubuntu precise hatte ich nur bemerkt, das MySQL nicht mehr installiert ist. Die Datenbanken selbst waren nach der wieder Installation alle noch vorhanden.  
@@ -23,7 +23,7 @@ Die Meldung hatte ich schon mal, aber da habe ich bewusst auf einer Tabelle die 
 
 Da MySQL als Standard MyISAM nutzt kann es daran gar nicht liegen. Oder?  
 
-### Analyse:
+## Analyse:
 Zunächst gehe ich sicher, das meine Annahme stimmt:  
 
 > $ mysql -u root -p  
@@ -46,7 +46,7 @@ Quelle: http://packages.ubuntu.com/mysql-server
 
 Alle Fragen geklärt. Jetzt heisst es aufräumen:  
 
-### Lösung:
+## Lösung:
 Default setzen, in die (zuvor geleerte!) Datenbank wechseln, Dump erneut einlesen.  
 > mysql> SET storage_engine=MYISAM;  
 > mysql> USE serendipity;  

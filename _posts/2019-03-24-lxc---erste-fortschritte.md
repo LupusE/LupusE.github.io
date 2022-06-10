@@ -4,7 +4,7 @@ published: true
 title: LXC - Erste Fortschritte
 author: Benjamin Moeller
 date: 2019-03-24 20:02:42 UTC
-categories: [server]
+categories: [howto]
 tags: [server, lxd, linux]
 comments: []
 ---
@@ -30,5 +30,5 @@ Mit `$ sudo lxc init` erhalten wir einen Dialog, in dem wir die wichtigsten Para
 
 Die danach erstellten VMs haben direkt Zugriff auf das Internet. Damit sie auch von außen erreichbar sind, habe ich eine Netzwerkbrücke eingerichtet.
 
-## Status
+# Status
 Es gibt eine VM, welche mittels ssh (PubKey) erreichbar ist. Jetzt räume ich noch etwas auf und schreibe dann wie die Infrastruktur aufgebaut ist.

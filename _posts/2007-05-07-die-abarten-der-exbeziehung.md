@@ -5,7 +5,7 @@ title: Die Abarten der Exbeziehung
 author: Benjamin Moeller
 date: 2007-05-07 17:39:12 UTC
 categories: [gedenke]
-tags: [gedenke]
+tags: [beziehung, gesellschaft]
 comments: []
 ---
 

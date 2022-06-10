@@ -4,8 +4,8 @@ published: true
 title: Sternchenhimmel
 author: Benjamin Moeller
 date: 2008-12-09 14:27:07 UTC
-categories: [LupusE, reisen]
-tags: [LupusE, reise]
+categories: [gedenke]
+tags: [zitate, reise, gesellschaft]
 comments: []
 ---
 

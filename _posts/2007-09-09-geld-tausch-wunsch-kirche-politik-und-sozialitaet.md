@@ -5,14 +5,14 @@ title: Geld, Tausch, Wunsch, Kirche, Politik und Sozialitaet
 author: Benjamin Moeller
 date: 2007-09-09 12:23:30 UTC
 categories: [gedenke]
-tags: [gedenke]
+tags: [gesellschaft, geld, zitate]
 comments: []
 ---
 
 > Was man zu verstehen gelernt hat, fürchtet man nicht mehr.  
 > -Marie Curie-  
 
-## Was mich Ärgert ist die allgemeine Geldfixiertheit.
+# Was mich Ärgert ist die allgemeine Geldfixiertheit.
 
 Geld ist sowas von bekloppt. Ich bekomme einen Geldwert fuer einen übrigen Warenwert und tausche den Geldwert fuer einen benötigten Warenwert. Das nennt sich dann Wirtschaft.  
 -> Was ich abgebe habe ich über. Egal ob es verschenkt, verkauft oder frei angeboten wird.

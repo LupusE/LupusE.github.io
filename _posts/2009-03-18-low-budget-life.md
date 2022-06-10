@@ -5,7 +5,7 @@ title: Low budget life
 author: Benjamin Moeller
 date: 2009-03-18 20:57:07 UTC
 categories: [gedenke]
-tags: [gedenke, LupusE]
+tags: [geld, geburtstag, gesellschaft]
 comments: []
 ---
 

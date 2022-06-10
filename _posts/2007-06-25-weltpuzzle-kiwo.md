@@ -5,7 +5,7 @@ title: Weltpuzzle -- Kiwo
 author: Benjamin Moeller
 date: 2007-06-25 20:45:41 UTC
 categories: [gedenke]
-tags: [gedenke, LupusE]
+tags: [gesellschaft, kielerwoche]
 comments: []
 ---
 

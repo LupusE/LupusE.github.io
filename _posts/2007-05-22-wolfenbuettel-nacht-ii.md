@@ -4,8 +4,8 @@ published: true
 title: Wolfenbuettel - Nacht II
 author: Benjamin Moeller
 date: 2007-05-22 21:56:00 UTC
-categories: [reisen]
-tags: [linux, reise]
+categories: [reise]
+tags: [reise, gesellschaft]
 comments: []
 ---
 Nun habe ich mir die Stadt angesehen, ohne einen 15h Tag vorweg, und ganz neue Seiten entdeckt.  

@@ -5,7 +5,7 @@ title: Willkommen im 21. Jahrhundert
 author: Benjamin Moeller
 date: 2009-06-30 20:26:26 UTC
 categories: [gedenke]
-tags: [gedenke, linux, lupuse]
+tags: [event]
 comments: []
 ---
 

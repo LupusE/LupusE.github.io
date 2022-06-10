@@ -6,8 +6,8 @@ author: Benjamin Moeller
 author_login: lupuse
 author_email: blog@lupuse.org
 date: 2008-02-24 20:43:05 UTC
-categories: [LupusE]
-tags: [gedenke, LupusE]
+categories: [gedenke]
+tags: [schach, gesellschaft]
 comments: []
 ---
 
