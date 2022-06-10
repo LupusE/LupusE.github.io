@@ -4,7 +4,7 @@ published: true
 title: Nerf - Eine Uebersicht
 author: Benjamin Moeller
 date: 2019-04-11 20:04:37 UTC
-categories: [nerf]
+categories: [produkte]
 tags: [nerf, blaster]
 comments: []
 ---
