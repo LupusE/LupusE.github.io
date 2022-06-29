@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: LupusE webLife
 name: Benjamin Moeller
+author: Benjamin Moeller
 email: git@lupuse.org
 description: >- # this means to ignore newlines until "baseurl:"
   Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.

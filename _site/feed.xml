@@ -1,4 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-06-10T16:40:06+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><entry><title type="html">Wohnmobil - Truma Inet X Panel</title><link href="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html" rel="alternate" type="text/html" title="Wohnmobil - Truma Inet X Panel" /><published>2022-05-31T19:22:32+00:00</published><updated>2022-05-31T19:22:32+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil---truma_inet_x_panel</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html">&lt;p&gt;Mit meiner Frau habe ich mich über das neue &lt;a href=&quot;https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel&quot; target=&quot;\_blank&quot;&gt;Truma Inet X Panel&lt;/a&gt; unterhalten. Sie ist bisher morgens nach vorne zur &lt;a href=&quot;https://www.truma.com/de/de/produkte/truma-inet-system/truma-bedienteil-cp-plus&quot; target=&quot;\_blank&quot;&gt;Truma CP Plus&lt;/a&gt; gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-06-29T21:02:12+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
+
+&lt;p&gt;Für mein Wohnmobilprojekt habe ich mir einne GL.iNet Beryl Reiserouter gekauft. Dise kleinen Dinger aus Hong Kong basieren auf OpenWRT und bieten für schmales Geld (35-80 Euro) eine gute Basis um unterwegs mehrere Geräte mit geringem Aufwand zu betreiben.&lt;br /&gt;
+Die Grundidee ist, dass ich nicht jede smeiner Geräte im (Hotel)WLAN anmeldne muss, sondenr den Router vorschalte un ddieser einen sicherne Zugang für alle meine Geräte stellt. Sicher, weil die kleinen Router standardmäßig eine Unterstützung für gängige Protokolle, wie OpenVPN und WireGuard mitbringen. Wer keine Möglickeit hat einen Endpunkt zu mieten oder selbst aufzubauen, dem steht immernoch per Klick das TOR Netzwerk offen.&lt;br /&gt;
+Mit OpenVPN bin ich nie warm geworden, daher versuche ich mich am aktuelleren WireGuard.&lt;/p&gt;
+
+&lt;h2 id=&quot;wireguard-skript---erste-schritte&quot;&gt;WireGuard Skript - Erste Schritte&lt;/h2&gt;
+
+&lt;p&gt;Wireguard bietet für Linux ein ‘All in One’ Skript an. Dieses ist genauso gruselig, wie es klingt. Es wird aus dem internet heruntergeladen und ausgeführt …&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;wget https://git.io/wireguard -O wireguard-install.sh &amp;amp;&amp;amp; sudo bash&lt;br /&gt;
+wireguard-install.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Als erste Testumgebung habe ich damit angefangen, und es funktioniert.&lt;/p&gt;
+
+&lt;p&gt;Dann wollte ich den Service auf meine Umgebung anpassen. Also Konfiguration unter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/wireguard/&lt;/code&gt; anpassen und den Dienst neu starten … den Dienst … den Dienst … Wo ist der denn? … Server durchstarten geht auch.&lt;br /&gt;
+Schon vorher wollte ich dringend das Skript gegen eine saubere Installation ersetzen. Spätestens an dem Punkt war mir die Dringlichkeit bewusst.&lt;/p&gt;
+
+&lt;h1 id=&quot;wireguard-aufsetzen&quot;&gt;Wireguard aufsetzen&lt;/h1&gt;
+
+&lt;p&gt;Im Proxmox schnell einen Container erstellt. Debian 11.0.3 Image, 12GB Festplatte auf der lokalen SSD, 1Core, 512MB RAM und im Netzwerk ‘vmbr1 - Green’. Container starten.&lt;/p&gt;
+
+&lt;p&gt;Ab Debian 11 ist das paket &lt;a href=&quot;https://packages.debian.org/bullseye/wireguard&quot;&gt;wireguard&lt;/a&gt; mitgeliefert, davor benötigt es &lt;a href=&quot;https://packages.debian.org/buster-backports/wireguard&quot;&gt;Backports&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@walter01:~# apt update &amp;amp;&amp;amp; apt full-upgrade
+[.. update magie ..]
+root@walter01:~# apt install wireguard wireguard-tools linux-headers-amd64
+[.. install magie ..]
+root@walter01:~# wg genkey | sudo tee /etc/wireguard/server_private.key | wg pubkey | sudo tee /etc/wireguard/server_public.key
+[.. key generation magie ..]
+cF+ZkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXiEc=
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;wireguard-auf-dem-server&quot;&gt;WireGuard auf dem Server&lt;/h2&gt;
+
+&lt;p&gt;Die Konfigurationsdatei erstellen:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@walter01:~# vim /etc/wireguard/wg0.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[Interface]
+Address = 10.10.10.1/24
+ListenPort = 51820
+PrivateKey = cF+ZkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXiEc=&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Darunter kommt noch ein wenig mit [Peers], sobald man einen client hat.&lt;/p&gt;
+
+&lt;p&gt;Und die Dateien für den Zugriff durch Unbefugte auf dem System sichern:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chmod 600 /etc/wireguard/ -R
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;vom-schlichten-server-zum-funktionalen-router&quot;&gt;Vom schlichten Server zum funktionalen Router&lt;/h2&gt;
+
+&lt;p&gt;Jetzt kann der Server zwar erreicht werden, aber er ist noch kein Router.&lt;/p&gt;
+
+&lt;h3 id=&quot;routing-aktivieren&quot;&gt;Routing aktivieren&lt;/h3&gt;
+
+&lt;p&gt;Um das zu ändern geben wir folgendes ein (Zeile 27 zur Erstellung diesen Artikels):&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root@walter01:~# vim /etc/sysctl.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[…]&lt;/p&gt;
+  &lt;h1 id=&quot;uncomment-the-next-line-to-enable-packet-forwarding-for-ipv4&quot;&gt;Uncomment the next line to enable packet forwarding for IPv4&lt;/h1&gt;
+  &lt;p&gt;net.ipv4.ip_forward = 1
+[…]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dienst neu starten:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo sysctl -p&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;masquerading-aktivieren&quot;&gt;Masquerading aktivieren&lt;/h3&gt;
+
+&lt;p&gt;Ich nutze hier &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ufw&lt;/code&gt;, welches ein Frontend für die &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iptables&lt;/code&gt; ist. Es gibt verschiedene Wege an das Ziel zu kommen, das hier ist nur ein Vorschlag.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@walter01:~# apt install ufw
+root@walter01:~# ufw allow 22/tcp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Mit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ip addr&lt;/code&gt; ist zu sehen auf welchem Interface die IP gebunden ist. Auf dieser erlauben wir nun das NAT.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim /etc/ufw/before.rules&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Vor dem COMMIT wird das Masquerading aktiviert. das Interface (-o) mit dem Interface aus &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ip addr&lt;/code&gt; ersetzen!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[…]&lt;/p&gt;
+  &lt;h1 id=&quot;allow-multicast-upnp-for-service-discovery-be-sure-the-multicast-line-above&quot;&gt;allow MULTICAST UPnP for service discovery (be sure the MULTICAST line above&lt;/h1&gt;
+  &lt;h1 id=&quot;is-uncommented&quot;&gt;is uncommented)&lt;/h1&gt;
+  &lt;p&gt;-A ufw-before-input -p udp -d 239.255.255.250 –dport 1900 -j ACCEPT&lt;/p&gt;
+
+  &lt;h1 id=&quot;nat-rules&quot;&gt;NAT rules&lt;/h1&gt;
+  &lt;p&gt;*nat
+:POSTROUTING ACCEPPT [0:0]
+-A POSTROUTING -o eth0@if110 -j MASQUERADE&lt;/p&gt;
+
+  &lt;h1 id=&quot;dont-delete-the-commit-line-or-these-rules-wont-be-processed&quot;&gt;don’t delete the ‘COMMIT’ line or these rules won’t be processed&lt;/h1&gt;
+  &lt;p&gt;COMMIT&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Und um im VPN die Kommunikation zwiwchen den Hosts zu erkauben, folgenden Block (unten) ergänzen:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h1 id=&quot;ok-icmp-code-for-forward&quot;&gt;ok icmp code for FORWARD&lt;/h1&gt;
+  &lt;p&gt;-A ufw-before-forward -p icmp –icmp-type destination-unreachable -j ACCEPT
+-A ufw-before-forward -p icmp –icmp-type time-exceeded -j ACCEPT
+-A ufw-before-forward -p icmp –icmp-type parameter-problem -j ACCEPT
+-A ufw-before-forward -p icmp –icmp-type echo-request -j ACCEPT&lt;/p&gt;
+
+  &lt;h1 id=&quot;allow-forwarding-trusted-network&quot;&gt;allow forwarding trusted network&lt;/h1&gt;
+  &lt;p&gt;-A ufw-before-forward -s 10.10.10.0/24 -j ACCEPT
+-A ufw-before-forward -d 10.10.10.0/24 -j ACCEPT&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;aktivieren-der-regeln&quot;&gt;Aktivieren der Regeln&lt;/h3&gt;
+
+&lt;p&gt;Und jetzt hoffen, dass man sich nicht aussperrt:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ufw enable&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Beim ersten Ausführen gab es einen Fehler mit dem Eintrag &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*nat&lt;/code&gt;. Beim zweiten Ausführen wurden die Regeln übernommen.&lt;/p&gt;
+
+&lt;p&gt;Eine letzte Prüfung:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root@walter01:~# iptables -t nat -L POSTROUTING&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;aktivieren-von-wireguard-auf-dme-server&quot;&gt;Aktivieren von WireGuard auf dme Server&lt;/h1&gt;
+
+&lt;p&gt;Als erstes geben wir den WireGuard (Standard-)Port frei:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ufw allow 51820/udp&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Zum Testen reicht es aus temporär den Dienst zu starten:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wg-quick up /etc/wireguard/wg0.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Wollen wir den Dienst bei jedem Systemstart aktivieren, geben wir ein:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo systemctl enable wg-quick@wg0.service&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Zum Kontrollieren ob alles läuft geben wir ein:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;systemctl status wg-quick@wg0.service&lt;/code&gt;&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="infrastruktur" /><category term="wireguard" /><summary type="html">Motivation</summary></entry><entry><title type="html">Wohnmobil - Truma Inet X Panel</title><link href="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html" rel="alternate" type="text/html" title="Wohnmobil - Truma Inet X Panel" /><published>2022-05-31T19:22:32+00:00</published><updated>2022-05-31T19:22:32+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil---truma_inet_x_panel</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html">&lt;p&gt;Mit meiner Frau habe ich mich über das neue &lt;a href=&quot;https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel&quot; target=&quot;\_blank&quot;&gt;Truma Inet X Panel&lt;/a&gt; unterhalten. Sie ist bisher morgens nach vorne zur &lt;a href=&quot;https://www.truma.com/de/de/produkte/truma-inet-system/truma-bedienteil-cp-plus&quot; target=&quot;\_blank&quot;&gt;Truma CP Plus&lt;/a&gt; gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen.&lt;br /&gt;
 Jetzt hat mein Vater in seinem neuen &lt;a href=&quot;https://weinsberg.com/wohnmobile/edition-pepper&quot; target=&quot;\_blank&quot;&gt;Wohnmobil&lt;/a&gt; die das &lt;a href=&quot;https://www.truma.com/de/de/produkte/truma-inet-system/truma-inet-set&quot; target=&quot;\_blank&quot;&gt;CP Plus inklusive der Inet Box&lt;/a&gt;, mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit &lt;a href=&quot;https://www.truma.com/de/de/produkte/truma-inet-system/truma-app&quot; target=&quot;\_blank&quot;&gt;Android oder iOS App&lt;/a&gt; bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.&lt;/p&gt;
 
 &lt;p&gt;Meine Frau guckte mich mit grossen Augen an und fragte “…sollte ich etwa noch nicht bestellen?” …&lt;br /&gt;
@@ -384,29 +522,29 @@ Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefo
 
 &lt;h1 id=&quot;bilder&quot;&gt;Bilder&lt;/h1&gt;
 
-&lt;p&gt;Der lokale Testaufbau für Referenzwerte am Schreibtisch.
+&lt;p&gt;Der lokale Testaufbau für Referenzwerte am Schreibtisch.&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/router_beryl_test.jpg&quot; alt=&quot;Testaufbau Desktop&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Der erste Standort am zentralen Panel. Oben der Router, unten das Netzteil an 230V. Die neben der 230V Landstrom-Steckdose serienmäßig verbaute 12V KFZ-Steckdose habe ich gegen eine 2xUSB (max. 2,1A) Umgebaut.
+&lt;p&gt;Der erste Standort am zentralen Panel. Oben der Router, unten das Netzteil an 230V. Die neben der 230V Landstrom-Steckdose serienmäßig verbaute 12V KFZ-Steckdose habe ich gegen eine 2xUSB (max. 2,1A) Umgebaut.&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/router_beryl_panel.jpg&quot; alt=&quot;Testaufbau Panel&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Der Standort über dem Fahrer ist fast perfekt, hat aber nur einen 230V Landstrom Anschluss.
+&lt;p&gt;Der Standort über dem Fahrer ist fast perfekt, hat aber nur einen 230V Landstrom Anschluss.&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/router_beryl_dach.jpg&quot; alt=&quot;Testaufbau Dach&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Im Zentrum des Buffymobils in der Küche für Testmessungen.
+&lt;p&gt;Im Zentrum des Buffymobils in der Küche für Testmessungen.&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/router_beryl_kueche.jpg&quot; alt=&quot;Testaufbau Kueche&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant schlechter (ca. 2m weiter weg vom Router). Aber wer will die Strahlung am Kopf?
+&lt;p&gt;Hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant schlechter (ca. 2m weiter weg vom Router). Aber wer will die Strahlung am Kopf?&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/router_beryl_bett.jpg&quot; alt=&quot;Testaufbau Bett&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Es wurde an fast jeder Steckdose getestet.
+&lt;p&gt;Es wurde an fast jeder Steckdose getestet.&lt;br /&gt;
 &lt;img src=&quot;/media/router_beryl/router_beryl_bad.jpg&quot; alt=&quot;Testaufbau Bad&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen (ggf. mit Geschirrtuch gegen direkte Sonneneinstrahlung), für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.&lt;br /&gt;
 Im 4pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V-&amp;gt;5V/3A Spannungswandler einzubauen.&lt;br /&gt;
-Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><category term="netzwerk" /><category term="router" /><summary type="html">tl;dr</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h1 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h1&gt;
+Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><category term="netzwerk" /><category term="router" /><summary type="html">tl;dr</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
 
-&lt;p&gt;Meine Frau und ich haben uns ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4pfoten-Mobile - Dog-Liner TE740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser Teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, &lt;a href=&quot;www.4pfoten-mobile.de/neumuenster/&quot;&gt;Jörn Zimmermann&lt;/a&gt; vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
+&lt;p&gt;Meine Frau und ich haben uns ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4pfoten-Mobile - Dog-Liner TE740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, &lt;a href=&quot;www.4pfoten-mobile.de/neumuenster/&quot;&gt;Jörn Zimmermann&lt;/a&gt; vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Kabelbaum: CAW-CCOMFI1&lt;/li&gt;
   &lt;li&gt;Steuerbox: CAW-COMUN2&lt;/li&gt;
@@ -414,26 +552,26 @@ Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder ü
 
 &lt;p&gt;Bei &lt;a href=&quot;https://www.toms-car-hifi.de/&quot;&gt;Toms-Car-Hifi&lt;/a&gt; bestellt, nach 3 Tagen war alles da und die OP konnte beginnen.&lt;/p&gt;
 
-&lt;p&gt;Nach dieser Anleitung ist klar, das wird nicht einfach:&lt;br /&gt;
+&lt;p&gt;Nach dieser Anleitung ist eines klar: Das wird nicht einfach.&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/01_anleitung.png&quot; alt=&quot;Anleitung der Verkabelung der CAW-COMUN2 Box&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Interpretation: Sehr viele schwarze Kabel. Ein schwarzes Kabel der Box muss an einen grünen Adapter vorbei an das schwarze Kabel des Radios, welches mit ‘Steering Wheel Remote’ bezeichnet ist??!??!?! Oder so.&lt;br /&gt;
 Auf dem Bild oben rechts könnte man erahnen das schwarz auch blau/gelb sein könnte, mit ‘Remo.cont’ beschriftet. Das wird lustig.&lt;/p&gt;
 
-&lt;h1 id=&quot;das-einbauen-des-adapters-mit-kabelbaum&quot;&gt;Das Einbauen des Adapters mit Kabelbaum&lt;/h1&gt;
+&lt;h2 id=&quot;das-einbauen-des-adapters-mit-kabelbaum&quot;&gt;Das Einbauen des Adapters mit Kabelbaum&lt;/h2&gt;
 &lt;p&gt;Das Radio im Ausgangszustand&lt;br /&gt;
-&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/02_ausgangslage.png&quot; alt=&quot;Das Radio im fertig eingebauten Zustand&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/02_ausgangslage.png&quot; alt=&quot;Das Radio im eingebauten Zustand&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Beim Aushebeln der Blende brechen sicher ein oder zwei Klemmen ab. Durch das tolle klebrige silber Deko-Element (Pfeil) hält es aber.&lt;br /&gt;
 Das Radio ist an dem Blech festgeschraubt, nicht eingeschoben. Ich empfehle mit den oberen beiden Schrauben anzufangen und mit schmaler Spitze (PH2) die untern beiden schrauben parallel zu loesen, so dass das Radio nach vorne oben mitkommt. Ansonsten hat man Macken an dem Radio unten rechts und links.&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/03_schrauben.png&quot; alt=&quot;Blende offen&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Was soll ich schreiben? Kabelchaos. Wenn man keine Ahnung von Kabeln/Stecker/Elektronik hat, sollte man spätesten hier aufhören. Auf jeden Fall die Stromversorgung trennen!&lt;br /&gt;
+&lt;p&gt;Was soll ich schreiben? Kabelchaos. Wenn man keine Ahnung von Kabeln/Stecker/Elektronik hat, sollte man spätesten hier aufhören und das Set einem KFZ-kundigen übergeben. Auf jeden Fall die Stromversorgung trennen!&lt;br /&gt;
 Wenn man schon z.B. einen PC zusammengeschraubt hat, dann trennt man den ISO Stecker (2 Stecker in einem nahezu quadratischen Port) zwischen Radio und Auto und klemmt den Kabelbaum (CAW-CCOMFI1) dazwischen. Der neue Kabelbaum hat eine schwarze schmale Steckerleiste, welche in die Box (CAW-COMUN2) kommt.&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/04_kabelchaos.png&quot; alt=&quot;Die Kabel hinter dem Radio. Chaos.&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nochmal etwas zurechtgelegt, der nicht selbsterklärende Teil:&lt;br /&gt;
-Der Box (CAW-COMUN2) liegt ein kleines Kabel bei. Der Stecker kommt in das entsprechende gegenstück des neuen Kabelbaum (CAW-CCOMFI1). Das lose braune Kabel wird mit dem blau/gelb-Kabel des Autoradios verbunden. Den Mini-Klinkenstecker irgendwie isolieren/fixieren, vielleicht eleganter als meine Lösung mit dem weißen Panzertape.&lt;br /&gt;
+Der Box (CAW-COMUN2) liegt ein kleines Kabel bei. Der Stecker kommt in das entsprechende Gegenstück des neuen Kabelbaum (CAW-CCOMFI1). Das lose braune Kabel wird mit dem blau/gelb-Kabel des Autoradios verbunden. Den Mini-Klinkenstecker irgendwie isolieren/fixieren, vielleicht eleganter als meine Lösung mit dem weißen Panzertape.&lt;br /&gt;
 &lt;img src=&quot;/media/lenkradfb_ducato_dnx451/05_kabeladapter.png&quot; alt=&quot;Der schlecht beschriebene Adapter Kabelbaum-LenkradFB&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Jetzt muss die Box angelernt werden, &lt;a href=&quot;#ablauf&quot;&gt;siehe unten&lt;/a&gt;. Spart Euch den Schritt frühzeitig alles wieder zusammenzubauen. Ich habe die Box mehrfach neu programmiert, bis es mir gefallen hat.&lt;br /&gt;
@@ -445,14 +583,14 @@ Das Plastikteil in der Tüte der Box, welches wie abgebrochen aussieht, ist ein 
 &lt;h2 id=&quot;programmieren-die-anleitung-sagt-&quot;&gt;Programmieren. Die Anleitung sagt …&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;… Zündung aktivieren, die Box blinkt.&lt;/li&gt;
+  &lt;li&gt;… Zuendung aktivieren, die Box blinkt.&lt;/li&gt;
   &lt;li&gt;Wenn die Box schnell blinkt, kann sofort gestartet werden. Wenn nicht, Reset: ‘Zündung aus, Taste drücken und gedrückt halten, Zündung an. Wenn die LED rot blinkt, Button loslassen.’&lt;/li&gt;
   &lt;li&gt;Man drückt eine Taste auf der Lenkradfernbedienung, die Box zeigt mit einem aufleuchten der LED an, dass der Steuerbefehl angenommen wurde.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Das ist ja einfach. Bis auf das man gleichzeitig drücken und auf die LED achten muss.&lt;/p&gt;
+&lt;p&gt;Das ist ja einfach.&lt;/p&gt;
 
-&lt;h2 id=&quot;folgende-zustände-kann-die-box-anzeigen&quot;&gt;Folgende Zustände kann die Box anzeigen&lt;/h2&gt;
+&lt;h3 id=&quot;folgende-zustaende-kann-die-box-anzeigen&quot;&gt;Folgende Zustaende kann die Box anzeigen&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -578,7 +716,7 @@ Das Plastikteil in der Tüte der Box, welches wie abgebrochen aussieht, ist ein 
   &lt;li&gt;An der Lenkradfernbedienung ‘Telefon auflegen’ drücken, die Box blinkt einmal rot&lt;/li&gt;
   &lt;li&gt;Auf der Box einmal den Button drücken (11 überspringen), die Box blinkt einmal rot&lt;/li&gt;
   &lt;li&gt;Auf der Box einmal den Button drücken (12 überspringen), die Box blinkt grüen&lt;/li&gt;
-  &lt;li&gt;Radioprotokoll auswaehlen: ‘Suchen +’ druecken&lt;/li&gt;
+  &lt;li&gt;Radioprotokoll auswählen: ‘Suchen +’ drücken&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;lenkradfernbedienung---tasten&quot;&gt;Lenkradfernbedienung - Tasten&lt;/h3&gt;
@@ -617,7 +755,7 @@ Das Plastikteil in der Tüte der Box, welches wie abgebrochen aussieht, ist ein 
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h1 id=&quot;fazit&quot;&gt;Fazit&lt;/h1&gt;
+&lt;h2 id=&quot;fazit&quot;&gt;Fazit&lt;/h2&gt;
 
 &lt;p&gt;Die Box war das Geburtstagsgeschenk 2021 an mich von meiner Frau, als wegen Corona alles zu hatte. So konnten wir die Funktion zwar nicht sofort testen, aber ich konnte am Wohnmobil basteln.&lt;br /&gt;
 Jetzt, nach einigen Fahrten, muss ich sagen der Mehrwert ist gewaltig. Es handelt sich immernoch um einen Transporter, das heisst es ist nicht zu vergleichen mit dem Multimediacockpit eines Mini Cooper oder BMW, aber man muss nicht mehr in die Mitte greifen und versuchen per Touch das richtige Feld zu treffen.&lt;br /&gt;
@@ -625,10 +763,15 @@ Das Radio hat seine Schwächen, aber das Telefonieren per Bluetooth auf Landstra
 
 &lt;p&gt;Es gibt per Amazon auch Boxen, welche etwa ein drittel der orignalen Lösung kosten. Von denen habe ich ersteinmal abstand genommen, denn in meinem Urlaub soll es funktionieren. Wenn jemand Erfahrungne mit diesen 3rd Party Lösungen aus China hat, bin ich sehr an einem Erfahrungsbericht interessiert.&lt;/p&gt;
 
-&lt;h1 id=&quot;nachtrag-09062022-leitung-braunblaugelb&quot;&gt;Nachtrag 09.06.2022: Leitung braun/blaugelb&lt;/h1&gt;
+&lt;h1 id=&quot;update&quot;&gt;Update&lt;/h1&gt;
 
-&lt;p&gt;In der Zwischenzeit hat die Lenkradfernbedienung schon ein paar KM gesehen, und sie setzte immer wieder aus. Ich vermutete schon, dass es an meiner professionellen Panzertape Kabelverbindung liegt. Seit ich dort eine Wago-Klemme einsetze läuft auch alles zuverlässig.&lt;br /&gt;
-Beim nächsten Mal auseinandernehmen werde ich die leere Taste von ‘Quelle’ auf ‘Sprachbefehl’ programmieren.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><summary type="html">Ausgangslage</summary></entry><entry><title type="html">Infrastruktur - LupusEnet</title><link href="http://blog.lupuse.org/howto/2021/08/31/Infrastruktur-LupusEnet.html" rel="alternate" type="text/html" title="Infrastruktur - LupusEnet" /><published>2021-08-31T20:07:13+00:00</published><updated>2021-08-31T20:07:13+00:00</updated><id>http://blog.lupuse.org/howto/2021/08/31/Infrastruktur---LupusEnet</id><content type="html" xml:base="http://blog.lupuse.org/howto/2021/08/31/Infrastruktur-LupusEnet.html">&lt;h1 id=&quot;was-ist-lupusenet&quot;&gt;Was ist LupusEnet?&lt;/h1&gt;
+&lt;p&gt;Da die Lenkradfernbedienung nach einiger Zeit immer unzuverlässier funktionierte und ich die Panzertape-Konstruktion vermutete, habe ich am 25.03. das Tape gegen eine Wago-Klemme getauscht.&lt;br /&gt;
+&lt;img src=&quot;/media/lenkradfb_ducato_dnx451/08_kabeladapter_wago.png&quot; alt=&quot;Die Verkabelung mit Wago-Klemme&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jetzt funktioniert es wieder zu 100%, wie beim Testen.&lt;/p&gt;
+
+&lt;p&gt;Es gibt alte Wago klemmen (grau mit schmaleren orangenen Hebeln) und neue (transparent mit flachen Hebeln, wie auf dem Bild).&lt;br /&gt;
+Es ist egal welche genommen werden, hauptsache original. Ich habe die neueren genommen, weil diese deutlich flacher sind.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="Wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Ausgangslage</summary></entry><entry><title type="html">Infrastruktur - LupusEnet</title><link href="http://blog.lupuse.org/howto/2021/08/31/Infrastruktur-LupusEnet.html" rel="alternate" type="text/html" title="Infrastruktur - LupusEnet" /><published>2021-08-31T20:07:13+00:00</published><updated>2021-08-31T20:07:13+00:00</updated><id>http://blog.lupuse.org/howto/2021/08/31/Infrastruktur---LupusEnet</id><content type="html" xml:base="http://blog.lupuse.org/howto/2021/08/31/Infrastruktur-LupusEnet.html">&lt;h1 id=&quot;was-ist-lupusenet&quot;&gt;Was ist LupusEnet?&lt;/h1&gt;
 &lt;p&gt;Wie ich zuvor schrieb, nenne ich mich LupusE im internet. Dabei gehören mir die Domains LupusE.de .net .com und .org&lt;br /&gt;
 Die Domain LupusE.de wurde irgendwie die Hauptdomain für Kommunikation&lt;br /&gt;
 Die Domain LupusE.org war shcon immer eine Spielwiese&lt;br /&gt;
@@ -1091,58 +1234,4 @@ ubuntu@goldenbuntu:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span cla
 ubuntu@goldenbuntu:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;GoldenCheetah
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Beim ersten Starten muss ein Profil angelegt werden. Je nachdem wie gut die virtualisierte Umgebung funktioniert geht es sofort oder es muss erst abgeschossen und nochmal gestartet werden.&lt;br /&gt;
-In der VM kann der oben genannte Importer genutzt werden, da die VM keinen einfachen Zugang zu den Daten des Hostsystems hat.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="produkte" /><category term="garmin" /><category term="uhr" /><category term="smartwatch" /><summary type="html">Hardware - Den Alltag vermessen Angefangen hat meine Frau mit der Garmin vivoactive. Sie wollte aktiver werden und hat sich belesen über den aktuellen Stand der Technik, und sich als Unterstützung die Garmin vivoactive gekauft. Sie hat es mit dem Smartphone gekoppelt und hatte ab dann eine abgespecktes Smartwatch.</summary></entry><entry><title type="html">Kodi und das Fritz!NAS</title><link href="http://blog.lupuse.org/howto/2019/04/20/kodi-und-das-fritznas.html" rel="alternate" type="text/html" title="Kodi und das Fritz!NAS" /><published>2019-04-20T07:16:21+00:00</published><updated>2019-04-20T07:16:21+00:00</updated><id>http://blog.lupuse.org/howto/2019/04/20/kodi-und-das-fritznas</id><content type="html" xml:base="http://blog.lupuse.org/howto/2019/04/20/kodi-und-das-fritznas.html">&lt;h1 id=&quot;fritznas---für-das-kleine-portemonaie&quot;&gt;Fritz!NAS - Für das kleine Portemonaie&lt;/h1&gt;
-&lt;p&gt;Hier in Deutschland besitzt wohl ein grossteil der Internetbenutzer eine Fritz!Box. Diese plastik Router besitzen zwar keine enterprise Funktionen, aber sind für den Heimgebrauch einfach ausreichend.&lt;br /&gt;
-Zusätzlich zum Routing per LAN und WLAN bieten die Boxen einen oder zwei USB Ports um einen externen Datenträger anzubinden. In der letzten Labor Firmware hat AVM sogar mit SMBv3 experiemntiert, aber ist dann in der finalien Version (7.10) doch wieder auf v1 geblieben. Schade.&lt;br /&gt;
-Das nennt AVM Fritz!NAS, hat aber durch die Protokollauswahl (FTP, HTTP, SMB) relativ wenig mit einer ernstzunehmendne Alternative gemein. Selbst Windows 10 muss man erst dazu überreden das veraltete und unsichere SMBv1 zu sprechen, um per ‘Dateifreigabe’ auf sen Fritz!NAS zu kommen.&lt;/p&gt;
-
-&lt;h2 id=&quot;fritzbox-benutzer-einrichten&quot;&gt;Fritz!Box Benutzer einrichten&lt;/h2&gt;
-
-&lt;h1 id=&quot;kodi---multimediacenter&quot;&gt;Kodi - Multimediacenter&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.kvibes.de/mediaelch/&quot;&gt;Kodi&lt;/a&gt; läuft bei mir mit einem &lt;a href=&quot;https://libreelec.tv&quot;&gt;LibreELEC&lt;/a&gt; auf einem Raspberry Pi. LibreELEC ist eine ‘Just enough OS for Kodi’ Distribution, welche die Leistung des Systems für die eigentliche Anwendung (Kodi) bereit hält. Kodi habe ich schon genutzt als der Name noch XBMC (XBox Media Center) war.&lt;br /&gt;
-Kodi spricht fast alles was es an Schnittstellen gibt um auf Dateien zuzugreifen. SMB, NFS, FTP, DNLA, … Das kleinste gemeinsame Vielfache ist hier SMB.&lt;/p&gt;
-
-&lt;h2 id=&quot;mediaelch---kodi-datenbank-pflegen&quot;&gt;MediaElch - Kodi Datenbank pflegen&lt;/h2&gt;
-&lt;p&gt;Kodi bringt Scrapper mit, kleine Dienste, welche einen Titel nehmen, einen passenden Datensatz innerhalb einer Onlinebibliothek, zum Beispiel IMDB, suchen und die Metadaten ziehen. Die Daten werden in den Filmordner als .nfo ud Bilddateien gespeichert. Als Standard nutzt Kodi eine SQLite Datenbank, es besteht aber id eMöglichkeit mehrere Kodi Installation per MySQL (MariaDB/Postgress) Datenbank zentral zu verwalten.&lt;br /&gt;
-Der Scrapper funktionierte anfangs sehr gut, bei einer größeren Sammlung und serien gab es baer immer wieder schwierigkeiten, so dass ich das Pflegen der Metadaten heute bequemer manuell am PC mache. Dazu hilft mir MediaElch.&lt;br /&gt;
-Das Programm gibt es als Ubuntu reposetory, was nicht wirklich aktiv gepflegt wird, aber auf allen getesteten Ubuntu Versionen funktioniert. Mittlerweile nutze ich Debian und daher kompiliere ich es selbst.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;build-essential git libmediainfo-dev libcurl4-openssl-dev
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;qt5-default qtmultimedia5-dev qtscript5-dev qtdeclarative5-dev qtdeclarative5-controls-plugin qtdeclarative5-models-plugin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Quelle: https://www.kodinerds.net/index.php/Thread/49966-MediaElch-Kompilieren/&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; ~/git&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/git
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/Komet/MediaElch.git &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;MediaElch
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;build &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;qmake ..
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make &lt;span class=&quot;nt&quot;&gt;-j4&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;… Abwarten.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./MediaElch
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;arbeitsweise&quot;&gt;Arbeitsweise&lt;/h2&gt;
-&lt;p&gt;Im MediaElch werden die Verzeichnisse konfiguriert, in denen die Medien liegen. Mit ‘Aktualisieren’ aus dme Menü oben werden die Verzeichnisse neu eingelesen und in der Liste links stehen ganz oben die Filme, welche noch keine Metadaten haben. Mit einem rechtsklick auf diesen Namen und aus dem Kontextmenü ‘Informationen holen’, wird ein dialog angezeigt, in dme Vorschläge gemacht werden. Der Film sollte daher im Verzeichnisnamen ‘Titel__Erscheinungsjahr’ gespeichert sein. Damit erhalte ich bisher das beste Ergebnis.&lt;br /&gt;
-Nach einem Doppelklick auf den richtigen Eintrag werden Metadaten und Bilder heruntergeladen. Im anshcluss wird oben im Menü auf ‘Speichern’ geklickt und die Daten werden in das Filmverzeichnis geschrieben.&lt;/p&gt;
-
-&lt;h1 id=&quot;curlftpfs&quot;&gt;curlftpfs&lt;/h1&gt;
-&lt;p&gt;Obwohl ich FTP soweit es geht meide, finde ich SMB unter Linux noch doofer und nutze das Paket &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curlftpfs&lt;/code&gt; um das Fritz!NAS Verzeichnis lokal verfügbar zu machen.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; /mnt/kodi
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo chown &lt;/span&gt;user:user /mnt/kodi
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vim /etc/fstab
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;...]
-curlftpfs#ftp://fritz.nas /mnt/kodi fuse noauto,allow_other,codepage&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;latin1,iocharset&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;utf8,umask&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0022,user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;user:password 0 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;noauto - Nicht beim Booten laden&lt;/li&gt;
-  &lt;li&gt;allow_other - Andere Benutzer erlauben&lt;/li&gt;
-  &lt;li&gt;codepage=&lt;strong&gt;latin1&lt;/strong&gt; - Damit das Fritz!NAS auch umlaute speichert&lt;/li&gt;
-  &lt;li&gt;iocharset=&lt;strong&gt;utf8&lt;/strong&gt; - Lokal sollte man nichts anderes mehr nutzen&lt;/li&gt;
-  &lt;li&gt;umask=&lt;strong&gt;0022&lt;/strong&gt; - Standardberechtigung für angelegte Dateien&lt;/li&gt;
-  &lt;li&gt;user=&lt;strong&gt;user:password&lt;/strong&gt; - user und password natürlich anpassen&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Manchmal funktioniert durch das Routing der Hostname nicht, dann hilft es fritz.box als Hostnamen oder die IP anzugeben.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="howto" /><category term="kodi" /><category term="nas" /><category term="server" /><summary type="html">Fritz!NAS - Für das kleine Portemonaie Hier in Deutschland besitzt wohl ein grossteil der Internetbenutzer eine Fritz!Box. Diese plastik Router besitzen zwar keine enterprise Funktionen, aber sind für den Heimgebrauch einfach ausreichend. Zusätzlich zum Routing per LAN und WLAN bieten die Boxen einen oder zwei USB Ports um einen externen Datenträger anzubinden. In der letzten Labor Firmware hat AVM sogar mit SMBv3 experiemntiert, aber ist dann in der finalien Version (7.10) doch wieder auf v1 geblieben. Schade. Das nennt AVM Fritz!NAS, hat aber durch die Protokollauswahl (FTP, HTTP, SMB) relativ wenig mit einer ernstzunehmendne Alternative gemein. Selbst Windows 10 muss man erst dazu überreden das veraltete und unsichere SMBv1 zu sprechen, um per ‘Dateifreigabe’ auf sen Fritz!NAS zu kommen.</summary></entry></feed>
+In der VM kann der oben genannte Importer genutzt werden, da die VM keinen einfachen Zugang zu den Daten des Hostsystems hat.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="produkte" /><category term="garmin" /><category term="uhr" /><category term="smartwatch" /><summary type="html">Hardware - Den Alltag vermessen Angefangen hat meine Frau mit der Garmin vivoactive. Sie wollte aktiver werden und hat sich belesen über den aktuellen Stand der Technik, und sich als Unterstützung die Garmin vivoactive gekauft. Sie hat es mit dem Smartphone gekoppelt und hatte ab dann eine abgespecktes Smartwatch.</summary></entry></feed>

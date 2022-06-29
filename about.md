@@ -1,51 +1,62 @@
 ---
-layout: default
-title: Impressum
+layout: page
+title: Über mich
+subtitle: Die Welt ist ein Theater. Und das Publikum will etwas geboten bekommen.
 ---
-<p>Nach der DSGVO ist es wohl nicht mehr ratsam eine dynamische Webseite zu haben.</p>
-<p>Ich distanziere mich von allem. </p>
 
-# Impressum
+Hallo Welt. Mein Name ist Benjamin Moeller.  
+Ich habe ein großartiges Leben.
 
-## Angaben gemäß § 5 TMG
+# Eine Kurze Geschichte vom Lebenslauf
 
-```
-Benjamin Moeller
-Amselstr 7
-25358 Horst (Holstein)
-```
-### Kontakt
-E-Mail: git@lupuse.org
+- Grundschule
+- Weiterführende Schule
+- Zivildienst
+- Berufsschule Hörgeräteakustik
+- Gesellenjahre Hörgeräteakustik
+- Berufsschule Fachinformatik -Systemintegration-
+- Fachinformatik -Systemintegration-: Support
+- Fachinformatik -Systemintegration-: Virenanalyst
+- Fachinformatik -Systemintegration-: Unternehmensberater (ITSE, O365, Linux)
+- Fachinformatik -Systemintegration-: Kundendaten Analyst
+- Fachinformatik -Systemintegration-: Unternehmensberater (Automation)
+- Leiter IT
 
-### Für den Inhalt verantwortlich nach § 55 Abs. 2 RStV
-```
-Benjamin Moeller
-```
+_Was kommt nun?_
 
-## Haftungsausschluss
-Ich beabsichtige mit dem Blog lupuse.org keinerlei gewerbliche Nutzung.
+# Details
 
+Ich war nie gerne in der Schule. Aber ich habe immer gerne gelernt. Eine Mischung zwischen 'Was mache ich hier?' (Regelschule) und 'Wach bleiben durch Melden' (Berufsschule) versauten mir meinen 'erfolgreichen' Werdegang. Zumindest kurzfristig.  
 
-### Haftung für Inhalte
+> "Everyone you'll ever meet knows something you don't" (by Bill Nye).
 
-Die Inhalte meiner Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.  
+Mittlerweile habe ich schwierigkeiten meinen Lebenslauf auf 2 DIN A4 Seiten zu bekommen. Zum Anfang alle 2 Jahre mit neuem Arbeitgeber in jeweils verschiedenen Verantwortungsbereichen.  
+Es wird gesagt, dass nach einer gewissen Zeit der Lebenslauf nicht mehr entscheidend ist. Und auch, dass im Lebenslauf nur das erscheinen soll, was für die beworbene Position relevant ist. Schwierig.  
 
+Aufgefallen ist mir nur, dass wesentlich weniger Zurückgemeldet wird, als ich von zivilisierter Kommunikation erwarten würde.  
+Egal wie man in eine Bewerbungsphase kommt, durch Vitamin B, durch eine Soziale Plattform oder durch Zufall: Irgendwann kommt man bei größeren Unternehmen dazu seine Daten in ein Portal zu hacken.  
+Natürlich gibt es keinen Importer und die Felder sind so Atomar wie möglich gestaltet. Also sein komplettes Xing-Profil, jedes Mal, Zeile für Zeile kopieren, was bei Datumsfeldern natürlich aus irgendeinem Grund nicht funktioniert, macht keinen Spass.  
+Wenn man dann keine Antwort erhält: Doppelt kein Spass.  
 
-### Haftung für Links
+Mittlerweile schreibe ich im Freifeld in Bewerbungsportalen gerne, dass sie mich gerne Anschreiben dürfen, wenn ich die Stelle nicht bekomme und die Firma ihr Portal in den Griff bekommen möchte. Das gibt dann originelle Antworten, wie: "Das macht HR, dafür sind wir aus der IT nicht zuständig" ... Das klingt von der Antwort aber viel mehr nach HR, bin ich froh dass ich bei den Bürokraten nicht angenommen wurde.  
 
-Mein Blog enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+# Und was suche ich?
 
-### Urheberrecht
+_Mich selbst?_ 
+Gewiss nicht.
 
-<del>Die von mir erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</del> Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.  
+_Viel Geld?_  
+Angemessenes Gehalt für eine interessante Tätigkeit reicht.
 
-Das ist natürlich quatsch. Benutzt von dem mir erstellten Inhalten was ihr wollt, erwähnt mich gerne als Quelle.
+_Work-Life-Balance?_  
+Ja, unbedingt. Aber nicht vorgegeben! Mir muss niemand sagen, wie ich meine Freizeit zu gestalten habe. Hinweise und Tipps sind wiederum willkommen.  
 
+_Home Office?_  
+Schwieriges Thema. So gerne ich nahe am Zuhause bin, so sehr liebe ich es im Büro einfach die Tür hinter mir zu schliessen und damit die Projekte hinter mir zu lassen. Gerne arbeite ich im 'Home Office', auch im Wohnmobil, oder in Dänemark am Strand. Dank LTE alles möglich. Und manche Projekte benötigen nichteinmal Internet.
 
+[.. bitte mit Meldung, ich ignoriere Zwischenrufe. Aber hier eine Ausnahme]  
+_In welchem Bereich?_  
+Das ist mir Egal. Ich kenne mich mit Datenbanken aus, mit Sicherheit, mit Netzwerken, mit Linux, mit Windows Desktop und mit verschiedenen Servern, mit Kleinstrechnern (RaspberryPi), mit Prozessen (ITIL), mit Ticketsystemen, mit FOSS ... und doch schrecke ich nicht davor zurück etwas neues zu lernen!  
 
-### Datenschutz
-
-Die Nutzung meiner Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf meinen Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
-Ich weise darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
-Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Ich behalte mir ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.
+... to be continued ...  
 

@@ -236,22 +236,22 @@ Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwe
 
 # Bilder
 
-Der lokale Testaufbau für Referenzwerte am Schreibtisch.
+Der lokale Testaufbau für Referenzwerte am Schreibtisch.  
 ![Testaufbau Desktop](/media/router_beryl/router_beryl_test.jpg)
 
-Der erste Standort am zentralen Panel. Oben der Router, unten das Netzteil an 230V. Die neben der 230V Landstrom-Steckdose serienmäßig verbaute 12V KFZ-Steckdose habe ich gegen eine 2xUSB (max. 2,1A) Umgebaut.
+Der erste Standort am zentralen Panel. Oben der Router, unten das Netzteil an 230V. Die neben der 230V Landstrom-Steckdose serienmäßig verbaute 12V KFZ-Steckdose habe ich gegen eine 2xUSB (max. 2,1A) Umgebaut.  
 ![Testaufbau Panel](/media/router_beryl/router_beryl_panel.jpg)
 
-Der Standort über dem Fahrer ist fast perfekt, hat aber nur einen 230V Landstrom Anschluss.
+Der Standort über dem Fahrer ist fast perfekt, hat aber nur einen 230V Landstrom Anschluss.  
 ![Testaufbau Dach](/media/router_beryl/router_beryl_dach.jpg)
 
-Im Zentrum des Buffymobils in der Küche für Testmessungen.
+Im Zentrum des Buffymobils in der Küche für Testmessungen.  
 ![Testaufbau Kueche](/media/router_beryl/router_beryl_kueche.jpg)
 
-Hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant schlechter (ca. 2m weiter weg vom Router). Aber wer will die Strahlung am Kopf?
+Hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant schlechter (ca. 2m weiter weg vom Router). Aber wer will die Strahlung am Kopf?  
 ![Testaufbau Bett](/media/router_beryl/router_beryl_bett.jpg)
 
-Es wurde an fast jeder Steckdose getestet.
+Es wurde an fast jeder Steckdose getestet.  
 ![Testaufbau Bad](/media/router_beryl/router_beryl_bad.jpg)
 
 

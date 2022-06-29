@@ -1,6 +1,7 @@
 ---
 layout: page
-title: CV
+title: CV (Curriculum Vitea)
+author: Benjamin Moeller
 subtitle: Lebenslauf
 ---
 
@@ -9,9 +10,10 @@ subtitle: Lebenslauf
 > Nationalität:		deutsch/dänisch<br />
 > E-Mail:		bm@lupuse.de<br />
 
+---
 
 # BERUFSERFAHRUNG
----
+
 ## 03/2015 – heute **Leiter IT** / Frommer oHG, Bad Segeberg
 
 * Inhabergeführtes Unternehmen für die Anpassung und den Verkauf von Hörlösungen. Die Firma legt Wert auf sehr gut ausgebildetes Personal und die beste Ausstattung für eine individuelle Bedarfsanalyse und Versorgung.
@@ -139,29 +141,33 @@ Nahezu homogene Ausstattung der IT an allen Standorten
 Aufbau eines zentralen Servers zur Koordination der Standorte
 ```
 
+---
 
 # AUSBILDUNG
----
-### 2008 – 2010 **Ausbildung** / Amplifon Deutschland GmbH, Hamburg
+
+## 2008 – 2010 **Ausbildung** / Amplifon Deutschland GmbH, Hamburg
 * Abschluss: Fachinformatiker Systemintegration
 
-### 2003 – 2006 **Ausbildung** / Pavel Hörgeräte GmbH, Kiel
+## 2003 – 2006 **Ausbildung** / Pavel Hörgeräte GmbH, Kiel
 * Abschluss: Geselle der Hörgeräteakustik
 
-### 2000 – 2001 **Zivildienstleistender** / Gerontopsychatrische Abteilung der Arbeiterwohlfahrt in Kiel
+## 2000 – 2001 **Zivildienstleistender** / Gerontopsychatrische Abteilung der Arbeiterwohlfahrt in Kiel
 
-### bis 2000 **Realschule des BZM in Kiel**
+## bis 2000 **Realschule des BZM in Kiel**
 * Abschluss: Mittlere Reife mit Note 2
 
+---
 
 # SPRACH-KENNTNISSE
----
+
 > Deutsch: Muttersprache<br />
 > Englisch: sicher, mehrjährige Arbeit im internationalen Team und gehaltene Schulung<br />
 > SQL: flüssig in Präsentation und Schrift
 
+--- 
+
 # IT-KENNTNISSE
----
+
 * Windows und Linux im Einsatz als Desktop und Server
 * Kenntnisse der gängigen Serverdienste für Linux und MS Exchange
 * Kenntnisse in Migration und Betrieb von AzureAD/O365 im KMU
@@ -173,14 +179,18 @@ Aufbau eines zentralen Servers zur Koordination der Standorte
 * Kenntnisse in Debugging für gängige Hochsprachen
 * Kenntnisse der Automationslösung 'Automic', sowie Grundlagen anderer Lösungen
 
-# WEITERBILDUNG
 ---
+
+# WEITERBILDUNG
+
 * AkuWin Office NG im Filialunternehmen (2005, Husum)
 * Microsoft Exchange Server 2010 Grundlagen und Administration (2012, Berlin)
 * Fujitsu Siemens CEME, CPME, CMME, CDME (2014, Friedrichshafen)
 
-# FREIZEIT
 ---
+
+# FREIZEIT
+
 > Radfahren, Wandern, Reparaturen von elektrischen und mechanischen Geräten im Haushalt, allgemeine Arbeiten im und am Haus, Reisen mit dem Wohnmobil, Smarthome, Inlineskating
 
 
