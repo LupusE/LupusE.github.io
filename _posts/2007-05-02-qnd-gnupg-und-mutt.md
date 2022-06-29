@@ -4,8 +4,8 @@ published: true
 title: quick-and-dirty - GnuPG und Mutt
 author: Benjamin Moeller
 date: 2007-05-02 17:24:06 UTC
-categories: [linux, QuickAndDirty]
-tags: [cnf, linux, qnd]
+categories: [howto]
+tags: [config, linux, gpg, sicherheit]
 comments: []
 ---
 

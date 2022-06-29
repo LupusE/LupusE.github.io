@@ -5,7 +5,7 @@ title: Beziehungskrisen
 author: Benjamin Moeller
 date: 2007-04-04 16:27:47 UTC
 categories: [gedenke]
-tags: [gedenke]
+tags: [gedenke, beziehung]
 comments: []
 ---
 Nein, keine Angst, hier möchte ich nicht über meine aktuelle Beziehungskrise referieren. Wie Jeder weiss bin ich nicht in der Lage eine Beziehung zu föhren.  

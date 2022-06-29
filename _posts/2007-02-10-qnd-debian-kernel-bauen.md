@@ -4,8 +4,8 @@ published: true
 title: 'quick-and-dirty Debian: Kernel bauen'
 author: Benjamin Moeller
 date: 2007-02-10 11:08:29 UTC
-categories: [linux, QuickAndDirty]
-tags: [linux, qnd]
+categories: [howto]
+tags: [linux, qnd, kernel]
 comments: []
 ---
 

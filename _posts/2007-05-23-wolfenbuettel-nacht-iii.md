@@ -4,8 +4,8 @@ published: true
 title: Wolfenbuettel - Nacht III
 author: Benjamin Moeller
 date: 2007-05-23 21:16:00 UTC
-categories: [reisen]
-tags: [reise]
+categories: [reise]
+tags: [reise, gesellschaft]
 comments: []
 ---
 

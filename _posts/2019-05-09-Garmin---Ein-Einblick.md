@@ -4,8 +4,8 @@ published: true
 title: Garmin - Ein Einblick
 author: Benjamin Moeller
 date: 2019-05-09 22:20:28 UTC
-categories: [gadgets]
-tags: [garmin]
+categories: [produkte]
+tags: [garmin, uhr, smartwatch]
 comments: []
 ---
 

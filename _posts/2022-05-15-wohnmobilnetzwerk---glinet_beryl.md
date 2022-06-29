@@ -4,12 +4,12 @@ published: true
 title: Wohnmobilnetzwerk - Gl.iNet Beryl
 author: Benjamin Moeller
 date: 2022-05-15 16:24:00 UTC
-categories: [Wohnmobil]
-tags: [UnterwegsZuhause]
+categories: [wohnmobil]
+tags: [reise, netzwerk, router]
 comments: []
 ---
 
-## tl;dr
+# tl;dr
 
 Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.
 1. gl.iNet Router in gewünschter Ausstattung (und Preis) kaufen: [Gl.iNet Produkte](https://www.gl-inet.com/products/)
@@ -29,7 +29,7 @@ Dabei gibt es folgende Wege für das Internet:
 --- 
 
 
-## Vorgeschichte
+# Vorgeschichte
 
 Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs nicht mehr optional.  
 
@@ -136,7 +136,7 @@ Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt e
 ---
 
 
-## Technisch
+# Technisch
 
 Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Die Oberfläche benutzt einiges an Scripting, das bedeutet auf alternativen (LineageOS) oder sehr eingeschränkten (NoScript Plugin) Browsern muss gelegentlich per Hand nachgeladen werden. Generell funktioniert aber alles.  
 Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.  
@@ -146,20 +146,20 @@ https://openwrt.org/toh/views/toh_tfdownload <- suchen nach 'Brand = gl.inet'
 
 Alle Weboberflächen nutzen http anstatt https. Da wir mit einem Microcomputer arbeiten und das ausschliesslich im privaten LAN konfigurieren, verzichtet man auf den Overhead der Verschlüsselung und einer unschönen Sicherheitswarnung im Browser.  
 
-### Was ist OpenWRT?
+## Was ist OpenWRT?
 
 [OpenWRT](https://openwrt.org) ist ein offenes Routerbetriebssystem auf Linux Basis, mit dem Paketmanager **opkg**.  
 Da bestimmt 95% der im Alltag vorkommenden Konfigurationen über die LuCI Weboberfläche erledigt werden können, ist dieses System für den ambitionierten Anwender nicht schwieriger zu benutzen als eine AVM Fritz!Box.  
 Die Standarddialoge sind meist gut auf deutsch übersetzt.  
 
-### LuCI Web UI
+## LuCI Web UI
 
 Die Gl.iNet Weboberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.  
 Dazu auf [http://192.168.8.1/cgi-bin/luci](http://192.168.8.1/cgi-bin/luci) gehen, oder im Menü ganz unten auf **More Settings** den Unterpunkt **Advanced** auswählen. Wenn die Oberfläche nicht installiert ist, kann sie mit dem Button 'Install' nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt. Der Benutzer ist 'root' und das Passwort wieder das zuerst vergebene.
 
 ![Browser LuCI](/media/router_beryl/browser_beryl_luci_overview.png)
 
-### Länderkonfiguration
+## Länderkonfiguration
 
 Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. man merkt es kaum, die offensichtlichste Auswirkung sind die erlaubten WLAN Kanäle im 2,4GHz Band: 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefunden wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.  
 
@@ -176,7 +176,7 @@ Aus dem Editor (vim) kommt Ihr mit der Tastenfolge: `[Esc][:][x][Enter]`. Es gib
 > TIPP: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal (kein Scherz)!  
 Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenne investieren.  
 
-### glinet App 
+## glinet App 
 
 Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der [Website](https://www.gl-inet.com/app/).  
 Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.  
@@ -197,7 +197,7 @@ Eine Übersicht der möglichen Internetzugänge und der Clients im lokalen Netzw
 Das letzte Fenster bietet einen Schnellzugriff auf einige Systemeinstellungen. Das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.  
 ![Gl.iNetApp Network](/media/router_beryl/N7glinet_app-5_system.png)  
 
-### VPN
+## VPN
 Vorweg: Wer nach dem Lesen dieses Absatz weniger versteht als vorher, dieser Abschnitt ist wichtig für die Privatsphäre, nicht für die grundlegende Funktion. Wenn ich zuvor einfach jedes Gerät in das Campingplatz WLAN angemeldet habe, dann macht es jetzt auch keinen Unterschied.  
 
 Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit die Zähne an IPSec und OpenVPN ausgebissen habe, habe ich diese Runde an **WireGuard** vergeben.  
@@ -223,7 +223,7 @@ Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwe
 ---
 
 
-## Zukunft
+# Zukunft
 
 - Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantene aus einem 17" Laptop vor, die um die Dachlucke kommt. Das ist nicht schlimm, Gl.iNet stellt dafür sogar eine Anleitung bereit. Die Garantie verliert man trotzdem.  
 - Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.  
@@ -234,7 +234,7 @@ Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwe
 ---
 
 
-## Bilder
+# Bilder
 
 Der lokale Testaufbau für Referenzwerte am Schreibtisch.
 ![Testaufbau Desktop](/media/router_beryl/router_beryl_test.jpg)
@@ -256,6 +256,6 @@ Es wurde an fast jeder Steckdose getestet.
 
 
 Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen (ggf. mit Geschirrtuch gegen direkte Sonneneinstrahlung), für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.  
-Im 4-Pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V->5V/3A Spannungswandler einzubauen.  
+Im 4pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V->5V/3A Spannungswandler einzubauen.  
 Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.  
 

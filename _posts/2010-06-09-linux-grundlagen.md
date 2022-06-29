@@ -4,8 +4,8 @@ published: true
 title: Linux Grundlagen
 author: Benjamin Moeller
 date: 2010-06-09 01:21:09 UTC
-categories: [linux]
-tags: [linux]
+categories: [howto]
+tags: [linux, grundlagen]
 comments: []
 ---
 Aus Bedarf habe ich einmal einen Block Unterrichtsstoff aus der Berufsschule genommen und in meinen Worten niedergeschrieben. Ich sollte eher an meiner Abschlusspruefung schreiben, ja ... Aber das geht nicht 24/7. Was sollte ich alternativ tun, wenn ich mit der Praesentation einfach nicht weiter komme und nicht schlafen kann?  

@@ -4,8 +4,8 @@ published: true
 title: quick-and-dirty - Moodle
 author: Benjamin Moeller
 date: 2010-01-04 22:44:27 UTC
-categories: [QuickAndDirty]
-tags: [cnf, qnd]
+categories: [howto]
+tags: [config, linux, groupware]
 comments: []
 ---
 

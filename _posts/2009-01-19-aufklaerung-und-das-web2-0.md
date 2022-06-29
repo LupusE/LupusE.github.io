@@ -5,7 +5,7 @@ title: Aufklaerung und das Web2.0
 author: Benjamin Moeller
 date: 2009-01-19 01:16:42 UTC
 categories: [gedenke]
-tags: []
+tags: [gesellschaft]
 comments: []
 ---
 Wiedermal eine schlaflose Nacht, und bevor ich noch aus versehen produktiv werde habe ich mir gedacht ich nutze mal die Erinnerung um 0:00h meines tollen Telefons an einen Geburtstag und gruesse im MeinVZ. Dabei habe ich mir gleich ihre Gruppen angesehen und siehe da, etwas fuer den Weltfrieden:  

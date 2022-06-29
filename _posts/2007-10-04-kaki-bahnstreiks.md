@@ -4,8 +4,8 @@ published: true
 title: Kaki - Bahnstreiks
 author: Benjamin Moeller
 date: 2007-10-04 16:47:19 UTC
-categories: [reisen]
-tags: [reise]
+categories: [reise]
+tags: [bahn, kaltenkirchen]
 comments: []
 ---
 

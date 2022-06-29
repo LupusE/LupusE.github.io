@@ -4,8 +4,8 @@ published: true
 title: quick-and-dirty - Debian meets WM61
 author: Benjamin Moeller
 date: 2009-07-12 00:34:58 UTC
-categories: [QuickAndDirty]
-tags: [cnf, linux, qnd]
+categories: [howto]
+tags: [config, linux, handy]
 comments: []
 ---
 

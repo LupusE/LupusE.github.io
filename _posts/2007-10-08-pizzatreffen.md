@@ -4,8 +4,8 @@ published: true
 title: Pizzatreffen
 author: Benjamin Moeller
 date: 2007-10-08 18:31:46 UTC
-categories: [Treffen]
-tags: [event, lupuse, party, treffen]
+categories: [event]
+tags: [pizza, party, treffen]
 comments: []
 ---
 

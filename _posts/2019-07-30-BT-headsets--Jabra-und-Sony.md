@@ -4,8 +4,8 @@ published: true
 title: Bluetooth Headset - Jabra und Sony
 author: Benjamin Moeller
 date: 2019-07-30 08:00:00 UTC
-categories: []
-tags: []
+categories: [produkte]
+tags: [bluetooth, headset]
 comments: []
 ---
 

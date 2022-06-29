@@ -4,8 +4,8 @@ published: true
 title: Lokale Backerien
 author: Benjamin Moeller
 date: 2007-10-10 06:40:54 UTC
-categories: [reisen]
-tags: [gedenke, LupusE, reise]
+categories: [reise]
+tags: [gedenke, broetchen]
 comments: []
 ---
 
@@ -17,7 +17,7 @@ Die Brötchen sind frisch gebacken, die Käsesorten ausgewählt und alles ist ni
 Wenn man stationär alle Bäcker durchgeht, dann hat man in weniger als einem Monat wohl einen guten Überblick, Qualitätsschwankungen nicht mitgerechnet. Aber bei 3-5 wechselnden Standorten pro Monat wird es schwierig.  
 Aber hier greift natürlich das Tourismusargument! Ich bin zu Besuch, daher darf ich ja, ohne mir ein Brötchen in Kiel zu kaufen, das in Wolfenbüttel (~400KM) pappig ist, die lokale Küche testen.  
 
-## Meine Erfahrungen
+# Meine Erfahrungen
 Wolfenbüttel: Viele Bäcker, aber ALLE mit Majonese statt Butter/Magarine. Sie tun sich alle nicht viel. Eine Ausnahme ist hier die Suse (Kaffeehaus Barbarossa), die frisch das Brötchen aufschneidet und nach Wunsch belegt. Leider erst ab 10h. Gegen Mittag aber noch immer ein Genuss. Und die Brownies!  
 Wenn Ihr mal da seid, grüsst die Suse von mir :)  
 

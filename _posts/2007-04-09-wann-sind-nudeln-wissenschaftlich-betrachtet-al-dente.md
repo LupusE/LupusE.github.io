@@ -5,7 +5,7 @@ title: Wann sind Nudeln wissenschaftlich betrachtet 'al dente'?
 author: Benjamin Moeller
 date: 2007-04-09 19:25:51 UTC
 categories: [gedenke]
-tags: [gedenke]
+tags: [nerdig, nudeln, essen]
 comments: []
 ---
 Vorweg sei gesagt, das es einige Bücher zum Thema 'Wissenschasft in der Küche' gibt, aber leider habe ich noch kein einziges gelesen. Als Aufhänger habe ich diesbezueglich immer wieder vom 'Kochwunder Ei' gelesen.

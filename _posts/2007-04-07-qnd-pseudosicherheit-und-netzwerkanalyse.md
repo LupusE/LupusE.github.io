@@ -4,8 +4,8 @@ published: true
 title: quick-and-dirty Pseudosicherheit und Netzwerkanalyse
 author: Benjamin Moeller
 date: 2007-04-07 11:20:11 UTC
-categories: [QuickAndDirty]
-tags: [qnd]
+categories: [howto]
+tags: [qnd, linux, analyse, nerdig]
 comments: []
 ---
 

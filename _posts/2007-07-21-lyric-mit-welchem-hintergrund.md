@@ -5,7 +5,7 @@ title: Lyric. Mit welchem Hintergrund?
 author: Benjamin Moeller
 date: 2007-07-21 08:34:37 UTC
 categories: [gedenke]
-tags: [gedenke]
+tags: [poesie, gedicht]
 comments: []
 ---
 

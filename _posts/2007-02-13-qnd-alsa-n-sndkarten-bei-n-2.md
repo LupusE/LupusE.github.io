@@ -4,8 +4,8 @@ published: true
 title: 'quick-and-dirty Alsa: [n] Sndkarten, bei n>=2'
 author: Benjamin Moeller
 date: 2007-02-13 21:03:50 UTC
-categories: [linux, QuickAndDirty]
-tags: [linux, qnd]
+categories: [howto]
+tags: [linux, qnd, howto]
 comments: []
 ---
 

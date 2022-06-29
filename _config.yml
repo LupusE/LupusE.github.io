@@ -22,8 +22,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.lupuse.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: LupusE42
 github_username:  LupusE
-linkedin_username: benjamin-moeller-95455472
+linkedin_username: LupusE
 facebook_username: LupusE
+instagram_username: lupuse42
+
+  #minima:
+  #social_links:
+  #  twitter: LupusE42
+  #  github: LupusE
+  #  stackoverflow: "9601986"
+  #  facebook: LupusE
+  #  linkedin: LupusE
+  #  instagram: lupuse42
 
 # Build settings
 markdown: kramdown

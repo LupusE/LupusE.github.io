@@ -5,7 +5,7 @@ title: Anarchistisches Fussball
 author: Benjamin Moeller
 date: 2007-04-28 12:31:07 UTC
 categories: [gedenke]
-tags: [gedenke]
+tags: [sport, gesellschaft]
 comments: []
 ---
 

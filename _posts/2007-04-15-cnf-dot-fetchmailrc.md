@@ -4,8 +4,8 @@ published: true
 title: CNF - dot.fetchmailrc
 author: Benjamin Moeller
 date: 2007-04-15 12:43:08 UTC
-categories: [linux]
-tags: [cnf, linux]
+categories: [howto]
+tags: [config, linux, mail]
 comments: []
 ---
 

@@ -4,8 +4,8 @@ published: true
 title: Upgrade von Linux
 author: Benjamin Moeller
 date: 2010-05-02 13:23:13 UTC
-categories: [linux]
-tags: [linux, qnd]
+categories: [howto]
+tags: [linux, partitionieren]
 comments: []
 ---
 
@@ -15,7 +15,7 @@ Mein Tipp: neue Platte kaufen ('jetzt wir in die Hände gespuckt, wir steigern d
 
 Daten sichern! Immer! Nicht nur zum Upgrade.  
 
-### Partitionierung
+# Partitionierung
 
 ```
 lupus@zoe:~$ df -h  
@@ -42,7 +42,7 @@ Um ein neues System schnell lauffähig zu bekommen reicht es mit einem 2. Benutz
 Bei meinem Aufbau könnte man zusätzlich /boot auf sda legen, im grub Systemunabhängig konfigurieren zu können. Auch die Auslagerung von /var hatte ich mal realisiert. Das macht aber nur für Forensik einen nennenswerten Sinn. Oder wenn das RAID einen Geschwindigkeitsvorteil bringen würde.  
 Warum ich /war/www auf /home/wwwuser legen würde erlaeutere ich in einem anderen Artikel.  
 
-## Fazit  
+# Fazit  
 
 1. Lagert /home aus!  
 2. Kauft eine 2. Platte! (Add 04.11.2021: SSD!)  

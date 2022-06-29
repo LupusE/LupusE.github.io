@@ -4,13 +4,13 @@ published: true
 title: Wolfenbuettel - Nacht I
 author: Benjamin Moeller
 date: 2007-05-21 19:25:00 UTC
-categories: [reisen]
-tags: [reise]
+categories: [reise]
+tags: [reise, gesellschaft]
 comments: []
 ---
 
 Hi Folks,  
-es ist mal wieder soweit, ich bin Springer und dieses Mal wieder in der suedlichsten Filiale, die unser Unternehmen zu bieten hat, Wolfenbuettel. Das liegt wenige Km hinter Hannover.  
+es ist mal wieder soweit, ich bin Springer und dieses Mal wieder in der suedlichsten Filiale, die unser Unternehmen zu bieten hat, Wolfenbuettel. Das liegt wenige KM hinter Hannover.  
 Aus Wismar bin ich es ja schon gewohnt das Ferienwohnungen zusammengebastelt und SEHR hellhoerig sind. In Wismar gab es zumindest eine vernuenftige Deckenhoehe.  
 
 Insgesammt eine nette kleine Stadt mit einigem an Kunst und Kultur.  

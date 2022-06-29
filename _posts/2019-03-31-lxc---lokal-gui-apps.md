@@ -4,7 +4,7 @@ published: true
 title: LXC - Lokal virtualisieren
 author: Benjamin Moeller
 date: 2019-03-31 20:10:13 UTC
-categories: [server]
+categories: [howto]
 tags: [server, lxd, linux]
 comments: []
 ---
@@ -12,7 +12,7 @@ comments: []
 Manchmal will man schnell etwas installieren, ohne das komplette System zu zerlegen.
 Ein sehr guter [Blog Artikel](https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/) zum Thema.
 
-## Snap/LXC installieren
+# Snap/LXC installieren
 1. Neuere Version (3.x) gibt es über snap `# apt install snapd`
 1. Alte Version deinstallieren, neue installieren `# apt purge lxd; snap install lxd`
 1. `# adduser [benutzer] lxd`
@@ -25,7 +25,7 @@ Ein sehr guter [Blog Artikel](https://blog.simos.info/how-to-easily-run-graphics
 1. In VM einloggen `$ lxc exec oldbuntu -- sudo --user ubuntu --login`
 
 
-## Aufräumen
+# Aufräumen
 1. VM verlassen `$ exit`
 1. VM beenden `$ lxc stop oldbuntu`
 1. VM löschen `$ lxc delete oldbuntu`

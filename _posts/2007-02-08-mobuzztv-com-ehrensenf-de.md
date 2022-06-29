@@ -4,8 +4,8 @@ published: true
 title: MobuzzTV.com - Ehrensenf.de
 author: Benjamin Moeller
 date: 2007-02-08 18:22:46 UTC
-categories: []
-tags: [linux]
+categories: [gedenke]
+tags: [linux, vlog, nerdig]
 comments: []
 ---
 #### A giant squid, a bee and Karina Stenquist.  

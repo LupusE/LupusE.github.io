@@ -4,8 +4,8 @@ published: true
 title: Groupwares - Heute SOGo
 author: Benjamin Moeller
 date: 2010-01-03 14:09:32 UTC
-categories: [QuickAndDirty]
-tags: [cnf, linux, qnd]
+categories: [howto]
+tags: [config, linux, groupware]
 comments: []
 ---
 

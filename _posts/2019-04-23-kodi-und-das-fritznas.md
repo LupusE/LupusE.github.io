@@ -4,8 +4,8 @@ published: true
 title: Kodi und das Fritz!NAS
 author: Benjamin Moeller
 date: 2019-04-20 07:16:21 UTC
-categories: [QuickAndDirty]
-tags: [qnd]
+categories: [howto]
+tags: [kodi, nas, server]
 comments: []
 ---
 
@@ -44,7 +44,7 @@ $ make -j4
 $ ./MediaElch
 ```
 
-### Arbeitsweise
+## Arbeitsweise
 Im MediaElch werden die Verzeichnisse konfiguriert, in denen die Medien liegen. Mit 'Aktualisieren' aus dme Menü oben werden die Verzeichnisse neu eingelesen und in der Liste links stehen ganz oben die Filme, welche noch keine Metadaten haben. Mit einem rechtsklick auf diesen Namen und aus dem Kontextmenü 'Informationen holen', wird ein dialog angezeigt, in dme Vorschläge gemacht werden. Der Film sollte daher im Verzeichnisnamen 'Titel__Erscheinungsjahr' gespeichert sein. Damit erhalte ich bisher das beste Ergebnis.  
 Nach einem Doppelklick auf den richtigen Eintrag werden Metadaten und Bilder heruntergeladen. Im anshcluss wird oben im Menü auf 'Speichern' geklickt und die Daten werden in das Filmverzeichnis geschrieben.  
 

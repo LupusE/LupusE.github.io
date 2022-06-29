@@ -4,8 +4,8 @@ published: true
 title: OpenStack - erstes Hinfallen
 author: Benjamin Moeller
 date: 2019-03-12 22:02:08 UTC
-categories: [QuickAndDirty]
-tags: [qnd]
+categories: [howto]
+tags: [openstack, linux]
 comments: []
 ---
 

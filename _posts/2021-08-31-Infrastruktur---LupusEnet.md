@@ -4,8 +4,8 @@ published: true
 title: Infrastruktur - LupusEnet
 author: Benjamin Moeller
 date: 2021-08-31 20:07:13 UTC
-categories: [infrastruktur]
-tags: [infrastruktur]
+categories: [howto]
+tags: [infrastruktur, linux, server]
 comments: []
 ---
 
