@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Elementarreaktionen
 author: Benjamin Moeller
 date: 2007-05-15 18:56:43 UTC

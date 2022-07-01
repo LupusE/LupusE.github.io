@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: 'quick-and-dirty Alsa: [n] Sndkarten, bei n>=2'
 author: Benjamin Moeller
 date: 2007-02-13 21:03:50 UTC

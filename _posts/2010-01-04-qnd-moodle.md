@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: quick-and-dirty - Moodle
 author: Benjamin Moeller
 date: 2010-01-04 22:44:27 UTC

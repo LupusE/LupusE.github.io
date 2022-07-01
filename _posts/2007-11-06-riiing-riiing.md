@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Riiing Riiing
 author: Benjamin Moeller
 date: 2007-11-06 05:07:12 UTC

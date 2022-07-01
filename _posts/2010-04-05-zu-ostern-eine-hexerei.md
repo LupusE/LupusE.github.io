@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Zu Ostern eine HexerEI
 author: Benjamin Moeller
 date: 2010-04-05 12:44:40 UTC

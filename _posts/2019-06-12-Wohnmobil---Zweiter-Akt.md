@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Wohnmobil - Zweiter Akt
 author: Benjamin Moeller
 date: 2019-06-12 19:00:48 UTC

@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Nerf - Eine Uebersicht
 author: Benjamin Moeller
 date: 2019-04-11 20:04:37 UTC

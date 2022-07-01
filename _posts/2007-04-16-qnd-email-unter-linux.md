@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: quick-and-dirty eMail unter Linux.
 author: Benjamin Moeller
 date: 2007-04-16 21:38:16 UTC

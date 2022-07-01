@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: quick-and-dirty - IPTables meets WM61 II
 author: Benjamin Moeller
 date: 2009-07-22 05:09:21 UTC

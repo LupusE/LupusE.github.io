@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Wohnmobilnetzwerk - Gl.iNet Beryl
 author: Benjamin Moeller
 date: 2022-05-15 16:24:00 UTC

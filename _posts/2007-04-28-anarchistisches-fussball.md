@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Anarchistisches Fussball
 author: Benjamin Moeller
 date: 2007-04-28 12:31:07 UTC

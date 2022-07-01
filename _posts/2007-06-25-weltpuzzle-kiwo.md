@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Weltpuzzle -- Kiwo
 author: Benjamin Moeller
 date: 2007-06-25 20:45:41 UTC

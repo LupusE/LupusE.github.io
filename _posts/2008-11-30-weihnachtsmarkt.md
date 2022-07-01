@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Weihnachtsmarkt
 author: Benjamin Moeller
 date: 2008-11-30 16:39:22 UTC

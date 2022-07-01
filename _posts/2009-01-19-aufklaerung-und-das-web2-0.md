@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Aufklaerung und das Web2.0
 author: Benjamin Moeller
 date: 2009-01-19 01:16:42 UTC

@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Beziehungszutaten
 author: Benjamin Moeller
 date: 2007-06-15 16:47:00 UTC

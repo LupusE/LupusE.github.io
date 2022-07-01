@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Heute wird ein Windows XP repariert (ohne Linux)
 author: Benjamin Moeller
 date: 2011-06-18 08:55:01 UTC

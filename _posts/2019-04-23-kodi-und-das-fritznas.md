@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Kodi und das Fritz!NAS
 author: Benjamin Moeller
 date: 2019-04-20 07:16:21 UTC

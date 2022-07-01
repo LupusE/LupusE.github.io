@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Wohnmobil - Truma Inet X Panel
 author: Benjamin Moeller
 date: 2022-05-31 19:22:32 UTC

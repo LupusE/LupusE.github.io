@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Geburtstage - Geschenkewahn
 author: Benjamin Moeller
 date: 2009-01-29 19:02:14 UTC

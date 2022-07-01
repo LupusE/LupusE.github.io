@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Valentinstag und die Reparaturen
 author: Benjamin Moeller
 date: 2019-02-14 20:21:00 UTC

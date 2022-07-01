@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: LupusEs Deutschlandtour I
 author: Benjamin Moeller
 date: 2007-02-06 19:18:07 UTC

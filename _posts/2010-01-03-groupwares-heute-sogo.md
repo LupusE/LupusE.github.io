@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Groupwares - Heute SOGo
 author: Benjamin Moeller
 date: 2010-01-03 14:09:32 UTC

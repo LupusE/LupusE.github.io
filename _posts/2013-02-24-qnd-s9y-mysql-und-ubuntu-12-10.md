@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: quick-and-dirty - s9y, MySQL und Ubuntu 12.10
 author: Benjamin Moeller
 date: 2013-02-24 00:47:16 UTC

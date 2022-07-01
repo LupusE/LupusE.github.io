@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Wolfenbuettel - Nacht I
 author: Benjamin Moeller
 date: 2007-05-21 19:25:00 UTC

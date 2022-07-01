@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Die Abarten der Exbeziehung
 author: Benjamin Moeller
 date: 2007-05-07 17:39:12 UTC

@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Geld, Tausch, Wunsch, Kirche, Politik und Sozialitaet
 author: Benjamin Moeller
 date: 2007-09-09 12:23:30 UTC

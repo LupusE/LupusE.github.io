@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Wann sind Nudeln wissenschaftlich betrachtet 'al dente'?
 author: Benjamin Moeller
 date: 2007-04-09 19:25:51 UTC

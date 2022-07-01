@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Beziehungskrisen
 author: Benjamin Moeller
 date: 2007-04-04 16:27:47 UTC

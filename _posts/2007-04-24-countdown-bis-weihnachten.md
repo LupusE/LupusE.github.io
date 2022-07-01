@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Countdown bis Weihnachten
 author: Benjamin Moeller
 date: 2007-04-24 21:21:08 UTC

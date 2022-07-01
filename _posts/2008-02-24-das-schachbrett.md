@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Das Schachbrett
 author: Benjamin Moeller
 author_login: lupuse

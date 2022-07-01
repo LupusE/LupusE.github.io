@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Wolfenbuettel - Nacht IV
 author: Benjamin Moeller
 date: 2007-05-24 20:43:00 UTC

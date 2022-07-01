@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Zwei Seiten
 author: Benjamin Moeller
 date: 2008-12-01 19:52:01 UTC

@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: 'quick-and-dirty Debian: Kernel bauen'
 author: Benjamin Moeller
 date: 2007-02-10 11:08:29 UTC

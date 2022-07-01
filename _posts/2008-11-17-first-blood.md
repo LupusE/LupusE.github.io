@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: First blood
 author: Benjamin Moeller
 date: 2008-11-17 21:17:42 UTC

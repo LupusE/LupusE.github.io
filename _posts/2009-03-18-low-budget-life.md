@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Low budget life
 author: Benjamin Moeller
 date: 2009-03-18 20:57:07 UTC

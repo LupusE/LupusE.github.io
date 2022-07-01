@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Pizzatreffen
 author: Benjamin Moeller
 date: 2007-10-08 18:31:46 UTC

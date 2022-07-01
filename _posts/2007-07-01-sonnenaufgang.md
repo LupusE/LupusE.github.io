@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Sonnenaufgang
 author: Benjamin Moeller
 date: 2007-07-01 04:30:49 UTC

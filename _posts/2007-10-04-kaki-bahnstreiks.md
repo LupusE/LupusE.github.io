@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Kaki - Bahnstreiks
 author: Benjamin Moeller
 date: 2007-10-04 16:47:19 UTC

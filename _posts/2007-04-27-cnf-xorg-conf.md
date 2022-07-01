@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: CNF - xorg.conf
 author: Benjamin Moeller
 date: 2007-04-27 20:09:34 UTC

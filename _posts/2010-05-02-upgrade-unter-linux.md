@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Upgrade von Linux
 author: Benjamin Moeller
 date: 2010-05-02 13:23:13 UTC

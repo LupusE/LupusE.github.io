@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: freundschaften
 author: Benjamin Moeller
 date: 2007-12-13 21:49:00 UTC

@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: LXC - Erste Fortschritte
 author: Benjamin Moeller
 date: 2019-03-24 20:02:42 UTC

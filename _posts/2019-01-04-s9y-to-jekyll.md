@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: s9y to Jekyll
 author: Benjamin Moeller
 date: 2019-01-03 19:18:07 UTC

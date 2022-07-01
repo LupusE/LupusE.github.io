@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: OpenStack - erstes Hinfallen
 author: Benjamin Moeller
 date: 2019-03-12 22:02:08 UTC

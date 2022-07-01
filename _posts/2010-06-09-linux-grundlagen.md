@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Linux Grundlagen
 author: Benjamin Moeller
 date: 2010-06-09 01:21:09 UTC

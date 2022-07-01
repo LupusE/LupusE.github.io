@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Garmin - Ein Einblick
 author: Benjamin Moeller
 date: 2019-05-09 22:20:28 UTC

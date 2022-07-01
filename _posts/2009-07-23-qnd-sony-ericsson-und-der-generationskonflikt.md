@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: quick-and-dirty - Sony Ericsson und der Generationskonflikt
 author: Benjamin Moeller
 date: 2009-07-23 23:42:00 UTC

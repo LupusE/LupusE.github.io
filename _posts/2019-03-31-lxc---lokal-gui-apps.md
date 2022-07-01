@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: LXC - Lokal virtualisieren
 author: Benjamin Moeller
 date: 2019-03-31 20:10:13 UTC

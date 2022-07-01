@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: MobuzzTV.com - Ehrensenf.de
 author: Benjamin Moeller
 date: 2007-02-08 18:22:46 UTC

@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: quick-and-dirty - GnuPG und Mutt
 author: Benjamin Moeller
 date: 2007-05-02 17:24:06 UTC

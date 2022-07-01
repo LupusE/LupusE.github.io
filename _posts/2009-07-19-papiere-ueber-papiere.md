@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Papiere ueber Papiere
 author: Benjamin Moeller
 date: 2009-07-19 00:10:14 UTC

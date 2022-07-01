@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Wolfenbuettel - Nacht II
 author: Benjamin Moeller
 date: 2007-05-22 21:56:00 UTC

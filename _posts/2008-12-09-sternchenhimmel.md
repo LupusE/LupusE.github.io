@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Sternchenhimmel
 author: Benjamin Moeller
 date: 2008-12-09 14:27:07 UTC

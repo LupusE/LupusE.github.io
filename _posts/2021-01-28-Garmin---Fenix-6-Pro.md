@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Garmin - Fenix 6 Pro
 author: Benjamin Moeller
 date: 2021-01-28 22:00:12 UTC

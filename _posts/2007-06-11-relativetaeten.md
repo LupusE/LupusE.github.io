@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Relativetaeten
 author: Benjamin Moeller
 date: 2007-06-11 21:19:08 UTC

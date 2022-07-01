@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: CNF - dot.fetchmailrc
 author: Benjamin Moeller
 date: 2007-04-15 12:43:08 UTC

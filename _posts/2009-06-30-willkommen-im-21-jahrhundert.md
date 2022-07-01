@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Willkommen im 21. Jahrhundert
 author: Benjamin Moeller
 date: 2009-06-30 20:26:26 UTC

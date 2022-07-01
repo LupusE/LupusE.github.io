@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Stevens X6 Lite Tour Gent
 author: Benjamin Moeller
 date: 2019-04-11 22:17:27 UTC
