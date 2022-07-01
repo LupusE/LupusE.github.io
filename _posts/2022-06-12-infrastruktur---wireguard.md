@@ -34,12 +34,14 @@ Im Proxmox schnell einen Container erstellt. Debian 11.0.3 Image, 12GB Festplatt
 Ab Debian 11 ist das Paket [wireguard](https://packages.debian.org/bullseye/wireguard) mitgeliefert, davor benötigt es [Backports](https://packages.debian.org/buster-backports/wireguard).
 
 ---
-Abbruch
----
+
+# Abbruch  
 
 ## A long story short
-Auf dme Proxmox (oder anderen virtuellen Umgebungen) hat man keinen direkten Zugriff auf /dev/tun. Das lässt sich mit ein paar Hebeln gerade biegen und der Helper Boringtun von Cloudflare unterstützt das ganze...  
+Auf dem Proxmox (oder anderen virtuellen Umgebungen) hat man keinen direkten Zugriff auf /dev/tun. Das lässt sich mit ein paar Hebeln gerade biegen und der Helper Boringtun von Cloudflare unterstützt das ganze...  
 Aber da ich so viel parallel lernen musste, bleibe ich zunächst bei dem oben genannten Script.  
+
+---
 
 # Wireguard Server (Skript)
 
@@ -48,22 +50,26 @@ Aber da ich so viel parallel lernen musste, bleibe ich zunächst bei dem oben ge
 Die zentrale Konfigurationsdatei für dne ersten Tunnel (wg0) wird angelegt.  
 In dieser Datei befindne sich folgende Zeilen:  
 
-> [Interface]
+```
+[Interface]
 Address = 10.7.0.1/24, fddd:2c4:2c4:2c4::1/64
 PrivateKey = UGxxxxxxxxxxxxxxxWw=
 ListenPort = 51820
+```
 
 Unter [Interface] wird definiert, wie wg0 antworten soll.
 * **Address** gibt an welche IP wg0 bekommt und in wlechem Netz es existiert
 * **PrivateKey** sollte nie an die Öffentlichkeit gelangen, dieses ist das Geheimnis, welches Euer VPN schützt. Der Name lässt shcon vermuten: Diese Information ist privat.
 * **ListenPort** ist der Port, an den die Firewall weiterleiten muss (Portforwarding) und/oder der in der Firewall geöffnet werden muss. Zum Glück nur für UTP.
 
->  # BEGIN_PEER amy
+```
+# BEGIN_PEER amy
 [Peer]
 PublicKey = hI8xxxxxxxxxxxxxxxxxxe3M=
 PresharedKey = Ew7xxxxxxxxxxxxxxxxxxsg=
 AllowedIPs = 10.7.0.2/32, fddd:2c4:2c4:2c4::2/128
 # END_PEER amy
+```
 
 Die Kommentare am Anfang und am Ende sind für Wireguard unwichtig, werden aber vom Script gelesen um Peers (Teilnehmer) in der Konfigurationsdatei zu erkennen, bearbeiten und bei Bedarf zu löschen.
 * **PublicKey** ist der öffentliche Schlüssel. Dieser ist nicht allzu wichtig, wenn der verloren geht. Im Verlustfall reicht es aus den Peer zu entfernen und, wenn gewünscht, neu anzulegen.
@@ -78,28 +84,30 @@ Das Routing wird nicht von Wireuard übernommen! Wireguard stellt das Netzwerkge
 Das Programm `iptables-save` sagt:
 
 > *filter
-:INPUT ACCEPT [0:0]
-:FORWARD ACCEPT [0:0]
-:OUTPUT ACCEPT [0:0]
--A INPUT -p udp -m udp --dport 51820 -j ACCEPT
--A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
--A FORWARD -s 10.7.0.0/24 -j ACCEPT
-COMMIT
-*nat
-:PREROUTING ACCEPT [0:0]
-:INPUT ACCEPT [0:0]
-:OUTPUT ACCEPT [0:0]
-:POSTROUTING ACCEPT [0:0]
--A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT --to-source 192.168.21.51
-COMMIT
+> :INPUT ACCEPT [0:0]
+> :FORWARD ACCEPT [0:0]
+> :OUTPUT ACCEPT [0:0]
+> -A INPUT -p udp -m udp --dport 51820 -j ACCEPT
+> -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+> -A FORWARD -s 10.7.0.0/24 -j ACCEPT
+> COMMIT
+> *nat
+> :PREROUTING ACCEPT [0:0]
+> :INPUT ACCEPT [0:0]
+> :OUTPUT ACCEPT [0:0]
+> :POSTROUTING ACCEPT [0:0]
+> -A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT --to-source 192.168.21.51
+> COMMIT
 
 Interessant ist die vorletzte Zeile: Alles was 10.7.0.0/24 (der Tunnel) ist und nicht an 10.7.0.0/24 geht, wird an 192.168.21.51 weitergeleitet.  
 Aber was macht 192.168.21.51 damit?
 
-> root@walter01:~# ip r
+```
+root@walter01:~# ip r
 default via 192.168.21.1 dev eth0 onlink 
 10.7.0.0/24 dev wg0 proto kernel scope link src 10.7.0.1 
 192.168.21.0/24 dev eth0 proto kernel scope link src 192.168.21.51
+```
 
 Es hat keine spezielle Route, aso wird es an die Defaultroute übergeben und an 192.168.21.1 gegeben ... welches zufällig mein Router in das Internet ist.
 
@@ -114,17 +122,19 @@ Durch das NAT weiss der Router ins Internet nicht, dass der Verkehr aus dme Tunn
 Die Client config wird per dem oben genanntne Script einfach erstellt. Es wird eine Datei mit dem namen und der Endung .conf erstellt.  
 ### amy.conf
 
-> [Interface]
+```
+[Interface]
 Address = 10.7.0.2/24, fddd:2c4:2c4:2c4::2/64
 DNS = 192.168.21.53
 PrivateKey = 4P8xxxxxxxxxxxxxxx1I=
->
-> [Peer]
+
+[Peer]
 PublicKey = UlExxxxxxxxxxxxxxx3o=
 PresharedKey = Ew7xxxxxxxxxxxxxxxsg=
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = vpn.domain.org:51820
 PersistentKeepalive = 25
+```
 
 Hier sehen wir die folgenden Einstellungen:
 
