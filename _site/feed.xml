@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-07-01T21:00:37+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-07-01T21:07:42+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
 
 &lt;p&gt;Für mein Wohnmobilprojekt habe ich mir einen GL.iNet Beryl Reiserouter gekauft. Diese kleinen Dinger aus Hong Kong basieren auf OpenWRT und bieten für schmales Geld (35-80 Euro) eine gute Basis um unterwegs mehrere Geräte mit geringem Aufwand zu betreiben.&lt;br /&gt;
 Die Grundidee ist, dass ich nicht jedes meiner Geräte im (Hotel)WLAN anmeldne muss, sondern den Router vorschalte und dieser einen sicherne Zugang für alle meine Geräte stellt. Sicher, weil die kleinen Router standardmäßig eine Unterstützung für gängige Protokolle, wie OpenVPN und WireGuard mitbringen. Wer keine Möglickeit hat einen Endpunkt zu mieten oder selbst aufzubauen, dem steht immernoch per Klick das TOR Netzwerk offen.&lt;br /&gt;
@@ -24,12 +24,14 @@ Schon vorher wollte ich dringend das Skript gegen eine saubere Installation erse
 &lt;p&gt;Ab Debian 11 ist das Paket &lt;a href=&quot;https://packages.debian.org/bullseye/wireguard&quot;&gt;wireguard&lt;/a&gt; mitgeliefert, davor benötigt es &lt;a href=&quot;https://packages.debian.org/buster-backports/wireguard&quot;&gt;Backports&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;Abbruch
-—&lt;/p&gt;
+
+&lt;h1 id=&quot;abbruch&quot;&gt;Abbruch&lt;/h1&gt;
 
 &lt;h2 id=&quot;a-long-story-short&quot;&gt;A long story short&lt;/h2&gt;
-&lt;p&gt;Auf dme Proxmox (oder anderen virtuellen Umgebungen) hat man keinen direkten Zugriff auf /dev/tun. Das lässt sich mit ein paar Hebeln gerade biegen und der Helper Boringtun von Cloudflare unterstützt das ganze…&lt;br /&gt;
+&lt;p&gt;Auf dem Proxmox (oder anderen virtuellen Umgebungen) hat man keinen direkten Zugriff auf /dev/tun. Das lässt sich mit ein paar Hebeln gerade biegen und der Helper Boringtun von Cloudflare unterstützt das ganze…&lt;br /&gt;
 Aber da ich so viel parallel lernen musste, bleibe ich zunächst bei dem oben genannten Script.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&quot;wireguard-server-skript&quot;&gt;Wireguard Server (Skript)&lt;/h1&gt;
 
@@ -38,12 +40,11 @@ Aber da ich so viel parallel lernen musste, bleibe ich zunächst bei dem oben ge
 &lt;p&gt;Die zentrale Konfigurationsdatei für dne ersten Tunnel (wg0) wird angelegt.&lt;br /&gt;
 In dieser Datei befindne sich folgende Zeilen:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;[Interface]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Interface]
 Address = 10.7.0.1/24, fddd:2c4:2c4:2c4::1/64
 PrivateKey = UGxxxxxxxxxxxxxxxWw=
-ListenPort = 51820&lt;/p&gt;
-&lt;/blockquote&gt;
+ListenPort = 51820
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Unter [Interface] wird definiert, wie wg0 antworten soll.&lt;/p&gt;
 &lt;ul&gt;
@@ -52,14 +53,13 @@ ListenPort = 51820&lt;/p&gt;
   &lt;li&gt;&lt;strong&gt;ListenPort&lt;/strong&gt; ist der Port, an den die Firewall weiterleiten muss (Portforwarding) und/oder der in der Firewall geöffnet werden muss. Zum Glück nur für UTP.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;# BEGIN_PEER amy
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# BEGIN_PEER amy
 [Peer]
 PublicKey = hI8xxxxxxxxxxxxxxxxxxe3M=
 PresharedKey = Ew7xxxxxxxxxxxxxxxxxxsg=
-AllowedIPs = 10.7.0.2/32, fddd:2c4:2c4:2c4::2/128&lt;/p&gt;
-  &lt;h1 id=&quot;end_peer-amy&quot;&gt;END_PEER amy&lt;/h1&gt;
-&lt;/blockquote&gt;
+AllowedIPs = 10.7.0.2/32, fddd:2c4:2c4:2c4::2/128
+# END_PEER amy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Die Kommentare am Anfang und am Ende sind für Wireguard unwichtig, werden aber vom Script gelesen um Peers (Teilnehmer) in der Konfigurationsdatei zu erkennen, bearbeiten und bei Bedarf zu löschen.&lt;/p&gt;
 &lt;ul&gt;
@@ -95,12 +95,11 @@ COMMIT&lt;/p&gt;
 &lt;p&gt;Interessant ist die vorletzte Zeile: Alles was 10.7.0.0/24 (der Tunnel) ist und nicht an 10.7.0.0/24 geht, wird an 192.168.21.51 weitergeleitet.&lt;br /&gt;
 Aber was macht 192.168.21.51 damit?&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;root@walter01:~# ip r
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@walter01:~# ip r
 default via 192.168.21.1 dev eth0 onlink 
 10.7.0.0/24 dev wg0 proto kernel scope link src 10.7.0.1 
-192.168.21.0/24 dev eth0 proto kernel scope link src 192.168.21.51&lt;/p&gt;
-&lt;/blockquote&gt;
+192.168.21.0/24 dev eth0 proto kernel scope link src 192.168.21.51
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Es hat keine spezielle Route, aso wird es an die Defaultroute übergeben und an 192.168.21.1 gegeben … welches zufällig mein Router in das Internet ist.&lt;/p&gt;
 
@@ -115,19 +114,18 @@ Durch das NAT weiss der Router ins Internet nicht, dass der Verkehr aus dme Tunn
 &lt;p&gt;Die Client config wird per dem oben genanntne Script einfach erstellt. Es wird eine Datei mit dem namen und der Endung .conf erstellt.&lt;/p&gt;
 &lt;h3 id=&quot;amyconf&quot;&gt;amy.conf&lt;/h3&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;[Interface]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Interface]
 Address = 10.7.0.2/24, fddd:2c4:2c4:2c4::2/64
 DNS = 192.168.21.53
-PrivateKey = 4P8xxxxxxxxxxxxxxx1I=&lt;/p&gt;
+PrivateKey = 4P8xxxxxxxxxxxxxxx1I=
 
-  &lt;p&gt;[Peer]
+[Peer]
 PublicKey = UlExxxxxxxxxxxxxxx3o=
 PresharedKey = Ew7xxxxxxxxxxxxxxxsg=
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = vpn.domain.org:51820
-PersistentKeepalive = 25&lt;/p&gt;
-&lt;/blockquote&gt;
+PersistentKeepalive = 25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Hier sehen wir die folgenden Einstellungen:&lt;/p&gt;
 
