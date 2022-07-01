@@ -11,136 +11,140 @@ comments: []
 
 # Motivation
 
-Für mein Wohnmobilprojekt habe ich mir einne GL.iNet Beryl Reiserouter gekauft. Dise kleinen Dinger aus Hong Kong basieren auf OpenWRT und bieten für schmales Geld (35-80 Euro) eine gute Basis um unterwegs mehrere Geräte mit geringem Aufwand zu betreiben.  
-Die Grundidee ist, dass ich nicht jede smeiner Geräte im (Hotel)WLAN anmeldne muss, sondenr den Router vorschalte un ddieser einen sicherne Zugang für alle meine Geräte stellt. Sicher, weil die kleinen Router standardmäßig eine Unterstützung für gängige Protokolle, wie OpenVPN und WireGuard mitbringen. Wer keine Möglickeit hat einen Endpunkt zu mieten oder selbst aufzubauen, dem steht immernoch per Klick das TOR Netzwerk offen.  
+Für mein Wohnmobilprojekt habe ich mir einen GL.iNet Beryl Reiserouter gekauft. Diese kleinen Dinger aus Hong Kong basieren auf OpenWRT und bieten für schmales Geld (35-80 Euro) eine gute Basis um unterwegs mehrere Geräte mit geringem Aufwand zu betreiben.  
+Die Grundidee ist, dass ich nicht jedes meiner Geräte im (Hotel)WLAN anmeldne muss, sondern den Router vorschalte und dieser einen sicherne Zugang für alle meine Geräte stellt. Sicher, weil die kleinen Router standardmäßig eine Unterstützung für gängige Protokolle, wie OpenVPN und WireGuard mitbringen. Wer keine Möglickeit hat einen Endpunkt zu mieten oder selbst aufzubauen, dem steht immernoch per Klick das TOR Netzwerk offen.  
 Mit OpenVPN bin ich nie warm geworden, daher versuche ich mich am aktuelleren WireGuard.  
 
-## WireGuard Skript - Erste Schritte
+# WireGuard Skript - Erste Schritte
 
 Wireguard bietet für Linux ein 'All in One' Skript an. Dieses ist genauso gruselig, wie es klingt. Es wird aus dem internet heruntergeladen und ausgeführt ...  
 
-> wget https://git.io/wireguard -O wireguard-install.sh && sudo bash  
-> wireguard-install.sh
+> wget https://git.io/wireguard -O wireguard-install.sh && sudo bash wireguard-install.sh
 
-Als erste Testumgebung habe ich damit angefangen, und es funktioniert.  
+Als erste Testumgebung habe ich damit angefangen. Und es funktioniert.  
 
 Dann wollte ich den Service auf meine Umgebung anpassen. Also Konfiguration unter `/etc/wireguard/` anpassen und den Dienst neu starten ... den Dienst ... den Dienst ... Wo ist der denn? ... Server durchstarten geht auch.  
 Schon vorher wollte ich dringend das Skript gegen eine saubere Installation ersetzen. Spätestens an dem Punkt war mir die Dringlichkeit bewusst.  
 
-# Wireguard aufsetzen
+## Wireguard aufsetzen
 
 Im Proxmox schnell einen Container erstellt. Debian 11.0.3 Image, 12GB Festplatte auf der lokalen SSD, 1Core, 512MB RAM und im Netzwerk 'vmbr1 - Green'. Container starten.  
 
-Ab Debian 11 ist das paket [wireguard](https://packages.debian.org/bullseye/wireguard) mitgeliefert, davor benötigt es [Backports](https://packages.debian.org/buster-backports/wireguard).
+Ab Debian 11 ist das Paket [wireguard](https://packages.debian.org/bullseye/wireguard) mitgeliefert, davor benötigt es [Backports](https://packages.debian.org/buster-backports/wireguard).
 
-```
-root@walter01:~# apt update && apt full-upgrade
-[.. update magie ..]
-root@walter01:~# apt install wireguard wireguard-tools linux-headers-amd64
-[.. install magie ..]
-root@walter01:~# wg genkey | sudo tee /etc/wireguard/server_private.key | wg pubkey | sudo tee /etc/wireguard/server_public.key
-[.. key generation magie ..]
-cF+ZkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXiEc=
-```
+---
+Abbruch
+---
 
-## WireGuard auf dem Server
+## A long story short
+Auf dme Proxmox (oder anderen virtuellen Umgebungen) hat man keinen direkten Zugriff auf /dev/tun. Das lässt sich mit ein paar Hebeln gerade biegen und der Helper Boringtun von Cloudflare unterstützt das ganze...  
+Aber da ich so viel parallel lernen musste, bleibe ich zunächst bei dem oben genannten Script.  
 
-Die Konfigurationsdatei erstellen:
-```
-root@walter01:~# vim /etc/wireguard/wg0.conf
-```
+# Wireguard Server (Skript)
+
+## /etc/wireguard/wg0.conf
+
+Die zentrale Konfigurationsdatei für dne ersten Tunnel (wg0) wird angelegt.  
+In dieser Datei befindne sich folgende Zeilen:  
 
 > [Interface]
-> Address = 10.10.10.1/24
-> ListenPort = 51820
-> PrivateKey = cF+ZkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXiEc=
+Address = 10.7.0.1/24, fddd:2c4:2c4:2c4::1/64
+PrivateKey = UGxxxxxxxxxxxxxxxWw=
+ListenPort = 51820
 
-Darunter kommt noch ein wenig mit [Peers], sobald man einen client hat.
+Unter [Interface] wird definiert, wie wg0 antworten soll.
+* **Address** gibt an welche IP wg0 bekommt und in wlechem Netz es existiert
+* **PrivateKey** sollte nie an die Öffentlichkeit gelangen, dieses ist das Geheimnis, welches Euer VPN schützt. Der Name lässt shcon vermuten: Diese Information ist privat.
+* **ListenPort** ist der Port, an den die Firewall weiterleiten muss (Portforwarding) und/oder der in der Firewall geöffnet werden muss. Zum Glück nur für UTP.
 
-Und die Dateien für den Zugriff durch Unbefugte auf dem System sichern:
-```
-sudo chmod 600 /etc/wireguard/ -R
-```
+>  # BEGIN_PEER amy
+[Peer]
+PublicKey = hI8xxxxxxxxxxxxxxxxxxe3M=
+PresharedKey = Ew7xxxxxxxxxxxxxxxxxxsg=
+AllowedIPs = 10.7.0.2/32, fddd:2c4:2c4:2c4::2/128
+# END_PEER amy
 
-## Vom schlichten Server zum funktionalen Router
-
-Jetzt kann der Server zwar erreicht werden, aber er ist noch kein Router.  
-
-### Routing aktivieren
-
-Um das zu ändern geben wir folgendes ein (Zeile 27 zur Erstellung diesen Artikels):  
-`root@walter01:~# vim /etc/sysctl.conf`  
-
-> [...]
-> # Uncomment the next line to enable packet forwarding for IPv4
-> net.ipv4.ip_forward = 1
-> [...]
-
-Dienst neu starten:  
-`sudo sysctl -p`  
-
-### Masquerading aktivieren
-
-Ich nutze hier `ufw`, welches ein Frontend für die `iptables` ist. Es gibt verschiedene Wege an das Ziel zu kommen, das hier ist nur ein Vorschlag.  
-
-```
-root@walter01:~# apt install ufw
-root@walter01:~# ufw allow 22/tcp
-```
-
-Mit `ip addr` ist zu sehen auf welchem Interface die IP gebunden ist. Auf dieser erlauben wir nun das NAT.
-
-`vim /etc/ufw/before.rules`
-
-Vor dem COMMIT wird das Masquerading aktiviert. das Interface (-o) mit dem Interface aus `ip addr` ersetzen!
-
-> [...]
-> # allow MULTICAST UPnP for service discovery (be sure the MULTICAST line above
-> # is uncommented)
-> -A ufw-before-input -p udp -d 239.255.255.250 --dport 1900 -j ACCEPT
-> 
-> # NAT rules
-> *nat
-> :POSTROUTING ACCEPPT [0:0]
-> -A POSTROUTING -o eth0@if110 -j MASQUERADE
-> 
-> # don't delete the 'COMMIT' line or these rules won't be processed
-> COMMIT
-
-Und um im VPN die Kommunikation zwiwchen den Hosts zu erkauben, folgenden Block (unten) ergänzen:
-
-> # ok icmp code for FORWARD
-> -A ufw-before-forward -p icmp --icmp-type destination-unreachable -j ACCEPT
-> -A ufw-before-forward -p icmp --icmp-type time-exceeded -j ACCEPT
-> -A ufw-before-forward -p icmp --icmp-type parameter-problem -j ACCEPT
-> -A ufw-before-forward -p icmp --icmp-type echo-request -j ACCEPT
-> 
-> # allow forwarding trusted network
-> -A ufw-before-forward -s 10.10.10.0/24 -j ACCEPT
-> -A ufw-before-forward -d 10.10.10.0/24 -j ACCEPT
+Die Kommentare am Anfang und am Ende sind für Wireguard unwichtig, werden aber vom Script gelesen um Peers (Teilnehmer) in der Konfigurationsdatei zu erkennen, bearbeiten und bei Bedarf zu löschen.
+* **PublicKey** ist der öffentliche Schlüssel. Dieser ist nicht allzu wichtig, wenn der verloren geht. Im Verlustfall reicht es aus den Peer zu entfernen und, wenn gewünscht, neu anzulegen.
+* **Presharedkey** Dieser ist zu sehen wie WLAN Key. Der sollte geheim bleiben.
+* **AllowedIPs** definiert die IP des Endpunkts und das Netz.
 
 
-### Aktivieren der Regeln
+## Routing
 
-Und jetzt hoffen, dass man sich nicht aussperrt:  
-`ufw enable`
+Das Routing wird nicht von Wireuard übernommen! Wireguard stellt das Netzwerkgerät wg0 und ein anderes Programm sorgt für das routing. Klassisch wurden bisher unter Linux bisher die iptables dafür eingesetzt, diese werden nun durch die nftables ersetzt.
 
-Beim ersten Ausführen gab es einen Fehler mit dem Eintrag `*nat`. Beim zweiten Ausführen wurden die Regeln übernommen.  
+Das Programm `iptables-save` sagt:
 
-Eine letzte Prüfung:  
-`root@walter01:~# iptables -t nat -L POSTROUTING`
+> *filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT -p udp -m udp --dport 51820 -j ACCEPT
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -s 10.7.0.0/24 -j ACCEPT
+COMMIT
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT --to-source 192.168.21.51
+COMMIT
 
+Interessant ist die vorletzte Zeile: Alles was 10.7.0.0/24 (der Tunnel) ist und nicht an 10.7.0.0/24 geht, wird an 192.168.21.51 weitergeleitet.  
+Aber was macht 192.168.21.51 damit?
 
-# Aktivieren von WireGuard auf dme Server
+> root@walter01:~# ip r
+default via 192.168.21.1 dev eth0 onlink 
+10.7.0.0/24 dev wg0 proto kernel scope link src 10.7.0.1 
+192.168.21.0/24 dev eth0 proto kernel scope link src 192.168.21.51
 
-Als erstes geben wir den WireGuard (Standard-)Port frei:  
-`ufw allow 51820/udp`
+Es hat keine spezielle Route, aso wird es an die Defaultroute übergeben und an 192.168.21.1 gegeben ... welches zufällig mein Router in das Internet ist.
 
-Zum Testen reicht es aus temporär den Dienst zu starten:
-`wg-quick up /etc/wireguard/wg0.conf`
+### Zusammenfassung
 
-Wollen wir den Dienst bei jedem Systemstart aktivieren, geben wir ein:  
-`sudo systemctl enable wg-quick@wg0.service`
+Wireguard erstellt einen Tunnel mit dem Subnet 10.7.0.0/24. Alle Geräte im Tunnel (Peers) bekommen eine feste IP.
+Die iptables nehmen auf dem Wireguard Server den Netzwerkverkehr und geben diesen an das Netzwerkgerät im LAN.
+Durch das NAT weiss der Router ins Internet nicht, dass der Verkehr aus dme Tunnel kommt. Für das LAN sieht es aus als würdne alle Anfragen vom Wireguard Server lokal kommen.
 
-Zum Kontrollieren ob alles läuft geben wir ein:  
-`systemctl status wg-quick@wg0.service`
+## Wireguard Client Config
+
+Die Client config wird per dem oben genanntne Script einfach erstellt. Es wird eine Datei mit dem namen und der Endung .conf erstellt.  
+### amy.conf
+
+> [Interface]
+Address = 10.7.0.2/24, fddd:2c4:2c4:2c4::2/64
+DNS = 192.168.21.53
+PrivateKey = 4P8xxxxxxxxxxxxxxx1I=
+>
+> [Peer]
+PublicKey = UlExxxxxxxxxxxxxxx3o=
+PresharedKey = Ew7xxxxxxxxxxxxxxxsg=
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = vpn.domain.org:51820
+PersistentKeepalive = 25
+
+Hier sehen wir die folgenden Einstellungen:
+
+Abschnitt [Interfaces]
+* **address** Die Client Adresse im VPN. Es funktioniert hier kein DHCP!
+* **DNS** Der DNS Server muss entweder im LAN stehen und erreichbar sein, ode rman nimmt einen externen. Ein Externer DNS Server ist auch ein Sicherheitsrisiko, da dieser jede Hostnamenauflösung mitschneidet.
+* **PrivateKey** Wieder besonders schützenswert. Wer diesen Key hat, kann sich mit geringem Aufwand als der Client ausgeben.
+
+Abschnitt [Peer]
+* **PublicKey** Dieser darf wieder bekannt werden. Dieser dient 'nur' zur cryptografischen Austhentifizierung.
+* **PresharedKey** Ist der Schlüssel, den alle Clients und der Server kennen muss. Aber wie beim WLAN Key (PSK) sollte es keiner kennen, der nicht in das VPN soll.
+* **AllowedIPs** Hier wird es interessant. Diese Option definiert welcher Verkehr über den Tunnel gehen soll.
+* **Endpoint** Hier wird dem Client gesagt, über wleche Adresse der Server erreicht wird. Soll der Tunnel über Internet aufgebaut werden, muss der VPN Server auch über diesen Hostnamen und dem Port aus dme Internet erreichbar sein.
+* **PersistentKeepalive** Wenn diese Uption nicht gesetzt ist, kann es sein dass die Verbindung bei nicht-Nutzen getrennt wird. Also wird alle 25 Sekunden ein Signal über die Leitung geschickt. 
+
+## Allowed IPs
+
+> AllowedIPs = 0.0.0.0/0, ::/0
+
+Wenn der VPN tunnel aufgebaut wird und 0.0.0.0/0 'Allowed' ist, dann wird der gesamte Netzwerkverkehr über dne Tunnel gesendet.
+
+In Unternehmen soll oft nur der Netzwerkverkehr der Firma über dne Tunnel gesendet werden. Dann wird einfach das entsprechende Subnetz eingetragen, zum Beispiel: 192.168.21.0/24. Der Wireguard Server muss das Subnetz natürlich kennen und bedienen können.
+Es gibt auch die Wariante mit 0.0.0.0/1. Damit wird die Default-Route im System nicht überschireben und im Falle eines Ausfal im/des VPN kann der Client weiterhin im Internet agieren.
+
