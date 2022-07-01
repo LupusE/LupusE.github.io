@@ -1,6 +1,7 @@
 ---
 status: published
 published: true
+layout: post
 title: Infrastruktur - WireGuard
 author: Benjamin Moeller
 date: 2022-06-12 21:14:03 UTC
