@@ -124,13 +124,12 @@ AllowedIPs = 10.7.0.2/32, fddd:2c4:2c4:2c4::2/128
 
 <p>Das Programm <code class="language-plaintext highlighter-rouge">iptables-save</code> sagt:</p>
 
-<blockquote>
-  <p>*filter
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*filter
 :INPUT ACCEPT [0:0]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
--A INPUT -p udp -m udp –dport 51820 -j ACCEPT
--A FORWARD -m state –state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p udp -m udp --dport 51820 -j ACCEPT
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A FORWARD -s 10.7.0.0/24 -j ACCEPT
 COMMIT
 *nat
@@ -138,17 +137,17 @@ COMMIT
 :INPUT ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
 :POSTROUTING ACCEPT [0:0]
--A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT –to-source 192.168.21.51
-COMMIT</p>
-</blockquote>
+-A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT --to-source 192.168.21.51
+COMMIT
+</code></pre></div></div>
 
 <p>Interessant ist die vorletzte Zeile: Alles was 10.7.0.0/24 (der Tunnel) ist und nicht an 10.7.0.0/24 geht, wird an 192.168.21.51 weitergeleitet.<br />
 Aber was macht 192.168.21.51 damit?</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@walter01:~# ip r
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@walter01:~# ip r
 default via 192.168.21.1 dev eth0 onlink 
-10.7.0.0/24 dev wg0 proto kernel scope link src 10.7.0.1 
-192.168.21.0/24 dev eth0 proto kernel scope link src 192.168.21.51
+10.7.0.0/24 dev wg0 proto kernel scope <span class="nb">link </span>src 10.7.0.1 
+192.168.21.0/24 dev eth0 proto kernel scope <span class="nb">link </span>src 192.168.21.51
 </code></pre></div></div>
 
 <p>Es hat keine spezielle Route, aso wird es an die Defaultroute übergeben und an 192.168.21.1 gegeben … welches zufällig mein Router in das Internet ist.</p>

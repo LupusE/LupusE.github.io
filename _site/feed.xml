@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-07-01T21:07:42+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2022-07-01T21:12:52+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
 
 &lt;p&gt;Für mein Wohnmobilprojekt habe ich mir einen GL.iNet Beryl Reiserouter gekauft. Diese kleinen Dinger aus Hong Kong basieren auf OpenWRT und bieten für schmales Geld (35-80 Euro) eine gute Basis um unterwegs mehrere Geräte mit geringem Aufwand zu betreiben.&lt;br /&gt;
 Die Grundidee ist, dass ich nicht jedes meiner Geräte im (Hotel)WLAN anmeldne muss, sondern den Router vorschalte und dieser einen sicherne Zugang für alle meine Geräte stellt. Sicher, weil die kleinen Router standardmäßig eine Unterstützung für gängige Protokolle, wie OpenVPN und WireGuard mitbringen. Wer keine Möglickeit hat einen Endpunkt zu mieten oder selbst aufzubauen, dem steht immernoch per Klick das TOR Netzwerk offen.&lt;br /&gt;
@@ -74,13 +74,12 @@ AllowedIPs = 10.7.0.2/32, fddd:2c4:2c4:2c4::2/128
 
 &lt;p&gt;Das Programm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iptables-save&lt;/code&gt; sagt:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;*filter
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*filter
 :INPUT ACCEPT [0:0]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
--A INPUT -p udp -m udp –dport 51820 -j ACCEPT
--A FORWARD -m state –state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p udp -m udp --dport 51820 -j ACCEPT
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A FORWARD -s 10.7.0.0/24 -j ACCEPT
 COMMIT
 *nat
@@ -88,17 +87,17 @@ COMMIT
 :INPUT ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
 :POSTROUTING ACCEPT [0:0]
--A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT –to-source 192.168.21.51
-COMMIT&lt;/p&gt;
-&lt;/blockquote&gt;
+-A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT --to-source 192.168.21.51
+COMMIT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Interessant ist die vorletzte Zeile: Alles was 10.7.0.0/24 (der Tunnel) ist und nicht an 10.7.0.0/24 geht, wird an 192.168.21.51 weitergeleitet.&lt;br /&gt;
 Aber was macht 192.168.21.51 damit?&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@walter01:~# ip r
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@walter01:~# ip r
 default via 192.168.21.1 dev eth0 onlink 
-10.7.0.0/24 dev wg0 proto kernel scope link src 10.7.0.1 
-192.168.21.0/24 dev eth0 proto kernel scope link src 192.168.21.51
+10.7.0.0/24 dev wg0 proto kernel scope &lt;span class=&quot;nb&quot;&gt;link &lt;/span&gt;src 10.7.0.1 
+192.168.21.0/24 dev eth0 proto kernel scope &lt;span class=&quot;nb&quot;&gt;link &lt;/span&gt;src 192.168.21.51
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Es hat keine spezielle Route, aso wird es an die Defaultroute übergeben und an 192.168.21.1 gegeben … welches zufällig mein Router in das Internet ist.&lt;/p&gt;

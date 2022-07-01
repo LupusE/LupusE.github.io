@@ -83,26 +83,28 @@ Das Routing wird nicht von Wireuard übernommen! Wireguard stellt das Netzwerkge
 
 Das Programm `iptables-save` sagt:
 
-> *filter
-> :INPUT ACCEPT [0:0]
-> :FORWARD ACCEPT [0:0]
-> :OUTPUT ACCEPT [0:0]
-> -A INPUT -p udp -m udp --dport 51820 -j ACCEPT
-> -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
-> -A FORWARD -s 10.7.0.0/24 -j ACCEPT
-> COMMIT
-> *nat
-> :PREROUTING ACCEPT [0:0]
-> :INPUT ACCEPT [0:0]
-> :OUTPUT ACCEPT [0:0]
-> :POSTROUTING ACCEPT [0:0]
-> -A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT --to-source 192.168.21.51
-> COMMIT
+```
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT -p udp -m udp --dport 51820 -j ACCEPT
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -s 10.7.0.0/24 -j ACCEPT
+COMMIT
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT --to-source 192.168.21.51
+COMMIT
+```
 
 Interessant ist die vorletzte Zeile: Alles was 10.7.0.0/24 (der Tunnel) ist und nicht an 10.7.0.0/24 geht, wird an 192.168.21.51 weitergeleitet.  
 Aber was macht 192.168.21.51 damit?
 
-```
+```bash
 root@walter01:~# ip r
 default via 192.168.21.1 dev eth0 onlink 
 10.7.0.0/24 dev wg0 proto kernel scope link src 10.7.0.1 
