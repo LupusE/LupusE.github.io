@@ -168,7 +168,7 @@
   
     
     <url>
-      <loc>http://blog.lupuse.org/bike/2019/04/11/Stevens-X6-Lite-Tour.html</loc>
+      <loc>http://blog.lupuse.org/produkt/2019/04/11/Stevens-X6-Lite-Tour.html</loc>
       
         <lastmod>2019-04-11T22:17:27+00:00</lastmod>
       
@@ -1116,7 +1116,7 @@
     <url>
       <loc>http://blog.lupuse.org/404.html</loc>
       
-        <lastmod>2022-07-04T06:59:26+00:00</lastmod>
+        <lastmod>2022-07-04T07:16:32+00:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1131,7 +1131,22 @@
     <url>
       <loc>http://blog.lupuse.org/about.html</loc>
       
-        <lastmod>2022-07-04T06:59:26+00:00</lastmod>
+        <lastmod>2022-07-04T07:16:32+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://blog.lupuse.org/category.html</loc>
+      
+        <lastmod>2022-07-04T07:16:32+00:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1146,7 +1161,7 @@
     <url>
       <loc>http://blog.lupuse.org/cv_de.html</loc>
       
-        <lastmod>2022-07-04T06:59:26+00:00</lastmod>
+        <lastmod>2022-07-04T07:16:32+00:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1161,7 +1176,7 @@
     <url>
       <loc>http://blog.lupuse.org/impressum.html</loc>
       
-        <lastmod>2022-07-04T06:59:26+00:00</lastmod>
+        <lastmod>2022-07-04T07:16:32+00:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1176,7 +1191,7 @@
     <url>
       <loc>http://blog.lupuse.org/</loc>
       
-        <lastmod>2022-07-04T06:59:26+00:00</lastmod>
+        <lastmod>2022-07-04T07:16:32+00:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1193,7 +1208,7 @@
     <url>
       <loc>http://blog.lupuse.org/assets/main.css</loc>
       
-        <lastmod>2022-07-04T06:59:26+00:00</lastmod>
+        <lastmod>2022-07-04T07:16:32+00:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1208,7 +1223,7 @@
     <url>
       <loc>http://blog.lupuse.org/feed.xml</loc>
       
-        <lastmod>2022-07-04T06:59:26+00:00</lastmod>
+        <lastmod>2022-07-04T07:16:32+00:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

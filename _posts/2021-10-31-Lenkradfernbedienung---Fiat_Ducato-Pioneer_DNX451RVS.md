@@ -5,7 +5,7 @@ layout: post
 title: Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS
 author: Benjamin Moeller
 date: 2021-10-30 23:36:59 UTC
-categories: [Wohnmobil]
+categories: [wohnmobil]
 tags: [UnterwegsZuhause]
 comments: []
 ---

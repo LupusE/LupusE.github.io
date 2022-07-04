@@ -5,8 +5,8 @@ layout: post
 title: Stevens X6 Lite Tour Gent
 author: Benjamin Moeller
 date: 2019-04-11 22:17:27 UTC
-categories: [bike]
-tags: [pendeln, fahrrad, bike, mdrza]
+categories: [produkt]
+tags: [pendeln, fahrrad]
 comments: []
 ---
 
