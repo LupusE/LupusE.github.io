@@ -102,7 +102,7 @@ Auch hier hilft das Blog wieder: https://blog.flipperzero.one/rfid/
 Die Firmware ist das Betriebssystem des Flipper. dieses ist aktuell noch in starker entwicklung. 
 Dabei scheint eines der Hauptaufgaben der Entwickler zu sein, auszusortieren was illegal ist und schauen was verwendbar ist. Dabei gibt es keine Grauzone, denn wenn etwas fragwuerdig ist, gibt es genug Anfragen,die sicher umgesetzt werden können.  
 
-Wie bereits geschrieben ist die Firmware auf einem sehr kleinen Speicher untergebracht, das limitiert auch die Möglichkieten. Eine der wichtigsten Entwicklungne ist altuell der ELF Loader, mit dem Plugins von der SD Karte geladen werden können. Das erhöht den Lese-/Schreibzugriff auf der Karte und damit die IO Last auch auf der CPU. Aber ich denke dennoch dieses wird ein Durchbruch, wnen man eigene Projekte nicht immer komplett kompilieren muss.  
+Wie bereits geschrieben ist die Firmware auf einem sehr kleinen Speicher untergebracht, das limitiert auch die Möglichkieten. Eine der wichtigsten Entwicklungen ist altuell der ELF Loader, mit dem Plugins von der SD Karte geladen werden können. Das erhöht den Lese-/Schreibzugriff auf der Karte und damit die IO Last auch auf der CPU. Aber ich denke dennoch dieses wird ein Durchbruch, wnen man eigene Projekte nicht immer komplett kompilieren muss.  
 
 Die Firmware liegt auf GitHub und kann einfach kompiliert werden. Es gibt seit dieser Woche eine .vscode Unterstützung, aber unter Linux ist es deutlich einfacher.  
 
@@ -141,5 +141,6 @@ Hier kommen zwei Weltern zusammen.
 2. Im BackTrack Linux (heute [Kali Linux](https://www.kali.org/)) heisst es "Je leiser du wirst, desto mehr kannst du hören.". Ich muss nicht alles hacken, knacken, penetrieren. Es reicht manchmal auch einfach zuzuhören. Und vielleicht dadruch schon ableiten zu können wie etwas einfacher oder besser geht. Wenn ich zuhöre weis ich ja noch gar nicht was gesagt wird und ide Fragen oder Ideen kommen erst dann.  
 
 Die Fragen im Forum zeigen aber auch, dass diese Art der Forschung notwendig ist. Es gibt Menschen, die nicht glauben, dass von der Sonne Infrarotstrahlung kommt. Für mich persönlich war das Kapitel AM (Amplituden Modulation) und FM (Frequenz Modulation) bisher am aufschlussreichesten. Auf die Anwendungen in der Welt der GPIO bin ich sehr gespannt.  
+Wichtig ist auch zu wissen, dass der Flipper in der Regel keine 'Wellen' speichert. Alle aufgenommenen Signale werden von den Chips bereits zu 1 und 0 verarbeitet und weitergegeben. Wir haben also eher eine sehr niedrig auflösende MP3, als eine 1:1 Kopie in WAV. Daher ist es wichtig, dass der Flipper in seinen Datenbanken möglichst viele Codierungen zu kennen, denn die lassen sich besser als 0 und 1 verarbeiten als irendwelche Spitzen eines vermutlichen Signals.
 
 Ja, mehr als Lernen kann man damit wirklich nicht machen.  
