@@ -2,162 +2,144 @@
 status: published
 published: true
 layout: post
-title: Infrastruktur - WireGuard
+title: Flipper Zero
 author: Benjamin Moeller
 date: 2022-06-12 21:14:03 UTC
-categories: [infrastruktur]
-tags: [wireguard]
+categories: [experimente]
+tags: [produkte]
 comments: []
 ---
 
-# Motivation
+Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotshi Gehäuse stecken und so verschiedenste 'Pentest Tools' handlicher machen. 
+Da das aber Entwicklung und somit Geld uns Zeit kostet, haben sie die Idee auf [Kickstarter](https://www.kickstarter.com/projects/flipper-devices/flipper-zero-tamagochi-for-hackers) im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise 'Backer' genannt) mit zu viel Geld aus dem Internet.  Mein Bruder ist so einer, aufgrund einer Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele andere auch, und anstelle der mindestens 60.000 USD kamen knapp unter 5Mio zusammen.  
 
-Für mein Wohnmobilprojekt habe ich mir einen GL.iNet Beryl Reiserouter gekauft. Diese kleinen Dinger aus Hong Kong basieren auf OpenWRT und bieten für schmales Geld (35-80 Euro) eine gute Basis um unterwegs mehrere Geräte mit geringem Aufwand zu betreiben.  
-Die Grundidee ist, dass ich nicht jedes meiner Geräte im (Hotel)WLAN anmeldne muss, sondern den Router vorschalte und dieser einen sicherne Zugang für alle meine Geräte stellt. Sicher, weil die kleinen Router standardmäßig eine Unterstützung für gängige Protokolle, wie OpenVPN und WireGuard mitbringen. Wer keine Möglickeit hat einen Endpunkt zu mieten oder selbst aufzubauen, dem steht immernoch per Klick das TOR Netzwerk offen.  
-Mit OpenVPN bin ich nie warm geworden, daher versuche ich mich am aktuelleren WireGuard.  
+Dem letzten Fakt ist es wohl auch zu verdanken, dass das Projekt diverse Krisen überwundne hat. Corona/Lockdown, Chipmangel und querliegende Containerschiffe, eine heftige Unterhaltung darüber wem denn das Gebiet 'Ukraine' gehört ...  Die Entwicklung und Produktion findet zu in HongKong (Shzenen) statt. Aber das Team ist auch Russisch, was sicher für viele Spekulationen gesorgt hat.  
 
-# WireGuard Skript - Erste Schritte
+Von vorne herein war klar, dass das Projekt OpenSource wird. Dabei hat das Unternehmen 'Flipper Devices Inc.' die Quellen auf GitHub zeitweise auf 'privat' gestellt, weil sie durch zu viel Unterstützung nicht mehr mit den Kernaufgaben voran kamen.  
+Das Team war zu jeder Zeit so nett und hat Updates gegeben und über Entwicklungsmeilensteine informiert. Nicht oft, aber fast immer mit interessanten Einblicken in die Entwicklung und Produktion. Das ist für so eine Kampagne in dieser Situation nicht selbstverständlich. Es gab viele Kritiker, Zweifler und negative Stimmen. Aber:  
+Am Ende gab es den [Flipper Zero](https://flipperzero.one/).
 
-Wireguard bietet für Linux ein 'All in One' Skript an. Dieses ist genauso gruselig, wie es klingt. Es wird aus dem internet heruntergeladen und ausgeführt ...  
+Da mein Bruder nun Mitte 2022 2 Flipper hatte und wir und zwischenzeitlich viel darüber unterhalten haben, hat er mir einen Geschenkt. Deshalb? Ich weis es nicht, auf jeden Fall: Vielen Dank!
 
-> wget https://git.io/wireguard -O wireguard-install.sh && sudo bash wireguard-install.sh
+# Was ist der Flipper Zero?
 
-Als erste Testumgebung habe ich damit angefangen. Und es funktioniert.  
+Wie gesagt erinnert das Äussere sehr an einen Tamagotchi. Man sieht nur ein 1,4" Display, wleches mit 64x128 Pixeln in schwarz/weis auflöst. Rechts daneben ein 4-Wege 'Joypad' mit bestätigungsbutton und einen 'Zurück' Button.  
+Oben hat man 18 Löscher für 'Jumper Kabel'. Rechts befindet sich ein IR-Fenster, wie bei Fernbedienungen. Links eine USB-C Schnittstelle zum Laden und für die Kommunikation mit einem PC oder Telefon. Unten gibt es einen SD Karten Slot. Auf der Rückseite gibt es drei iButton Kontakte.  
 
-Dann wollte ich den Service auf meine Umgebung anpassen. Also Konfiguration unter `/etc/wireguard/` anpassen und den Dienst neu starten ... den Dienst ... den Dienst ... Wo ist der denn? ... Server durchstarten geht auch.  
-Schon vorher wollte ich dringend das Skript gegen eine saubere Installation ersetzen. Spätestens an dem Punkt war mir die Dringlichkeit bewusst.  
+Schauen wir einmal rundherum:
 
-## Wireguard aufsetzen
+## Das Display
 
-Im Proxmox schnell einen Container erstellt. Debian 11.0.3 Image, 12GB Festplatte auf der lokalen SSD, 1Core, 512MB RAM und im Netzwerk 'vmbr1 - Green'. Container starten.  
+Das Display ist bernstein Hintergrundbeleuchtet und auch bei direkter Sonneneinstrahlung sehr gut zu lesen. Wenn der Flipper gerade nicht benutzt wird gibt es niedliche Animationen von ... einem Delfin.  
+Unterstützt wird die Anzeige für verschiedene Stati von einer LED unten rechts am Display.  
 
-Ab Debian 11 ist das Paket [wireguard](https://packages.debian.org/bullseye/wireguard) mitgeliefert, davor benötigt es [Backports](https://packages.debian.org/buster-backports/wireguard).
+## Das IR Fenster
 
----
+Es gibt schon lange das Projekt '[TV-B-Gone](https://de.wikipedia.org/wiki/TV-B-Gone)'. Eine kleine Platine, die auf Knopfdruck alle bekannten 'Power' codes per IR (Infrarot) sendet. Damit sollen sich z.B. im Pub die TV ausschalten lassen.  
+Dieses Gerät ist ein schönes Spielzeug, aber nicht einfach erweiterbar, und mit kaum Lerneffekt. Zudem ist der Prozessor sehr klein, so dass nur einfachste Befehle funktionieren.  
+Im [Blog](https://blog.flipperzero.one/infrared/) des Flipper lernen wir sehr komprimiert, wie ein IR Signal aufgebaut ist, wlechen Sender und Empfänger der Flipper vernwendet. Und vor allem, dass eine TV Fernbedienung deutlich einfacher ist als das signal eines AC (Air Conditioner/Klimaanlage).  
 
-# Abbruch  
+Im Gegensatz zum zuerst genannten Gerät und deren Alternativen kann der Flipper sowohl direkt von einer Fernbedienung lernen as auch durch Datenbanken aus dem Internet aufgefüllt werden. Im Menü muss dabei unterschieden zwischen 'Universal Remotes' (Sende alles nacheinander) und 'Saved Remotes' (Lese konfiguration einer Fernbedienung aus der Datenbank).
 
-## A long story short
-Auf dem Proxmox (oder anderen virtuellen Umgebungen) hat man keinen direkten Zugriff auf /dev/tun. Das lässt sich mit ein paar Hebeln gerade biegen und der Helper Boringtun von Cloudflare unterstützt das ganze...  
-Aber da ich so viel parallel lernen musste, bleibe ich zunächst bei dem oben genannten Script.  
+## Die GPIO Buchse
 
----
+Mittels GPIO kann man mit dem Flipper so ziehmlich alles nachbauen, was man mit dem Arduino schon konnte und ein wenig mehr. Das thema ist so komplex, dass es mindestens einen, vermutlich aber deutlich mehr eigene Blog Artikel benötigt.  
+Man kann aber nicht nur Jumperkabel stecken, sondern auch Ganze Platinen. Durch den Pinabstand von 2,75mm sehr universell.  
 
-# Wireguard Server (Skript)
+## Die USB Schnittstelle
 
-## /etc/wireguard/wg0.conf
+Das Gerät ist noch ganz jung und Open Source. Das bedeutet es gibt oft und viele Aktualisierungen. Es gibt verschiedene Wege diese zu installieren. Mein favorisierter Weg ist das aufrufen des Helper 'qFlipper', den Flipper erkennen zu lassen und dann einfach auf 'Install' klicken.  
+Es ist auch möglich über USB auf das GPIO Panel zuzugreifen und den Flipper zum Programmer zu machen. Später.
 
-Die zentrale Konfigurationsdatei für dne ersten Tunnel (wg0) wird angelegt.  
-In dieser Datei befindne sich folgende Zeilen:  
+## Die SD Karte
 
-```
-[Interface]
-Address = 10.7.0.1/24, fddd:2c4:2c4:2c4::1/64
-PrivateKey = UGxxxxxxxxxxxxxxxWw=
-ListenPort = 51820
-```
+Der Flipper hat einen Speicher von etwa einem MB. Die Firmware ist aktuell ca. 800KB gross. Das bedeutet man hat einen theoretischen Nutzspeicher von 200KB. dieser Blog Artikel ist shcon größer. Die Lösung ist eine SD Karte.  
+Wie auch beim Display war bei der SD karte der geringe Stromverbrauch massgebend, daher greift man auf diese per SPI und nicht per SPIO auf die Karte zu. Das ist wichtig, wenn man eine Karte kauft. Denn SPIO können alle, SPI ist nicht zwangsläufig implementiert.  Der Flipper kann Karten bis 512 GB lesen, aber das macht irgendwann keinen Spass mher, das Team empfiehlt Karten bis 32 GB größe zu nutzen.  
+Auf die Karte kommen auch die Datenbanken. Eigentlich sind 'die Datenbanken' nur textdateien mehr ode rminder sinnvoll soetiert in Ordnern. Gerade beim ersten Einrichten sollte man die SD Karte lieber aus dem Flipper nehmen und am favorisierten Desktop bearbeiten.  
+Es gibt spezielle Datenbanken für IR Codes, es gibt SubGHz Protokolle, NFC Wörterbücher ... Dabei ist immer zu beachten: Manchmal ist weniger mehr. Jeder Eintrag kostet Rechenzeit.  
 
-Unter [Interface] wird definiert, wie wg0 antworten soll.
-* **Address** gibt an welche IP wg0 bekommt und in wlechem Netz es existiert
-* **PrivateKey** sollte nie an die Öffentlichkeit gelangen, dieses ist das Geheimnis, welches Euer VPN schützt. Der Name lässt shcon vermuten: Diese Information ist privat.
-* **ListenPort** ist der Port, an den die Firewall weiterleiten muss (Portforwarding) und/oder der in der Firewall geöffnet werden muss. Zum Glück nur für UTP.
+## Der iButton
 
-```
-# BEGIN_PEER amy
-[Peer]
-PublicKey = hI8xxxxxxxxxxxxxxxxxxe3M=
-PresharedKey = Ew7xxxxxxxxxxxxxxxxxxsg=
-AllowedIPs = 10.7.0.2/32, fddd:2c4:2c4:2c4::2/128
-# END_PEER amy
-```
+Der iButton ist in einigen Ländern recht gängig als Zugangssystem. Zumindest in Deutschland ist das nicht der Fall, man trifft diese nur sehr selten. Ich habe noch nie eines in echt gesehen.
 
-Die Kommentare am Anfang und am Ende sind für Wireguard unwichtig, werden aber vom Script gelesen um Peers (Teilnehmer) in der Konfigurationsdatei zu erkennen, bearbeiten und bei Bedarf zu löschen.
-* **PublicKey** ist der öffentliche Schlüssel. Dieser ist nicht allzu wichtig, wenn der verloren geht. Im Verlustfall reicht es aus den Peer zu entfernen und, wenn gewünscht, neu anzulegen.
-* **Presharedkey** Dieser ist zu sehen wie WLAN Key. Der sollte geheim bleiben.
-* **AllowedIPs** definiert die IP des Endpunkts und das Netz.
+# Ist das alles?
+
+Von außen macht der Flipper schon einiges her. Es gibt noch mehr im Innenleben. Wenn ich ihn beschrieben soll, dann sage ich 'Ein Tamagotchi mit vielen Antennen'. Diese sieht man nicht, da sie für drei Bereiche sind: SubGHz, RFID, NFC.  
+
+## Was ist SubGHz?
+
+Viele haben ein Auto mit Fernbedienung für die Zentralverrieglung. Einige haben eine weitere Fernbedienung für das Garagentor. Auf beiden steht eine Frequenz, meist irgendwas um die 400 oder 880 MHz. -> Unter 1GHz = SubGHz ...  
+Bluetooth findet im 2,4GHz Band statt und WLAN im 2,4GHZ sowie 5GHz Band. Diese fallen also aus der Zuständigkeit des Flipper heraus. Wobei er ein BLE (Bluetooth Low energy) Modul hat um mit Handys zu sprechen ... anderes Kapitel.
+
+Ich kann also den Flipper starten, im Menü 'Sub-GHz' raussuchen und mit dem 'Frequenz Analyzer' was in meiner Umgebung so ab geht. Dabei zeigt der 'Frequenz Analyzer' an, wenn er etwas erkennt was ein Signal sein könnte und gibt dazu die Stärke an. Die Stärke steht als RSSI dort, also nicht die absolute Stärke in dB, sondern viel mehr die 'Nutzstärke' über dme Grundrauschen.  
+Bekannte Signale kann ich dann mit 'Read' lesen. Unbekannte Signale kann ich mit 'Read RAW' aufnehmen und zur Analyse speichern oder direkt wieder abspielen.  
+
+### Ich kann damit Autos knacken?
+
+Halt stopp. Abgesehen davon, dass das höchst illeal wäre: Nein.  
+Zunächst einmal hat ein Auto heutzutage einen sogenannten Rolling Code. Das bedeutet wenn die Tür geöffnet wurde, dann wechseln Sender und Empfänger den Code. Wenn ich genug dieser Codes sammeln würde und mich mit Mathematik auskenne, dann könnte ich rein theoretisch den nächsten Code erraten. Dazu brauche ich aber mehr als einen zufällig aufgeschnappten RAW Code zum Parkplatz des Supermarkt. Und wenn ich einen Schlüssel bekomme und so oft drauf drücke, wie notwendig wäre, dann ist die Chance sehr hoch, dass sich der Schlüssel und das Fahrzeug desynchronisieren...  
+Das Flipper Projekt steht dafür ein, dass Rolling Codes nicht implemnetiert werden. Da es eine Open Source Plattform ist kann das theoretisch jeder selbst, aber wenn ich diese Fähigkeiten habe kann uahc auch andere Empfänger/Sender kaufen oder bauen. wir sind durch den Flipper kein Stück unsicherer als zuvor.  
+
+## NFC
+
+Wie bei SubGHz kann auch auch NFC Karten auslesen, speichern und 'abspielen'. Dabei gibt es diverse standards und noch nicht alle werden aktuell unterstützt. Hier arbeitet das Team sehr daran alle möglichen Kartentypen zu erkennen.  
+
+### Aber Bankkarten kann ich damit Hacken?
+
+Halt stopp! Wieder Nein.  
+Eine Bankkarte hat zwei Bereiche. Einen lesbaren und einen sicheren. Der Lesbare enthält solche informationen, wie die Kontonummer, BLZ, das Ablaufdatum, ... Grob gesagt: maximal das was auf der Karte gedruckt ist. Wenn eine Transaktion stattfindet, dann gibt das Terminal einen Wert an die Karte. Die Karte berechnet eine Antwort und gibt diese an das Terminal zurück... Keiner weis was in der Karte passiert und wie die Berechnung stattfindet (stark vereinfacht). 
+Das Terminal kann bei der Bank anfragen ob die beiden Werte richtig sind, ohne je zugriff auf den sicheren Bereich gehabt zu haben.
+
+Wenn ich etwas Clonen kann, dann vielleicht die Zutritskarte zu meinem Büro. Aber will ich das bei den ganzen Kameras riskieren?
+
+## RFID
+
+RFID hat einen ähnlichen Zweck, wie NFC, nur für einen weiteren Wirkungsbereich. Während NFC oft zur Authentifizierung einer Person eingesetzt wird, werden RFID als zugangskontrolle oder in der Logistik zum Identifizieren von Lieferungen eingesetzt.  
+Auch hier hilft das Blog wieder: https://blog.flipperzero.one/rfid/
+
+## Die Firmware
+
+Die Firmware ist das Betriebssystem des Flipper. dieses ist aktuell noch in starker entwicklung. 
+Dabei scheint eines der Hauptaufgaben der Entwickler zu sein, auszusortieren was illegal ist und schauen was verwendbar ist. Dabei gibt es keine Grauzone, denn wenn etwas fragwuerdig ist, gibt es genug Anfragen,die sicher umgesetzt werden können.  
+
+Wie bereits geschrieben ist die Firmware auf einem sehr kleinen Speicher untergebracht, das limitiert auch die Möglichkieten. Eine der wichtigsten Entwicklungne ist altuell der ELF Loader, mit dem Plugins von der SD Karte geladen werden können. Das erhöht den Lese-/Schreibzugriff auf der Karte und damit die IO Last auch auf der CPU. Aber ich denke dennoch dieses wird ein Durchbruch, wnen man eigene Projekte nicht immer komplett kompilieren muss.  
+
+Die Firmware liegt auf GitHub und kann einfach kompiliert werden. Es gibt seit dieser Woche eine .vscode Unterstützung, aber unter Linux ist es deutlich einfacher.  
+
+Beispiel Kali Linux 2022.2:
+* `apt install git openocd clang-format-13 dfu-util protobuf-compiler gcc-arm-none-eabi`
+* `git clone --recursive https://github.com/flipperdevices/flipperzero-firmware.git`
+* `cd flipperzero-firmware`
+* `./fbt`
+* Bei Fehlern lassen die sch relativ unkompliziert lösen.
+* unter `/dist/` liegt die Datei `flipper-z-{target}-full-{suffix}.dfu`
+* die .dfu mit `./qFlipper` installieren (Button [install from file])
+
+## Die Dokumentation
+
+Hat Lücken. Das bringt es auf den Punkt.  
+Bis zur Firmware 1.0 wollen sie das aber beheben. Aktuell gibt es so viele Änderungne in den APIs, dass eine offizille Dokumentation nicht nachzupflegen wäre.  
+
+Der Tipp, wie man eigene Progrramme schreibt: Es ist OpenSource. Schau Dir an was schon existiert.
 
 
-## Routing
+# Ist das nicht illegal?
 
-Das Routing wird nicht von Wireuard übernommen! Wireguard stellt das Netzwerkgerät wg0 und ein anderes Programm sorgt für das routing. Klassisch wurden bisher unter Linux bisher die iptables dafür eingesetzt, diese werden nun durch die nftables ersetzt.
+Der Flipper Zero selbst vereint nur diverse Scanner. Die Wellen fliegen um uns herum durch den Äther und können aufgenommen werden. Sobald ich versuche diese Aufnahme zu analysieren ist es das gleiche, als wenn ich mit einem Dietrich an Deiner Tür stehe und versuche es zu knacken. Das ist Straffbar, egal wie erfolgreich ich bin.  
+Die Original Firmware legt größten Wert darauf 'sauber' zu sein, also weder das Auslesen von Bankkarten zu ermöglichen, noch vorberechnete Rolling Codes bereitzustellen oder überhaupt vom Gerät einen Rolling Code errechen zu lassen.  
 
-Das Programm `iptables-save` sagt:
+Leider sieht man im Forum oft 'Ich bin Noob, wie kann ich auf xyz zugreifen?'. Die haben sich vorgestellt auf dem Supermarktparkplatz kurz einen Tastendruck mitzuschneiden und dann jedes beliebige Auto zu öffnen.  
+Das Resultiert darin, dass es vielen zu aufwändig ist und es gibt mittlerweile Marktplätze für gebrauchte Flipper.  
 
-```
-*filter
-:INPUT ACCEPT [0:0]
-:FORWARD ACCEPT [0:0]
-:OUTPUT ACCEPT [0:0]
--A INPUT -p udp -m udp --dport 51820 -j ACCEPT
--A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
--A FORWARD -s 10.7.0.0/24 -j ACCEPT
-COMMIT
-*nat
-:PREROUTING ACCEPT [0:0]
-:INPUT ACCEPT [0:0]
-:OUTPUT ACCEPT [0:0]
-:POSTROUTING ACCEPT [0:0]
--A POSTROUTING -s 10.7.0.0/24 ! -d 10.7.0.0/24 -j SNAT --to-source 192.168.21.51
-COMMIT
-```
+Also nein, der Flipper ist nicht Illegal. Er ist auch nicht entwicklet worden für illegale Aktivitäten. Sicher kann man im Rahmen eines angemeldeten/erlaubten Pentesting verschiedene Vektoren ausprobieren, die vorher nicht so einfach/handlich möglich waren. Auch dabei muss man sich aber zunächst mit der Materie befassen und die Grundlagen lernen. Es reicht nicht den Flipper hinzuhalten und auf magischer Weise ist jedes Tor offen. Und wie zuvor erwähnt, wer das kann, der konnte es auch vorher mit relativ geringen Hürden.  
 
-Interessant ist die vorletzte Zeile: Alles was 10.7.0.0/24 (der Tunnel) ist und nicht an 10.7.0.0/24 geht, wird an 192.168.21.51 weitergeleitet.  
-Aber was macht 192.168.21.51 damit?
+# Und was kann ich praktisch damit anfangen?
 
-```bash
-root@walter01:~# ip r
-default via 192.168.21.1 dev eth0 onlink 
-10.7.0.0/24 dev wg0 proto kernel scope link src 10.7.0.1 
-192.168.21.0/24 dev eth0 proto kernel scope link src 192.168.21.51
-```
+Tja, das ist die große Frage. Bis Mitte 2022 hat jeder in der Gesellschaft auch ohne Flipper überlebt. Also ich wage zu behaupten keiner hätte länger gelebt, hätte er einen besessen.  
+Hier kommen zwei Weltern zusammen.
+1. Der Arduino. Ein kleiner Microcontroller, mit dem man spielerisch Projekte umsetzen kann. Auch der RaspberryPi geht in diese Richtung der 'Gamification' oder auch 'Rapid Development'. Man kann sich die Umgebung ansehen, man kann Token/Karten/Schlüssel emulieren. Halt nur im erlaubten Bereich. Begreifen durch anfassen.
+2. Im BackTrack Linux (heute [Kali Linux](https://www.kali.org/)) heisst es "Je leiser du wirst, desto mehr kannst du hören.". Ich muss nicht alles hacken, knacken, penetrieren. Es reicht manchmal auch einfach zuzuhören. Und vielleicht dadruch schon ableiten zu können wie etwas einfacher oder besser geht. Wenn ich zuhöre weis ich ja noch gar nicht was gesagt wird und ide Fragen oder Ideen kommen erst dann.  
 
-Es hat keine spezielle Route, aso wird es an die Defaultroute übergeben und an 192.168.21.1 gegeben ... welches zufällig mein Router in das Internet ist.
+Die Fragen im Forum zeigen aber auch, dass diese Art der Forschung notwendig ist. Es gibt Menschen, die nicht glauben, dass von der Sonne Infrarotstrahlung kommt. Für mich persönlich war das Kapitel AM (Amplituden Modulation) und FM (Frequenz Modulation) bisher am aufschlussreichesten. Auf die Anwendungen in der Welt der GPIO bin ich sehr gespannt.  
 
-### Zusammenfassung
-
-Wireguard erstellt einen Tunnel mit dem Subnet 10.7.0.0/24. Alle Geräte im Tunnel (Peers) bekommen eine feste IP.
-Die iptables nehmen auf dem Wireguard Server den Netzwerkverkehr und geben diesen an das Netzwerkgerät im LAN.
-Durch das NAT weiss der Router ins Internet nicht, dass der Verkehr aus dme Tunnel kommt. Für das LAN sieht es aus als würdne alle Anfragen vom Wireguard Server lokal kommen.
-
-## Wireguard Client Config
-
-Die Client config wird per dem oben genanntne Script einfach erstellt. Es wird eine Datei mit dem namen und der Endung .conf erstellt.  
-### amy.conf
-
-```
-[Interface]
-Address = 10.7.0.2/24, fddd:2c4:2c4:2c4::2/64
-DNS = 192.168.21.53
-PrivateKey = 4P8xxxxxxxxxxxxxxx1I=
-
-[Peer]
-PublicKey = UlExxxxxxxxxxxxxxx3o=
-PresharedKey = Ew7xxxxxxxxxxxxxxxsg=
-AllowedIPs = 0.0.0.0/0, ::/0
-Endpoint = vpn.domain.org:51820
-PersistentKeepalive = 25
-```
-
-Hier sehen wir die folgenden Einstellungen:
-
-Abschnitt [Interfaces]
-* **address** Die Client Adresse im VPN. Es funktioniert hier kein DHCP!
-* **DNS** Der DNS Server muss entweder im LAN stehen und erreichbar sein, ode rman nimmt einen externen. Ein Externer DNS Server ist auch ein Sicherheitsrisiko, da dieser jede Hostnamenauflösung mitschneidet.
-* **PrivateKey** Wieder besonders schützenswert. Wer diesen Key hat, kann sich mit geringem Aufwand als der Client ausgeben.
-
-Abschnitt [Peer]
-* **PublicKey** Dieser darf wieder bekannt werden. Dieser dient 'nur' zur cryptografischen Austhentifizierung.
-* **PresharedKey** Ist der Schlüssel, den alle Clients und der Server kennen muss. Aber wie beim WLAN Key (PSK) sollte es keiner kennen, der nicht in das VPN soll.
-* **AllowedIPs** Hier wird es interessant. Diese Option definiert welcher Verkehr über den Tunnel gehen soll.
-* **Endpoint** Hier wird dem Client gesagt, über wleche Adresse der Server erreicht wird. Soll der Tunnel über Internet aufgebaut werden, muss der VPN Server auch über diesen Hostnamen und dem Port aus dme Internet erreichbar sein.
-* **PersistentKeepalive** Wenn diese Uption nicht gesetzt ist, kann es sein dass die Verbindung bei nicht-Nutzen getrennt wird. Also wird alle 25 Sekunden ein Signal über die Leitung geschickt. 
-
-## Allowed IPs
-
-> AllowedIPs = 0.0.0.0/0, ::/0
-
-Wenn der VPN tunnel aufgebaut wird und 0.0.0.0/0 'Allowed' ist, dann wird der gesamte Netzwerkverkehr über dne Tunnel gesendet.
-
-In Unternehmen soll oft nur der Netzwerkverkehr der Firma über dne Tunnel gesendet werden. Dann wird einfach das entsprechende Subnetz eingetragen, zum Beispiel: 192.168.21.0/24. Der Wireguard Server muss das Subnetz natürlich kennen und bedienen können.
-Es gibt auch die Wariante mit 0.0.0.0/1. Damit wird die Default-Route im System nicht überschireben und im Falle eines Ausfal im/des VPN kann der Client weiterhin im Internet agieren.
-
+Ja, mehr als Lernen kann man damit wirklich nicht machen.  
