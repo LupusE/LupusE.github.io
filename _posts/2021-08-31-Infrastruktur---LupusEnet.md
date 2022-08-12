@@ -5,8 +5,8 @@ layout: post
 title: Infrastruktur - LupusEnet
 author: Benjamin Moeller
 date: 2021-08-31 20:07:13 UTC
-categories: [howto]
-tags: [infrastruktur, linux, server]
+categories: [infrastruktur]
+tags: [linux, server]
 comments: []
 ---
 

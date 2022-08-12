@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Flipper Zero | LupusE webLife</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Flipper Zero" />
+<meta name="author" content="Benjamin Moeller" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen. Da das aber Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf Kickstarter im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen." />
+<meta property="og:description" content="Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen. Da das aber Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf Kickstarter im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen." />
+<link rel="canonical" href="http://blog.lupuse.org/experimente/2022/06/12/flipper_zero.html" />
+<meta property="og:url" content="http://blog.lupuse.org/experimente/2022/06/12/flipper_zero.html" />
+<meta property="og:site_name" content="LupusE webLife" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-12T21:14:03+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Flipper Zero" />
+<script type="application/ld+json">
+{"headline":"Flipper Zero","description":"Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen. Da das aber Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf Kickstarter im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen.","datePublished":"2022-06-12T21:14:03+00:00","dateModified":"2022-06-12T21:14:03+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.lupuse.org/experimente/2022/06/12/flipper_zero.html"},"@type":"BlogPosting","url":"http://blog.lupuse.org/experimente/2022/06/12/flipper_zero.html","author":{"@type":"Person","name":"Benjamin Moeller"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://blog.lupuse.org/feed.xml" title="LupusE webLife" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">LupusE webLife</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">Über mich</a><a class="page-link" href="/category.html">Kategorie</a><a class="page-link" href="/cv_de.html">CV</a><a class="page-link" href="/impressum.html">Impressum</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Flipper Zero</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-06-12T21:14:03+00:00" itemprop="datePublished">Jun 12, 2022
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Benjamin Moeller</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen.<br />
+Da das aber Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf <a href="https://www.kickstarter.com/projects/flipper-devices/flipper-zero-tamagochi-for-hackers">Kickstarter</a> im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen.</p>
+
+<p>Dem letzten Fakt ist es wohl auch zu verdanken, dass das Projekt diverse Krisen überwunden hat. Corona/Lockdown, Chipmangel und querliegende Containerschiffe (Evergreen im Suez Kanal), eine heftige Unterhaltung über Ländergrenzen (Russland/Ukraine) …  Die Entwicklung und Produktion findet zu in HongKong (Shzenen) statt. Das Team ist auch Russisch, was für viele Spekulationen gesorgt hat.<br />
+An dieser Stelle möchte ich erwähnen, dass nach dem sogenannten ‘<a href="https://www.ccc.de/hackerethics">Hacker Manifest</a>’ der Glaube, das Geschlecht, Alter, Herkunft, Hautfarbe, Rasse und so weiter keine Rolle spielen. Da wir uns hier auf einem sehr technischen Gebiet befinden und vermutlich viele der beteiligten zur Gruppe ‘Hacker’ gezählt werden können, denke ich dass die politische Situation in einer parallelwelt stattfindet. Also nicht für das Projekt relevant ist. Das Hackermanifest wird z.B. erwähnt im Film ‘<a href="https://www.imdb.com/title/tt0113243/">Hackers</a>’ von 1995.</p>
+
+<p>Von vorne herein war klar, dass das Projekt Open Source wird. Dabei hat das Unternehmen ‘Flipper Devices Inc.’ die Quellen auf GitHub zeitweise auf ‘privat’ gestellt, weil sie durch zu viel Unterstützung nicht mehr mit den Kernaufgaben voran kamen. Auch das hat für Spekulationen geführt, man behauptete zum Beispiel dass das Team sich mit dem Geld abgesetzt hätte.<br />
+Die Flipper Devices Inc. war zu jeder Zeit so nett und hat Updates gegeben und über Entwicklungsmeilensteine informiert. Nicht oft, aber fast immer mit interessanten Einblicken in die Entwicklung und Produktion. Das ist für so eine Kampagne in dieser Situation nicht selbstverständlich. Es gab viele Kritiker, Zweifler und negative Stimmen. Aber:<br />
+Am Ende gab es den <a href="https://flipperzero.one/">Flipper Zero</a>.</p>
+
+<p>Da mein Bruder nun Mitte 2022 2 Flipper hatte und wir und zwischenzeitlich viel darüber unterhalten haben, hat er mir einen Geschenkt. Deshalb? Ich weis es nicht, auf jeden Fall: Vielen Dank!</p>
+
+<h1 id="was-ist-der-flipper-zero">Was ist der Flipper Zero?</h1>
+
+<p>Wie gesagt erinnert das Äussere sehr an einen Tamagotchi. Man sieht nur ein 1,4” Display, welches mit 64x128 Pixeln monochrome auflöst. Rechts daneben ein 4-Wege ‘Joypad’ mit bestätigungsbutton und einen ‘Zurück’ Button.<br />
+Oben hat man 18 Löscher für ‘Jumper Kabel’. Rechts befindet sich ein IR-Fenster, wie bei Fernbedienungen. Links eine USB-C Schnittstelle zum Laden und für die Kommunikation mit einem PC oder Telefon. Unten gibt es einen SD Karten Slot. Auf der Rückseite gibt es drei iButton Kontakte.</p>
+
+<p>Schauen wir einmal genauer rundherum:</p>
+
+<h2 id="das-display">Das Display</h2>
+
+<p>Das Display ist bernstein Hintergrundbeleuchtet und auch bei direkter Sonneneinstrahlung sehr gut zu lesen. Wenn der Flipper gerade nicht benutzt wird gibt es niedliche Animationen von … einem Delfin.<br />
+Unterstützt wird die Anzeige für verschiedene Stati von einer LED unten rechts neben dem Display.</p>
+
+<h2 id="das-ir-fenster">Das IR Fenster</h2>
+
+<p>Es gibt schon lange das Projekt ‘<a href="https://de.wikipedia.org/wiki/TV-B-Gone">TV-B-Gone</a>’. Eine kleine Platine, die auf Knopfdruck alle bekannten ‘Power’ codes per IR (Infrarot) sendet. Damit sollen sich z.B. im Pub die TV ausschalten lassen.<br />
+Dieses Gerät ist ein schönes Spielzeug, aber nicht einfach erweiterbar, und mit kaum Lerneffekt. Zudem ist der Prozessor sehr klein, so dass nur einfachste Befehle funktionieren.<br />
+Im <a href="https://blog.flipperzero.one/infrared/">Blog</a> des Flipper lernen wir sehr komprimiert, wie ein IR Signal aufgebaut ist, wlechen Sender und Empfänger der Flipper vernwendet. Und vor allem, dass eine TV Fernbedienung deutlich einfacher ist als das signal eines AC (Air Conditioner/Klimaanlage).<br />
+Kurzgesagt:<br />
+Eine TV Fernbedienung sendet ein IR Signal, welches generell aus zwei Teilen besteht. Zuerst das Protokoll, dann den Steuerbefehl. Da ein Teil immer gleich ist und keine Verschlüsselung stattfindet, ist es im Verhältnis einfach zu analysieren.<br />
+Ein AC dagegen hat auf der Fernbedienung oft ein Display. Da sie aber keine Daten empfängt, sendet sie nicht nur den Befehl ‘1°C wärmer’, sondern immer den gesamten Status der Fernbedienung. Das Datenpaket ist also deutlich breiter oder länger.<br />
+Erklärung: Wenn ich ansonsten ausserhalb der Sichtweite von 20° auf 25° stelle und innerhalb der Sichetweite von 25° auf 26°, würde der AC nuf 21° erhöhen obwohl auf der Fernbedienung 26° steht … Das ist der Grund, warum die Fernbedienung immer alle Daten sendet um ‘ohne bidirektionale Kommunikation synchron’ zu bleiben. Ein TV macht einfach ein lauter, sobald sich die Fernbedienung in sichtweite befindet und zeigt es in den meisten Fällen sogar direkt an.</p>
+
+<p>Im Gegensatz zum zuerst genannten Gerät und deren Alternativen kann der Flipper sowohl direkt von einer Fernbedienung lernen als auch durch Datenbanken aus dem Internet aufgefüllt werden. Im Menü muss dabei unterschieden zwischen ‘Universal Remotes’ (Sende alle bekannten Codes für Aktion x nacheinander) und ‘Saved Remotes’ (lese Konfiguration einer Fernbedienung aus der Datenbank).</p>
+
+<p>Was mich persönlich stört ist der Umstand, dass in den Bezeichnungen Das Modell der Fernbedienung und die Modelle der TV oft durcheinander geworfen werden. nicht nur im Flipper Projekt, bei allen IR Datenbanken.<br />
+Für die normalen Tasten ist es relativ einfach, einige Fernbedienungen beherrschen aber auch die Steuerung anderer Geräte. Daher ist es durchaus sinnvoll zu definieren für welches Gerät ich ‘einprogrammiert’ habe. aber das ersetzt nicht die Angabe des Fernbedienungsmodell.</p>
+
+<p>Meine Idee ist, dass der Code abgespeichert wird mit folgenden Informationen:<br />
+<code class="language-plaintext highlighter-rouge">[Funktion ] - [Protocol] - [Steuercode] - [Fernbedienung] - [Gerät] - [Typ]</code></p>
+
+<ul>
+  <li>Funktion - Power, Volup, Voldn, Chup, Chdn, …</li>
+  <li>Protocol - NEC, Samsung, …</li>
+  <li>Steuercode - Irgendwas in Hex</li>
+  <li>Fernbedienung - Hersteller und Modell</li>
+  <li>Gerät - Hersteller und Modell</li>
+  <li>Typ - TV, AVR, BD, DVD, AC, …</li>
+</ul>
+
+<p>Da die IR Codetabellen in der Regel Textdateien sind, gibt es einige Github Verzeichnisse für verschiedene Projekte, welche mal besser und mal schlechter dedupliziert sind.</p>
+
+<h2 id="die-gpio-buchse">Die GPIO Buchse</h2>
+
+<p>Mittels GPIO kann man mit dem Flipper so ziehmlich alles nachbauen, was man mit dem Arduino schon konnte und ein wenig mehr. Das Thema ist so komplex, dass es mindestens einen, vermutlich aber deutlich mehr eigene Blog Artikel benötigt.<br />
+Man kann nicht nur Jumperkabel stecken, sondern auch ganze Platinen. Durch den Pinabstand von 2,75mm sehr universell. Aus der einfachen Steckerleiste werden dann Sender und Empfänger für Bluetooth, WLAN, Zigbee, nRF24, … Diese Boards benötigen aber am besten eine eigene Firmware mit einer API. Der Speicher im Flipper Zero ist begrenzt.</p>
+
+<h2 id="die-usb-schnittstelle">Die USB Schnittstelle</h2>
+
+<p>Das Gerät ist noch ganz jung und Open Source. Das bedeutet es gibt oft und viele Aktualisierungen. Es gibt verschiedene Wege diese zu installieren. Mein favorisierter Weg ist das Aufrufen des Helper ‘qFlipper’, den Flipper erkennen zu lassen und dann einfach auf ‘Install’ klicken.<br />
+Es ist auch möglich über USB auf das GPIO Panel zuzugreifen und den Flipper zum Programmer zu machen. Später.</p>
+
+<h2 id="die-sd-karte">Die SD Karte</h2>
+
+<p>Der Flipper hat einen Speicher von etwa einem MB. Die Firmware ist aktuell ca. 800KB gross. Das bedeutet man hat einen theoretischen Nutzspeicher von 200KB. dieser Blog Artikel ist shcon größer. Die Lösung ist eine SD Karte.<br />
+Wie auch beim Display war bei der SD karte der geringe Stromverbrauch massgebend, daher greift man auf diese per SPI und nicht per SPIO auf die Karte zu. Das ist wichtig, wenn man eine Karte kauft. Denn SPIO können alle, SPI ist nicht zwangsläufig implementiert.  Der Flipper kann Karten bis 512 GB lesen, aber das macht irgendwann keinen Spass mher, das Team empfiehlt Karten bis 32 GB größe zu nutzen.<br />
+Auf die Karte kommen auch die Datenbanken. Eigentlich sind ‘die Datenbanken’ nur textdateien mehr ode rminder sinnvoll soetiert in Ordnern. Gerade beim ersten Einrichten sollte man die SD Karte lieber aus dem Flipper nehmen und am favorisierten Desktop bearbeiten.<br />
+Es gibt spezielle Datenbanken für IR Codes, es gibt SubGHz Protokolle, NFC Wörterbücher … Dabei ist immer zu beachten: Manchmal ist weniger mehr. Jeder Eintrag kostet Rechenzeit.</p>
+
+<h2 id="der-ibutton">Der iButton</h2>
+
+<p>Der iButton ist in einigen Ländern recht gängig als Zugangssystem. Zumindest in Deutschland ist das nicht der Fall, man trifft diese nur sehr selten. Ich habe noch nie eines in echt gesehen.</p>
+
+<h1 id="ist-das-alles">Ist das alles?</h1>
+
+<p>Von außen macht der Flipper schon einiges her. Es gibt noch mehr im Innenleben. Wenn ich ihn beschrieben soll, dann sage ich ‘Ein Tamagotchi mit vielen Antennen’. Diese sieht man nicht, da sie für drei Bereiche sind: SubGHz, RFID, NFC.</p>
+
+<h2 id="was-ist-subghz">Was ist SubGHz?</h2>
+
+<p>Viele haben ein Auto mit Fernbedienung für die Zentralverrieglung. Einige haben eine weitere Fernbedienung für das Garagentor. Auf beiden steht eine Frequenz, meist irgendwas um die 400 oder 880 MHz. -&gt; Unter 1GHz = SubGHz …<br />
+Bluetooth findet im 2,4GHz Band statt und WLAN im 2,4GHZ sowie 5GHz Band. Diese fallen also aus der Zuständigkeit des Flipper heraus. Wobei er ein BLE (Bluetooth Low energy) Modul hat um mit Handys zu sprechen … anderes Kapitel.</p>
+
+<p>Ich kann also den Flipper starten, im Menü ‘Sub-GHz’ raussuchen und mit dem ‘Frequenz Analyzer’ was in meiner Umgebung so ab geht. Dabei zeigt der ‘Frequenz Analyzer’ an, wenn er etwas erkennt was ein Signal sein könnte und gibt dazu die Stärke an. Die Stärke steht als RSSI dort, also nicht die absolute Stärke in dB, sondern viel mehr die ‘Nutzstärke’ über dme Grundrauschen.<br />
+Bekannte Signale kann ich dann mit ‘Read’ lesen. Unbekannte Signale kann ich mit ‘Read RAW’ aufnehmen und zur Analyse speichern oder direkt wieder abspielen.</p>
+
+<h3 id="ich-kann-damit-autos-knacken">Ich kann damit Autos knacken?</h3>
+
+<p>Halt stopp. Abgesehen davon, dass das höchst illeal wäre: Nein.<br />
+Zunächst einmal hat ein Auto heutzutage einen sogenannten Rolling Code. Das bedeutet wenn die Tür geöffnet wurde, dann wechseln Sender und Empfänger den Code. Wenn ich genug dieser Codes sammeln würde und mich mit Mathematik auskenne, dann könnte ich rein theoretisch den nächsten Code erraten. Dazu brauche ich aber mehr als einen zufällig aufgeschnappten RAW Code zum Parkplatz des Supermarkt. Und wenn ich einen Schlüssel bekomme und so oft drauf drücke, wie notwendig wäre, dann ist die Chance sehr hoch, dass sich der Schlüssel und das Fahrzeug desynchronisieren…<br />
+Das Flipper Projekt steht dafür ein, dass Rolling Codes nicht implemnetiert werden. Da es eine Open Source Plattform ist kann das theoretisch jeder selbst, aber wenn ich diese Fähigkeiten habe kann uahc auch andere Empfänger/Sender kaufen oder bauen. wir sind durch den Flipper kein Stück unsicherer als zuvor.</p>
+
+<h2 id="nfc">NFC</h2>
+
+<p>Wie bei SubGHz kann auch auch NFC Karten auslesen, speichern und ‘abspielen’. Dabei gibt es diverse standards und noch nicht alle werden aktuell unterstützt. Hier arbeitet das Team sehr daran alle möglichen Kartentypen zu erkennen.</p>
+
+<h3 id="aber-bankkarten-kann-ich-damit-hacken">Aber Bankkarten kann ich damit Hacken?</h3>
+
+<p>Halt stopp! Wieder Nein.<br />
+Eine Bankkarte hat zwei Bereiche. Einen lesbaren und einen sicheren. Der Lesbare enthält solche informationen, wie die Kontonummer, BLZ, das Ablaufdatum, … Grob gesagt: maximal das was auf der Karte gedruckt ist. Wenn eine Transaktion stattfindet, dann gibt das Terminal einen Wert an die Karte. Die Karte berechnet eine Antwort und gibt diese an das Terminal zurück… Keiner weis was in der Karte passiert und wie die Berechnung stattfindet (stark vereinfacht). 
+Das Terminal kann bei der Bank anfragen ob die beiden Werte richtig sind, ohne je zugriff auf den sicheren Bereich gehabt zu haben.</p>
+
+<p>Wenn ich etwas Clonen kann, dann vielleicht die Zutritskarte zu meinem Büro. Aber will ich das bei den ganzen Kameras riskieren?</p>
+
+<h2 id="rfid">RFID</h2>
+
+<p>RFID hat einen ähnlichen Zweck, wie NFC, nur für einen weiteren Wirkungsbereich. Während NFC oft zur Authentifizierung einer Person eingesetzt wird, werden RFID als zugangskontrolle oder in der Logistik zum Identifizieren von Lieferungen eingesetzt.<br />
+Auch hier hilft das Blog wieder: https://blog.flipperzero.one/rfid/</p>
+
+<h2 id="die-firmware">Die Firmware</h2>
+
+<p>Die Firmware ist das Betriebssystem des Flipper. dieses ist aktuell noch in starker entwicklung. 
+Dabei scheint eines der Hauptaufgaben der Entwickler zu sein, auszusortieren was illegal ist und schauen was verwendbar ist. Dabei gibt es keine Grauzone, denn wenn etwas fragwuerdig ist, gibt es genug Anfragen,die sicher umgesetzt werden können.</p>
+
+<p>Wie bereits geschrieben ist die Firmware auf einem sehr kleinen Speicher untergebracht, das limitiert auch die Möglichkieten. Eine der wichtigsten Entwicklungen ist altuell der ELF Loader, mit dem Plugins von der SD Karte geladen werden können. Das erhöht den Lese-/Schreibzugriff auf der Karte und damit die IO Last auch auf der CPU. Aber ich denke dennoch dieses wird ein Durchbruch, wnen man eigene Projekte nicht immer komplett kompilieren muss.</p>
+
+<p>Die Firmware liegt auf GitHub und kann einfach kompiliert werden. Es gibt seit dieser Woche eine .vscode Unterstützung, aber unter Linux ist es deutlich einfacher.</p>
+
+<p>Beispiel Kali Linux 2022.2:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">apt install git openocd clang-format-13 dfu-util protobuf-compiler gcc-arm-none-eabi</code></li>
+  <li><code class="language-plaintext highlighter-rouge">git clone --recursive https://github.com/flipperdevices/flipperzero-firmware.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cd flipperzero-firmware</code></li>
+  <li><code class="language-plaintext highlighter-rouge">./fbt</code></li>
+  <li>Bei Fehlern lassen die sch relativ unkompliziert lösen.</li>
+  <li>unter <code class="language-plaintext highlighter-rouge">/dist/</code> liegt die Datei <code class="language-plaintext highlighter-rouge">flipper-z-{target}-full-{suffix}.dfu</code></li>
+  <li>die .dfu mit <code class="language-plaintext highlighter-rouge">./qFlipper</code> installieren (Button [install from file])</li>
+</ul>
+
+<h2 id="die-dokumentation">Die Dokumentation</h2>
+
+<p>Hat Lücken. Das bringt es auf den Punkt.<br />
+Bis zur Firmware 1.0 wollen sie das aber beheben. Aktuell gibt es so viele Änderungne in den APIs, dass eine offizille Dokumentation nicht nachzupflegen wäre.</p>
+
+<p>Der Tipp, wie man eigene Progrramme schreibt: Es ist OpenSource. Schau Dir an was schon existiert.</p>
+
+<h1 id="ist-das-nicht-illegal">Ist das nicht illegal?</h1>
+
+<p>Der Flipper Zero selbst vereint nur diverse Scanner. Die Wellen fliegen um uns herum durch den Äther und können aufgenommen werden. Sobald ich versuche diese Aufnahme zu analysieren ist es das gleiche, als wenn ich mit einem Dietrich an Deiner Tür stehe und versuche es zu knacken. Das ist Straffbar, egal wie erfolgreich ich bin.<br />
+Die Original Firmware legt größten Wert darauf ‘sauber’ zu sein, also weder das Auslesen von Bankkarten zu ermöglichen, noch vorberechnete Rolling Codes bereitzustellen oder überhaupt vom Gerät einen Rolling Code errechen zu lassen.</p>
+
+<p>Leider sieht man im Forum oft ‘Ich bin Noob, wie kann ich auf xyz zugreifen?’. Die haben sich vorgestellt auf dem Supermarktparkplatz kurz einen Tastendruck mitzuschneiden und dann jedes beliebige Auto zu öffnen.<br />
+Das Resultiert darin, dass es vielen zu aufwändig ist und es gibt mittlerweile Marktplätze für gebrauchte Flipper.</p>
+
+<p>Also nein, der Flipper ist nicht Illegal. Er ist auch nicht entwicklet worden für illegale Aktivitäten. Sicher kann man im Rahmen eines angemeldeten/erlaubten Pentesting verschiedene Vektoren ausprobieren, die vorher nicht so einfach/handlich möglich waren. Auch dabei muss man sich aber zunächst mit der Materie befassen und die Grundlagen lernen. Es reicht nicht den Flipper hinzuhalten und auf magischer Weise ist jedes Tor offen. Und wie zuvor erwähnt, wer das kann, der konnte es auch vorher mit relativ geringen Hürden.</p>
+
+<h2 id="und-wenn-ich-nichts-kaputt-mache">Und wenn ich nichts kaputt mache?</h2>
+
+<p>Stellen wir uns einen gut besuchten Pub vor, es ist gerade Bundesliga. Natürlich rundherum viele begeisterte, die auch lautstark ‘ihrem’ Verein zujubeln, so dass man es im Stadion hört. Ich will eigentlich nur gemütlich mein Guinness geniessen und vielleicht über ein Projekt mit einem gleichgesinnten sprechen. Was liegt näher als den Flipper rauszuholen und per ‘Universal Remote’ den TV abzuschalten?<br />
+Auch wenn ich dadurch sicher nicht in das Gefängniss komme, so ist es nicht ratsam wenn der Barkeeper oder ein Fan herausfindet, dass du die 2. Fernbedienung in der Hand hälst. Vielleicht wünscht man sich dann sogar die Polizei herbei.</p>
+
+<p>Laufe ich herum und öffne Garagentore, dann ist das sicher eine Zeit lang interessant. Möchte ich das Picklocking an meiner Haustür ‘probiert’ wird?<br />
+Tesla hat einen recht einfachen Befehl um die ‘Tank’klappe zu öffnen. Das macht Sinn für automatische Ladestationen, später. Auch hier würde ich den Besitzer vor dem ausprobieren zu fragen. Ich kann mir sogar vorstellen dass die Besitzer sogar interessiert sind was möglich ist. Das Öffnen ohne erlaubnis wäre, wie an Autos vorbeizugehen und die Tankklappen zu öffnen … also nicht legal.</p>
+
+<h1 id="und-was-kann-ich-praktisch-damit-anfangen">Und was kann ich praktisch damit anfangen?</h1>
+
+<p>Tja, das ist die große Frage. Bis Mitte 2022 hat jeder in der Gesellschaft auch ohne Flipper überlebt. Also ich wage zu behaupten keiner hätte länger gelebt, hätte er einen besessen.<br />
+Hier kommen zwei Weltern zusammen.</p>
+<ol>
+  <li>Der Arduino. Ein kleiner Microcontroller, mit dem man spielerisch Projekte umsetzen kann. Auch der RaspberryPi geht in diese Richtung der ‘Gamification’ oder auch ‘Rapid Development’. Man kann sich die Umgebung ansehen, man kann Token/Karten/Schlüssel emulieren. Halt nur im erlaubten Bereich. Begreifen durch anfassen.</li>
+  <li>Im BackTrack Linux (heute <a href="https://www.kali.org/">Kali Linux</a>) heisst es “Je leiser du wirst, desto mehr kannst du hören.”. Ich muss nicht alles hacken, knacken, penetrieren. Es reicht manchmal auch einfach zuzuhören. Und vielleicht dadruch schon ableiten zu können wie etwas einfacher oder besser geht. Wenn ich zuhöre weis ich ja noch gar nicht was gesagt wird und ide Fragen oder Ideen kommen erst dann.</li>
+</ol>
+
+<p>Die Fragen im Forum zeigen aber auch, dass diese Art der Forschung notwendig ist. Es gibt Menschen, die nicht glauben, dass von der Sonne Infrarotstrahlung kommt. Für mich persönlich war das Kapitel AM (Amplituden Modulation) und FM (Frequenz Modulation) bisher am aufschlussreichesten. Auf die Anwendungen in der Welt der GPIO bin ich sehr gespannt.<br />
+Wichtig ist auch zu wissen, dass der Flipper in der Regel keine ‘Wellen’ speichert. Alle aufgenommenen Signale werden von den Chips bereits zu 1 und 0 verarbeitet und weitergegeben. Wir haben also eher eine sehr niedrig auflösende MP3, als eine 1:1 Kopie in WAV. Daher ist es wichtig, dass der Flipper in seinen Datenbanken möglichst viele Codierungen zu kennen, denn die lassen sich besser als 0 und 1 verarbeiten als irendwelche Spitzen eines vermutlichen Signals.</p>
+
+<h1 id="fazit">Fazit</h1>
+
+<p>Ja, mehr als Lernen kann man damit wirklich nicht machen. Verabschieden wir uns vom ‘schnellen Hack’ und wandern wir zum bewussten Nutzen von Technik.<br />
+Jedes mal, wnen ich auf den Knopf drücke und die Tür zu meinem Auto auf geht, passiert ‘Etwas’. Dieses Etwas ist nur ein gezieltes manipulieren von Schwingungen um mich herum. Dabei spricht der Schlüssel nicht direkt mit dem Auto, sondern er brüllt den Code einmal in alle Richtungen. Aber entweder verstehen die anderen Geräte die Sprache (den Code) nicht oder dieser ist nicht für die anderen Autos gedacht. Daher reagiert nur mein Auto.<br />
+Dabei ist in der Theorie die IR Fernbedienung gar nicht viel anders als der Autoschlüssel. Nur im Aufbau deutlich einfacher und ohne Rolling Code und ohne Crypto.</p>
+
+<p>Wenn ich meinen Auto-Pieper oder die TV Fernbedienung nicht benutze, dann kann auch niemand etwas mitschneiden. Wenn jemand etwas nmitschneiden kann, und es ‘einfach kopiert’, dann ist das eingesetzte Protokoll schrott. Das kommt seltener vor als man denkt, aber da die Medien sich auf jeden Fall stürzt und nicht gegenber stellt wie viele autos sicher sind, ist die Wirkung anders.<br />
+Dann gibt es natürlich noch die, welche mit ienem Laptop und einem SDR alles mitscheniden, die gängigen Codes kennen und dne Rest mittels Brute Force (Vorschlaghammer) durchraten … wer diesen Aufwand betreibt um meine leere Jacke aus dme Auto zu klauen, der hat diese aber auch verdient.</p>
+
+
+  </div><a class="u-url" href="/experimente/2022/06/12/flipper_zero.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">LupusE webLife</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Benjamin Moeller</li><li><a class="u-email" href="mailto:git@lupuse.org">git@lupuse.org</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/LupusE" target="_blank" title="LupusE"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">LupusE</span></a></li><li><a href="https://github.com/LupusE" target="_blank" title="LupusE"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">LupusE</span></a></li><li><a href="https://stackoverflow.com/users/9601986" target="_blank" title="9601986"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#stackoverflow"></use></svg><span class="username">9601986</span></a></li><li><a href="https://instagram.com/lupuse42" target="_blank" title="lupuse42"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#instagram"></use></svg> <span class="username">lupuse42</span></a></li><li><a href="https://www.linkedin.com/in/LupusE" target="_blank" title="LupusE"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">LupusE</span></a></li><li><a href="https://www.twitter.com/LupusE42" target="_blank" title="LupusE42"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">LupusE42</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
