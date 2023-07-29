@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2023-02-09T07:54:22+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2023-07-29T20:51:55+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Flipper Zero vs. Logitech Unifying</title><link href="http://blog.lupuse.org/experimente/2022/07/27/flipper_vs_logitech.html" rel="alternate" type="text/html" title="Flipper Zero vs. Logitech Unifying" /><published>2022-07-27T22:38:03+00:00</published><updated>2022-07-27T22:38:03+00:00</updated><id>http://blog.lupuse.org/experimente/2022/07/27/flipper_vs_logitech</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2022/07/27/flipper_vs_logitech.html">&lt;p&gt;Ich versuche nach Möglichkeit meine Hardware Up-to-date zu halten. Ich finde es doof, wenn ein Firmwareupdater nur für Windows verfügbar ist. Wenn ich Zugriff auf ein Windows habe, dann installiere ich in der Regel die Logitech Unifying Software und schaue nach ob alle Geräte aktuell sind. Das geht dank USB in der Regel schnell.&lt;br /&gt;
+Vor einiger Zeit gab es in den News zuerst die Info, dass die Logitech Presenter anfällig sind, später wurde herausgefunden dass der verwendete Chip nRF24LU1+ von &lt;a href=&quot;https://www.nordicsemi.com/&quot;&gt;Nordic Semiconductor&lt;/a&gt; auch in vielen Unifying Dongles zu finden ist. Logitech hat schnell ein Firmwareupdate zugesagt und geliefert.&lt;br /&gt;
+Durch den ersten Absatz dachte ich das wäre genug. wenn dme so wäre hätte ich diesen Text nicht verfasst.&lt;/p&gt;
+
+&lt;p&gt;Kurz: Im Jahre 2016 haben Forscher herausgefunden, dass es per Funk extrem doof ist Tastatureingaben zwar zu verschlüsseln, die Maus aber unverschlüsselt einzubinden. Dazu noch, wenn die gesendeten Eingaben nicht weiter verifiziert werden.&lt;br /&gt;
+Die Forschung sieht so aus: &lt;a href=&quot;https://github.com/BastilleResearch/mousejack#flash-a-logitech-unifying-dongle-back-to-the-original-firmware&quot;&gt;GitHub - BastilleResearch/mousejack&lt;/a&gt; … Das ist im Jahre 2023 kein Thema mehr, oder? Oder?&lt;/p&gt;
+
+&lt;h1 id=&quot;wie-sicher-ist-gefühlte-sicherheit&quot;&gt;Wie sicher ist gefühlte Sicherheit?&lt;/h1&gt;
+
+&lt;p&gt;Ich behaupte über PC, IT und Sicherheit mehr zu verstehen als der durschnittliche Anwender. Ich gehe sogar so weit und behaupte ich habe einen guten Überblick darüber wo ich bewusst durch Geld oder Faulheit in meinen Systemen Sicherheitslücken habe.&lt;/p&gt;
+
+&lt;p&gt;Heute habe ich einen Flipper Zero. Der Flipper besitzt eine GPIO Leiste. Zwei nRF24 Module gibt es auf Amazon für unter 10 Euro und Jumper-Kabel standen seit längerem auf meiner Einkaufsliste …&lt;/p&gt;
+
+&lt;h2 id=&quot;aufbau&quot;&gt;Aufbau&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;7 Jumper-Kabel vom Baum trennen&lt;/li&gt;
+  &lt;li&gt;nRF24 Modul nach Anleitung auf die GPIO Leiste des Flipper verbinden&lt;/li&gt;
+  &lt;li&gt;Im Flipper Menu: ‘Applications - GPIO - [NRF24]Sniffer’&lt;/li&gt;
+  &lt;li&gt;Auf mittleren Button klicken um den Scan zu starten.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Jetzt heisst es warten. Der Flipper signalisiert mit einem weissen LED Leuchten und Vibrieren, wenn er etwas findet. Also man darf abgelenkt sein.&lt;br /&gt;
+In der Zwischenzeit schreibe ich etwas zu meinen Erfahrungen und der Vorgehensweise.&lt;/p&gt;
+
+&lt;h2 id=&quot;die-programme&quot;&gt;Die Programme&lt;/h2&gt;
+
+&lt;p&gt;Da das Bastille Research Team alle Programme offen zur Verfügung gestellt hat, musste nur jemand Python zo Fliper übersetzen. Das ging schnell.&lt;br /&gt;
+Die Programme für den Flipper sind alle OpenSource und seit 07.2023 über den Appstore flipc.org zu finden.&lt;/p&gt;
+
+&lt;h3 id=&quot;nrf24sniffer&quot;&gt;[NRF24]Sniffer&lt;/h3&gt;
+
+&lt;p&gt;Was sehe ich auf dem kleinen Bernsteinfarbenden Bildschirm?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Transfer rate&lt;/strong&gt;: 2Mbps* - 1Mbps (Toggle mit ‘hoch’, wenn Scan aus)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sample Time&lt;/strong&gt;: 500ms 1000ms 1500ms 2000ms 2500ms 3000ms 3500ms 4000ms* 4500ms … (toggle in 500ms mit ‘rechts’/’links’)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Channel&lt;/strong&gt;: 0 … Zählt hoch bis 120, dann von vorne &lt;strong&gt;Sniffing&lt;/strong&gt;: No*/Yes (Toggle mit mittlerem Button)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Found&lt;/strong&gt;: 0* Gefundene Paket &lt;strong&gt;Unique&lt;/strong&gt;: 0* Bei Dopplungen die einzigartigen Adressen&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Address,rate&lt;/strong&gt; Die aktuell gescannten Werte&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;= Defaultwert&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Die &lt;strong&gt;Transfer rate&lt;/strong&gt; von 2Mbps kann aktiviert bleiben, nur bei alten Geräten, viel Störsignale oder langer Entfernung würde ich auf 1Mbps stellen.&lt;br /&gt;
+Die &lt;strong&gt;Sample Time&lt;/strong&gt; bestimmt wie lange gescant wird, bevor automatisch ein Channel weiter gesprungen wird. Mit 1000ms habe ich bisher Erfolge erzielt, wobei ich meistens mehr als einen Durchlauf habe. Vielleicht sind 2000ms besser.&lt;/p&gt;
+
+&lt;p&gt;Der Sniffer legt die gefundenen Adressen unter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apps_data/nrf24_sniffer/addresses.txt&lt;/code&gt; auf der SD karte ab, im Format &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0A109A4AE8,2&lt;/code&gt;. Vor dem Komma die Adresse an die gesendet wird, das hinter die Transfer rate.&lt;/p&gt;
+
+&lt;p&gt;Aus dieser Datei liesst die App ‘Applications - GPIO - [NRF24]Mouse Jacker`.&lt;/p&gt;
+
+&lt;h3 id=&quot;nrf24mouse-jacker&quot;&gt;[NRF24]Mouse Jacker&lt;/h3&gt;
+
+&lt;p&gt;Dieses ist das Tool, mit dem man cool auf TikTok aussieht. Mit den zuvor gesammelten Adressen, wenn der Dongle ungepatched ist, kann ich remote Tastaturbefehle injecten. Also ein Wireless BadUSB ausführen.&lt;br /&gt;
+Wenn mehr als eine Adresse gefunden wurde, können diese durchgescrollt werden, vor Ausführung des BadUSB Scripts. Man sollte sich bei mehreren gefundenen adaptern sicher sein das Script auf dem richtigen Rechner auszuführen. An dieser Stelle einne lieben Gruss an meine Nachbarn, ich hoffe Eurer Dongle ist gepatched.&lt;br /&gt;
+Die FlipperZero-BadUSB fähigen Ducky-Scripte sollten natürlich schon auf dem Flipper liegen. Warum ich das so deutlich schreibe, benötigt einen eigenen Artikel. Gesucht wird im BadUSB Ordner der SD Karte.&lt;/p&gt;
+
+&lt;p&gt;Auf meinen eigenen Systemen habe ich das Script &lt;a href=&quot;https://github.com/UberGuidoZ/Flipper/blob/main/BadUSB/Char_Test_ALTSTRING.txt&quot;&gt;Char_Test_ALTSTRING&lt;/a&gt; ausgeführt und mir ist aufgefallen dass einige Zeichen mehrfach gesendet werden. Als ob eine Taste ca. 5 Sekunden nicht losgelassen wird.&lt;br /&gt;
+Das sieht bei einem ausgegebenen String auf dem Bildschirm komisch aus, verhindert aber in einem ein Payload unter Umständne die Ausführung.&lt;/p&gt;
+
+&lt;p&gt;Tipp: Die Adresse muss nicht jedes mal neu gefunden werden. Wenn sie einmal bekannt ist, kann diese beliebig oft auf dem Empfänger wiederverwendet werden. Vermutlich bis die Maus neu gepaired wird.&lt;/p&gt;
+
+&lt;h3 id=&quot;nrf24scanner&quot;&gt;[NRF24]Scanner&lt;/h3&gt;
+
+&lt;p&gt;Diese App gibt deutlich mehr Infos dazu aus, was so empfangen wird. Ich bin oft irritiert und bin der Meinung die Namen vom Sniffer und dem Scanner sollten getauscht sein. Aber ich bin nicht der Entwickler.&lt;/p&gt;
+
+&lt;h2 id=&quot;die-hardware&quot;&gt;Die Hardware&lt;/h2&gt;
+
+&lt;p&gt;Es gibt die kleineren nFR24 module mit Antenne auf dem Board und die längeren mit angeschraubter Antenne.&lt;br /&gt;
+Die kleineren Boards sollen laut Internet eine Reichweite von etwa 30m haben und eine maximale Stromaufnahme von etwa 72mA/3,3V. -&amp;gt; nRF24L01+&lt;br /&gt;
+Die grossen Boards dagegen haben laut Datenblatt 1100m Reichweite, welche mit max. 400m bisher gemessen wurde, und eine maximale Stromaufnahme von 154mA/3,3V. Also deutlich mehr Belastung auf dem Akku des Flipper. -&amp;gt; nRF24L01+PA+LNA&lt;br /&gt;
+Dann gibt es noch Module, die extra für den Flipper Zero gebaut werden, z.B. das &lt;a href=&quot;https://rabbit-labs.com/&quot;&gt;TehRabbit Modul&lt;/a&gt;. Diese Starten oft bei 40-50USD. Je nach Funktionsumfang zum beispiel externes CC1101 Modul, ESP32, …) können die auch mehr oder weniger über 100USD gehen.&lt;/p&gt;
+
+&lt;p&gt;Ich habe mich für die Antennen Variante entschieden, denn die geschraubte Antenne lässt bei Bedarf auch mehr Leistung/Reichweite durch eine Richtantenne zu.&lt;/p&gt;
+
+&lt;p&gt;Bei den Jumperkabeln kann man nicht viel falsch machen. 20cm sind gerad enoch okay, 5cm wären wohl ideal. Besser ist natürlich ein Board um die Verbindungen bereitzustellen.&lt;br /&gt;
+Diese Boards habe ich auch mit 5V und einem Spannungswandler gesehen. Das hat optisch den Vorteil das ich nur eine Seite der 2-geteilten GPIO Leiste belege, aber Spannungswandeln ist immer Verlustbehaftet.&lt;/p&gt;
+
+&lt;h1 id=&quot;erfolge&quot;&gt;Erfolge&lt;/h1&gt;
+&lt;p&gt;Type | Version | Firmware | USB ID
+—|—|—
+2x Unifying Receiver | C-U0007 | 12.03.B0025 | 046d:C52B&lt;/p&gt;
+
+&lt;p&gt;Tipp: Die Firmware des Unifying Reciever kann unter Linux mit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solaar show&lt;/code&gt; anzeigt werden.&lt;/p&gt;
+
+&lt;p&gt;Der C-U0008 Dongle hat einen TI chip und kann hier nicht verwendet werden, obwohl er auch auf 2,4GHz überträgt. Das vorgehen lässt sich aber auf verschiedene Wireless HID Geräte von Logitech, Dell und andere anwenden. Siehe Projektseite.&lt;/p&gt;
+
+&lt;p&gt;Aufgrund von Tests mit BadUSB Exfiltration per SPI habe ich meinen Windows Gaming PC reaktiviert. Dieser war mein erstes Ziel dieses Versuchs. Hätte ich mit Linux begonnen, hätte ich mich vermutlich über die Ausgabe von 10 Euro geärgert. Siehe Abschnitt ‘Beobachtungen’.&lt;/p&gt;
+
+&lt;h1 id=&quot;beobachtungen&quot;&gt;Beobachtungen&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Obwohl die Logitech Unifying Software sagt meine Geräte sind Aktuell, sind die Dongles angreifbar.
+Es gibt keinen einen Hinweis auf die Sicherheitslücke. Ich muss bewusst den DFU Updater herunterladen, die &lt;a href=&quot;https://github.com/Logitech/fw_updates&quot;&gt;passende Firmware finden&lt;/a&gt; und anwenden. Fast gar nicht kompliziert.&lt;/li&gt;
+  &lt;li&gt;Die gleichen Unifying Receiver weden an Windows innerhalb von 5 Minuen erkannt. Unter Linux auch nach Stunden des Scannens nicht.
+Offensichtlich schützen ein paar freiwillige Nerds im Keller das System besser als zwei Multimillionen-Unternehmen zusammen.&lt;/li&gt;
+  &lt;li&gt;Ich habe nicht herausgefunden warum ich den Stick nach Bastille Research erst flashen sollte. Bei mir sind sie ohne Aufwand angreifbar.&lt;/li&gt;
+  &lt;li&gt;Es handelt sich um eine Injection! Ich kann nicht ohne weiteres Tastatureingaben auslesen. Das bitte bei der Gefahrenbewertung beachten. Das pure Sniffen wäre passiv, das Ausführen von Tastatureingaben ist sichtbar. Ich kann mit dieser Attacke auch nicht an dem Login Screen eines Systems vorbei agieren. Sperrt Eure Bildschirme!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Die gute Nachricht ist, dass es den neuen &lt;a href=&quot;https://www.logitech.com/de-de/products/mice/logi-bolt-usb-receiver.html&quot;&gt;Bolt Adapter von Logitech&lt;/a&gt; nicht betrifft und auch alle Bluetoothverbindungen nur per den bekannten Bluetooth Lücken angreifbar sind.&lt;/p&gt;
+
+&lt;h1 id=&quot;weitere-links&quot;&gt;Weitere Links&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bastille docs - https://github.com/BastilleResearch/mousejack/tree/master/doc&lt;/li&gt;
+  &lt;li&gt;Flipper Forum Discussion - https://forum.flipperzero.one/t/how-does-flipper-zero-connect-to-a-dongle/17463&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="flipperzero" /><summary type="html">Ich versuche nach Möglichkeit meine Hardware Up-to-date zu halten. Ich finde es doof, wenn ein Firmwareupdater nur für Windows verfügbar ist. Wenn ich Zugriff auf ein Windows habe, dann installiere ich in der Regel die Logitech Unifying Software und schaue nach ob alle Geräte aktuell sind. Das geht dank USB in der Regel schnell. Vor einiger Zeit gab es in den News zuerst die Info, dass die Logitech Presenter anfällig sind, später wurde herausgefunden dass der verwendete Chip nRF24LU1+ von Nordic Semiconductor auch in vielen Unifying Dongles zu finden ist. Logitech hat schnell ein Firmwareupdate zugesagt und geliefert. Durch den ersten Absatz dachte ich das wäre genug. wenn dme so wäre hätte ich diesen Text nicht verfasst.</summary></entry><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
 
 &lt;p&gt;Für mein Wohnmobilprojekt habe ich mir einen GL.iNet Beryl Reiserouter gekauft. Diese kleinen Dinger aus Hong Kong basieren auf OpenWRT und bieten für schmales Geld (35-80 Euro) eine gute Basis um unterwegs mehrere Geräte mit geringem Aufwand zu betreiben.&lt;br /&gt;
 Die Grundidee ist, dass ich nicht jedes meiner Geräte im (Hotel)WLAN anmeldne muss, sondern den Router vorschalte und dieser einen sicherne Zugang für alle meine Geräte stellt. Sicher, weil die kleinen Router standardmäßig eine Unterstützung für gängige Protokolle, wie OpenVPN und WireGuard mitbringen. Wer keine Möglickeit hat einen Endpunkt zu mieten oder selbst aufzubauen, dem steht immernoch per Klick das TOR Netzwerk offen.&lt;br /&gt;
@@ -1257,66 +1361,4 @@ Mir gefällt sehr gut, dass man während der Sprachbefehle und auch während des
 &lt;p&gt;Wie bei allen Themen, so gibt es auch beim Headset nicht ‘das Perfekte’. Sowohl das BT800, als auch das Halo Smart und das WI-C200B sind super Geräte. Jedes mit seinen individuellen Vor- und Nachteilen.&lt;br /&gt;
 Bei einem Kabel Headset stören mich am meisten die letzten 10cm zum Telefon hin. Da ich tagsüber meistens Hemden trage, die in die Hose gehören, habe ich hier noch keine optimale Lösung gefunden.&lt;br /&gt;
 Bei Bluetooth Headsets ist es das Tragen des Mobiltelefon in der Hosentasche. Hier ist offenbar die Dämpfung durch die Flüssigkeit im Körper so hoch, dass es beim Drehen des Kopfes zu Fragmenten in der Medienwiedergabe kommt. Andersrum kann das Mobiltelefon im Auto liegen und ich gehe gute 10-20m weiter in die Tankstelle und bezahle ohne Verbindungsabbruch (natürlich würde ich nie an einer Tankstelle telefonieren!).&lt;br /&gt;
-Und es liegt an jedem selbst mit welchen Kompromissen er leben möchte. sicher gibt es auch ‘earBuds’ oder ‘True Wireless’, ohne Kabel zwischen den Hörern. Aber ich persönlich finde es gerade angenehm die Stöpsel aus den Ohren nehmen zu können und bei Bedarf schnell wieder einzusetzen, ohne suchen zu müssen. Dazu kommt die wesentlich längere Laufzeit durch den größeren Akku (15h vs. 3x3h).&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="produkte" /><category term="bluetooth" /><category term="headset" /><summary type="html">Vorgeschichte Mein erstes Bluetooth Headset war ein Jabra BT800 um die Jahrtausendwende. Mono, schwer (25 Gramm), Software aktualisierbar und mit Display zur Rufnummernanzeige plus bereits 6 Stunden Gesprächszeit. Das habe ich bereits beim Radfahren genutzt und war begeistert über die Gesprächsqualität, selbst bei Gegenwind. Dann ging die Reise über ein Sony Ericsson HBH-200 Clip mit 2,5mm Klinke über ein Apple Kabelheadset und einige zu den Telefon beigelegten.</summary></entry><entry><title type="html">Wohnmobil - Zweiter Akt</title><link href="http://blog.lupuse.org/wohnmobil/2019/06/12/Wohnmobil-Zweiter-Akt.html" rel="alternate" type="text/html" title="Wohnmobil - Zweiter Akt" /><published>2019-06-12T19:00:48+00:00</published><updated>2019-06-12T19:00:48+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2019/06/12/Wohnmobil---Zweiter-Akt</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2019/06/12/Wohnmobil-Zweiter-Akt.html">&lt;h1 id=&quot;was-gab-es-bisher&quot;&gt;Was gab es bisher?&lt;/h1&gt;
-&lt;p&gt;Meine Frau und ich wollten vor etwa 5 Jahren ein Haus bauen. Der Hauptgrund es zu verwerfen war das Grundstück. Der Grundriss stand, ein Bauträger war gefunden, die Finanzierung war so gut wie gesichert.&lt;br /&gt;
-Aber es hat nicht sein sollen, und so haben wir uns ein Haus auf 4 Rädern gekauft, einen &lt;strong&gt;Knaus Sport TR&lt;/strong&gt;. Ein tolles Wohnmobil, welches auf 5,99m Länge enorm viel Platz bietet. Die Bad-Lösung mit der 45° versetzten Tür ist einfach genial. Man hat bei zugeklappter Tür ein kleines WC oder Duschraum und jemand anderes kann Zähne putzen oder mit aufgeklappter Tür hat man ein grosses Bad um sich nach dem Duschen bequem anzuziehen.&lt;br /&gt;
-Durch den Alkoven war der Schlafplatz über dem Fahrrerhaus immer bereit und es musste nichts geklappt oder gebaut werden. Manchmal war die Leiter zum Alkoven zu viel, oder durch die Hitze konnte man dort kaum liegen, dann hat der umgebaute Sitzbereich als alternative Schlafgelegenheit geholfen. Der Umbau funktionierte schnell. Nur war es für mich mit 182cm dort etwas eng. Mit 6 eingetragenen Sitzplätzen konnten mehr Leute mit als schlafen konnten, aber für ein Zelt war in der schmalen Heckgarage immer Platz. Dort lagen sonst nur die Auffahrkeile, die nicht benötigten Fahrradträger-Halterungen, eine Sitzbank mit Tisch und die 25m Kabeltrommel mit Wasserschlauch.&lt;/p&gt;
-
-&lt;h1 id=&quot;was-gibt-es-neues&quot;&gt;Was gibt es neues?&lt;/h1&gt;
-&lt;p&gt;Im Herbst 2017 waren wir in Düßeldorf auf der Wohnmobilmesse und haben uns die Kastenwagen genauer angesehen. Windschnittiger ohne Alkoven, schmaler für das Parken in der Stadt und ich bin der Meinung dass der Kasten besser Lärm und Wärme dämmt als der Aufbau.&lt;br /&gt;
-Wir waren mal wieder bei diversen Händler, aber in Norddeutschland ist es nicht einfach einen PArtner zu finden. Am Ende sind wir wieder beim &lt;strong&gt;Freizeit-Center Albrecht&lt;/strong&gt; in Winsen an der Luhe gelandet.&lt;br /&gt;
-Im Internet gesehen hatten wir einen gebrauchten &lt;strong&gt;Sunlight Cliff 601&lt;/strong&gt;. Die Photos sahen gut aus, der Preis war in unserem Rahmen und der Händler hat uns vor 5 Jahren bereits gut gefallen.&lt;br /&gt;
-Das ausgesuchte Mobil wurde es allerdings nicht, denn für gerade mal 5000 Euro Mehr bekamen wir den Nachfolger (2018 Modell) als Neuwagen, mit entsprechender Ausstattung.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Markise
-    &lt;ul&gt;
-      &lt;li&gt;Nun mit Seitenteilen um sie als Vorzelt zu nutzen&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Fahrradträger
-    &lt;ul&gt;
-      &lt;li&gt;Nur bis 35KG. Mal sehen wie das mit dem eBike klappt&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Navi/Multimediacenter
-    &lt;ul&gt;
-      &lt;li&gt;Endlich mit Camper-Navigation für das umfahren von engen Strassen.&lt;/li&gt;
-      &lt;li&gt;Sogar mit Android/iPhone Unterstürtung&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rückfahrkamera&lt;/li&gt;
-  &lt;li&gt;Tempomat&lt;/li&gt;
-  &lt;li&gt;Stockbett
-    &lt;ul&gt;
-      &lt;li&gt;Es sollte ein Hubbett werden, aber so ist es noch besser, mit 4 festen Schlafplätzen&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Kleiderstange im Duschraum
-    &lt;ul&gt;
-      &lt;li&gt;War kein konkreter Wunsch, aber sehr geniale Idee von Sunlight&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;hochgesetzter Kühlschrank&lt;/li&gt;
-  &lt;li&gt;Raum für den Hund&lt;/li&gt;
-  &lt;li&gt;Flache Scheiben an den Seiten, mit Gasdruckfeder
-    &lt;ul&gt;
-      &lt;li&gt;wer sich mit Wohnmobilen/Wagen auskennt weis was gemeint ist&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Also das &lt;strong&gt;Sunlight Cliff 601 Edition&lt;/strong&gt; wird das neue. Darüber findet man im Internet nicht viel. Es hat nur 2x5kg Gasflaschen, damit das Stockbett rein passt. Ich musste auf meine Solarzellen verzichten. Es ist nicht weis, sondern rot. Das wars aber auch mit den Kompromissen, alles andere ist super.&lt;br /&gt;
-Am Montag wird es abgeholt, und nach intensiver prüfung kann ich auch mehr schrieben.&lt;/p&gt;
-
-&lt;h1 id=&quot;das-ummelden&quot;&gt;Das Ummelden.&lt;/h1&gt;
-&lt;p&gt;Der Vorteil ist, dass es egal ist ob ich einen PKW oder ein Wohnmobil ummelde, man hat beide male eine ganze Menge ‘hilfreicher’ Zettel, und muss genau aufpassen nichts zu übersehen.&lt;/p&gt;
-&lt;h2 id=&quot;versicherung&quot;&gt;Versicherung&lt;/h2&gt;
-&lt;p&gt;Wir sind über die RMV (ReiseMobil Versicherung) der Kravag versichert. Ein kurzer Anruf mit Nennung der Versicherungsnummer, ein paar Fragen zum Mobil beantworten (Typ (Kastenwagen), Erstzulassung (kommt noch), Halter bleibt meien Frau (ja)) und innerhalb von 5 Minuten wurde das Angebot per Email gesendet und ich erhielt die eVB (elektroniscvhe  Nummer, die ich benötige um es beim Amt anzumelden.&lt;br /&gt;
-Die Kündigung der bestehenden KFZ-Versicherung geschieht automatisch mit der Abmeldung des alten Wohnmobils.&lt;/p&gt;
-&lt;h2 id=&quot;kennzeichen&quot;&gt;Kennzeichen&lt;/h2&gt;
-&lt;p&gt;Die Kennzeichen konnten wir obline bestellen, und dort sogar für unter 15 Euro ein Wunschkennzeichen auswählen. Dazu bieten sie gleich an die Kennzeichen per Post zu schicken. Ich habe damals mal 44e für meine Blechschilder bezahlt, heute war es unter 25e. Am Samstag bestellt, Montag war ein Feiertag, Mittwoch zustellung, Alles super.&lt;/p&gt;
-&lt;h2 id=&quot;die-finanzierung&quot;&gt;Die Finanzierung&lt;/h2&gt;
-&lt;p&gt;Hier möchte ich das &lt;strong&gt;Freizeit-Center Albrecht&lt;/strong&gt; besonders hervorheben. Die nehmen unser alter Wohnmobil in Zahlung, lösen davon den Fahrzeugbrief bei der Bank ab, die Differenz wird als Anzahlung für das neue Mobil genommen und die Finanzierung für das neue Mobil läuft nahtlos weiter.&lt;br /&gt;
-Für Manche mag das selbstverständlich sein, aber ich habe auch schon andere Szenarien angeboten bekommen. Mal wieder hat die Schufa bei meiner Abfrage am Samstag gezickt, aber auch das war kein Problem, am folgenden Montag hatten wir die Bestätigung. Herr Albrecht war in jeder Hinsicht gelassen und hat uns unterstützt.&lt;/p&gt;
-&lt;h2 id=&quot;die-abholung&quot;&gt;Die Abholung&lt;/h2&gt;
-&lt;p&gt;Natürlich wollen alle Ihre Mobile an einem Samstag abholen, daher sind die Termine sehr begehrt. Nach einiger Absprache und Verschieben von Termienen konnte ich die Abholung auf einen Montag Mittag legen.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><summary type="html">Was gab es bisher? Meine Frau und ich wollten vor etwa 5 Jahren ein Haus bauen. Der Hauptgrund es zu verwerfen war das Grundstück. Der Grundriss stand, ein Bauträger war gefunden, die Finanzierung war so gut wie gesichert. Aber es hat nicht sein sollen, und so haben wir uns ein Haus auf 4 Rädern gekauft, einen Knaus Sport TR. Ein tolles Wohnmobil, welches auf 5,99m Länge enorm viel Platz bietet. Die Bad-Lösung mit der 45° versetzten Tür ist einfach genial. Man hat bei zugeklappter Tür ein kleines WC oder Duschraum und jemand anderes kann Zähne putzen oder mit aufgeklappter Tür hat man ein grosses Bad um sich nach dem Duschen bequem anzuziehen. Durch den Alkoven war der Schlafplatz über dem Fahrrerhaus immer bereit und es musste nichts geklappt oder gebaut werden. Manchmal war die Leiter zum Alkoven zu viel, oder durch die Hitze konnte man dort kaum liegen, dann hat der umgebaute Sitzbereich als alternative Schlafgelegenheit geholfen. Der Umbau funktionierte schnell. Nur war es für mich mit 182cm dort etwas eng. Mit 6 eingetragenen Sitzplätzen konnten mehr Leute mit als schlafen konnten, aber für ein Zelt war in der schmalen Heckgarage immer Platz. Dort lagen sonst nur die Auffahrkeile, die nicht benötigten Fahrradträger-Halterungen, eine Sitzbank mit Tisch und die 25m Kabeltrommel mit Wasserschlauch.</summary></entry></feed>
+Und es liegt an jedem selbst mit welchen Kompromissen er leben möchte. sicher gibt es auch ‘earBuds’ oder ‘True Wireless’, ohne Kabel zwischen den Hörern. Aber ich persönlich finde es gerade angenehm die Stöpsel aus den Ohren nehmen zu können und bei Bedarf schnell wieder einzusetzen, ohne suchen zu müssen. Dazu kommt die wesentlich längere Laufzeit durch den größeren Akku (15h vs. 3x3h).&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="produkte" /><category term="bluetooth" /><category term="headset" /><summary type="html">Vorgeschichte Mein erstes Bluetooth Headset war ein Jabra BT800 um die Jahrtausendwende. Mono, schwer (25 Gramm), Software aktualisierbar und mit Display zur Rufnummernanzeige plus bereits 6 Stunden Gesprächszeit. Das habe ich bereits beim Radfahren genutzt und war begeistert über die Gesprächsqualität, selbst bei Gegenwind. Dann ging die Reise über ein Sony Ericsson HBH-200 Clip mit 2,5mm Klinke über ein Apple Kabelheadset und einige zu den Telefon beigelegten.</summary></entry></feed>
