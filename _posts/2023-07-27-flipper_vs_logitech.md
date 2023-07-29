@@ -4,7 +4,7 @@ published: true
 layout: post
 title: Flipper Zero vs. Logitech Unifying
 author: Benjamin Moeller
-date: 2022-07-27 22:38:03 UTC
+date: 2023-07-27 22:38:03 UTC
 categories: [experimente]
 tags: [flipperzero]
 comments: []
@@ -85,9 +85,9 @@ Diese Boards habe ich auch mit 5V und einem Spannungswandler gesehen. Das hat op
 
 
 # Erfolge
-Type | Version | Firmware | USB ID
----|---|---
-2x Unifying Receiver | C-U0007 | 12.03.B0025 | 046d:C52B
+| Type | Version | Firmware | USB ID |
+| --- | --- | --- | --- |
+| 2x Unifying Receiver | C-U0007 | 12.03.B0025 | 046d:C52B |
 
 Tipp: Die Firmware des Unifying Reciever kann unter Linux mit `solaar show` anzeigt werden.  
 

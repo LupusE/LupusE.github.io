@@ -14,7 +14,20 @@ subtitle: Lebenslauf
 
 # BERUFSERFAHRUNG
 
-## 03/2015 – heute **Leiter IT**
+## 08/2022 - heute
+
+Kommunit IT-Zweckverband Schleswig-Holstein
+
+* 300 Mitarbeiter starker Zweckverband für den reibunslosen IT Betrieb für Ämter, Gemeinden, Stadtverwaltungen in Schleswig-Holstein.
+
+### Aufgaben
+```
+Email Administration
+Datenbanken Administration
+```
+
+
+## 03/2015 – 07/2022 **Leiter IT**
 
 Frommer oHG, Bad Segeberg
 

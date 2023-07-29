@@ -21,6 +21,7 @@ Ich habe ein großartiges Leben.
 - Fachinformatik -Systemintegration-: Kundendaten Analyst
 - Fachinformatik -Systemintegration-: Unternehmensberater (Automation)
 - Leiter IT
+- Fachinformatik -Systemintegration-: Email und Datenbanken, zum Teil Automatisierung
 
 _Was kommt nun?_
 
@@ -28,9 +29,9 @@ _Was kommt nun?_
 
 Ich war nie gerne in der Schule. Aber ich habe immer gerne gelernt. Eine Mischung zwischen 'Was mache ich hier?' (Regelschule) und 'Wach bleiben durch Melden' (Berufsschule) versauten mir meinen 'erfolgreichen' Werdegang. Zumindest kurzfristig.  
 
-> "Everyone you'll ever meet knows something you don't" (by Bill Nye).
+> "Everyone you'll ever meet knows something you don't" (Bill Nye).
 
-Mittlerweile habe ich schwierigkeiten meinen Lebenslauf auf 2 DIN A4 Seiten zu bekommen. Zum Anfang alle 2 Jahre mit neuem Arbeitgeber in jeweils verschiedenen Verantwortungsbereichen.  
+Mittlerweile habe ich Schwierigkeiten meinen Lebenslauf auf 2 DIN A4 Seiten zu bekommen. Zum Anfang alle 2 Jahre mit neuem Arbeitgeber in jeweils verschiedenen Verantwortungsbereichen.  
 Es wird gesagt, dass nach einer gewissen Zeit der Lebenslauf nicht mehr entscheidend ist. Und auch, dass im Lebenslauf nur das erscheinen soll, was für die beworbene Position relevant ist. Schwierig.  
 
 Aufgefallen ist mir nur, dass wesentlich weniger Zurückgemeldet wird, als ich von zivilisierter Kommunikation erwarten würde.  
@@ -40,9 +41,11 @@ Wenn man dann keine Antwort erhält: Doppelt kein Spass.
 
 Mittlerweile schreibe ich im Freifeld in Bewerbungsportalen gerne, dass sie mich gerne Anschreiben dürfen, wenn ich die Stelle nicht bekomme und die Firma ihr Portal in den Griff bekommen möchte. Das gibt dann originelle Antworten, wie: "Das macht HR, dafür sind wir aus der IT nicht zuständig" ... Das klingt von der Antwort aber viel mehr nach HR, bin ich froh dass ich bei den Bürokraten nicht angenommen wurde.  
 
+> "Learn the rules like a pro, so you can break them like an artist." (Pablo Picasso)
+
 # Und was suche ich?
 
-_Mich selbst?_ 
+_Mich selbst?_  
 Gewiss nicht.
 
 _Viel Geld?_  
@@ -55,8 +58,9 @@ _Home Office?_
 Schwieriges Thema. So gerne ich nahe am Zuhause bin, so sehr liebe ich es im Büro einfach die Tür hinter mir zu schliessen und damit die Projekte hinter mir zu lassen. Gerne arbeite ich im 'Home Office', auch im Wohnmobil, oder in Dänemark am Strand. Dank LTE alles möglich. Und manche Projekte benötigen nichteinmal Internet.
 
 [.. bitte mit Meldung, ich ignoriere Zwischenrufe. Aber hier eine Ausnahme]  
+
 _In welchem Bereich?_  
-Das ist mir Egal. Ich kenne mich mit Datenbanken aus, mit Sicherheit, mit Netzwerken, mit Linux, mit Windows Desktop und mit verschiedenen Servern, mit Kleinstrechnern (RaspberryPi), mit Prozessen (ITIL), mit Ticketsystemen, mit FOSS ... und doch schrecke ich nicht davor zurück etwas neues zu lernen!  
+Das ist mir Egal. Ich kenne mich mit Datenbanken aus (ja, ganz bewusst generalisiert), mit Sicherheit, mit Netzwerken, mit Linux, mit Windows Desktop und mit verschiedenen Servern, mit Kleinstrechnern (RaspberryPi), mit Prozessen (ITIL), mit Ticketsystemen, mit FOSS ... und doch -oder deshalb- schrecke ich nicht davor zurück etwas Neues zu lernen!  
 
 ... to be continued ...  
 

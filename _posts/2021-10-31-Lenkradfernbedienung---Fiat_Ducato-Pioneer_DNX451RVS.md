@@ -12,7 +12,7 @@ comments: []
 
 ## Ausgangslage
 
-Meine Frau und ich haben uns ein [4pfoten-Mobile - Dog-Liner TE740](https://www.4pfoten-mobile.de/) gekauft, unser BuffyMobil. Dieser teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Pioneer DNX451 verbunden. Unser Verkäufer, [Jörn Zimmermann](www.4pfoten-mobile.de/neumuenster/) vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:
+Meine Frau und ich haben uns ein [4pfoten-Mobile - Dog-Liner TE740](https://www.4pfoten-mobile.de/) gekauft, unser BuffyMobil. Dieser teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Kenwood DNX451 verbunden. Unser Verkäufer, [Jörn Zimmermann](www.4pfoten-mobile.de/neumuenster/) vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:
 * Kabelbaum: CAW-CCOMFI1
 * Steuerbox: CAW-COMUN2
 
@@ -58,7 +58,7 @@ Beim Zusammenschrauben in umgekerter Reihenfolge: Erst die unteren Schrauben, da
 
 Das ist ja einfach.
 
-### Folgende Zustaende kann die Box anzeigen
+### Folgende Zustände kann die Box anzeigen
 
 | LED Signal | Bedeutung |
 | --- | --- |
