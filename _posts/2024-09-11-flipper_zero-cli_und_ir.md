@@ -4,7 +4,7 @@ published: true
 layout: post
 title: Flipper Zero - CLI und IR
 author: Benjamin Moeller
-date: 2024-09-12 23:02:32 UTC
+date: 2024-09-11 23:02:32 UTC
 categories: [experimente]
 tags: [produkte, flipper zero]
 comments: []
