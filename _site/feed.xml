@@ -1,17 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2023-07-29T21:23:22+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Flipper Zero vs. Logitech Unifying</title><link href="http://blog.lupuse.org/experimente/2023/07/27/flipper_vs_logitech.html" rel="alternate" type="text/html" title="Flipper Zero vs. Logitech Unifying" /><published>2023-07-27T22:38:03+00:00</published><updated>2023-07-27T22:38:03+00:00</updated><id>http://blog.lupuse.org/experimente/2023/07/27/flipper_vs_logitech</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2023/07/27/flipper_vs_logitech.html">&lt;p&gt;Ich versuche nach Möglichkeit meine Hardware Up-to-date zu halten. Ich finde es doof, wenn ein Firmwareupdater nur für Windows verfügbar ist. Wenn ich Zugriff auf ein Windows habe, dann installiere ich in der Regel die Logitech Unifying Software und schaue nach ob alle Geräte aktuell sind. Das geht dank USB in der Regel schnell.&lt;br /&gt;
-Vor einiger Zeit gab es in den News zuerst die Info, dass die Logitech Presenter anfällig sind, später wurde herausgefunden dass der verwendete Chip nRF24LU1+ von &lt;a href=&quot;https://www.nordicsemi.com/&quot;&gt;Nordic Semiconductor&lt;/a&gt; auch in vielen Unifying Dongles zu finden ist. Logitech hat schnell ein Firmwareupdate zugesagt und geliefert.&lt;br /&gt;
-Durch den ersten Absatz dachte ich das wäre genug. wenn dme so wäre hätte ich diesen Text nicht verfasst.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2024-09-18T21:02:45+02:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Flipper Zero - CLI und IR</title><link href="http://blog.lupuse.org/experimente/2024/09/13/flipper_zero-cli_und_ir.html" rel="alternate" type="text/html" title="Flipper Zero - CLI und IR" /><published>2024-09-13T01:02:32+02:00</published><updated>2024-09-13T01:02:32+02:00</updated><id>http://blog.lupuse.org/experimente/2024/09/13/flipper_zero-cli_und_ir</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2024/09/13/flipper_zero-cli_und_ir.html">&lt;p&gt;Seit geraumer Zeit ist der kleine Flipper Zero nun mein treuer Begleiter. Ich habe viel gelernt über verschiedenste Wege der Datenübertragung.&lt;/p&gt;
 
-&lt;p&gt;Kurz: Im Jahre 2016 haben Forscher herausgefunden, dass es per Funk extrem doof ist Tastatureingaben zwar zu verschlüsseln, die Maus aber unverschlüsselt einzubinden. Dazu noch, wenn die gesendeten Eingaben nicht weiter verifiziert werden.&lt;br /&gt;
+&lt;p&gt;Auch über Menschen, aber das wollte ich nie. Der Flipper ist weiterhin kein magischer Zauberstab um alle Türen und Tore zu öffnen.&lt;br /&gt;
+Je besser ich ein Protokoll verstehe, desto ehe rhabe ich eine Chance zu verstehen wie ich eine Tür öffne, oder eben warum ich das nicht kann. Und warum ärgert es mich nicht, wenn ich mein Garagentor nicht mit einem 200 Euro Multi-Protokol-Tool öffnen kann? Dann kann es auch kein anderer, es ist in dem Bereich sicher.&lt;/p&gt;
+
+&lt;h2 id=&quot;infrarot-im-generellen&quot;&gt;Infrarot im Generellen&lt;/h2&gt;
+
+&lt;p&gt;Die erste Anlaufstelle um Infrarot-Signale zu bekommen ist die Flipper-IRDB. Dabei gibt es drei Hauptquellen:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://github.com/UberGuidoZ/Flipper-IRDB ist ein Fork von:&lt;/li&gt;
+  &lt;li&gt;https://github.com/logickworkshop/Flipper-IRDB ist ien Fork von:&lt;/li&gt;
+  &lt;li&gt;https://github.com/Lucaslhm/Flipper-IRDB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Man kann nicht wissen wo jemand aktuell etwas hochgeladen hat, aber die drei Quellen gleichen sich sehr zeitnah ab. Innerhalb einer Woche sollte jede Datei auf allen drei Quellen verfügbar sein. Ich persänlich lade bei der Basis Lucaslhm hoch.&lt;/p&gt;
+
+&lt;p&gt;Diese Datenbank ist bereits sehr mächtig. Oft liest man aber in den Foren und im Discord ‘Ich habe die Fernbedienung für xyz verloren’. Diese Anfragen ignoriere ich in der Regel, was interessiert mich ein 10e LED streifen, kauf halt neu.&lt;br /&gt;
+In einigen Fällen findet sich in der DB eine ähnliche Datei. Vom gleichen Hersteller oder anderes Label und ähnliche Bezeichnung. Dann kann man das Gerät ein/aus schalten, aber noch nicht die Farben wechseln. Wie im folgenden Beispiel:&lt;/p&gt;
+
+&lt;h2 id=&quot;infrarot-im-speziellen-dualtron&quot;&gt;Infrarot im speziellen: Dualtron&lt;/h2&gt;
+
+&lt;p&gt;Jemand fragt an, ob wer eine Fernbedienung für eine &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dualtron ultra 2&lt;/code&gt; hat. In der IRDB gibt es die &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dualtron victor&lt;/code&gt;. An/Aus geht, aber keine Farben.&lt;br /&gt;
+Also gehe ich auf https://github.com/Lucaslhm/Flipper-IRDB und gebe bei ‘Go to file’ ein: dualtron. Ich bekomme die Datei Dualtron_Victor_Handlebar_Lights.ir als Ergebnis.&lt;br /&gt;
+Vom User weis ich bereits, dass ‘POWER’ geht, also schaue ich mir diesen Button in der Datei an:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: POWER
+type: parsed
+protocol: NEC
+address: 00 00 00 00
+command: 07 00 00 00
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;NEC ist ein sehr einfaches Protokoll. 16 bit Adresse und Komando, bestehend aus 8 bit+8 bit logical inversed. Daher reicht in der Datei 8 bit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;command: 07&lt;/code&gt;.&lt;br /&gt;
+Die Adresse ist hier mit 00 angegeben, das ist nicht ungewöhnlich bei billigen Produkten. Es wird halt als Adresse 16 bit 00000000 11111111 gesendet.&lt;/p&gt;
+
+&lt;p&gt;Ich könnte mich nun darauf konzentrieren, dass 07 ein bekanntes Kommando ist und den nahen Bereich als Buttons in einer IR File anlegen.&lt;br /&gt;
+Oder ich weis das ich nur 255 Werte im Hex Bereich habe und schreibe mir eine Schleife zum Testen der 255 Werte von 00 bis FF:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!/bin/bash
+
+for command in {0..255}
+do
+    hexcmd=$(printf &quot;%02d&quot; $(echo &quot;obase=16;$command&quot; |bc)) 
+    echo &quot;Send \&quot;ir tx NEC 00 $hexcmd\&quot; to /dev/ttyACM0&quot;
+    echo -e &quot;ir tx NEC 00 $hexcmd&quot; &amp;gt;&amp;gt; /dev/ttyACM0
+    sleep 5
+done
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ich lasse den Zahlenbereich 00 bis 255 durchlaufen.  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for command in {0..255}; do ...; done&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Zunächst konvertiere ich die Zahl in einen Hexadezimalen Wert &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$(echo &quot;obase=16;$command&quot; |bc)&lt;/code&gt;, die führende Null nicht vergessen! &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$(printf &quot;%02d&quot; ...)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Dann gebe ich mir auf dem Bildschim aus was ich gerade mache. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo &quot;Send \&quot;ir tx NEC 00 $hexcmd\&quot; to /dev/ttyACM0&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Zu guter Letzt wird der Befehl an den Flipper gesendet. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo -e &quot;ir tx NEC 00 $hexcmd&quot; &amp;gt;&amp;gt; /dev/ttyACM0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Ja, das Sleep ist notwendig, damit ich auch noch rechtzeitig reagieren kann und keine unkontrollierte Disco erzeuge. Bei 07 z.B. muss ich die Chance haben den IR Sender zu verdecken oder das Gerät wieder einzuschalten vor 08.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;ein-bischen-rechnen-mathematik-ist-das-noch-nicht&quot;&gt;Ein bischen rechnen (Mathematik ist das noch nicht)&lt;/h2&gt;
+
+&lt;p&gt;Dieses funktioniert nur, bei Protokollen mit 2x8 bit Kommandos.&lt;br /&gt;
+Wenn ich ein 16 bit Kommando habe, muss ich den Wertebereich entsprechend von 0000 auf FFFF erweitern. 65535 * 5 Sekunden (91 Stunden) macht nicht mehr so viel Spass. Ich muss die ganze Zeit dabei bleiben, da es über das Protokolle kein Feedback gibt. Zum Vergleich sind es bei 255 Variationen * 5 Sekunden gerade mal 21 Minuten, wenn ich auf 3 Sekunden Sleep gehe 12 Minuten. Diese Optimierung benötigt bei FFFF noch immer 54 Stunden.&lt;/p&gt;
+
+&lt;p&gt;Erinnert Ihr Euch noch was ich oben zum Thema ‘Protokolle verstehen’ geschrieben habe? Das war kein Scherz, man sollte wissen wann man sich der Komplexität geschlagen gibt.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="produkte" /><category term="flipper zero" /><summary type="html">Seit geraumer Zeit ist der kleine Flipper Zero nun mein treuer Begleiter. Ich habe viel gelernt über verschiedenste Wege der Datenübertragung.</summary></entry><entry><title type="html">Wohnmobilinternet</title><link href="http://blog.lupuse.org/wohnmobil/2024/06/12/wohnmobilinternet.html" rel="alternate" type="text/html" title="Wohnmobilinternet" /><published>2024-06-12T22:42:01+02:00</published><updated>2024-06-12T22:42:01+02:00</updated><id>http://blog.lupuse.org/wohnmobil/2024/06/12/wohnmobilinternet</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2024/06/12/wohnmobilinternet.html">&lt;p&gt;Warum benötigt man im Urlaub überhaupt Internet? Auch wenn es so edel klingt digitales detoxing zu betreiben, ich denke keiner möchte darauf verzichten. Denn selbst bei Hotels und Ferienwohnungne wird darauf geachtet, dass WLAN verfürbar ist. So auch auf dem Campingplatz.&lt;/p&gt;
+
+&lt;h2 id=&quot;das-wohnmobil-und-der-strom&quot;&gt;Das Wohnmobil und der Strom&lt;/h2&gt;
+
+&lt;p&gt;Im mobilen Heim hat man grundsätzlich zu wenig Steckdosen. Als wir 2020 unser neustes 4-Pfoten-Mobile gekauft haben, war ich zuerst sehr angetan. Eine Steckdose über dem Fahrersitz, eine unter der Sitzecke, eine hinter dem Fernseher im Eingang, eine im Bad und eine hinten bei den Betten. Aber um ehrlich zu sein nutzen wir 230V eher selten. Wir stehen eher autark.&lt;br /&gt;
+Hinter dem TV und über den Betten waren je ein 12V Stecker, welche über die Bordbatterie versorgt wurden. Die Zeiten von KFZ-Steckern ist definitiv vorbei, daher habe ich daraus je eine doppel USB Steckdose gemacht. Und bin glückich. An den Betten werden oft Switch oder Mobiltelefon geladen, vorne am TV steckt dauerhaft ein Uhrenladekabel (Garmin) und nach Bedarf ein Router.&lt;/p&gt;
+
+&lt;p&gt;Um diese Router soll es heute auch gehen.&lt;/p&gt;
+
+&lt;p&gt;Mein Lieblingsrouter ist weiterhin (ich hatte schon geschrieben) der GL-iNet Shadow (GL-AR300M-Ext). Am USB Port frisst er 5V/1A und bietet dafür 2.4 GHz WLAN. Dabei kann ich sowohl eines zum Campingplatz-Netz aufbauen als auch ein eigenes im Mobil bereitstellen. Am Laptop mit Strommessgerät sehe ich einen Verbrauch von 5,1V auf 0,18A. Weniger als 2 Watt laut Datenblatt. 33 Euro.&lt;br /&gt;
+Letzte Tour hatte ich meinen Shadow verlegt, aber meinen Slate Plus (GL-A1300) dabei. Lange Zeit habe ich mich nicht getraut, da ich aus dem Forum weiss dass es beim falschen Netzteil zu Verbindungsabbrüchun und Freezes kommen kann. Ich wollte gar nicth wissen was das am Wohnmobil Bordnetz auslöst … Aber nun war ich neugierig, immerhin habe ich eine USB Strommultimeter dabei. 5,1V auf 1,2A kurzzeitig beim Boot, dann um die 0,5A, je nach Last. 17h durchgängig, ohne Unterbrechnung oder Freeze. Weniger als 6,5 Watt laut Datenblatt. Das mitgelieferte 5V/3A Netzteil schreckt doch mehr ab als es müsste. 90 Euro.&lt;/p&gt;
+
+&lt;p&gt;Jetzt habe ich mir einen Spitz AX (GL-X3000) bestellt. Dieses Modell hat einen angegeben Verbrauch von 14 Watt. Aber bietet dafür 6 Antennen: 2 für WLAN (MIMO) und 4 für 5G LTE GPS und so weiter. Es ist nicht auf 5 Volt fix, sondern man kann ihn angeblich zwischen 3 und 12 Volt betreiben. Vermutlich wäre hier der KFZ-Steker noch sinnvoll gewesen. 580 Euro.&lt;/p&gt;
+
+&lt;p&gt;Was mir am Portfolio von GL.iNet sehr gefällt ist das breite Portfolio. Man bekommt für verschiedenes Geld verschiedene Ausstattungen. Alle oben beschriebenen Router machen am Ende das selbe, nur unterschiedlich schnell.&lt;/p&gt;
+
+&lt;h2 id=&quot;vpn-server&quot;&gt;VPN Server&lt;/h2&gt;
+
+&lt;p&gt;Zugegeben ist es nun gedanklich ein kleiner Sprung, aber ich nutze diese Router speziell aus einem Grund: Ich will sicher in öffentlichen Netzwerken sein.&lt;/p&gt;
+
+&lt;p&gt;Bei der Einrichtung kann man mit 2 Techniken aus 30 Anbietern für VPN wählen. Unterstützt werden immer das neuere WireGuard und das bewährte OpenVPN. Manche Modelle bieten das flexiblere Tor als dritte Option eines Tunnels an. Ich nutze keinen Anbieter. Da ich zuhause eine 500 MBit Glasfaser Leitung habe, steht dort mein Endpunkt unter meiner Kontrolle.&lt;/p&gt;
+
+&lt;p&gt;Zunächst suche ich mir einen GL.iNet Router aus, den ich zuhause stehen haben will.&lt;/p&gt;
+
+&lt;h3 id=&quot;die-auswahl-des-servers&quot;&gt;Die Auswahl des Servers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Brumme 2 (GL-MT2500) - Ein Gerät ohne WLAN, sehr kompakt und schnell dank 2,5 GBit Ethernet Port. Etwa 90 Euro&lt;/li&gt;
+  &lt;li&gt;Mango (GL-MT300N-V2) - Der schmalere Shadow, mit WLAN aber ohne externe Antennen.&lt;/li&gt;
+  &lt;li&gt;Slate AX (GL-AXT1800) - Kompakt, Wi-Fi 6, Leistungsstark. Etwa 130 Euro.&lt;/li&gt;
+  &lt;li&gt;Flint 2 (GL-MT6000) - Ein vollwertiger Routerersatz für zuhause. Sicher eine Option, wenn die Fritz!Box oder ähnliches ausgetauscht werden soll. 160 Euro&lt;/li&gt;
+  &lt;li&gt;Marble (GL-B3000) - Kommt bald. Ein schöner Router, der auch als Bilderrahmen genutzt werden kann.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Alternativen:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Selbstgebaut mit Linux/*BSD VM oder Miniinstallation …Das hatte ich mal, aber ist zu viel Aufwand.&lt;/li&gt;
+  &lt;li&gt;Wie oben genannt, einen von 30 Anbietern dafür bezahlen.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;den-vpn-server-aufstellen&quot;&gt;Den VPN Server aufstellen&lt;/h3&gt;
+&lt;p&gt;Meine Wahl fiel auf den Slate AX, der zwar sehr vielseitig ist, aber für unterwegs doch ein bisschen zu gross. Wenn der Marble raus kommt wird der sicher ersetzt.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Strom an dne Slate AX&lt;/li&gt;
+  &lt;li&gt;Ethernet-Kabel vom LAN an das WAN des Slate AX&lt;/li&gt;
+  &lt;li&gt;Kabel vom Slate AX LAN zum Laptop/PC oder per WLAN und dne Zugangsdaten auf dme Etikett unten per Smartphone/Tablet verbinden.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Im generellen ist es ohne Einschränkungen möglich sich per Smartphone/Tablet zu verbinden. Doch leider stellt sich Android so intelligent dar, dass eine Verbindung ohne Internet nicht geroutet wird, wenn eine andere Verbindung (z.B. mobile Daten) besteht. Um auf die Administrationsoberfläche zu kommen muss also kurzzeitig ‘Mobile Daten’ oder ähnlich deaktiviert werden. Das ist kein Problem der GL.iNet Router, weil die würden jede Anfrage annehmen und beantworten.&lt;br /&gt;
+Wenn das WAN Kabel gesteckt ist und der Router eine IP und ein Gateway zugewiesen bekommen hat, dann besteht das zuvor genannte Problem nicht. Eventuell muss man einen kleinen Moment warten.&lt;/p&gt;
+
+&lt;h3 id=&quot;die-vpn-server-einrichtung&quot;&gt;Die VPN Server Einrichtung&lt;/h3&gt;
+&lt;p&gt;Jeder GL.iNet Router wird mit der IP 192.168.8.1/24 ausgeliefert. Zwar ist bekannt, dass eine IP in einem Netzwerk nur einmal vergeben sein darf, eher unbekannt ist, dass genauso ein Netzwerk in einem VPN nur einmal existieren darf. Ich empfehle zuerst auf der Administrationsseite (http://192.168.8.1) links im Menü unter ‘Netzwerk - LAN’ die IP zu ändern, z.B. auf 192.168.9.1. Danach sollte der Router einmal neu gestartet werden, wenn er nicth über die IP http://192.168.9.1 errieichbar ist, den Client auch einmal neu verbinden.&lt;/p&gt;
+
+&lt;p&gt;Nach der erneuten Anmeldung am Router geht man links im Menü auf ‘VPN - WireGuard Server’. Die Übersetzung ‘Konfiguration erzeugen’ aus dem Englischen ‘Generate Configuration’ wird aktuell überarbeitet und ist in Zukunft sicher besser.&lt;br /&gt;
+Wenn der GL.iNet Router nicht direkt im Internet ist, muss auf dem Hauptrouter der hier angezeigte Port (Standard: 51820) weitergeleitet werden (Port Forwarding).&lt;br /&gt;
+Weiter oben gibt es den Reiter ‘Profile’, über den die Konfiguration für die Gegenstellen erstellt wird. Mit dem Button ‘Hinzufügen’ wird im Dialog ein Name angegeben, zum Beispiel ‘Wohnmobil’. Ich empfehle den Schalter ‘Benutze eine DDNS Domain’ zu aktivieren, wenn die Erreichbarkeit des Servers aus dem Internet nicht über andere Wege sichergestellt ist.&lt;br /&gt;
+In dem Dialog erscheint nun ein QR Code, der in der GL.iNet App photografiert werden kann um die Verbindung herzustellen, ode rman läd sich die Configuration mit dme Button ‘Herunterladen’ auf den Computer oder das Smartphone um es später, bei Verbindung auf dem entfernten Router wieder hochzuladen. Dieser Dialog kann jederzeit wieder aufgerufen werden.&lt;/p&gt;
+
+&lt;h2 id=&quot;vpn-client&quot;&gt;VPN Client&lt;/h2&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="wohnmobil" /><category term="router" /><summary type="html">Warum benötigt man im Urlaub überhaupt Internet? Auch wenn es so edel klingt digitales detoxing zu betreiben, ich denke keiner möchte darauf verzichten. Denn selbst bei Hotels und Ferienwohnungne wird darauf geachtet, dass WLAN verfürbar ist. So auch auf dem Campingplatz.</summary></entry><entry><title type="html">Flipper Zero vs. Logitech Unifying</title><link href="http://blog.lupuse.org/experimente/2023/07/28/flipper_vs_logitech.html" rel="alternate" type="text/html" title="Flipper Zero vs. Logitech Unifying" /><published>2023-07-28T00:38:03+02:00</published><updated>2023-07-28T00:38:03+02:00</updated><id>http://blog.lupuse.org/experimente/2023/07/28/flipper_vs_logitech</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2023/07/28/flipper_vs_logitech.html">&lt;p&gt;Ich versuche nach Möglichkeit meine Hardware Up-to-date zu halten. Ich finde es doof, wenn ein Firmwareupdater nur für Windows verfügbar ist. Wenn ich Zugriff auf ein Windows habe, dann installiere ich in der Regel die Logitech Unifying Software und schaue nach ob alle Geräte aktuell sind. Das geht dank USB in der Regel schnell.&lt;br /&gt;
+Vor einiger Zeit gab es in den News zuerst die Info, dass die Logitech Presenter anfällig sind, später wurde herausgefunden dass der verwendete Chip nRF24LU1+ von &lt;a href=&quot;https://www.nordicsemi.com/&quot;&gt;Nordic Semiconductor&lt;/a&gt; auch in vielen Unifying Dongles zu finden ist. Logitech hat schnell ein Firmwareupdate zugesagt und geliefert.&lt;br /&gt;
+Durch den ersten Absatz dachte ich das ist genug. Wenn dem so wäre, hätte ich diesen Text nicht verfasst.&lt;/p&gt;
+
+&lt;p&gt;Kurz: Im Jahre 2016 haben Forscher herausgefunden, dass es per Funk extrem doof ist die Tastatureingaben zu verschlüsseln, die Maus aber unverschlüsselt einzubinden. Dazu noch, wenn die gesendeten Eingaben nicht nach Quelle verifiziert werden.&lt;br /&gt;
 Die Forschung sieht so aus: &lt;a href=&quot;https://github.com/BastilleResearch/mousejack#flash-a-logitech-unifying-dongle-back-to-the-original-firmware&quot;&gt;GitHub - BastilleResearch/mousejack&lt;/a&gt; … Das ist im Jahre 2023 kein Thema mehr, oder? Oder?&lt;/p&gt;
 
 &lt;h1 id=&quot;wie-sicher-ist-gefühlte-sicherheit&quot;&gt;Wie sicher ist gefühlte Sicherheit?&lt;/h1&gt;
 
 &lt;p&gt;Ich behaupte über PC, IT und Sicherheit mehr zu verstehen als der durschnittliche Anwender. Ich gehe sogar so weit und behaupte ich habe einen guten Überblick darüber wo ich bewusst durch Geld oder Faulheit in meinen Systemen Sicherheitslücken habe.&lt;/p&gt;
 
-&lt;p&gt;Heute habe ich einen Flipper Zero. Der Flipper besitzt eine GPIO Leiste. Zwei nRF24 Module gibt es auf Amazon für unter 10 Euro und Jumper-Kabel standen seit längerem auf meiner Einkaufsliste …&lt;/p&gt;
+&lt;p&gt;Ich habe einen Flipper Zero. Das Hackertool, mit dem man angeblich Autos stehlen kann und durch jede Tür. Dazu gibt es zwei wichtige Fakten zu kennen: 1. Der Flipper ist kein magischer Zauberstab! 2. Das Internet (insbesondere auf Kurzvideo-Plattformen) lügt!&lt;br /&gt;
+Der Flipper besitzt eine GPIO Leiste. Zwei nRF24 Module gibt es auf Amazon für unter 10 Euro und Jumper-Kabel standen seit längerem auf meiner Einkaufsliste …&lt;/p&gt;
 
 &lt;h2 id=&quot;aufbau&quot;&gt;Aufbau&lt;/h2&gt;
+
 &lt;ol&gt;
   &lt;li&gt;7 Jumper-Kabel vom Baum trennen&lt;/li&gt;
   &lt;li&gt;nRF24 Modul nach Anleitung auf die GPIO Leiste des Flipper verbinden&lt;/li&gt;
@@ -20,12 +143,13 @@ Die Forschung sieht so aus: &lt;a href=&quot;https://github.com/BastilleResearch
 &lt;/ol&gt;
 
 &lt;p&gt;Jetzt heisst es warten. Der Flipper signalisiert mit einem weissen LED Leuchten und Vibrieren, wenn er etwas findet. Also man darf abgelenkt sein.&lt;br /&gt;
-In der Zwischenzeit schreibe ich etwas zu meinen Erfahrungen und der Vorgehensweise.&lt;/p&gt;
+In der Zwischenzeit schreibe ich etwas zu meinen Erfahrungen und der Vorgehensweise.&lt;br /&gt;
+Ja, damit das funktioniert sollte man eine CFW (Custom Firmware) nutzen. Es gibt für die Apps Ports, damit die Apps auch für die OFW (Original Firmware) kompiliert werden können, diese stürzen aber durch fehlende Schnittstellen oft ab.&lt;/p&gt;
 
 &lt;h2 id=&quot;die-programme&quot;&gt;Die Programme&lt;/h2&gt;
 
-&lt;p&gt;Da das Bastille Research Team alle Programme offen zur Verfügung gestellt hat, musste nur jemand Python zo Fliper übersetzen. Das ging schnell.&lt;br /&gt;
-Die Programme für den Flipper sind alle OpenSource und seit 07.2023 über den Appstore flipc.org zu finden.&lt;/p&gt;
+&lt;p&gt;Da das Bastille Research Team alle Programme offen zur Verfügung gestellt hat, musste nur jemand Python zo Flipper übersetzen. Das ging schnell.&lt;br /&gt;
+Die Programme für den Flipper sind OpenSource und seit 07.2023 über den Appstore flipc.org zu finden.&lt;/p&gt;
 
 &lt;h3 id=&quot;nrf24sniffer&quot;&gt;[NRF24]Sniffer&lt;/h3&gt;
 
@@ -42,7 +166,7 @@ Die Programme für den Flipper sind alle OpenSource und seit 07.2023 über den A
 &lt;/ul&gt;
 
 &lt;p&gt;Die &lt;strong&gt;Transfer rate&lt;/strong&gt; von 2Mbps kann aktiviert bleiben, nur bei alten Geräten, viel Störsignale oder langer Entfernung würde ich auf 1Mbps stellen.&lt;br /&gt;
-Die &lt;strong&gt;Sample Time&lt;/strong&gt; bestimmt wie lange gescant wird, bevor automatisch ein Channel weiter gesprungen wird. Mit 1000ms habe ich bisher Erfolge erzielt, wobei ich meistens mehr als einen Durchlauf habe. Vielleicht sind 2000ms besser.&lt;/p&gt;
+Die &lt;strong&gt;Sample Time&lt;/strong&gt; bestimmt wie lange gescant wird, bevor automatisch ein Kanal weiter gesprungen wird. Mit 1000ms habe ich bisher Erfolge erzielt, wobei ich meistens mehr als einen Durchlauf habe. Vielleicht sind 2000ms besser.&lt;/p&gt;
 
 &lt;p&gt;Der Sniffer legt die gefundenen Adressen unter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apps_data/nrf24_sniffer/addresses.txt&lt;/code&gt; auf der SD karte ab, im Format &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0A109A4AE8,2&lt;/code&gt;. Vor dem Komma die Adresse an die gesendet wird, das hinter die Transfer rate.&lt;/p&gt;
 
@@ -51,11 +175,11 @@ Die &lt;strong&gt;Sample Time&lt;/strong&gt; bestimmt wie lange gescant wird, be
 &lt;h3 id=&quot;nrf24mouse-jacker&quot;&gt;[NRF24]Mouse Jacker&lt;/h3&gt;
 
 &lt;p&gt;Dieses ist das Tool, mit dem man cool auf TikTok aussieht. Mit den zuvor gesammelten Adressen, wenn der Dongle ungepatched ist, kann ich remote Tastaturbefehle injecten. Also ein Wireless BadUSB ausführen.&lt;br /&gt;
-Wenn mehr als eine Adresse gefunden wurde, können diese durchgescrollt werden, vor Ausführung des BadUSB Scripts. Man sollte sich bei mehreren gefundenen adaptern sicher sein das Script auf dem richtigen Rechner auszuführen. An dieser Stelle einne lieben Gruss an meine Nachbarn, ich hoffe Eurer Dongle ist gepatched.&lt;br /&gt;
-Die FlipperZero-BadUSB fähigen Ducky-Scripte sollten natürlich schon auf dem Flipper liegen. Warum ich das so deutlich schreibe, benötigt einen eigenen Artikel. Gesucht wird im BadUSB Ordner der SD Karte.&lt;/p&gt;
+Wenn mehr als eine Adresse gefunden wurde, können diese durchgescrollt werden, vor Ausführung des BadUSB Scripts. Man sollte bei mehreren gefundenen Adaptern sicher sein, das Script auf dem richtigen Rechner auszuführen. An dieser Stelle einne lieben Gruss an meine Nachbarn, ich hoffe Eurer Dongle ist gepatched.&lt;br /&gt;
+Die FlipperZero-BadUSB fähigen Ducky-Scripte sollten natürlich schon auf dem Flipper liegen. Warum ich das so deutlich schriebe benötigt einen eigenen Artikel. Gesucht wird im BadUSB Ordner der SD Karte.&lt;/p&gt;
 
 &lt;p&gt;Auf meinen eigenen Systemen habe ich das Script &lt;a href=&quot;https://github.com/UberGuidoZ/Flipper/blob/main/BadUSB/Char_Test_ALTSTRING.txt&quot;&gt;Char_Test_ALTSTRING&lt;/a&gt; ausgeführt und mir ist aufgefallen dass einige Zeichen mehrfach gesendet werden. Als ob eine Taste ca. 5 Sekunden nicht losgelassen wird.&lt;br /&gt;
-Das sieht bei einem ausgegebenen String auf dem Bildschirm komisch aus, verhindert aber in einem ein Payload unter Umständne die Ausführung.&lt;/p&gt;
+Das sieht bei einem ausgegebenen String auf dem Bildschirm komisch aus, und verhindert in einem Payload unter Umständen die Ausführung.&lt;/p&gt;
 
 &lt;p&gt;Tipp: Die Adresse muss nicht jedes mal neu gefunden werden. Wenn sie einmal bekannt ist, kann diese beliebig oft auf dem Empfänger wiederverwendet werden. Vermutlich bis die Maus neu gepaired wird.&lt;/p&gt;
 
@@ -65,44 +189,64 @@ Das sieht bei einem ausgegebenen String auf dem Bildschirm komisch aus, verhinde
 
 &lt;h2 id=&quot;die-hardware&quot;&gt;Die Hardware&lt;/h2&gt;
 
-&lt;p&gt;Es gibt die kleineren nFR24 module mit Antenne auf dem Board und die längeren mit angeschraubter Antenne.&lt;br /&gt;
-Die kleineren Boards sollen laut Internet eine Reichweite von etwa 30m haben und eine maximale Stromaufnahme von etwa 72mA/3,3V. -&amp;gt; nRF24L01+&lt;br /&gt;
-Die grossen Boards dagegen haben laut Datenblatt 1100m Reichweite, welche mit max. 400m bisher gemessen wurde, und eine maximale Stromaufnahme von 154mA/3,3V. Also deutlich mehr Belastung auf dem Akku des Flipper. -&amp;gt; nRF24L01+PA+LNA&lt;br /&gt;
-Dann gibt es noch Module, die extra für den Flipper Zero gebaut werden, z.B. das &lt;a href=&quot;https://rabbit-labs.com/&quot;&gt;TehRabbit Modul&lt;/a&gt;. Diese Starten oft bei 40-50USD. Je nach Funktionsumfang zum beispiel externes CC1101 Modul, ESP32, …) können die auch mehr oder weniger über 100USD gehen.&lt;/p&gt;
+&lt;p&gt;Es gibt die kleineren nFR24 Module mit aufgedrucker Antenne auf dem Board und die längeren mit angeschraubter Antenne.&lt;br /&gt;
+Die kleineren Boards sollen laut Internet eine Reichweite von etwa 30 m haben und eine maximale Stromaufnahme von etwa 72mA/3,3V. -&amp;gt; nRF24L01+&lt;br /&gt;
+Die grossen Boards dagegen haben laut Datenblatt 1100m Reichweite, welche mit max. 400 m bisher gemessen wurde und eine maximale Stromaufnahme von 154mA/3,3V. Also deutlich mehr Belastung auf dem Akku des Flipper. -&amp;gt; nRF24L01+PA+LNA&lt;br /&gt;
+Es gibt Module, die extra für den Flipper Zero gebaut werden, z.B. das &lt;a href=&quot;https://rabbit-labs.com/&quot;&gt;TehRabbit Modul&lt;/a&gt;. Diese Starten bei entsprechender Qualität bei 40-50 USD. Je nach Funktionsumfang, zum Beispiel als externes CC1101 Modul, mit ESP32, … können sie auch mehr oder weniger über 100 USD gehen.&lt;/p&gt;
 
-&lt;p&gt;Ich habe mich für die Antennen Variante entschieden, denn die geschraubte Antenne lässt bei Bedarf auch mehr Leistung/Reichweite durch eine Richtantenne zu.&lt;/p&gt;
+&lt;p&gt;Ich habe mich für die Variante mit externer Antenne entschieden, denn die geschraubte Antenne lässt bei Bedarf auch mehr Leistung/Reichweite durch eine Richtantenne zu.&lt;/p&gt;
 
-&lt;p&gt;Bei den Jumperkabeln kann man nicht viel falsch machen. 20cm sind gerad enoch okay, 5cm wären wohl ideal. Besser ist natürlich ein Board um die Verbindungen bereitzustellen.&lt;br /&gt;
+&lt;p&gt;Bei den Jumperkabeln kann man nicht viel falsch machen. 20 cm sind gerade noch okay, 5 cm halte ich für ideal. Besser ist natürlich ein Board um die Verbindung bereitzustellen.&lt;br /&gt;
 Diese Boards habe ich auch mit 5V und einem Spannungswandler gesehen. Das hat optisch den Vorteil das ich nur eine Seite der 2-geteilten GPIO Leiste belege, aber Spannungswandeln ist immer Verlustbehaftet.&lt;/p&gt;
 
 &lt;h1 id=&quot;erfolge&quot;&gt;Erfolge&lt;/h1&gt;
-&lt;p&gt;| Type | Version | Firmware | USB ID |
-| — | — | — | — |
-| 2x Unifying Receiver | C-U0007 | 12.03.B0025 | 046d:C52B |&lt;/p&gt;
+
+&lt;p&gt;Ich habe verschiedene Unify Reciver getestet, jeder C-U0007 war angreifbar. Dokumentiert habe ich nicht alle Tests, aber:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Version&lt;/th&gt;
+      &lt;th&gt;Firmware&lt;/th&gt;
+      &lt;th&gt;USB ID&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2x Unifying Receiver&lt;/td&gt;
+      &lt;td&gt;C-U0007&lt;/td&gt;
+      &lt;td&gt;12.03.B0025&lt;/td&gt;
+      &lt;td&gt;046d:C52B&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;Tipp: Die Firmware des Unifying Reciever kann unter Linux mit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solaar show&lt;/code&gt; anzeigt werden.&lt;/p&gt;
 
-&lt;p&gt;Der C-U0008 Dongle hat einen TI chip und kann hier nicht verwendet werden, obwohl er auch auf 2,4GHz überträgt. Das vorgehen lässt sich aber auf verschiedene Wireless HID Geräte von Logitech, Dell und andere anwenden. Siehe Projektseite.&lt;/p&gt;
+&lt;p&gt;Der C-U0008 Dongle hat einen TI Chip und kann für das MouseJacking nicht verwendet werden, obwohl er auch auf 2,4 GHz überträgt. Die Schwachstelle lässt sich auf verschiedene Wireless HID Geräte von Logitech, Dell, Lenovo und andere anwenden. Siehe Projektseite.&lt;/p&gt;
 
-&lt;p&gt;Aufgrund von Tests mit BadUSB Exfiltration per SPI habe ich meinen Windows Gaming PC reaktiviert. Dieser war mein erstes Ziel dieses Versuchs. Hätte ich mit Linux begonnen, hätte ich mich vermutlich über die Ausgabe von 10 Euro geärgert. Siehe Abschnitt ‘Beobachtungen’.&lt;/p&gt;
+&lt;p&gt;Aufgrund von Tests mit BadUSB Exfiltration per SPI habe ich meinen Windows Gaming PC reaktiviert. Dieser war mein erstes Ziel in diesem Experiment. Hätte ich mit Linux begonnen, hätte ich mich vermutlich über die Ausgabe von 10 Euro geärgert. Siehe Abschnitt ‘Beobachtungen’.&lt;/p&gt;
 
 &lt;h1 id=&quot;beobachtungen&quot;&gt;Beobachtungen&lt;/h1&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Obwohl die Logitech Unifying Software sagt meine Geräte sind Aktuell, sind die Dongles angreifbar.
-Es gibt keinen einen Hinweis auf die Sicherheitslücke. Ich muss bewusst den DFU Updater herunterladen, die &lt;a href=&quot;https://github.com/Logitech/fw_updates&quot;&gt;passende Firmware finden&lt;/a&gt; und anwenden. Fast gar nicht kompliziert.&lt;/li&gt;
+Es gibt keinen einen Hinweis auf die Sicherheitslücke. Ich muss bewusst das DFU Tool herunterladen, die &lt;a href=&quot;https://github.com/Logitech/fw_updates&quot;&gt;passende Firmware finden&lt;/a&gt; und anwenden. Fast gar nicht kompliziert.&lt;/li&gt;
   &lt;li&gt;Die gleichen Unifying Receiver weden an Windows innerhalb von 5 Minuen erkannt. Unter Linux auch nach Stunden des Scannens nicht.
 Offensichtlich schützen ein paar freiwillige Nerds im Keller das System besser als zwei Multimillionen-Unternehmen zusammen.&lt;/li&gt;
-  &lt;li&gt;Ich habe nicht herausgefunden warum ich den Stick nach Bastille Research erst flashen sollte. Bei mir sind sie ohne Aufwand angreifbar.&lt;/li&gt;
+  &lt;li&gt;Ich habe nicht herausgefunden warum ich den Stick nach Bastille Research erst flashen sollte. Bei mir sind sie ohne Aufwand direkt angreifbar.&lt;/li&gt;
   &lt;li&gt;Es handelt sich um eine Injection! Ich kann nicht ohne weiteres Tastatureingaben auslesen. Das bitte bei der Gefahrenbewertung beachten. Das pure Sniffen wäre passiv, das Ausführen von Tastatureingaben ist sichtbar. Ich kann mit dieser Attacke auch nicht an dem Login Screen eines Systems vorbei agieren. Sperrt Eure Bildschirme!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Die gute Nachricht ist, dass es den neuen &lt;a href=&quot;https://www.logitech.com/de-de/products/mice/logi-bolt-usb-receiver.html&quot;&gt;Bolt Adapter von Logitech&lt;/a&gt; nicht betrifft und auch alle Bluetoothverbindungen nur per den bekannten Bluetooth Lücken angreifbar sind.&lt;/p&gt;
+&lt;p&gt;Die gute Nachricht ist, dass es den neuen &lt;a href=&quot;https://www.logitech.com/de-de/products/mice/logi-bolt-usb-receiver.html&quot;&gt;Bolt Adapter von Logitech&lt;/a&gt; nicht betrifft, da alle Bluetoothverbindungen nur per bekannten Bluetooth-Lücken angreifbar sind.&lt;/p&gt;
 
 &lt;h1 id=&quot;weitere-links&quot;&gt;Weitere Links&lt;/h1&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Bastille docs - https://github.com/BastilleResearch/mousejack/tree/master/doc&lt;/li&gt;
   &lt;li&gt;Flipper Forum Discussion - https://forum.flipperzero.one/t/how-does-flipper-zero-connect-to-a-dongle/17463&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="flipperzero" /><summary type="html">Ich versuche nach Möglichkeit meine Hardware Up-to-date zu halten. Ich finde es doof, wenn ein Firmwareupdater nur für Windows verfügbar ist. Wenn ich Zugriff auf ein Windows habe, dann installiere ich in der Regel die Logitech Unifying Software und schaue nach ob alle Geräte aktuell sind. Das geht dank USB in der Regel schnell. Vor einiger Zeit gab es in den News zuerst die Info, dass die Logitech Presenter anfällig sind, später wurde herausgefunden dass der verwendete Chip nRF24LU1+ von Nordic Semiconductor auch in vielen Unifying Dongles zu finden ist. Logitech hat schnell ein Firmwareupdate zugesagt und geliefert. Durch den ersten Absatz dachte ich das wäre genug. wenn dme so wäre hätte ich diesen Text nicht verfasst.</summary></entry><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="flipperzero" /><summary type="html">Ich versuche nach Möglichkeit meine Hardware Up-to-date zu halten. Ich finde es doof, wenn ein Firmwareupdater nur für Windows verfügbar ist. Wenn ich Zugriff auf ein Windows habe, dann installiere ich in der Regel die Logitech Unifying Software und schaue nach ob alle Geräte aktuell sind. Das geht dank USB in der Regel schnell. Vor einiger Zeit gab es in den News zuerst die Info, dass die Logitech Presenter anfällig sind, später wurde herausgefunden dass der verwendete Chip nRF24LU1+ von Nordic Semiconductor auch in vielen Unifying Dongles zu finden ist. Logitech hat schnell ein Firmwareupdate zugesagt und geliefert. Durch den ersten Absatz dachte ich das ist genug. Wenn dem so wäre, hätte ich diesen Text nicht verfasst.</summary></entry><entry><title type="html">Infrastruktur - WireGuard</title><link href="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html" rel="alternate" type="text/html" title="Infrastruktur - WireGuard" /><published>2022-06-12T23:14:03+02:00</published><updated>2022-06-12T23:14:03+02:00</updated><id>http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur---wireguard</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2022/06/12/infrastruktur-wireguard.html">&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
 
 &lt;p&gt;Für mein Wohnmobilprojekt habe ich mir einen GL.iNet Beryl Reiserouter gekauft. Diese kleinen Dinger aus Hong Kong basieren auf OpenWRT und bieten für schmales Geld (35-80 Euro) eine gute Basis um unterwegs mehrere Geräte mit geringem Aufwand zu betreiben.&lt;br /&gt;
 Die Grundidee ist, dass ich nicht jedes meiner Geräte im (Hotel)WLAN anmeldne muss, sondern den Router vorschalte und dieser einen sicherne Zugang für alle meine Geräte stellt. Sicher, weil die kleinen Router standardmäßig eine Unterstützung für gängige Protokolle, wie OpenVPN und WireGuard mitbringen. Wer keine Möglickeit hat einen Endpunkt zu mieten oder selbst aufzubauen, dem steht immernoch per Klick das TOR Netzwerk offen.&lt;br /&gt;
@@ -257,7 +401,7 @@ PersistentKeepalive = 25
 &lt;p&gt;Wenn der VPN tunnel aufgebaut wird und 0.0.0.0/0 ‘Allowed’ ist, dann wird der gesamte Netzwerkverkehr über dne Tunnel gesendet.&lt;/p&gt;
 
 &lt;p&gt;In Unternehmen soll oft nur der Netzwerkverkehr der Firma über dne Tunnel gesendet werden. Dann wird einfach das entsprechende Subnetz eingetragen, zum Beispiel: 192.168.21.0/24. Der Wireguard Server muss das Subnetz natürlich kennen und bedienen können.
-Es gibt auch die Wariante mit 0.0.0.0/1. Damit wird die Default-Route im System nicht überschireben und im Falle eines Ausfal im/des VPN kann der Client weiterhin im Internet agieren.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="infrastruktur" /><category term="wireguard" /><summary type="html">Motivation</summary></entry><entry><title type="html">Flipper Zero</title><link href="http://blog.lupuse.org/experimente/2022/06/12/flipper_zero.html" rel="alternate" type="text/html" title="Flipper Zero" /><published>2022-06-12T21:14:03+00:00</published><updated>2022-06-12T21:14:03+00:00</updated><id>http://blog.lupuse.org/experimente/2022/06/12/flipper_zero</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2022/06/12/flipper_zero.html">&lt;p&gt;Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi-Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen.&lt;br /&gt;
+Es gibt auch die Wariante mit 0.0.0.0/1. Damit wird die Default-Route im System nicht überschireben und im Falle eines Ausfal im/des VPN kann der Client weiterhin im Internet agieren.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="infrastruktur" /><category term="wireguard" /><summary type="html">Motivation</summary></entry><entry><title type="html">Flipper Zero</title><link href="http://blog.lupuse.org/experimente/2022/06/12/flipper_zero.html" rel="alternate" type="text/html" title="Flipper Zero" /><published>2022-06-12T23:14:03+02:00</published><updated>2022-06-12T23:14:03+02:00</updated><id>http://blog.lupuse.org/experimente/2022/06/12/flipper_zero</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2022/06/12/flipper_zero.html">&lt;p&gt;Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi-Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen.&lt;br /&gt;
 Da das Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf &lt;a href=&quot;https://www.kickstarter.com/projects/flipper-devices/flipper-zero-tamagochi-for-hackers&quot;&gt;Kickstarter&lt;/a&gt; im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen.&lt;/p&gt;
 
 &lt;p&gt;Dem letzten Fakt ist es wohl auch zu verdanken, dass das Projekt diverse Krisen überwunden hat. Corona/Lockdown, Chipmangel und querliegende Containerschiffe (Evergreen im Suez Kanal), eine heftige Unterhaltung über Ländergrenzen (Russland/Ukraine) …  Die Entwicklung und Produktion findet zu in HongKong (Shzenen) statt. Der Gründer und viele aus dem Team kommen aus Russland, was für viele Spekulationen gesorgt hat.&lt;br /&gt;
@@ -435,7 +579,7 @@ Jedes mal, wnen ich auf den Knopf drücke und die Tür zu meinem Auto auf geht, 
 Dabei ist in der Theorie die IR Fernbedienung gar nicht viel anders als der Autoschlüssel. Nur im Aufbau deutlich einfacher und ohne Rolling Code und ohne Crypto.&lt;/p&gt;
 
 &lt;p&gt;Wenn ich meinen Auto-Pieper oder die TV Fernbedienung nicht benutze, dann kann auch niemand etwas mitschneiden. Wenn jemand etwas mitschneiden kann und es ‘einfach kopiert’ (Replay Attacke), dann ist das eingesetzte Protokoll schrott. Das kommt seltener vor als man denkt, aber da die Medien sich auf jeden Fall stürzt und nicht gegenber stellt wie viele autos sicher sind, ist die Wirkung anders.&lt;br /&gt;
-Dann gibt es natürlich noch die, welche mit einem Laptop und einem SDR alles mitschneiden, die gängigen Codes kennen und den Rest mittels Brute Force (Vorschlaghammer) durchraten … wer diesen Aufwand betreibt um meine leere Jacke aus dem Auto zu klauen, der hat sich diese aber auch verdient.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="produkte" /><summary type="html">Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi-Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen. Da das Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf Kickstarter im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen.</summary></entry><entry><title type="html">Wohnmobil - Truma Inet X Panel</title><link href="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html" rel="alternate" type="text/html" title="Wohnmobil - Truma Inet X Panel" /><published>2022-05-31T19:22:32+00:00</published><updated>2022-05-31T19:22:32+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil---truma_inet_x_panel</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html">&lt;p&gt;Mit meiner Frau habe ich mich über das neue &lt;a href=&quot;https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel&quot; target=&quot;\_blank&quot;&gt;Truma Inet X Panel&lt;/a&gt; unterhalten. Sie ist bisher morgens nach vorne zur &lt;a href=&quot;https://www.truma.com/de/de/produkte/truma-inet-system/truma-bedienteil-cp-plus&quot; target=&quot;\_blank&quot;&gt;Truma CP Plus&lt;/a&gt; gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen.&lt;br /&gt;
+Dann gibt es natürlich noch die, welche mit einem Laptop und einem SDR alles mitschneiden, die gängigen Codes kennen und den Rest mittels Brute Force (Vorschlaghammer) durchraten … wer diesen Aufwand betreibt um meine leere Jacke aus dem Auto zu klauen, der hat sich diese aber auch verdient.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="produkte" /><summary type="html">Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi-Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen. Da das Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf Kickstarter im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen.</summary></entry><entry><title type="html">Wohnmobil - Truma Inet X Panel</title><link href="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html" rel="alternate" type="text/html" title="Wohnmobil - Truma Inet X Panel" /><published>2022-05-31T21:22:32+02:00</published><updated>2022-05-31T21:22:32+02:00</updated><id>http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil---truma_inet_x_panel</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html">&lt;p&gt;Mit meiner Frau habe ich mich über das neue &lt;a href=&quot;https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel&quot; target=&quot;\_blank&quot;&gt;Truma Inet X Panel&lt;/a&gt; unterhalten. Sie ist bisher morgens nach vorne zur &lt;a href=&quot;https://www.truma.com/de/de/produkte/truma-inet-system/truma-bedienteil-cp-plus&quot; target=&quot;\_blank&quot;&gt;Truma CP Plus&lt;/a&gt; gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen.&lt;br /&gt;
 Jetzt hat mein Vater in seinem neuen &lt;a href=&quot;https://weinsberg.com/wohnmobile/edition-pepper&quot; target=&quot;\_blank&quot;&gt;Wohnmobil&lt;/a&gt; die das &lt;a href=&quot;https://www.truma.com/de/de/produkte/truma-inet-system/truma-inet-set&quot; target=&quot;\_blank&quot;&gt;CP Plus inklusive der Inet Box&lt;/a&gt;, mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit &lt;a href=&quot;https://www.truma.com/de/de/produkte/truma-inet-system/truma-app&quot; target=&quot;\_blank&quot;&gt;Android oder iOS App&lt;/a&gt; bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.&lt;/p&gt;
 
 &lt;p&gt;Meine Frau guckte mich mit grossen Augen an und fragte “…sollte ich etwa noch nicht bestellen?” …&lt;br /&gt;
@@ -501,7 +645,7 @@ Die Bedienung auf dem Handy über App ist auch träge, aber auf dem Handy gewohn
 Der Praxistest steht aus, meine Frau ist bisher begeistert.&lt;/p&gt;
 
 &lt;p&gt;Es wurde einiges an Funktionalität reduziert, da z.B: die Fernsteuerung aktuell nicht gegeben ist. Besonders gespannt bin ich auf die erste Fehlermeldung, das sollen keine cryptischen Codes mehr sein, sondenr nachvollziehbare Sätze.&lt;br /&gt;
-Leider ist die Steuerung der EisEx und DuoControl nur mit dem Pro Panel möglich, welches nur bei neuen Mobilen verbaut wird und nicht nachzurüsten ist.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><summary type="html">Mit meiner Frau habe ich mich über das neue Truma Inet X Panel unterhalten. Sie ist bisher morgens nach vorne zur Truma CP Plus gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen. Jetzt hat mein Vater in seinem neuen Wohnmobil die das CP Plus inklusive der Inet Box, mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit Android oder iOS App bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.</summary></entry><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h1 id=&quot;tldr&quot;&gt;tl;dr&lt;/h1&gt;
+Leider ist die Steuerung der EisEx und DuoControl nur mit dem Pro Panel möglich, welches nur bei neuen Mobilen verbaut wird und nicht nachzurüsten ist.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><summary type="html">Mit meiner Frau habe ich mich über das neue Truma Inet X Panel unterhalten. Sie ist bisher morgens nach vorne zur Truma CP Plus gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen. Jetzt hat mein Vater in seinem neuen Wohnmobil die das CP Plus inklusive der Inet Box, mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit Android oder iOS App bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.</summary></entry><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T18:24:00+02:00</published><updated>2022-05-15T18:24:00+02:00</updated><id>http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">&lt;h1 id=&quot;tldr&quot;&gt;tl;dr&lt;/h1&gt;
 
 &lt;p&gt;Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.&lt;/p&gt;
 &lt;ol&gt;
@@ -841,7 +985,7 @@ Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefo
 
 &lt;p&gt;Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen (ggf. mit Geschirrtuch gegen direkte Sonneneinstrahlung), für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.&lt;br /&gt;
 Im 4pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V-&amp;gt;5V/3A Spannungswandler einzubauen.&lt;br /&gt;
-Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><category term="netzwerk" /><category term="router" /><summary type="html">tl;dr</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
+Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><category term="netzwerk" /><category term="router" /><summary type="html">tl;dr</summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://blog.lupuse.org/wohnmobil/2021/10/31/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-31T01:36:59+02:00</published><updated>2021-10-31T01:36:59+02:00</updated><id>http://blog.lupuse.org/wohnmobil/2021/10/31/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2021/10/31/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html">&lt;h2 id=&quot;ausgangslage&quot;&gt;Ausgangslage&lt;/h2&gt;
 
 &lt;p&gt;Meine Frau und ich haben uns ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;4pfoten-Mobile - Dog-Liner TE740&lt;/a&gt; gekauft, unser BuffyMobil. Dieser teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Kenwood DNX451 verbunden. Unser Verkäufer, &lt;a href=&quot;www.4pfoten-mobile.de/neumuenster/&quot;&gt;Jörn Zimmermann&lt;/a&gt; vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:&lt;/p&gt;
 &lt;ul&gt;
@@ -1070,7 +1214,7 @@ Das Radio hat seine Schwächen, aber das Telefonieren per Bluetooth auf Landstra
 &lt;p&gt;Jetzt funktioniert es wieder zu 100%, wie beim Testen.&lt;/p&gt;
 
 &lt;p&gt;Es gibt alte Wago klemmen (grau mit schmaleren orangenen Hebeln) und neue (transparent mit flachen Hebeln, wie auf dem Bild).&lt;br /&gt;
-Es ist egal welche genommen werden, hauptsache original. Ich habe die neueren genommen, weil diese deutlich flacher sind.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Ausgangslage</summary></entry><entry><title type="html">Infrastruktur - LupusEnet</title><link href="http://blog.lupuse.org/infrastruktur/2021/08/31/Infrastruktur-LupusEnet.html" rel="alternate" type="text/html" title="Infrastruktur - LupusEnet" /><published>2021-08-31T20:07:13+00:00</published><updated>2021-08-31T20:07:13+00:00</updated><id>http://blog.lupuse.org/infrastruktur/2021/08/31/Infrastruktur---LupusEnet</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2021/08/31/Infrastruktur-LupusEnet.html">&lt;h1 id=&quot;was-ist-lupusenet&quot;&gt;Was ist LupusEnet?&lt;/h1&gt;
+Es ist egal welche genommen werden, hauptsache original. Ich habe die neueren genommen, weil diese deutlich flacher sind.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Ausgangslage</summary></entry><entry><title type="html">Infrastruktur - LupusEnet</title><link href="http://blog.lupuse.org/infrastruktur/2021/08/31/Infrastruktur-LupusEnet.html" rel="alternate" type="text/html" title="Infrastruktur - LupusEnet" /><published>2021-08-31T22:07:13+02:00</published><updated>2021-08-31T22:07:13+02:00</updated><id>http://blog.lupuse.org/infrastruktur/2021/08/31/Infrastruktur---LupusEnet</id><content type="html" xml:base="http://blog.lupuse.org/infrastruktur/2021/08/31/Infrastruktur-LupusEnet.html">&lt;h1 id=&quot;was-ist-lupusenet&quot;&gt;Was ist LupusEnet?&lt;/h1&gt;
 &lt;p&gt;Wie ich zuvor schrieb, nenne ich mich LupusE im internet. Dabei gehören mir die Domains LupusE.de .net .com und .org&lt;br /&gt;
 Die Domain LupusE.de wurde irgendwie die Hauptdomain für Kommunikation&lt;br /&gt;
 Die Domain LupusE.org war shcon immer eine Spielwiese&lt;br /&gt;
@@ -1091,7 +1235,7 @@ OPNsense ist eine auf einem hardened OpenBSD basierende Firewall Appliance, wlec
 
 &lt;h2 id=&quot;aktuell&quot;&gt;Aktuell&lt;/h2&gt;
 &lt;p&gt;Eine Fritz!Box 7590 werkelt nun als zentrale Anlaufstelle für das Internet und Telefonie. Per DLAN (PowerLine) ist ein im ersten Stock eine Fritz!Box 7490 angeschlossen, die beiden sprechen im Mesh miteinander.&lt;br /&gt;
-Der HP Desktop-Server hat sich die meiste Zeit gelangweilt. Dafür war der Stromverbrauch zu hoch. Als neuer Proxmox Host kommt ein Rechner im passiv gekülten Industriegeäuse zum Einsatz. Es war einfach die SSD aus dem Server auszubauen und in die Box einzusetzen. Als Speicher stehen im eigenen Gehäuse 8TB im QNAP NAS bereit.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="infrastruktur" /><category term="linux" /><category term="server" /><summary type="html">Was ist LupusEnet? Wie ich zuvor schrieb, nenne ich mich LupusE im internet. Dabei gehören mir die Domains LupusE.de .net .com und .org Die Domain LupusE.de wurde irgendwie die Hauptdomain für Kommunikation Die Domain LupusE.org war shcon immer eine Spielwiese Die Domain LupusE.net ist mein Heimnetz Die Domain LupusE.com ist irgendwie ueberflüssig</summary></entry><entry><title type="html">Garmin - Fenix 6 Pro</title><link href="http://blog.lupuse.org/produkte/2021/01/28/Garmin-Fenix-6-Pro.html" rel="alternate" type="text/html" title="Garmin - Fenix 6 Pro" /><published>2021-01-28T22:00:12+00:00</published><updated>2021-01-28T22:00:12+00:00</updated><id>http://blog.lupuse.org/produkte/2021/01/28/Garmin---Fenix-6-Pro</id><content type="html" xml:base="http://blog.lupuse.org/produkte/2021/01/28/Garmin-Fenix-6-Pro.html">&lt;h1 id=&quot;der-rückblick&quot;&gt;Der Rückblick&lt;/h1&gt;
+Der HP Desktop-Server hat sich die meiste Zeit gelangweilt. Dafür war der Stromverbrauch zu hoch. Als neuer Proxmox Host kommt ein Rechner im passiv gekülten Industriegeäuse zum Einsatz. Es war einfach die SSD aus dem Server auszubauen und in die Box einzusetzen. Als Speicher stehen im eigenen Gehäuse 8TB im QNAP NAS bereit.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="infrastruktur" /><category term="linux" /><category term="server" /><summary type="html">Was ist LupusEnet? Wie ich zuvor schrieb, nenne ich mich LupusE im internet. Dabei gehören mir die Domains LupusE.de .net .com und .org Die Domain LupusE.de wurde irgendwie die Hauptdomain für Kommunikation Die Domain LupusE.org war shcon immer eine Spielwiese Die Domain LupusE.net ist mein Heimnetz Die Domain LupusE.com ist irgendwie ueberflüssig</summary></entry><entry><title type="html">Garmin - Fenix 6 Pro</title><link href="http://blog.lupuse.org/produkte/2021/01/28/Garmin-Fenix-6-Pro.html" rel="alternate" type="text/html" title="Garmin - Fenix 6 Pro" /><published>2021-01-28T23:00:12+01:00</published><updated>2021-01-28T23:00:12+01:00</updated><id>http://blog.lupuse.org/produkte/2021/01/28/Garmin---Fenix-6-Pro</id><content type="html" xml:base="http://blog.lupuse.org/produkte/2021/01/28/Garmin-Fenix-6-Pro.html">&lt;h1 id=&quot;der-rückblick&quot;&gt;Der Rückblick&lt;/h1&gt;
 &lt;p&gt;Meine Frau hat angefangen mit einer Garmin Vivoactive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt.&lt;br /&gt;
 Danach haben wir eine Garmin Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.&lt;/p&gt;
 
@@ -1126,239 +1270,4 @@ Neben Radfahren gibt es nun auch die Aktivität ‘Mountainbining’. Die Uhr is
 
 &lt;h1 id=&quot;zukunft&quot;&gt;Zukunft&lt;/h1&gt;
 &lt;p&gt;Ich bin gerade am überlegen ob ich mir einen besseren Brustgurt oder nur den ‘Foot Pod’ kaufen sollte. Da ich aktuell ein Lauftrainingsplan verfolge (10KM Laufband in 53 Minuten), interessieren mich auch weitere Daten, wie genauere Schrittlänge oder Zeit in der Luft, um mein Training zu optimieren. Wobei ich mich nach diesem Training wieder mehr auf das Radfahren konzentrieren werde.&lt;br /&gt;
-Der Vorteil an einem Foot Pod ist, das man nur Einen braucht, den können meine Frau und ich uns teilen. Ein durchgeschwitzter Brustgurt ist eher ekelig.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="produkte" /><category term="garmin" /><summary type="html">Der Rückblick Meine Frau hat angefangen mit einer Garmin Vivoactive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt. Danach haben wir eine Garmin Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.</summary></entry><entry><title type="html">Wohnmobil - Dritter Akt</title><link href="http://blog.lupuse.org/wohnmobil/2020/10/24/Wohnmobil-Dritter-Akt.html" rel="alternate" type="text/html" title="Wohnmobil - Dritter Akt" /><published>2020-10-24T22:03:45+00:00</published><updated>2020-10-24T22:03:45+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2020/10/24/Wohnmobil---Dritter-Akt</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2020/10/24/Wohnmobil-Dritter-Akt.html">&lt;h1 id=&quot;was-gab-es-bisher&quot;&gt;Was gab es bisher?&lt;/h1&gt;
-&lt;p&gt;Wir haben angefangen mit unserem HasenMobil. Ein &lt;strong&gt;Knaus Sport Traveller&lt;/strong&gt;, mit Alkoven und sehr viel Platz auf 5,99m. Es sind 6 Fahrsitze eingetragen, durch den Umbau der Sitzecke gab es offiziell 4 Schlafplätze, auf den 2x80x190 im Alkoven war das Schlafen mit drei Personen auch problemlos möglich.&lt;br /&gt;
-Nach 4 Jahren haben wir uns für das &lt;a href=&quot;/wohnmobil/2019/06/12/Wohnmobil-Zweiter-Akt.html&quot;&gt;FlashMobil&lt;/a&gt; entschieden, einen tizianroten &lt;strong&gt;Sunlight Cliff 601 SoMo&lt;/strong&gt; Kastenwagen. Mit Doppelstockbetten gab es Platz für 4 Erwachsene zum Fahren und Schlafen. Unterhalb der Betten war Platz als geräumige Hundekiste oder Garage für 2 Stühle, Tisch und Grill. Es war durch die kompakte Bauform viel sparsamer und auch Stadttauglich. Wenn wir in München standen ist es aufgrund der sportlichen Farbgebung kaum aufgefallen. Die große Seitentür und die beiden Hacktüren waren großartig und nervig zugleich. Im Sommer super Belüftung, bei Regen immer alles innen und außen nass. 1,5 Jahre haben wir es ausprobiert.&lt;/p&gt;
-
-&lt;h1 id=&quot;was-gibt-es-neues&quot;&gt;Was gibt es neues?&lt;/h1&gt;
-&lt;p&gt;Ein &lt;a href=&quot;https://www.4pfoten-mobile.de/&quot;&gt;&lt;strong&gt;4pfoten-Mobile&lt;/strong&gt;&lt;/a&gt; Dog-Linter TE740. Das ist ein spezieller Umbau für Hundebesitzer auf Basis eines Dethleffs Trend T7407 EB 2019.&lt;/p&gt;
-
-&lt;p&gt;Wir waren 2016 auf unserer ersten Wohnmobilmesse, dem &lt;a href=&quot;https://www.caravan-salon.de&quot;&gt;Caravan Salon Düsseldorf&lt;/a&gt;. Zwar hatten wir bereits unser HasenMobil, aber man darf sich umsehen. Hier lernten wir das 4pfoten-Mobile kennen. Auf über 7 Meter purer Luxus. Klimaanlage, Platz für 2-3 mittelgroße Hunde, riesige Betten, helle Möbel. Aber viel zu groß, wir sind doch eher Städtereisende. Immer wieder haben wir darüber gesprochen, aber festgestellt dass es zu groß ist.&lt;br /&gt;
-Unsere Buffy hat auf dem Messestand den kompletten 1,4l Anti-Schlabber-Napf in der Hundekiste leer getrunken. Ihr hat der Umbau auf anhieb gefallen.&lt;/p&gt;
-
-&lt;h2 id=&quot;was-war-nun-anders&quot;&gt;Was war nun anders?&lt;/h2&gt;
-&lt;p&gt;Im Sommerurlaub 2020 standen wir mit unserem &lt;a href=&quot;/wohnmobil/2019/06/12/Wohnmobil-Zweiter-Akt.html&quot;&gt;FlashMobil&lt;/a&gt; in Zaue am See (Irgendwo ganz tief in Ostdeutschland), hatten ein Glas (oder eine Flasche?) Wein getrunken und haben das Leben genossen. Leider stellten wir in diesem Urlaub fest, dass unsere Klimaanlage im Fahrerhaus kaputt war, eine Aufbau-Klimaanlage gab es nicht … Bei 34° im Schatten war es ein sehr heißer Urlaub. Auf dem Platz waren zum Glück viele Bäume, welche Schatten und herunterfallende Zapfen spendeten.&lt;/p&gt;
-
-&lt;p&gt;An diesem besagten Tag haben wir die Handys raus geholt, verschiedene Klimaanlagen für unseren Kastenwagen angesehen und Preise verglichen. Die Fahrerhausklima war ein Garantiefall, aber ein vernünftiger Schlaf ist damit noch nicht gewährleistet. Wir haben uns auch wieder über das 4pfoten-Mobile unterhalten.&lt;br /&gt;
-Ich habe auf der Webseite den Kontakt herausgesucht und eine kurze Email verfasst. Meine Frau ist zu den Duschen gegangen. Keine 30 Minuten nach meiner Kontaktanfrage bekam ich einen Rückruf. Ein sehr netter Kontakt, aber wir haben festgestellt, dass ‘in der Nähe von Essen’ etwas weit weg ist, er wollte meinen Kontakt lieber an Jörn Zimmermann, dem 4pfoten-Mobile Standort in Neumünster weiterleiten.&lt;br /&gt;
-Nach wiedereinmal sehr kurzer Zeit und einem weiteren sehr netten Kontakt wollten wir uns das aktuelle Mobil ansehen. Wir hatten in der folgenden Woche noch Kiel auf der Liste, auf dem Rückweg nachhause kommen wir an Neumünster vorbei. Es waren immer noch 32°C im Schatten, optimales Wetter um mit 3 Erwachsenen ein Wohnmobil anzusehen. Herr Zimmermann hat alles aufgebaut:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Die 4,5m x 2,5m Markise ausgefahren&lt;/li&gt;
-  &lt;li&gt;Die Hunderampe herausgeholt&lt;/li&gt;
-  &lt;li&gt;Die Fahrersitze zur Sitzgruppe gedreht&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Viel mehr gibt es eigentlich nicht. Der riesige Külschrank, der Backofen, das riesige Bett und die gemütliche Sitzecke sind einfach da. Ich denke unsere 5,5 Jahre Campingerfahrung haben geholfen trotz der Hitze sinnvolle Eindrücke zu gewinnen. Kurz vor der Verabschiedung sprach meine Frau bereits von ‘unserem Wohnmobil’. Die 4pfoten-Mobile werden eigentlich von Freitag bis Freitag vermietet. Herr Zimmermann meinte aber, da wir ein ernsthaftes Kaufinteresse haben lässt sich bestimmt auch eine andere Lösung finden… Das war es für das Erste.&lt;br /&gt;
-Noch in der Woche habe ich Herrn Zimmermann kontaktiert, ob wir es uns 3 Tage ausleihen können. Das war kein Problem, zu einem super Sonderpreis. Wir hatten keinen Urlaub, konnten dennoch 2 Übernachtungen lang alles ausprobieren. Der Hammer!&lt;br /&gt;
-Es vergingen noch ein paar Tage und wir haben uns entschieden das FlashMobil zu verkaufen und umzusteigen.&lt;/p&gt;
-
-&lt;p&gt;Ein 15 Monate alter Kastenwaren mit Rahmenfenster und viel Sonderausstattung zu verkaufen kann ja nicht so schwer sein. Dachten wir. Aber in der Realität sind wir keine Privatverkäufer. Also haben wir es mit etwas Minus an das Freizeit-Center-Albrecht zurück verkauft. Das lief alles nicht ganz so glatt, aber wir standen unter Zeitdruck, daher wollen wir uns nicht beschweren.&lt;br /&gt;
-Während der ganzen Zeit hat Herr Zimmermann uns super unterstützt. Er stand uns immer mit Rat und Tat zur Seite.&lt;/p&gt;
-
-&lt;p&gt;Jetzt hatten wir schon wieder eine sportliche Idee: Wir könnten mit dem neuen Wohnmobil nach Dänemark. Das Haus war gebucht, kam noch aus den Anfängen der Corona-Zeit. Das klappte hinten uns vorne nicht: Verkaufen, Abmelden, neu Anmelden und Finanzierung über unsere Hausbank. Aber auch hier war Herr Zimmermann wieder die Rettung. Wir haben das Mobil ganz einfach für eine Woche gemietet, so war es versichert. Nach dem Urlaub haben wir es zurück gebracht, und Herr Zimmermann hat es innerhalb von 3 Tagen abgemeldet, ausgeräumt und ie Aufkleber abgemacht. Wir haben das Geld überwiesen, das Wohnmobil abgeholt und hatten einen super Urlaubsabschluss.&lt;/p&gt;
-
-&lt;h1 id=&quot;technische-daten&quot;&gt;Technische Daten&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fiat Ducato 2,3 140
-    &lt;ul&gt;
-      &lt;li&gt;140PS/103kW, 2,3l Diesel (10PS mehr sind auch ca. 100e/Jahr mehr Steuern!)&lt;/li&gt;
-      &lt;li&gt;75l Tankinhalt (bisher hatten wir 95l, das merkt man) plus AdBlue&lt;/li&gt;
-      &lt;li&gt;Abmessung: Länge 7,40m x Breite 2,33m x Höhe 3,10m (plus Fahrradträger und Klimaanlage)&lt;/li&gt;
-      &lt;li&gt;90l Abwassertank (reicht für bis zu 2 Wochen mit 3 Personen)&lt;/li&gt;
-      &lt;li&gt;125l Frischwassertank (man nimmt immer zu viel Wasser mit)&lt;/li&gt;
-      &lt;li&gt;3,5 Tonnen. Also keine Geschwindigkeitsbeschränkung und Führerschein Klasse B&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Markise
-    &lt;ul&gt;
-      &lt;li&gt;4,5m x 2,50m Thule Omnistor 5200 (Anbauhöhe ca. 2,55m-2,65m)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Fahrradträger
-    &lt;ul&gt;
-      &lt;li&gt;Thule. 3 Schienen bis 60KG&lt;/li&gt;
-      &lt;li&gt;Kein Problem auch mit eBike. Achslast beachten!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Spurverbreiterung hinten (macht das Fahren bei Wind/in Kurven deutlich angenehmer)&lt;/li&gt;
-  &lt;li&gt;Gas-Aussensteckdose mit 30mbar Druck&lt;/li&gt;
-  &lt;li&gt;Navi/Multimediacenter - Kenwood DNX451RVS
-    &lt;ul&gt;
-      &lt;li&gt;Garmin LKW/Camper Navigation&lt;/li&gt;
-      &lt;li&gt;Rückfahrkamera mit Leitlinien&lt;/li&gt;
-      &lt;li&gt;‘Front’kamera in die Hundebox&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Tempomat&lt;/li&gt;
-  &lt;li&gt;Lenkradfernbedienung&lt;/li&gt;
-  &lt;li&gt;2 Einzellängsbetten. Mit echtem Lattenrost unter 14cm Schaumstoff.
-    &lt;ul&gt;
-      &lt;li&gt;Brückenposlster für eine große ‘Liegewiese’&lt;/li&gt;
-      &lt;li&gt;Auf der Landschaft können wir zu zweit längs, quer oder diagonal schlafen!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Die Tür zum WC lässt sich komplett öffnen, als Raumtrenner Schlafbereich/Wohnbereich&lt;/li&gt;
-  &lt;li&gt;Geräumige Dusche, gegenüber vom WC (nicht kombiniert)
-    &lt;ul&gt;
-      &lt;li&gt;Bei nicht Gebrauch ist &amp;gt;50% der Dusche Wohnraum im Schlafbereich&lt;/li&gt;
-      &lt;li&gt;Kleiderstange im Duschraum. Sehr praktisch nach dem Hundespaziergang im Regen.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;3-flammiger Gasherd
-    &lt;ul&gt;
-      &lt;li&gt;grosse Küchenarbeitsfläche&lt;/li&gt;
-      &lt;li&gt;Mülleimer in der abschliessbaren Küchenschranktür (der Hund kann den Mülleimer nicht plündern)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Thetford N4142A(?) Absorber Kühlschrank
-    &lt;ul&gt;
-      &lt;li&gt;Automatische Quellenwahl (Gas/230V Landstrom/12V Fahrzeugstrom)&lt;/li&gt;
-      &lt;li&gt;Volumen: 140l inkl. 15l Gefrierfach&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Thetford 420 Backofen&lt;/li&gt;
-  &lt;li&gt;Truma Combi6 mit CP Plus Bedienfeld
-    &lt;ul&gt;
-      &lt;li&gt;Truma DuoControl CS (Gasheizung während der Fahrt)&lt;/li&gt;
-      &lt;li&gt;Truma DuoC Fernbedienungseinheit (Grober Gasstand und EisEx für sehr kalte Tage)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Truma Aventa Comfort Klimaanlage
-    &lt;ul&gt;
-      &lt;li&gt;Mit 5stufig dimmbarer ambient Beleuchtung&lt;/li&gt;
-      &lt;li&gt;IR-Fernbedienung&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Alden 100Wh Solarmodul
-    &lt;ul&gt;
-      &lt;li&gt;mit Alden SPS 300 Solarregler&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Alden 22” TFT
-    &lt;ul&gt;
-      &lt;li&gt;Vollautomatische SAT Antenne (Orbiter 65 HD?) und Alden S.S.C. HD-Steuermodul&lt;/li&gt;
-      &lt;li&gt;Eingänge: HDMI, VGA, CI, DVD&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Thule Fahrradträger für 4 Fahrräder
-    &lt;ul&gt;
-      &lt;li&gt;Max. 60kg Gesamtzuladung&lt;/li&gt;
-      &lt;li&gt;E-Bike tauglich&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Extra Kiste für den Hund
-    &lt;ul&gt;
-      &lt;li&gt;Unter den Betten, etwa die Hälfte der Garage&lt;/li&gt;
-      &lt;li&gt;Zugang vom Wohnraum oder der Außentür, letztere mit Rampe und Fenster&lt;/li&gt;
-      &lt;li&gt;mit einem leicht zu reinigenden, weichen Kissen&lt;/li&gt;
-      &lt;li&gt;Hundedusche vor dem Außeneingang mit Warmwasser&lt;/li&gt;
-      &lt;li&gt;Anti-Schlabber-Napf mit 1,4l&lt;/li&gt;
-      &lt;li&gt;Eine Kamera auf den Hund, bei Bedarf während der Fahrt&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Wenn man ein 4Pfoten-Mobile mietet, gibt es ein umfangreiches Paket dazu.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Leichter aber großer Campingtisch mit gummierter Kante&lt;/li&gt;
-  &lt;li&gt;4 Klappstühle&lt;/li&gt;
-  &lt;li&gt;Gaskocher/-grill für den Außengasanschluss&lt;/li&gt;
-  &lt;li&gt;2 volle 11kg Gasflaschen&lt;/li&gt;
-  &lt;li&gt;Komplettes 4 Personen Besteck und Geschirr (Brunner Space)&lt;/li&gt;
-  &lt;li&gt;Dosenöffner, Schere, Gemüsemesser, Brotmesser, …&lt;/li&gt;
-  &lt;li&gt;Salatschüssel&lt;/li&gt;
-  &lt;li&gt;4 Töpfe von Balarini mit klappbaren Griffen inkl. Glasdeckel&lt;/li&gt;
-  &lt;li&gt;Hundeleinen aus Biothane. Mit grossem Karbiner, eine mit Ruckdämpfer
-    &lt;ul&gt;
-      &lt;li&gt;Haken zum befestigen der Leine im Boden, wenn die Sicherung weiter weg vom Wohnmobil sein soll&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Alle benötigten Stromadapter und eine Kabeltrommel (CEE-Schuko, Verlängerung, Schuko-CEE)&lt;/li&gt;
-  &lt;li&gt;Fiamma Level Up Kit - Auffahrkeile 3 Stufen mit praktischer Tasche
-    &lt;ul&gt;
-      &lt;li&gt;Mit Stopper-Keilen (Chock Level)&lt;/li&gt;
-      &lt;li&gt;Mit Anfahrhilfe/Versinkschutz (Level Plate)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rot/Weißes Warnschild für die Fahrräder im Ausland&lt;/li&gt;
-  &lt;li&gt;ADAC Campingplatzführer (man greift aber vermutlich eher auf eine App zurück)&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;… und ich habe vermutlich noch ganz viel vergessen.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Wenn man als Erstlingscamper ohne Erfahrung nur eine Reisetasche mit genügend Unterhosen, ein paar wetter-geeignete Wechselklamotten und die Lieblingsdecke des Hundes einpackt, hat man im 4pfoten-Mobile über die geasammte Fahrzeit ein rundum sorglos Paket!&lt;br /&gt;
-Leider haben wir etwa 60-70% der Ausstattung schon, ansonsten hätten wir uns für 500 Euro das Starter-Set dazu gegönnt.&lt;/p&gt;
-
-&lt;p&gt;Über die ausführliche Einweisung an allen Mietstationen kann man viel im Internet und im Gästebuch lesen. Diese haben wir nicht in Anspruch genommen, wir wollten sofort los :) Aber im Gespräch merkt man, dass Herr Zimmermann auch selbst mit seinen Autos unterwegs ist. Er kennt die Stärken und Schwächen der Fahrzeuge und versucht letzteres auch nicht schönzureden.&lt;br /&gt;
-Die Aussenreinigung eines Wohnnmobils kann ohne Equipment (hohe Leiter mit gepolsterter Auflage, Schrubber mit GFK geeigneten Borsten, …) sehr schwierig werden, diese übernimmt bei Miete die 4pfoten-Mobile-Station. Über die einfache Innenreinigung freuen wir uns jedes Mal. Keine komplizierten Ecken, pflegeleichte Polster (unsere Buffy liebt es auf dem Fahrersitz zu schlafen), einfach zu reinigende Oberflächen.&lt;/p&gt;
-
-&lt;h1 id=&quot;nachtrag&quot;&gt;Nachtrag:&lt;/h1&gt;
-&lt;p&gt;Wer gelegentlich neue Autos gefahren hat, weis das es nicht immer ein Spaß ist. ‘Neuwagenprobleme’ können ziemlich nerven, auch wenn das meiste über Garantie geregelt wird. Hier kommt es in erster Linie darauf an, wie der Partner mit der Situation umgeht. Auch hier hat sich Herr Zimmermann als super Ansprechpartner erwiesen.&lt;br /&gt;
-Es klapperte bei der Fahrt, im sonst sehr Ruhigen Auto, enorm. Bei der Suche der Ursache ist mir aufgefallen, dass die Glasscheibe des Backofen nur lose in der Tür hängt. Das sah mir mehr nach einem Designfehler als nach einem Defekt aus. Also hätte ich einfach den Rahmen genommen und etwas nach innen gebogen, so dass die Scheibe leicht auf Spannung sitzt. Aber während der Garantie nehme ich solche Eingriffe nicht voreilig vor. Herr Zimmermann hat unser Mobil noch vor dem Verkauf einmal über den TÜV gebracht (bei Mietfahrzeugen jährlich) und eine Gasprüfung vornehmen lassen. Dabei den besagten Mangel erwähnt und ich bekam ein deutlich leiseres Wohnmobil wieder. Auch der Tisch wackelte unnatürlich, das haben sie in der Werkstatt zwar gut repariert, dennoch wurde ein Garantieauftrag an Dethleffs eingereicht und die haben den kompletten Tausch genehmigt.&lt;br /&gt;
-Jetzt hatte ich das Wohnmobil schon gekauft und mir ist aufgefallen, das die Truma DuoC Einheit im Wohnraum nichts anzeigt. Nach Rücksprache mit der Firma ‘Wohnmobil-Zentrum-Bongard’, welche schon die ersten Ausbesserungen durchgeführt haben, wollten sie sich das beim Tausch des Tischfuß auch ansehen.&lt;br /&gt;
-Ich habe am 7.11. Telefonisch mit Frau Müller-Claasen gesprochen. Die Garantiereparatur muss dieses Jahr noch durchgeführt werden, aber vor dem 16.11. ist keine Zeit. Die Werkstatt ist 30 KM von mir zuhause entfernt, also sind wir so verblieben, das meine Frau und ich am 15.11. unser Buffy-Mobil dort abstellen, die schauen wann sie zu der Reparatur kommen und wir bekommen telefonisch Bescheid, wann wir es wieder abholen können.&lt;br /&gt;
-Die Abgabe gestaltete sich unkompliziert. Fahrzeug abstellen, Schlüssel und Fahrzeugschein in eine Werkstatttüte, diese mit den wichtigsten Daten beschriften und ab in den Briefkasten. Der klingt sehr tief und hängt an einer Metalltür. Ich hatte ein sehr gutes Gefühl, das es dort sicher steht.&lt;br /&gt;
-Am 16.11. vormittags bekam ich den Anruf, das Wohnmobil ist fertig. Also am Abend mit meiner Frau wieder hin und abholen. Als erstes habe ich auf die Truma DuoC gedrückt: Wie ein Weihnachtsbaum. Alles perfekt.&lt;/p&gt;
-
-&lt;p&gt;Schnell, unkompliziert, sehr zuverlässig! Warum habe ich von &lt;a href=&quot;http://w-z-b.de/cms/wb/&quot;&gt;Wohnmobil-Zentrum-Bongard&lt;/a&gt; nicht schon die letzten 5,5 Jahre gewusst und bin immer nach Winsen gefahren?&lt;/p&gt;
-
-&lt;p&gt;Disclaimer: Ich werde weder von 4pfoten-Mobile Neumünster, noch vom Wohnmobil-Zentrum-Bongard bezahlt. Ich beschreibe hier nur meine positiven Erfahrungen und Eindrücke.&lt;/p&gt;
-
-&lt;p&gt;PS: Ich bin totaler Fan von Rettungskarten. Ich bin bisher 100% Unfallfrei gefahren. Dennoch kann es jederzeit vorkommen, das man in einen Unfall verwickelt wird. Die Rettungskarte wird unter der Sonnenblende des Fahrers gelegt, dort schauen die Rettungskräfte zuerst nach. In deer Rettungskarte ist je nach Typ vermerkt, wo die Elektroanlagen, Airbags, Steuergeräte und Gasflaschen sind. Manchmal auch wo am besten geschnitten werden kann.&lt;br /&gt;
-Dethleffs bietet solche Rettungkarten an, man sucht also das passendste Dehtleffs aus und kann die Karte hier herunterladen: &lt;a href=&quot;https://www.dethleffs.de/infos/rettungskarten/rettungskarten/modelljahr-2020/&quot;&gt;https://www.dethleffs.de/infos/rettungskarten/rettungskarten/modelljahr-2020/&lt;/a&gt;. 
-Der DogLiner TE740 ist baugleich dem &lt;a href=&quot;https://www.dethleffs.de/fileadmin/user_upload/dethleffs/master_de/content/Rettungskarten/2020/Trend_T_7057_EB.pdf&quot;&gt;Trend T 7057 EB&lt;/a&gt;, auch wenn die Gurtanschnaller innen sind. Der Dethleffs Support hat mir auf die Anfrage ob es eine korrigierte Version gibt nicht geantwortet.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html">Was gab es bisher? Wir haben angefangen mit unserem HasenMobil. Ein Knaus Sport Traveller, mit Alkoven und sehr viel Platz auf 5,99m. Es sind 6 Fahrsitze eingetragen, durch den Umbau der Sitzecke gab es offiziell 4 Schlafplätze, auf den 2x80x190 im Alkoven war das Schlafen mit drei Personen auch problemlos möglich. Nach 4 Jahren haben wir uns für das FlashMobil entschieden, einen tizianroten Sunlight Cliff 601 SoMo Kastenwagen. Mit Doppelstockbetten gab es Platz für 4 Erwachsene zum Fahren und Schlafen. Unterhalb der Betten war Platz als geräumige Hundekiste oder Garage für 2 Stühle, Tisch und Grill. Es war durch die kompakte Bauform viel sparsamer und auch Stadttauglich. Wenn wir in München standen ist es aufgrund der sportlichen Farbgebung kaum aufgefallen. Die große Seitentür und die beiden Hacktüren waren großartig und nervig zugleich. Im Sommer super Belüftung, bei Regen immer alles innen und außen nass. 1,5 Jahre haben wir es ausprobiert.</summary></entry><entry><title type="html">Bluetooth Headset - Jabra und Sony</title><link href="http://blog.lupuse.org/produkte/2019/07/30/BT-headsets-Jabra-und-Sony.html" rel="alternate" type="text/html" title="Bluetooth Headset - Jabra und Sony" /><published>2019-07-30T08:00:00+00:00</published><updated>2019-07-30T08:00:00+00:00</updated><id>http://blog.lupuse.org/produkte/2019/07/30/BT-headsets--Jabra-und-Sony</id><content type="html" xml:base="http://blog.lupuse.org/produkte/2019/07/30/BT-headsets-Jabra-und-Sony.html">&lt;h1 id=&quot;vorgeschichte&quot;&gt;Vorgeschichte&lt;/h1&gt;
-&lt;p&gt;Mein erstes Bluetooth Headset war ein &lt;a href=&quot;https://www.amazon.de/Jabra-100-96000000-60-BT800-Bluetooth-Headset-Blau/dp/B0007LOZHG&quot;&gt;Jabra BT800&lt;/a&gt; um die Jahrtausendwende. Mono, schwer (25 Gramm), Software aktualisierbar und mit Display zur Rufnummernanzeige plus bereits 6 Stunden Gesprächszeit. Das habe ich bereits beim Radfahren genutzt und war begeistert über die Gesprächsqualität, selbst bei Gegenwind.&lt;br /&gt;
-Dann ging die Reise über ein &lt;a href=&quot;https://mobile-review.com/print.php?filename=/review/sonyericcson-hbh200-en.shtml&quot;&gt;Sony Ericsson HBH-200&lt;/a&gt; Clip mit 2,5mm Klinke über ein Apple Kabelheadset und einige zu den Telefon beigelegten.&lt;/p&gt;
-
-&lt;h1 id=&quot;jabra-halo-smart&quot;&gt;Jabra Halo Smart&lt;/h1&gt;
-&lt;p&gt;Richtig zufrieden war ich dann erst wieder mit dem &lt;a href=&quot;https://www.amazon.de/Jabra-kabelloser-Ear-Kopfhörer-telefonieren-Smartphone-Rot/dp/B01FDI62DC/&quot;&gt;Jabra Halo Smart&lt;/a&gt; ein Headset mit einem Nackenbügel, der einen großen Akku beinhaltet. Links waren die Bedienelemente für die Steuerung von und rechts ein extra Button um den Sprachassistenten des Telefon aufzurufen.&lt;br /&gt;
-Es ist zum Telefonieren das Hands Free Protokoll verfügbar, für die Medienwiedergabe A2DP (Stereo Übertragung) und die Fernsteuerung per AVRCP. Morgens konnte ich per Sprachbefehl mit druck auf die rechte Taste ‘Google Play’ starten und per Knöpfe links lauter/leiser oder mit lange drücken Track vor/zurück. Zwischen den plus/minus Tasten war der Knopf zum Ein-/Ausschalten (lange drücken), Pause (kurz drücken) und Wahlwiederholung (zweimal drücken).&lt;br /&gt;
-Das Headset funktioniert generell auch ohne App an jedem Bluetooth fähigem Gerät, die Jabra App hat aber zusätzlich den Akkustand des Headset angezeigt und eingehende WhatsApp vorgelesen. Schnell hat man sich daran gewöhnt, dass als Einleitung “Überprüfe auf neue Nachrichten” gesagt wurde. In der Zeit konnte man entweder den Hörer richtig positionieren oder auch lauter stellen, wenn die Ansage zu leise ist.&lt;br /&gt;
-Das Laden funktionierte gut, der MicroUSB Stecker ist fest im Port. Wenn man allerdings einen zu breiten Stecker genommen hat, passte er nicht in die versenkte Öffnung. Das Bose Ladekabel konnte ich nicht benutzen. Wenn der Akku voll geladen ist kam ich locker über die Woche, teilweise bis zu zwei Wochen. Akustisch hat er erst bei einem Batteriestand unter 20% mit ‘Battery low’ auf sich aufmerksam gemacht.&lt;br /&gt;
-Das Vibrieren des Headset beim Ein-/Ausschalten oder eingehendem Anruf vermisse ich aktuell sehr. Zwar übernimmt das auch meine vivoactive 3 am Handgelenk, aber die signalisiert so viel, dass ich erst spät auf Anrufe reagiere.&lt;/p&gt;
-
-&lt;h2 id=&quot;probleme-und-defekt&quot;&gt;Probleme und Defekt&lt;/h2&gt;
-&lt;p&gt;Das erste Gerät setzte immer wieder aus. Damit meine ich nicht die obligatorischen Verbindungsabbrüche über Bluetooth, wenn das Handy in der Hosentasche ist. Je nachdem wie der Winkel des Nackenbügel war, hatte ich eine Übertragung oder nicht. Da die Kabel zu den Hörern gleichzeitig auch Bluetooth-Antenne sind, kam es auch zu kompletten Verbindungsabbrüchen.&lt;br /&gt;
-Das passierte noch innerhalb der Garantie, also zu Amazon eingeschickt, einen Ersatz bekommen. An dem Austauschgerät wurde herumgelötet und es hing Ohrenschmalz vom Vorbesitzer dran. Sehr sehr ekelig. Also nochmal getauscht, dieses Mal gab es Neuware. Nach ca 9 Monaten das gleiche. Ich höre nur auf der linken Seite, selten habe ich beide Stöpsel drin, daher weis ich nicht wann die rechte Seite ausgefallen ist … Ein weiterer Tausch kam für mich nicht in Frage. Seit die Jabra App deinstalliert ist hält mein Mobiltelefon Akku 3-6h länger.&lt;/p&gt;
-
-&lt;h1 id=&quot;sony-wi-c200b&quot;&gt;Sony WI-C200B&lt;/h1&gt;
-&lt;p&gt;Laut Amazon Kundenfragen sind die Geräte &lt;a href=&quot;https://www.amazon.de/Sony-Akkulaufzeit-magnetische-integrierte-Headset-Funktion-Schwarz/dp/B07QYWD718/&quot;&gt;Sony WI-C200B&lt;/a&gt; und &lt;a href=&quot;https://www.amazon.de/Sony-Akkulaufzeit-magnetische-integrierte-Headset-Funktion-Schwarz/dp/B07R37BSZ6/&quot;&gt;Sony WI-C310&lt;/a&gt; baugleich und unterscheiden sich nur im Farbtyp (matt gegen glänzend). Ich habe mich für das günstiger Modell entschieden und finde mattiert schöner.&lt;/p&gt;
-
-&lt;p&gt;Ich vermisse das Vibrieren. Ansonsten ist der Kopfhörer in jedem Punkt überlegen.&lt;br /&gt;
-Der Klang ist super. Ob es elektronische Musik ist, Rock, Metal, Pop, NuAge. Alles bringt der Kopfhörer sauber und mit genügend Bass und klaren Höhen an das Trommelfell. Wobei ich die Lieder in meiner Playlist natürlich alle schon kenne. Der Kopfhörer ist natürlich kein Ersatz für ein HiFi Kopfhörer an der Heimanlage oder Gaming-Kopfhörer für den PC zuhause. Aber für unterwegs bietet er die perfekte Balance zwischen geringem Gewicht/geringer Größe und viel Leistung.&lt;br /&gt;
-Ob der Akku wirklich 15 Stunden durchhält habe ich nicht nachgemessen. Ich höre auf dem Weg zur Arbeit morgens etwa 20 Minuten, in der Mittagspause etwa 55 Minuten und auf dem Weg nachhause etwa 20 Minuten. Ich komme locker eine Woche mit einer Ladung durch. Geladen wird über USB-C. Ich benötige in meiner Ausstattung also wieder ein extra Ladekabel. Bis USB-D kommt mache ich mir aber keine Sorgen, denn das nächste Mobiltelefon wird sicher auch USB-C haben.&lt;br /&gt;
-An dem rechten Hörer hängt vermutlich der Akku, es ist eine schwarze Box. An der Linke Seite finden wir den Ladeport und auch die Bedienelemente. Die drei Knöpfe sind für lauter/leiser und an/aus. Lange auf den mittleren Knopf drücken schaltet das Headset ein, es meldet sich mit der Information dass es an ist, gibt den Akkustatus (voll, 70%, 50%,…) durch und teilt mit dass Bluetooth verbunden ist. einmal auf den mittleren Knopf gedrückt startet ‘Google Play’. Ob das Voreinstellung oder Zufall ist weis ich noch nicht. Wenn ich lauter/leiser länger drücke, während Musik wiedergegeben wird, springt er einen Titel vor oder zurück. Zweimal auf den mittleren Knopf pausiert die aktuelle Wiedergabe und ich kann einen Sprachbefehl an den Google Assistant geben. Wenn der Befehl ausgeführt/beantwortet ist, wird die Wiedergabe fortgesetzt.&lt;br /&gt;
-Mir gefällt sehr gut, dass man während der Sprachbefehle und auch während des Telefonierens sich selbst über das Mikrofon hört. Zuvor hatte ich immer das Gefühl zu leise zu sprechen, weil ein Ohr verstopft war und mein Umfeld fragte warum ich am Telefon immer so schreie. Anfangs war es etwas störend, beim Radfahren wegen der Windgeräusche, aber mittlerweile weis ich dieses Feature zu schätzen.&lt;/p&gt;
-
-&lt;h2 id=&quot;tests-bisher&quot;&gt;Tests bisher&lt;/h2&gt;
-&lt;p&gt;Verbunden habe ich den Kopfhörer mit:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Mobiltelefon (Sony Xperia X)
-    &lt;ul&gt;
-      &lt;li&gt;Google Play, WhatsApp (Diktieren), Youtube&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Laptop (Lenovo T470s)
-    &lt;ul&gt;
-      &lt;li&gt;Skype, Youtube, Steam, Audacious)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Smartwatch (Garmin Vivoactive 3)
-    &lt;ul&gt;
-      &lt;li&gt;Musik, Hörbuch&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Festnetz Telefon (Siemens Gigaset DX600 ISDN)
-    &lt;ul&gt;
-      &lt;li&gt;Telefonieren&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;fazit&quot;&gt;Fazit&lt;/h1&gt;
-&lt;p&gt;Wie bei allen Themen, so gibt es auch beim Headset nicht ‘das Perfekte’. Sowohl das BT800, als auch das Halo Smart und das WI-C200B sind super Geräte. Jedes mit seinen individuellen Vor- und Nachteilen.&lt;br /&gt;
-Bei einem Kabel Headset stören mich am meisten die letzten 10cm zum Telefon hin. Da ich tagsüber meistens Hemden trage, die in die Hose gehören, habe ich hier noch keine optimale Lösung gefunden.&lt;br /&gt;
-Bei Bluetooth Headsets ist es das Tragen des Mobiltelefon in der Hosentasche. Hier ist offenbar die Dämpfung durch die Flüssigkeit im Körper so hoch, dass es beim Drehen des Kopfes zu Fragmenten in der Medienwiedergabe kommt. Andersrum kann das Mobiltelefon im Auto liegen und ich gehe gute 10-20m weiter in die Tankstelle und bezahle ohne Verbindungsabbruch (natürlich würde ich nie an einer Tankstelle telefonieren!).&lt;br /&gt;
-Und es liegt an jedem selbst mit welchen Kompromissen er leben möchte. sicher gibt es auch ‘earBuds’ oder ‘True Wireless’, ohne Kabel zwischen den Hörern. Aber ich persönlich finde es gerade angenehm die Stöpsel aus den Ohren nehmen zu können und bei Bedarf schnell wieder einzusetzen, ohne suchen zu müssen. Dazu kommt die wesentlich längere Laufzeit durch den größeren Akku (15h vs. 3x3h).&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="produkte" /><category term="bluetooth" /><category term="headset" /><summary type="html">Vorgeschichte Mein erstes Bluetooth Headset war ein Jabra BT800 um die Jahrtausendwende. Mono, schwer (25 Gramm), Software aktualisierbar und mit Display zur Rufnummernanzeige plus bereits 6 Stunden Gesprächszeit. Das habe ich bereits beim Radfahren genutzt und war begeistert über die Gesprächsqualität, selbst bei Gegenwind. Dann ging die Reise über ein Sony Ericsson HBH-200 Clip mit 2,5mm Klinke über ein Apple Kabelheadset und einige zu den Telefon beigelegten.</summary></entry></feed>
+Der Vorteil an einem Foot Pod ist, das man nur Einen braucht, den können meine Frau und ich uns teilen. Ein durchgeschwitzter Brustgurt ist eher ekelig.&lt;/p&gt;</content><author><name>Benjamin Moeller</name></author><category term="produkte" /><category term="garmin" /><summary type="html">Der Rückblick Meine Frau hat angefangen mit einer Garmin Vivoactive. Ich war noch naiv und dachte ein Sony Tracker für Schritte und Schlaf reicht aus. Schnell wurde ich eines besseren belehrt und bin auch zur Vivoactive gewechselt. Danach haben wir eine Garmin Vivosmart 4 ausprobiert, aber waren nicht begeistert. Zum Hochzeitstag gab es eine Vivoactive 3 für meine Frau und eine Vivoactive 3 Music für mich.</summary></entry></feed>

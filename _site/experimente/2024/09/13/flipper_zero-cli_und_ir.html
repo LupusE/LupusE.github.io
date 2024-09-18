@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Flipper Zero - CLI und IR | LupusE webLife</title>
+<meta name="generator" content="Jekyll v3.9.1" />
+<meta property="og:title" content="Flipper Zero - CLI und IR" />
+<meta name="author" content="Benjamin Moeller" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Seit geraumer Zeit ist der kleine Flipper Zero nun mein treuer Begleiter. Ich habe viel gelernt über verschiedenste Wege der Datenübertragung." />
+<meta property="og:description" content="Seit geraumer Zeit ist der kleine Flipper Zero nun mein treuer Begleiter. Ich habe viel gelernt über verschiedenste Wege der Datenübertragung." />
+<link rel="canonical" href="http://blog.lupuse.org/experimente/2024/09/13/flipper_zero-cli_und_ir.html" />
+<meta property="og:url" content="http://blog.lupuse.org/experimente/2024/09/13/flipper_zero-cli_und_ir.html" />
+<meta property="og:site_name" content="LupusE webLife" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-13T01:02:32+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Flipper Zero - CLI und IR" />
+<script type="application/ld+json">
+{"description":"Seit geraumer Zeit ist der kleine Flipper Zero nun mein treuer Begleiter. Ich habe viel gelernt über verschiedenste Wege der Datenübertragung.","@type":"BlogPosting","author":{"@type":"Person","name":"Benjamin Moeller"},"headline":"Flipper Zero - CLI und IR","url":"http://blog.lupuse.org/experimente/2024/09/13/flipper_zero-cli_und_ir.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.lupuse.org/experimente/2024/09/13/flipper_zero-cli_und_ir.html"},"dateModified":"2024-09-13T01:02:32+02:00","datePublished":"2024-09-13T01:02:32+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://blog.lupuse.org/feed.xml" title="LupusE webLife" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">LupusE webLife</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">Über mich</a><a class="page-link" href="/category.html">Kategorie</a><a class="page-link" href="/cv_de.html">CV</a><a class="page-link" href="/impressum.html">Impressum</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Flipper Zero - CLI und IR</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-09-13T01:02:32+02:00" itemprop="datePublished">Sep 13, 2024
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Benjamin Moeller</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Seit geraumer Zeit ist der kleine Flipper Zero nun mein treuer Begleiter. Ich habe viel gelernt über verschiedenste Wege der Datenübertragung.</p>
+
+<p>Auch über Menschen, aber das wollte ich nie. Der Flipper ist weiterhin kein magischer Zauberstab um alle Türen und Tore zu öffnen.<br />
+Je besser ich ein Protokoll verstehe, desto ehe rhabe ich eine Chance zu verstehen wie ich eine Tür öffne, oder eben warum ich das nicht kann. Und warum ärgert es mich nicht, wenn ich mein Garagentor nicht mit einem 200 Euro Multi-Protokol-Tool öffnen kann? Dann kann es auch kein anderer, es ist in dem Bereich sicher.</p>
+
+<h2 id="infrarot-im-generellen">Infrarot im Generellen</h2>
+
+<p>Die erste Anlaufstelle um Infrarot-Signale zu bekommen ist die Flipper-IRDB. Dabei gibt es drei Hauptquellen:</p>
+<ul>
+  <li>https://github.com/UberGuidoZ/Flipper-IRDB ist ein Fork von:</li>
+  <li>https://github.com/logickworkshop/Flipper-IRDB ist ien Fork von:</li>
+  <li>https://github.com/Lucaslhm/Flipper-IRDB</li>
+</ul>
+
+<p>Man kann nicht wissen wo jemand aktuell etwas hochgeladen hat, aber die drei Quellen gleichen sich sehr zeitnah ab. Innerhalb einer Woche sollte jede Datei auf allen drei Quellen verfügbar sein. Ich persänlich lade bei der Basis Lucaslhm hoch.</p>
+
+<p>Diese Datenbank ist bereits sehr mächtig. Oft liest man aber in den Foren und im Discord ‘Ich habe die Fernbedienung für xyz verloren’. Diese Anfragen ignoriere ich in der Regel, was interessiert mich ein 10e LED streifen, kauf halt neu.<br />
+In einigen Fällen findet sich in der DB eine ähnliche Datei. Vom gleichen Hersteller oder anderes Label und ähnliche Bezeichnung. Dann kann man das Gerät ein/aus schalten, aber noch nicht die Farben wechseln. Wie im folgenden Beispiel:</p>
+
+<h2 id="infrarot-im-speziellen-dualtron">Infrarot im speziellen: Dualtron</h2>
+
+<p>Jemand fragt an, ob wer eine Fernbedienung für eine <code class="language-plaintext highlighter-rouge">dualtron ultra 2</code> hat. In der IRDB gibt es die <code class="language-plaintext highlighter-rouge">dualtron victor</code>. An/Aus geht, aber keine Farben.<br />
+Also gehe ich auf https://github.com/Lucaslhm/Flipper-IRDB und gebe bei ‘Go to file’ ein: dualtron. Ich bekomme die Datei Dualtron_Victor_Handlebar_Lights.ir als Ergebnis.<br />
+Vom User weis ich bereits, dass ‘POWER’ geht, also schaue ich mir diesen Button in der Datei an:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: POWER
+type: parsed
+protocol: NEC
+address: 00 00 00 00
+command: 07 00 00 00
+</code></pre></div></div>
+
+<p>NEC ist ein sehr einfaches Protokoll. 16 bit Adresse und Komando, bestehend aus 8 bit+8 bit logical inversed. Daher reicht in der Datei 8 bit <code class="language-plaintext highlighter-rouge">command: 07</code>.<br />
+Die Adresse ist hier mit 00 angegeben, das ist nicht ungewöhnlich bei billigen Produkten. Es wird halt als Adresse 16 bit 00000000 11111111 gesendet.</p>
+
+<p>Ich könnte mich nun darauf konzentrieren, dass 07 ein bekanntes Kommando ist und den nahen Bereich als Buttons in einer IR File anlegen.<br />
+Oder ich weis das ich nur 255 Werte im Hex Bereich habe und schreibe mir eine Schleife zum Testen der 255 Werte von 00 bis FF:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!/bin/bash
+
+for command in {0..255}
+do
+    hexcmd=$(printf "%02d" $(echo "obase=16;$command" |bc)) 
+    echo "Send \"ir tx NEC 00 $hexcmd\" to /dev/ttyACM0"
+    echo -e "ir tx NEC 00 $hexcmd" &gt;&gt; /dev/ttyACM0
+    sleep 5
+done
+</code></pre></div></div>
+
+<ol>
+  <li>Ich lasse den Zahlenbereich 00 bis 255 durchlaufen.  <code class="language-plaintext highlighter-rouge">for command in {0..255}; do ...; done</code></li>
+  <li>Zunächst konvertiere ich die Zahl in einen Hexadezimalen Wert <code class="language-plaintext highlighter-rouge">$(echo "obase=16;$command" |bc)</code>, die führende Null nicht vergessen! <code class="language-plaintext highlighter-rouge">$(printf "%02d" ...)</code></li>
+  <li>Dann gebe ich mir auf dem Bildschim aus was ich gerade mache. <code class="language-plaintext highlighter-rouge">echo "Send \"ir tx NEC 00 $hexcmd\" to /dev/ttyACM0"</code></li>
+  <li>Zu guter Letzt wird der Befehl an den Flipper gesendet. <code class="language-plaintext highlighter-rouge">echo -e "ir tx NEC 00 $hexcmd" &gt;&gt; /dev/ttyACM0</code></li>
+  <li>Ja, das Sleep ist notwendig, damit ich auch noch rechtzeitig reagieren kann und keine unkontrollierte Disco erzeuge. Bei 07 z.B. muss ich die Chance haben den IR Sender zu verdecken oder das Gerät wieder einzuschalten vor 08.</li>
+</ol>
+
+<h2 id="ein-bischen-rechnen-mathematik-ist-das-noch-nicht">Ein bischen rechnen (Mathematik ist das noch nicht)</h2>
+
+<p>Dieses funktioniert nur, bei Protokollen mit 2x8 bit Kommandos.<br />
+Wenn ich ein 16 bit Kommando habe, muss ich den Wertebereich entsprechend von 0000 auf FFFF erweitern. 65535 * 5 Sekunden (91 Stunden) macht nicht mehr so viel Spass. Ich muss die ganze Zeit dabei bleiben, da es über das Protokolle kein Feedback gibt. Zum Vergleich sind es bei 255 Variationen * 5 Sekunden gerade mal 21 Minuten, wenn ich auf 3 Sekunden Sleep gehe 12 Minuten. Diese Optimierung benötigt bei FFFF noch immer 54 Stunden.</p>
+
+<p>Erinnert Ihr Euch noch was ich oben zum Thema ‘Protokolle verstehen’ geschrieben habe? Das war kein Scherz, man sollte wissen wann man sich der Komplexität geschlagen gibt.</p>
+
+  </div><a class="u-url" href="/experimente/2024/09/13/flipper_zero-cli_und_ir.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">LupusE webLife</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Benjamin Moeller</li><li><a class="u-email" href="mailto:git@lupuse.org">git@lupuse.org</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/LupusE" target="_blank" title="LupusE"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">LupusE</span></a></li><li><a href="https://github.com/LupusE" target="_blank" title="LupusE"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">LupusE</span></a></li><li><a href="https://stackoverflow.com/users/9601986" target="_blank" title="9601986"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#stackoverflow"></use></svg><span class="username">9601986</span></a></li><li><a href="https://instagram.com/lupuse42" target="_blank" title="lupuse42"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#instagram"></use></svg> <span class="username">lupuse42</span></a></li><li><a href="https://www.linkedin.com/in/LupusE" target="_blank" title="LupusE"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">LupusE</span></a></li><li><a href="https://www.twitter.com/LupusE42" target="_blank" title="LupusE42"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">LupusE42</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
