@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2025-10-29T19:33:26+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">OSSDRLabs - Chameleon Ultra</title><link href="http://blog.lupuse.org/experimente/2025/10/29/ossdrlabs-chameleon-ultra.html" rel="alternate" type="text/html" title="OSSDRLabs - Chameleon Ultra" /><published>2025-10-29T19:03:22+00:00</published><updated>2025-10-29T19:03:22+00:00</updated><id>http://blog.lupuse.org/experimente/2025/10/29/ossdrlabs-chameleon-ultra</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2025/10/29/ossdrlabs-chameleon-ultra.html"><![CDATA[<h1 id="a-brief-history">A brief history</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2026-01-29T20:38:19+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Gl.iNet - Shadowapple</title><link href="http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple.html" rel="alternate" type="text/html" title="Gl.iNet - Shadowapple" /><published>2026-01-25T18:34:03+00:00</published><updated>2026-01-25T18:34:03+00:00</updated><id>http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple.html"><![CDATA[<h1 id="was-ist-ein-mangoapple">Was ist ein Mangoapple?</h1>
+<p>Es gibt von Hak5 den Wifi Pinapple. Die kleinste Version nutzt den gleichen Chipset wie der <a href="https://www.gl-inet.com/products/gl-mt300n-v2/">GL.iNet Mango</a>. Also hat ser Benutzer xchwarze das Projekt portiert: https://github.com/xchwarze/wifi-pineapple-cloner<br />
+Der Benutzer SHUR1K-N hat das ganze auf den GL.iNet Mango adaptiert und einige hilfreiche Anleitungen geschrieben: https://github.com/SHUR1K-N/WiFi-Mangoapple-Resources<br />
+Leider setzt dieses Projekt die uralt Version 19.07 von OpenWrt voraus. Anscheinend wurde es vor kurzem auf zumindest 21.02 aktualisiert.<br />
+Und es gibt einen nicht zu fixenden Bug, in einer Kernkomponente für die Mipsel Architektur: https://github.com/xchwarze/wifi-pineapple-cloner/issues/57</p>
+
+<h1 id="ist-der-shadow-nicht-nur-ein-anderer-mango">Ist der Shadow nicht nur ein anderer Mango?</h1>
+<p>Nein. Der <a href="https://www.gl-inet.com/products/gl-ar300m/">Shadow (GL-AR300M16-Ext)</a> war mein erster GL.iNet Router. Der Shadow ist eher sowas wie der große Bruder des <a href="https://www.gl-inet.com/products/gl-mt300n-v2/">Mango (GL-MT300N v2)</a> und im Gesgensatz zum Mango bietet er 2 in der -ext Variante externen Antennen mit SMA Port, also perfekt um ‘bessere’ Antennen im Wohnmobil oder beim <a href="https://de.wikipedia.org/wiki/Wardriving">WarDriving</a> zu benutzen.</p>
+
+<h1 id="shadowapple-bauen">Shadowapple bauen</h1>
+<p>Die Schritte sind erneut sehr gut beschrieben von SHUR1K-N: https://github.com/SHUR1K-N/WiFi-Shadowapple-Resources leider nur als Video.</p>
+
+<h2 id="firmware-herunterladen">Firmware herunterladen</h2>
+<p>Der <a href="https://docs.hak5.org/wifi-pineapple-6th-gen-nano-tetra/wifi-pineapple-nano/tetra/">Hak5 Pineapple Nano/Tetra</a> ist mittlerweile eingestellt, daher wird es dafür voraussichtlich keine Aktualisierung mehr geben. Da es nicht Open Source ist, wird es vom Cloner keinen weiterentwickelten Fork geben. Ich vermute ein komplett eigenes Projekt ist erfolgversprechender als diesen weiter zu pflegen.<br />
+OpenWrt dagegen wird stetig weiter entwickkelt. Während der Mango auf eine veraltete Version setzt kann der Shadow heute mit der aktuellsten OpenWrt Basis betrieben werden.<br />
+Das betrifft nur die Nano/Tetra Liie, der WiFi Pineapple wird stetig erweitert. Wer 200-1500 Euro ausgeben will anstatt von 100 (Shadow plus USB-Hub und Zubehör), der bekommt ein modernes Gerät mit noch mehr Features.</p>
+
+<ul>
+  <li>Unter https://firmware-selector.openwrt.org/ suchen nach <strong>AR300M16</strong> und <code class="language-plaintext highlighter-rouge">GL.iNet GL-AR300M16</code> auswählen</li>
+  <li>Den Button <code class="language-plaintext highlighter-rouge">Sysupgrade</code> klicken</li>
+  <li>Unter https://gitlab.com/xchwarze/wifi-pineapple-cloner-builds nach <strong>GL-AR300M</strong> suchen und die Version <code class="language-plaintext highlighter-rouge">19.07.7</code> herunterladen</li>
+</ul>
+
+<h3 id="den-shadow-in-uboot-starten">Den Shadow in uBoot starten</h3>
+<p>Zuerst eine RJ45 Netzwerkkarte vom PC oder Laptop mit dem LAN Port des Shadow verbinden, der WAN Port darf nicht belegt sein, der USB Port sollte an diser Stelle auch noch nicht gesteckt sein.<br />
+Danach den Stromstecker ziehen, den Reset-Button gedrückt halten und den Strom wieder anschliessen. Nach etwa 6 Sekunden leuchten die beiden grünen LED, dann den Rest-Button loslassen.</p>
+
+<h3 id="openwrt-installieren-24x-und-25x-getestet">OpenWrt installieren (24.x und 25.x getestet)</h3>
+<p>Die Netzwerkkarte auf die IP 192.168.1.0/24, zum Beispiel mit der IP 192.168.1.2, konfigurieren.<br />
+Der Shadow ist im Browser unter http://192.168.1.1 erreichbar. Es ist eine einfache Webseite des uBoot loaders sichtbar. Hier unter ‘Choose file’ die heruntergeladene Datei (heute: openwrt-25.12.0-rc3-ath79-generic-glinet_gl-ar300m16-squashfs-sysupgrade.bin) angeben und mit dem Button ‘Update gl-inet firmware’ bestätigen.<br />
+Nach unter einer Minute sollte das Installieren fertig sein und es leuchten wieder beide grünen LED dauerhaft.</p>
+
+<h3 id="wifi-pineapple-cloner-image-installieren">Wifi Pineapple cloner image installieren</h3>
+<p>Jetzt wieder den Strom vom Shadow trennen und nach kurzem Warten wieder einstecken. Nach etwas 2 Minuten ist der Shadow mit der OpenWrt Firmware gestartet, angezeigt druch die beiden dauerhaft leuchtenden grünen LED. Beim erneuten öffnen (oder aktualisieren) der Webseite http://192.168.1.1 erscheint die OpenWrt (LuCI -&gt; Lua Configuration Interface) Oberfläche.<br />
+Ein Passwort muss nicht angegeben werden, einfach ‘Login’ klicken. Wenn die Seite geladen ist, oben im Menü unter ‘System’ den Punkt <strong>Backup/Flash firmware</strong> auswählen.<br />
+Unten den Abschnitt <strong>Flash new firmware image</strong> suchen und unter ‘Browse’ das zweite heruntergeladene Image (gl-ar300m-universal-sysupgrade.bin) auswählen, mit dem Button ‘Upload’ bestätigen.<br />
+Den Haken bei <strong>‘Keep settings’ entfernen</strong> und unten <strong>‘Force Upgrade’ anwählen</strong>. Mit dem Button ‘Continue’ fortfahren.<br />
+Nach etwa 3 Minuten sollten alle drei LED leuchten, bei mir hat es ausgereicht dass die beiden grünen wieder recht statisch ein waren.</p>
+
+<h3 id="wifi-pineapple-starten-danach-den-usb-hub-anschliessen">WiFi Pineapple starten, danach den USB-Hub anschliessen</h3>
+<p>Die Netzwerkkarte wird jetzt auf 172.16.42.0/24, zum Beispiel mit 172.16.42.2, konfiguriert. Der Shadowapple ist unter http://172.16.42.1 zu erreichen. Auf der Seite erscheint eine Information zum initialen Setup. Während die Meldung angezeigt wird kann ein USB-Hub mit der 2. Netzwerkkarte und einem USB Stick angesteckt werden.<br />
+Hintergrund: Beim ersten Start wird die interne Netzwerkkarte als <strong>wlan0</strong> eingerichtet. Wenn die 2. Netzwerkkarte zu dem Zeitpunkt bereits angeschlossen ist, dann können die Plätze vertauscht werden. Der Port an dem die 2. Netzwerkkarte angeschlossen ist sollte nach dem Setup auch nicht geändert werden.</p>
+
+<p>Zum Abschluss kurz auf ‘Reset’ drücken, damit das Setup ohne Wifi stattfindet.</p>
+
+<h3 id="wifi-shadowapple-konfigurieren">WiFi Shadowapple konfigurieren</h3>
+<p>Auf der ersten Seite wird das admin (root) Passwort definiert. Einfach etwas sicheres wählen, was sich merken lässt.<br />
+Der ‘Management AP’ wird auf der ersten Netzwerkkarte (intern) gestartet und bietet die Möglichkeit den Shadowapple per WLAN zu erreichen, auch während die Hauptkarte am Scannen ist.<br />
+Den OpenAP schalte ich in der Regel aus, ist aber jedem frei gstellt. Wer sich damit verbindet ist selbst schuld.<br />
+Die Filter Settings sollten auf ‘Allow mode’ gestellt werden. Hier dürfen sich nur Geräte und SSID mit dem Shadowapple verbinden, welche in der Allow Liste stehen. Im Deny Mode nimmt der Shadowapple alles entgegen, was schnell zu Chaos in der gesamten Funkreichweite führen kann.</p>
+
+<p>Am Login Fenster behalten wir den Benutzer root und geben das zuvor vergebene Passwort ein.</p>
+
+<p>Jetzt sollte der Shadowapple WAN bekommen. Die einfachste Variante ist ein DHCP versorgtes Kabel an den WAN Port anzuschliessen.<br />
+Alternativ kann an dieser Stelle in den USB-Hub eine weitere Netzwerkkarte eingesteckt werden. Am besten ist eine Karte mit nativ unterstützten Chip, ansonsten gibt es viele Anleitungen zu diversen Karten, siehe z.B. [Troubleshooting]. Links im Menu unter ‘Networking’ im Abschnitt ‘WiFi Client Mode’ das Interface <code class="language-plaintext highlighter-rouge">wlan2</code> auswählen und mit dem Button ‘scan’ nach Netzwerken in der Umgebung suchen. Das eigene auswählen und das Passwort eingeben.</p>
+
+<p>Wenn der Shaddowapple Internet hat, mit SSH verbinden. Unter Linux in einem Terminal mit <code class="language-plaintext highlighter-rouge">ssh root@172.16.42.1</code> verbinden. Unter Windows mit Putty ist die Adresse dieselbe (benutzer@host). Das Passwort ist das am Anfang der Einrichtung vergebene.</p>
+
+<h4 id="usb-speicher-bereitstellen">USB Speicher bereitstellen</h4>
+<p>Wenn am USB-Hub ein USB Stick oder eine SD-Karte mit Adapter angeschlossen ist, wird diesr mittels <code class="language-plaintext highlighter-rouge">wpc-tools format_sd</code> formatiert und dem System bereitgestellt. Das dauert eine ganze Weile, je nach Größe des Speichers. Ein 32GB Stick sollte mehr als Ausreichend sein, weniger als 4 GB sollte er nicht haben.<br />
+Danach muss der formatierte Speicher noch bereinigt werden, mittels <code class="language-plaintext highlighter-rouge">rm -rf /sd/*</code>. Wenn das Verzeichnis danach nicht lehr ist den Befehl noch einmal wiederholen.</p>
+
+<h4 id="missing-packages-unmissen">Missing Packages unmissen.</h4>
+<p>Mit dem Befehl <code class="language-plaintext highlighter-rouge">wpc-tools missing_packages</code> werden Pakete nachgeholt, die im Ursprungsimage nicht vorhanden oder veraltet sind. Diese sind unter anderem verantwortlich dafür, dass im Recon die Ansicht automatisch aktualisiert wird.</p>
+
+<p>Die Shell sollten wir ab jetzt nicht mehr benötigen.</p>
+
+<h3 id="module">Module</h3>
+<p>Jetzt haben wir einen basis Wifi Pineapple clon. Aber mächtig wird er erst durch die Module.<br />
+Auf der Webseite im Menü Links gibt es den Punkt ‘Modules’. Mit dem Button ‘Get Modules’ holen wir uns eine Liste einiger bereitgestellten Module.<br />
+Da wir uns zuvor den Speicher initialisiert haben, haben wir bei den meisten Modulen die Wahl ob wir diese auf dem Gerät oder auf SD installieren wollen. Ich empfehle immer SD, denn der Speicher des Shadow ist begrenzt. Und im Falle eines Defekt lässt sich der USB Speicher deutlich schneller tauschen.</p>
+
+<p>Die Module sind alle nicht mit Magie geschrieben. Im Grunde bieten sie Basiswerkzeuge, die man von Kali Linux oder ParrotOS kennt.</p>
+
+<p>Das Modul ‘p0f’ ermittelt anhand von parametern das Betriebssystem anhand eines aufgebauten Socket (IP/Port). Dsa kann zwar auch nmap, aber p0f ist deutlich schlanker. Manchmal erschreckend wie genau die Schätzung ist.</p>
+
+<p>Die Module ‘Signalstrenght’ und ‘Site Survey’ sind ncith nur für den Hobby Hacker interessant, sie können druchaus helfen die WLAN Ausleuchtung zu optimieren. Auch wenn es bessere Tools mit Karte gibt, zum Beispiel Staubsaugroboter.</p>
+
+<p>Vielleicht klingt die Beschreibung cool, aber bevor ich eines von den Tools benutze sollte ich mir über die Konsequenzen bewusst sein.<br />
+Eines der eher destruktiven Tools ist ‘Deauth’, welches mittels externem Befehl den Client vom AP trennt. Da es eine Funktion im WPA/WPA2 Protokoll ist ist die einzige Möglichkeit mich davor zu schützen auf WPA3 umzusteigen. Dazu sollte man sagen dass dieses Modul nicht gerade leise ist, in der Regel bekommen die Leute mit, wenn das Streaming plötzlich abbricht. An eigenen Geräten kann man es natürlich gerne testen.</p>
+
+<h1 id="wifi-pineapple-und-nun">Wifi Pineapple und nun?</h1>
+<p>Im Dashboard sieht man zunächst nicht viel, ausser dass die CPU Last zwischen 30% und 50% schwankt, im Gegensatz zum Mango wo 50-70% ‘normal’ waren. Im Einsatz sind beide oft auf 100%.<br />
+Der Punkt ‘Recon’ aus dem Menu ist eine grosse Hilfe. Je nach verwendete Netzwerkkarte oder zu untersuchender Umgebung wählt man hier 2,4 GHz, 5 GHz oder Both und bestätigt mit ‘Start’. Ja, 6 GHz gab es zu der Zeit noch nicht, mir ist kein Chipset bekannt der das einfach unter Linux/OpenWrt unterstützt.<br />
+Der Modus ist als Standard ‘Continous’ also fortlaufend. Je nach Bedarf kann ein kürzerer Zeitraum gewählt werden.<br />
+Wenn nicht vorher gestartet, weisst die Webseite einen darauf hin, dass PineAP nicht gestartet ist und bietet gleich einen Button um da nachzuholen. Der Scan startet im Anschluss an dien Dienststart.</p>
+
+<h2 id="recon---das-suchen-nach-wlans">Recon - Das Suchen nach WLANs</h2>
+<p>Im unteren Teil erscheinen nach kurzer Zeit die gefundenen AP (Access Points) und wenn in Reichweite auch die damit verbundenen Clients. Es werden darunter auch Geräte außerhalb der Reichweite aufgelistet. Die sind aber gößtenteils uninteressant.<br />
+Wir stellen uns unseren Standpunkt als Zentrum vor. Um uns herum wird ein Kreis gespannt, der die Reichweite unseres WLAN darstellt. Innerhalb dieses Kreises gibt es APs und Clients. Es können aber auch Clients in unserer Reichweite sein, aber der AP nicht oder ein AP ist im Kreis und die Clients nicht. das muss nicht physikalisch so sein, aber ein AP hat unter Umständen eine höhere Empfangs-/Sendeleistung als ein IoT Client.</p>
+
+<h3 id="die-sendeleistung">Die Sendeleistung</h3>
+<p>In der Tabelle haben wir den Wert ‘Signal’, der angegeben ist in <a href="https://de.wikipedia.org/wiki/Received_Signal_Strength_Indication">RSSI (Received Signal Strength Indicator)</a>. Dieser wird als negativer dB Wert angegeben, wobei -30 ein sehr guter Wert ist und -80 eher schlecht. Wir können das Signal mit der Veränderung unser Position beeinflussen, in der Regel wissen wir aber nicht in welche Richtung, einfach ausprobieren.</p>
+
+<h3 id="der-handshake">Der Handshake</h3>
+<p>Bei einem Signal von schlechter als -50 können wir uns den Handshake sparen. Wenn überhaupt erhalten wir einen Teilweisen Handshake. Bei einem Wert um -30 haben wir gute Chancen einen kompletten Handshake zu bekommen.<br />
+Der Handshake findet statt, wenn ein Client sich an einem AP anmeldedet. Damit der AP auch weiss, dass der Client das Passwort kennt wird es cryptisch ausgetauscht. Wenn ich diesen cryptischen Austausch habe, kann ich alle mir bekannten Kennworte dagegen testen udn schauen ob etwas sinnvolles dabei raus kommt.<br />
+Stell Dir vor Du stehst vor einem Club und möchstest rein. Du nennst dem Türsteher 100 verschiedene Gerheime Handschläge. Wenn der Handschlag 101 richtig ist, lässt er Dich rein? Wohl kaum, zumal Du jedes Mal auf eine Antwort warten musst. Aber wenn Du aufnimmst wie ein Gast dem Türsteher das Passwort übergibt, dann kannst Du so lange vor dem Spiegel verschiedene Hsndshläge üben, bis es genauso aussieht … Elegant? Nein, aber es zeigt warum Du ein komplexes Kennwort nutzen solltest anstelle eines einfach nachzumachenden.</p>
+
+<h3 id="die-ssid-und-die-mobiltelefone">Die SSID und die Mobiltelefone</h3>
+<p>WLAN AP senden Beacons (wie das Licht von einem Leuchtturm) mit der eigenen SSID aus, diese sehen wir in der Liste ‘WLAN in der Nähe’. Wenn ein Mobilgerät oder Laptop dieses Beacon empfängt und die SSID gespeichert hat, dann versucht es eine Verbindung mit dem gespeicherten Passwort aufzubauen.
+WLAN Clients haben die Angewohnheit alle gespeicherten Netzwerke in die Welt hinaus zu posaunen (Probe Request). Damit hoffen sie dass ein AP sich angesprochen fühlt und die Verbindung aufgebaut wird. Die Idee ist, dass man keine 100ms wartet bis ein Beacon kommt, sondern schneller eine Verbindung initiieren kann.</p>
+
+<p>Jetzt stellt Euch vor Ihr habt technisch weniger Versierte Personen, die von einem Zettel SSID und Passwort ablesen und in das Mobiltelefoin eingeben. Wie oft ist es Euch passiert, dass das Passwort als SSID eingegeben wurde oder beides hintereinander? Im grunde nicth schlimm, das Telefon wird weitergereicht und der nächste gint es richtig ein -&gt; WLAN Verbindung steht.<br />
+Aber die falsche Eingabe wurde gespeichtert. Dasss heisst das Telefon weiss nicht, dass diese SSID nicht existiert, versucht es aber per PRobe Request zu erreichen.</p>
+
+<p>Im Wifi Pineapple habe ich im Menupunkt ‘PineAP’ den Block ‘SSID Pool’. Der kann für gezielte attacken manuell beladen oder mittels Konfiguration ‘Capture SSIDs to Pool’ automatisch gefüllt werden.<br />
+Wenn ich in dne Pool schaue sind bekannte AP Namen FRITZ!Box 7412, NETGEAR07, Dallmeyers-Backhus, … Aber es tauchen auch Namen auf, wie “ZL-ldgdf76f45708ge0”, “zu13a599#”, “34522299819022680715” (das sind keine echten Werte, die habe ich aus Beobachtungen kombiniert). Der 2. Block sieht doch eher nach WiFi Passworten aus, als nach SSID.<br />
+Leider weiss ich nicht welche nicht SSID zu welcher SSID gehört. Aber es ist ein start.</p>
+
+<p>Tipp: Löscht falsch eingetragene WLAN aus Euren Mobiltelefonen!</p>
+
+<h1 id="troubleshoot">Troubleshoot</h1>
+
+<h2 id="3-netzwerkadapter">3. Netzwerkadapter</h2>
+<p>Als Netzwerkadapter habe ich nur einen alten <code class="language-plaintext highlighter-rouge">ID 0bda:8176 Realtek Semiconductor Corp. RTL8188CUS 802.11n WLAN Adapter</code> rumliegen. Nich toll, aber ausreichend.<br />
+Nach dem Einstecken sagt <code class="language-plaintext highlighter-rouge">dmesg</code> zwar das etwas gefunden wurde, aber kein weiteres WLAN Interface.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[   87.501464] usb 1-1.4: USB disconnect, device number 5
+[   89.586368] usb 1-1.4: new high-speed USB device number 6 using ehci-platform 
+</code></pre></div></div>
+
+<p>Ein kurze Onlinesuche nach <code class="language-plaintext highlighter-rouge">RTL8188CUS openwrt</code> zeigt, dass dieser Chip vom Treiber <code class="language-plaintext highlighter-rouge">kmod-rtl8192cu</code> unterstützt wird. Mit <code class="language-plaintext highlighter-rouge">opkg install kmod-rtl8192cu</code> ist auch dieser in der Weboberfläche zu finden.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="produkte" /><category term="glinet" /><category term="shadow" /><summary type="html"><![CDATA[Was ist ein Mangoapple? Es gibt von Hak5 den Wifi Pinapple. Die kleinste Version nutzt den gleichen Chipset wie der GL.iNet Mango. Also hat ser Benutzer xchwarze das Projekt portiert: https://github.com/xchwarze/wifi-pineapple-cloner Der Benutzer SHUR1K-N hat das ganze auf den GL.iNet Mango adaptiert und einige hilfreiche Anleitungen geschrieben: https://github.com/SHUR1K-N/WiFi-Mangoapple-Resources Leider setzt dieses Projekt die uralt Version 19.07 von OpenWrt voraus. Anscheinend wurde es vor kurzem auf zumindest 21.02 aktualisiert. Und es gibt einen nicht zu fixenden Bug, in einer Kernkomponente für die Mipsel Architektur: https://github.com/xchwarze/wifi-pineapple-cloner/issues/57]]></summary></entry><entry><title type="html">OSSDRLabs - Chameleon Ultra</title><link href="http://blog.lupuse.org/experimente/2025/10/29/ossdrlabs-chameleon-ultra.html" rel="alternate" type="text/html" title="OSSDRLabs - Chameleon Ultra" /><published>2025-10-29T19:03:22+00:00</published><updated>2025-10-29T19:03:22+00:00</updated><id>http://blog.lupuse.org/experimente/2025/10/29/ossdrlabs-chameleon-ultra</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2025/10/29/ossdrlabs-chameleon-ultra.html"><![CDATA[<h1 id="a-brief-history">A brief history</h1>
 
 <p>RRG is well known for their Proxmark3 as RFID multitool. In mid of 2023 they are releasing a new RFID tool, the Chameleon Ultra.</p>
 
@@ -1165,233 +1286,4 @@ Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefo
 
 <p>Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen (ggf. mit Geschirrtuch gegen direkte Sonneneinstrahlung), für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.<br />
 Im 4pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V-&gt;5V/3A Spannungswandler einzubauen.<br />
-Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><category term="netzwerk" /><category term="router" /><summary type="html"><![CDATA[tl;dr]]></summary></entry><entry><title type="html">Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS</title><link href="http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html" rel="alternate" type="text/html" title="Wohnmobil - Lenkradfernbedienung von Fiat Ducato auf Pioneer DNX451RVS" /><published>2021-10-30T23:36:59+00:00</published><updated>2021-10-30T23:36:59+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung---Fiat_Ducato-Pioneer_DNX451RVS</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2021/10/30/Lenkradfernbedienung-Fiat_Ducato-Pioneer_DNX451RVS.html"><![CDATA[<h2 id="ausgangslage">Ausgangslage</h2>
-
-<p>Meine Frau und ich haben uns ein <a href="https://www.4pfoten-mobile.de/">4pfoten-Mobile - Dog-Liner TE740</a> gekauft, unser BuffyMobil. Dieser teilintegrierte Fiat Ducato X290 hat den Luxus einer Lenkradfernbedienung, aber sie ist nicht mit dem verbauten Radio Kenwood DNX451 verbunden. Unser Verkäufer, <a href="www.4pfoten-mobile.de/neumuenster/">Jörn Zimmermann</a> vom Standort Neumünster, war so nett und hat für uns die fehlenden Teile in Erfahrung gebracht:</p>
-<ul>
-  <li>Kabelbaum: CAW-CCOMFI1</li>
-  <li>Steuerbox: CAW-COMUN2</li>
-</ul>
-
-<p>Bei <a href="https://www.toms-car-hifi.de/">Toms-Car-Hifi</a> bestellt, nach 3 Tagen war alles da und die OP konnte beginnen.</p>
-
-<p>Nach dieser Anleitung ist eines klar: Das wird nicht einfach.<br />
-<img src="/media/lenkradfb_ducato_dnx451/01_anleitung.png" alt="Anleitung der Verkabelung der CAW-COMUN2 Box" /></p>
-
-<p>Interpretation: Sehr viele schwarze Kabel. Ein schwarzes Kabel der Box muss an einen grünen Adapter vorbei an das schwarze Kabel des Radios, welches mit ‘Steering Wheel Remote’ bezeichnet ist??!??!?! Oder so.<br />
-Auf dem Bild oben rechts könnte man erahnen das schwarz auch blau/gelb sein könnte, mit ‘Remo.cont’ beschriftet. Das wird lustig.</p>
-
-<h2 id="das-einbauen-des-adapters-mit-kabelbaum">Das Einbauen des Adapters mit Kabelbaum</h2>
-<p>Das Radio im Ausgangszustand<br />
-<img src="/media/lenkradfb_ducato_dnx451/02_ausgangslage.png" alt="Das Radio im eingebauten Zustand" /></p>
-
-<p>Beim Aushebeln der Blende brechen sicher ein oder zwei Klemmen ab. Durch das tolle klebrige silber Deko-Element (Pfeil) hält es aber.<br />
-Das Radio ist an dem Blech festgeschraubt, nicht eingeschoben. Ich empfehle mit den oberen beiden Schrauben anzufangen und mit schmaler Spitze (PH2) die untern beiden schrauben parallel zu loesen, so dass das Radio nach vorne oben mitkommt. Ansonsten hat man Macken an dem Radio unten rechts und links.<br />
-<img src="/media/lenkradfb_ducato_dnx451/03_schrauben.png" alt="Blende offen" /></p>
-
-<p>Was soll ich schreiben? Kabelchaos. Wenn man keine Ahnung von Kabeln/Stecker/Elektronik hat, sollte man spätesten hier aufhören und das Set einem KFZ-kundigen übergeben. Auf jeden Fall die Stromversorgung trennen!<br />
-Wenn man schon z.B. einen PC zusammengeschraubt hat, dann trennt man den ISO Stecker (2 Stecker in einem nahezu quadratischen Port) zwischen Radio und Auto und klemmt den Kabelbaum (CAW-CCOMFI1) dazwischen. Der neue Kabelbaum hat eine schwarze schmale Steckerleiste, welche in die Box (CAW-COMUN2) kommt.<br />
-<img src="/media/lenkradfb_ducato_dnx451/04_kabelchaos.png" alt="Die Kabel hinter dem Radio. Chaos." /></p>
-
-<p>Nochmal etwas zurechtgelegt, der nicht selbsterklärende Teil:<br />
-Der Box (CAW-COMUN2) liegt ein kleines Kabel bei. Der Stecker kommt in das entsprechende Gegenstück des neuen Kabelbaum (CAW-CCOMFI1). Das lose braune Kabel wird mit dem blau/gelb-Kabel des Autoradios verbunden. Den Mini-Klinkenstecker irgendwie isolieren/fixieren, vielleicht eleganter als meine Lösung mit dem weißen Panzertape.<br />
-<img src="/media/lenkradfb_ducato_dnx451/05_kabeladapter.png" alt="Der schlecht beschriebene Adapter Kabelbaum-LenkradFB" /></p>
-
-<p>Jetzt muss die Box angelernt werden, <a href="#ablauf">siehe unten</a>. Spart Euch den Schritt frühzeitig alles wieder zusammenzubauen. Ich habe die Box mehrfach neu programmiert, bis es mir gefallen hat.<br />
-Das Plastikteil in der Tüte der Box, welches wie abgebrochen aussieht, ist ein Stift, mit den man den Taster in der Box erreicht (siehe rote Markierung).<br />
-<img src="/media/lenkradfb_ducato_dnx451/06_box.png" alt="Die Box eingebaut und angeschlossen. Der Button ist erreichbar." /></p>
-
-<p>Beim Zusammenschrauben in umgekerter Reihenfolge: Erst die unteren Schrauben, das Radio langsam mit reingleiten lassen, dann die oberen. Achtet drauf, dass die unteren Schrauben trotz des Winkels auch wirklich fest sind. Das Quietschen vom Radio an der Blende auf Kopfsteinpflaster ist nicht schön.</p>
-
-<h2 id="programmieren-die-anleitung-sagt-">Programmieren. Die Anleitung sagt …</h2>
-
-<ul>
-  <li>… Zuendung aktivieren, die Box blinkt.</li>
-  <li>Wenn die Box schnell blinkt, kann sofort gestartet werden. Wenn nicht, Reset: ‘Zündung aus, Taste drücken und gedrückt halten, Zündung an. Wenn die LED rot blinkt, Button loslassen.’</li>
-  <li>Man drückt eine Taste auf der Lenkradfernbedienung, die Box zeigt mit einem aufleuchten der LED an, dass der Steuerbefehl angenommen wurde.</li>
-</ul>
-
-<p>Das ist ja einfach.</p>
-
-<h3 id="folgende-zustände-kann-die-box-anzeigen">Folgende Zustände kann die Box anzeigen</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>LED Signal</th>
-      <th>Bedeutung</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>LED aus</td>
-      <td>Kein Strom. Zündung einschalten oder Box mit Strom versorgen</td>
-    </tr>
-    <tr>
-      <td>LED blinkt rot</td>
-      <td>Die Box ist im Anlernmodus</td>
-    </tr>
-    <tr>
-      <td>LED blinkt einmal, wenn Taste am Lenkrad gedrückt wurde.</td>
-      <td>Befehl wurde erkannt</td>
-    </tr>
-    <tr>
-      <td>LED blinkt einmal, wenn ‘Button’ auf Box gedrückt wurde.</td>
-      <td>Funktion wurde übersprungen</td>
-    </tr>
-    <tr>
-      <td>LED blinkt grün</td>
-      <td>Kommandos hinterlegt, kein Radioprofil eingestellt</td>
-    </tr>
-    <tr>
-      <td>LED leuchtet grün</td>
-      <td>Alles OK, Box ist programmiert</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Die Box hat 12 Funktionen. Der Ducato hat, abhängig von Baujahr, 6 oder 8 Tasten. Belegen darf jeder wie er will. Zum Beispiel:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">ID</th>
-      <th>Funktion der Box</th>
-      <th>Meine Belegung</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">1</td>
-      <td>Lautstärke -</td>
-      <td>Lautstärke -</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">2</td>
-      <td>Lautstärke +</td>
-      <td>Lautstärke +</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">3</td>
-      <td>Suchen -</td>
-      <td>Suchen -</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">4</td>
-      <td>Suchen +</td>
-      <td>Suchen +</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">5</td>
-      <td>Quelle</td>
-      <td>Leere Taste</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">6</td>
-      <td>Stumm</td>
-      <td>Stumm</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">7</td>
-      <td>Hoch</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">8</td>
-      <td>Sprachbefehl</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">9</td>
-      <td>Anruf annehmen</td>
-      <td>Anruf annehmen</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">10</td>
-      <td>Anruf beenden</td>
-      <td>Anruf beenden</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">11</td>
-      <td>X</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">12</td>
-      <td>X</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="-praktisches-anlernen-der-box"><a name="ablauf"></a> Praktisches Anlernen der Box</h2>
-<ul>
-  <li>Box in Programmiermodus bringen (Entweder im Auslieferungszustand oder nach Reset: Zündung aus -&gt; Button an der Box gedrückt halten. Zündung an. Wenn die LED rot blinkt -&gt; Button loslassen.)</li>
-  <li>An der Lenkradfernbedienung ‘Lautstärke +’ drücken, die Box blinkt einmal rot</li>
-  <li>An der Lenkradfernbedienung ‘Lautstärke -‘ drücken, die Box blinkt einmal rot</li>
-  <li>An der Lenkradfernbedienung ‘Wippe rechts nach unten’ drücken, die Box blinkt einmal rot</li>
-  <li>An der Lenkradfernbedienung ‘Wippe rechts nach oben’ drücken, die Box blinkt einmal rot</li>
-  <li>An der Lenkradfernbedienung ‘Leere Taste (links unten)’ drücken, die Box blinkt einmal rot</li>
-  <li>An der Lenkradfernbedienung ‘Durchgestrichenen Lautsprecher’ drücken, die Box blinkt einmal rot</li>
-  <li>Auf der Box einmal den Button drücken (7 überspringen), die Box blinkt einmal rot</li>
-  <li>Auf der Box einmal den Button drücken (8 überspringen), die Box blinkt einmal rot</li>
-  <li>An der Lenkradfernbedienung ‘Telefon annehmen’ drücken, die Box blinkt einmal rot</li>
-  <li>An der Lenkradfernbedienung ‘Telefon auflegen’ drücken, die Box blinkt einmal rot</li>
-  <li>Auf der Box einmal den Button drücken (11 überspringen), die Box blinkt einmal rot</li>
-  <li>Auf der Box einmal den Button drücken (12 überspringen), die Box blinkt grüen</li>
-  <li>Radioprotokoll auswählen: ‘Suchen +’ drücken</li>
-</ul>
-
-<h3 id="lenkradfernbedienung---tasten">Lenkradfernbedienung - Tasten</h3>
-
-<p><img src="/media/lenkradfb_ducato_dnx451/07_lenkrad-ducato.jpg" alt="Fiat Ducato - Lenkradfernbedienung Tasten" /></p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: right">Tasten links</th>
-      <th style="text-align: center">Mitte</th>
-      <th style="text-align: left">Tasten rechts</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: right">Stumm</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">Tel Annehmen</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">Lautstärke +</td>
-      <td style="text-align: center">Hupe</td>
-      <td style="text-align: left">Suchen +</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">Lautstärke -</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">Suchen -</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">Leer</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">Tel Beenden</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="fazit">Fazit</h2>
-
-<p>Die Box war das Geburtstagsgeschenk 2021 an mich von meiner Frau, als wegen Corona alles zu hatte. So konnten wir die Funktion zwar nicht sofort testen, aber ich konnte am Wohnmobil basteln.<br />
-Jetzt, nach einigen Fahrten, muss ich sagen der Mehrwert ist gewaltig. Es handelt sich immernoch um einen Transporter, das heisst es ist nicht zu vergleichen mit dem Multimediacockpit eines Mini Cooper oder BMW, aber man muss nicht mehr in die Mitte greifen und versuchen per Touch das richtige Feld zu treffen.<br />
-Das Radio hat seine Schwächen, aber das Telefonieren per Bluetooth auf Landstrasse und Autobahn funktioniert sehr gut. Auch hier ist Lenkradfernbedienung ein deutlicher Mehrwert.</p>
-
-<p>Es gibt per Amazon auch Boxen, welche etwa ein drittel der orignalen Lösung kosten. Von denen habe ich ersteinmal abstand genommen, denn in meinem Urlaub soll es funktionieren. Wenn jemand Erfahrungne mit diesen 3rd Party Lösungen aus China hat, bin ich sehr an einem Erfahrungsbericht interessiert.</p>
-
-<h1 id="update">Update</h1>
-
-<p>Da die Lenkradfernbedienung nach einiger Zeit immer unzuverlässier funktionierte und ich die Panzertape-Konstruktion vermutete, habe ich am 25.03. das Tape gegen eine Wago-Klemme getauscht.<br />
-<img src="/media/lenkradfb_ducato_dnx451/08_kabeladapter_wago.png" alt="Die Verkabelung mit Wago-Klemme" /></p>
-
-<p>Jetzt funktioniert es wieder zu 100%, wie beim Testen.</p>
-
-<p>Es gibt alte Wago klemmen (grau mit schmaleren orangenen Hebeln) und neue (transparent mit flachen Hebeln, wie auf dem Bild).<br />
-Es ist egal welche genommen werden, hauptsache original. Ich habe die neueren genommen, weil diese deutlich flacher sind.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="UnterwegsZuhause" /><summary type="html"><![CDATA[Ausgangslage]]></summary></entry></feed>
+Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><category term="netzwerk" /><category term="router" /><summary type="html"><![CDATA[tl;dr]]></summary></entry></feed>
