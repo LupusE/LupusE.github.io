@@ -1,4 +1,3 @@
-5.000 / 5.000
 ---
 Status: Published
 Published: True
