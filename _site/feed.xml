@@ -1,4 +1,587 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2026-01-29T20:38:19+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">Gl.iNet - Shadowapple</title><link href="http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple.html" rel="alternate" type="text/html" title="Gl.iNet - Shadowapple" /><published>2026-01-25T18:34:03+00:00</published><updated>2026-01-25T18:34:03+00:00</updated><id>http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple.html"><![CDATA[<h1 id="was-ist-ein-mangoapple">Was ist ein Mangoapple?</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://blog.lupuse.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.lupuse.org/" rel="alternate" type="text/html" /><updated>2026-04-15T14:01:31+00:00</updated><id>http://blog.lupuse.org/feed.xml</id><title type="html">LupusE webLife</title><subtitle>Ein Platz fuer geistige Ejakulationen und bedeutungsschwangere Worte.</subtitle><author><name>Benjamin Moeller</name></author><entry><title type="html">ChameleonUltra - Getting the latest features</title><link href="http://blog.lupuse.org/howto/2026/02/24/ChameleonUltra-Getting_the_latest_features.html" rel="alternate" type="text/html" title="ChameleonUltra - Getting the latest features" /><published>2026-02-24T22:52:01+00:00</published><updated>2026-02-24T22:52:01+00:00</updated><id>http://blog.lupuse.org/howto/2026/02/24/ChameleonUltra-Getting_the_latest_features</id><content type="html" xml:base="http://blog.lupuse.org/howto/2026/02/24/ChameleonUltra-Getting_the_latest_features.html"><![CDATA[<h1 id="chameleon-ultra">Chameleon Ultra</h1>
+
+<blockquote>
+  <p>The new generation chameleon based on NRF52840 makes the performance of card emulation more stable. And gave the chameleon the ability to read, write, and decrypt cards.</p>
+</blockquote>
+
+<p>A good summary, copied from: https://github.com/RfidResearchGroup/ChameleonUltra</p>
+
+<p>The ChameleonUltra had the potentiel to becom a very capable mobile device for different RFID tasks. It is definetly not a sniffer, so it won’t replace the Proxmark3. But it has the hartdware to be a great emulator. The RRG people abdoned this project at a early stage.</p>
+
+<p>As the project is OpenSource, everybody can contribute. After a few draw backs, there is a lot of progress since mid of 2025.</p>
+
+<h1 id="how-i-do-my-testings">How I do my testings?</h1>
+<p>I am working on Kali Linux. And as I test a lot of PR, I have build a workflow around this, which I want to write down here.</p>
+
+<p>The very first step is as alwys the lonign of the repository:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/git; cd ~/git
+git clone https://github.com/RfidResearchGroup/ChameleonUltra
+cd ChameleonUltra
+</code></pre></div></div>
+
+<h2 id="install-nrfutil">Install nrfutil</h2>
+<p>Download binary from: https://www.nordicsemi.com/Products/Development-tools/nRF-Util/Download#infotabs
+Choose your development platform: <code class="language-plaintext highlighter-rouge">Linux (x64)</code></p>
+
+<p>After download, make executable (<code class="language-plaintext highlighter-rouge">chmod +x</code>) and install the needed packages.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x nrfutil
+./nrfutil install completion device nrf5sdk-tools trace
+</code></pre></div></div>
+<p>If needed, yo could copy the binary to a global called place:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp nrfutil ~/.local/bin
+</code></pre></div></div>
+
+<h2 id="get-the-arm-gnu-toolchain">Get the Arm GNU Toolchain</h2>
+<p>The <code class="language-plaintext highlighter-rouge">gcc-arm-none-eabi</code> package of most linux distributions is too new. Using this package would result in a bigger firmware, and won’t work.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt search gcc-arm-none-eabi
+gcc-arm-none-eabi/kali-rolling,now 15:14.2.rel1-1 amd64  [installiert]
+  GCC cross compiler for ARM Cortex-R/M processors
+</code></pre></div></div>
+
+<p>Download from: https://developer.arm.com/downloads/-/gnu-rm/10-3-2021-10 (https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)</p>
+
+<p>Extract it to a folder you know later (693 MB).</p>
+
+<h2 id="compile-helper">Compile Helper</h2>
+<p>I’ve wrote a little helper to compile either the default repository (ChameleonUltra as default) or a different (with argument).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+curpath=$(pwd)
+
+if [ "$#" -eq 0 ]
+then 
+        echo "Path default"
+        srcpath=ChameleonUltra 
+else
+        echo "Path $1"
+        srcpath=$1
+fi
+workpath=$curpath/$srcpath
+
+if [ -f $workpath/firmware/Makefile.defs ]
+then
+        echo "Chameleon firmware available"
+fi
+
+if [ -f $workpath/software/src/CMakeLists.txt ]
+then
+        echo "Chameleon CLI available"
+fi
+
+export GNU_INSTALL_ROOT=/home/lupus/work/cu/gcc-arm-none-eabi-10.3-2021.10/bin/
+export GIT_VERSION=v4.20469-152-ga1e9b47
+export APP_FW_SEMVER=v2.0.0
+export APP_FW_VER_MAJOR=2
+export APP_FW_VER_MINOR=0
+
+echo "Building CU firmware"
+cd $workpath/firmware/
+./build.sh
+cd $curpath
+
+echo "Building CU CLI"
+cd $workpath/software/src/
+if [ ! -d out ]
+then
+        mkdir out
+fi
+
+cd out
+cmake .. &amp;&amp; cmake --build . --config Release
+
+cd $curpath
+
+</code></pre></div></div>
+
+<p>Maybe you need adjust the variable <code class="language-plaintext highlighter-rouge">GNU_INSTALL_ROOT</code> with the path of your <strong>gcc-arm-none-eabi</strong>.
+The workflow in Github sets some version variables from the branch, which I set static with the variables APP_FW_SEMVER=v2.0.0 APP_FW_VER_MAJOR=2 APP_FW_VER_MINOR=0.</p>
+
+<p>With the script in <code class="language-plaintext highlighter-rouge">~/git</code> and the CU source in <code class="language-plaintext highlighter-rouge">~/git/ChameleonUltra</code>, I can just run:<br />
+<code class="language-plaintext highlighter-rouge">/make_cufw.sh</code> and it will get compiled.</p>
+
+<h2 id="check-out-prs">Check out PRs</h2>
+
+<p>Create a local branch, named <code class="language-plaintext highlighter-rouge">autopwn</code> for the PR <code class="language-plaintext highlighter-rouge">364</code> and switch to the branch:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch origin pull/364/head:autopwn
+git checkout autopwn 
+</code></pre></div></div>
+
+<p>Back to main:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout main
+</code></pre></div></div>
+
+<p>List existing branches:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch
+  autopwn
+  led
+* main
+</code></pre></div></div>
+
+<p>Cleanup test branches:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -D led
+git branch -D autopwn
+</code></pre></div></div>
+
+<h2 id="flash-the-firmware">Flash the firmware</h2>
+
+<p>If everything went fine, you’ll find the firmware in <code class="language-plaintext highlighter-rouge">ChameleonUltra/firmware/objects/</code>. To flash change to the directory firmware and execute <code class="language-plaintext highlighter-rouge">./flash-dfu-app.sh</code>.<br />
+The CU will switch to DFU mode, the two middle LED will start alternating and the firmware will be flashed. After it is done, teh CU resets and you’ll see the moving animation on all LED.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="howto" /><category term="produkte" /><category term="chameleonultra" /><category term="rfid" /><summary type="html"><![CDATA[Chameleon Ultra]]></summary></entry><entry><title type="html">OpenWrt - Neues Netzwerk</title><link href="http://blog.lupuse.org/howto/2026/02/24/openwrt-neues_netzwerk.html" rel="alternate" type="text/html" title="OpenWrt - Neues Netzwerk" /><published>2026-02-24T22:52:01+00:00</published><updated>2026-02-24T22:52:01+00:00</updated><id>http://blog.lupuse.org/howto/2026/02/24/openwrt-neues_netzwerk</id><content type="html" xml:base="http://blog.lupuse.org/howto/2026/02/24/openwrt-neues_netzwerk.html"><![CDATA[<p>Seit ich denken kann hatte ich AVM Fritz! Geräte als Router für mein Heimnetzwerk benutzt. Zuerst den Fritz!ISDN USB, eine externe ISDN Karte, dann alle möglichen Varianten der Fritz!Box. Ein Gerät was einfach alles macht, von Internetrouting über DECT Basis mit VoIP Telefonie bis hin zum Faxmodem als man kein Gerät mehr zuhause stehen haben wollte. Und das alles mit einer herausragenden Linux Unterstützung in einem einfachen “Mesh”.<br />
+Der Marketingbegriff Mesh beinhaltet hier auf der einen Seite, dass man das WLAN am zentralen Punkt einstellt und die Konfiguration an alle verbundenen AP übertragen wird. Auf der anderen Seite bedeutet es, dass ein Endgerät (z.B. Mobiltelefon) ohne Unterbrechung von einem zum anderen AP wechseln kann. Das funktioniert nur unter AVM Geräten.</p>
+
+<p>Wenn wir das technisch angehen, spielen hier verschiedene Techniken eine Rolle:<br />
+Das “Wireless Mesh Network (WMN)” ist im Standard <a href="https://de.wikipedia.org/wiki/IEEE_802.11s">IEEE 802.11s</a> beschrieben. Dieser Standard ermöglicht den Aufbau eines Wireless Mesh Nezwerks mit möglichst geringer Konfiguration an den Endpunten. Benötige ich Das? Damit befasst Sich OpenWRT unter <a href="https://openwrt.org/docs/guide-user/network/wifi/mesh/802-11s#are_you_sure_you_want_a_mesh">are_you_sure_you_want_a_mesh</a> … meistens reicht: 
+Das “Fast Basic Service Set (BSS) Transition” aus dem Standard <a href="https://de.wikipedia.org/wiki/IEEE_802.11r">IEEE 802.11r</a>.</p>
+
+<p>Standards, die in diesem Zusammenhang erwähnt werden, sind:<br />
+Oft findet sich noch das Roaming als Begriff, welches der Standard <a href="https://de.wikipedia.org/wiki/IEEE_802.11f">IEEE 802.11f</a> ist und dafür sorgt, dass es zu keinen Verbindungsabbrüchen kommt. Das ist seit 2006 in den Standard IEEE 802.11r übernommen worden. Daher gehe ich darauf nicht weiter ein.<br />
+Zur Optimierung eines Mesh unterstützt OpenWrt noch die Standards <a href="https://de.wikipedia.org/wiki/IEEE_802.11k">IEEE 802.11k</a> (Neighbor Reports) und <a href="https://de.wikipedia.org/wiki/IEEE_802.11v">IEEE 802.11v</a> (Network assisted roaming), siehe: https://openwrt.org/docs/guide-user/network/wifi/roaming … Beide sind mittlerweile Bestandteil des generellen Standards ab 802.11-2024.</p>
+
+<h1 id="wenn-es-das-fertig-gibt-warum-selbst-bauen">Wenn es das fertig gibt, warum selbst bauen?</h1>
+<p>AVM funktionierte seit mehr als 25 Jahren perfekt für mich. Letztes Jahr wurde der Familienbetrieb von einem Großkonzern gekauft. Bereits zuvor wurde sichtbar, dass die QA nichtmehr Lückenlos funktioniert. Es gibt weiterhin im Verglech zu anderen “big playern” sehr wenig Meldungen zur Sicherheit, aber die Firmware wird mit immer mehr Features versehen, die Fehler häufen sich.</p>
+
+<p>Die oben genannten Standards haben das Ziel ‘Herstellerunabhängig’ zu sein. Heute baue ich mein Netzwerk komplett mit GL.iNet Geäten auf, weil diese am besten zu meiner Infrastruktur passen. Morgen vielleicht ein anderes Unternehmen.</p>
+
+<h1 id="setup-des-isp-routers">Setup des ISP Routers</h1>
+<p>In Deutschland wurde lange diskutiert, aber ab August 2016 der <a href="https://de.wikipedia.org/wiki/Routerzwang">Routerzwang</a> abgeschafft. Das bedeutet ich darf an meinem Endpunkt jeden Router einsetzen, den ich will, ich muss nicht zwingend ein Gerät vom ISP (Internet Service Provider) nutzen.<br />
+Das klingt auf dem Papier sehr positiv, aber in der Praxiszeigt sich, dass dadruch oft im Supportfall der Endkunde verantwortlich gemacht wird, weil man nicht auf den Router für eine Analyse kann. Möchte ich als Endkunde, dass der Provider auf meien Router, und somit in mein Netzwerk kommt? Eigentlich nicht. Der Routerwechsel setzt aber ein technisches Grundverständnis voraus, so dass man vor einem 1st Level Support Mitarbeiter argumentieren kann, dass ein Diesntneustart genügt und kein ‘Stromlos machen’ notwendig ist … am Ende zieht man doch kurz den Stecker um endlich eine Problemlösung zu bekommen.</p>
+
+<p>Während viele Provider irgendwelche Speedport oder Zyxel Router angeboten haben, war die AVM Fritz!Box meistens als Alternative gegen Aufpreis verfügbar. Wer eine fritz!Box von einem der großen Anbieter bekommen hat hatte manchmal das Glück, dass die Standard Firmware drüber lief, manchmal benötigte es mehr Aufwand, wie das anpassen der Seriennummer im <a href="https://openwrt.org/docs/techref/flash.layout#mtd_memory_technology_device_and_mtdsplit">mdt</a> oder ähnliches.</p>
+
+<p>Aus dem Grunde habe ich mich dazu entschlossen auf GL.iNet zu setzen.<br />
+GL.iNet setzt auf OpenWrt auf, und bietet viele Funktionen in ihrer eigenen Oberfläche, welche das Bedienen deutlich einfacher macht. Für den normalen Heimgebrauch vollkommen ausreichend und die Travel Router sind unterwegs gold.<br />
+Leider baut GL.iNet in einige Router Hadrware mit Closd Source SDK, so dass ein Upgrade oder Switch zu nativem OpenWrt nicht so einfach möglich ist. Daher habe ich mich für den Flint2 als Basis entschieden und die Beryl Serie als Sateliten, welche 100% OpenWrt unterstützt sind.</p>
+
+<h2 id="glinet-flint2-gl-mt6000">GL.iNet Flint2 (GL-MT6000)</h2>
+<p>Der <a href="https://www.gl-inet.com/products/gl-mt6000/">Flint2 (GL-MT6000)</a> ist etwas in die Jahre gekommen, aber mit 2x 2,5 Gbit RJ45 (plus 4x 1 GBit) und WiFi6 noch nicht zu alt. Verglichen zu meiner neusten Fritz!Box 7590 ist die Ausstattung sogar aktueller.</p>
+
+<h3 id="openwrt-herunterladen">OpenWrt herunterladen</h3>
+<p>Für OpenWrt gibt es den Firmware Selector unter <a href="https://firmware-selector.openwrt.org/">https://firmware-selector.openwrt.org/</a>. Mit dem Suchbegriff <code class="language-plaintext highlighter-rouge">MT6000</code> wird das Ergebnis <code class="language-plaintext highlighter-rouge">GL.iNet GL-MT6000</code> vorgeschlagen, welchen wir auswählen.<br />
+Oben rechts, hinter dem Suchenfeld, kann der Version ausgewählt werden. Ich erstelle diese Anleitung mit <code class="language-plaintext highlighter-rouge">25.12.2</code>. Solange wir einen funktionierendne Flint2 haben wählen wir darunter den Button <code class="language-plaintext highlighter-rouge">SYSUPGRADE</code>.<br />
+Für jeden erdenklichen Status von ‘Router funktioniert’ und vor ‘Router brennt’ gibt es unterschiedliche Optionen der Firmware. Die alle zu erklären wäre ein eigener Beitrag.</p>
+
+<h3 id="openwrt-installieren">OpenWrt installieren</h3>
+<p>Wird der Flint2 frisch gestartet, ist die GL.iNet Adminoberfläche unter <a href="http://192.168.8.1/">http://192.168.8.1/</a> zu erreichen. Der Client an einem der LAN Ports erhält automatisch eine IP aus dem 192.168.8.0/24 Netz. Diese kann auf Wunsch manuell gesetzt werden.</p>
+
+<p>Links im Menu unter ‘System - Upgrade’ kommt man zum internen Firmware upgrade. Im neuen Fenster unter dem Reiter ‘Firmware Local Upgrade’ kann eine beliebige kompatible Firmwaredatei hochgeladen werden. Hier laden wir die gerade heruntergeladene Datei, z.B. <code class="language-plaintext highlighter-rouge">openwrt-25.12.2-mediatek-filogic-glinet_gl-mt6000-squashfs-sysupgrade.bin</code>, hoch.<br />
+Ganz wichtig: Wir wollen auf keinen Fall die Einstellungen übernehmen! Das klingt zwar verlockend, aber die Einstellungen der GL.iNet Firmware und von OpenWrt sind inkompatibel.</p>
+
+<p>Nach der erfolgreichen Installation ist OpenWrt unter <a href="http://192.168.1.1/">http://192.168.1.1/</a> zu erreichen. Als Benutzer wird <code class="language-plaintext highlighter-rouge">root</code> eingetragen, das Passwort bleibt leer.</p>
+
+<h2 id="openwrt-basiskonfiguration">OpenWrt Basiskonfiguration</h2>
+<p>Im generellen ist OpenWrt im Auslieferungszustand sicher, da keine unnötigen Dienste installiert oder gestartet sind. Dennoch gibt es ein paar Einstellungen, welche man zum Start setzen sollte.</p>
+
+<p>Im Menü oben: System - Administration</p>
+
+<ul>
+  <li>Reiter: Router Passwort -&gt; Passwort für root setzen<br />
+In der Standardusführung ist kein Standardpasswort gesetzt, dadurch kann man dieses auch nicht vergessen zu ändern.</li>
+  <li>Reiter: SSH Access -&gt; Interface: lan<br />
+Damit ist die remote SecureShell (SSH) nur über das LAN Interface erreichbar und nicht aus dem WAN oder einem später eingerichteten VLAN.</li>
+  <li>Reiter: HTTP(S) Access -&gt; Redirect to HTTPS<br />
+OpenWrt funktioniert maximal kompatibel über http. Mit dieser Option wird es auf https gestellt, damit z.B. Passworte nicht mehr in Klartext im Netzwerk übertragen werden.</li>
+</ul>
+
+<p>Ein paar Einstellugngen am System helfen das System in der Infrastruktur zu integrieren.</p>
+
+<p>Im Menü oben: System - System</p>
+
+<ul>
+  <li>Reiter: General Settings -&gt;
+    <ul>
+      <li>Timezone: ‘Europe/Berlin’, Button: Sync with Browser (oder NTP-Server).</li>
+      <li>Hostname: Für Mesh anpassen</li>
+    </ul>
+  </li>
+  <li>Reiter: Timesynchronisation -&gt; belassen oder andere Source</li>
+</ul>
+
+<h3 id="openwrt-aktualisieren">OpenWrt aktualisieren</h3>
+
+<p>Ein Router ist ein Embbeded Device mit einer sehr speziellen Aufgabe. Dieses System ist anders zu behandeln als ein PC oder eine Spielekonsole. Das blinde Updaten aller Pakete (<code class="language-plaintext highlighter-rouge">apk upgrade</code>) ist bei der Erstinstallation sinnvoll, aber wenn die Services konfiguriert sind, kann dieses Vorgehen wichtige Konfigurationen oder individuelle Anpassungen überschreiben und somit das Netzwerk brechen.<br />
+Im besten Fall bekommt man sofort mit das eine oder mehrere Funktionen nicht mehr erreichbar sind, im schlimmsten Fall entsteht eine nicht entdeckte Sicherheitslücke. Wenn es keinen dringenden Grund (Bugfix, Sicherheitslücke, …) gibt, sollte man sich überlegen ob ein Upgrade von Paketen zwischen den Major Releases druchgeführt werden muss.<br />
+Ihr glaubt mir nicht? OpenWrt behauptet das auch: https://openwrt.org/docs/guide-user/additional-software/apk#updating_packages</p>
+
+<p>Im Menü oben: System - Software</p>
+
+<p>Actions: Button: ‘Update Lists …’ -&gt; Warten und Dismiss<br />
+Reiter: Updates -&gt; Jedes Paket mit dem Button ‘Upgrade…’ auswählen.<br />
+Bei der Option ‘Allow overwriting conflicting package files’ aufpassen, da lokale Konfigurationen überschrieben werden können. Auch Zertifikats Schlüssel und VPN Konfigurationen. Siehe oben.</p>
+
+<p>Im Terminal:<br />
+Per SSH mit dem OpenWrt verbinden, z.B. <code class="language-plaintext highlighter-rouge">ssh root@192.168.1.1</code>
+ <code class="language-plaintext highlighter-rouge">opkg update opkg list-upgradable | cut -f 1 -d ' ' | xargs -r opkg upgrade</code></p>
+
+<p>Ab OpenWrt 25.12 wird der Paketmanager von <strong>opkg</strong> zu <strong>apk</strong>. Damit wird auch die cut/xargs Magie überflüssig:
+<code class="language-plaintext highlighter-rouge">apk update &amp;&amp; apk upgrade</code></p>
+
+<p>Hilfe zum Wechsel auf apk: https://openwrt.org/docs/guide-user/additional-software/opkg-to-apk-cheatsheet</p>
+
+<h3 id="dhcp-konfigurieren">DHCP konfigurieren</h3>
+
+<p>Om OpenWrt gibt es eine Einstellung für DHCP, diese ist für den Dienst an sich. Viel interessanter für die Einrichtung am Router ist die Einstellung unter ‘Network - Interfaces’ und dem entsprechenden Netzwerkadapter. Für jeden Netzwerkadapter wird der DHCP Service indivuduell konfiguriert.</p>
+
+<p>Im Menü oben: Network - Interfaces</p>
+
+<p>Adapter: LAN - Button: Edit</p>
+<ul>
+  <li>Tab ‘General Settings’ -&gt;
+    <ul>
+      <li>IPv4 address: 192.168.1.1 (Die Interface Adresse bestimmt die ersten Oktett der vergebenen DHCP Adressen)</li>
+      <li>IPv4 netmask: 255.255.255.0 (Bestimmt die Größe des Netzwerks, hier 192.168.1.0/24)</li>
+    </ul>
+  </li>
+  <li>Tab: ‘Advanced Settings’ -&gt; Einstellungen für den DHCP server, nicht für die Clients</li>
+  <li>Tab: ‘DHCP server’ -&gt; Einstellungen für den DHCP Server
+    <ul>
+      <li>Tab: ‘General Settings’ -&gt; DHCP Options für z.B. individuelle DNS Server per DHCP (mit + ‘speichern’)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>In der Praxis hat es sich bewährt für die erstem Tage die Leasetime auf 2h zu setzen, um fehlkonfigurationen zeitnah verschwinden zu lassen. In der Praxis können diese deutlich länger gestellt werden.</p>
+
+<h3 id="dns-domain-name-service">DNS (Domain Name Service)</h3>
+
+<p>Das DNS besteht aus 2 Teilen. Zum einen werden die Namen intern vom eigenen DNS aufgelöst, dieses kann auch die DHCP Clients beinhalten. Zum Anderen gibt es einen Upstream DNS Server, an den alle Anfragen geleitet werden, welche nicht intern beantwortet werden können.</p>
+
+<p>Im Menü oben: Network - Interfaces</p>
+
+<h4 id="internal">Internal</h4>
+<p>Als Standard bekommen die Clients den eigenen DNS Server (IP des Routers) per DHCP mitgeteilt. Wenn dieses nicht gewünscht ist, kann der oder die DNS Server mit der DHCP Option 6 konfiguriert werden:</p>
+
+<p>Adapter: LAN - Button: Edit</p>
+
+<ul>
+  <li>Tab: ‘DHCP server’ -&gt; Einstellungen für den DHCP Server
+    <ul>
+      <li>Tab: ‘General Settings’ -&gt; <code class="language-plaintext highlighter-rouge">6,192.168.1.53,8.8.8.8</code> (mit + ‘speichern’)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="upstream">Upstream</h4>
+<p>Adapter: WAN - Button: Edit</p>
+
+<ul>
+  <li>Tab: ‘Advanced Settings’ -&gt; Uncheck ‘Use DNS servers advertised by peer’</li>
+</ul>
+
+<h3 id="ntp-zeitserver">NTP (Zeitserver)</h3>
+<p>Diverse Protokolle im Netzwerk und Internet sind stark Zeitabhängig. Zum Beispiel Kerberos für die Windows Authenifikation per Active Directory, aber auch OTP Dienste oder einige Verschlüsselungen. Eine falsche lokale Systemzeit sorgt für eine Abweichung und somit zu einem nicht funktionierenden System.</p>
+
+<p>Oben im Menü: System - System</p>
+
+<ul>
+  <li>Tab: Time Synchronisation -&gt; Check ‘Provide NTP Server’<br />
+Damit wird im OpenWrt die Funktion des Zeitserver für die Clients aktiviert.
+    <ul>
+      <li>‘Bind NTP server’: LAN</li>
+    </ul>
+  </li>
+</ul>
+
+<p>(Todo: DHCP NTP server)</p>
+
+<h2 id="netzwerke-erstellen-mit-vlan">Netzwerke erstellen mit VLAN</h2>
+<p>Die Netzwerke benötigen ein wenig mehr Planung. An dieser Stelle gerne eine kurze Pause einlegen, tief durchatmen und ein Getränk zubereiten.</p>
+
+<p>OpenWrt hat ein Sicherheitsmechanismus, der eine Konfigurationsänderung speichert und aktiviert, wenn innerhalb von 90 Secunden keine neue Anmeldung an der Weboberfläche druchgeführt wurde, wird die Konfiguration wieder zurückgerollt.<br />
+Das ist gerade am Anfang sehr angenehm um etwas zu testen, allerdings habe ich es auch geschafft dass ich mich trotz Rollback ausgesperrt habe. Also lieber kleinere Schritte zwischendruch Speichern/Bestätigen, als einen großen Schwung.</p>
+
+<p>Ich kann ganz einfach pro geplantem Netzwerksegment eine Bridge erstellen und dort die entsprechenden physikalischen Ports hinzufügen. Über ‘Interfaces’ vergebe ich der Bridge die notwendigen Konfigurationen für DHCP und anderes.<br />
+Funktioniert. Wird nur kompliziert den Überblick der VLAN Konfigurationen zu behalten.<br />
+Ich habe ein Device erstellt ‘vSwitch’ und dem alle LAN Ports (außer WAN) zugewiesen. Das vereinfacht das zentrale Management.</p>
+
+<p>Für das VLAN gibt es zwei Arten von Ports.</p>
+<ol>
+  <li>Untagged, das bedeutet alles was dort rein kommt ist ein normales Netzwerkgerät, ohne IEEE 802.1v Standard.</li>
+  <li>Tagget, das bedeutet die Entgeräte verstehen VLAN nach IEEE 802.1v und geben an zu welcher VLAN ID sie gehören.</li>
+</ol>
+
+<p>Eine Besonderheit von OpenWrt ist, dass der Port ein einziges Untagged VLAN und mehrere Tagged versteht. Alles was an dem Port ohne VLAN Konfiguration angeschlossen wird, wird in ein ‘default VLAN’ gerouted. Das funktioniert nicht bei allen VLAN Geräten, die meisten die ich kenne können auf einem Port nur eine Untagged ID oder beliebig viele Tagged ID verwalten.</p>
+
+<p>Im Menü oben: Network - Interfaces</p>
+
+<ul>
+  <li>Reiter: ‘Devices’
+    <ul>
+      <li>Button ‘Add device configuration …’
+        <ul>
+          <li>Device Type: ‘Bridge device’</li>
+          <li>Device Name: ‘vSwitch’, …</li>
+          <li>Ports: Wähle Ports, die nicht woanders gebunden sind</li>
+          <li>Reiter: ‘VLAN’</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">VLAN ID</th>
+      <th style="text-align: center">LAN1</th>
+      <th style="text-align: center">LAN2</th>
+      <th style="text-align: center">LAN3</th>
+      <th style="text-align: center">LAN4</th>
+      <th style="text-align: center">LAN5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: center">U</td>
+      <td style="text-align: center">U</td>
+      <td style="text-align: center">U</td>
+      <td style="text-align: center">U</td>
+      <td style="text-align: center">U</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">10</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">20</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Reiter: ‘Interfaces’
+    <ul>
+      <li>Device ‘LAN’ -&gt; Button ‘Edit’
+        <ul>
+          <li>Device: Von ‘br-lan’ auf ‘vSwitch.1’ (.1 ist die ID Eures VLAN)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Das Device ‘br-lan’ kann entfernt werden nachdem der Zugriff getestet wude und weiterhin funktioniert.</p>
+
+<p>Jetzt werden die anderen VLAN angelegt:</p>
+
+<ul>
+  <li>Reiter: ‘Interfaces’
+    <ul>
+      <li>Button ‘Add new interface …’
+        <ul>
+          <li>Name: ‘guest’ (‘iot’, ‘dmz’, …)</li>
+          <li>Protocol: ‘Static address’</li>
+          <li>Device: ‘Bridge:  “vSwitch.10”’ (“vSwitch.20”, “vSwitch.nn”, …)</li>
+          <li>Button ‘Create Interface’
+            <ul>
+              <li>IPv4 Address: 192.168.n.1, Netmask: 255.255.255.0<br />
+Es hat sich bewährt bei /24 Netzen das 3. Oktett (n) gleich der VLAN ID zu setzen.</li>
+            </ul>
+          </li>
+          <li>Reiter: DHCP
+            <ul>
+              <li>Enable DHCP</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Button ‘Save and Apply’</p>
+
+<h2 id="firewall">Firewall</h2>
+<p>Die Firewall wird im Allgemeinen als Blocker für böses aus dem Internet verstanden. Dabei kann eine Linux Firewall noch viel mehr. Mittels Firewall (bis OpwnWrt 21.02 <code class="language-plaintext highlighter-rouge">iptables</code>, ab OpenWrt 22.03 <code class="language-plaintext highlighter-rouge">nftables</code>) kann der Netzwerkverkehr nicht nur gesperrt, sondern auch definiert umgeleitet werden.<br />
+Zuerst werden wir die Firewall im generellen für den Gebrauch im Heimnetzwerk optimieren.</p>
+
+<p>Oben im Menü: Network - Firewall</p>
+
+<ul>
+  <li>Reiter: ‘General Settings’
+    <ul>
+      <li>Check ‘Drop invalid packages’</li>
+      <li>Forward: ‘Drop’<br />
+Die Voreinstellung ‘Reject’ ist zwar sicher, benötigt aber mehr CPU, da eine negative Antwort auf Anfragen generiert wird. Bei Drop wird das Paket einfach verworfen.</li>
+      <li>Zones:
+        <ul>
+          <li>Lan -&gt; wan: IPv4 Masquerading if main router</li>
+          <li>wan -&gt; reject: Input drop, Intra zone forward: drop, Masquerading: uncheck</li>
+        </ul>
+      </li>
+      <li>Button: Add
+        <ul>
+          <li>Guest -&gt; reject: Input drop, Output accept, Intra zone forward: accept, Masquerading: check</li>
+        </ul>
+      </li>
+      <li>Button: Add
+        <ul>
+          <li>IoT -&gt; reject: Input drop, Output accept, Intra zone forward: accept, Masquerading: check</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Unter ‘Allow forward to destination zone’ wird definiert wohin das Netz senden darf. Hier wird in der Regel ‘WAN’ angegeben, um Zugriff zum Internet zu erlauben.<br />
+Unter ‘Allowed forward from source zone’ wird definiert aus welchem Netzwerk in dieses Netzwerk kommuniziert werden darf. In der Übersicht steht dieser Eintrag dann umgekehrt in der ‘Source zone’ als ‘destination’.</p>
+
+<p>Damit das neue Netz ein Router erreicht, werden individuelle Regeln angelegt. Je nach Geschmack können mehrere Protokolle in einen Eintrag zusammengefasst werden, aber gerade für Basisdienste würde ich die Einträge trennen. Vielleicht will ich später den DNS Server auslagern, aber der DHCP Server bleibt der Router selbst.</p>
+
+<ul>
+  <li>Tab: ‘Traffic Rules’
+    <ul>
+      <li>Button: ‘Add’
+        <ul>
+          <li>Name: ‘guest-dhcp’</li>
+          <li>Protocol: UDP für DHCP</li>
+          <li>Source zone: guest</li>
+          <li>Destination zone: Device (input)</li>
+          <li>Destination port: 67 68</li>
+        </ul>
+      </li>
+      <li>Button: ‘Add’
+        <ul>
+          <li>Name: ‘guest-dns’</li>
+          <li>Protocol: UDP, TCP</li>
+          <li>Source zone: guest</li>
+          <li>Destination zone: Device (input)</li>
+          <li>Destination port: 53</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Das für alle VLAN mit entsprechenden Namen wiederholen.</p>
+
+<h3 id="nat">NAT</h3>
+<p>Die IPv4 Adressen sind begrenzt, das bedeutet man bekommt in der Regel vom Internet Service Provider nur eine IP Adresse zugewiesen. Das NAT (Network Adress Translation) sorgt bei IPv4 dafür, dass von einem beliebigen Gerät aus dem LAN eine Anfrage an das WAN gesendet werden kann, und die Antwort an das Anfragende Gerät zurück gesendet wird. Für das internet sehen mehrere Anfragen aus verschiedener Geräte so aus, als würden sie alle vom Router selbst kommen.</p>
+
+<p>Über die Checkbox hinter jeder Regel oder deaktivieren. Über den Tab ‘NAT rules’ funktioniett das differenzierter.</p>
+
+<p>Bisher haben wir das Netzwerk verkabelt erstellen. Das funktioniert mit jedem OpenWrt Gerät. Wenn das Gerät mindestens 2 RJ45 Ports besitzt (1x WAN, 1x LAN), sollte die oben genannte Konfiguration keine Probleme machen. Alle Endgeräte sollten in dem Fall VLAN fähig sein, wenn wir keine LAN Ports für ein Extra VLAN untagged konfigurieren können.</p>
+
+<h2 id="wlan">WLAN</h2>
+<p>Der Flint2 besitzt, wie viele Router, die WLAN Funktion. Dieser Router hat 2 Radio Devices, einen für das 2,4 GHz Band und einen für 5 GHz. Die sind in der Standardkonfiguration von OpenWrt nicht aktiv, obwohl ein Standardprofil mit der SSID ‘OpenWrt’ hinterlegt ist.</p>
+
+<p>Im Menü oben: Network - Wireless<br />
+Tipp: Wenn der Reiter nicht existiert, muss ein Treiber für die WLAN Karte nachinstalliert werden. Eine Übersicht der unterstützten Treiber gibt es unter https://openwrt.org/docs/techref/driver.wlan/start</p>
+
+<h3 id="24-ghz-hauptwlan">2,4 GHz HauptWLAN</h3>
+<p>Unter ‘Radio 0’ auf die Vorlage mit ‘SSID: OpenWrt’ den Button ‘Edit’ klicken oder über ‘Add’ eine Neue erstellen.</p>
+<ul>
+  <li>Reiter: ‘General Setup’
+    <ul>
+      <li>Operating Frequency: AX, Channel 1, 6 or 11, Width: 20 MHz</li>
+      <li>Unterreiter: ‘General Settings’
+        <ul>
+          <li>ESSID: Der Name des WLAN</li>
+          <li>Network: eines der unter ‘Network - Interfaces’ erstellte Interface.</li>
+        </ul>
+      </li>
+      <li>Unterreiter: ‘WLAN Encryption’
+        <ul>
+          <li>‘WPA2-PSK/WPA3-SAE Mixed Mode’</li>
+        </ul>
+      </li>
+      <li>Untereiter: ‘WLAN Roaming’
+        <ul>
+          <li>802.11r -&gt; Checkbox aktivieren</li>
+          <li>NAS ID: 0001 für den HauptAP, alle weiteren AP mit fortlaufender Nummerierung.</li>
+          <li>Mobility Domain: 4 Byte Hex Wert. Diese muss auf allen AP im Mesh gleich sein. Standard auf neueren OpenWrt: Die ersten 4 Byte der SSID MD5sum.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>WLAN Verschlüsselungen im Überblick:</p>
+<ul>
+  <li>Offen - Nein.</li>
+  <li>WEP/WPA - Zu alt, das wollen wir nicht in unserem Netzwerk haben, da kann man auch Offen wählen, das verrät zumindest kein Kennwort.</li>
+  <li>WPA2 - bietet maximale Kompatiblität, gerade für ältere Geräte oder IoT sollte man das weiterhin unterstützen.</li>
+  <li>WPA3 - Das ist der heutige Standard, der ist nicht nur im Ansatz sicherer, sondenr verhindert auch das Remote Deauth druch unbefugte.</li>
+</ul>
+
+<p>Tipp: Generell steht es einem frei jeden Kanal zu nutzen. Empfohlen wird allerdings bei 1, 6 oder 11 zu bleiben, da bei diesen Frequenzen die geringseten Überlappungen existieren. Das WLAN kann Intefferenzen durch konkurierende WLAN zwar in Grenzen kompensieren, das funktioniert aber besser mit WLAN im identischen Frequenzspektrum, als mit WLAN mit überlapungen.</p>
+<ol>
+  <li>Einen Frequenzscan druchführen und schauen wo am wenigsten los ist.</li>
+  <li>Nach Möglichkeit einen ungenutzten Bereich wählen</li>
+  <li>Wenn kein Bereich frei ist, den mit der geringsten Auslastung (und Überlappung) auf den Kanälen 1, 6 oder 11 nutzen.</li>
+</ol>
+
+<h3 id="5-ghz-hauptwlan">5 GHz HauptWLAN</h3>
+<p>Unter ‘Radio 1’ auf die Vorlage mit ‘SSID: OpenWrt’ den Button ‘Edit’ klicken oder über ‘Add’ eine Neue erstellen.</p>
+<ul>
+  <li>Reiter: ‘General Setup’
+    <ul>
+      <li>Operating Frequency: AC, Channel 134 (dreistellig darf mehr Watt senden), Width: 40 MHz</li>
+      <li>Untereiter: ‘WLAN Roaming’
+        <ul>
+          <li>802.11r -&gt; Checkbox aktivieren</li>
+          <li>NAS ID: 0001 für den HauptAP, alle weiteren AP mit fortlaufender Nummerierung.</li>
+          <li>Mobility Domain: 4 Byte Hex Wert. Diese muss auf allen AP im Mesh gleich sein. Standard auf neueren OpenWrt: Die ersten 4 Byte der SSID MD5sum.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="gästeiot-wlan">Gäste/IOT WLAN</h3>
+<p>Unter ‘Radio 0’ (2.4 GHz) über ‘Add’ eine neue Vorlage erstellen.</p>
+<ul>
+  <li>Reiter: ‘General Setup’
+    <ul>
+      <li>Operating Frequency: AX, Channel 1, 6 or 11, Width: 20 MHz</li>
+    </ul>
+  </li>
+  <li>Reiter: ‘Advanced settings’: Isolate clients</li>
+</ul>
+
+<p>Unter ‘Radio 1’ (5 GHz) über ‘Add’ eine neue Vorlage erstellen.</p>
+<ul>
+  <li>Reiter: ‘General Setup’
+    <ul>
+      <li>Operating Frequency: AC, Channel 161 (dreistellig darf mehr Watt senden), Width: 40 MHz</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="setup-meshap">Setup MeshAP</h1>
+<p>OpenWrt nennt die ‘Satelliten’ im Mesh “Dumb AP”. Dieses sind im Kern meist router, aber es werden sämtliche Routingfunktionen und Services (DHCP, DNS, …) entfernt.</p>
+
+<h2 id="beryl-ax-glinet-mt-3000">Beryl AX (Gl.iNet MT-3000)</h2>
+<p>Der <a href="https://www.gl-inet.com/products/gl-mt3000/">Beryl AX (GL-MT3000)</a> ist ein deutlich kleineres Gerät als der Flint2, er bietet nur 2 LAN Ports, darunter 1x 2,5 GHz für WAN und 1 GBit für LAN. Da er nur als AP funktionieren soll reicht uns sein WiFi6 vollkommen aus. Der Upling zum Flint2 wird über dne WAN Port umgesetzt.<br />
+Es ist empfehlenswert für die Ersteinrichtung nur einen PC oder einen Laptop per Kabel an den Beryl AX LAN Port anzuschliessen. Über den WAN Port kann er in das vorhandene LAN gebracht werden, z.B. um das OpenWRT Image herunterzuladen.</p>
+
+<h3 id="openwrt-herunterladen-1">OpenWrt herunterladen</h3>
+<p>Für OpenWrt gibt es den Firmware Selector unter <a href="https://firmware-selector.openwrt.org/">https://firmware-selector.openwrt.org/</a>. Mit dem Suchbegriff <code class="language-plaintext highlighter-rouge">MT3000</code> wird das Ergebnis <code class="language-plaintext highlighter-rouge">GL.iNet GL-MT3000</code> vorgeschlagen, welchen wir auswählen.<br />
+Oben rechts, hinter dem Suchenfeld, kann der Version ausgewählt werden. Ich erstelle diese Anleitung mit <code class="language-plaintext highlighter-rouge">25.12.2</code>. Solange wir einen funktionierenden Beryl AX haben wählen wir darunter den Button <code class="language-plaintext highlighter-rouge">SYSUPGRADE</code>.</p>
+
+<h3 id="openwrt-installieren-1">OpenWrt installieren</h3>
+<p>Wird der Beryl AX frisch gestartet, ist die Oberfläche unter <a href="http://192.168.8.1/">http://192.168.8.1/</a> zu erreichen. Der Client an einem der LAN Ports erhält automatisch eine IP aus dem 192.168.8.0/24 Netz. Diese kann auf Wunsch manuell gesetzt werden.</p>
+
+<p>Links im Menu unter ‘System - Upgrade’ kommt man zum internen Firmware upgrade. Im neuen Fenster unter dem Reiter ‘Firmware Local Upgrade’ kann eine beliebige kompatible Firmwaredatei hochgeladen werden. Hier laden wir die gerade heruntergeladene Datei, z.B. <code class="language-plaintext highlighter-rouge">openwrt-25.12.2-mediatek-filogic-glinet_gl-mt3000-squashfs-sysupgrade.bin</code> hoch.<br />
+Ganz wichtig: wir wollen auf keinen Fall die Einstellungen übernehmen! Das klingt zwar verlockend, aber die Einstellungen der GL.iNet Firmware und von OpenWrt sind inkompatibel.</p>
+
+<p>Nach der erfolgreichen Installation ist OpenWrt unter <a href="http://192.168.1.1/">http://192.168.1.1/</a> zu erreichen. Als Benutzer wird <code class="language-plaintext highlighter-rouge">root</code> eingetragen, das Passwort bleibt leer.</p>
+
+<h2 id="dumbap-basiskonfiguration">DumbAP Basiskonfiguration</h2>
+<p>Das OpenWrt ist in der Basisinstallation ein vollwertiger Router. Zwei Router können wir im Netzwerk nicht gebrauchen, diese würden sich dann um DHCP Zuweisung und ähnliches streiten. Daher stellen wir zuerst einige Dienste ab.</p>
+
+<h3 id="openwrt-router-zu-dumb-ap">OpenWrt Router zu Dumb AP</h3>
+<p>Oben im Menu:</p>]]></content><author><name>Benjamin Moeller</name></author><category term="howto" /><category term="produkte" /><category term="openwrt" /><category term="glinet" /><summary type="html"><![CDATA[Seit ich denken kann hatte ich AVM Fritz! Geräte als Router für mein Heimnetzwerk benutzt. Zuerst den Fritz!ISDN USB, eine externe ISDN Karte, dann alle möglichen Varianten der Fritz!Box. Ein Gerät was einfach alles macht, von Internetrouting über DECT Basis mit VoIP Telefonie bis hin zum Faxmodem als man kein Gerät mehr zuhause stehen haben wollte. Und das alles mit einer herausragenden Linux Unterstützung in einem einfachen “Mesh”. Der Marketingbegriff Mesh beinhaltet hier auf der einen Seite, dass man das WLAN am zentralen Punkt einstellt und die Konfiguration an alle verbundenen AP übertragen wird. Auf der anderen Seite bedeutet es, dass ein Endgerät (z.B. Mobiltelefon) ohne Unterbrechung von einem zum anderen AP wechseln kann. Das funktioniert nur unter AVM Geräten.]]></summary></entry><entry><title type="html">Gl.iNet - Shadowapple</title><link href="http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple.html" rel="alternate" type="text/html" title="Gl.iNet - Shadowapple" /><published>2026-01-25T18:34:03+00:00</published><updated>2026-01-25T18:34:03+00:00</updated><id>http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple</id><content type="html" xml:base="http://blog.lupuse.org/experimente/2026/01/25/glinet-use-shadow-as-mangoapple.html"><![CDATA[<h1 id="was-ist-ein-mangoapple">Was ist ein Mangoapple?</h1>
 <p>Es gibt von Hak5 den Wifi Pinapple. Die kleinste Version nutzt den gleichen Chipset wie der <a href="https://www.gl-inet.com/products/gl-mt300n-v2/">GL.iNet Mango</a>. Also hat ser Benutzer xchwarze das Projekt portiert: https://github.com/xchwarze/wifi-pineapple-cloner<br />
 Der Benutzer SHUR1K-N hat das ganze auf den GL.iNet Mango adaptiert und einige hilfreiche Anleitungen geschrieben: https://github.com/SHUR1K-N/WiFi-Mangoapple-Resources<br />
 Leider setzt dieses Projekt die uralt Version 19.07 von OpenWrt voraus. Anscheinend wurde es vor kurzem auf zumindest 21.02 aktualisiert.<br />
@@ -880,410 +1463,4 @@ Jedes mal, wnen ich auf den Knopf drücke und die Tür zu meinem Auto auf geht, 
 Dabei ist in der Theorie die IR Fernbedienung gar nicht viel anders als der Autoschlüssel. Nur im Aufbau deutlich einfacher und ohne Rolling Code und ohne Crypto.</p>
 
 <p>Wenn ich meinen Auto-Pieper oder die TV Fernbedienung nicht benutze, dann kann auch niemand etwas mitschneiden. Wenn jemand etwas mitschneiden kann und es ‘einfach kopiert’ (Replay Attacke), dann ist das eingesetzte Protokoll schrott. Das kommt seltener vor als man denkt, aber da die Medien sich auf jeden Fall stürzt und nicht gegenber stellt wie viele autos sicher sind, ist die Wirkung anders.<br />
-Dann gibt es natürlich noch die, welche mit einem Laptop und einem SDR alles mitschneiden, die gängigen Codes kennen und den Rest mittels Brute Force (Vorschlaghammer) durchraten … wer diesen Aufwand betreibt um meine leere Jacke aus dem Auto zu klauen, der hat sich diese aber auch verdient.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="produkte" /><summary type="html"><![CDATA[Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi-Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen. Da das Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf Kickstarter im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen.]]></summary></entry><entry><title type="html">Wohnmobil - Truma Inet X Panel</title><link href="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html" rel="alternate" type="text/html" title="Wohnmobil - Truma Inet X Panel" /><published>2022-05-31T19:22:32+00:00</published><updated>2022-05-31T19:22:32+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil---truma_inet_x_panel</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2022/05/31/wohnmobil-truma_inet_x_panel.html"><![CDATA[<p>Mit meiner Frau habe ich mich über das neue <a href="https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel" target="\_blank">Truma Inet X Panel</a> unterhalten. Sie ist bisher morgens nach vorne zur <a href="https://www.truma.com/de/de/produkte/truma-inet-system/truma-bedienteil-cp-plus" target="\_blank">Truma CP Plus</a> gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen.<br />
-Jetzt hat mein Vater in seinem neuen <a href="https://weinsberg.com/wohnmobile/edition-pepper" target="\_blank">Wohnmobil</a> die das <a href="https://www.truma.com/de/de/produkte/truma-inet-system/truma-inet-set" target="\_blank">CP Plus inklusive der Inet Box</a>, mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit <a href="https://www.truma.com/de/de/produkte/truma-inet-system/truma-app" target="\_blank">Android oder iOS App</a> bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.</p>
-
-<p>Meine Frau guckte mich mit grossen Augen an und fragte “…sollte ich etwa noch nicht bestellen?” …<br />
-… also heute kam mein neues Truma Inet X Panel. Mit Touchsreen, Temperaturautomatik, …</p>
-
-<h1 id="vorher">Vorher</h1>
-
-<p>So haben wir unser <a href="https://4pfoten-mobile.de" target="\_blank">4-Pfoten-Mobil</a> bekommen.<br />
-Links die <a href="https://www.truma.com/de/de/produkte/truma-klimaanlagen/truma-aventa-comfort" target="\_blank">Truma Aventa Comfort</a> Klimaanlagen-Fernbedienung. Oben das Dethleffs Panel. Unten mittig den Taster für die Abwasserheizung (Wintercamping geeignet) und daneben die Truma EisEx. Unten rechts das Truma CP Plus Panel für die <a href="https://www.truma.com/de/de/produkte/truma-heizungen/combi-6" target="\_blank">Truma Combi 6</a>. Der Punkt darunter ist das Truma Raumthermometer.<br />
-Oben das hellblaue steht mein neuer Mobilerouter, das ist <a href="/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html">ein anderes Projekt</a>.<br />
-<img src="/media/truma_inet_x/truma_x_panel-01_before.jpg" alt="Panel mit Truma CP Plus" /></p>
-
-<h1 id="ausbau-truma-cp-plus">Ausbau Truma CP Plus</h1>
-
-<p>Den Drehknopf nach vorne abziehen, darunter befindet sich eine Schraube. Wenn die rausgedreht ist, kann das Panel einfach nach vorne oben geklappt und abgenommen werden.<br />
-<img src="/media/truma_inet_x/truma_x_panel-02_ausbau.jpg" alt="Truma CP Plus" /></p>
-
-<p>Übrig bleiben der rote 12V Stromstecker und der RJ11 TIN Stecker. Bei uns direkt mit Y Adapter für Truma Combi6 und Aventa Comfort.<br />
-Der Rahmen muss noch abgenommen werden.<br />
-<img src="/media/truma_inet_x/truma_x_panel-04_ausbau.jpg" alt="Truma CP Plus - Kabel" /></p>
-
-<p>Oben liegt das alte CP Plus auf dem Display. Im Karton sieht man das Inet X Panel, das deutlich breiter ist.<br />
-<img src="/media/truma_inet_x/truma_x_panel-06_alt_vs_neu.jpg" alt="Truma CP Plus" /></p>
-
-<h2 id="anpassungen-am-holz">Anpassungen am Holz</h2>
-
-<p>Ganz ehrlich: Ich bin kein guter Handwerker. Ich stecke lieber als dass ich Säge und Fräse.</p>
-
-<p>Ich bin davon ausgegangen ich bekomme den Holzkasten ab. Leider sind links zwei Schrauben im Panel, an die ich nicht komme, ohne das halbe Mobil zu zerlegen.<br />
-<img src="/media/truma_inet_x/truma_x_panel-07_panel_leer.jpg" alt="Panel leer" /></p>
-
-<p>Also erstmal ablenken und herausfinden wie ich die Blende der Menuknöpfe ab bekomme. Denn das steht nicht in der Anleitung … Ist einfach: Flachen Schraubendreher in die Seite.<br />
-<img src="/media/truma_inet_x/truma_x_panel-08_front.jpg" alt="Panel leer" /></p>
-
-<p>Nach rechts ist kein Platz um das Loch des CP Plus zu erweitern. Mit Glück würde es bündig mit dem Kasten abschließen (plusminus 1mm), dazu muss ich aber ein Stück eines Winkels (braun, wie oben rechts) weg fräsen.<br />
-Sinnvoller erschien mir das Versetzen der EisEx und Abwassertankheizung und ausarbeiten nach links.<br />
-<img src="/media/truma_inet_x/truma_x_panel-08_panel_3loch.jpg" alt="Ein drittes Loch" /></p>
-
-<p>Das Loch habe ich sehr knapp gemesen (1. Schraube 5mm, 2. Schraube 49mm, dürfte gerne 6+49mm sein), so dass ich den Schalter für die Abwasserheizung nochmal setzen musste. Aber ich konnte jetzt das Panel anzeichen.<br />
-Die Kabel habe ich desöfteren neu gelegt. Die meisten sind in ausreichender Länge, so dass sie nur aus dem Arbeitsbereich geschoben werden mussten. Ein paar ultra lange Kabel habe ich mit Kabelstrapsen versehen, bei der nächsten Aktion werden die wohl gekürzt.<br />
-<img src="/media/truma_inet_x/truma_x_panel-09_einbau_eisex.jpg" alt="Einbau EisEx und Anzeichnen" /></p>
-
-<h1 id="einbau">Einbau</h1>
-
-<p>Passt genau. Um das halbe Loch mache ich mir später Gedanken.<br />
-<img src="/media/truma_inet_x/truma_x_panel-10_einbau_panel.jpg" alt="Einbau Truma Inet X Panel" /></p>
-
-<p>Sieh gut aus und funktioniert.<br />
-<img src="/media/truma_inet_x/truma_x_panel-10_eingebaut.jpg" alt="Sieht gut aus und funktioniert" /></p>
-
-<p><img src="/media/truma_inet_x/truma_x_panel-11_panel_menu.jpg" alt="Menu" /></p>
-
-<h1 id="finale">Finale</h1>
-
-<p>Natürlich habe ich die Klima-Fernbedienung vergessen.<br />
-Schnell nachgeschraubt … Und das halbe Loch? Darüber mache ich mir VIEL später Gedanken.<br />
-<img src="/media/truma_inet_x/truma_x_panel-19_final.jpg" alt="Fertig, zu 98%" /></p>
-
-<h2 id="erster-eindruck">Erster Eindruck</h2>
-
-<p>Die Bedienung auf dem Panel ist etwas träge. Ich weis aber, dass ich eine geringe Körperelektrizität habe und manchmal gerade kapazitive Touchscreens nicht gut funktionieren.<br />
-Die Bedienung auf dem Handy über App ist auch träge, aber auf dem Handy gewohnt zuverlässig.<br />
-Der Praxistest steht aus, meine Frau ist bisher begeistert.</p>
-
-<p>Es wurde einiges an Funktionalität reduziert, da z.B: die Fernsteuerung aktuell nicht gegeben ist. Besonders gespannt bin ich auf die erste Fehlermeldung, das sollen keine cryptischen Codes mehr sein, sondenr nachvollziehbare Sätze.<br />
-Leider ist die Steuerung der EisEx und DuoControl nur mit dem Pro Panel möglich, welches nur bei neuen Mobilen verbaut wird und nicht nachzurüsten ist.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><summary type="html"><![CDATA[Mit meiner Frau habe ich mich über das neue Truma Inet X Panel unterhalten. Sie ist bisher morgens nach vorne zur Truma CP Plus gegangen und hat in der Kälte ein paar Grad nach oben geregelt um wärmer aufzuwachen. Jetzt hat mein Vater in seinem neuen Wohnmobil die das CP Plus inklusive der Inet Box, mit der er die komplette Anlage aus dem Bett steuern kann. Die iNet Box kann mit Android oder iOS App bedient werden. Sie spricht lokal Bluetooth und für den Fernzugriff 2G (GSM). Das 2G Netz wurde in der Schweiz ende 2020 abgeschaltet. 2021 wurde bei uns in Deutschland das 3G (UMTS) Netz abgeschaltet, die Provider planen aber nicht das 2G Netz auch abzuschalten.]]></summary></entry><entry><title type="html">Wohnmobilnetzwerk - Gl.iNet Beryl</title><link href="http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html" rel="alternate" type="text/html" title="Wohnmobilnetzwerk - Gl.iNet Beryl" /><published>2022-05-15T16:24:00+00:00</published><updated>2022-05-15T16:24:00+00:00</updated><id>http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk---glinet_beryl</id><content type="html" xml:base="http://blog.lupuse.org/wohnmobil/2022/05/15/wohnmobilnetzwerk-glinet_beryl.html"><![CDATA[<h1 id="tldr">tl;dr</h1>
-
-<p>Ich hatte erwartet hier wird ein grossartiges Projekt entstehen. Leider funktioniert die Lösung so gut, dass es nicht viel zu beschreiben gibt.</p>
-<ol>
-  <li>gl.iNet Router in gewünschter Ausstattung (und Preis) kaufen: <a href="https://www.gl-inet.com/products/">Gl.iNet Produkte</a></li>
-  <li>An Strom anschliessen, mit warten bis die Lampe durchgehend leuchtet</li>
-  <li>Mit den Daten auf der Unterseite anmelden</li>
-  <li>‘Internet’ per Kabel, WLAN oder Tethering/USB Modem bereitstellen (siehe unten)</li>
-  <li>Fertig</li>
-</ol>
-
-<p>Dabei gibt es folgende Wege für das Internet:</p>
-<ul>
-  <li>Kabel an den Netzwerkport WAN anschliessen. Am einfachsten, gut zum ersten Einrichten, aber selten sinnvoll beim Camping.</li>
-  <li>WLAN Bridge. Unter <strong>Internet</strong> <strong>Repeater</strong> den Button <strong>Scan</strong> klicken, das entsprechende WLAN auswählen, das Passwort eingeben und <strong>Join</strong>/Beitreten klicken. (siehe ‘Tipp’). Das Mittel der Wahl auf dem Campinglplatz, in Kombination mit VPN auch für öffentliche WLAN.</li>
-  <li>USB-Tethering. An den USB Port ein Mobiltelefon oder Tablet mit Internet anschliessen, am Telefon/Tablet ‘Tethering’ freigeben. Für alle Fans des 100% autarken Camping.</li>
-  <li>USB-Modem. Noch nicht getestet.</li>
-</ul>
-
-<blockquote>
-  <p>TIPP: In der aktuellsten Firmware (3.211) gibt es anscheinend 2 Bugs. Der eine betrifft die gesetze Zeit, welche unter Umständen das Verbinden zu WLAN mit Key verhindert. An diesem <a href="https://forum.gl-inet.com/t/20556">arbeitet Gl.iNet anscheinend gerade</a> und vermutlich ist es in der aktuellen Beta behoben. Zum Anderen scheint es ein nicht näher beschriebenes <a href="https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/37">Problem mit Fritz!Boxen</a> zu geben, wegen dem man auf der Firmwareversion 3.203 bleiben sollte.</p>
-</blockquote>
-
-<hr />
-
-<h1 id="vorgeschichte">Vorgeschichte</h1>
-
-<p>Heutzutage benötigt man Internet, auch im Urlaub. Nicht nur als Roadwarrior (arbeiten von Unterwegs), auch um Up-to-Date zu bleiben oder Urlaubsphotos zu posten. Vielleicht möchte man am Abend ein Video oder Musik streamen. Und wenn Kinder ab einem gewissen Alter mit reisen, dann ist das Internet unterwegs nicht mehr optional.</p>
-
-<p>Für Wohnmobile werden unterschiedliche Systeme angeboten und in Fachliteratur getestet:</p>
-<ul>
-  <li>Zum Einen gibt es Pocketrouter (‘Mobile Ostereier’) für 40-150 Euro. Diese werden oft mit einer billigen SIM-Karte, meist PrePaid, betrieben und sind durch den internen Akku auch ausserhalb der Wohnmobils flexibel. Aber diese Lösung ist auf das Mobilfunk-Netz angewiesen. Nachdem was ich weis eher für den gelegentlichen Ein-Personen-Gebrauch eines Tablet/Notebook. Im Ausland kann man einfach eine lokale Karte kaufen und einsetzen. Roaming sollte innerhalb der EU kein Thema mehr sein. Die Systeme gibt es im Angebot von TCM (Tchibo) oder AldiTalk. Dies machen Sinn um autark zu stehen, in Kombination mit meiner beschriebenen Lösung.</li>
-  <li>Zum Anderen gibt es, oft aus dem Bootsbereich, mehr oder weniger klobige Boxen, fest montiert auf dem Dach. Diese bieten deutlich mehr Leistung und mehr Anbindung, z.B. Mobilfunk und WLAN vom Campingplatz. Für 300-900 Euro oder mehr. Bald kommt 5G und ich habe von keinem Gerät gelesen, welches sich ‘einfach’ aufrüsten lässt. Auch ein Faktor: Meine Frau möchte keine zusätzlichen Löcher in ihr Wohnmobil gebohrt haben.</li>
-  <li>Dazwischen gibt es um die 200-400 Euro noch ein paar portable Lösungen, die sicher auch funktionieren. Oft leiden diese unter einem oder mehr Nachteile der vorgenannten Lösungen, aber einige bieten eine sehr gute Übersicht über den aktuellen Datenverbrauch. Die bekanntesten dieser Klasse sind wohl die <a href="https://www.netgear.com/de/home/mobile-wifi/hotspots/">Netgear Hotspot</a> Modelle.</li>
-</ul>
-
-<p>Ich war auf der Suche nach einem kleinen, flexiblen und günstigen Router, der mir im Wohnmobil ein gutes Netzwerk gibt und auch kaputt gehen darf, ohne dass es weh tut.</p>
-
-<h2 id="recherche">Recherche</h2>
-
-<p>Vor einigen Wochen habe ich einen Microrouter der Firma <a href="https://www.gl-inet.com/">Gl.iNet</a> gesehen. Der GL-AR300M-Ext ist eine kleine Box für etwa 32 Euro auf Amazon, mit zwei austauschbaren Antennen. Die Box stellt eine sogenante ‘Bridge’, übersetzt also ein gegebenes Netzwerk in ein eigenes (Network Adress Translation/NAT). Wie das Internet zuhause mit einem Router in das Heimnetzwerk gewandelt wird. Das bedeutet ich kann entweder ein WLAN aufnehmen und das über den LAN Port weiter geben (Laptop ohne WLAN-Karte) oder ich kann ein LAN an die Box anschliessen und ein eigenes WLAN zur Verfügung stellen.</p>
-
-<blockquote>
-  <p>Zu kompliziert? Kurz: Ich kann alles in mein eigenes WLAN übersetzen.</p>
-</blockquote>
-
-<p>Interessant für uns Camper: Durch mehrere Antennen kann ich mit geringem Verlust ein externes WLAN (Campingplatz) aufnehmen und daraus ein eigenes lokales WLAN für alle Geräte in der Nähe bereitstellen. Für das Wohnzimmer auf Rädern perfekt. Durch tauschbaren Antennen könnte ich, ohne die Leistung physikalisch zu ändern, vollkommen legal mehr Reichweite durch Richtwirkung erhalten.<br />
-Die Firma Gl.iNet (Gl steht für Goodlife) kommt aus China, wo das Privatleben im Internet eine ganz andere Gewichtung hat. Also stellt die Box zusätzlich noch ein VPN als Client oder Server zur Verfügung. Das ist für uns nicht ganz so wichtig, aber es ist eine zentrale Funktion und sehr gut umgesetzt, dazu in einem später mehr.</p>
-
-<p>Als Informatiker habe ich mir das Datenblatt angesehen und so richtig hat es mich doch nicht überzeugt. Was bieten die anderen Modelle des Herstellers?</p>
-<ul>
-  <li><a href="https://www.gl-inet.com/products/gl-ar300m/">GL-AR300M</a> (Shadow)/<a href="https://www.gl-inet.com/products/gl-mt300n-v2/">GL-MT300N-V2</a> (Mango) sind kleine günstige Boxen, mit verschiedener Ausstattung. Vergleichbar mit der zuerst erwähnten.</li>
-  <li>Die <a href="https://www.gl-inet.com/products/gl-ar750s/">GL-AR750S</a> (Slate) hat einen deutlich stärkeren Prozessor und mehr RAM (Arbeitsspeicher) und sollte für die meisten Anwendungen im Wohnmobil ausreichen. Stromverbrauch &lt;6W laut Datenblatt. Für 75 Euro okay.</li>
-  <li>Der <a href="https://www.gl-inet.com/products/gl-mv1000/">GL-MV1000W</a> (Brumme-W), derzeit nicht verfügbar.</li>
-  <li>Der <a href="https://www.gl-inet.com/products/gl-sft1200/">GL-SFT1200</a> (Opal) hat einen geringen Strombedarf (2A Netzteil), bei der Unterstützung moderner WLAN-Protokolle und einem schnellen Prozessor. Für unter 50 Euro auch erschwinglich. 2 feste WLAN Antennen. Preis-/Leistungssieger.</li>
-  <li>Der <a href="https://www.gl-inet.com/products/gl-mt1300/">GL-MT1300</a> (Beryl) ist es bei mir geworden, da es das einzige Modell ist, welches zu dem Zeitpunkt bei Auslieferung IPv6 spricht. Ein Feature, welches den meisten Wohnmobilisten recht egal sein dürfte, mir aber besonders wichtig war. Für fast 80 Euro dann hart an der Grenze zum ‘mal kaufen und schauen was daraus wird’. Wie zuvor auch nur mit festen WLAN Antennen.</li>
-</ul>
-
-<p>Alle diese Lösungen haben keine SIM-Karte, sind aber einfach mittels USB-Modem oder USB-Tethering mit der derzeit aktuellen oder erschwinglichen Technik auszustatten.</p>
-
-<h3 id="vergleichstabelle">Vergleichstabelle</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Bezeichnung (Name)</th>
-      <th>CPU</th>
-      <th>RAM</th>
-      <th>Speicher</th>
-      <th>WLAN</th>
-      <th>USB</th>
-      <th>Ethernet</th>
-      <th>Micro SD</th>
-      <th>IPv6</th>
-      <th>Power</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GL-AR300M-Ext (Shadow)</td>
-      <td>QC9531 @650MHz</td>
-      <td>DDR2 128MB</td>
-      <td>16MB</td>
-      <td>300Mbps (2,4GHz)</td>
-      <td>1x 2.0</td>
-      <td>2x 10/100</td>
-      <td>Nein</td>
-      <td>Nein</td>
-      <td>5V/1A USB-C (&lt;2W)</td>
-    </tr>
-    <tr>
-      <td>GL-MT300N (Mango)</td>
-      <td>MT7628NN @580MHz</td>
-      <td>DDR2 128MB</td>
-      <td>16MB</td>
-      <td>300Mbps (2,4GHz)</td>
-      <td>1x 2.0</td>
-      <td>2x 10/100</td>
-      <td>Nein</td>
-      <td>Nein</td>
-      <td>5V/1A USB-C (&lt;2,75W)</td>
-    </tr>
-    <tr>
-      <td>GL-AR750S (Slate)</td>
-      <td>QCA9563 @775MHz</td>
-      <td>DDR2 128MB</td>
-      <td>16MB/128MB NAND</td>
-      <td>300Mbps (2,4GHz), 433Mbps (5GHz)</td>
-      <td>1x 2.0</td>
-      <td>3x 1GB</td>
-      <td>max 128GB</td>
-      <td>Nein</td>
-      <td>5V/2A USB-C (&lt;6W)</td>
-    </tr>
-    <tr>
-      <td>GL-MT1300 (Beryl)</td>
-      <td>MT7621 @880MHz</td>
-      <td>DDR3L 256MB</td>
-      <td>32MB</td>
-      <td>400Mbps (2,4GHz), 867Mbps (5GHz)</td>
-      <td>1x 3.0</td>
-      <td>3x 1GB</td>
-      <td>max. 512GB</td>
-      <td>Ja</td>
-      <td>5V/3A USB-C (&lt;8,65W)</td>
-    </tr>
-    <tr>
-      <td>GL-SFT1200 (Opal)</td>
-      <td>SF19A28 @1GHz</td>
-      <td>DDR3 128MB</td>
-      <td>SPI NAND 128MB</td>
-      <td>300Mbps (2,4GHz), 867Mbps (5GHz)</td>
-      <td>1x 2.0</td>
-      <td>3x 1GB</td>
-      <td>Nein</td>
-      <td>Ja</td>
-      <td>5V/3A USB-C</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="meine-lösung-glinet-gl-mt1300-beryl">Meine Lösung: Gl.iNet GL-MT1300 (Beryl)</h2>
-
-<p>Er ist der teuerste der untersuchten Modelle. Meine Entscheidung hat besonders die Unterstützung von IPv6 und der Einsatz einer SD Karte beeinflusst. Wem das nicht wichtig ist, der wird mit dem GL-SFT1200 (Opal) 30 Euro günstiger weg kommen. Wem bisher nur stört, dass das Android Telefon/Tablet kein WLAN-WLAN Tethering kann, der kann die deutlich günstigeren Shadow/Mango Boxen in Betracht ziehen.<br />
-Den Beryl kann ich mit einer bis zu 512GB großen SD Karte füttern und per FTP Daten oder per DLNA Medien bereitstellen. Unser Fernseher im Wohnmobil ist nicht smart, das wäre für mich der einzig sinnvolle Einsatz. Aber vielleicht spiele ich mit dem Chromecast rum. Ich werde berichten…</p>
-
-<p>Zunächst fragte ich mich, warum er nach Spezifikation unbedingt ein 5V/3A Netzteil verlangt, obwohl der Verbrauch mit &lt;8,65W angegeben ist (8,65W/5V=1,75A). Beim Testen ging mir dann ein 15 Watt Licht auf. Ein Mobiltelefon am USB Port will ja auch mit Strom versorgt werden. Wenn dieses 2,1A zieht, dann hat das Board nicht mehr genügend Strom.<br />
-Tethering = Mobilfunk oder WLAN vom Mobiltelefon/Tablet weitergeleitet. Meist über USB.</p>
-
-<p>Die Kaufentscheidung hängt ab von:</p>
-<ul>
-  <li>Binde ich das Gerät ins WLAN, per Kabel ein oder Tethering? Oder will ich flexibel alle Möglichkeiten haben?</li>
-  <li>Wie viel Strom habe ich zur Verfügung? Bei 3A muss ich mir Gedanken machen, während ich bis 2,1A einfach an (fast) jedem USB Port betreiben kann. Brandgefahr bei Missachtung!</li>
-  <li>Will ich jetzt oder später Medien per DLNA im Wohnmobil bereitstellen? (MicroSD Slot, genug CPU/RAM)</li>
-  <li>Will ich daraus noch weitere DIY Projekte bauen? Dann sollte die Box GPIO Pins bieten, um z.B. den TIN Bus der Truma auszulesen?</li>
-  <li>IPv6 wird allgemein weniger eine Rolle spielen, da es über OpenWRT sicher nachgereicht wird, sobald es salonfähig ist.</li>
-  <li>Wenn ich VPN und andere Dienste zeitgleich nutzen will muss, muss ich zusätzlich auf MHz und RAM achten.</li>
-</ul>
-
-<p>Die Größe des Wohnmobil/-wagen spielt kaum eine Rolle, bis 12m Länge sollte es problemlos im 5GHz Band auszuleuchten sein. Wichtiger ist die Außenwand. Ein Kastenwagen mit Metallchassis dämpft den Empfang deutlich mehr als die GFK Wand eines Aufbau. Die kleinen Boxen kann man sehr gut fensternah verstauen.</p>
-
-<h3 id="ersteinrichtung-kabel">Ersteinrichtung (Kabel)</h3>
-
-<p>Ich habe den Luxus, dass mein Wohnmobil direkt vor der Tür steht. Das bedeutet ich konnte so tun als wäre mein Haus-WLAN ein Campingplatz. Aber bevor ich raus gegangen bin, habe ich die kleine Box an meinem Schreibtisch ausgiebig getestet.</p>
-
-<p>Die Ersteinrichtung war super einfach:</p>
-<ul>
-  <li>Auspacken, Strom dran, LAN an Laptop, warten bis die LED dauerhaft leuchtet</li>
-  <li>Browser öffnen und auf <a href="http://192.168.8.1">http://192.168.8.1</a> gehen</li>
-  <li>
-    <p>Beim ersten Login Sprache einstellen und Adminpasswort vergeben</p>
-  </li>
-  <li>In der Weboberfläche auf <strong>Wireless</strong>/Kabellos</li>
-  <li>Zuerst habe ich das WLAN umbenannt (SSID) in LupusEmobi24 und LupusEmobi5 und einen eigenen Key vergeben. Dei GastWLAN habe ich ausgeschaltet gelassen.
-    <ul>
-      <li>Tipp: Man kann auch den gleichen Namen (SSID) und Key wie zuhause verwenden, dann können sich alle Geräte (z.B. Xbox/Playstation/Switch) auch unterwegs mit den gleichen Daten anmelden. Das geht nicht zum lokalen Testen.</li>
-      <li>Auf gar keinen Fall die Standardeinstellungen lassen. Wer als SSID ‘GL-…’ sieht, wird gleich das Kennwort ‘goodlife’ versuchen. Wird nur die SSID umbenannt, könnte anhand der MAC Adresse ein Gl.iNet Gerät identifiziert werden.
-<img src="/media/router_beryl/browser_beryl_wireless.png" alt="Browser Wireless" /></li>
-    </ul>
-  </li>
-</ul>
-
-<p>Wer plant eine Fritz!Box einzusetzen, NICHT upgraden! Es gibt einen nicht näher beschriebenen Bug in der aktuellen Firmware. Gl.iNet arbeitet wohl dran. Leider ist genau dieser Teil der Software (Netzwerktreiber) Closed Source. Aber die Gute Nachricht: Bis Firmware 3.203 funktioniert es. <a href="https://forum.gl-inet.com/t/gl-inet-router-says-wrong-key-on-wifi-repeater-join/20556/34">Quelle</a><br />
-Ein Firmwareupdate (3.211) ist verfügbar. Über den Menüpunkt links <strong>Upgrade</strong>/Aktualisierung hat die Box auf Buttonklick das Image aus dem Internet geladen und auf weiterem Klick installiert.<br />
-Möchte man ein Downgrade (Letzte Version installieren), dann geht das nicht automatisch, aber auch einfach: Das Image von der Webseite herunteladen und im nächsten Reiter (Local Upgrade/lokale Aktualisierung) auf den Router hochladen, der Rest ist gleich.</p>
-
-<p>Vor der Installation hat man die Möglichkeit auszuwählen ‘Keep Settings’/Einstellungen beibehalten und ‘Keep installed Packages’/Installierte Pakete behalten. Aktuell wähle ich diese Optionen ab, da mit einem Firmwareupdate neue und verbesserte Funktionen und unter Umständen auch geänderte Konfigurationen kommen. Wenn der Router ein paar Monate läuft und einige individuelle Konfigurationen zusammen kommen, dann kann man die Einstellung übernehmen. Der Versionssprung sollte dabei nicht zu gross werden. Auf jeden Fall vorher eine Sicherung machen, falls das Update beim Übernehmen der Daten fehlschlägt.</p>
-
-<p><img src="/media/router_beryl/browser_beryl_upgrade.png" alt="Browser Upgrade" /></p>
-
-<blockquote>
-  <p>TIPP: Ich habe ein Notebook für solche Aufgaben, aber manchmal hat man nur ein Mobiltelefon oder Tablet zur Verfügung. Anstelle eines Kabel kann man sich auch direkt per WLAN verbinden.<br />
-Mit dem unter der Box aufgedruckten WLAN verbinden. Entweder GL-MT1300-xxx (2,4GHz) oder GL-MT1300-xxx-5G (5GHz). Der Key ist immer ‘goodlife’. Bei anderen Modellen ist die SSID ähnlich: GL-[Modellnummer]-[Letzten 3 Zeichen der MAC].</p>
-</blockquote>
-
-<h3 id="einrichtung-wlan-zu-wlan">Einrichtung (WLAN zu WLAN)</h3>
-
-<p>Nach dem grundlegenden Einrichten bekam das Gerät im Menü links unter <strong>Internet</strong> die Zugangsdaten zu meinem Heim-WLAN. Fertig.</p>
-
-<p><img src="/media/router_beryl/browser_beryl_internet.png" alt="Browser Internet" /></p>
-
-<p>Ich nutze vom Endgerät (Handy/Tablet) das 5GHz Netz, weil ich meist WLAN auf WLAN haben möchte.<br />
-Das 2,4GHz Netz hat die bessere Reichweite, das 5GHz Netz hat den besseren Durchsatz. Reichweite benötige ich auf 2,33mx7,40m nicht, aber draussen. Wenn ich innen und außen auf jeweils einem anderen Band funke, sorge ich gleichzeitig für weniger Störungen untereinander.</p>
-
-<h3 id="feintuning-tethering">Feintuning (Tethering)</h3>
-
-<p>Im Menupunkt <strong>Internet</strong> ist die Option <strong>Tethering</strong> ausgegraut.<br />
-Wenn ein Android Telefon an ein System angeschlossen wird, dann steht im Drop-Down (vom oberen Bildschirmrand nach unten ziehen) ‘Android-System - Gerät wird über USB aufgeladen / Für weitere Optionen tippen)’, tippe ich da drauf komm eich in ‘USB-Einstellungen’ und kann ‘USB-Tethering’ (neben z.B. ‘Dateiübertragung’) auswählen. Ab sofort kann ich <strong>Tethering</strong> in der Box auswählen.<br />
-USB-Tethering bedeutet, dass das Mobiltelefon die vorhandene Internetverbindung über den USB Port zur Verfügung stellt. Dabei interessiert dem Gerät am USB Port nicht ob es sich um eine WLAN oder Mobilfunkverbindung handelt. Sollte ich also ein Mobiltelefon mit sehr guter WLAN-Antenne besitzen, kann ich sogar ganz auf ein WLAN Modul im Router verzichten. Dabei gilt aber zu beachten, dass in dem Fall auch immer 2 Geräte mit Strom versorgt werden müssen.</p>
-
-<p>In unserem Fall hat meine Frau ihr altes <a href="https://de.wikipedia.org/wiki/Sony_Xperia_Z3_Compact">Sony Xperia Z3 Compact</a> zur Verfügung gestellt. Wir haben bei O2 eine Datenkarte zu ihrem Vertrag bestellt, da sie Europaweit 120GB LTE Datenvolumen pro Monat hat, ohne Telefonie.</p>
-
-<p>Die Box kann auch direkt mit Linuxfähigen USB-Modems umgehen. Dabei empfiehlt es sich bei den meisten Systemen die PIN der Datenkarte zu deaktivieren. Da ich nur einen 3G Stick (Huawai E1750) mit anderer SIM-Größe hier habe, habe ich es noch nicht getestet.</p>
-
-<hr />
-
-<h1 id="technisch">Technisch</h1>
-
-<p>Die Box besitzt eine OpenWRT Firmware mit eigener Gl.iNet Weboberfläche. Die Oberfläche benutzt einiges an Scripting, das bedeutet auf alternativen (LineageOS) oder sehr eingeschränkten (NoScript Plugin) Browsern muss gelegentlich per Hand nachgeladen werden. Generell funktioniert aber alles.<br />
-Es wird eine App angeboten um die Verwaltung noch bequemer zu gestalten.</p>
-
-<p>Das gelieferte OpenWRT ist aktuell in der Version 19.07.7. Wer gerne basteln mag bekommt auf der OpenWRT Seite aktuelle Images, für den Beryl aktuell die Version 21.<br />
-https://openwrt.org/toh/views/toh_tfdownload &lt;- suchen nach ‘Brand = gl.inet’</p>
-
-<p>Alle Weboberflächen nutzen http anstatt https. Da wir mit einem Microcomputer arbeiten und das ausschliesslich im privaten LAN konfigurieren, verzichtet man auf den Overhead der Verschlüsselung und einer unschönen Sicherheitswarnung im Browser.</p>
-
-<h2 id="was-ist-openwrt">Was ist OpenWRT?</h2>
-
-<p><a href="https://openwrt.org">OpenWRT</a> ist ein offenes Routerbetriebssystem auf Linux Basis, mit dem Paketmanager <strong>opkg</strong>.<br />
-Da bestimmt 95% der im Alltag vorkommenden Konfigurationen über die LuCI Weboberfläche erledigt werden können, ist dieses System für den ambitionierten Anwender nicht schwieriger zu benutzen als eine AVM Fritz!Box.<br />
-Die Standarddialoge sind meist gut auf deutsch übersetzt.</p>
-
-<h2 id="luci-web-ui">LuCI Web UI</h2>
-
-<p>Die Gl.iNet Weboberfläche ist übersichtlich, aber bietet nicht alle Option die mit OpenWRT möglich sind. Dazu eignet sich besser die OpenWRT Weboberfläche LuCI.<br />
-Dazu auf <a href="http://192.168.8.1/cgi-bin/luci">http://192.168.8.1/cgi-bin/luci</a> gehen, oder im Menü ganz unten auf <strong>More Settings</strong> den Unterpunkt <strong>Advanced</strong> auswählen. Wenn die Oberfläche nicht installiert ist, kann sie mit dem Button ‘Install’ nachinstalliert werden. Wenn die Oberfläche installiert ist, wird der Link angezeigt. Der Benutzer ist ‘root’ und das Passwort wieder das zuerst vergebene.</p>
-
-<p><img src="/media/router_beryl/browser_beryl_luci_overview.png" alt="Browser LuCI" /></p>
-
-<h2 id="länderkonfiguration">Länderkonfiguration</h2>
-
-<p>Wie erwähnt kommt die Box aus China, demnach ist die Konfiguration auch darauf ausgelegt. man merkt es kaum, die offensichtlichste Auswirkung sind die erlaubten WLAN Kanäle im 2,4GHz Band: 1-11, bei uns 1-13. Daher kann es sein dass das eigene oder das Campingnetz nicht gefunden wird, wenn diese als WLAN Kanal 12 oder 13 konfiguriert haben.</p>
-
-<p>Um das Problem zu beheben loggt man sich per SSH auf die Box ein. Unter Windows per <code class="language-plaintext highlighter-rouge">PuTTY</code> oder unter Linux/Mac mit <code class="language-plaintext highlighter-rouge">ssh</code> aus dem ‘OpenSSH’ Paket. Erlaubt ist nur ssh-rsa als Algorithmus. Daher gibt man auf der Konsole den folgenden Befehl ein:<br />
-<code class="language-plaintext highlighter-rouge">ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.8.1</code><br />
-… als Passwort gibt man das im ersten Schritt gesetzte ein. Dann bearbeitet man die Konfigurationsdatei mit <code class="language-plaintext highlighter-rouge">vim /etc/config/wireless</code></p>
-
-<p>Mit der Taste <code class="language-plaintext highlighter-rouge">[i]</code> kommt man in den editier-Modus.<br />
-Firmware 3.203: 2x die Zeile <strong>option Country ‘CN’</strong> mit <strong>option Country ‘DE’</strong> ersetzen. Zusätzlich in beiden Blöcken (2,4GHz und 5GHz) <strong>option region ‘1’</strong> (von 0) und <strong>option aregion ‘1’</strong> setzen um den Europäischen Regularien gerecht zu werden.<br />
-Firmware 3.211: Im Block mit <strong>option Band ‘5g’</strong> den Eintrag auf <strong>option region ‘1’</strong> setzen (zuvor 10). Im Block <strong>option Band ‘2g’</strong> kontrollieren, dass <strong>option region ‘1’</strong> gesetzt ist.<br />
-<a href="https://blog.csdn.net/linbounconstraint/article/details/80899321">Details zu den Werten</a> und <a href="https://en.wikipedia.org/wiki/List_of_WLAN_channels">Wikipedia List of WLAN channels</a><br />
-Aus dem Editor (vim) kommt Ihr mit der Tastenfolge: <code class="language-plaintext highlighter-rouge">[Esc][:][x][Enter]</code>. Es gibt auch die Variante <code class="language-plaintext highlighter-rouge">[:][w][q]</code> (write quit), das kommt auf das selbe hinaus. Nach einem Neustart des Routers werden die neuen Werte automatisch in die Treiberkonfigurationen unter /etc/Wireless/… geschrieben.</p>
-
-<blockquote>
-  <p>TIPP: Hier sollte nicht zu viel gespielt werden, denn die falschen Einstellungen können Störungen in anderen Geräten verursachen und sind daher illegal (kein Scherz)!<br />
-Sollten die Sende-/Empfangswerte zu niedrig sein, lieber in eine Richtfunkantenne investieren.</p>
-</blockquote>
-
-<h2 id="glinet-app">glinet App</h2>
-
-<p>Die App Kann entweder über den Google Playstore oder dem Apple AppStrore heruntergeladen werden. Oder direkt von der <a href="https://www.gl-inet.com/app/">Website</a>.<br />
-Die App bietet weniger Möglichkeiten als die Weboberfläche, aber alles schöner aufbereitet und die relevanten Funktionen hat man ohne viel geklicke in der Hand. Funktioniert gut.</p>
-
-<p>Wenn ich ein VPN nutzen möchte, kann ich dieses sehr einfach und komfortabel per QR-Code in der App einrichten. Alternativ kann ich die Konfigurationsdatei auch in den entsprechenden Browser Dialog ziehen oder alles manuell eintippen.</p>
-
-<p>Insgesamt reagiert die App schnell und ist übersichtlich. Es gibt keinen Grund die Arbeit nicht damit zu vereinfachen. Es muss nur zum Start die Cloud ignoriert werden. Alles funktioniert super lokal.<br />
-Auf der ersten Seite finden sich die wichtigsten Punkte um sich im Netzwerk zurechtzufinden. Am untersten Rand ist das Menü um zu den weiteren Seiten zu kommen.</p>
-
-<p>Gl.iNet App Mit VPN aus (erstes Bild) oder ein (zweites Bild). Der Klick auf das Symbol überschreibt die Einstellung des Hardware-Schalter (siehe Abschnitt VPN).<br />
-<img src="/media/router_beryl/N7glinet_app-1_home_VPNoff.png" alt="Gl.iNetApp Home VPN Off" /> <img src="/media/router_beryl/N7glinet_app-2_home_VPNon.png" alt="Gl.iNetApp Home VPN On" /></p>
-
-<p>Die zweite Seite bietet alle Möglichkeiten in das Internet zu kommen, sehr ähnlich der Weboberfläche. Die dritte Seite beitet einen Überblick der lokal verbundenen Geräte, mit der Möglichkeit diese auch mit einem Klick zu blocken oder ‘als Favoriten’ zu markieren.</p>
-
-<p>Eine Übersicht der möglichen Internetzugänge und der Clients im lokalen Netzwerk.<br />
-<img src="/media/router_beryl/N7glinet_app-3_network.png" alt="Gl.iNetApp Network" /> <img src="/media/router_beryl/N7glinet_app-4_clients.png" alt="Gl.iNetApp Clients" /></p>
-
-<p>Das letzte Fenster bietet einen Schnellzugriff auf einige Systemeinstellungen. Das wichtigste sollte hier die Zeit sein, aufgrund des zuvor genannten Bug.<br />
-<img src="/media/router_beryl/N7glinet_app-5_system.png" alt="Gl.iNetApp Network" /></p>
-
-<h2 id="vpn">VPN</h2>
-<p>Vorweg: Wer nach dem Lesen dieses Absatz weniger versteht als vorher, dieser Abschnitt ist wichtig für die Privatsphäre, nicht für die grundlegende Funktion. Wenn ich zuvor einfach jedes Gerät in das Campingplatz WLAN angemeldet habe, dann macht es jetzt auch keinen Unterschied.</p>
-
-<p>Es werden diverse VPN Provider und unterschiedliche Protokolle von Haus aus unterstützt. Da ich mir in der Vergangenheit die Zähne an IPSec und OpenVPN ausgebissen habe, habe ich diese Runde an <strong>WireGuard</strong> vergeben.<br />
-WireGurad ist ein recht junger Ansatz, welcher sich durch schnelle/einfache Einrichtung (das sagen sie Alle) und Schonung der Ressourcen (mehr Netzwerkgeschwindigkeit) auszeichen soll. Dabei kommen modernste Crypto Standards zum Einsatz, welche nach heutigem Stand als als sicher gelten.<br />
-Bei mir Zuhause laufen 2 Proxmox Host, als Virtualisierungslösung verschiedenster Dienste. Schnell ist ein neuer Container (LXC/Ubuntu) erstellt: [x] 8GB HDD, [x] 512MB RAM, [x] 1 CPU Kern und eine [x] Netzwerkkarte mit Internetzugriff. Ein unpriviligierter Container ist ausreichend.</p>
-
-<p><code class="language-plaintext highlighter-rouge">root@walter:~# wget git.io/wireguard -O wireguard-install.sh &amp;&amp; bash wireguard-install.sh</code><br />
-Ich bin kein Fan davon Services per Script aus dem Internet auszuführen. Aber für den Test genügt es, ich habe mir das Script vor dme Ausführen natürlich angesehen. Es prüft die Umgebung, macht diese bereicht für Wireguard und automatisiert eine Reihe von Befehlen, die man sonst per Hand abtippt. Das Script kann beliebig oft ausgeführt werden, um weitere VPN Clients hinzuzufügen oder vorhandene zu bearbeiten.<br />
-Der Befehl <code class="language-plaintext highlighter-rouge">bash wireguard-install.sh</code> stellt ein paar Fragen. Als erstes den Namen der neu angelegten Verbindung, dann ein paar Details zu Hostname (Server), Port (Forwarding) und so weiter. Der Name ist wichtig, da so nachher auch die Datei im aktuellen Verzeichniss heisst. Das Einrichten eines weltweit verfügbaren Hostnamen oder die Portweiterleitung (Standard: 51820/UDP) würde hier den Rahmen sprengen, dafür gibt es bessere Tutorials.<br />
-Zum Schluss wird ein QR-Code auf der Console angezeigt, den man mit einem Telefon scannen kann. Die glinet App bietet das Einrichten der VPN Verbindung via QR Code. Das funktioniert sehr gut.</p>
-
-<p>Da ich die Verbindung zuerst erstellt habe und erst später den Router eingerichtet, musste ich den Code erneut generieren, mittels:<br />
-<code class="language-plaintext highlighter-rouge">root@walter:~# qrencode -t ansiutf8 &lt; beryl.conf</code></p>
-
-<blockquote>
-  <p>TIPP: Der QRCode sollte nie lesbar veröffentlicht werden und auch lokal behandelt, wie ein Passwort. Wer diesen hat, kann mit jedem beliebigen Gerät über einen WireGuard Client in Euer VPN!</p>
-</blockquote>
-
-<p>Die Bandbreite beim Test war limitiert durch den Versuchsaufbau. Daher gibt es noch keine Testergebnisse.</p>
-
-<p>Alle Gl.iNet Router bieten einen Hardware-Switch, über den ich verschiedene Aktionen steuern kann. Zum Beispiel kann ich darüber das VPN schnell ein- und ausschalten. Zuhause, per Mobilfunk und in vertrauenswürdigen Netzen kann ich das VPN ausschalten. Wenn ich das offene WLAN bekannter FastFood Ketten oder das Campingnetz nutze, kann ich das VPN einschalten. Vorausgesetzt ich habe ein dauerhaft verfügbaren VPN Server/Provider mit gutem Duchsatz!</p>
-
-<p>Wer keinen eigenen Server bereitstellen oder nutzen kann, dem steht offen halbwegs privat/anonym das TOR Netzwerk zu nutzen.</p>
-
-<hr />
-
-<h1 id="zukunft">Zukunft</h1>
-
-<ul>
-  <li>Ich werde das Gehäuse noch aufbrechen um zu sehen was ich dort für Antennen unter bekomme für optimalen Empfang. Ich stelle mir z.B. eine Ringantene aus einem 17” Laptop vor, die um die Dachlucke kommt. Das ist nicht schlimm, Gl.iNet stellt dafür sogar eine Anleitung bereit. Die Garantie verliert man trotzdem.</li>
-  <li>Ein wichtiger Punkt mit Kindern ist der Datenverbrauch. Mit dem Paket vnStat kann man den Datenverbrauch im OpenWRT pro Interface gut darstellen, aber mir fehlt noch ein Tool um per Quota beim Erreichen des Tageslimit einfach den Dienst abzustellen (oder noch besser auf eine andere verfügbare Lösung zurückzugreifen. Hier bin ich noch darauf angewiesen, dass entweder das Mobiltelefon (Android) oder der Provider beim Erreichen eines Grenzwert abschaltet.</li>
-  <li>Praxistest. In der Theorie war bisher alles super, aber ob sich die Werte auf dem Campingplatz auch erreichen lassen? Ich bin derzeit zuhause mit 600MBit Glasfaster angebunden und verteile das WLAN über 3 strategisch verteilte Router im Mesh, also ganz ähnlich einem besser ausgestattetem Campingplatz. Davon kommt zwar nur ein Bruchteil über den Router am Endgerät an, aber es reicht um mit 3 Geräten flüssig Youtube zu streamen.</li>
-  <li>Das mitgelieferte 5V/3A Netzteil ist natürlich für den Start ganz gut, unterwegs möchte ich aber mehr Autark stehen. Daher werde ich noch ein Spannungswandler DC DC 12V auf 5V/3A verbauen. Auf Amazon gibt es verschiedene Lösungen, auch mit vorkonfektionierten USB Stecker <a href="https://www.amazon.de/dp/B09B7X3XKH/">Beispiel</a>. Solange kein LTE notwendig ist, sollte auch ein normaler USB Stromstecker reichen. Leider habe ich gerade kein Labornetzteil zum Testen zur Verfügung, ich werde vieleleicht mit einem Multimeter zuhause einen Testaufbau wagen, bevor ich die Leitungen im Mobil riskiere.</li>
-  <li>Langfristig werde ich mir das neue <a href="https://www.truma.com/de/de/produkte/inet-x-system/truma-inet-x-panel">Truma iNet X Panel</a> einbauen. Dieses hat noch kein ‘eigenes Modem’, sondern nur Bluetooth. Für diesen Einsatz ist mir wichtig bequem alle anderen Datenverbraucher abschalten zu können. Das benötigt noch einen <a href="https://www.gl-inet.com/products/gl-s10/">GL-S10</a>/<a href="https://www.gl-inet.com/products/gl-s200/">GL-S200</a> oder ähnlich, als BT Gateway. Vielleicht geht das auch über den USB Port, wenn man auf das Tethering verzichtet… Ist noch Zukunft.</li>
-</ul>
-
-<hr />
-
-<h1 id="bilder">Bilder</h1>
-
-<p>Der lokale Testaufbau für Referenzwerte am Schreibtisch.<br />
-<img src="/media/router_beryl/router_beryl_test.jpg" alt="Testaufbau Desktop" /></p>
-
-<p>Der erste Standort am zentralen Panel. Oben der Router, unten das Netzteil an 230V. Die neben der 230V Landstrom-Steckdose serienmäßig verbaute 12V KFZ-Steckdose habe ich gegen eine 2xUSB (max. 2,1A) Umgebaut.<br />
-<img src="/media/router_beryl/router_beryl_panel.jpg" alt="Testaufbau Panel" /></p>
-
-<p>Der Standort über dem Fahrer ist fast perfekt, hat aber nur einen 230V Landstrom Anschluss.<br />
-<img src="/media/router_beryl/router_beryl_dach.jpg" alt="Testaufbau Dach" /></p>
-
-<p>Im Zentrum des Buffymobils in der Küche für Testmessungen.<br />
-<img src="/media/router_beryl/router_beryl_kueche.jpg" alt="Testaufbau Kueche" /></p>
-
-<p>Hinten in der Bettenlandschaft wurde der Druchsatz nicht signifikant schlechter (ca. 2m weiter weg vom Router). Aber wer will die Strahlung am Kopf?<br />
-<img src="/media/router_beryl/router_beryl_bett.jpg" alt="Testaufbau Bett" /></p>
-
-<p>Es wurde an fast jeder Steckdose getestet.<br />
-<img src="/media/router_beryl/router_beryl_bad.jpg" alt="Testaufbau Bad" /></p>
-
-<p>Die Box würde ich bei trockenem Wetter ohne Bedenken durch die Dachluke auf das Dach vom BuffyMobil stellen (ggf. mit Geschirrtuch gegen direkte Sonneneinstrahlung), für besseren Empfang. Von den Übertragungswerten im Heimtest bin ich über dem Panel vollkommen zufrieden.<br />
-Im 4pfoten-Mobil gibt es hinter dem Beifahrersitz eine Sitzgelegenheit mit einem Schrank drüber. In diesem ist im oberen Fach der SAT Empfänger und der Solar-Laderegler verbaut. Hier kann ich mir gut vorstellen auch den 12V-&gt;5V/3A Spannungswandler einzubauen.<br />
-Für WLAN kann von dort ein 2-3m USB-A auf USB-C Kabel in Richtung Panel oder über den Beifahrersitz gelegt werden. Und im Extremfall auch durch die vordere oder mittlere Dachlucke. Für USB-Tethering kann der gleiche Weg benutzt werden um das Telefon/Tablet entsprechend gut zu positionieren. Wobei ein Mobiltelefon empfindlicher in der Sonne ist und sich vermutlich abschaltet.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="wohnmobil" /><category term="reise" /><category term="netzwerk" /><category term="router" /><summary type="html"><![CDATA[tl;dr]]></summary></entry></feed>
+Dann gibt es natürlich noch die, welche mit einem Laptop und einem SDR alles mitschneiden, die gängigen Codes kennen und den Rest mittels Brute Force (Vorschlaghammer) durchraten … wer diesen Aufwand betreibt um meine leere Jacke aus dem Auto zu klauen, der hat sich diese aber auch verdient.</p>]]></content><author><name>Benjamin Moeller</name></author><category term="experimente" /><category term="produkte" /><summary type="html"><![CDATA[Um Mitte 2020 herum haben ein paar Entwickler gedacht man könnte ein paar Antennen und einen kleinen Prozessor mit einem kompakten Display in ein Tamagotchi-Gehäuse stecken und so verschiedenste ‘Pentest Tools’ handlicher machen. Da das Entwicklung, und somit Geld uns Zeit kostet, haben sie die Idee auf Kickstarter im August 2020 angeboten. Das bedeutet sie schrieben was sie vorhaben, aber anstelle einem Banker einen Finanzierungsplan vorzulegen sucht man verrückte (interessanter Weise ‘Backer’ genannt) mit zu viel Geld aus dem Internet. Mein Bruder ist so einer, aufgrund der Idee hat er 232$ in den Topf geworfen, ohne zu wissen ob das Produkt jemals kommen wird. So wie viele Andere auch und anstelle der mindestens 60.000 USD kamen knapp unter 5 Mio zusammen.]]></summary></entry></feed>
