@@ -1,0 +1,460 @@
+<h2 id="5000--5000">5.000 / 5.000</h2>
+<p>Status: Published
+Published: True
+Layout: Post
+Title: OpenWrt - New Home Network
+Author: Benjamin Moeller
+Date: 2026-04-15 16:58:51 UTC
+Categories: [How-to]
+Tags: [Products, OpenWrt, Glinet]
+Comments: []
+—</p>
+
+<p>For as long as I can remember, I’ve used AVM Fritz! devices as routers for my home network. First the Fritz!ISDN USB, then an external ISDN card, and then all sorts of Fritz!Box models. A device that simply does everything, from internet routing and a DECT base station with VoIP telephony to a fax modem when I no longer wanted a separate device at home. And all this with outstanding Linux support in a simple “mesh” network.<br />
+The marketing term “mesh” here means, on the one hand you configure the Wi-Fi at a central point and the configuration is then distributed to all connected access points. On the other hand, it means that a device (e.g., a mobile phone) can seamlessly switch from one access point to another. This only works with AVM devices.</p>
+
+<p>From a technical perspective, several technologies come into play:<br />
+The “Wireless Mesh Network (WMN)” is described in the standard <a href="https://en.wikipedia.org/wiki/IEEE_802.11s">IEEE 802.11s</a>. This standard enables the setup of a wireless mesh network with minimal configuration at the endpoints. Do I need this? OpenWRT addresses this in <a href="https://openwrt.org/docs/guide-user/network/wifi/mesh/802-11s#are_you_sure_you_want_a_mesh">are_you_sure_you_want_a_mesh</a>… but in most cases, the following is sufficient:<br />
+The “Fast Basic Service Set (BSS) Transition” from the standard <a href="https://en.wikipedia.org/wiki/IEEE_802.11r">IEEE 802.11r</a>.</p>
+
+<p>Standards mentioned in this context include:<br />
+The term “roaming” is often used, which is defined by the standard <a href="https://en.wikipedia.org/wiki/IEEE_802.11f">IEEE 802.11f</a> and ensures that there are no connection interruptions. This has been incorporated into the IEEE 802.11r standard since 2006. Therefore, I will not discuss it further.<br />
+Roaming is also frequently mentioned. To optimize a mesh network, OpenWrt also supports the standards <a href="https://de.wikipedia.org/wiki/IEEE_802.11k">IEEE 802.11k</a> (Neighbor Reports) and <a href="https://en.wikipedia.org/wiki/IEEE_802.11v">IEEE 802.11v</a> (Network-assisted roaming), see: https://openwrt.org/docs/guide-user/network/wifi/roaming … Both are now part of the general standard from 802.11-2024.</p>
+
+<h1 id="if-its-available-ready-made-why-build-it-yourself">If it’s available ready-made, why build it yourself?</h1>
+<p>AVM worked perfectly for me for over 25 years. Last year, the family-run business was bought by a large corporation. It had already become apparent that their QA was no longer functioning flawlessly. Compared to other “big players,” there are still very few security reports, but the firmware is being loaded with more and more features, and the bugs are piling up.<br />
+The standards mentioned above aim to be vendor-independent. Today, I’m building my entire network with GL.iNet devices because they best suit my infrastructure. Tomorrow, I might use a different company.</p>
+
+<h1 id="isp-router-setup">ISP Router Setup</h1>
+<p>In Germany, there was much discussion, but the mandatory use of a specific router (https://de.wikipedia.org/wiki/Routerzwang) was abolished in August 2016. This means I can use any router I want at my endpoint; I’m not required to use a device from my ISP (Internet Service Provider).<br />
+This sounds very positive on paper, but in practice, it often turns out that the end customer is held responsible in support cases because the router can’t be accessed for analysis. As an end customer, do I want the provider to have access to my router and thus my network? Probably not. Changing routers requires a basic understanding of technology, so you might be tempted to argue to a first-level support representative that a service restart is sufficient and a power cycle isn’t necessary… but in the end, you still end up unplugging it just to finally get a solution.<br />
+While many providers offered Speedport or Zyxel routers, the AVM Fritz!Box was usually available as an alternative for an additional fee. Those who received a Fritz!Box from one of the major providers were sometimes lucky enough to have the standard firmware installed, while other times it required more effort, such as modifying the serial number in the <a href="https://openwrt.org/docs/techref/flash.layout#mtd_memory_technology_device_and_mtdsplit">mdt</a> or similar steps.</p>
+
+<p>For this reason, I decided to switch to GL.iNet.<br />
+GL.iNet is based on OpenWrt and offers many features in its own interface, which makes it significantly easier to use. Perfectly adequate for normal home use, and the travel routers are invaluable when you’re on the go.<br />
+Unfortunately, GL.iNet builds some of its router hardware with a closed-source SDK, making an upgrade or switch to native OpenWrt not so easy. Therefore, I chose the Flint2 as the base and the Beryl series as satellites, which are 100% OpenWrt supported.</p>
+
+<h2 id="glinet-flint2-gl-mt6000">GL.iNet Flint2 (GL-MT6000)</h2>
+<p>The <a href="https://www.gl-inet.com/products/gl-mt6000/">Flint2 (GL-MT6000)</a> is a bit dated, but with 2x 2.5 Gbit RJ45 (plus 4x 1 Gbit) and WiFi 6, it’s not too old. Compared to my newest Fritz!Box 7590, its features are even more up-to-date.</p>
+
+<h3 id="download-openwrt">Download OpenWrt</h3>
+<p>The Firmware Selector for OpenWrt is available at <a href="https://firmware-selector.openwrt.org/">https://firmware-selector.openwrt.org/</a>. Searching for <code class="language-plaintext highlighter-rouge">MT6000</code> will suggest the result <code class="language-plaintext highlighter-rouge">GL.iNet GL-MT6000</code>, which we should select.<br />
+In the upper right corner, behind the search field, you can select the version. I’m creating these instructions using version 25.12.2. As long as we have a working Flint2, we select the <code class="language-plaintext highlighter-rouge">SYSUPGRADE</code> button below.</p>
+
+<p>For every conceivable status from ‘Router working’ to ‘Router on fire’, there are different firmware options. Explaining them all would require a separate post.</p>
+
+<h3 id="installing-openwrt">Installing OpenWrt</h3>
+<p>When the Flint2 is freshly started, the GL.iNet admin interface can be accessed at <a href="http://192.168.8.1/">http://192.168.8.1/</a>. The client connected to one of the LAN ports automatically receives an IP address from the 192.168.8.0/24 network. This can be set manually if desired.</p>
+
+<p>On the left side of the menu, under ‘System - Upgrade’, you can access the internal firmware upgrade. In the new window, under the ‘Firmware Local Upgrade’ tab, any compatible firmware file can be uploaded. Here we upload the file we just downloaded, e.g., <code class="language-plaintext highlighter-rouge">openwrt-25.12.2-mediatek-filogic-glinet_gl-mt6000-squashfs-sysupgrade.bin</code>.<br />
+Very important: We absolutely do not want to copy the settings! While this might sound tempting, the settings of the GL.iNet firmware and OpenWrt are incompatible.</p>
+
+<p>After successful installation, OpenWrt can be accessed at <a href="http://192.168.1.1/">http://192.168.1.1/</a>. Enter <code class="language-plaintext highlighter-rouge">root</code> as the username and leave the password blank.</p>
+
+<h2 id="openwrt-basic-configuration">OpenWrt Basic Configuration</h2>
+<p>In general, OpenWrt is secure in its default state, as no unnecessary services are installed or started. Nevertheless, there are a few settings that should be configured before starting.</p>
+
+<p>In the top menu: System - Administration</p>
+
+<ul>
+  <li>Tab: Router Password -&gt; Set password for root
+No default password is set in the default configuration, so you can’t forget to change it.</li>
+  <li>Tab: SSH Access -&gt; Interface: lan
+This means that the remote Secure Shell (SSH) is only accessible via the LAN interface and not from the WAN or a subsequently configured VLAN.</li>
+  <li>Tab: HTTP(S) Access -&gt; Redirect to HTTPS
+OpenWrt is compatible with HTTP at its maximum. This option redirects it to HTTPS, so that, for example, passwords are no longer transmitted in plain text over the network.</li>
+</ul>
+
+<p>A few system settings help integrate the system into the infrastructure.</p>
+
+<p>In the top menu: System - System</p>
+
+<ul>
+  <li>Tab: General Settings -&gt;
+    <ul>
+      <li>Timezone: ‘Europe/Berlin’, Button: Sync with Browser (or NTP server).</li>
+      <li>Hostname: Adjust for Mesh</li>
+      <li>Tab: Time Synchronization -&gt; leave as is or select a different source</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="updating-openwrt">Updating OpenWrt</h3>
+<p>A router is an embedded device with a very specific task. This system should be treated differently than a PC or a game console. Blindly updating all packages (<code class="language-plaintext highlighter-rouge">apk upgrade</code>) is useful during initial installation, but once the services are configured, this approach can overwrite important configurations or individual customizations, thus breaking the network.<br />
+At best, you’ll immediately notice that one or more functions are no longer accessible; at worst, an undiscovered security vulnerability arises. If there’s no urgent reason (bug fix, security vulnerability, etc.), you should consider whether upgrading packages between major releases is necessary.<br />
+Don’t believe me? OpenWrt also claims this: https://openwrt.org/docs/guide-user/additional-software/apk#updating_packages</p>
+
+<p>In the top menu: System - Software</p>
+
+<p>Actions: Button: ‘Update Lists …’ -&gt; Wait and Dismiss<br />
+Tab: Updates -&gt; Select each package using the ‘Upgrade…’ button.<br />
+Be careful with the ‘Allow overwriting conflicting package files’ option, as local configurations can be overwritten. This also applies to certificate keys and VPN configurations. See above.</p>
+
+<p>In the terminal:<br />
+Connect to OpenWrt via SSH, e.g., <code class="language-plaintext highlighter-rouge">ssh root@192.168.1.1</code><br />
+<code class="language-plaintext highlighter-rouge">opkg update opkg list-upgradable | cut -f 1 -d ' ' | xargs -r opkg upgrade</code></p>
+
+<p>Starting with OpenWrt 25.12, the package manager changes from <strong>opkg</strong> to <strong>apk</strong>. This also makes the cut/xargs magic unnecessary:<br />
+<code class="language-plaintext highlighter-rouge">apk update &amp;&amp; apk upgrade</code></p>
+
+<p>Help with switching to APK: https://openwrt.org/docs/guide-user/additional-software/opkg-to-apk-cheatsheet</p>
+
+<h3 id="configuring-dhcp">Configuring DHCP</h3>
+<p>OpenWrt has a DHCP setting, but this is for the service itself. The more relevant setting for your router is found under ‘Network - Interfaces’ and the corresponding network adapter. The DHCP service is configured individually for each network adapter.</p>
+
+<p>In the menu at the top: Network - Interfaces</p>
+
+<p>Adapter: LAN - Button: Edit</p>
+
+<ul>
+  <li>Tab ‘General Settings’ -&gt;
+    <ul>
+      <li>IPv4 address: 192.168.1.1 (The interface address determines the first octet of the assigned DHCP addresses)</li>
+      <li>IPv4 netmask: 255.255.255.0 (Determines the network size, here 192.168.1.0/24)</li>
+      <li>Tab: ‘Advanced Settings’ -&gt; Settings for the DHCP server, not for the clients</li>
+      <li>Tab: ‘DHCP server’ -&gt; Settings for the DHCP server</li>
+      <li>Tab: ‘General Settings’ -&gt; DHCP Options for, e.g., individual DNS servers via DHCP (save with +)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>In practice, it has proven effective to set the lease time to 2 hours for the first few days to allow misconfigurations to be resolved quickly. In practice, this can be set to a significantly longer time.</p>
+
+<h3 id="dns-domain-name-service">DNS (Domain Name Service)</h3>
+
+<p>DNS consists of two parts. First, names are resolved internally by the router’s own DNS server, which can also include DHCP clients. Second, there is an upstream DNS server to which all queries that cannot be answered internally are forwarded.</p>
+
+<p>In the menu at the top: Network - Interfaces</p>
+
+<h4 id="internal">Internal</h4>
+<p>By default, clients receive the router’s own DNS server (IP address) via DHCP. If this is not desired, the DNS server(s) can be configured using DHCP Option 6:</p>
+
+<p>Adapter: LAN - Button: Edit</p>
+
+<ul>
+  <li>Tab: ‘DHCP server’ -&gt; DHCP server settings
+    <ul>
+      <li>Tab: ‘General Settings’ -&gt; <code class="language-plaintext highlighter-rouge">6,192.168.1.53,8.8.8.8</code> (save with +)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="upstream">Upstream</h4>
+<p>Adapter: WAN - Button: Edit</p>
+
+<ul>
+  <li>Tab: ‘Advanced Settings’ -&gt; Uncheck ‘Use DNS servers advertised by peer’</li>
+</ul>
+
+<h4 id="ntp-time-server">NTP (Time Server)</h4>
+<p>Various protocols on the network and internet are highly time-dependent. For example, Kerberos for Windows authentication via Active Directory, but also OTP services and some encryption methods. An incorrect local system time will cause a discrepancy and thus a malfunctioning system.</p>
+
+<p>Top menu: System - System</p>
+
+<ul>
+  <li>Tab: Time Synchronization -&gt; Check ‘Provide NTP Server’
+This activates the time server function for clients in OpenWrt.
+    <ul>
+      <li>‘Bind NTP server’: LAN</li>
+    </ul>
+  </li>
+</ul>
+
+<p>(To do: DHCP NTP server)</p>
+
+<h2 id="creating-networks-with-vlans">Creating Networks with VLANs</h2>
+<p>Networks require a bit more planning. Take a short break here, take a deep breath, and grab a drink.</p>
+
+<p>OpenWrt has a security mechanism that saves configuration changes and activates them. If no new login to the web interface occurs within 90 seconds, the configuration is rolled back.<br />
+This is very convenient for testing, especially at the beginning. However, I did manage to lock myself out despite the rollback. So, it’s better to make smaller, incremental changes, saving and confirming them, rather than making one large change.</p>
+
+<p>I can easily create a bridge for each planned network segment and add the corresponding physical ports. I then assign the necessary configurations for DHCP and other settings to the bridge via ‘Interfaces’.<br />
+It works. However, keeping track of the VLAN configurations becomes complicated.</p>
+
+<p>I choose to create a device called ‘vSwitch’ and assigned all LAN ports (except WAN) to it. This simplifies centralized management.</p>
+
+<p>There are two types of ports for VLANs.</p>
+<ol>
+  <li>Untagged means that anything connected to this port is a standard network device, not using the IEEE 802.1v standard.</li>
+  <li>Tagged means that the connected devices understand VLANs according to IEEE 802.1v and specify which VLAN ID they belong to.</li>
+</ol>
+
+<p>A special feature of OpenWrt is that the port can handle a single untagged VLAN and multiple tagged VLANs. Anything connected to the port without VLAN configuration is routed to a default VLAN. This doesn’t work with all VLAN devices; most I know can only manage one untagged ID or any number of tagged IDs per port.</p>
+
+<p>In the menu at the top: Network - Interfaces</p>
+
+<ul>
+  <li>Tab: ‘Devices’
+    <ul>
+      <li>Button ‘Add device configuration …’
+        <ul>
+          <li>Device Type: ‘Bridge device’</li>
+          <li>Device Name: ‘vSwitch’, …</li>
+          <li>Ports: Select ports that are not bound elsewhere</li>
+          <li>Tab: ‘VLAN’</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">VLAN ID</th>
+      <th style="text-align: center">LAN1</th>
+      <th style="text-align: center">LAN2</th>
+      <th style="text-align: center">LAN3</th>
+      <th style="text-align: center">LAN4</th>
+      <th style="text-align: center">LAN5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: center">U</td>
+      <td style="text-align: center">U</td>
+      <td style="text-align: center">U</td>
+      <td style="text-align: center">U</td>
+      <td style="text-align: center">U</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">10</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">20</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+      <td style="text-align: center">T</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Tab: ‘Interfaces’
+    <ul>
+      <li>Device ‘LAN’ -&gt; ‘Edit’ button</li>
+      <li>Device: Change from ‘br-lan’ to ‘vSwitch.1’ (.1 is your VLAN ID)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The ‘br-lan’ device can be removed after access has been tested and continues to work.</p>
+
+<p>Now create the other VLANs:</p>
+
+<ul>
+  <li>Tab: ‘Interfaces’
+    <ul>
+      <li>Button ‘Add new interface …’</li>
+      <li>Name: ‘guest’ (‘iot’, ‘dmz’, …)</li>
+      <li>Protocol: ‘Static address’</li>
+      <li>Device: ‘Bridge: “vSwitch.10”’ (“vSwitch.20”, “vSwitch.nn”, …)</li>
+      <li>Button ‘Create Interface’</li>
+      <li>IPv4 Address: 192.168.n.1, Netmask: 255.255.255.0
+It has proven effective for /24 networks to set the third octet (n) to the same value as the VLAN ID.</li>
+    </ul>
+  </li>
+  <li>Tab: DHCP
+    <ul>
+      <li>Enable DHCP</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Button ‘Save and Apply’</p>
+
+<h2 id="firewall">Firewall</h2>
+<p>The firewall is generally understood as a blocker for malicious traffic from the internet. However, a Linux firewall can do much more. Using the firewall (up to OpenWrt 21.02, <code class="language-plaintext highlighter-rouge">iptables</code>; from OpenWrt 22.03 onwards, <code class="language-plaintext highlighter-rouge">nftables</code>), network traffic can not only be blocked but also redirected according to specific parameters.</p>
+
+<p>First, we will optimize the firewall for general use in a home network.</p>
+
+<p>At the top of the menu: Network - Firewall</p>
+
+<ul>
+  <li>Tab: ‘General Settings’
+    <ul>
+      <li>Check ‘Drop invalid packages’</li>
+      <li>Forward: ‘Drop’
+The default setting ‘Reject’ is secure but requires more CPU because it generates a negative response to requests. With ‘Drop’, the packet is simply discarded.</li>
+      <li>Zones:
+        <ul>
+          <li>LAN -&gt; WAN: IPv4 Masquerading if main router</li>
+          <li>WAN -&gt; Reject: Input drop, Intra-zone forward: drop, Masquerading: uncheck</li>
+        </ul>
+      </li>
+      <li>Button: Add
+        <ul>
+          <li>Guest -&gt; Reject: Input drop, Output accept, Intra-zone forward: accept, Masquerading: check</li>
+        </ul>
+      </li>
+      <li>Button: Add
+        <ul>
+          <li>IoT -&gt; Reject: Input drop, Output accept, Intra-zone forward: accept, Masquerading: check</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Under ‘Allow forward to destination zone’, you define where the network is allowed to send data. ‘WAN’ is usually specified here to allow internet access.<br />
+Under ‘Allowed forward from source zone’, you define which network is allowed to communicate with this network. In the overview, this entry is then reversed and listed as ‘destination’ in the ‘Source zone’.</p>
+
+<p>Individual rules are created to ensure the new network can reach a router. Depending on your preference, multiple protocols can be combined into one entry, but I would recommend separating the entries, especially for basic services. I might want to offload the DNS server later, but the router itself will remain the DHCP server.</p>
+
+<ul>
+  <li>Tab: ‘Traffic Rules’
+    <ul>
+      <li>Button: ‘Add’
+        <ul>
+          <li>Name: ‘guest-dhcp’</li>
+          <li>Protocol: UDP for DHCP</li>
+          <li>Source zone: guest</li>
+          <li>Destination zone: Device (input)</li>
+          <li>Destination port: 67 68</li>
+        </ul>
+      </li>
+      <li>Button: ‘Add’
+        <ul>
+          <li>Name: ‘guest-dns’</li>
+          <li>Protocol: UDP, TCP</li>
+          <li>Source zone: guest</li>
+          <li>Destination zone: Device (input)</li>
+          <li>Destination port: 53</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Repeat this for all VLANs with corresponding names.</p>
+
+<h3 id="nat">NAT</h3>
+<p>IPv4 addresses are limited, meaning you typically only get one IP address assigned by your Internet Service Provider. NAT (Network Address Translation) ensures that any device on the LAN can send a request to the WAN, and the response is sent back to the requesting device. To the internet, multiple requests from different devices appear as if they all originated from the router itself.</p>
+
+<p>Enable or disable NAT using the checkbox next to each rule. More granular control is possible via the ‘NAT rules’ tab.</p>
+
+<p>So far, we’ve created a wired network. This works with any OpenWrt device. If the device has at least two RJ45 ports (one for WAN, one for LAN), the configuration described above should work without any issues. In this case, all end devices should be VLAN-capable if we can’t configure LAN ports for an extra untagged VLAN.</p>
+
+<h2 id="wlan">WLAN</h2>
+<p>Like many routers, the Flint2 has a WLAN function. This router has two radio devices, one for the 2.4 GHz band and one for 5 GHz. These are not active in the default OpenWrt configuration, even though a default profile with the SSID ‘OpenWrt’ is configured.</p>
+
+<p>In the menu at the top: Network - Wireless<br />
+Hint: If this tab is not present, a driver for the Wi-Fi card must be installed. A list of supported drivers can be found at https://openwrt.org/docs/techref/driver.wlan/start</p>
+
+<h3 id="24-ghz-main-wi-fi">2.4 GHz Main Wi-Fi</h3>
+
+<p>Under ‘Radio 0’, click the ‘Edit’ button on the template with ‘SSID: OpenWrt’ or create a new one using ‘Add’.</p>
+
+<ul>
+  <li>Tab: ‘General Setup’
+    <ul>
+      <li>Operating Frequency: AX, Channel 1, 6, or 11, Width: 20 MHz</li>
+      <li>Sub-tab: ‘General Settings’
+        <ul>
+          <li>ESSID: The name of the WLAN</li>
+          <li>Network: One of the interfaces created under ‘Network - Interfaces’.</li>
+        </ul>
+      </li>
+      <li>Sub-tab: ‘WLAN Encryption’
+        <ul>
+          <li>‘WPA2-PSK/WPA3-SAE Mixed Mode’</li>
+        </ul>
+      </li>
+      <li>Sub-tab: ‘WLAN Roaming’
+        <ul>
+          <li>802.11r -&gt; Enable checkbox</li>
+          <li>NAS ID: 0001 for the main access point, all other access points with sequential numbering.</li>
+          <li>Mobility Domain: 4-byte hexadecimal value. This must be the same on all access points in the mesh. Default on newer OpenWrt versions: The first 4 bytes of the SSID MD5sum.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Overview of WLAN encryption:</p>
+<ul>
+  <li>Open - No.</li>
+  <li>WEP/WPA - Too old, we don’t want that in our network; you might as well choose “Open,” which at least doesn’t reveal the password.</li>
+  <li>WPA2 - Offers maximum compatibility; especially for older devices or IoT devices, this should still be supported.</li>
+  <li>WPA3 - This is the current standard. It’s not only inherently more secure but also prevents remote deauthentication by unauthorized users.</li>
+</ul>
+
+<p>Hint: Generally, you’re free to use any channel. However, it’s recommended to stick with channels 1, 6, or 11, as these frequencies have the least overlap. While Wi-Fi can compensate for interference from competing Wi-Fi networks to a certain extent, this works better with Wi-Fi networks in the same frequency spectrum than with overlapping networks.</p>
+<ol>
+  <li>Perform a frequency scan and see which channel has the least traffic.</li>
+  <li>If possible, choose an unused frequency band.</li>
+  <li>If no band is available, use the one with the lowest occupancy (and overlap) on channels 1, 6, or 11.</li>
+</ol>
+
+<h3 id="5-ghz-main-wi-fi">5 GHz Main Wi-Fi</h3>
+<p>Under ‘Radio 1’, click the ‘Edit’ button on the template with ‘SSID: OpenWrt’ or create a new one using ‘Add’.</p>
+
+<ul>
+  <li>Tab: ‘General Setup’
+    <ul>
+      <li>Operating Frequency: AC, Channel 134 (three-digit channels allow for higher power output in some areas), Width: 40 MHz</li>
+      <li>Sub-tab: ‘Wi-Fi Roaming’
+        <ul>
+          <li>802.11r -&gt; Enable the checkbox</li>
+          <li>NAS ID: 0001 for the main access point, all other access points with sequential numbering.</li>
+          <li>Mobility Domain: 4-byte hexadecimal value. This must be the same on all access points in the mesh. The default on newer OpenWrt versions is the first 4 bytes of the SSID, MD5sum.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="guestiot-wi-fi">Guest/IoT Wi-Fi</h3>
+<p>Create a new template under ‘Radio 0’ (2.4 GHz) using ‘Add’.</p>
+
+<ul>
+  <li>Tab: ‘General Setup’
+    <ul>
+      <li>Operating Frequency: AX, Channel 1, 6, or 11, Width: 20 MHz</li>
+      <li>Tab: ‘Advanced settings’: Isolate clients</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Create a new template under ‘Radio 1’ (5 GHz) using ‘Add’.</p>
+
+<ul>
+  <li>Tab: ‘General Setup’
+    <ul>
+      <li>Operating Frequency: AC, Channel 161 (three-digit channels allow higher power in some areas), Width: 40 MHz</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="meshap-setup">MeshAP Setup</h1>
+<p>OpenWrt refers to the ‘satellites’ in the mesh network as “Dumb APs.” These are essentially routers, but all routing functions and services (DHCP, DNS, etc.) are removed.</p>
+
+<h2 id="beryl-ax-glinet-mt-3000">Beryl AX (Gl.iNet MT-3000)</h2>
+<p>The <a href="https://www.gl-inet.com/products/gl-mt3000/">Beryl AX (GL-MT3000)</a> is a significantly smaller device than the Flint2. It offers only two LAN ports: one 2.5 GHz for WAN and one 1 Gbps for LAN. Since it will only function as an access point, its WiFi 6 is perfectly adequate. The upgrade to the Flint2 is handled via the WAN port.<br />
+For the initial setup, it is recommended to connect only one PC or laptop to the Beryl AX LAN port via cable. It can then be connected to the existing LAN via the WAN port, for example, to download the OpenWRT image.</p>
+
+<h3 id="download-openwrt-1">Download OpenWrt</h3>
+<p>The Firmware Selector for OpenWrt is available at <a href="https://firmware-selector.openwrt.org/">https://firmware-selector.openwrt.org/</a>. Searching for <code class="language-plaintext highlighter-rouge">MT3000</code> will suggest the result <code class="language-plaintext highlighter-rouge">GL.iNet GL-MT3000</code>, which we should select.<br />
+In the upper right corner, behind the search field, the version can be selected. I am creating this guide using <code class="language-plaintext highlighter-rouge">25.12.2</code>. As long as we have a working Beryl AX, we select the <code class="language-plaintext highlighter-rouge">SYSUPGRADE</code> button below.</p>
+
+<h3 id="install-openwrt">Install OpenWrt</h3>
+<p>When the Beryl AX is freshly started, the interface can be accessed at <a href="http://192.168.8.1/">http://192.168.8.1/</a>. The client on one of the LAN ports automatically receives an IP address from the 192.168.8.0/24 network. This can be set manually if desired.</p>
+
+<p>On the left side of the menu, under ‘System - Upgrade’, you’ll find the internal firmware upgrade. In the new window, under the ‘Firmware Local Upgrade’ tab, you can upload any compatible firmware file. Here, we upload the file we just downloaded, for example, <code class="language-plaintext highlighter-rouge">openwrt-25.12.2-mediatek-filogic-glinet_gl-mt3000-squashfs-sysupgrade.bin</code>.<br />
+Very important: we absolutely do not want to copy the settings! While this might sound tempting, the settings of the GL.iNet firmware and OpenWrt are incompatible.</p>
+
+<p>After successful installation, OpenWrt can be accessed at <a href="http://192.168.1.1/">http://192.168.1.1/</a>. Enter <code class="language-plaintext highlighter-rouge">root</code> as the username and leave the password blank.</p>
+
+<h2 id="dumbap-basic-configuration">DumbAP Basic Configuration</h2>
+<p>In its basic installation, OpenWrt is a fully functional router. We can’t use two routers in the network; they would then compete for DHCP assignments and similar tasks. Therefore, we’ll disable some services first.</p>
+
+<h3 id="openwrt-router-to-dumb-ap">OpenWrt Router to Dumb AP</h3>
+<p>… to be continued …</p>
