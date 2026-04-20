@@ -133,3 +133,7 @@ Nach dem Einstecken sagt `dmesg` zwar das etwas gefunden wurde, aber kein weiter
 ```
 
 Ein kurze Onlinesuche nach `RTL8188CUS openwrt` zeigt, dass dieser Chip vom Treiber `kmod-rtl8192cu` unterstützt wird. Mit `opkg install kmod-rtl8192cu` ist auch dieser in der Weboberfläche zu finden.  
+
+
+# Aus der Praxis
+In einem warmen Haus wird mein Setup schnell zu heiss und ein WLAN steigt aus. Das habe ich zunächst nicht bemerkt, aber letzte Woche hatte ich kein LAN Kabel, und bei mir stirbt zuerst das LAN Interface. Die Alfa Karte hat weiter gesniffed.  
