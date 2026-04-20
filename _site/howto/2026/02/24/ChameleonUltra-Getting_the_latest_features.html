@@ -56,7 +56,7 @@
 
 <p>A good summary, copied from: https://github.com/RfidResearchGroup/ChameleonUltra</p>
 
-<p>The ChameleonUltra had the potentiel to becom a very capable mobile device for different RFID tasks. It is definetly not a sniffer, so it won’t replace the Proxmark3. But it has the hartdware to be a great emulator. The RRG people abdoned this project at a early stage.</p>
+<p>The ChameleonUltra had the potential to becom a very capable mobile device for different RFID tasks. It is definetly not a sniffer, so it won’t replace the Proxmark3. But it has the hardware to be a great emulator. The RRG people abdoned this project at a early stage.</p>
 
 <p>As the project is OpenSource, everybody can contribute. After a few draw backs, there is a lot of progress since mid of 2025.</p>
 
@@ -70,7 +70,7 @@ cd ChameleonUltra
 </code></pre></div></div>
 
 <h2 id="install-nrfutil">Install nrfutil</h2>
-<p>Download binary from: https://www.nordicsemi.com/Products/Development-tools/nRF-Util/Download#infotabs
+<p>Download binary from: https://www.nordicsemi.com/Products/Development-tools/nRF-Util/Download#infotabs<br />
 Choose your development platform: <code class="language-plaintext highlighter-rouge">Linux (x64)</code></p>
 
 <p>After download, make executable (<code class="language-plaintext highlighter-rouge">chmod +x</code>) and install the needed packages.</p>
@@ -83,13 +83,19 @@ Choose your development platform: <code class="language-plaintext highlighter-ro
 </code></pre></div></div>
 
 <h2 id="get-the-arm-gnu-toolchain">Get the Arm GNU Toolchain</h2>
-<p>The <code class="language-plaintext highlighter-rouge">gcc-arm-none-eabi</code> package of most linux distributions is too new. Using this package would result in a bigger firmware, and won’t work.</p>
+<p>The <code class="language-plaintext highlighter-rouge">gcc-arm-none-eabi</code> package of most linux distributions is too new. Using this package would result in a bigger firmware file, and won’t work. It should be around 10.x.</p>
+
+<h3 id="the-version-from-a-package-manager-wont-work">The version from a package manager wont work</h3>
+<p>Kali Linux says at the moment:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt search gcc-arm-none-eabi
 gcc-arm-none-eabi/kali-rolling,now 15:14.2.rel1-1 amd64  [installiert]
   GCC cross compiler for ARM Cortex-R/M processors
 </code></pre></div></div>
+<p>Debian got: <a href="https://packages.debian.org/search?keywords=gcc-arm-none-eabi">https://packages.debian.org/search?keywords=gcc-arm-none-eabi</a></p>
 
-<p>Download from: https://developer.arm.com/downloads/-/gnu-rm/10-3-2021-10 (https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)</p>
+<h3 id="manual-installation">Manual ‘installation’</h3>
+<p>Download from: <a href="https://developer.arm.com/downloads/-/gnu-rm/10-3-2021-10">https://developer.arm.com/downloads/-/gnu-rm/10-3-2021-10</a><br />
+See all Packages at <a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads">arm-gnu-toolchain-downloads</a></p>
 
 <p>Extract it to a folder you know later (693 MB).</p>
 
@@ -146,9 +152,14 @@ cd $curpath
 </code></pre></div></div>
 
 <p>Maybe you need adjust the variable <code class="language-plaintext highlighter-rouge">GNU_INSTALL_ROOT</code> with the path of your <strong>gcc-arm-none-eabi</strong>.
-The workflow in Github sets some version variables from the branch, which I set static with the variables APP_FW_SEMVER=v2.0.0 APP_FW_VER_MAJOR=2 APP_FW_VER_MINOR=0.</p>
+The Github workflow sets some version variables from the branch, which I set static in the script</p>
+<ul>
+  <li>APP_FW_SEMVER=v2.0.0</li>
+  <li>APP_FW_VER_MAJOR=2</li>
+  <li>APP_FW_VER_MINOR=0.</li>
+</ul>
 
-<p>With the script in <code class="language-plaintext highlighter-rouge">~/git</code> and the CU source in <code class="language-plaintext highlighter-rouge">~/git/ChameleonUltra</code>, I can just run:<br />
+<p>With the script in <code class="language-plaintext highlighter-rouge">~/git</code> and the CU repo in <code class="language-plaintext highlighter-rouge">~/git/ChameleonUltra</code>, I can just run:<br />
 <code class="language-plaintext highlighter-rouge">/make_cufw.sh</code> and it will get compiled.</p>
 
 <h2 id="check-out-prs">Check out PRs</h2>
@@ -176,9 +187,10 @@ git branch -D autopwn
 
 <h2 id="flash-the-firmware">Flash the firmware</h2>
 
-<p>If everything went fine, you’ll find the firmware in <code class="language-plaintext highlighter-rouge">ChameleonUltra/firmware/objects/</code>. To flash change to the directory firmware and execute <code class="language-plaintext highlighter-rouge">./flash-dfu-app.sh</code>.<br />
-The CU will switch to DFU mode, the two middle LED will start alternating and the firmware will be flashed. After it is done, teh CU resets and you’ll see the moving animation on all LED.</p>
+<p>If everything went fine, you’ll find the firmware in <code class="language-plaintext highlighter-rouge">ChameleonUltra/firmware/objects/</code>. To flash change to the directory /firmware and execute <code class="language-plaintext highlighter-rouge">./flash-dfu-app.sh</code>.<br />
+The CU will switch to DFU mode, the two middle LED will start alternating and the firmware will be flashed. After it is done, the CU resets and you’ll see the moving animation on all LED.</p>
 
+<p>Make sure to use the CLI matching the Firmware. Else, depending on the PR, the testing won’t give propper results.</p>
 
   </div><a class="u-url" href="/howto/2026/02/24/ChameleonUltra-Getting_the_latest_features.html" hidden></a>
 </article>
