@@ -321,7 +321,7 @@ Under 'Radio 1', click the 'Edit' button on the template with 'SSID: OpenWrt' or
   - Subtab: **General Setup**
     - Mode: Access Point
     - ESSID: `OpenWrt LAN`
-    - Network: 'Guest'
+    - Network: 'lan'
   - Subtab: **Wireless Security**
     - 'WPA2-PSK/WPA3-SAE Mixed Mode'
     - Activate: "Enable KRACK countermeasure" 
@@ -476,7 +476,7 @@ Under 'Radio 0', click the 'Edit' button on the template with 'SSID: OpenWrt' or
   - Subtab: **General Setup**
     - Mode: Access Point
     - ESSID: `OpenWrt LAN`
-    - Network: 'Guest'
+    - Network: 'lan'
   - Subtab: **Wireless Security**
     - 'WPA2-PSK/WPA3-SAE Mixed Mode'
     - Activate: "Enable KRACK countermeasure" 
