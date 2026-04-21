@@ -309,6 +309,8 @@ Overview of WLAN encryption:
 - **WPA3** - This is the current standard. It's not only inherently more secure but also prevents remote deauthentication by unauthorized users.  
 
 Hint: Generally, you're free to use any channel. However, it's recommended to stick with channels 1, 6, or 11, as these frequencies have the least overlap. While Wi-Fi can compensate for interference from competing Wi-Fi networks to a certain extent, this works better with Wi-Fi networks in the same frequency spectrum than with overlapping networks.  
+Even the AP in your mesh should not have the same or overlapping channel to avoide interferences within the RF spectrum!  
+
 1. Perform a frequency scan and see which channel has the least traffic.  
 2. If possible, choose an unused frequency band.  
 3. If no band is available, use the one with the lowest occupancy (and overlap) on channels 1, 6, or 11.  
@@ -395,25 +397,26 @@ Very important: We absolutely do not want to copy the settings! While this might
 After successful installation, OpenWrt can be accessed at [http://192.168.1.1/](http://192.168.1.1/). Enter `root` as the username and leave the password blank.  
 
 ## DumbAP Basic Configuration
-In its basic installation, OpenWrt is a fully functional router. We can't use two routers in the network; they would then compete for DHCP assignments and similar tasks. Therefore, we'll disable some services first.  
+In its basic installation, OpenWrt is a fully functional router. We could use two routers in the network, but this would increase the complexity. In our home network we just want to increase the WiFi and maybe have a second entry cable point.  
+Two full functional routers would compete for DHCP assignments and similar tasks. Therefore, we'll disable some services first.  
 
 ### OpenWrt Router to Dumb AP
 
 Top menu: **System - Startup**
 
 - Tab: **Initscripts**
-  - dnsmasq - Click buttons 'Enabled' and 'Stop'
-  - firewall - Click buttons 'Enabled' and 'Stop'
-  - odhcpd - Click buttons 'Enabled' and 'Stop'
+  - dnsmasq - Click buttons 'Enabled' and 'Stop' - No DNS resolver
+  - firewall - Click buttons 'Enabled' and 'Stop' - No routing
+  - odhcpd - Click buttons 'Enabled' and 'Stop' - No address assignment
 
 
-A few system settings help integrate the system into the infrastructure.  
+A few system settings help to integrate the system into the infrastructure.  
 
 In the top menu: **System - System**  
 
 - Tab: **General Settings** ->
   - Timezone: 'Europe/Berlin', Button: Sync with Browser (or NTP server)
-  - Hostname: `OpenBarylAX` Adjust for better identifying in dhcp/mesh
+  - Hostname: `OpenBerylAX` - for a better identifying in dhcp/mesh
 - Tab: **Time Synchronization** -> you may want to set it to `192.168.1.1` (main router)
 
 
@@ -421,11 +424,15 @@ In the top menu: **System - System**
 
 Top menu: **Network - Interfaces**
 
+- Tab: **Interfaces** - we don't need the WAN uplink here
+  - wan - Button: 'Delete'
+  - wan6 - Button: 'Delete'
+
 - Tab: **Devices**
   - Button: Add device configuration ...
     - Device type: 'Bridge device'
     - Device name: `vSwitch`
-    - Ports: All available (eth0, eth1)
+    - Ports: All available (eth0, lan1, ... Switch ports and Ethernet Adapter, no switches!)
   - Button Save
   - Choose 'vSwitch' and click button 'Configure ...'
     - Subtab: **Bridge VLAN filtering**
@@ -438,12 +445,36 @@ Top menu: **Network - Interfaces**
 
 Button: Save
 
-Add the additional VLAN to the infrastructure.  
+Button 'Save and Apply'
 
-Top Menu: **Network - Interface**:  
+
+### Change LAN access
+
+Top menu: **Network - Interface**
+
+- Subtab: **Interfaces**
+  - Interface: lan, button: 'Edit'
+  - Device: `vSwitch.1`
+  - Button 'Save'
+- Button 'Save and Apply'
+
+- Subtab: **Interfaces**
+  - Interface: lan, button: 'Edit'
+  - Protocol: DHCP client, but don't click change protocol below! This prevents you from saving the setting.
+  - Button: 'Save'
+- Button: 'Save and Apply' 
+
+Now you've got 90 seconds to connect your dumb AP to your main router, so it will get an DHCP address. See in main router at **Status - Overview** under 'Active DHCP Leases' which IP was assigned. Open this IP in a browser within 90 seconds, to confirm the changes.  
+Of course you could write down the port MAC and set a static DHCP entry in your DHCP server. But even if you need to do this twice, 90 seconds is enough time.  
+
+### Add the additional VLAN to the infrastructure  
+Add every VLAN which is needed at the AP. 'Guest' and 'IoT' makes sense, but 'DMZ' proppably not.  
+
+Top Menu: **Nnterface**  
+
 - Subtab: **Interfaces**
   - Button: 'Add new interface...'
-    - Name: iot, guest, ...
+    - Name: `guest`, `iot`, ...
     - Protocol: Unmanaged (will be managed from the main router)
     - Device: `vSwitch.1`, `vSwitch.10`, `vSwitch.20`, ... 
 
@@ -458,9 +489,9 @@ Top menu: **Network - Interfaces**
   - Item 'Lan', Button 'Edit'
     - Change Protocol from 'Static address' to 'DHCP client'
     - Button 'Save'
-  - Button 'Save and apply'
+  - Button 'Save and Apply'
 
-Now connect WAN of the Beryl AX to one LAN of the Flint 2. Teh Flint2 will assign a address to the Beryl AX. The Flint will show the assigned addresss in the tom menu, **Status - Overview** in the chapter **DHCP Leases\Active DHCPv4 Leases**.
+Now connect WAN of the Beryl AX to one LAN of the Flint 2. The Flint2 will assign a address to the Beryl AX. The Flint will show the assigned addresss in the tom menu, **Status - Overview** in the chapter **DHCP Leases\Active DHCPv4 Leases**.
 Remember: You've got 90 seconds to find out the address and open the portal. Else the changes will be reverted!
 
 ## WLAN
@@ -541,5 +572,20 @@ Create a new template under 'Radio 1' (5 GHz) using 'Add'.
 
 ## Beryl (Gl.iNet MT-1300)
 The older Beryl provides only 1 Gbps LAN, but 3 ports. It has a slightly slower Wi-Fi.  
-
 The process is pretty much the same as for the Beryl AX.
+
+
+# CMD Tweaks
+login to the router via `ssh root@192.168.1.1` or the IP or hostname of your main router.  
+
+## WiFi management
+There is a lot of potential for typing errors in the WLAN configuration. It does not hurt to take a look at the configuration.  
+
+The first way to get a quick overview is the linux known standard:
+`cat /etc/config/wireless`
+
+The other is the OpenWrt way:  
+`uci show config`
+
+Changes can be made via text editor in the first example, which is known and convinient. But the OpenWrt tool uci does not need a parser for changes, for example `uci set wireless.default_radio0.ssid='OpenWrt One'`.  
+
