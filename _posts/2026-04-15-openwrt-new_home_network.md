@@ -192,7 +192,9 @@ There are two types of ports for VLANs.
 1. **Untagged** means that anything connected to this port is a standard network device, not using the IEEE 802.1v standard.  
 2. **Tagged** means that the connected devices understand VLANs according to IEEE 802.1v and specify which VLAN ID they belong to.  
 
-A special feature of OpenWrt is that the port can handle a single untagged VLAN and multiple tagged VLANs. Anything connected to the port without VLAN configuration is routed to a default (the one untagged) VLAN. This doesn't work with all VLAN devices; most I know can only manage one untagged ID or any number of tagged IDs per port.  
+The VLAN configuration is different on each device. At OpenWrt it is pretty easy.  
+Set one VLAN ID untagged at each port, this will be your default LAN. Each device without VLAN ID will get in this network. Set the other VLAN ID to the ports as tagged and every tagged VLAN packet will be routet in its area.  
+Depending on your Setup, the untagged VLAN ID could be a different per port, to route different devices in differend VLAN. But there cannot be more than one untagged, but zero, one or more tagged VLAN per port.  
 
 In the menu at the top: **Network - Interfaces**
 
