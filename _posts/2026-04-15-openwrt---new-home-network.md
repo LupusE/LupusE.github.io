@@ -46,6 +46,15 @@ For this reason, I decided to switch to [GL.iNet](https://www.gl-inet.com/).
 GL.iNet is based on OpenWrt and offers many features in its own interface, which makes it significantly easier to use. Perfectly adequate for normal home use, and the travel routers are invaluable when you're on the go.  
 GL.iNet builds some of its router hardware with a closed-source SDK, making an upgrade or switch to native OpenWrt not so easy. Therefore, I chose the **Flint2 as main router** and from the **Beryl series as AP**, which are 100% OpenWrt supported.  
 
+## From the internet to the local network
+GL.iNet routers do not provide a DSL or fiber modem.  
+In case of DSL, if you are using a Fritz!Box or similar with DSL modem before, the best option would be to change it to bridge/modem mode and connect the new router behind.  
+In case of fiber, most providers I know are installing a Customer Premises Equipment (CPE) to convert the fiber to the local RJ45 LAN. Just connect the WAN of your GL.iNet router to the CPE and set up PPPoE or whatever the provider tells you.  
+
+I can use the Flint2 as main router, because my CPE is installed at the ground floor. Some houses or buildings have their ISP equipment in the cellar, where a powerfull AP makes not much sense. A smaller device maybe have not enough computing power to orchestrate the whole house network.  
+In this setup I suggest to install a (Brumme2 (GL-MT2500))[https://www.gl-inet.com/products/gl-mt2500/] with (OpenWrt)[https://firmware-selector.openwrt.org/?version=25.12.3&target=mediatek%2Ffilogic&id=glinet_gl-mt2500].  
+The process is pretty much the same, but the first router is simpler. On the other hand, you can't sync the WiFi configurations ... But this is a topic for another post.  
+
 ## GL.iNet Flint2 (GL-MT6000)
 The [Flint2 (GL-MT6000)](https://www.gl-inet.com/products/gl-mt6000/) is not the newest model they are offering. Compared to my newest Fritz!Box 7590, its features are even more up-to-date. Even if there is "only" 2x2.5 Gbit ports (plus 4x1 Gbit) and WiFi 6, I still would call it the flagship.  
 Most important for me: It is 100% OpenWrt compatible and supported.  
@@ -628,3 +637,36 @@ The other is the OpenWrt way:
 
 Changes can be made via text editor in the first example, which is known and convinient. But the OpenWrt tool uci does not need a parser for changes, for example `uci set wireless.default_radio0.ssid='OpenWrt One'`.  
 
+# Appendix
+
+## Slate Plus (GL.iNet A-1300)
+Beside from the Beryl series, also the (Slate Plus (GL-A1300))[https://www.gl-inet.com/products/gl-a1300/] is (OpenWrt supported)[https://firmware-selector.openwrt.org/?version=25.12.3&target=ipq40xx%2Fgeneric&id=glinet_gl-a1300]. For this device the upgrade is a little different.  
+On the Download page klick the Button 'Factory'. Here you'll 
+
+It offers three LAN ports, one WAN and two for LAN, all three are 1 Gbps. It is only WiFi 5, enough for a garden or similar.  
+For the initial setup, it is recommended to connect only one PC or laptop to one of the Slate Plus LAN ports via cable. It can then be connected to the existing LAN via the WAN port, for example, to download the OpenWrt image.  
+
+### Download OpenWrt
+The Firmware Selector for OpenWrt is available at [https://firmware-selector.openwrt.org/](https://firmware-selector.openwrt.org/). Searching for `A1300` will suggest the result `GL.iNet GL-A1300`, which we should select.  
+In the upper right, behind the search field, the version can be selected. I am creating this guide using `25.12.3`. We select the `FACTORY` button below.  
+
+### Install OpenWrt via uBoot
+When the Slate Plus is on, turn it off by unplug power. Wait a few seconds.  
+Our Slate Plus is not bricked, but the steps are the same as descriped at (Using Uboot to unbrick your router)[https://docs.gl-inet.com/router/en/4/faq/debrick/].  
+
+1. Connect oneof the LAN ports your Slate Plus with your computer LAN. Unplug every other connection at the router.
+2. Press and hold the 'reset' button on the side of your SLateplus, below the antenna.
+3. Plug in power, while still holding the button. Watch the LED.
+4. If the LED flashes slowly 5 times, then stays on for a short while, then flashes quickly all the time, release the button.
+
+The sequence should start early, so it' sin the correct mode in around 15 to 20 seconds.  
+
+In uBoot, the Router has no DHCP, you need to configure your network card manually.  
+Set your computer network to the IP `192.168.1.2` and Netmask `255.255.255.0` (or `/24` in CIDR notation).  
+Now the router can be accessed with a browser at [http://192.168.1.1/](http://192.168.1.1/).  
+
+There is no menu, just a dialog to select firmware for the upgrade. Select the file we just downloaded, for example `openwrt-25.12.3-ipq40xx-generic-glinet_gl-a1300-squashfs-factory.ubi`. Confirm with the button 'Update firmware'.  
+
+After successful installation, OpenWrt can be accessed at [http://192.168.1.1/](http://192.168.1.1/). Enter `root` as the username and leave the password blank.  
+
+Now the process is the same as before, see [MeshAP Setup]  
