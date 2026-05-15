@@ -17,7 +17,7 @@ But during the process I already added the VLAN 'DMZ' and as latest 'Server'.
 Very common is the VLAN ID 1 as Management backend. A lot of VLAN equipment I've see was preconfigured on ID 1 as untagged to get initial access. I don't want ID 1.  
 In most manuals I've found the ID where given in steps by 10. ID 10, ID 20, ID 30, ...  
 
-## My new layout would be
+## My layout would be
 
 | Name | VLAN ID | IP range |
 | --- | --- | --- |
@@ -28,7 +28,8 @@ In most manuals I've found the ID where given in steps by 10. ID 10, ID 20, ID 3
 | Server | 50 | 192.168.50.0/24 |
 
 
-## More complex layout
+### A more complex layout
+If we enable IPv6, the basis configuration will most likely outsmart our whole security and port forwarding. The VLAN splitting should keep it in line.  
 Today, while walking the dog, Willow asked me whats about splitting IPv4 and IPv6. Together we developed a schema.  
 
 | Name | VLAN ID | IP range |
@@ -53,28 +54,118 @@ Today, while walking the dog, Willow asked me whats about splitting IPv4 and IPv
 | VPNv6 | 66 | SLAAC |
 
 The main VLAN would provide IPv4 and IPv6, as usual. With a dedicated cut between IPv4 and IPv6 I could at one hand be sure my firewall rules will be set and on the other hand I could test dedicated IPv6 connections. SLAAC, AutoMTU, ...  
-But it will need up to 3 Network interface per node. I'll think about this.
+But it will need up to 3 Network interface per node. I'll think about this... later.  
 
 # DNS
-In my first post I've started with a simple OpenWrt DNS and AdGuard Home as filter. Its really hard not to make a loop or knot in the configuration and keep it secure.  
+The DNS will be a simpler at the beginning, as we just want to have each host with the domain lan.domain.net, guest.domain.net and so on.
 
-As we defined the VLAN earlier, I would use subdomains to split the local DNS as well.  
+Later we need to add a Webfilter like AdGuard Home or PiHole.
 
-- Go to OpenWrt in a browser at 192.168.10.1
-- Go to 'Network - DNS'
-- On the top you'll find the 'default instance'.
-  - Subtab **General**
-    - Local Domain is 'lan.lupuse.net'
-  - Subtab **Devices & Ports**
-    - Listen interfaces: `LAN`
-- Below is the field **New Instance Name**
-  - Enter `guest` and confirm with 'Add server instance'
-  - Subtab **General**
-    - Local Domain is 'guest.lupuse.net'
-  - Subtab **Devices & Ports**
-    - Listen interfaces: `guest`
+The easiest way would be to provide the local DNS via DHCP:  
+```
+# Configure dnsmasq
+uci -q delete dhcp.lan.dhcp_option
+uci add_list dhcp.lan.dhcp_option="6,192.168.40.53"
+uci commit dhcp
+service dnsmasq restart
+```
 
-Repeat these steps with 'dmz', 'server', ... 
+Don't forget to provide a firewall rule, so the VLANs can reach the DNS within the DMZ:  
+```
+uci add firewall rule
+uci set firewall.@rule[-1].src='iot'
+uci set firewall.@rule[-1].dest='dmz'
+uci set firewall.@rule[-1].name='AdGuardHome IoT'
+uci set firewall.@rule[-1].dest_port='53'
+uci set firewall.@rule[-1].target='ACCEPT'
+uci add_list firewall.@rule[-1].dest_ip='192.168.40.53'
+```
 
-And here it gest crazy. The DHCP server per device tuns off. Turn it on delets the DNS settings.
-To Analyze!
+
+# DHCP and DNS for VLANs in OpenWrt
+
+If we configure multiple instances via Webfrontend, it goes crazy. The DHCP server per device tuns off. Turn it on delets the DNS settings.  
+See: https://openwrt.org/docs/guide-user/base-system/dhcp_configuration
+> The LuCI web interface has not been updated to support multiple dnsmasq instances. 
+
+So we need to do the Setup manually. Like:
+
+```
+# Remove default instances
+while uci -q delete dhcp.@dnsmasq[0]; do :; done
+while uci -q delete dhcp.@dhcp[0]; do :; done
+ 
+# Use network interface names for DHCP/DNS instance names
+INST="lan guest iot dmz server"
+for INST in ${INST}
+do
+uci set dhcp.${INST}_dns="dnsmasq"
+uci set dhcp.${INST}_dns.domainneeded="1"
+uci set dhcp.${INST}_dns.boguspriv="1"
+uci set dhcp.${INST}_dns.filterwin2k="0"
+uci set dhcp.${INST}_dns.localise_queries="1"
+uci set dhcp.${INST}_dns.rebind_protection="1"
+uci set dhcp.${INST}_dns.rebind_localhost="1"
+uci set dhcp.${INST}_dns.local="/${INST}.domain.net/"
+uci set dhcp.${INST}_dns.domain="${INST}.domain.net"
+uci set dhcp.${INST}_dns.expandhosts="1"
+uci set dhcp.${INST}_dns.nonegcache="0"
+uci set dhcp.${INST}_dns.authoritative="1"
+uci set dhcp.${INST}_dns.readethers="1"
+uci set dhcp.${INST}_dns.leasefile="/tmp/dhcp.leases.${INST}"
+uci set dhcp.${INST}_dns.resolvfile="/tmp/resolv.conf.d/resolv.conf.auto"
+uci set dhcp.${INST}_dns.nonwildcard="1"
+uci add_list dhcp.${INST}_dns.interface="${INST}"
+uci add_list dhcp.${INST}_dns.notinterface="loopback"
+uci set dhcp.${INST}="dhcp"
+uci set dhcp.${INST}.instance="${INST}_dns"
+uci set dhcp.${INST}.interface="${INST}"
+uci set dhcp.${INST}.start="100"
+uci set dhcp.${INST}.limit="150"
+uci set dhcp.${INST}.leasetime="12h"
+done
+
+uci -q delete dhcp.@dnsmasq[0].notinterface
+uci commit dhcp
+service dnsmasq restart
+```
+
+Let all VLAN use the AdGuard Home (or PiHole) DNS server:  
+```
+uci add_list dhcp.guest.dhcp_option='6,192.168.40.53'
+uci add_list dhcp.iot.dhcp_option='6,192.168.40.53'
+uci add_list dhcp.lan.dhcp_option='6,192.168.40.53'
+uci add_list dhcp.server.dhcp_option='6,192.168.40.53'
+uci add_list dhcp.dmz.dhcp_option='6,192.168.40.53'
+```
+
+And allow the communication from the VLANs to the DNS:  
+```
+uci add firewall rule # =cfg2992bd
+uci set firewall.@rule[-1].src='lan'
+uci set firewall.@rule[-1].dest='dmz'
+uci set firewall.@rule[-1].name='AdGuardHome LAN'
+uci set firewall.@rule[-1].dest_port='53'
+uci set firewall.@rule[-1].target='ACCEPT'
+uci add_list firewall.@rule[-1].dest_ip='192.168.40.53'
+
+uci add firewall rule # =cfg2992bd
+uci set firewall.@rule[-1].src='guest'
+uci set firewall.@rule[-1].dest='dmz'
+uci set firewall.@rule[-1].name='AdGuardHome guest'
+uci set firewall.@rule[-1].dest_port='53'
+uci set firewall.@rule[-1].target='ACCEPT'
+uci add_list firewall.@rule[-1].dest_ip='192.168.40.53'
+
+uci add firewall rule # =cfg2992bd
+uci set firewall.@rule[-1].src='iot'
+uci set firewall.@rule[-1].dest='dmz'
+uci set firewall.@rule[-1].name='AdGuardHome iot'
+uci set firewall.@rule[-1].dest_port='53'
+uci set firewall.@rule[-1].target='ACCEPT'
+uci add_list firewall.@rule[-1].dest_ip='192.168.40.53'
+```
+
+The default DNS (192.168."VLAN ID".1) could also forward to the DNS. But this would use NAT, so the DNS would see all requests just from 'the VLAN', not per device. Here we see detailed statistic in AdGuard Home for each client.  
+
+
