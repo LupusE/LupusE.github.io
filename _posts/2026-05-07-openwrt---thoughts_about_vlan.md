@@ -14,7 +14,7 @@ Comments: []
 In my previous post I've set up a new home network. All started with the urge to split 'LAN', 'guest' and 'IoT'.  
 But during the process I already added the VLAN 'DMZ' and as latest 'Server'.  
 
-Very common is the VLAN ID 1 as Management backend. A lot of VLAN equipment I've see was preconfigured on ID 1 as untagged to get initial access. I don't want ID 1.  
+Very common is the VLAN ID 1 as Management backend. Some VLAN equipment I've see was preconfigured and fixed on ID 1 as untagged to get initial and management access. I don't want ID 1.  
 In most manuals I've found the ID where given in steps by 10. ID 10, ID 20, ID 30, ...  
 
 ## My layout would be
