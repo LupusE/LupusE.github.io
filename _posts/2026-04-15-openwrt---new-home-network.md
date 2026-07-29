@@ -10,7 +10,7 @@ Tags: [Products, OpenWrt, Glinet]
 Comments: []
 ---
 
-# Where my network come from?
+# Where my network came from?
 For as long as I can remember, I've used AVM Fritz! devices as routers for my home network. First the Fritz!ISDN USB, then an external ISDN card, and then all sorts of Fritz!Box models. A device that simply does everything, from internet routing and a DECT base station with VoIP telephony to a fax modem when I no longer wanted a separate device at home. And all this with outstanding Linux support in a simple "mesh" network.  
 The marketing term "mesh" here means, on the one hand you configure the Wi-Fi at a central point and the configuration is then distributed to all connected access points. On the other hand, it means that a device (e.g., a mobile phone) can seamlessly switch from one access point to another. This only works with AVM devices.  
 
@@ -32,7 +32,7 @@ At first I will show how to set up one main router and one or two mesh AP wirth 
 AVM worked perfectly for me for over 25 years. Last year, the family-run business was bought by a large corporation. It had already become apparent that their QA was no longer functioning flawlessly. Compared to other "big players," there are still very few security reports, but the firmware is being loaded with more and more features, and the bugs are piling up.  
 The standards mentioned above, in contrast to the AVM Mesh, aim to be vendor-independent. Today, I'm building my entire network with GL.iNet devices because they best suit my infrastructure. Tomorrow, I might use a different company (Don't tell them!).  
 
-For more than 7 years now, they provided a fast and reliable VPN to my home network with different travel (Shadow, Slate Plus, Slate 7, Spitz AX) and home routers (Marble, Slate AX, Flint 3e).  
+For more than 7 years now, GL.iNet provided a fast and reliable VPN to my home network with different travel routers (Shadow, Slate Plus, Slate 7, Spitz AX) and home routers (Marble, Slate AX, Flint 3e).  
 It's about time to switch from a travel setup to a whole GL.iNet home network.  
 
 
@@ -46,8 +46,17 @@ For this reason, I decided to switch to [GL.iNet](https://www.gl-inet.com/).
 GL.iNet is based on OpenWrt and offers many features in its own interface, which makes it significantly easier to use. Perfectly adequate for normal home use, and the travel routers are invaluable when you're on the go.  
 GL.iNet builds some of its router hardware with a closed-source SDK, making an upgrade or switch to native OpenWrt not so easy. Therefore, I chose the **Flint2 as main router** and from the **Beryl series as AP**, which are 100% OpenWrt supported.  
 
+## From the internet to the local network
+GL.iNet routers do not provide a DSL or fiber modem.  
+In case of DSL, if you are using a Fritz!Box or similar with DSL modem before, the best option would be to change it to bridge/modem mode and connect the new router behind.  
+In case of fiber, most providers I know are installing a Customer Premises Equipment (CPE) to convert the fiber to the local RJ45 LAN. Just connect the WAN of your GL.iNet router to the CPE and set up PPPoE or whatever the provider tells you.  
+
+I can use the Flint2 as main router, because my CPE is installed at the ground floor. Some houses or buildings have their ISP equipment in the cellar, where a powerfull AP makes not much sense. A smaller device maybe have not enough computing power to orchestrate the whole house network.  
+In this setup I suggest to install a (Brumme2 (GL-MT2500))[https://www.gl-inet.com/products/gl-mt2500/] with (OpenWrt)[https://firmware-selector.openwrt.org/?version=25.12.3&target=mediatek%2Ffilogic&id=glinet_gl-mt2500].  
+The process is pretty much the same, but the first router is simpler. On the other hand, you can't sync the WiFi configurations ... But this is a topic for another post.  
+
 ## GL.iNet Flint2 (GL-MT6000)
-The [Flint2 (GL-MT6000)](https://www.gl-inet.com/products/gl-mt6000/) is not the newest model they are offering. Compared to my newest Fritz!Box 7590, its features are even more up-to-date. Even if there is "only" 2x2.5 Gbit ports (plus 4x1 Gbit) and WiFi 6, I still would call it the flagship.  
+The [Flint2 (GL-MT6000)](https://www.gl-inet.com/products/gl-mt6000/) from Nov 2023 is not the newest model they are offering. Compared to my newest Fritz!Box 7590 from Jun 2017, its features are even more up-to-date. Even if there is "only" 2x2.5 Gbit ports (plus 4x1 Gbit) and WiFi 6, I still would call it the flagship.  
 Most important for me: It is 100% OpenWrt compatible and supported.  
 
 ### Download OpenWrt
@@ -509,7 +518,7 @@ Of course you could write down the port MAC and set a static DHCP entry in your 
 ### Add the additional VLAN to the infrastructure  
 Add every VLAN which is needed at the AP. 'Guest' and 'IoT' makes sense, but 'DMZ' proppably not.  
 
-Top Menu: **Nnterface**  
+Top Menu: **Interface**  
 
 - Subtab: **Interfaces**
   - Button: 'Add new interface...'
@@ -627,4 +636,90 @@ The other is the OpenWrt way:
 `uci show config`
 
 Changes can be made via text editor in the first example, which is known and convinient. But the OpenWrt tool uci does not need a parser for changes, for example `uci set wireless.default_radio0.ssid='OpenWrt One'`.  
+
+# Appendix
+
+## Slate Plus (GL.iNet A-1300)
+Beside from the Beryl series, also the (Slate Plus (GL-A1300))[https://www.gl-inet.com/products/gl-a1300/] is (OpenWrt supported)[https://firmware-selector.openwrt.org/?version=25.12.3&target=ipq40xx%2Fgeneric&id=glinet_gl-a1300]. For this device the upgrade is a little different.  
+On the download page use the button 'Factory' to download the image.  
+
+Teh Slate Plus offers three LAN ports, one WAN and two LAN. All three are 1 Gbps. It is only WiFi 5, enough for the garden, garage or similar.  
+For the initial setup, it is recommended to connect only one PC or laptop to one of the Slate Plus LAN ports via cable. It could be connected to the existing LAN at the WAN port or as Wifi repeater. For example, to download the OpenWrt image.  
+
+### Download OpenWrt
+The Firmware Selector for OpenWrt is available at [https://firmware-selector.openwrt.org/](https://firmware-selector.openwrt.org/). Searching for `A1300` will suggest the result `GL.iNet GL-A1300`, which we select.  
+In the upper right, behind the search field, the version can be selected. I am creating this guide using `25.12.3`. We select the `FACTORY` button below.  
+
+### Install OpenWrt via uBoot
+When the Slate Plus is on, turn it off by unplug power. Wait a few seconds.  
+Our Slate Plus is not bricked, but the steps are the same as descriped at (Using Uboot to unbrick your router)[https://docs.gl-inet.com/router/en/4/faq/debrick/].  
+
+1. Connect one of the LAN ports your Slate Plus with your computer LAN. Unplug every other connection at the router.
+2. Press and hold the 'reset' button on the side of your Slateplus, below the antenna.
+3. Plug in power, while still holding the button. Watch the LED.
+4. If the LED flashes slowly 5 times, then stays on for a short while, then flashes quickly all the time, release the button.
+
+The sequence should start early, so it's in the correct mode in around 15 to 20 seconds.  
+
+In uBoot, the router provides no DHCP, you need to configure your network card manually.  
+Set your computer network to the IP `192.168.1.2` and netmask `255.255.255.0` (or `/24` in CIDR notation).  
+Now the router can be accessed with a browser at [http://192.168.1.1/](http://192.168.1.1/).  
+
+There is no menu, just a dialog to select firmware for the upgrade. Select the just downloaded file, for example `openwrt-25.12.3-ipq40xx-generic-glinet_gl-a1300-squashfs-factory.ubi`. Confirm with the button 'Update firmware'.  
+Now wait, the router will do everything needed.  
+
+After successful installation, OpenWrt can be accessed at [http://192.168.1.1/](http://192.168.1.1/). Enter `root` as the username and leave the password blank.  
+
+Now the process is the same as before, see [MeshAP Setup]  
+
+## After physical setup (what have I forgotten or have not known)
+
+I need to write more about one or another topic later. But now I'll just sum up what is needed to keep the family happy.  
+
+### VPN
+In my network I am using my homelab Flint 3e router as Wireguard server on it's WAN port. So I need to add a portforwarding from the Flint 2 WAN to the Flint 3e WAN:  
+```
+uci add firewall redirect
+uci set firewall.@redirect[-1].dest='lan'
+uci set firewall.@redirect[-1].target='DNAT'
+uci set firewall.@redirect[-1].name='WireGuard Flint3e'
+uci set firewall.@redirect[-1].family='ipv4'
+uci add_list firewall.@redirect[-1].proto='udp'
+uci set firewall.@redirect[-1].src='wan'
+uci set firewall.@redirect[-1].src_dport='51823'
+uci set firewall.@redirect[-1].dest_ip='192.168.10.33'
+uci set firewall.@redirect[-1].dest_port='51823'
+```
+
+### VoIP
+I have 3 Fritz!Phone DECT devices, so I am using my Fritz!Box 7590 still as SIP to DECT translator.  
+
+This needs two forwards, one for the call and one for the voice transmission.  
+
+```
+uci add firewall redirect
+uci set firewall.@redirect[-1].dest='lan'
+uci set firewall.@redirect[-1].target='DNAT'
+uci set firewall.@redirect[-1].name='AVM VoIP SIP (call)'
+uci set firewall.@redirect[-1].family='ipv4'
+uci set firewall.@redirect[-1].src='wan'
+uci set firewall.@redirect[-1].src_dport='5060'
+uci set firewall.@redirect[-1].dest_ip='192.168.10.21'
+
+uci add firewall redirect
+uci set firewall.@redirect[-1].dest='lan'
+uci set firewall.@redirect[-1].target='DNAT'
+uci set firewall.@redirect[-1].name='AVM VoIP RTP (speech)'
+uci set firewall.@redirect[-1].family='ipv4'
+uci add_list firewall.@redirect[-1].proto='udp'
+uci set firewall.@redirect[-1].src='wan'
+uci set firewall.@redirect[-1].src_dport='7078-7109'
+uci set firewall.@redirect[-1].dest_ip='192.168.10.21'
+```
+
+## Vorwerk Thermomix TM7
+My wife loves the Thermomix. We started with the 'dumb' TM31, which just was cooking delicious meals. The TM5 was the first 'smart' one with an extra chip. My wife got the TM6 with integrated internet and the TM7 which is much more silent and got a huge screen.  
+I was able to add the TM6 to my long planned network, but the TM7 does not connect.  
+I needed to turn off the KRACK protection in 'Wireless - Security' to get internet on this one.  
+I may need to get in contact with Vorwerk to understand this issue. The newest device was not able to provide the best security as the former modell.  
 
